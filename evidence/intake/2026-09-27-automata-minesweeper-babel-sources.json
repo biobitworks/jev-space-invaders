@@ -1,0 +1,208 @@
+{
+  "intake_id": "VITHIA_SPACE_AUTOMATA_MVP_SOURCE_INTAKE_20260927_001",
+  "project": "VITHIA_SPACE",
+  "retrieval_date": "2026-09-27",
+  "parent_repo_commit": "3095964e6a4fd898f52647f62a625c07e7c44165",
+  "canonical_mutation_performed": false,
+  "source_code_vendored": false,
+  "claim_policy": "BOUNDED_CANDIDATE_EVIDENCE",
+  "sources": [
+    {
+      "source_id": "LIBRARY_OF_BABEL_PYTHON",
+      "source_type": "GITHUB_REPOSITORY",
+      "locator": "https://github.com/louis-e/LibraryOfBabel-Python",
+      "version": {
+        "branch": "main",
+        "commit": "15fe2c8c5c6f2795fbe0f19976574bdac5585bfe"
+      },
+      "license": {
+        "status": "RECOVERED",
+        "spdx": "MIT",
+        "file": "LICENSE"
+      },
+      "retrieval": "GitHub connector",
+      "derived_evidence": [
+        "Repository describes forward and reverse mapping between page content and a Library-of-Babel-style hexagon address.",
+        "Implementation is small and suitable as prior-art/reference code."
+      ],
+      "candidate_claims": [
+        {
+          "class": "SOURCE_SUPPORTED_CLAIM",
+          "claim": "The repository implements a forward/reverse content-address mapping inspired by Library of Babel."
+        },
+        {
+          "class": "INTAKE_INFERENCE",
+          "claim": "For the MVP, use this as addressability prior art rather than a runtime dependency; implement a minimal canonical rank/unrank codec inside Vithia-Space."
+        }
+      ],
+      "proposed_destination": "docs/prior_art/addressability",
+      "reuse_disposition": "REFERENCE_ONLY_FOR_MVP",
+      "source_bytes_sha256": "NOT_COMPUTED"
+    },
+    {
+      "source_id": "NICKAROCHO_MINESWEEPER_SITE",
+      "source_type": "PUBLIC_WEB_APP",
+      "locator": "https://nickarocho.github.io/minesweeper/",
+      "source_repo": "https://github.com/nickarocho/minesweeper",
+      "version": {
+        "branch": "master",
+        "commit": "5c64f4c327ea7c6a2ff1aecb96bafc98f7d56235"
+      },
+      "license": {
+        "status": "NOT_RECOVERED",
+        "spdx": "UNKNOWN"
+      },
+      "retrieval": "Web + GitHub connector",
+      "derived_evidence": [
+        "Browser-playable Minesweeper implementation with explicit cell objects, bomb state, adjacency counts, revealed state, flags, and recursive reveal logic.",
+        "No LICENSE file was recovered from the repository root."
+      ],
+      "candidate_claims": [
+        {
+          "class": "SOURCE_SUPPORTED_CLAIM",
+          "claim": "The project implements the classic Minesweeper game and exposes a simple cell-state representation."
+        },
+        {
+          "class": "INTAKE_INFERENCE",
+          "claim": "Useful as UI/behavior prior art, but not preferred for the MVP inference core."
+        }
+      ],
+      "proposed_destination": "docs/prior_art/minesweeper_ui",
+      "reuse_disposition": "REFERENCE_ONLY_LICENSE_UNKNOWN",
+      "source_bytes_sha256": "NOT_COMPUTED"
+    },
+    {
+      "source_id": "GITHUB_TOPIC_CELULAR_AUTOMATA",
+      "source_type": "MUTABLE_DISCOVERY_INDEX",
+      "locator": "https://github.com/topics/celular-automata",
+      "version": "MUTABLE_AS_OF_2026-09-27",
+      "retrieval": "Web",
+      "derived_evidence": [
+        "GitHub reported 45 public repositories under this exact topic spelling at retrieval."
+      ],
+      "candidate_claims": [
+        {
+          "class": "SOURCE_SUPPORTED_CLAIM",
+          "claim": "This topic page is a discovery index, not a stable software dependency."
+        }
+      ],
+      "proposed_destination": "docs/prior_art/discovery_indices",
+      "reuse_disposition": "DISCOVERY_ONLY",
+      "source_bytes_sha256": "NOT_COMPUTED"
+    },
+    {
+      "source_id": "GITHUB_TOPIC_ELEMENTARY_CA_PYTHON",
+      "source_type": "MUTABLE_DISCOVERY_INDEX",
+      "locator": "https://github.com/topics/elementary-cellular-automata?l=python",
+      "version": "MUTABLE_AS_OF_2026-09-27",
+      "retrieval": "Web",
+      "derived_evidence": [
+        "GitHub reported 8 Python repositories under the elementary-cellular-automata topic at retrieval."
+      ],
+      "candidate_claims": [
+        {
+          "class": "SOURCE_SUPPORTED_CLAIM",
+          "claim": "This topic page is a discovery index, not a stable software dependency."
+        }
+      ],
+      "proposed_destination": "docs/prior_art/discovery_indices",
+      "reuse_disposition": "DISCOVERY_ONLY",
+      "source_bytes_sha256": "NOT_COMPUTED"
+    },
+    {
+      "source_id": "CELLPYLIB",
+      "source_type": "GITHUB_REPOSITORY_AND_PUBLISHED_SOFTWARE",
+      "locator": "https://github.com/lantunes/cellpylib",
+      "version": {
+        "branch": "master",
+        "commit": "743e936d48f8520f6f4ac652570ac7bb46414189"
+      },
+      "publication": {
+        "title": "CellPyLib: A Python Library for working with Cellular Automata",
+        "doi": "10.21105/joss.03608",
+        "journal": "Journal of Open Source Software",
+        "year": 2021
+      },
+      "license": {
+        "status": "RECOVERED",
+        "spdx": "Apache-2.0",
+        "file": "LICENSE.txt"
+      },
+      "retrieval": "GitHub connector + JOSS web source",
+      "derived_evidence": [
+        "Supports 1D and 2D k-color cellular automata on regular grids.",
+        "Provides elementary CA/NKS rules, adjustable neighborhoods, tests, entropy/complexity measures, and PyPI installation.",
+        "Published and peer-reviewed in JOSS."
+      ],
+      "candidate_claims": [
+        {
+          "class": "SOURCE_SUPPORTED_CLAIM",
+          "claim": "CellPyLib provides tested Python implementations of elementary and 2D cellular automata plus complexity measures."
+        },
+        {
+          "class": "INTAKE_INFERENCE",
+          "claim": "This is the strongest external CA reference for the MVP, but the competition-critical 256-rule generator should remain a small in-repo deterministic kernel for replayability."
+        }
+      ],
+      "proposed_destination": "docs/prior_art/cellular_automata",
+      "reuse_disposition": "PREFERRED_REFERENCE_OPTIONAL_DEPENDENCY",
+      "source_bytes_sha256": "NOT_COMPUTED"
+    },
+    {
+      "source_id": "MINESWEEPER_SOLVER_SAT",
+      "source_type": "GITHUB_REPOSITORY",
+      "locator": "https://github.com/jwang541/Minesweeper-Solver-SAT",
+      "version": {
+        "branch": "master",
+        "commit": "9bdb1c33e7a53bde83ba3067f29645504cc489c0"
+      },
+      "license": {
+        "status": "RECOVERED",
+        "spdx": "MIT",
+        "file": "LICENSE.md"
+      },
+      "retrieval": "GitHub connector",
+      "derived_evidence": [
+        "Represents Minesweeper hidden-cell states as Boolean variables.",
+        "Builds constraints from revealed clues, transforms them into SAT/CNF, and enumerates satisfying assignments using PySAT.",
+        "Distinguishes guaranteed safe, guaranteed mine, and unresolved cells."
+      ],
+      "candidate_claims": [
+        {
+          "class": "SOURCE_SUPPORTED_CLAIM",
+          "claim": "The solver uses SAT constraints over hidden Minesweeper cell states to infer guaranteed safe/mined cells."
+        },
+        {
+          "class": "INTAKE_INFERENCE",
+          "claim": "This is more relevant to Vithia-Space than a browser game because its constraint representation maps directly onto the proposed hidden-hazard lattice."
+        }
+      ],
+      "proposed_destination": "docs/prior_art/minesweeper_constraints",
+      "reuse_disposition": "PREFERRED_CONSTRAINT_REFERENCE",
+      "source_bytes_sha256": "NOT_COMPUTED"
+    }
+  ],
+  "mvp_selection": {
+    "addressability": {
+      "reference": "LIBRARY_OF_BABEL_PYTHON",
+      "implementation": "SMALL_IN_REPO_CANONICAL_RANK_UNRANK",
+      "reason": "Avoid runtime dependency while preserving reversible state addressing."
+    },
+    "minesweeper": {
+      "reference": "MINESWEEPER_SOLVER_SAT",
+      "implementation": "SMALL_IN_REPO_LOCAL_CONSTRAINT_LAYER",
+      "reason": "Constraint/SAT semantics are more relevant than game UI."
+    },
+    "cellular_automata": {
+      "reference": "CELLPYLIB",
+      "implementation": "SMALL_IN_REPO_ECA_0_255_KERNEL",
+      "reason": "Exact deterministic replay and simple sealing are more important than external feature breadth for the MVP."
+    }
+  },
+  "unresolved": [
+    "No license file was recovered for nickarocho/minesweeper; code reuse is ABSTAIN pending clarification.",
+    "No third-party source bytes were copied into the Vithia-Space repository.",
+    "SHA-256 over upstream source snapshots was NOT_COMPUTED.",
+    "No claim is made that any upstream implementation defines Vithia, G*, Delta G*, SeedGraph, FCO, or FCG."
+  ]
+}
