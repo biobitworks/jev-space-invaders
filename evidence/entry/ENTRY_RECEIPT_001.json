@@ -1,0 +1,34 @@
+{
+  "schema": "UFA_ENTRY_RECEIPT_V1",
+  "submitted_utc": "2026-09-27",
+  "endpoint": "POST https://mitosislabs.ai/api/ufa/jev/entries",
+  "submitted_via": "api",
+  "http_status": 200,
+  "response": {
+    "ok": true,
+    "entry_id": "b968c199-5d7e-4228-b8fe-b0003b7ab94f",
+    "created": true,
+    "submission_count": 1,
+    "missing_for_judging": [
+      "build.demo_video_url"
+    ],
+    "deadline": "2026-09-29T06:59:00.000Z"
+  },
+  "public_fields": {
+    "team": "Vithia in Space",
+    "track": "pilot",
+    "pitch": "Vithia-Space turns Space Invaders into Minesweeper: a path integral lights the safe paths, JEV picks the move.",
+    "sponsors": {
+      "mitosis": true,
+      "tenki": true,
+      "how": "Mitosis Cortex persists wave/state/action/outcome memory so JEV can recover which strategies worked in structurally similar situations. Tenki runs isolated fixed-seed Space Invaders replicas in parallel and replays policy changes so every score and regression is reproducible."
+    },
+    "needs_jev_access": true,
+    "in_person": true,
+    "repo_url": "https://github.com/biobitworks/jev-space-invaders"
+  },
+  "payload_sha256_canonical": "544ccbee80ff6801b98dc20412f62501f3a1abc3cdc9c7b337c0d6ce9f437d52",
+  "payload_canonicalization": "json.dumps(sort_keys=True, separators=(',',':')) of entry.local.json",
+  "private": "contact fields withheld; full payload kept in git-ignored entry.local.json",
+  "claim_ceiling": "server acknowledged entry; sponsor usage described is PROPOSED, not yet IMPLEMENTED"
+}

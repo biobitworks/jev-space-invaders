@@ -1,18 +1,14 @@
+#!/usr/bin/env python3
 from __future__ import annotations
-import json
+
+import sys
 from pathlib import Path
 
-p = Path(__file__).resolve().parents[1] / "results.json"
-d = json.loads(p.read_text())
-assert d.get("schema_version") == 2
-assert isinstance(d.get("runs"), list)
-all_runs = d["runs"] + d.get("baseline", {}).get("runs", [])
-for r in all_runs:
-    if "latency_ms_p50" in r and "latency_ms_p95" in r:
-        assert r["latency_ms_p95"] >= r["latency_ms_p50"]
-    if "model_calls" in r and "steps" in r:
-        assert r["model_calls"] <= r["steps"]
-    assert "score" in r
+ROOT = Path(__file__).resolve().parents[1]
+sys.path.insert(0, str(ROOT))
+from src.validate import check_file  # noqa: E402
+
+s = check_file(ROOT / "results.json")
 print("RESULTS_SCHEMA_CHECK=PASS")
-print(f"JEV_RUNS={len(d['runs'])}")
-print(f"BASELINE_RUNS={len(d.get('baseline', {}).get('runs', []))}")
+for k, v in s.items():
+    print(f"{k.upper()}={v}")
