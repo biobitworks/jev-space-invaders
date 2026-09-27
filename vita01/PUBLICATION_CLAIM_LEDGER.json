@@ -1,4 +1,50 @@
 {
   "generated_by": "scripts/build_registries.py",
-  "entries": []
+  "entries": [
+    {
+      "experiment_id": "E0_ADDRESSABILITY",
+      "claim": "H0a",
+      "state": "SUPPORTED",
+      "mode": "CONFIRMATORY",
+      "evidence_level": "SIMULATED",
+      "promotable_to_biological": false,
+      "receipt": "evidence/s01/E0_ADDRESSABILITY/EXPERIMENT_RECEIPT.json"
+    },
+    {
+      "experiment_id": "E0_ADDRESSABILITY",
+      "claim": "H0b",
+      "state": "SUPPORTED",
+      "mode": "CONFIRMATORY",
+      "evidence_level": "SIMULATED",
+      "promotable_to_biological": false,
+      "receipt": "evidence/s01/E0_ADDRESSABILITY/EXPERIMENT_RECEIPT.json"
+    },
+    {
+      "experiment_id": "E0_ADDRESSABILITY",
+      "claim": "H0c",
+      "state": "SUPPORTED",
+      "mode": "CONFIRMATORY",
+      "evidence_level": "SIMULATED",
+      "promotable_to_biological": false,
+      "receipt": "evidence/s01/E0_ADDRESSABILITY/EXPERIMENT_RECEIPT.json"
+    },
+    {
+      "experiment_id": "E0_ADDRESSABILITY",
+      "claim": "H0d",
+      "state": "SUPPORTED",
+      "mode": "CONFIRMATORY",
+      "evidence_level": "SIMULATED",
+      "promotable_to_biological": false,
+      "receipt": "evidence/s01/E0_ADDRESSABILITY/EXPERIMENT_RECEIPT.json"
+    },
+    {
+      "experiment_id": "E0_ADDRESSABILITY",
+      "claim": "H0e",
+      "state": "OBSERVED",
+      "mode": "CONFIRMATORY",
+      "evidence_level": "SIMULATED",
+      "promotable_to_biological": false,
+      "receipt": "evidence/s01/E0_ADDRESSABILITY/EXPERIMENT_RECEIPT.json"
+    }
+  ]
 }

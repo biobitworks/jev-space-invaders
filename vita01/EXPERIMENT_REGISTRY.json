@@ -1,4 +1,17 @@
 {
   "generated_by": "scripts/build_registries.py",
-  "entries": []
+  "entries": [
+    {
+      "experiment_id": "E0_ADDRESSABILITY",
+      "mode": "CONFIRMATORY",
+      "terminal_state": "SUPPORTED",
+      "input": "S01_ADDRESSABILITY_EVAL_V1",
+      "output": "S01_ADDRESSABILITY_RESULTS_V1",
+      "prereg_breakpoint": "UFA-JEV-BP-0012",
+      "code_freeze": "UFA-JEV-BP-0011",
+      "replay_level": "REPLAY_LEVEL_4",
+      "receipt": "evidence/s01/E0_ADDRESSABILITY/EXPERIMENT_RECEIPT.json",
+      "receipt_sha256": "4fdbbccdfd82e4927b0d7f9325443ea2dc9b0f0b0ffc6c38398e91e7a63843ea"
+    }
+  ]
 }

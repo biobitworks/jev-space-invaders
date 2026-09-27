@@ -1,0 +1,100 @@
+{
+  "breakpoint_id": "UFA-JEV-BP-0013",
+  "parent": "UFA-JEV-BP-0012",
+  "state": "RESULT_SUPPORTED",
+  "project": "VITHIA_SPACE",
+  "created_utc": "2026-09-27T16:54:13+00:00",
+  "git_head_at_creation": "9311f61d91e05e5c854e36bc1e8ade8dc4164a93",
+  "root_kind": "FMO_V1_BREAKPOINT_ATOMS",
+  "bp_root": "5a64d4a5298630c7cf65317bff1f4f31b786e8e471430f2058fcd690fe28ae5b",
+  "group_roots": {
+    "output_dataset": "864d6be2ebc01ca42d081e6870aca4c22ea5334a4b3538e050a649cec287c444",
+    "receipt": "80c3a5047321c02f9d845fc0095a71e443d7c992f2f1ad875b9be58668903ded"
+  },
+  "atoms": [
+    {
+      "path": "data/s01/S01_ADDRESSABILITY_RESULTS_V1/MANIFEST.json",
+      "kind": "DatasetManifestFCO",
+      "group": "output_dataset",
+      "bytes": 1179,
+      "sha256": "2b92570aa8c2730359926be90e0854328b0fc085b664b47f1be86a17ec19da68",
+      "location": "public",
+      "fmo_leaf": "d65b588dc2c02ec50befdf95db5bb787861fad9642bf6d1c70d2ac97cfb906ef"
+    },
+    {
+      "path": "data/s01/S01_ADDRESSABILITY_RESULTS_V1/rows.jsonl",
+      "kind": "DatasetFileFCO",
+      "group": "output_dataset",
+      "bytes": 1646100,
+      "sha256": "68c9101a1069d3477043b013c1b96dfa9e04a53a50ba175bb182bfdaf7458bf6",
+      "location": "public",
+      "fmo_leaf": "d6d4bf49d055722e6a21185eb018eb87f51d3b5e707b874498824f598ec9b3fb"
+    },
+    {
+      "path": "evidence/s01/E0_ADDRESSABILITY/EXPERIMENT_RECEIPT.json",
+      "kind": "ExperimentReceiptFCO",
+      "group": "receipt",
+      "bytes": 2242,
+      "sha256": "4fdbbccdfd82e4927b0d7f9325443ea2dc9b0f0b0ffc6c38398e91e7a63843ea",
+      "location": "public",
+      "fmo_leaf": "80c3a5047321c02f9d845fc0095a71e443d7c992f2f1ad875b9be58668903ded"
+    }
+  ],
+  "experiment_id": "E0_ADDRESSABILITY",
+  "stage": "RESULT",
+  "prereg_breakpoint": "UFA-JEV-BP-0012",
+  "pre_mmr_root": "4ba4e03d1b81e8da895b3b4b83c933cf27a0ff5dde740d947ed2157755bc9e38",
+  "terminal_state": "SUPPORTED",
+  "claims_summary": [
+    {
+      "id": "H0a",
+      "state": "SUPPORTED"
+    },
+    {
+      "id": "H0b",
+      "state": "SUPPORTED"
+    },
+    {
+      "id": "H0c",
+      "state": "SUPPORTED"
+    },
+    {
+      "id": "H0d",
+      "state": "SUPPORTED"
+    },
+    {
+      "id": "H0e",
+      "state": "OBSERVED"
+    }
+  ],
+  "replay": {
+    "reference_runtime": {
+      "host": "Claude sandbox (not the playing machine)",
+      "platform": "Linux-6.18.44-fc-v42-x86_64-with-glibc2.39",
+      "python": "3.12.3",
+      "numpy": "2.4.4",
+      "scipy": "1.17.1",
+      "python-sat": "1.9.dev15",
+      "cellpylib": "2.4.0",
+      "ale-py": "0.12.1",
+      "gymnasium": "1.3.0"
+    },
+    "input_rows_equal": true,
+    "output_rows_equal": true,
+    "replay_level": "REPLAY_LEVEL_4"
+  },
+  "fcg_edges": [
+    {
+      "src": "S01_ADDRESSABILITY_RESULTS_V1",
+      "rel": "DERIVED_FROM",
+      "dst": "S01_ADDRESSABILITY_EVAL_V1"
+    },
+    {
+      "src": "ExperimentReceipt",
+      "rel": "EXECUTED_UNDER",
+      "dst": "UFA-JEV-BP-0012"
+    }
+  ],
+  "claim_ceiling": "IDENTITY_AND_INCLUSION_ONLY; hashes do not establish correctness",
+  "signature_state": "NOT_SIGNED"
+}

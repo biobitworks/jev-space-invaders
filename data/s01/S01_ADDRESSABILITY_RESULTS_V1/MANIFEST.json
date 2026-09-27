@@ -1,0 +1,37 @@
+{
+  "dataset_id": "S01_ADDRESSABILITY_RESULTS_V1",
+  "kind": "output",
+  "schema": "rows: {space,i,address,content_id,roundtrip}",
+  "source": "S01_ADDRESSABILITY_EVAL_V1",
+  "license": "CC-BY-4.0",
+  "generation_code": [
+    {
+      "path": "experiments/e0_babel.py",
+      "sha256": "9747ffc3f90dbd94563d22974396c76edfb0c4250d0411736447523fa42cff89"
+    },
+    {
+      "path": "src/kernels/address.py",
+      "sha256": "706759f513777a037d480fcd64fe8b675a23c576e8f46fd7868dca7e6dd9d0cf"
+    },
+    {
+      "path": "src/s01/canon.py",
+      "sha256": "b6698b4cf15484c8390630eef8e41aa184b1a4a4f6c134d21ea0acb01fc03f0d"
+    }
+  ],
+  "code_commit_at_generation": "9311f61d91e05e5c854e36bc1e8ade8dc4164a93",
+  "config": {},
+  "seeds": [],
+  "files": [
+    {
+      "path": "data/s01/S01_ADDRESSABILITY_RESULTS_V1/rows.jsonl",
+      "bytes": 1646100,
+      "sha256": "68c9101a1069d3477043b013c1b96dfa9e04a53a50ba175bb182bfdaf7458bf6"
+    }
+  ],
+  "fmo_root": "bf7e2031bd709f8be167b94d8b114d8fdcacd1da513f7a63b1919ac17a3e1aab",
+  "visibility": "public",
+  "parent_evidence": [
+    "S01_ADDRESSABILITY_EVAL_V1"
+  ],
+  "claim_ceiling": "deterministic computation over the frozen input"
+}
