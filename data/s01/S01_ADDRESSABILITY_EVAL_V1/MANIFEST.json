@@ -1,0 +1,65 @@
+{
+  "dataset_id": "S01_ADDRESSABILITY_EVAL_V1",
+  "kind": "evaluation",
+  "schema": "rows: {space,k,n,i,state}",
+  "source": "generated",
+  "license": "CC-BY-4.0",
+  "generation_code": [
+    {
+      "path": "experiments/e0_babel.py",
+      "sha256": "9747ffc3f90dbd94563d22974396c76edfb0c4250d0411736447523fa42cff89"
+    },
+    {
+      "path": "src/kernels/address.py",
+      "sha256": "706759f513777a037d480fcd64fe8b675a23c576e8f46fd7868dca7e6dd9d0cf"
+    },
+    {
+      "path": "src/s01/canon.py",
+      "sha256": "b6698b4cf15484c8390630eef8e41aa184b1a4a4f6c134d21ea0acb01fc03f0d"
+    }
+  ],
+  "code_commit_at_generation": "e7d43c92ebb19d25dad28acf7faf895d29be4f73",
+  "config": {
+    "spaces": [
+      [
+        2,
+        8
+      ],
+      [
+        2,
+        64
+      ],
+      [
+        3,
+        32
+      ],
+      [
+        26,
+        20
+      ],
+      [
+        256,
+        16
+      ]
+    ],
+    "per_space": 2000
+  },
+  "seeds": [
+    1000,
+    1001,
+    1002,
+    1003,
+    1004
+  ],
+  "files": [
+    {
+      "path": "data/s01/S01_ADDRESSABILITY_EVAL_V1/rows.jsonl",
+      "bytes": 1138520,
+      "sha256": "3f516c60ba63f9c5d33847781ce225f11d1310bdff70c084e06e3396946ed85a"
+    }
+  ],
+  "fmo_root": "af82e60b9871e40982a2277597b6877452abb170929f4d153002cdc6806e2acc",
+  "visibility": "public",
+  "parent_evidence": [],
+  "claim_ceiling": "synthetic finite states; no external data"
+}

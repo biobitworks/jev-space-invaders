@@ -1,4 +1,18 @@
 {
   "generated_by": "scripts/build_registries.py",
-  "entries": []
+  "entries": [
+    {
+      "dataset_id": "S01_ADDRESSABILITY_EVAL_V1",
+      "kind": "evaluation",
+      "source": "generated",
+      "license": "CC-BY-4.0",
+      "fmo_root": "af82e60b9871e40982a2277597b6877452abb170929f4d153002cdc6806e2acc",
+      "visibility": "public",
+      "claim_ceiling": "synthetic finite states; no external data",
+      "code_commit_at_generation": "e7d43c92ebb19d25dad28acf7faf895d29be4f73",
+      "manifest": "data/s01/S01_ADDRESSABILITY_EVAL_V1/MANIFEST.json",
+      "manifest_sha256": "4dadd4c429cefc4b47b831db0fe1852b69d9ffd35c2aa9f4434eb8a49ae2a999",
+      "evidence_level": "SIMULATED"
+    }
+  ]
 }

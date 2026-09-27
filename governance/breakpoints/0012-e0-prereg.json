@@ -1,0 +1,190 @@
+{
+  "breakpoint_id": "UFA-JEV-BP-0012",
+  "parent": "UFA-JEV-BP-0011",
+  "state": "PREREG_SEALED",
+  "project": "VITHIA_SPACE",
+  "created_utc": "2026-09-27T16:54:07+00:00",
+  "git_head_at_creation": "e7d43c92ebb19d25dad28acf7faf895d29be4f73",
+  "root_kind": "FMO_V1_BREAKPOINT_ATOMS",
+  "bp_root": "bc7829011804cf1349cc9383f68ba28493fa6db2521608f48dc66200e3cff988",
+  "group_roots": {
+    "code": "90f094d1c4c749b28f06bfe9d261257b9251fb46ec4df4b0067d608d6eda393e",
+    "input_dataset": "8741c590b9f7bd607180659842a54266e052ad4664e0607acb0c62075b139ef4",
+    "prereg": "43a976c60cada265a9a37ac6181b879f61bb90a6daaf90c403a6d77bc9dad272"
+  },
+  "atoms": [
+    {
+      "path": "docs/prereg/COMMON.md",
+      "kind": "PreregistrationFCO",
+      "group": "prereg",
+      "bytes": 1120,
+      "sha256": "1a45163f867474a32673c8acb2bd4b28b9c55ac4c75d46c5ce30fc941fc46645",
+      "location": "public",
+      "fmo_leaf": "bf2cd2ba9ee20a1e26074c65d2aaa2a90cab37ae276bb8da9bf49102cace18da"
+    },
+    {
+      "path": "docs/prereg/E0_ADDRESSABILITY.md",
+      "kind": "PreregistrationFCO",
+      "group": "prereg",
+      "bytes": 1005,
+      "sha256": "382bfac7354afb7181d187e677d4642f6cc44aa3b0a4104ef5dbf62dd59bdc53",
+      "location": "public",
+      "fmo_leaf": "4788b894ab110070393216249d989deb6da7e21cfa5b342b6fc76aa4f73873aa"
+    },
+    {
+      "path": "vita01/VITA01_CONFIRMATORY_PREREGISTRATION.md",
+      "kind": "PreregistrationFCO",
+      "group": "prereg",
+      "bytes": 5051,
+      "sha256": "54691c60434ae4ecf5ba9cfee5878912ef79e5ec4494953f88717091d6aea213",
+      "location": "public",
+      "fmo_leaf": "9150b984bf1b13dce9e1de2615706939d471de7a19b11a5c3ceace588352890a"
+    },
+    {
+      "path": "data/s01/S01_ADDRESSABILITY_EVAL_V1/MANIFEST.json",
+      "kind": "DatasetManifestFCO",
+      "group": "input_dataset",
+      "bytes": 1395,
+      "sha256": "4dadd4c429cefc4b47b831db0fe1852b69d9ffd35c2aa9f4434eb8a49ae2a999",
+      "location": "public",
+      "fmo_leaf": "929d06afb6fd550b6f233801636d5ca8a339ee0619d63e88ab3540c860f73125"
+    },
+    {
+      "path": "data/s01/S01_ADDRESSABILITY_EVAL_V1/rows.jsonl",
+      "kind": "DatasetFileFCO",
+      "group": "input_dataset",
+      "bytes": 1138520,
+      "sha256": "3f516c60ba63f9c5d33847781ce225f11d1310bdff70c084e06e3396946ed85a",
+      "location": "public",
+      "fmo_leaf": "ff6fea713eb63198494c0c2e3275f7a516ca8be680cb190902899daddac4c8d0"
+    },
+    {
+      "path": "experiments/common.py",
+      "kind": "CodeFCO",
+      "group": "code",
+      "bytes": 751,
+      "sha256": "49d62a22c32c8b6ad91ae0f79c25e22053fca364ba6387a2a9a5bfd59267f03b",
+      "location": "public",
+      "fmo_leaf": "62132f2d7b6705ea9cbc87ba5ad97c6226c08d04d78bc872083096e061aa7475"
+    },
+    {
+      "path": "experiments/e0_babel.py",
+      "kind": "CodeFCO",
+      "group": "code",
+      "bytes": 3804,
+      "sha256": "9747ffc3f90dbd94563d22974396c76edfb0c4250d0411736447523fa42cff89",
+      "location": "public",
+      "fmo_leaf": "65625ccc1cfc2003c8107926de81ac816d812908181b7868ec525c25f793b3e7"
+    },
+    {
+      "path": "schemas/s01/S01_CONTEXT_PACKET_V1.json",
+      "kind": "CodeFCO",
+      "group": "code",
+      "bytes": 2433,
+      "sha256": "9ec4d57d482ff2f7f34c4a016ee768d4ee6b051094cfa85c62d9da026751063b",
+      "location": "public",
+      "fmo_leaf": "383a8db03eebcbd61e0e9a08886c5d9c82aa40f69e57c018699e1f089e488c13"
+    },
+    {
+      "path": "schemas/s01/S01_DECISION_RECEIPT_V1.json",
+      "kind": "CodeFCO",
+      "group": "code",
+      "bytes": 1454,
+      "sha256": "15de4de06ea1517b21cb911f35b8df6bd23e8f8abf98cbe7093d97f3cc1d621c",
+      "location": "public",
+      "fmo_leaf": "affaeda96fa0981b89a41b848a4aebdea5c3d6609ad4bf96dbb3dcf4cc5f2287"
+    },
+    {
+      "path": "schemas/s01/S01_EXPERIMENT_RECEIPT_V1.json",
+      "kind": "CodeFCO",
+      "group": "code",
+      "bytes": 1528,
+      "sha256": "76fe5681d49fb1ebb30636a639b73f809f17460e375e26e11be7ff4ffc759a34",
+      "location": "public",
+      "fmo_leaf": "92c7725a8c72d005656ad2cb809155775994db6ec88997d21c796004b844beac"
+    },
+    {
+      "path": "schemas/s01/S01_TRANSITION_RECEIPT_V1.json",
+      "kind": "CodeFCO",
+      "group": "code",
+      "bytes": 1392,
+      "sha256": "3b9bc185035bc3208c2ddba13729e1bf10c4fabf2a8df55d42b94922947b90b4",
+      "location": "public",
+      "fmo_leaf": "1054b9ba067df4ac6c28899dbdf44632c20eac1d76befc4bc070d9e4ec094a05"
+    },
+    {
+      "path": "scripts/run_experiment.py",
+      "kind": "CodeFCO",
+      "group": "code",
+      "bytes": 12151,
+      "sha256": "f151bf91d9a5fb49e4d9ed95bf4f6508163e8bef1716dc9c1e59de01db0e87f6",
+      "location": "public",
+      "fmo_leaf": "3652745481f2fa510d61ceab3704c354ff3f91010ca58f7ea72d99b4adc6f13d"
+    },
+    {
+      "path": "src/breakpoints.py",
+      "kind": "CodeFCO",
+      "group": "code",
+      "bytes": 4719,
+      "sha256": "9ba8554a140760ced785ffa0b51c29f3d9a666fbee40e7c004a0cb791d73a323",
+      "location": "public",
+      "fmo_leaf": "a8a31a018f630be95f9288e9ee746637cd67f4f7bdbb535a4ec279da2a68171c"
+    },
+    {
+      "path": "src/fmo.py",
+      "kind": "CodeFCO",
+      "group": "code",
+      "bytes": 2539,
+      "sha256": "aa266307c2fe1a4a86df4066ae2635bc1068b1157a9b05ae90df206ec941fde1",
+      "location": "public",
+      "fmo_leaf": "21b2fdd7c5e2189484408078ddaa7e79188870390c7e3cbb851f271663f42fbb"
+    },
+    {
+      "path": "src/kernels/address.py",
+      "kind": "CodeFCO",
+      "group": "code",
+      "bytes": 1967,
+      "sha256": "706759f513777a037d480fcd64fe8b675a23c576e8f46fd7868dca7e6dd9d0cf",
+      "location": "public",
+      "fmo_leaf": "b76906bb363540d5a3d4b0fe48df7e624b1ac561bcfa0dc37a1294845b62fe74"
+    },
+    {
+      "path": "src/s01/canon.py",
+      "kind": "CodeFCO",
+      "group": "code",
+      "bytes": 2452,
+      "sha256": "b6698b4cf15484c8390630eef8e41aa184b1a4a4f6c134d21ea0acb01fc03f0d",
+      "location": "public",
+      "fmo_leaf": "92fb64cf5354e5ee73c233d24a37d545c42a0b9747fc6ec6d74ef73ded79472c"
+    },
+    {
+      "path": "src/s01/protocol.py",
+      "kind": "CodeFCO",
+      "group": "code",
+      "bytes": 2966,
+      "sha256": "f1237bd1b6dbc4bd75783ba3b3ec1d09bfefd8c06687d45566c559083ba24e1a",
+      "location": "public",
+      "fmo_leaf": "0dc08a754259fca6cd6646cfe470c43fbacdb5398ebd838f599ec70ba1f9db87"
+    }
+  ],
+  "experiment_id": "E0_ADDRESSABILITY",
+  "stage": "PREREG",
+  "code_freeze": "UFA-JEV-BP-0011",
+  "mode": "CONFIRMATORY",
+  "evidence_level": "SIMULATED",
+  "input_dataset": {
+    "dataset_id": "S01_ADDRESSABILITY_EVAL_V1",
+    "fmo_root": "af82e60b9871e40982a2277597b6877452abb170929f4d153002cdc6806e2acc"
+  },
+  "pre_mmr_root": "836b22d82982e322b1b9190b9c4b20e95479da6b640fcfd9fb920ff620cbf567",
+  "fcg_edges": [
+    {
+      "src": "S01_ADDRESSABILITY_EVAL_V1",
+      "rel": "FROZEN_UNDER",
+      "dst": "PreregistrationFCO"
+    }
+  ],
+  "claim_ceiling_note": "sealing proves identity of the prereg text, not that it predates rehearsal executions (see docs/prereg/COMMON.md)",
+  "claim_ceiling": "IDENTITY_AND_INCLUSION_ONLY; hashes do not establish correctness",
+  "signature_state": "NOT_SIGNED"
+}
