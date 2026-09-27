@@ -1,0 +1,53 @@
+{
+  "schema": "VITHIA_EPISODE_DATASET_CONTRACT_V1",
+  "contract_fco": "FCO:EPISODE_DATASET_CONTRACT:V1",
+  "parent_runtime_source_dataset": "VITHIA_SPACE_RUNTIME_SOURCE_FREEZE_20260927_001",
+  "parent_runtime_fmo_root": "28c9beac8c617df2c8409b50d45ee6240408455c53db5b845261fb4005171a81",
+  "state": "PROPOSED_NOT_EXECUTED",
+  "required_episode_fields": [
+    "episode_id",
+    "created_at",
+    "runtime_source_fmo_root",
+    "environment_id",
+    "environment_config",
+    "environment_config_sha256",
+    "rom_sha256_or_state",
+    "seed",
+    "observation_schema",
+    "state_projection_id",
+    "decision_system_id",
+    "served_model_id_or_policy_id",
+    "transition_log_sha256",
+    "score",
+    "steps",
+    "frames",
+    "lives_lost",
+    "model_calls",
+    "input_tokens",
+    "output_tokens",
+    "latency_ms_p50",
+    "latency_ms_p95",
+    "errors",
+    "retries",
+    "fallback_actions",
+    "unknown_runtime_evidence",
+    "result_state"
+  ],
+  "transition_fco_chain": [
+    "ObservationFCO",
+    "StateProjectionFCO",
+    "DecisionRequestFCO",
+    "DecisionResponseFCO",
+    "DecisionPolicyFCO",
+    "ActionFCO",
+    "EnvironmentTransitionFCO"
+  ],
+  "rules": [
+    "Every episode binds the exact parent runtime FMO root.",
+    "If the ROM is acquired later, its exact bytes/hash/provenance/license receipt create a successor runtime-source dataset; do not mutate the existing freeze.",
+    "Unknown or unverified runtime information is copied forward until resolved by new evidence.",
+    "JEV outputs are benchmark evidence only and are not Vithia training targets.",
+    "FCG edges are declared relationships and do not establish causality.",
+    "Corrections create successor episode datasets and preserve predecessors."
+  ]
+}

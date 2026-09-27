@@ -1,0 +1,72 @@
+{
+  "schema": "FCG_EDGES_V1",
+  "causality_claimed": false,
+  "edges": [
+    {
+      "edge_id": "E1",
+      "type": "CONTAINS_SOURCE",
+      "from": "FCO:VITHIA_SPACE_RUNTIME_SOURCE_DATASET:20260927:001",
+      "to": "FCO:PETTINGZOO:1.27.0"
+    },
+    {
+      "edge_id": "E2",
+      "type": "DECLARES_ENVIRONMENT",
+      "from": "FCO:PETTINGZOO:1.27.0",
+      "to": "FCO:PETTINGZOO:SPACE_INVADERS_V2"
+    },
+    {
+      "edge_id": "E3",
+      "type": "DEPENDS_ON",
+      "from": "FCO:PETTINGZOO:SPACE_INVADERS_V2",
+      "to": "FCO:MULTI_AGENT_ALE_PY:0.1.12"
+    },
+    {
+      "edge_id": "E4",
+      "type": "REQUIRES_RUNTIME_ASSET",
+      "from": "FCO:MULTI_AGENT_ALE_PY:0.1.12",
+      "to": "FCO:SPACE_INVADERS_ROM:UNRESOLVED"
+    },
+    {
+      "edge_id": "E5",
+      "type": "GOVERNS_SUCCESSOR_DATASET",
+      "from": "FCO:VITHIA_SPACE_RUNTIME_SOURCE_DATASET:20260927:001",
+      "to": "FCO:EPISODE_DATASET_CONTRACT:V1"
+    },
+    {
+      "edge_id": "E6",
+      "type": "HAS_UNRESOLVED_RUNTIME_EVIDENCE",
+      "from": "FCO:VITHIA_SPACE_RUNTIME_SOURCE_DATASET:20260927:001",
+      "to": "FCO:UNKNOWN_ROM_BYTES"
+    },
+    {
+      "edge_id": "E7",
+      "type": "HAS_UNRESOLVED_RUNTIME_EVIDENCE",
+      "from": "FCO:VITHIA_SPACE_RUNTIME_SOURCE_DATASET:20260927:001",
+      "to": "FCO:UNKNOWN_FULL_SOURCE_AUDIT"
+    },
+    {
+      "edge_id": "E8",
+      "type": "HAS_UNRESOLVED_RUNTIME_EVIDENCE",
+      "from": "FCO:VITHIA_SPACE_RUNTIME_SOURCE_DATASET:20260927:001",
+      "to": "FCO:UNKNOWN_NATIVE_BUILD_PROVENANCE"
+    },
+    {
+      "edge_id": "E9",
+      "type": "HAS_UNRESOLVED_RUNTIME_EVIDENCE",
+      "from": "FCO:VITHIA_SPACE_RUNTIME_SOURCE_DATASET:20260927:001",
+      "to": "FCO:UNKNOWN_TRANSITIVE_LICENSE_REVIEW"
+    },
+    {
+      "edge_id": "E10",
+      "type": "HAS_UNRESOLVED_RUNTIME_EVIDENCE",
+      "from": "FCO:VITHIA_SPACE_RUNTIME_SOURCE_DATASET:20260927:001",
+      "to": "FCO:UNKNOWN_PACKAGE_INDEX_TRANSPORT_RECEIPT"
+    },
+    {
+      "edge_id": "E11",
+      "type": "BREAKPOINT_BINDS_DATASET",
+      "from": "CONV_FCO:VITHIA_SPACE:20260927:RUNTIME_SOURCE_FREEZE_001",
+      "to": "FCO:VITHIA_SPACE_RUNTIME_SOURCE_DATASET:20260927:001"
+    }
+  ]
+}

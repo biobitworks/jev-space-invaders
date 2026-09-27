@@ -27,6 +27,12 @@ Pilot: JEV chooses one of NOOP, FIRE, RIGHT, LEFT, RIGHTFIRE, LEFTFIRE from comp
 
 The proposed originality layer is confidence-aware temporal control: state includes current RAM plus deterministic deltas from recent frames; low-confidence behavior is explicit and measured rather than hidden.
 
+## Frozen runtime-source dataset
+
+The starting executable-evidence dataset is `VITHIA_SPACE_RUNTIME_SOURCE_FREEZE_20260927_001`, committed by FMO root `28c9beac8c617df2c8409b50d45ee6240408455c53db5b845261fb4005171a81`. Exact third-party downloaded bytes remain in an ignored local cache; the public repository contains hashes, provenance state, and a verifier. The Space Invaders ROM is not present in this freeze.
+
+Runtime source is treated as data: dependency bytes, configuration, assets, RNG behavior, wrappers, and generated transitions can all influence the experiment. Unknown runtime information remains explicit UNKNOWN/NOT_VERIFIED evidence.
+
 ## Setup
 
 Python 3.10+; create a virtualenv, install requirements.txt, and copy .env.example to .env. Add keys only to .env; never commit it.

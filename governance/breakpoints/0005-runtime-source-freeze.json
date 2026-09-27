@@ -1,0 +1,81 @@
+{
+  "breakpoint_id": "UFA-JEV-BP-0005",
+  "parent": "UFA-JEV-BP-0004",
+  "root_kind": "FRACTAL_MERKLE_OBJECT_V1_SOURCE_FREEZE",
+  "root": "28c9beac8c617df2c8409b50d45ee6240408455c53db5b845261fb4005171a81",
+  "canonical_mutation_performed": true,
+  "verified_new": [
+    "14 exact downloaded source/runtime files hashed and committed by FMO",
+    "PettingZoo 1.27.0 bound to commit 7221e4b15873a8b16555fda038a77a6ae595e88d",
+    "PettingZoo license MIT",
+    "multi-agent-ale-py 0.1.12 wheel declares GPL",
+    "ROM absent and license acceptance not performed"
+  ],
+  "executed": [
+    "downloaded frozen dependency wheels",
+    "downloaded PettingZoo docs/source/tag archive",
+    "computed per-file SHA256",
+    "constructed and recomputed FMO root",
+    "created FCO registry and FCG edges"
+  ],
+  "observed": [
+    "runtime source dataset leaf_count=14",
+    "JEV games=0",
+    "baseline games=0",
+    "ROM present=false"
+  ],
+  "decisions": [
+    "runtime source is classified as executable evidence dataset",
+    "unknown runtime information represented as RuntimeUnknownFCO",
+    "episode datasets must bind parent runtime FMO root",
+    "JEV output excluded from Vithia training targets"
+  ],
+  "proposed": [
+    "R0/J0/J1/J2/L0/V0 controlled piecewise comparison"
+  ],
+  "not_tested": [
+    "ROM acquisition/license",
+    "environment instantiation",
+    "game execution",
+    "JEV API",
+    "Vithia-Space training"
+  ],
+  "failures": [],
+  "unresolved": [
+    "ROM exact bytes/provenance/license",
+    "full dependency security audit",
+    "full transitive license adjudication",
+    "selected competition track"
+  ],
+  "next_action": "perform public-manifest verification and secret scan; commit/push source-freeze successor; acquire ROM only under explicit license/provenance receipt before runtime smoke test",
+  "verification_receipt": {
+    "script": "scripts/verify_source_freeze.py",
+    "result": "PASS",
+    "fmo_root": "28c9beac8c617df2c8409b50d45ee6240408455c53db5b845261fb4005171a81",
+    "leaf_count": 14
+  },
+  "conversation_fco": {
+    "id": "CONV_FCO:VITHIA_SPACE:20260927:RUNTIME_SOURCE_FREEZE_001",
+    "project_binding": "VITHIA_SPACE",
+    "repo_binding": "https://github.com/biobitworks/jev-space-invaders",
+    "branch_binding": "vithia-space",
+    "parent_git_head": "4a5c0b2f5e877e32b7fe4fc6e4f089235287b097",
+    "content_identity": "EXACT_CHAT_TRANSPORT_BYTES_NOT_CAPTURED",
+    "context_identity": "BOUND_TO_UFA-JEV-BP-0004",
+    "transition_identity": "RUNTIME_SOURCE_DATASET_FREEZE",
+    "conversation_turn_merkle": "NOT_COMPUTED"
+  },
+  "governed_artifact_hashes": {
+    "evidence/source_freeze/RUNTIME_SOURCE_DATASET.json": "cf1a1a732e83b2c2ab9fbbe090b42cc0e13531cc759aacdf0292955e03028a90",
+    "evidence/source_freeze/FMO_RECEIPT.json": "a0bd9adf1d680ffd3a59d02212c1b0232b167253167a028396f5f3bdf5a5731e",
+    "evidence/source_freeze/FMO_CONSTRUCTION.md": "861ceeaf9bafd72fdd46d41a5a7d986f95d46345cc6f5396c5b22e64b5214925",
+    "evidence/source_freeze/EPISODE_DATASET_CONTRACT.json": "c240ab502535288974fd6c0a78919f95533136e41439d2de65acf6ff83c29138",
+    "FCO_REGISTRY.json": "d6256aeaeb27e6b7e997c386fa7a7ad1c6c234188f617f03dffcb46bb32d6d44",
+    "FCG_EDGES.json": "b799bbaa4c1640cb76d98ce6ac5362fa1b9a36f374d504e6671292cc90b5becf",
+    "SOURCE_OF_TRUTH.md": "057b7ca9c7844911053e1d93c6243c5b05a04a5324e6b940eb808e90dfc5aef3",
+    "VITHIA_SPACE_PIECEWISE_PLAN.md": "83b411d0613766a27da961a13033c3a30042758e6865ad1060201bc8f8c743cb",
+    "THIRD_PARTY_NOTICES.md": "926032eba93b53031bdf1be8e80173747c57fe7f8a8a36da6639504303f3be6d",
+    "scripts/verify_source_freeze.py": "fbd2451cb22c9e213a20f1107987e80bb4728c9323a8c36500fc12f8704e0918",
+    "scripts/secret_scan.py": "1fc23eb8e9079780ac881a4b9f9af13b0c5289d7059f938cac57c5927ea04e40"
+  }
+}

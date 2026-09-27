@@ -1,0 +1,125 @@
+{
+  "schema": "FCO_REGISTRY_V1",
+  "fcos": [
+    {
+      "fco_id": "FCO:VITHIA_SPACE_RUNTIME_SOURCE_DATASET:20260927:001",
+      "type": "RuntimeSourceDatasetFCO",
+      "state": "FROZEN",
+      "attributes": {
+        "manifest": "evidence/source_freeze/RUNTIME_SOURCE_DATASET.json",
+        "fmo_root": "28c9beac8c617df2c8409b50d45ee6240408455c53db5b845261fb4005171a81"
+      }
+    },
+    {
+      "fco_id": "FCO:PETTINGZOO:1.27.0",
+      "type": "SoftwareSourceFCO",
+      "state": "FROZEN",
+      "attributes": {
+        "commit": "7221e4b15873a8b16555fda038a77a6ae595e88d",
+        "license": "MIT"
+      }
+    },
+    {
+      "fco_id": "FCO:PETTINGZOO:SPACE_INVADERS_V2",
+      "type": "EnvironmentDefinitionFCO",
+      "state": "FROZEN",
+      "attributes": {
+        "agents": 2,
+        "action_count": 6,
+        "observation_rgb": [
+          210,
+          160,
+          3
+        ]
+      }
+    },
+    {
+      "fco_id": "FCO:MULTI_AGENT_ALE_PY:0.1.12",
+      "type": "RuntimeDependencyFCO",
+      "state": "FROZEN",
+      "attributes": {
+        "license_declared": "GPL",
+        "wheel_sha256": "ffbea15eb0610bebbd706382fe8f9dcc180aa4c726e0197c63cc8e1f14a6d578"
+      }
+    },
+    {
+      "fco_id": "FCO:SPACE_INVADERS_ROM:UNRESOLVED",
+      "type": "RuntimeAssetFCO",
+      "state": "NOT_PRESENT",
+      "attributes": {
+        "provenance": "UNKNOWN",
+        "license_acceptance": "NOT_PERFORMED"
+      }
+    },
+    {
+      "fco_id": "FCO:UNKNOWN_ROM_BYTES",
+      "type": "RuntimeUnknownFCO",
+      "state": "UNKNOWN",
+      "attributes": {
+        "security_relevance": "HIGH",
+        "reason": "ROM required by runtime but not present in frozen downloads"
+      }
+    },
+    {
+      "fco_id": "FCO:UNKNOWN_FULL_SOURCE_AUDIT",
+      "type": "RuntimeUnknownFCO",
+      "state": "NOT_VERIFIED",
+      "attributes": {
+        "security_relevance": "MEDIUM",
+        "reason": "archive frozen but full codebase not audited"
+      }
+    },
+    {
+      "fco_id": "FCO:UNKNOWN_NATIVE_BUILD_PROVENANCE",
+      "type": "RuntimeUnknownFCO",
+      "state": "NOT_VERIFIED",
+      "attributes": {
+        "security_relevance": "MEDIUM",
+        "reason": "binary wheel provenance/build chain not independently reproduced"
+      }
+    },
+    {
+      "fco_id": "FCO:UNKNOWN_TRANSITIVE_LICENSE_REVIEW",
+      "type": "RuntimeUnknownFCO",
+      "state": "PARTIAL",
+      "attributes": {
+        "security_relevance": "LOW",
+        "reason": "PettingZoo and Multi-Agent-ALE reviewed; every transitive dependency license not yet individually adjudicated"
+      }
+    },
+    {
+      "fco_id": "FCO:UNKNOWN_PACKAGE_INDEX_TRANSPORT_RECEIPT",
+      "type": "RuntimeUnknownFCO",
+      "state": "NOT_CAPTURED",
+      "attributes": {
+        "security_relevance": "LOW",
+        "reason": "pip/TLS transport receipt not preserved; exact downloaded bytes are hashed"
+      }
+    },
+    {
+      "fco_id": "FCO:EPISODE_DATASET_CONTRACT:V1",
+      "type": "DatasetGenerationContractFCO",
+      "state": "PROPOSED",
+      "attributes": {
+        "requires_parent_runtime_fmo_root": "28c9beac8c617df2c8409b50d45ee6240408455c53db5b845261fb4005171a81",
+        "successor_only": true
+      }
+    },
+    {
+      "fco_id": "CONV_FCO:VITHIA_SPACE:20260927:RUNTIME_SOURCE_FREEZE_001",
+      "type": "ConversationFCO",
+      "state": "BREAKPOINT_CREATED",
+      "attributes": {
+        "id": "CONV_FCO:VITHIA_SPACE:20260927:RUNTIME_SOURCE_FREEZE_001",
+        "project_binding": "VITHIA_SPACE",
+        "repo_binding": "https://github.com/biobitworks/jev-space-invaders",
+        "branch_binding": "vithia-space",
+        "parent_git_head": "4a5c0b2f5e877e32b7fe4fc6e4f089235287b097",
+        "content_identity": "EXACT_CHAT_TRANSPORT_BYTES_NOT_CAPTURED",
+        "context_identity": "BOUND_TO_UFA-JEV-BP-0004",
+        "transition_identity": "RUNTIME_SOURCE_DATASET_FREEZE",
+        "conversation_turn_merkle": "NOT_COMPUTED"
+      }
+    }
+  ]
+}

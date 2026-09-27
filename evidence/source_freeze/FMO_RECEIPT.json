@@ -1,0 +1,44 @@
+{
+  "receipt_id": "VITHIA_SPACE_SOURCE_FREEZE_RECEIPT_20260927_001",
+  "root_kind": "FRACTAL_MERKLE_OBJECT_V1_SOURCE_FREEZE",
+  "root": "28c9beac8c617df2c8409b50d45ee6240408455c53db5b845261fb4005171a81",
+  "ordered_groups": [
+    "pypi",
+    "upstream"
+  ],
+  "groups": {
+    "pypi": {
+      "ordered_paths": [
+        "pypi/cloudpickle-3.1.2-py3-none-any.whl",
+        "pypi/farama_notifications-0.0.6-py3-none-any.whl",
+        "pypi/gymnasium-1.3.0-py3-none-any.whl",
+        "pypi/multi_agent_ale_py-0.1.12-cp314-cp314-macosx_11_0_arm64.whl",
+        "pypi/numpy-2.5.3-cp314-cp314-macosx_14_0_arm64.whl",
+        "pypi/pettingzoo-1.27.0-py3-none-any.whl",
+        "pypi/pygame_ce-2.5.8-cp314-cp314-macosx_10_15_universal2.whl",
+        "pypi/typing_extensions-4.16.0-py3-none-any.whl"
+      ],
+      "leaf_count": 8,
+      "merkle_root": "13cc5f5c92a4c0640761c2a12dd8970127d36dd90963e67e3f16d62fff93dbd4",
+      "group_commitment": "53d40a0132e3cfb4cb6fa2257f3980656a9618c798084fa532203f98115cb081"
+    },
+    "upstream": {
+      "ordered_paths": [
+        "upstream/LICENSE-PettingZoo",
+        "upstream/PettingZoo-1.27.0.tar.gz",
+        "upstream/base_atari_env.py",
+        "upstream/pettingzoo-space-invaders.html",
+        "upstream/pyproject.toml",
+        "upstream/space_invaders.py"
+      ],
+      "leaf_count": 6,
+      "merkle_root": "09352075f72b5e3f98cc041292151e735544719ef1a65cb6abc5fdf3aaa51049",
+      "group_commitment": "1d432826ffe60aafc60c3e7948f509a8bdd1002c926be388b037a34f308a934e"
+    }
+  },
+  "leaf_count": 14,
+  "construction_spec": "evidence/source_freeze/FMO_CONSTRUCTION.md",
+  "verification": "PASS_RECOMPUTED_DURING_CONSTRUCTION",
+  "mmr": "NOT_COMPUTED",
+  "signature": "NOT_SIGNED"
+}

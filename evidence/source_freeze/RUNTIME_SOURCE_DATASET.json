@@ -1,0 +1,233 @@
+{
+  "schema": "VITHIA_RUNTIME_SOURCE_DATASET_V1",
+  "dataset_id": "VITHIA_SPACE_RUNTIME_SOURCE_FREEZE_20260927_001",
+  "created_date": "2026-09-27",
+  "classification": "EXECUTABLE_EVIDENCE_DATASET",
+  "definition": "Executable source/data whose bytes, configuration, assets, dependencies, RNG behavior, wrappers, and transitions can influence observed runtime behavior.",
+  "canonical_mutation_performed": true,
+  "byte_cache": "artifacts/private/source_freeze/2026-09-27 (git-ignored)",
+  "public_commitment": "hashes/manifests only; third-party byte cache is not committed",
+  "runtime_resolution": {
+    "python": "3.14.7",
+    "implementation": "CPython",
+    "platform": "macOS-27.0-arm64-arm-64bit-Mach-O",
+    "machine": "arm64",
+    "pip": "pip 26.2.1 from /opt/homebrew/lib/python3.14/site-packages/pip (python 3.14)",
+    "requested": "pettingzoo[atari]==1.27.0",
+    "resolved_wheels": [
+      "cloudpickle-3.1.2-py3-none-any.whl",
+      "farama_notifications-0.0.6-py3-none-any.whl",
+      "gymnasium-1.3.0-py3-none-any.whl",
+      "multi_agent_ale_py-0.1.12-cp314-cp314-macosx_11_0_arm64.whl",
+      "numpy-2.5.3-cp314-cp314-macosx_14_0_arm64.whl",
+      "pettingzoo-1.27.0-py3-none-any.whl",
+      "pygame_ce-2.5.8-cp314-cp314-macosx_10_15_universal2.whl",
+      "typing_extensions-4.16.0-py3-none-any.whl"
+    ]
+  },
+  "upstream_identity": {
+    "pettingzoo_release": "1.27.0",
+    "pettingzoo_git_ref": "refs/tags/1.27.0",
+    "pettingzoo_commit": "7221e4b15873a8b16555fda038a77a6ae595e88d",
+    "space_invaders_env": "atari/space_invaders-v2",
+    "pettingzoo_license": "MIT",
+    "multi_agent_ale_py_selected": "0.1.12",
+    "multi_agent_ale_py_license_declared": "GPL"
+  },
+  "rom": {
+    "space_invaders_rom_present_in_frozen_downloads": false,
+    "license_acceptance_performed": false,
+    "state": "NOT_PRESENT",
+    "provenance": "UNKNOWN_UNTIL_SEPARATELY_ACQUIRED_AND_HASHED"
+  },
+  "files": [
+    {
+      "path": "pypi/cloudpickle-3.1.2-py3-none-any.whl",
+      "group": "pypi",
+      "bytes": 22228,
+      "sha256": "9acb47f6afd73f60dc1df93bb801b472f05ff42fa6c84167d25cb206be1fbf4a",
+      "fmo_leaf": "7908d9724af64fe88a74dcd8b46312001523376541c195ffde5f6d987c619c67",
+      "storage": "PRIVATE_BYTE_CACHE_NOT_COMMITTED"
+    },
+    {
+      "path": "pypi/farama_notifications-0.0.6-py3-none-any.whl",
+      "group": "pypi",
+      "bytes": 2897,
+      "sha256": "f84839188efa1ce5bb361c2a84881b2dc2c0d0d7fb661ff00421820170930935",
+      "fmo_leaf": "42beca05494ed4f9ed2a844af928e4f8259a9792a0f458c513b2d433a48d2e93",
+      "storage": "PRIVATE_BYTE_CACHE_NOT_COMMITTED"
+    },
+    {
+      "path": "pypi/gymnasium-1.3.0-py3-none-any.whl",
+      "group": "pypi",
+      "bytes": 953904,
+      "sha256": "6b8c159a8540dcbcb221722d7efda24d78ebbcbc3bd2ea1c2611aa2a34471fc2",
+      "fmo_leaf": "952410b5df0f70a47426e068fe0ebbb29606562a6f2ef2380ed651045a9f74d1",
+      "storage": "PRIVATE_BYTE_CACHE_NOT_COMMITTED"
+    },
+    {
+      "path": "pypi/multi_agent_ale_py-0.1.12-cp314-cp314-macosx_11_0_arm64.whl",
+      "group": "pypi",
+      "bytes": 433646,
+      "sha256": "ffbea15eb0610bebbd706382fe8f9dcc180aa4c726e0197c63cc8e1f14a6d578",
+      "fmo_leaf": "bcac44048b70c1a18a4398d20f1b84a91bdd9554565ea4403aac3338b82a6f0f",
+      "storage": "PRIVATE_BYTE_CACHE_NOT_COMMITTED"
+    },
+    {
+      "path": "pypi/numpy-2.5.3-cp314-cp314-macosx_14_0_arm64.whl",
+      "group": "pypi",
+      "bytes": 5449793,
+      "sha256": "adc1ada2662f8a5f960b8a10d9986897e7499ef07e06d4cfe7197f8cce923c07",
+      "fmo_leaf": "5649d511052f306e76fddf0ab7aac90a61ae7992126645b52e227f4bc6d6f0ef",
+      "storage": "PRIVATE_BYTE_CACHE_NOT_COMMITTED"
+    },
+    {
+      "path": "pypi/pettingzoo-1.27.0-py3-none-any.whl",
+      "group": "pypi",
+      "bytes": 668492,
+      "sha256": "075a6ab7c32d32d9a674f1af395010198bf09c172341aa38fa5415461601ac61",
+      "fmo_leaf": "7c0fde43fb77b3610a9336b5663cda3a13f3d2d59b8535a07591faf9a089b72a",
+      "storage": "PRIVATE_BYTE_CACHE_NOT_COMMITTED"
+    },
+    {
+      "path": "pypi/pygame_ce-2.5.8-cp314-cp314-macosx_10_15_universal2.whl",
+      "group": "pypi",
+      "bytes": 16571019,
+      "sha256": "7ec4efa6b57a194f5ad51b92211cc74b485320df951b0cc870235b2b889b9b6d",
+      "fmo_leaf": "f5d4673cc0872f750ab47ff5a8a7c8aa29762eee9ab0eeaf49171b6bcbf06a2e",
+      "storage": "PRIVATE_BYTE_CACHE_NOT_COMMITTED"
+    },
+    {
+      "path": "pypi/typing_extensions-4.16.0-py3-none-any.whl",
+      "group": "pypi",
+      "bytes": 45571,
+      "sha256": "481caa481374e813c1b176ada14e97f1f67a4539ce9cfeb3f350d78d6370c2e8",
+      "fmo_leaf": "edda83919f1e7f439219291638394b9d88dad6a62387791e74bb8d1d84d29cf9",
+      "storage": "PRIVATE_BYTE_CACHE_NOT_COMMITTED"
+    },
+    {
+      "path": "upstream/LICENSE-PettingZoo",
+      "group": "upstream",
+      "bytes": 1073,
+      "sha256": "fe9f87b9e7bedda9df7a8d73be96fe0c6456bd84271c8dc24e36c4e8e93515f2",
+      "fmo_leaf": "2b0079ec706175589b2e267764c43a2afb0f785ffa7ab125ec6378044c96c9b0",
+      "storage": "PRIVATE_BYTE_CACHE_NOT_COMMITTED"
+    },
+    {
+      "path": "upstream/PettingZoo-1.27.0.tar.gz",
+      "group": "upstream",
+      "bytes": 35149053,
+      "sha256": "da691c5a4416c6a1664fa7f9c38babb6371923df14451e0bb05538cea55f88aa",
+      "fmo_leaf": "8b6b5018f928c8ec633f1c6718e02d8bf59ebf43dc36fef6e5997a8ecdc8d6e1",
+      "storage": "PRIVATE_BYTE_CACHE_NOT_COMMITTED"
+    },
+    {
+      "path": "upstream/base_atari_env.py",
+      "group": "upstream",
+      "bytes": 12010,
+      "sha256": "d9c1e0b76f3594cf9a370e87d250a14261a13ede9e0c5dbd5d915a2bf8e01ff8",
+      "fmo_leaf": "52f5e119d34ca6ec74fd734ec0a4023fc3c9da43096de36d548bca2f6b47a688",
+      "storage": "PRIVATE_BYTE_CACHE_NOT_COMMITTED"
+    },
+    {
+      "path": "upstream/pettingzoo-space-invaders.html",
+      "group": "upstream",
+      "bytes": 55084,
+      "sha256": "e880a8f5de1f4a1f46ef4f915f5f43f56becf9a4e40101ea30b8d8a6ac810ac9",
+      "fmo_leaf": "9ee12fa714fa82d134b1d2ca971be61484d0bf73603eae919fb6edc385b9be46",
+      "storage": "PRIVATE_BYTE_CACHE_NOT_COMMITTED"
+    },
+    {
+      "path": "upstream/pyproject.toml",
+      "group": "upstream",
+      "bytes": 7819,
+      "sha256": "3872040f3f107b76cc415de7c8008e7259dbd21c8c0dc7a78de118917aa5b724",
+      "fmo_leaf": "1988192683880d706a73cb4fce31fe4969925262f7e8d7b0d1e8c06db08beaa8",
+      "storage": "PRIVATE_BYTE_CACHE_NOT_COMMITTED"
+    },
+    {
+      "path": "upstream/space_invaders.py",
+      "group": "upstream",
+      "bytes": 4339,
+      "sha256": "635a19dcee67a631c2d9b352dd4037da2838e87fc65ba0999bb3ac912a231be3",
+      "fmo_leaf": "1bcaff7c5a81df6335ad46b9365ab1a6fc461df3a3f0da97fec2ca002cbb07e1",
+      "storage": "PRIVATE_BYTE_CACHE_NOT_COMMITTED"
+    }
+  ],
+  "fmo": {
+    "kind": "FRACTAL_MERKLE_OBJECT_V1",
+    "hash": "sha256",
+    "leaf_rule": "SHA256(\"FMO_LEAF_V1\\0\" || path_utf8 || \"\\0\" || byte_count_decimal || \"\\0\" || raw_sha256_hex)",
+    "node_rule": "SHA256(\"FMO_NODE_V1\\0\" || left_digest_bytes || \"\\0\" || right_digest_bytes); duplicate final node when odd",
+    "group_rule": "SHA256(\"FMO_GROUP_V1\\0\" || group_name_utf8 || \"\\0\" || group_merkle_root_hex)",
+    "group_order": "lexicographic group name",
+    "leaf_order": "lexicographic relative path within group",
+    "groups": {
+      "pypi": {
+        "ordered_paths": [
+          "pypi/cloudpickle-3.1.2-py3-none-any.whl",
+          "pypi/farama_notifications-0.0.6-py3-none-any.whl",
+          "pypi/gymnasium-1.3.0-py3-none-any.whl",
+          "pypi/multi_agent_ale_py-0.1.12-cp314-cp314-macosx_11_0_arm64.whl",
+          "pypi/numpy-2.5.3-cp314-cp314-macosx_14_0_arm64.whl",
+          "pypi/pettingzoo-1.27.0-py3-none-any.whl",
+          "pypi/pygame_ce-2.5.8-cp314-cp314-macosx_10_15_universal2.whl",
+          "pypi/typing_extensions-4.16.0-py3-none-any.whl"
+        ],
+        "leaf_count": 8,
+        "merkle_root": "13cc5f5c92a4c0640761c2a12dd8970127d36dd90963e67e3f16d62fff93dbd4",
+        "group_commitment": "53d40a0132e3cfb4cb6fa2257f3980656a9618c798084fa532203f98115cb081"
+      },
+      "upstream": {
+        "ordered_paths": [
+          "upstream/LICENSE-PettingZoo",
+          "upstream/PettingZoo-1.27.0.tar.gz",
+          "upstream/base_atari_env.py",
+          "upstream/pettingzoo-space-invaders.html",
+          "upstream/pyproject.toml",
+          "upstream/space_invaders.py"
+        ],
+        "leaf_count": 6,
+        "merkle_root": "09352075f72b5e3f98cc041292151e735544719ef1a65cb6abc5fdf3aaa51049",
+        "group_commitment": "1d432826ffe60aafc60c3e7948f509a8bdd1002c926be388b037a34f308a934e"
+      }
+    },
+    "root": "28c9beac8c617df2c8409b50d45ee6240408455c53db5b845261fb4005171a81",
+    "verified_recompute": true,
+    "mmr_state": "NOT_COMPUTED",
+    "signature_state": "NOT_SIGNED"
+  },
+  "unknowns": [
+    {
+      "id": "UNKNOWN_ROM_BYTES",
+      "state": "UNKNOWN",
+      "security_relevance": "HIGH",
+      "reason": "ROM required by runtime but not present in frozen downloads"
+    },
+    {
+      "id": "UNKNOWN_FULL_SOURCE_AUDIT",
+      "state": "NOT_VERIFIED",
+      "security_relevance": "MEDIUM",
+      "reason": "archive frozen but full codebase not audited"
+    },
+    {
+      "id": "UNKNOWN_NATIVE_BUILD_PROVENANCE",
+      "state": "NOT_VERIFIED",
+      "security_relevance": "MEDIUM",
+      "reason": "binary wheel provenance/build chain not independently reproduced"
+    },
+    {
+      "id": "UNKNOWN_TRANSITIVE_LICENSE_REVIEW",
+      "state": "PARTIAL",
+      "security_relevance": "LOW",
+      "reason": "PettingZoo and Multi-Agent-ALE reviewed; every transitive dependency license not yet individually adjudicated"
+    },
+    {
+      "id": "UNKNOWN_PACKAGE_INDEX_TRANSPORT_RECEIPT",
+      "state": "NOT_CAPTURED",
+      "security_relevance": "LOW",
+      "reason": "pip/TLS transport receipt not preserved; exact downloaded bytes are hashed"
+    }
+  ],
+  "claim_ceiling": "IDENTITY_CUSTODY_AND_RUNTIME_INPUT_FREEZE_ONLY; NOT A SECURITY AUDIT OR SAFETY CERTIFICATION"
+}

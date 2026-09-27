@@ -78,5 +78,14 @@
       "patent-sensitive notes"
     ],
     "jev_input_rule": "SEND_ONLY_MINIMUM_GAME_STATE_REQUIRED_FOR_DECISION"
+  },
+  "runtime_source_dataset": {
+    "dataset_id": "VITHIA_SPACE_RUNTIME_SOURCE_FREEZE_20260927_001",
+    "state": "FROZEN_AND_VERIFIED",
+    "fmo_root": "28c9beac8c617df2c8409b50d45ee6240408455c53db5b845261fb4005171a81",
+    "root_kind": "FRACTAL_MERKLE_OBJECT_V1_SOURCE_FREEZE",
+    "leaf_count": 14,
+    "rom_state": "NOT_PRESENT",
+    "claim_ceiling": "IDENTITY_CUSTODY_AND_RUNTIME_INPUT_FREEZE_ONLY"
   }
 }
