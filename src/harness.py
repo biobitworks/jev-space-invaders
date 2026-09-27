@@ -19,6 +19,8 @@ from src.actions import ACTION_TO_ID
 from src.envcfg import ENV_CONFIG, make_env, runtime_versions
 from src.perception import VERSION as PERCEPTION_VERSION, Perception
 from src.validate import check
+from src.fmo import hp, mmr_root
+from src.s01.canon import content_id
 
 ROOT = Path(__file__).resolve().parents[1]
 LOW_CONF = 0.6
@@ -60,11 +62,15 @@ def run_episode(decider, seed: int, max_steps: int | None = None, log_every: int
             served.add(d.served_model)
         obs, r, term, trunc, info = env.step(ACTION_TO_ID[d.action])
         score += float(r)
-        trace.append({"t": steps, "action": d.action, "proposed": d.proposed_action,
-                      "conf": d.confidence, "p": d.probabilities, "ms": round(ms, 2),
-                      "reward": float(r), "lives": int(info["lives"]),
-                      "ship_x": (state["ship"] or {}).get("x"), "n_bombs": len(state["bombs"]),
-                      "fallback": d.fallback_reason})
+        rec = {"t": steps, "state_id": content_id(state), "action": d.action, "proposed": d.proposed_action,
+               "conf": d.confidence, "p": d.probabilities, "served_model": d.served_model,
+               "reward": float(r), "lives": int(info["lives"]),
+               "next_frame_sha256": hashlib.sha256(obs.tobytes()).hexdigest(),
+               "ship_x": (state["ship"] or {}).get("x"), "n_bombs": len(state["bombs"]),
+               "fallback": d.fallback_reason}
+        rec["leaf"] = hp("EPISODE_LEAF_V1", steps, content_id(rec)).hex()   # per-decision Merkle leaf
+        rec["ms"] = round(ms, 2)                                              # timing kept outside the leaf
+        trace.append(rec)
         steps += 1
         prev = d.action
         if log_every and steps % log_every == 0:
@@ -75,6 +81,7 @@ def run_episode(decider, seed: int, max_steps: int | None = None, log_every: int
             capped = True
             break
     env.close()
+    ep_root, ep_peaks = mmr_root([bytes.fromhex(x["leaf"]) for x in trace])
     a = np.array(lat)
     run = {
         "seed": seed, "score": score, "steps": steps,
@@ -90,6 +97,8 @@ def run_episode(decider, seed: int, max_steps: int | None = None, log_every: int
         "served_model": ",".join(sorted(served)) if served else None,
         "provider": decider.provider, "requested_model": decider.requested_model,
         "state_encoding": PERCEPTION_VERSION,
+        "episode_mmr_root": ep_root, "episode_mmr_size": len(trace),
+        "episode_mmr_protocol": "leaf = SHA256('EPISODE_LEAF_V1' 0 t 0 content_id(record without leaf, ms)); MMR per docs/BREAKPOINT_PROTOCOL.md",
         "runtime": runtime_versions(),
     }
     if tok_seen:
@@ -107,11 +116,12 @@ def _git(*args: str) -> subprocess.CompletedProcess:
     return subprocess.run(["git", *args], cwd=ROOT, capture_output=True, text=True)
 
 
-def preflight_git() -> str:
+def preflight_git(branch: str | None = None) -> str:
     br = _git("rev-parse", "--abbrev-ref", "HEAD").stdout.strip()
     default = _git("symbolic-ref", "--short", "refs/remotes/origin/HEAD").stdout.strip().split("/")[-1] or "main"
-    if br != default:
-        raise SystemExit(f"On branch {br}; judges read {default}. Switch to {default} before counted runs.")
+    want = branch or default
+    if br != want:
+        raise SystemExit(f"On branch {br}; expected {want}. (Judges read {default}.)")
     dirty = [l for l in _git("status", "--porcelain").stdout.splitlines() if l.strip()]
     if dirty:
         raise SystemExit("Worktree not clean; commit or stash first:\n" + "\n".join(dirty))

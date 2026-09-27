@@ -26,7 +26,8 @@ def git(*a):
 
 def main() -> int:
     git("fetch", "--quiet", "origin")
-    default = git("symbolic-ref", "--short", "refs/remotes/origin/HEAD") or "origin/main"
+    import os
+    default = "origin/" + os.environ["VITHIA_BRANCH"] if os.environ.get("VITHIA_BRANCH") else (git("symbolic-ref", "--short", "refs/remotes/origin/HEAD") or "origin/main")
     d = json.loads((ROOT / "results.json").read_text())
     summary = check_file(ROOT / "results.json")
     scripted = [r for r in d["runs"] if r.get("provider") == "none"]
@@ -38,7 +39,7 @@ def main() -> int:
         checks.append({"run": r["run"], "seed": r["seed"], "score": r["score"],
                        "pushed_commit": commit.splitlines()[0] if commit else None, "trace_sha_ok": sha_ok})
     gate = len(checks) >= 5 and all(c["pushed_commit"] and c["trace_sha_ok"] for c in checks)
-    atoms = [atom_record(p, "CodeFCO", "code") for p in (
+    atoms = [atom_record(p, "CodeFCO", "code") for p in ("scripts/verify_episode_mmr.py",
         "src/harness.py", "src/deciders.py", "src/perception.py", "src/validate.py", "src/envcfg.py",
         "src/actions.py", "scripts/run_games.py", "scripts/bp_harness.py")]
     atoms.append(atom_record("results.json", "ResultsFCO", "results"))

@@ -43,6 +43,7 @@ def main() -> int:
     ap.add_argument("--max-steps", type=int)
     ap.add_argument("--note", help="short line per run: what changed and why")
     ap.add_argument("--results", default=str(ROOT / "results.json"))
+    ap.add_argument("--branch", help="branch to push runs to (default: the repo default branch)")
     ap.add_argument("--dry-run", action="store_true", help="no git; requires --results outside the repo root file")
     a = ap.parse_args()
     load_dotenv()
@@ -54,7 +55,7 @@ def main() -> int:
         if not results.exists():
             shutil.copy(ROOT / "results.json", results)
     else:
-        preflight_git()
+        preflight_git(a.branch)
 
     if a.decider == "scripted":
         dec = ScriptedDecider()
