@@ -1,0 +1,67 @@
+{
+  "dataset_id": "S01_MINESWEEPER_EVAL_V1",
+  "kind": "evaluation",
+  "schema": "rows: {size,h,w,mines,board_seed,start,stratum,revealed[[y,x,clue]],pool_size}",
+  "source": "generated",
+  "license": "CC-BY-4.0",
+  "generation_code": [
+    {
+      "path": "experiments/e3_minesweeper.py",
+      "sha256": "b5f691639fdd0b66b2761028501c085371c8b151a64dcbefe2d401f93afaed64"
+    },
+    {
+      "path": "src/kernels/minesweeper.py",
+      "sha256": "3b687d9a2ed4b61b455aa54d5837016758b68d3b9ba515f5dd3252ca4fe327d1"
+    },
+    {
+      "path": "src/s01/canon.py",
+      "sha256": "b6698b4cf15484c8390630eef8e41aa184b1a4a4f6c134d21ea0acb01fc03f0d"
+    }
+  ],
+  "code_commit_at_generation": "cabea25fa8cea2c3fefbc75f057ad2a91e941da5",
+  "config": {
+    "sizes": [
+      {
+        "name": "9x9x10",
+        "h": 9,
+        "w": 9,
+        "mines": 10,
+        "boards": 300,
+        "start": [
+          4,
+          4
+        ]
+      },
+      {
+        "name": "16x16x40",
+        "h": 16,
+        "w": 16,
+        "mines": 40,
+        "boards": 100,
+        "start": [
+          8,
+          8
+        ]
+      }
+    ],
+    "per_stratum": 60,
+    "stratum_labeller": "SAT oracle (python-sat Minisat22)",
+    "ontic_randomness_after_generation": "none"
+  },
+  "seeds": {
+    "boards": "range per size",
+    "play": "sha256(E3play|size|seed)",
+    "sample": "sha256(E3sample|size|stratum)"
+  },
+  "files": [
+    {
+      "path": "data/s01/S01_MINESWEEPER_EVAL_V1/rows.jsonl",
+      "bytes": 280814,
+      "sha256": "460bca708404013fb4f9490a1c85a193b272ffbf2e5e195d575c472fe42cc8b0"
+    }
+  ],
+  "fmo_root": "9840b65a71d29b740d42259a5452eaeac140336dd544c1b2e04693d04fab6947",
+  "visibility": "public",
+  "parent_evidence": [],
+  "claim_ceiling": "synthetic boards; true board recoverable from seed"
+}

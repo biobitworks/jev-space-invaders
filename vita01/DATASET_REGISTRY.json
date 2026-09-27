@@ -78,6 +78,19 @@
       "manifest": "data/s01/S01_LIFE_CONTEXT_RESULTS_V1/MANIFEST.json",
       "manifest_sha256": "95221d041a501f67ca249c12f648c11f06fe3c75a3e3aefc2506bf2cb4985c9c",
       "evidence_level": "SIMULATED"
+    },
+    {
+      "dataset_id": "S01_MINESWEEPER_EVAL_V1",
+      "kind": "evaluation",
+      "source": "generated",
+      "license": "CC-BY-4.0",
+      "fmo_root": "9840b65a71d29b740d42259a5452eaeac140336dd544c1b2e04693d04fab6947",
+      "visibility": "public",
+      "claim_ceiling": "synthetic boards; true board recoverable from seed",
+      "code_commit_at_generation": "cabea25fa8cea2c3fefbc75f057ad2a91e941da5",
+      "manifest": "data/s01/S01_MINESWEEPER_EVAL_V1/MANIFEST.json",
+      "manifest_sha256": "86e2fca2b9157181383edc82237b56a5ac20968410ec6c373efa1e0f3677f59b",
+      "evidence_level": "SIMULATED"
     }
   ]
 }
