@@ -272,6 +272,22 @@
         "1303f691fcfdee6145f710febf29e2146b6ced8c2f89b643dd1e4371cafbabe7",
         "c25019d117697098b34c8ad7178d532c260345c0b69a95a986733a32ce853bff"
       ]
+    },
+    {
+      "seq": 18,
+      "bp_id": "UFA-JEV-BP-0019",
+      "bp_file": "governance/breakpoints/0019-e3-result.json",
+      "bp_file_sha256": "2c00d95ca6af97cfedd696346502a51c34197588b313f73a4aafa938fc8a1b1c",
+      "bp_root": "a32d8000d471b73aa0a8da64014404bb2a887ad3831d11545cd5591b2bd94f8c",
+      "root_kind": "FMO_V1_BREAKPOINT_ATOMS",
+      "mmr_leaf": "82a1f74cfc3d19e54792b581e7c6cb1bf2f820d99096123ea9d5e354a5103ab7",
+      "mmr_size": 19,
+      "mmr_root_after": "e8e0de7b6617b15f06cf268a04c1f2b835a3489d25d276311d4997b99b790e89",
+      "mmr_peaks_after": [
+        "1303f691fcfdee6145f710febf29e2146b6ced8c2f89b643dd1e4371cafbabe7",
+        "c25019d117697098b34c8ad7178d532c260345c0b69a95a986733a32ce853bff",
+        "82a1f74cfc3d19e54792b581e7c6cb1bf2f820d99096123ea9d5e354a5103ab7"
+      ]
     }
   ]
 }

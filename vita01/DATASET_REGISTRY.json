@@ -91,6 +91,19 @@
       "manifest": "data/s01/S01_MINESWEEPER_EVAL_V1/MANIFEST.json",
       "manifest_sha256": "86e2fca2b9157181383edc82237b56a5ac20968410ec6c373efa1e0f3677f59b",
       "evidence_level": "SIMULATED"
+    },
+    {
+      "dataset_id": "S01_MINESWEEPER_RESULTS_V1",
+      "kind": "output",
+      "source": "S01_MINESWEEPER_EVAL_V1",
+      "license": "CC-BY-4.0",
+      "fmo_root": "1ab7c39c148ea8643e94db9f3979c900347295cf13643cc50e8c07374b2a057a",
+      "visibility": "public",
+      "claim_ceiling": "rows.jsonl deterministic; timings.jsonl machine-specific",
+      "code_commit_at_generation": "f34cc8fd76342c9cd109bdc568d4f27adc79156a",
+      "manifest": "data/s01/S01_MINESWEEPER_RESULTS_V1/MANIFEST.json",
+      "manifest_sha256": "0aeedcbdb3083c9306b4a12dc0cc7e852acc0143d3715eab6c728e59141ce97c",
+      "evidence_level": "SIMULATED"
     }
   ]
 }

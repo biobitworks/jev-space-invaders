@@ -1,0 +1,42 @@
+{
+  "dataset_id": "S01_MINESWEEPER_RESULTS_V1",
+  "kind": "output",
+  "schema": "rows.jsonl: {i,size,stratum,kernel_status,...,question} (deterministic); timings.jsonl: {i,kernel_ms,oracle_ms} (machine-specific)",
+  "source": "S01_MINESWEEPER_EVAL_V1",
+  "license": "CC-BY-4.0",
+  "generation_code": [
+    {
+      "path": "experiments/e3_minesweeper.py",
+      "sha256": "b5f691639fdd0b66b2761028501c085371c8b151a64dcbefe2d401f93afaed64"
+    },
+    {
+      "path": "src/kernels/minesweeper.py",
+      "sha256": "3b687d9a2ed4b61b455aa54d5837016758b68d3b9ba515f5dd3252ca4fe327d1"
+    },
+    {
+      "path": "src/s01/canon.py",
+      "sha256": "b6698b4cf15484c8390630eef8e41aa184b1a4a4f6c134d21ea0acb01fc03f0d"
+    }
+  ],
+  "code_commit_at_generation": "f34cc8fd76342c9cd109bdc568d4f27adc79156a",
+  "config": {},
+  "seeds": [],
+  "files": [
+    {
+      "path": "data/s01/S01_MINESWEEPER_RESULTS_V1/rows.jsonl",
+      "bytes": 95263,
+      "sha256": "d0db2ddcf51666e9c972e4aafb8059af8efe0a467650a1e1a8e6e9be8fbbf377"
+    },
+    {
+      "path": "data/s01/S01_MINESWEEPER_RESULTS_V1/timings.jsonl",
+      "bytes": 33510,
+      "sha256": "8385f31a3c15fc37d28d22363a48004205caa6b976f93f919681353b636f8893"
+    }
+  ],
+  "fmo_root": "1ab7c39c148ea8643e94db9f3979c900347295cf13643cc50e8c07374b2a057a",
+  "visibility": "public",
+  "parent_evidence": [
+    "S01_MINESWEEPER_EVAL_V1"
+  ],
+  "claim_ceiling": "rows.jsonl deterministic; timings.jsonl machine-specific"
+}

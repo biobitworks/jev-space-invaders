@@ -144,6 +144,33 @@
       "evidence_level": "SIMULATED",
       "promotable_to_biological": false,
       "receipt": "evidence/s01/E2_LIFE/EXPERIMENT_RECEIPT.json"
+    },
+    {
+      "experiment_id": "E3_MINESWEEPER",
+      "claim": "H3a",
+      "state": "SUPPORTED",
+      "mode": "CONFIRMATORY",
+      "evidence_level": "SIMULATED",
+      "promotable_to_biological": false,
+      "receipt": "evidence/s01/E3_MINESWEEPER/EXPERIMENT_RECEIPT.json"
+    },
+    {
+      "experiment_id": "E3_MINESWEEPER",
+      "claim": "H3b",
+      "state": "SUPPORTED",
+      "mode": "CONFIRMATORY",
+      "evidence_level": "SIMULATED",
+      "promotable_to_biological": false,
+      "receipt": "evidence/s01/E3_MINESWEEPER/EXPERIMENT_RECEIPT.json"
+    },
+    {
+      "experiment_id": "E3_MINESWEEPER",
+      "claim": "H3c",
+      "state": "SUPPORTED",
+      "mode": "CONFIRMATORY",
+      "evidence_level": "SIMULATED",
+      "promotable_to_biological": false,
+      "receipt": "evidence/s01/E3_MINESWEEPER/EXPERIMENT_RECEIPT.json"
     }
   ]
 }
