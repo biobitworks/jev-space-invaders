@@ -45,6 +45,69 @@
       "evidence_level": "SIMULATED",
       "promotable_to_biological": false,
       "receipt": "evidence/s01/E0_ADDRESSABILITY/EXPERIMENT_RECEIPT.json"
+    },
+    {
+      "experiment_id": "E1_ECA",
+      "claim": "G1",
+      "state": "SUPPORTED",
+      "mode": "CONFIRMATORY",
+      "evidence_level": "SIMULATED",
+      "promotable_to_biological": false,
+      "receipt": "evidence/s01/E1_ECA/EXPERIMENT_RECEIPT.json"
+    },
+    {
+      "experiment_id": "E1_ECA",
+      "claim": "H1a",
+      "state": "SUPPORTED",
+      "mode": "CONFIRMATORY",
+      "evidence_level": "SIMULATED",
+      "promotable_to_biological": false,
+      "receipt": "evidence/s01/E1_ECA/EXPERIMENT_RECEIPT.json"
+    },
+    {
+      "experiment_id": "E1_ECA",
+      "claim": "H1b",
+      "state": "SUPPORTED",
+      "mode": "CONFIRMATORY",
+      "evidence_level": "SIMULATED",
+      "promotable_to_biological": false,
+      "receipt": "evidence/s01/E1_ECA/EXPERIMENT_RECEIPT.json"
+    },
+    {
+      "experiment_id": "E1_ECA",
+      "claim": "H1c",
+      "state": "SUPPORTED",
+      "mode": "CONFIRMATORY",
+      "evidence_level": "SIMULATED",
+      "promotable_to_biological": false,
+      "receipt": "evidence/s01/E1_ECA/EXPERIMENT_RECEIPT.json"
+    },
+    {
+      "experiment_id": "E1_ECA",
+      "claim": "H1d",
+      "state": "NOT_SUPPORTED",
+      "mode": "CONFIRMATORY",
+      "evidence_level": "SIMULATED",
+      "promotable_to_biological": false,
+      "receipt": "evidence/s01/E1_ECA/EXPERIMENT_RECEIPT.json"
+    },
+    {
+      "experiment_id": "E1_ECA",
+      "claim": "H1e",
+      "state": "FAIL_TO_REJECT_H0",
+      "mode": "CONFIRMATORY",
+      "evidence_level": "SIMULATED",
+      "promotable_to_biological": false,
+      "receipt": "evidence/s01/E1_ECA/EXPERIMENT_RECEIPT.json"
+    },
+    {
+      "experiment_id": "E1_ECA",
+      "claim": "H1e_v2",
+      "state": "FAIL_TO_REJECT_H0",
+      "mode": "CONFIRMATORY",
+      "evidence_level": "SIMULATED",
+      "promotable_to_biological": false,
+      "receipt": "evidence/s01/E1_ECA/EXPERIMENT_RECEIPT.json"
     }
   ]
 }

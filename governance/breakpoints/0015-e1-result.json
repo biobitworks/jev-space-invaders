@@ -1,0 +1,108 @@
+{
+  "breakpoint_id": "UFA-JEV-BP-0015",
+  "parent": "UFA-JEV-BP-0014",
+  "state": "RESULT_PARTIAL",
+  "project": "VITHIA_SPACE",
+  "created_utc": "2026-09-27T16:57:07+00:00",
+  "git_head_at_creation": "e3dca8c6a8d4544eaab9aa89a728813144fcc79f",
+  "root_kind": "FMO_V1_BREAKPOINT_ATOMS",
+  "bp_root": "1071979df23c4b5b31d8a4319faa912154cdc7f26f69cc8162569292822a2784",
+  "group_roots": {
+    "output_dataset": "94d93d8a3c0a943325ea3f971a23e4c01dde22a71e57db63ad93159ab592b24c",
+    "receipt": "d09b4a7913ecb6de245a05464e0b6a6420e1fffe10883c3980b1f5aa58a9d2b0"
+  },
+  "atoms": [
+    {
+      "path": "data/s01/S01_ECA_256_RESULTS_V1/MANIFEST.json",
+      "kind": "DatasetManifestFCO",
+      "group": "output_dataset",
+      "bytes": 1198,
+      "sha256": "b617b9699dde7a1a440257239b601b1e3b4519960511c0380d570872ee0b90fa",
+      "location": "public",
+      "fmo_leaf": "e9e67c7c4b2874c5cb129202274c5f46c8d14e6e994c261e19281ba2b3e29302"
+    },
+    {
+      "path": "data/s01/S01_ECA_256_RESULTS_V1/rows.jsonl",
+      "kind": "DatasetFileFCO",
+      "group": "output_dataset",
+      "bytes": 5256897,
+      "sha256": "05f1937b45786c773a9aac8c78722ab385e464d8fafadee509691a41d38b1468",
+      "location": "public",
+      "fmo_leaf": "3049b609172418a1acb591f289798fc40ce0c5361c818f6a9422cbd7abcf60df"
+    },
+    {
+      "path": "evidence/s01/E1_ECA/EXPERIMENT_RECEIPT.json",
+      "kind": "ExperimentReceiptFCO",
+      "group": "receipt",
+      "bytes": 3270,
+      "sha256": "5286a53f5ef7e2c046c905774e2050a7f5316e107a2c304a699ab9811c1f2d82",
+      "location": "public",
+      "fmo_leaf": "d09b4a7913ecb6de245a05464e0b6a6420e1fffe10883c3980b1f5aa58a9d2b0"
+    }
+  ],
+  "experiment_id": "E1_ECA",
+  "stage": "RESULT",
+  "prereg_breakpoint": "UFA-JEV-BP-0014",
+  "pre_mmr_root": "1d82244501468b65deea5dd9c0ce0a257b6eb921085f5bb5f04ef78a36fba313",
+  "terminal_state": "PARTIAL",
+  "claims_summary": [
+    {
+      "id": "G1",
+      "state": "SUPPORTED"
+    },
+    {
+      "id": "H1a",
+      "state": "SUPPORTED"
+    },
+    {
+      "id": "H1b",
+      "state": "SUPPORTED"
+    },
+    {
+      "id": "H1c",
+      "state": "SUPPORTED"
+    },
+    {
+      "id": "H1d",
+      "state": "NOT_SUPPORTED"
+    },
+    {
+      "id": "H1e",
+      "state": "FAIL_TO_REJECT_H0"
+    },
+    {
+      "id": "H1e_v2",
+      "state": "FAIL_TO_REJECT_H0"
+    }
+  ],
+  "replay": {
+    "reference_runtime": {
+      "host": "Claude sandbox (not the playing machine)",
+      "platform": "Linux-6.18.44-fc-v42-x86_64-with-glibc2.39",
+      "python": "3.12.3",
+      "numpy": "2.4.4",
+      "scipy": "1.17.1",
+      "python-sat": "1.9.dev15",
+      "cellpylib": "2.4.0",
+      "ale-py": "0.12.1",
+      "gymnasium": "1.3.0"
+    },
+    "input_rows_equal": true,
+    "output_rows_equal": true,
+    "replay_level": "REPLAY_LEVEL_4"
+  },
+  "fcg_edges": [
+    {
+      "src": "S01_ECA_256_RESULTS_V1",
+      "rel": "DERIVED_FROM",
+      "dst": "S01_ECA_256_EVAL_V1"
+    },
+    {
+      "src": "ExperimentReceipt",
+      "rel": "EXECUTED_UNDER",
+      "dst": "UFA-JEV-BP-0014"
+    }
+  ],
+  "claim_ceiling": "IDENTITY_AND_INCLUSION_ONLY; hashes do not establish correctness",
+  "signature_state": "NOT_SIGNED"
+}

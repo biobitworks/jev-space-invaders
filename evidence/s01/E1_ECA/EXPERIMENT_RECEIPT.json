@@ -1,0 +1,116 @@
+{
+  "schema": "S01_EXPERIMENT_RECEIPT_V1",
+  "experiment_id": "E1_ECA",
+  "question": "Can the same evidence substrate identify compatible deterministic rule universes as partial/noisy observations arrive?",
+  "preregistration": {
+    "path": "docs/prereg/E1_ECA.md",
+    "sha256": "f0807f351292fdbe6bae4ab0edec7f2ad4eeee28637c868005f6d1e22b176721"
+  },
+  "prereg_breakpoint": "UFA-JEV-BP-0014",
+  "input_dataset": {
+    "dataset_id": "S01_ECA_256_EVAL_V1",
+    "fmo_root": "2535de95267ff0abe69f820a5bc706e4c097d326c0160dd9e8621c0b3793c2be",
+    "rows_sha256": "9c4aef6e8385c8e96d8d451861dd474a218afd3a915c6f38337d815668932e75"
+  },
+  "output_dataset": {
+    "dataset_id": "S01_ECA_256_RESULTS_V1",
+    "fmo_root": "f72a332e4050cbfbc71c33ecf4cc2fb72fe877f90cf55f8231b2f5a87cdaeafa",
+    "rows_sha256": "05f1937b45786c773a9aac8c78722ab385e464d8fafadee509691a41d38b1468"
+  },
+  "code_commit": "e3dca8c6a8d4544eaab9aa89a728813144fcc79f",
+  "terminal_state": "PARTIAL",
+  "claims": [
+    {
+      "id": "G1",
+      "state": "SUPPORTED",
+      "cross_check": {
+        "state": "PASS",
+        "rules": [
+          0,
+          30,
+          54,
+          90,
+          110,
+          150,
+          184,
+          255
+        ],
+        "ics": [
+          "single",
+          "rand1",
+          "rand2",
+          "rand3"
+        ],
+        "cells": 100352,
+        "mismatched_cells": 0,
+        "cellpylib_version": "2.4.0",
+        "reference_commit_in_intake": "743e936d48f8520f6f4ac652570ac7bb46414189",
+        "note": "installed PyPI version compared; equality with the intake commit not verified"
+      }
+    },
+    {
+      "id": "H1a",
+      "state": "SUPPORTED",
+      "runs": 1024
+    },
+    {
+      "id": "H1b",
+      "state": "SUPPORTED",
+      "runs": 1024
+    },
+    {
+      "id": "H1c",
+      "state": "SUPPORTED",
+      "p": 6.374831003490258e-104,
+      "median_log2_map_random": 0.0,
+      "median_log2_map_single": 1.0
+    },
+    {
+      "id": "H1d",
+      "state": "NOT_SUPPORTED",
+      "fraction_rank1": 0.806,
+      "runs": 768
+    },
+    {
+      "id": "H1e",
+      "state": "FAIL_TO_REJECT_H0",
+      "p": 1.0,
+      "median_t_missing_row": 1.0,
+      "median_t_exact": 1.0,
+      "discrimination_note": "NULL/METRIC_NOT_DISCRIMINATING if both medians are 1"
+    },
+    {
+      "id": "H1e_v2",
+      "state": "FAIL_TO_REJECT_H0",
+      "p": 0.5593890640023094,
+      "median_t_missing_row_single": 2.0,
+      "median_t_exact_single": 2.0,
+      "status": "NEW successor hypothesis, post-rehearsal prospective (not blind)"
+    }
+  ],
+  "not_tested": [
+    "Golden-Corridor contraction (private S0)",
+    "private context commitment"
+  ],
+  "replay": {
+    "reference_runtime": {
+      "host": "Claude sandbox (not the playing machine)",
+      "platform": "Linux-6.18.44-fc-v42-x86_64-with-glibc2.39",
+      "python": "3.12.3",
+      "numpy": "2.4.4",
+      "scipy": "1.17.1",
+      "python-sat": "1.9.dev15",
+      "cellpylib": "2.4.0",
+      "ale-py": "0.12.1",
+      "gymnasium": "1.3.0"
+    },
+    "input_rows_equal": true,
+    "output_rows_equal": true,
+    "replay_level": "REPLAY_LEVEL_4"
+  },
+  "note": null,
+  "mode": "CONFIRMATORY",
+  "code_freeze": "UFA-JEV-BP-0011",
+  "evidence_level": "SIMULATED",
+  "biological_transfer": "NOT_TESTED"
+}

@@ -1,0 +1,37 @@
+{
+  "dataset_id": "S01_ECA_256_RESULTS_V1",
+  "kind": "output",
+  "schema": "rows: {rule, ic, kind, series{...}, question_final, final_map, equivalence_class}",
+  "source": "S01_ECA_256_EVAL_V1",
+  "license": "CC-BY-4.0",
+  "generation_code": [
+    {
+      "path": "experiments/e1_eca.py",
+      "sha256": "93fc70bc51e4ccaed4a0ff78a3afe7d82906ef2f4fe5357227d180f4f78dd26c"
+    },
+    {
+      "path": "src/kernels/eca.py",
+      "sha256": "31d4e8c8b107db08bf47d0cd8c462e589e8c9a0c611cb279b1a83f0ea73d5ed3"
+    },
+    {
+      "path": "src/s01/canon.py",
+      "sha256": "b6698b4cf15484c8390630eef8e41aa184b1a4a4f6c134d21ea0acb01fc03f0d"
+    }
+  ],
+  "code_commit_at_generation": "e3dca8c6a8d4544eaab9aa89a728813144fcc79f",
+  "config": {},
+  "seeds": [],
+  "files": [
+    {
+      "path": "data/s01/S01_ECA_256_RESULTS_V1/rows.jsonl",
+      "bytes": 5256897,
+      "sha256": "05f1937b45786c773a9aac8c78722ab385e464d8fafadee509691a41d38b1468"
+    }
+  ],
+  "fmo_root": "f72a332e4050cbfbc71c33ecf4cc2fb72fe877f90cf55f8231b2f5a87cdaeafa",
+  "visibility": "public",
+  "parent_evidence": [
+    "S01_ECA_256_EVAL_V1"
+  ],
+  "claim_ceiling": "public reference S0 (consistency filter); private S0 NOT_TESTED"
+}
