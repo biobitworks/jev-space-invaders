@@ -1,0 +1,72 @@
+{
+  "breakpoint_id": "UFA-JEV-BP-0007",
+  "parent": "UFA-JEV-BP-0006",
+  "state": "SPONSOR_SOURCE_FREEZE_VERIFIED",
+  "project": "VITHIA_SPACE",
+  "parent_git_head": "03931bfeafb4f529db8e25acd9511bae7034bf3b",
+  "parent_runtime_fmo_root": "28c9beac8c617df2c8409b50d45ee6240408455c53db5b845261fb4005171a81",
+  "sponsor_source_fmo_root": "336efec74f0c742db4c6c671e387f35338f4f6ebface923123be6428f9d28a14",
+  "verified_new": [
+    "12 sponsor source pages frozen and FMO-recomputed PASS",
+    "Mitosis Cortex docs admit source-linked evidence with office/cortex isolation",
+    "Tenki Sandbox docs admit isolated VM execution and restorable snapshots",
+    "Tenki general Terms benchmarking restriction recorded",
+    "Mitosis formal customer/DPA terms not located and preserved UNKNOWN"
+  ],
+  "executed": [
+    "sponsor public-source retrieval",
+    "per-file SHA256",
+    "sponsor FMO construction and independent verification",
+    "FCO/FCG sponsor source binding"
+  ],
+  "observed": [
+    "MI_API_KEY absent in Studio environment",
+    "TENKI_API_KEY absent",
+    "TENKI_AUTH_TOKEN absent",
+    "Mitosis execution=0",
+    "Tenki execution=0",
+    "JEV games=0",
+    "baseline games=0"
+  ],
+  "decisions": [
+    "Mitosis candidate surface=dedicated private competition-safe Cortex",
+    "Tenki candidate surface=Sandbox only",
+    "sponsor usage claim withheld until load-bearing execution receipt"
+  ],
+  "proposed": [
+    "Mitosis store cited run-summary evidence after games",
+    "Tenki execute fixed-seed replay and capture scrubbed baseline snapshot"
+  ],
+  "not_tested": [
+    "Mitosis auth/API write-read round trip",
+    "Tenki sandbox create/restore",
+    "hackathon-specific Tenki program terms",
+    "Mitosis contractual terms"
+  ],
+  "failures": [],
+  "unresolved": [
+    "sponsor credentials not loaded",
+    "Mitosis contractual/DPA terms",
+    "Tenki hackathon/program-specific terms",
+    "human approval of sponsor use for entry"
+  ],
+  "mmr": "NOT_COMPUTED",
+  "signature": "NOT_SIGNED",
+  "next_action": "validate sponsor public artifacts and secret scan, then commit/push; do not execute sponsor services until credentials/program terms and entry intent are resolved",
+  "conversation_fco": {
+    "id": "CONV_FCO:VITHIA_SPACE:20260927:SPONSOR_SOURCE_FREEZE_001",
+    "content_identity": "EXACT_CHAT_TRANSPORT_BYTES_NOT_CAPTURED",
+    "conversation_turn_merkle": "NOT_COMPUTED"
+  },
+  "governed_artifact_hashes": {
+    "evidence/sponsor_source/SPONSOR_SOURCE_DATASET.json": "a221a46037bda447913673e7dec4b2778c3df4064743ce6c5f8542ba738a3b17",
+    "evidence/sponsor_source/SPONSOR_FMO_RECEIPT.json": "9fb2e140919b28a3e7d3c2c82e6235ce17c2e0d3fe31dc15d6845437a1761a32",
+    "evidence/sponsor_source/SPONSOR_EXECUTION_CONTRACT.json": "13388e8d21e275dda6257ea34cc583cd4928b1ddbcabfcc39d8bfa40e0f94fcc",
+    "evidence/sponsor_source/SPONSOR_GATES.md": "a8026ccfa916e480e04f2cabdb2dee824c72efe67f206a94dd379dedb3857fcf",
+    "scripts/verify_sponsor_source_freeze.py": "bfe46adbca742d77724379b4488ba11900078a19e8e37ace5b2bc5c4b786911d",
+    "FCO_REGISTRY.json": "6e3841b0dba1a2850dc4ea03e3b85a2bcdd166a018302fff4eb1f465f42485ba",
+    "FCG_EDGES.json": "0b0c59568effda42ca188c4234acb1ec625275987044f8c6960d73ca0e19c7a9",
+    "PROJECT_SETTINGS.json": "3c80b7e92da1bb0232088843705dcdf2743970b83411c5fd874949d60c16d6c7",
+    "SOURCE_OF_TRUTH.md": "6e9c4f143c7f0897d23420d7d3474d55b33ba3a99a3b03969059036551000604"
+  }
+}

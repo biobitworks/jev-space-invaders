@@ -67,6 +67,54 @@
       "type": "BREAKPOINT_BINDS_DATASET",
       "from": "CONV_FCO:VITHIA_SPACE:20260927:RUNTIME_SOURCE_FREEZE_001",
       "to": "FCO:VITHIA_SPACE_RUNTIME_SOURCE_DATASET:20260927:001"
+    },
+    {
+      "edge_id": "E12",
+      "type": "HAS_SUCCESSOR_SERVICE_SOURCE",
+      "from": "FCO:VITHIA_SPACE_RUNTIME_SOURCE_DATASET:20260927:001",
+      "to": "FCO:VITHIA_SPACE_SPONSOR_SOURCE_DATASET:20260927:001"
+    },
+    {
+      "edge_id": "E13",
+      "type": "DECLARES_CANDIDATE_EVIDENCE_MEMORY",
+      "from": "FCO:VITHIA_SPACE_SPONSOR_SOURCE_DATASET:20260927:001",
+      "to": "FCO:MITOSIS_CORTEX:SOURCE:20260927"
+    },
+    {
+      "edge_id": "E14",
+      "type": "DECLARES_CANDIDATE_EXECUTION_SUBSTRATE",
+      "from": "FCO:VITHIA_SPACE_SPONSOR_SOURCE_DATASET:20260927:001",
+      "to": "FCO:TENKI_SANDBOX:SOURCE:20260927"
+    },
+    {
+      "edge_id": "E15",
+      "type": "HAS_UNRESOLVED_LEGAL_EVIDENCE",
+      "from": "FCO:MITOSIS_CORTEX:SOURCE:20260927",
+      "to": "FCO:UNKNOWN_MITOSIS_CONTRACTUAL_TERMS"
+    },
+    {
+      "edge_id": "E16",
+      "type": "HAS_UNRESOLVED_PROGRAM_TERMS",
+      "from": "FCO:TENKI_SANDBOX:SOURCE:20260927",
+      "to": "FCO:UNKNOWN_TENKI_PROGRAM_TERMS"
+    },
+    {
+      "edge_id": "E17",
+      "type": "GOVERNED_BY",
+      "from": "FCO:MITOSIS_CORTEX:SOURCE:20260927",
+      "to": "FCO:SPONSOR_EXECUTION_CONTRACT:V1"
+    },
+    {
+      "edge_id": "E18",
+      "type": "GOVERNED_BY",
+      "from": "FCO:TENKI_SANDBOX:SOURCE:20260927",
+      "to": "FCO:SPONSOR_EXECUTION_CONTRACT:V1"
+    },
+    {
+      "edge_id": "E19",
+      "type": "BREAKPOINT_BINDS_DATASET",
+      "from": "CONV_FCO:VITHIA_SPACE:20260927:SPONSOR_SOURCE_FREEZE_001",
+      "to": "FCO:VITHIA_SPACE_SPONSOR_SOURCE_DATASET:20260927:001"
     }
   ]
 }

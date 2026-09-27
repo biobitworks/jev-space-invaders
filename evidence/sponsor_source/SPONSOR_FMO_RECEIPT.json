@@ -1,0 +1,44 @@
+{
+  "receipt_id": "VITHIA_SPACE_SPONSOR_SOURCE_FMO_RECEIPT_20260927_001",
+  "root_kind": "FRACTAL_MERKLE_OBJECT_V1_SPONSOR_SOURCE_FREEZE",
+  "root": "336efec74f0c742db4c6c671e387f35338f4f6ebface923123be6428f9d28a14",
+  "ordered_groups": [
+    "mitosis",
+    "tenki"
+  ],
+  "groups": {
+    "mitosis": {
+      "leaf_count": 6,
+      "ordered_paths": [
+        "mitosis/authentication.html",
+        "mitosis/cortexes-and-access.html",
+        "mitosis/developers.html",
+        "mitosis/home.html",
+        "mitosis/memory-writing.html",
+        "mitosis/what-is-cortex.html"
+      ],
+      "merkle_root": "27fafcbc009aeb8f05b88146a593cdc2491ba8296ea0646144a7c9c54c40af39",
+      "group_commitment": "c2ffad495fec9773e4abc15ea7f3184b88080fbd1492ab892000980fb84afd45"
+    },
+    "tenki": {
+      "leaf_count": 6,
+      "ordered_paths": [
+        "tenki/docs.html",
+        "tenki/privacy-policy.html",
+        "tenki/sandbox-quickstart.html",
+        "tenki/sandbox-sdk.html",
+        "tenki/snapshots.html",
+        "tenki/terms-of-service.html"
+      ],
+      "merkle_root": "fe9b74ab4821ce4bdea4cd75cc662379625899f4d66023607f5a76f0083d40dd",
+      "group_commitment": "b45e002196d3d571dff1d4d3a4695f6a227fa6d2230c3940215c040c90ef77a7"
+    }
+  },
+  "leaf_count": 12,
+  "verification_script": "scripts/verify_sponsor_source_freeze.py",
+  "verification": "PASS_RECOMPUTED",
+  "parent_runtime_fmo_root": "28c9beac8c617df2c8409b50d45ee6240408455c53db5b845261fb4005171a81",
+  "mmr": "NOT_COMPUTED",
+  "signature": "NOT_SIGNED",
+  "claim_ceiling": "SOURCE_IDENTITY_AND_DECLARED_SERVICE_CAPABILITIES_ONLY; NO SPONSOR INTEGRATION OR PERFORMANCE CLAIM"
+}

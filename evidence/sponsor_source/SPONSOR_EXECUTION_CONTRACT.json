@@ -1,0 +1,45 @@
+{
+  "schema": "VITHIA_SPACE_SPONSOR_EXECUTION_CONTRACT_V1",
+  "state": "PROPOSED_NOT_EXECUTED",
+  "parent_runtime_fmo_root": "28c9beac8c617df2c8409b50d45ee6240408455c53db5b845261fb4005171a81",
+  "sponsor_source_fmo_root": "336efec74f0c742db4c6c671e387f35338f4f6ebface923123be6428f9d28a14",
+  "mitosis": {
+    "role": "cited cross-episode evidence memory",
+    "surface": "dedicated private Cortex/office",
+    "allowed": [
+      "public competition requirements",
+      "public source manifests",
+      "public run/result summaries",
+      "non-secret provenance identifiers"
+    ],
+    "prohibited": [
+      "API keys/tokens",
+      "private prompts",
+      "patent-sensitive Vithia architecture",
+      "unpublished private research",
+      "patient/biomedical sensitive data"
+    ],
+    "write_policy": "Derived facts must carry source_universal_ids when available; absent provenance remains explicit.",
+    "sharing_policy": "public sharing OFF unless explicitly authorized",
+    "gate": "DO_NOT_EXECUTE_UNTIL_CREDENTIAL_AND_LEGAL_BOUNDARY_CONFIRMED"
+  },
+  "tenki": {
+    "role": "isolated reproducible execution/replay substrate",
+    "surface": "Tenki Sandbox only",
+    "allowed": [
+      "public repository checkout",
+      "competition-safe runtime/data",
+      "fixed-seed replay",
+      "restorable execution snapshots after secret scrub"
+    ],
+    "prohibited": [
+      "Tenki Code Reviewer for private Vithia code",
+      "secrets in snapshot disk/memory",
+      "publication of benchmarks whose subject is Tenki service without written consent"
+    ],
+    "measurement_policy": "Experiment score/steps/model metrics may be recorded; Tenki infrastructure performance must remain operational metadata unless written consent permits benchmarking disclosure.",
+    "snapshot_policy": "Snapshots capture VM disk+memory but not attached volumes; scrub credentials before snapshot and keep durable datasets in explicitly bound volumes where used.",
+    "gate": "DO_NOT_EXECUTE_UNTIL_CREDENTIAL_AND_PROGRAM_TERMS_CONFIRMED"
+  },
+  "sponsor_claim_rule": "SPONSOR_USED=true only after a load-bearing integration executes and produces a receipt. Source documentation alone is not sponsor usage."
+}

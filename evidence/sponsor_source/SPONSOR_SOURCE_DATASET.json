@@ -1,0 +1,206 @@
+{
+  "schema": "VITHIA_SPONSOR_SOURCE_DATASET_V1",
+  "dataset_id": "VITHIA_SPACE_SPONSOR_SOURCE_FREEZE_20260927_001",
+  "classification": "SERVICE_RUNTIME_AND_POLICY_EVIDENCE_DATASET",
+  "parent_runtime_dataset": "VITHIA_SPACE_RUNTIME_SOURCE_FREEZE_20260927_001",
+  "parent_runtime_fmo_root": "28c9beac8c617df2c8409b50d45ee6240408455c53db5b845261fb4005171a81",
+  "bytes_cache": "artifacts/private/sponsor_source_freeze/2026-09-27",
+  "files": [
+    {
+      "path": "mitosis/authentication.html",
+      "bytes": 92646,
+      "sha256": "8a398f11d12fb2d94b69be1d1787a3c4a0cc195a9eb58e442896b50db2e8d9b2",
+      "fmo_leaf": "c0d651fcd6a65ce26e5d118e11b232b1e519690ac8e4d1d9c0f1bb2d6df2d973",
+      "storage": "PRIVATE_BYTE_CACHE_NOT_COMMITTED"
+    },
+    {
+      "path": "mitosis/cortexes-and-access.html",
+      "bytes": 68737,
+      "sha256": "8cd2ffdd8d8c6779affbb6ef4d6f12f84ec20494f742e2688e7002e51b2d2149",
+      "fmo_leaf": "a0a3391197d7b2447ec80fef16e3e39919c0feba3e8c47f7dcf5ee7bc16ef735",
+      "storage": "PRIVATE_BYTE_CACHE_NOT_COMMITTED"
+    },
+    {
+      "path": "mitosis/developers.html",
+      "bytes": 102133,
+      "sha256": "8aa51bae7226e9255c80f3c8bd9debfbe0082bc600b86ccf7f342c85e35c71a1",
+      "fmo_leaf": "256b4baa9d67e810e02732722ebbb7aab5880c0485c493a67bb1d69031e3695b",
+      "storage": "PRIVATE_BYTE_CACHE_NOT_COMMITTED"
+    },
+    {
+      "path": "mitosis/home.html",
+      "bytes": 121709,
+      "sha256": "a1fbc57269df03e904ad3a050df69da09b4a3f91719f75ca2acde1a23ef73566",
+      "fmo_leaf": "cbf98060ec5abc1ff1043532489e2587cb73201009364f0795f7bb224d8583c4",
+      "storage": "PRIVATE_BYTE_CACHE_NOT_COMMITTED"
+    },
+    {
+      "path": "mitosis/memory-writing.html",
+      "bytes": 111808,
+      "sha256": "95ff9c1546e7bef6cac27e95f25b6d80f785bbf5f74616f7c0db2f461f200adf",
+      "fmo_leaf": "cb66c3de7a50657da564b9cb4a7bef62aee13011331b0bb7ce275e503a906142",
+      "storage": "PRIVATE_BYTE_CACHE_NOT_COMMITTED"
+    },
+    {
+      "path": "mitosis/what-is-cortex.html",
+      "bytes": 89084,
+      "sha256": "ffd6f84daa6173b4b2e66e885a8aa5011cec80654ca9b7edafb3d63653d5a4f4",
+      "fmo_leaf": "a0ca6ca0505e3405e6dd8ded3977a23e25c6f2eae63edfe962801b39ea81ce28",
+      "storage": "PRIVATE_BYTE_CACHE_NOT_COMMITTED"
+    },
+    {
+      "path": "tenki/docs.html",
+      "bytes": 888603,
+      "sha256": "658c14725b29ea50aa03aa06267b1190770b279c302dffdf801bd65aa3787ba6",
+      "fmo_leaf": "dcf9a51b45420e1da154a9fac5f412ff7281966a382648f1ecd8893b633914a0",
+      "storage": "PRIVATE_BYTE_CACHE_NOT_COMMITTED"
+    },
+    {
+      "path": "tenki/privacy-policy.html",
+      "bytes": 938443,
+      "sha256": "b886011bf4ac9963dccbf5258d3c3b4236851f8e87f4a7fd9a19fdf346f5f620",
+      "fmo_leaf": "6c1b52eb2fbeaddd950aa5b42f66e34befb87bb9d17e7de73beafcdc16991585",
+      "storage": "PRIVATE_BYTE_CACHE_NOT_COMMITTED"
+    },
+    {
+      "path": "tenki/sandbox-quickstart.html",
+      "bytes": 985074,
+      "sha256": "4873c86d94ac1f5904b83ac1467b382b93bed2a6648770b2e54bd449c229c91a",
+      "fmo_leaf": "28d94f32512ca6ed1f58db1072952983a3b280a45df838a4683a56c80312269d",
+      "storage": "PRIVATE_BYTE_CACHE_NOT_COMMITTED"
+    },
+    {
+      "path": "tenki/sandbox-sdk.html",
+      "bytes": 1092996,
+      "sha256": "92ee6acf6a10e063f48dfcfb7e1837ec2b19c824eab923eb4da7c84224287fdb",
+      "fmo_leaf": "8c62e7ccad21925d95e54d7db969512d9486e1172c269efd5a17ea90da8fe467",
+      "storage": "PRIVATE_BYTE_CACHE_NOT_COMMITTED"
+    },
+    {
+      "path": "tenki/snapshots.html",
+      "bytes": 984827,
+      "sha256": "5b94ad6fa1c50ffd5cad12e42bb6e48792c8ef5be903fe55f89db715c3fd87ea",
+      "fmo_leaf": "a3a27ed30523f6fcce89f0bcf91d726a6dd955a137cacfdd6a611c7627445783",
+      "storage": "PRIVATE_BYTE_CACHE_NOT_COMMITTED"
+    },
+    {
+      "path": "tenki/terms-of-service.html",
+      "bytes": 961107,
+      "sha256": "cc180ba8ff0b6a4a09923a6143ae5638acb9d22cb848af1e764c120dcb5d9e4a",
+      "fmo_leaf": "42167e128cdd3345c0a6e3a18685e05c44326e0222a340c01e96fc08c415aee5",
+      "storage": "PRIVATE_BYTE_CACHE_NOT_COMMITTED"
+    }
+  ],
+  "mitosis": {
+    "state": "SOURCE_FROZEN_INTEGRATION_NOT_EXECUTED",
+    "candidate_role": "cited cross-episode evidence memory / provenance graph",
+    "observed_capabilities": [
+      "one cortex/office is one graph and access boundary",
+      "OAuth/API-key scoped access",
+      "cortex_ask returns ranked evidence with universal_id and cited_graph_url"
+    ],
+    "legal_terms_state": "UNKNOWN_NOT_RECOVERED",
+    "private_vithia_material_admission": "PROHIBITED_UNTIL_LEGAL_REVIEW",
+    "contractual_terms_state": "NOT_LOCATED_IN_PUBLIC_REVIEW",
+    "public_privacy_claim_state": "DOCUMENTATION_MARKETING_CLAIM_NOT_CONTRACT_SUBSTITUTE",
+    "candidate_data_boundary": "DEDICATED_PRIVATE_CORTEX_COMPETITION_SAFE_EVIDENCE_ONLY",
+    "public_share": "MUST_REMAIN_OFF_UNLESS_EXPLICITLY_AUTHORIZED",
+    "execution_state": "NOT_EXECUTED_CREDENTIAL_ABSENT"
+  },
+  "tenki": {
+    "state": "SOURCE_FROZEN_INTEGRATION_NOT_EXECUTED",
+    "candidate_role": "isolated replay/execution environment and restorable snapshots",
+    "observed_capabilities": [
+      "disposable isolated Linux VM",
+      "CLI/SDK API key authentication",
+      "snapshots capture disk and memory",
+      "restore creates new session"
+    ],
+    "terms_state": "FROZEN_2026_07_20_TERMS_PAGE",
+    "legal_gates": [
+      "DO_NOT_PUBLISH_BENCHMARKS_OF_TENKI_SERVICE_WITHOUT_WRITTEN_CONSENT",
+      "DO_NOT_USE_TENKI_TO_BUILD_COMPETING_SERVICE_WITHOUT_WRITTEN_CONSENT",
+      "FEEDBACK_LICENSE_IS_BROAD",
+      "CUSTOMER_CONTENT_OWNERSHIP_RETAINED_BUT_SERVICE_LICENSE_GRANTED"
+    ],
+    "tenki_service_benchmarking": "NOT_AUTHORIZED_BY_DEFAULT",
+    "candidate_product_surface": "SANDBOX_ONLY",
+    "code_reviewer": "NOT_ADMITTED_FOR_VITHIA_SPACE",
+    "execution_state": "NOT_EXECUTED_CREDENTIAL_ABSENT",
+    "snapshot_secret_rule": "NO_CREDENTIALS_OR_PRIVATE_VITHIA_MATERIAL_IN_SNAPSHOT_MEMORY_OR_DISK"
+  },
+  "fmo": {
+    "kind": "FRACTAL_MERKLE_OBJECT_V1_SPONSOR_SOURCE_FREEZE",
+    "hash": "sha256",
+    "groups": {
+      "mitosis": {
+        "leaf_count": 6,
+        "ordered_paths": [
+          "mitosis/authentication.html",
+          "mitosis/cortexes-and-access.html",
+          "mitosis/developers.html",
+          "mitosis/home.html",
+          "mitosis/memory-writing.html",
+          "mitosis/what-is-cortex.html"
+        ],
+        "merkle_root": "27fafcbc009aeb8f05b88146a593cdc2491ba8296ea0646144a7c9c54c40af39",
+        "group_commitment": "c2ffad495fec9773e4abc15ea7f3184b88080fbd1492ab892000980fb84afd45"
+      },
+      "tenki": {
+        "leaf_count": 6,
+        "ordered_paths": [
+          "tenki/docs.html",
+          "tenki/privacy-policy.html",
+          "tenki/sandbox-quickstart.html",
+          "tenki/sandbox-sdk.html",
+          "tenki/snapshots.html",
+          "tenki/terms-of-service.html"
+        ],
+        "merkle_root": "fe9b74ab4821ce4bdea4cd75cc662379625899f4d66023607f5a76f0083d40dd",
+        "group_commitment": "b45e002196d3d571dff1d4d3a4695f6a227fa6d2230c3940215c040c90ef77a7"
+      }
+    },
+    "root": "336efec74f0c742db4c6c671e387f35338f4f6ebface923123be6428f9d28a14",
+    "leaf_rule": "SHA256(\"FMO_LEAF_V1\\0\" || path_utf8 || \"\\0\" || byte_count_decimal || \"\\0\" || raw_sha256_hex)",
+    "node_rule": "SHA256(\"FMO_NODE_V1\\0\" || left_digest_bytes || \"\\0\" || right_digest_bytes); duplicate final node when odd",
+    "group_rule": "SHA256(\"FMO_GROUP_V1\\0\" || group_name_utf8 || \"\\0\" || group_merkle_root_hex)",
+    "verified_recompute": true,
+    "mmr_state": "NOT_COMPUTED",
+    "signature_state": "NOT_SIGNED"
+  },
+  "claim_ceiling": "SOURCE_IDENTITY_AND_DECLARED_SERVICE_CAPABILITIES_ONLY; NO SPONSOR INTEGRATION OR PERFORMANCE CLAIM",
+  "runtime_observation": {
+    "magicSTUDIObox_env_presence": {
+      "MI_API_KEY": "ABSENT",
+      "TENKI_API_KEY": "ABSENT",
+      "TENKI_AUTH_TOKEN": "ABSENT"
+    },
+    "credential_values_observed_or_recorded": false
+  },
+  "unknowns": [
+    {
+      "id": "UNKNOWN_MITOSIS_CONTRACTUAL_TERMS",
+      "state": "NOT_LOCATED",
+      "risk": "MEDIUM",
+      "reason": "Public developer/privacy claims were found, but no customer terms equivalent to a formal MCA was located in the reviewed sources."
+    },
+    {
+      "id": "UNKNOWN_MITOSIS_DATA_PROCESSING_TERMS",
+      "state": "NOT_LOCATED",
+      "risk": "MEDIUM",
+      "reason": "No DPA or equivalent contractual data-processing terms were located in the reviewed Mitosis public sources."
+    },
+    {
+      "id": "UNKNOWN_TENKI_PROGRAM_TERMS",
+      "state": "NOT_CAPTURED",
+      "risk": "MEDIUM",
+      "reason": "Hackathon/program-specific sponsor terms may control over general Terms and were not yet captured."
+    },
+    {
+      "id": "UNKNOWN_SPONSOR_EXECUTION_BEHAVIOR",
+      "state": "NOT_TESTED",
+      "risk": "MEDIUM",
+      "reason": "Neither sponsor integration has executed in Vithia-Space."
+    }
+  ]
+}

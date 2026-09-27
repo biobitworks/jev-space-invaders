@@ -120,6 +120,77 @@
         "transition_identity": "RUNTIME_SOURCE_DATASET_FREEZE",
         "conversation_turn_merkle": "NOT_COMPUTED"
       }
+    },
+    {
+      "fco_id": "FCO:VITHIA_SPACE_SPONSOR_SOURCE_DATASET:20260927:001",
+      "type": "ServiceSourceDatasetFCO",
+      "state": "FROZEN",
+      "attributes": {
+        "manifest": "evidence/sponsor_source/SPONSOR_SOURCE_DATASET.json",
+        "fmo_root": "336efec74f0c742db4c6c671e387f35338f4f6ebface923123be6428f9d28a14",
+        "parent_runtime_fmo_root": "28c9beac8c617df2c8409b50d45ee6240408455c53db5b845261fb4005171a81"
+      }
+    },
+    {
+      "fco_id": "FCO:MITOSIS_CORTEX:SOURCE:20260927",
+      "type": "ExternalEvidenceMemoryServiceFCO",
+      "state": "SOURCE_FROZEN_NOT_EXECUTED",
+      "attributes": {
+        "role": "cited cross-episode evidence memory",
+        "legal_terms": "NOT_LOCATED",
+        "credential": "ABSENT"
+      }
+    },
+    {
+      "fco_id": "FCO:TENKI_SANDBOX:SOURCE:20260927",
+      "type": "ExternalExecutionServiceFCO",
+      "state": "SOURCE_FROZEN_NOT_EXECUTED",
+      "attributes": {
+        "role": "isolated replay/execution",
+        "terms": "FROZEN_GENERAL_TERMS",
+        "credential": "ABSENT"
+      }
+    },
+    {
+      "fco_id": "FCO:UNKNOWN_MITOSIS_CONTRACTUAL_TERMS",
+      "type": "ExternalServiceUnknownFCO",
+      "state": "NOT_LOCATED",
+      "attributes": {
+        "risk": "MEDIUM"
+      }
+    },
+    {
+      "fco_id": "FCO:UNKNOWN_TENKI_PROGRAM_TERMS",
+      "type": "ExternalServiceUnknownFCO",
+      "state": "NOT_CAPTURED",
+      "attributes": {
+        "risk": "MEDIUM"
+      }
+    },
+    {
+      "fco_id": "FCO:SPONSOR_EXECUTION_CONTRACT:V1",
+      "type": "ExecutionContractFCO",
+      "state": "PROPOSED_NOT_EXECUTED",
+      "attributes": {
+        "path": "evidence/sponsor_source/SPONSOR_EXECUTION_CONTRACT.json"
+      }
+    },
+    {
+      "fco_id": "CONV_FCO:VITHIA_SPACE:20260927:SPONSOR_SOURCE_FREEZE_001",
+      "type": "ConversationFCO",
+      "state": "BREAKPOINT_CREATED",
+      "attributes": {
+        "id": "CONV_FCO:VITHIA_SPACE:20260927:SPONSOR_SOURCE_FREEZE_001",
+        "project_binding": "VITHIA_SPACE",
+        "repo_binding": "https://github.com/biobitworks/jev-space-invaders",
+        "branch_binding": "vithia-space",
+        "parent_git_head": "03931bfeafb4f529db8e25acd9511bae7034bf3b",
+        "parent_state": "UFA-JEV-BP-0006",
+        "content_identity": "EXACT_CHAT_TRANSPORT_BYTES_NOT_CAPTURED",
+        "context_identity": "MITOSIS_TENKI_SOURCE_INTAKE",
+        "transition_identity": "SPONSOR_SOURCE_DATASET_FREEZE",
+        "conversation_turn_merkle": "NOT_COMPUTED"
+      }
     }
   ]
 }

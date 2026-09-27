@@ -87,5 +87,19 @@
     "leaf_count": 14,
     "rom_state": "NOT_PRESENT",
     "claim_ceiling": "IDENTITY_CUSTODY_AND_RUNTIME_INPUT_FREEZE_ONLY"
+  },
+  "sponsor_source_dataset": {
+    "dataset_id": "VITHIA_SPACE_SPONSOR_SOURCE_FREEZE_20260927_001",
+    "state": "FROZEN_AND_VERIFIED",
+    "fmo_root": "336efec74f0c742db4c6c671e387f35338f4f6ebface923123be6428f9d28a14",
+    "leaf_count": 12,
+    "mitosis_integration": "NOT_EXECUTED",
+    "tenki_integration": "NOT_EXECUTED",
+    "credential_presence_at_check": {
+      "MI_API_KEY": "ABSENT",
+      "TENKI_API_KEY": "ABSENT",
+      "TENKI_AUTH_TOKEN": "ABSENT"
+    },
+    "claim_ceiling": "SOURCE_IDENTITY_AND_DECLARED_SERVICE_CAPABILITIES_ONLY; NO SPONSOR INTEGRATION OR PERFORMANCE CLAIM"
   }
 }

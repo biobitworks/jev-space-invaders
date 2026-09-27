@@ -19,3 +19,9 @@ Future episode datasets must bind their parent runtime FMO root, environment con
 ## Claim ceiling
 
 This freeze proves byte identity and declared relationships only. It is not evidence that the runtime is safe, secure, correct, or causally responsible for any future model behavior.
+
+## Optional sponsor-source successor
+
+A separate sponsor/service evidence dataset `VITHIA_SPACE_SPONSOR_SOURCE_FREEZE_20260927_001` is frozen at FMO root `336efec74f0c742db4c6c671e387f35338f4f6ebface923123be6428f9d28a14`. It does **not** replace or mutate the runtime-source FMO. It records Mitosis Cortex and Tenki Sandbox documentation/policy surfaces as candidate external service layers. Neither service has executed in Vithia-Space.
+
+Mitosis is proposed only as a dedicated competition-safe cited-memory layer. Tenki is proposed only as a Sandbox execution/replay layer. Sponsor claims remain `NOT_EXECUTED` until a load-bearing receipt exists.
