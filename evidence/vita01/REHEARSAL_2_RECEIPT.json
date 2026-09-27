@@ -1,0 +1,57 @@
+{
+  "receipt_id": "VITA01_REHEARSAL_2_RECEIPT_V1",
+  "exploratory_rehearsal": true,
+  "confirmatory_result": false,
+  "host": "Claude sandbox against a throwaway local copy of the remote (not GitHub, not the playing machine)",
+  "protocol_bytes": "commit 791b54b (series commit 5) was written and committed before this rehearsal ran; that ordering is not publicly timestamped",
+  "flow_exercised": [
+    "runtime breakpoint",
+    "5 scripted games with per-game push",
+    "freeze_vita01 --push",
+    "E0-E3 prereg+execute --push",
+    "E4A prereg --push",
+    "verify_breakpoints"
+  ],
+  "integrity": {
+    "verify_breakpoints": "PASS",
+    "mmr_size": 20,
+    "worktree_clean": true,
+    "head_equals_remote": true
+  },
+  "observations": {
+    "E0": {
+      "terminal": "SUPPORTED",
+      "replay": "REPLAY_LEVEL_4"
+    },
+    "E1": {
+      "terminal": "PARTIAL",
+      "replay": "REPLAY_LEVEL_4",
+      "H1d": "NOT_SUPPORTED",
+      "H1e": "FAIL_TO_REJECT_H0 (medians 1 vs 1: METRIC_NOT_DISCRIMINATING)",
+      "H1e_v2": "FAIL_TO_REJECT_H0 (single-IC medians 2 vs 2, p=0.559)"
+    },
+    "E2": {
+      "terminal": "SUPPORTED",
+      "replay": "REPLAY_LEVEL_4",
+      "H2d": {
+        "acc_correct": 1.0,
+        "acc_shuffled": 0.915,
+        "unknown_no_history": 1.0,
+        "same_atom_diff_context": 57
+      }
+    },
+    "E3": {
+      "terminal": "SUPPORTED",
+      "replay": "REPLAY_LEVEL_2",
+      "replay_explanation": "only difference vs rehearsal-1 digest is the kernel_status relabel BUDGET_EXCEEDED -> ABSTAIN_SIZE_LIMIT; reversing it restores byte identity",
+      "abstain_size_limit": {
+        "states": 66,
+        "cells": 6484
+      }
+    },
+    "E4A": {
+      "state": "INPUT_FROZEN_NO_DECIDER_CALLS"
+    }
+  },
+  "jev_calls_used": 0
+}
