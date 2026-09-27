@@ -1,0 +1,14 @@
+{
+  "id": "UFA-JEV-BP-0001",
+  "parent": null,
+  "state": "BOOTSTRAP",
+  "verified_new": ["UFA llms.txt retrieved end-to-end", "public GitHub repository scaffold prepared"],
+  "executed": ["local scaffold creation"],
+  "observed": ["0 JEV games", "0 baseline games"],
+  "decisions": ["No fabricated scores", "No registration submission without required human fields", "Pilot is proposed, not selected"],
+  "proposed": ["pilot track", "confidence-aware temporal RAM state", "optional load-bearing sponsor layer after human choice"],
+  "not_tested": ["JEV API", "ALE runtime", "LLM baseline", "Mitosis sponsor integration", "Tenki sponsor integration"],
+  "failures": ["claude CLI absent on magicSTUDIObox; use UFA HTTP submission fallback"],
+  "unresolved": ["team name", "teammates", "track", "pitch approval", "sponsor usage", "JEV access", "in-person attendance", "baseline provider/model", "demo video"],
+  "next_action": "Collect unresolved human fields, submit entry, then execute fixed-seed harness."
+}

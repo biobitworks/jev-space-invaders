@@ -1,0 +1,18 @@
+{
+  "project_id": "UFA_JEV_SPACE_INVADERS_2026",
+  "competition": "UFA JEV Bake-Off: Space Invaders",
+  "deadline": "2026-09-28T23:59:00-07:00",
+  "live_final": "2026-09-30T19:00:00-07:00",
+  "venue": "590 Howard St, San Francisco",
+  "repo_visibility": "public",
+  "track": {"value": null, "state": "UNRESOLVED", "proposed": "pilot"},
+  "pitch": {"value": null, "state": "AWAITING_HUMAN_APPROVAL", "proposed": "JEV flies Space Invaders at frame speed; fixed-seed replays show exactly where typed decisions beat an LLM."},
+  "sponsors": {"mitosis": null, "tenki": null, "how": null, "state": "UNRESOLVED"},
+  "jev_access": {"needs_key": null, "state": "UNRESOLVED"},
+  "in_person": {"value": null, "state": "UNRESOLVED"},
+  "build": {"repo_url": null, "demo_video_url": null},
+  "evaluation": {"jev_games_required": 5, "baseline_games_required": 5, "fixed_seeds": [1,2,3,4,5]},
+  "claim_policy": "MEASURED_ONLY",
+  "mmr_state": "NOT_COMPUTED",
+  "signature_state": "NOT_SIGNED"
+}
