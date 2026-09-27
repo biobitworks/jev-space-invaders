@@ -7,7 +7,9 @@
     "schema",
     "packet_id",
     "action",
-    "successor_atoms"
+    "successor_atoms",
+    "observation_status",
+    "observation_receipt"
   ],
   "properties": {
     "schema": {
@@ -42,6 +44,25 @@
         "number",
         "null"
       ]
+    },
+    "observation_status": {
+      "const": "OBSERVED"
+    },
+    "observation_receipt": {
+      "type": "object",
+      "required": [
+        "kind",
+        "source"
+      ],
+      "properties": {
+        "kind": {
+          "const": "ObservationReceipt"
+        },
+        "source": {
+          "type": "string"
+        }
+      }
     }
-  }
+  },
+  "description": "Records an OBSERVED successor. Predicted successors belong in 'predicted' and can never satisfy this schema on their own."
 }

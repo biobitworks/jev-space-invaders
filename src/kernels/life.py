@@ -114,3 +114,41 @@ def local_pattern(g: np.ndarray, y: int, x: int) -> int:
         for dx in (-1, 0, 1):
             bits = (bits << 1) | int(g[(y + dy) % h, (x + dx) % w])
     return bits
+
+
+def _centroids(g: np.ndarray) -> list[tuple[str, float, float]]:
+    out = []
+    for m in components(g):
+        ys, xs = np.nonzero(m)
+        out.append((classify(m, g), float(ys.mean()), float(xs.mean())))
+    return out
+
+
+def kinematics(history: list[np.ndarray], lag: int = 4) -> list[dict]:
+    """Context projection that needs history: per object in the LAST frame, displacement
+    against the frame `lag` positions earlier in the supplied history (period 4 covers the
+    glider and LWSS). With fewer than lag+1 frames the motion label is UNKNOWN."""
+    cur = history[-1]
+    h, w = cur.shape
+    now = _centroids(cur)
+    if len(history) <= lag:
+        return [{"object": c, "motion": "UNKNOWN", "d": None} for c, _, _ in now]
+    before = _centroids(history[-1 - lag])
+    out = []
+    for c, y, x in now:
+        cands = [(b, by, bx) for b, by, bx in before if b == c]
+        if not cands:
+            out.append({"object": c, "motion": "UNKNOWN", "d": None})
+            continue
+
+        def wrap(d, n):
+            return (d + n / 2) % n - n / 2
+
+        dy, dx = min(((wrap(y - by, h), wrap(x - bx, w)) for _, by, bx in cands), key=lambda d: abs(d[0]) + abs(d[1]))
+        moving = abs(dy) > 0.5 or abs(dx) > 0.5
+        out.append({"object": c, "motion": "MOVING" if moving else "STATIC", "d": [round(dy, 2), round(dx, 2)]})
+    return sorted(out, key=lambda o: (o["object"], o["motion"]))
+
+
+TRUE_MOTION = {"glider": "MOVING", "lwss": "MOVING", "block": "STATIC", "beehive": "STATIC", "loaf": "STATIC",
+               "boat": "STATIC", "tub": "STATIC", "blinker": "STATIC", "toad": "STATIC", "beacon": "STATIC"}

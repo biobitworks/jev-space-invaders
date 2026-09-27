@@ -1,0 +1,63 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/biobitworks/jev-space-invaders/schemas/s01/VITA_TRAJECTORY_V1.json",
+  "title": "VITA_TRAJECTORY_V1",
+  "description": "Ordered lineage of VitaStates with the decisions and observed transitions between them.",
+  "type": "object",
+  "required": [
+    "schema",
+    "trajectory_id",
+    "states",
+    "steps"
+  ],
+  "properties": {
+    "schema": {
+      "const": "VITA_TRAJECTORY_V1"
+    },
+    "trajectory_id": {
+      "type": "string",
+      "pattern": "^sha256:[0-9a-f]{64}$"
+    },
+    "states": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "pattern": "^sha256:[0-9a-f]{64}$"
+      },
+      "minItems": 1
+    },
+    "steps": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "from_state",
+          "packet_id",
+          "decision_receipt_id",
+          "transition_receipt_id",
+          "to_state"
+        ],
+        "properties": {
+          "from_state": {
+            "type": "string",
+            "pattern": "^sha256:[0-9a-f]{64}$"
+          },
+          "packet_id": {
+            "type": "string",
+            "pattern": "^sha256:[0-9a-f]{64}$"
+          },
+          "decision_receipt_id": {
+            "type": "string"
+          },
+          "transition_receipt_id": {
+            "type": "string"
+          },
+          "to_state": {
+            "type": "string",
+            "pattern": "^sha256:[0-9a-f]{64}$"
+          }
+        }
+      }
+    }
+  }
+}

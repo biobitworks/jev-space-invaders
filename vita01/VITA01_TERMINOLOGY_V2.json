@@ -1,0 +1,21 @@
+{
+  "terminology": "VITA01_TERMINOLOGY_V2",
+  "terms": {
+    "0-Vita-1": "public S0<->S1 adapter protocol (id VITA01)",
+    "Vithia-S0": "context compiler (System 0); prepares context, never decides",
+    "Vithia-S1": "decider (System 1): JEV, OpenJev, LLM, or local model",
+    "VitaState": "finite persistent state with predecessor lineage (schemas/s01/VITA_STATE_V1.json)",
+    "VitaTrajectory": "ordered VitaStates with decisions and observed transitions (VITA_TRAJECTORY_V1.json)",
+    "ContextPacket": "bounded projection of a VitaState for one Question (S01_CONTEXT_PACKET_V1.json = vita01 context packet v1)",
+    "DecisionReceipt": "S01_DECISION_RECEIPT_V1.json = vita01 decision receipt v1",
+    "ObservedTransition": "S01_TRANSITION_RECEIPT_V1.json = vita01 transition receipt v1; requires an ObservationReceipt",
+    "SourceAtom": "immutable observation identity",
+    "Context": "versioned interpretation; successors never mutate SourceAtoms",
+    "Anticube (public)": "operator-declared identity x safety labels; the private Anticube math is not public",
+    "ΔG* (public)": "dimensionless information-state diagnostic G* = U* - tau H_norm; no thermodynamic claim",
+    "REPLAY_LEVEL_0..4": "source recoverable / environment recoverable / same inputs+seeds / equivalent within tolerance / byte-identical",
+    "EXPLORATORY_REHEARSAL": "runs before the confirmatory freeze; preserved, never rewritten",
+    "PASS": "integrity/test/verification gates only; never a scientific claim state"
+  },
+  "schema_file_names": "the S01_* file names are retained; they are the VITA01 v1 schemas (no duplicate files)"
+}

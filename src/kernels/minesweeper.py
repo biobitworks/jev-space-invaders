@@ -216,13 +216,21 @@ def oracle_labels(view: View, n_mines: int) -> dict:
     from pysat.formula import IDPool
     from pysat.solvers import Minisat22
 
-    b = view.board
-    hidden = view.hidden()
+    # independent geometry: the oracle recomputes neighbourhoods from (h, w) and uses only
+    # the revealed clue map; it shares no inference code with the kernel above.
+    h, w = view.board.h, view.board.w
+
+    def nb(c):
+        y, x = c
+        return [(y + dy, x + dx) for dy in (-1, 0, 1) for dx in (-1, 0, 1)
+                if (dy or dx) and 0 <= y + dy < h and 0 <= x + dx < w]
+
+    hidden = [(y, x) for y in range(h) for x in range(w) if (y, x) not in view.revealed]
     pool = IDPool()
     var = {c: pool.id(("x",) + c) for c in hidden}
     clauses = []
     for c, k in view.revealed.items():
-        hs = [var[n] for n in b.neigh(c) if n in var]
+        hs = [var[n] for n in nb(c) if n in var]
         if hs:
             clauses += CardEnc.equals(lits=hs, bound=k, vpool=pool, encoding=EncType.seqcounter).clauses
     clauses += CardEnc.equals(lits=list(var.values()), bound=n_mines, vpool=pool,
@@ -249,3 +257,15 @@ def outcome_distribution(view: View, n_mines: int, c, base: dict) -> dict:
 
 def entropy_bits(dist: dict) -> float:
     return -sum(float(q) * math.log2(float(q)) for q in dist.values() if q > 0)
+
+
+def oracle_identity() -> dict:
+    import hashlib
+    import inspect
+    from importlib.metadata import version
+
+    return {"package": "python-sat", "version": version("python-sat"), "solver": "Minisat22",
+            "encoding": {"clues": "CardEnc.equals seqcounter", "global_mine_count": "CardEnc.equals totalizer"},
+            "encoding_source_sha256": hashlib.sha256(inspect.getsource(oracle_labels).encode()).hexdigest(),
+            "kernel_source_sha256": hashlib.sha256(inspect.getsource(infer).encode()).hexdigest(),
+            "independence": "separate inference and separate neighbourhood geometry; shares the revealed-clue input and board generator"}

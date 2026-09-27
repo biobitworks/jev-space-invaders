@@ -101,7 +101,8 @@ def run() -> dict:
         t0 = time.perf_counter()
         orc = ms.oracle_labels(v, n)
         o_ms = (time.perf_counter() - t0) * 1000
-        row = {"i": i, "size": r["size"], "stratum": r["stratum"], "kernel_status": post["status"], "hidden": len(orc)}
+        kstat = "ABSTAIN_SIZE_LIMIT" if post["status"] == "BUDGET_EXCEEDED" else post["status"]
+        row = {"i": i, "size": r["size"], "stratum": r["stratum"], "kernel_status": kstat, "hidden": len(orc)}
         timings.append({"i": i, "size": r["size"], "stratum": r["stratum"], "kernel_ms": round(k_ms, 3), "oracle_ms": round(o_ms, 3)})
         if post["status"] == "OK":
             lab = ms.labels(post)
@@ -132,10 +133,14 @@ def run() -> dict:
     diffs = [a - b for a, b in pairs]
     p3b = float(wilcoxon(diffs, alternative="greater").pvalue) if any(diffs) else 1.0
     gap = abs(sum(act_list) / len(act_list) - sum(eig_list) / len(eig_list))
-    budget = sum(o["kernel_status"] == "BUDGET_EXCEEDED" for o in out)
+    budget = sum(o["kernel_status"] == "ABSTAIN_SIZE_LIMIT" for o in out)
+    budget_cells = sum(o["hidden"] for o in out if o["kernel_status"] == "ABSTAIN_SIZE_LIMIT")
     claims = [
         {"id": "H3a", "state": "SUPPORTED" if disagree_cells == 0 else "NOT_SUPPORTED",
-         "agree_cells": agree_cells, "disagree_cells": disagree_cells, "budget_exceeded_states": budget},
+         "agree_cells": agree_cells, "disagree_cells": disagree_cells,
+         "abstain_size_limit_states": budget, "abstain_size_limit_cells": budget_cells,
+         "abstain_rule": "states above the kernel component cap are ABSTAIN_SIZE_LIMIT: not PASS, not FAIL, no SAFE/UNSAFE label",
+         "oracle_identity": ms.oracle_identity()},
         {"id": "H3b", "state": "SUPPORTED" if p3b < 0.05 else "FAIL_TO_REJECT_H0", "p": p3b, "pairs": len(pairs),
          "mean_gain_max_eig": round(sum(a for a, _ in pairs) / len(pairs), 4),
          "mean_gain_random": round(sum(b for _, b in pairs) / len(pairs), 4)},

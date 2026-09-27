@@ -48,14 +48,52 @@ def git(*a, check=False):
     return p.stdout.strip()
 
 
+BRANCH = "main"
+ALLOWED_TERMINAL = {"SUPPORTED", "NOT_SUPPORTED", "FAIL_TO_REJECT_H0", "NULL", "NEGATIVE", "PARTIAL", "FAILED",
+                    "ABSTAIN", "DEFERRED", "NOT_TESTED"}
+FREEZE_GLOBS = ["vita01/VITA01_*", "vita01/*.md", "vita01/TYPE_ERROR_TEST_REGISTRY.json",
+                "vita01/EXPLORATORY_REHEARSAL_RECEIPT.json", "docs/prereg/*", "schemas/s01/*", "src/kernels/*.py", "src/s01/*.py", "src/vita01/*.py",
+                "experiments/*.py", "scripts/run_experiment.py", "scripts/freeze_vita01.py", "requirements.txt",
+                "tests/test_type_errors.py", "tests/test_kernels.py", "tests/test_envcfg.py", "src/envcfg.py",
+                "src/perception.py"]
+
+
+def freeze_files() -> list[str]:
+    out = set()
+    for g in FREEZE_GLOBS:
+        out |= {str(p.relative_to(ROOT)) for p in ROOT.glob(g) if p.is_file()}
+    return sorted(out)
+
+
+def find_freeze() -> dict | None:
+    found = None
+    for f in sorted(BP_DIR.glob("*.json")):
+        d = json.loads(f.read_text())
+        if d.get("stage") == "VITA01_FREEZE":
+            found = d
+    return found
+
+
+def check_code_freeze() -> str:
+    fz = find_freeze()
+    if fz is None:
+        raise SystemExit("no VITA01_FREEZE breakpoint: run scripts/freeze_vita01.py --push first")
+    for a in fz["atoms"]:
+        p = ROOT / a["path"]
+        if a["group"] in ("code", "prereg", "schema", "contract") and (
+                not p.exists() or hashlib.sha256(p.read_bytes()).hexdigest() != a["sha256"]):
+            raise SystemExit(f"frozen file changed since {fz['breakpoint_id']}: {a['path']}")
+    return fz["breakpoint_id"]
+
+
 def preflight():
     git("fetch", "--quiet", "origin", check=True)
-    if git("rev-parse", "--abbrev-ref", "HEAD") != "main":
-        raise SystemExit("not on main")
+    if git("rev-parse", "--abbrev-ref", "HEAD") != BRANCH:
+        raise SystemExit(f"not on {BRANCH}")
     if git("status", "--porcelain"):
         raise SystemExit("worktree not clean")
-    if git("rev-parse", "HEAD") != git("rev-parse", "origin/main"):
-        raise SystemExit("HEAD != origin/main: another writer moved main or local work is unpushed. Reconcile first.")
+    if git("rev-parse", "HEAD") != git("rev-parse", f"origin/{BRANCH}"):
+        raise SystemExit(f"HEAD != origin/{BRANCH}: another writer moved it or local work is unpushed. Reconcile first.")
     v = subprocess.run([sys.executable, "scripts/verify_breakpoints.py"], cwd=ROOT, capture_output=True, text=True)
     if v.returncode:
         raise SystemExit("breakpoint verification failed before experiment:\n" + v.stdout[-2000:])
@@ -71,11 +109,11 @@ def pre_mmr():
 def publish(msg: str, paths: list[str]) -> str:
     git("add", *paths, check=True)
     git("commit", "-m", msg, check=True)
-    git("push", "origin", "main", check=True)
+    git("push", "origin", BRANCH, check=True)
     head = git("rev-parse", "HEAD")
     git("fetch", "--quiet", "origin", check=True)
-    if subprocess.run(["git", "merge-base", "--is-ancestor", head, "origin/main"], cwd=ROOT).returncode:
-        raise SystemExit(f"remote verification failed: {head} not on origin/main")
+    if subprocess.run(["git", "merge-base", "--is-ancestor", head, f"origin/{BRANCH}"], cwd=ROOT).returncode:
+        raise SystemExit(f"remote verification failed: {head} not on origin/{BRANCH}")
     return head
 
 
@@ -101,20 +139,24 @@ def find_prereg(exp: str) -> dict | None:
 def stage_prereg(exp: str, push: bool) -> None:
     mod_name, docs = EXPS[exp]
     mod = importlib.import_module(mod_name)
+    freeze_id = check_code_freeze()
     pre = pre_mmr()
     man = mod.build_input()
     atoms = [atom_record(f"docs/prereg/{x}", "PreregistrationFCO", "prereg") for x in ["COMMON.md", *docs]]
+    atoms.append(atom_record("vita01/VITA01_CONFIRMATORY_PREREGISTRATION.md", "PreregistrationFCO", "prereg"))
     atoms += dataset_atoms(mod.IN_ID, "input_dataset")
     atoms += [atom_record(c, "CodeFCO", "code") for c in sorted(set(mod.CODE + SHARED_CODE))]
     out = create_breakpoint(f"{exp.lower()}-prereg", "PREREG_SEALED" if exp != "E4A" else "INPUT_FROZEN_NO_DECIDER_CALLS",
-                            atoms, {"experiment_id": mod.EXP, "stage": "PREREG", "input_dataset": {"dataset_id": mod.IN_ID, "fmo_root": man["fmo_root"]},
+                            atoms, {"experiment_id": mod.EXP, "stage": "PREREG", "code_freeze": freeze_id, "mode": "CONFIRMATORY",
+                                    "evidence_level": "SIMULATED", "input_dataset": {"dataset_id": mod.IN_ID, "fmo_root": man["fmo_root"]},
                                     "pre_mmr_root": pre,
                                     "fcg_edges": [{"src": mod.IN_ID, "rel": "FROZEN_UNDER", "dst": "PreregistrationFCO"}],
                                     "claim_ceiling_note": "sealing proves identity of the prereg text, not that it predates rehearsal executions (see docs/prereg/COMMON.md)"})
     print(json.dumps({k: out[k] for k in ("bp_id", "bp_file", "bp_root", "mmr_root_after")}, indent=2))
     if push:
+        subprocess.run([sys.executable, "scripts/build_registries.py"], cwd=ROOT, check=True)
         head = publish(f"prereg: {exp} input dataset {mod.IN_ID} sealed ({out['bp_id']})",
-                       ["data/s01", "docs/prereg", "governance"])
+                       ["data/s01", "docs/prereg", "governance", "vita01"])
         print(f"REMOTE_VERIFIED={head}")
 
 
@@ -123,6 +165,7 @@ def stage_execute(exp: str, push: bool) -> None:
     mod = importlib.import_module(mod_name)
     if exp == "E4A":
         raise SystemExit("E4A has no local execute stage; decider batches follow the credit ladder")
+    freeze_id = check_code_freeze()
     pre_bp = find_prereg(mod.EXP)
     if pre_bp is None:
         raise SystemExit(f"no PREREG breakpoint for {mod.EXP}; run --stage prereg first")
@@ -132,6 +175,8 @@ def stage_execute(exp: str, push: bool) -> None:
                 raise SystemExit(f"input dataset changed since prereg: {a['path']}")
     pre = pre_mmr()
     res = mod.run()
+    if res["terminal_state"] not in ALLOWED_TERMINAL:
+        raise SystemExit(f"terminal state {res['terminal_state']} not in the 0-Vita-1 vocabulary")
     ref = json.loads(REF.read_text()).get(exp, {}) if REF.exists() else {}
     in_sha, out_sha = rows_sha(mod.IN_ID), rows_sha(mod.OUT_ID)
     replay = {"reference_runtime": ref.get("runtime"),
@@ -144,7 +189,9 @@ def stage_execute(exp: str, push: bool) -> None:
                "input_dataset": {"dataset_id": mod.IN_ID, "fmo_root": pre_bp["input_dataset"]["fmo_root"], "rows_sha256": in_sha},
                "output_dataset": {"dataset_id": mod.OUT_ID, "fmo_root": res["output_manifest"]["fmo_root"], "rows_sha256": out_sha},
                "code_commit": git_head(), "terminal_state": res["terminal_state"], "claims": res["claims"],
-               "not_tested": res.get("not_tested", []), "replay": replay, "note": res.get("note")}
+               "not_tested": res.get("not_tested", []), "replay": replay, "note": res.get("note"),
+               "mode": "CONFIRMATORY", "code_freeze": freeze_id, "evidence_level": "SIMULATED",
+               "biological_transfer": "NOT_TESTED"}
     validate(receipt, "S01_EXPERIMENT_RECEIPT_V1")
     rdir = ROOT / "evidence" / "s01" / mod.EXP
     rdir.mkdir(parents=True, exist_ok=True)
@@ -161,7 +208,9 @@ def stage_execute(exp: str, push: bool) -> None:
     print(json.dumps({"terminal_state": res["terminal_state"], "claims": [(c["id"], c["state"]) for c in res["claims"]],
                       "replay": replay["replay_level"], **{k: out[k] for k in ("bp_id", "bp_root", "mmr_root_after")}}, indent=2))
     if push:
-        head = publish(f"result: {exp} {res['terminal_state']} ({out['bp_id']})", ["data/s01", "evidence/s01", "governance"])
+        subprocess.run([sys.executable, "scripts/build_registries.py"], cwd=ROOT, check=True)
+        head = publish(f"result: {exp} {res['terminal_state']} ({out['bp_id']})",
+                       ["data/s01", "evidence/s01", "governance", "vita01"])
         print(f"REMOTE_VERIFIED={head}")
 
 
@@ -170,7 +219,10 @@ def main() -> int:
     ap.add_argument("exp", choices=list(EXPS))
     ap.add_argument("--stage", choices=["prereg", "execute", "all"], default="all")
     ap.add_argument("--push", action="store_true")
+    ap.add_argument("--branch", default="main", help="branch that carries the scientific lineage")
     a = ap.parse_args()
+    global BRANCH
+    BRANCH = a.branch
     if a.push:
         preflight()
     if a.stage in ("prereg", "all"):

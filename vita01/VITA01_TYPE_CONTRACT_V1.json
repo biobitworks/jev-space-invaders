@@ -1,0 +1,185 @@
+{
+  "contract_id": "VITA01_TYPE_CONTRACT_V1",
+  "protocol": "0-Vita-1",
+  "principle": "A downstream transformation may refine or derive evidence; it may not silently upgrade evidence class, observation status, or claim status.",
+  "evidence_levels": [
+    "SIMULATED",
+    "IN_VITRO",
+    "EX_VIVO",
+    "IN_VIVO",
+    "CLINICAL",
+    "OTHER"
+  ],
+  "evidence_level_rank": {
+    "SIMULATED": 0,
+    "OTHER": 0,
+    "IN_VITRO": 1,
+    "EX_VIVO": 2,
+    "IN_VIVO": 3,
+    "CLINICAL": 4
+  },
+  "observation_status": [
+    "PREDICTED",
+    "OBSERVED",
+    "DERIVED",
+    "UNOBSERVED"
+  ],
+  "execution_status": [
+    "PROPOSED",
+    "IMPLEMENTED",
+    "EXECUTED",
+    "NOT_EXECUTED"
+  ],
+  "claim_status": [
+    "PROPOSED",
+    "OBSERVED",
+    "SUPPORTED",
+    "NOT_SUPPORTED",
+    "FAIL_TO_REJECT_H0",
+    "NULL",
+    "NEGATIVE",
+    "PARTIAL",
+    "FAILED",
+    "ABSTAIN",
+    "DEFERRED",
+    "NOT_TESTED",
+    "UNKNOWN",
+    "NOT_COMPUTED"
+  ],
+  "relation_kinds": {
+    "FCG": [
+      "DERIVED_FROM",
+      "EXECUTED_WITH",
+      "EXECUTED_UNDER",
+      "COMPARED_WITH",
+      "SUPERSEDES",
+      "REFERENCES",
+      "OBSERVED_AS",
+      "CONSTRAINS",
+      "CANDIDATE_SUCCESSOR",
+      "RESULTS_IN",
+      "PUBLISHED_TO"
+    ],
+    "CAUSAL": [
+      "CAUSES"
+    ]
+  },
+  "object_types": {
+    "SourceAtom": {
+      "source_type": "observation bytes",
+      "allowed_transitions": [
+        "-> Context (interpretation)",
+        "-> VitaState"
+      ],
+      "immutable": true
+    },
+    "Context": {
+      "source_type": "interpretation of SourceAtoms",
+      "allowed_transitions": [
+        "-> successor Context",
+        "-> ContextPacket"
+      ]
+    },
+    "VitaState": {
+      "source_type": "SourceAtoms + Context + predecessor",
+      "allowed_transitions": [
+        "-> successor VitaState",
+        "-> ContextPacket"
+      ]
+    },
+    "ContextPacket": {
+      "source_type": "bounded projection of VitaState for one Question",
+      "allowed_transitions": [
+        "-> DecisionReceipt"
+      ],
+      "forbidden_fields": [
+        "recommended_action",
+        "recommended_move",
+        "golden_action",
+        "best_action"
+      ]
+    },
+    "DecisionReceipt": {
+      "source_type": "System-1 output",
+      "allowed_transitions": [
+        "-> ObservedTransition (via environment)"
+      ]
+    },
+    "Prediction": {
+      "source_type": "model output about a future state",
+      "observation_status": "PREDICTED"
+    },
+    "ObservedTransition": {
+      "source_type": "environment/assay output",
+      "observation_status": "OBSERVED",
+      "requires": [
+        "observation_receipt"
+      ]
+    },
+    "EnvironmentTransition": {
+      "source_type": "simulator internal state change"
+    },
+    "RawFrameSequence": {
+      "source_type": "every emulator frame"
+    },
+    "AggregatedObservation": {
+      "source_type": "pooled/sampled frames handed to perception"
+    },
+    "PerceivedObjectState": {
+      "source_type": "objects extracted from an AggregatedObservation"
+    },
+    "CustodyReceipt": {
+      "source_type": "hash/Merkle/MMR identity",
+      "establishes": [
+        "identity",
+        "inclusion"
+      ],
+      "does_not_establish": [
+        "correctness",
+        "causality",
+        "truth"
+      ]
+    }
+  },
+  "forbidden_promotions": [
+    {
+      "id": "T2",
+      "from": "observation_status=PREDICTED",
+      "to": "observation_status=OBSERVED",
+      "unless": "an observation_receipt that is not the prediction itself"
+    },
+    {
+      "id": "T3",
+      "from": "evidence_level=k",
+      "to": "evidence_level>k",
+      "unless": "an observation_receipt at the target evidence level"
+    },
+    {
+      "id": "T4",
+      "from": "relation in FCG",
+      "to": "relation CAUSES",
+      "unless": "controlled-intervention evidence reference",
+      "otherwise": "ABSTAIN"
+    },
+    {
+      "id": "T5",
+      "from": "CustodyReceipt PASS",
+      "to": "claim SUPPORTED",
+      "unless": "an independent correctness check"
+    },
+    {
+      "id": "T1",
+      "from": "content_id equality",
+      "to": "context equality"
+    },
+    {
+      "id": "T7",
+      "from": "AggregatedObservation absence",
+      "to": "EnvironmentTransition absence"
+    }
+  ],
+  "current_ladder": {
+    "E0-E4": "SIMULATED",
+    "biological_transfer": "NOT_TESTED"
+  }
+}

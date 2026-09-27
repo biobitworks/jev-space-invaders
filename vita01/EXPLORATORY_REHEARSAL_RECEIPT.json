@@ -1,0 +1,149 @@
+{
+  "receipt_id": "VITA01_EXPLORATORY_REHEARSAL_RECEIPT_V1",
+  "exploratory_rehearsal": true,
+  "blind_preregistration": false,
+  "confirmatory_result": false,
+  "host": "Claude sandbox (Linux x86_64, Python 3.12); not the playing machine",
+  "evidence_level": "SIMULATED",
+  "observations": [
+    {
+      "id": "OBS-E3-DEV-1",
+      "what": "Minesweeper kernel vs SAT oracle, 40 boards 9x9/10 after first click",
+      "result": "1376/1376 cells agree",
+      "stage": "development check before E3 existed"
+    },
+    {
+      "id": "OBS-E0-R1",
+      "experiment": "E0",
+      "terminal_state": "SUPPORTED",
+      "claims": [
+        [
+          "H0a",
+          "SUPPORTED"
+        ],
+        [
+          "H0b",
+          "SUPPORTED"
+        ],
+        [
+          "H0c",
+          "SUPPORTED"
+        ],
+        [
+          "H0d",
+          "SUPPORTED"
+        ],
+        [
+          "H0e",
+          "SEE_REPLAY_CHECK"
+        ]
+      ]
+    },
+    {
+      "id": "OBS-E1-R1",
+      "experiment": "E1",
+      "terminal_state": "PARTIAL",
+      "claims": [
+        [
+          "G1",
+          "SUPPORTED"
+        ],
+        [
+          "H1a",
+          "SUPPORTED"
+        ],
+        [
+          "H1b",
+          "SUPPORTED"
+        ],
+        [
+          "H1c",
+          "SUPPORTED"
+        ],
+        [
+          "H1d",
+          "NOT_SUPPORTED"
+        ],
+        [
+          "H1e",
+          "FAIL_TO_REJECT_H0"
+        ]
+      ],
+      "detail": {
+        "H1d": "true-rule rank 1 under bit_flip, random ICs = 80.6% vs frozen threshold 90% -> NOT_SUPPORTED",
+        "H1e": "median steps-to-final 1 vs 1 -> FAIL_TO_REJECT_H0; NULL / METRIC_NOT_DISCRIMINATING",
+        "G1": "first rehearsal mislabelled the gate state as PASS (code bug, fixed; not a hypothesis change)"
+      }
+    },
+    {
+      "id": "OBS-E2-R1",
+      "experiment": "E2",
+      "terminal_state": "SUPPORTED",
+      "claims": [
+        [
+          "H2a",
+          "SUPPORTED"
+        ],
+        [
+          "H2b",
+          "SUPPORTED"
+        ],
+        [
+          "H2c",
+          "DESCRIPTIVE"
+        ]
+      ],
+      "detail": {
+        "mask_accuracy_10": 0.4833,
+        "mask_accuracy_25": 0.2
+      }
+    },
+    {
+      "id": "OBS-E3-R1",
+      "experiment": "E3",
+      "terminal_state": "SUPPORTED",
+      "claims": [
+        [
+          "H3a",
+          "SUPPORTED"
+        ],
+        [
+          "H3b",
+          "SUPPORTED"
+        ],
+        [
+          "H3c",
+          "SUPPORTED"
+        ]
+      ],
+      "detail": {
+        "oracle_agreement": "28185/28185 evaluated cells",
+        "size_limit_states": 66,
+        "H3b_p": 0.00605,
+        "H3c_gap_bits": 0.0449
+      }
+    },
+    {
+      "id": "OBS-E4A-R1",
+      "experiment": "E4A",
+      "what": "input freeze",
+      "result": "96 snapshots (48 bombs / 48 none), 96/96 replay verified, no decider queried"
+    }
+  ],
+  "failure_atoms": [
+    {
+      "id": "E4_PERCEPTION_FLICKER_BOMB_VISIBILITY",
+      "original_state": "enemy bombs absent from every captured observation",
+      "root_cause": "bomb sprites drawn on alternating frames; built-in frameskip=4 always returned the same phase",
+      "first_detection": "E4A rehearsal: 0 of 255 candidate snapshots contained a bomb",
+      "successor_fix": "frameskip=1, hold action 4 frames, max-pool last 2 frames (commit 'fix: make enemy bombs visible')",
+      "classification": "PERCEPTION_REPRESENTATION_FIX, not GAME_DYNAMICS_CHANGE",
+      "dynamics_control": "tests/test_envcfg.py: seeds 1-3, same action sequence -> identical reward, lives, episode_frame_number, termination vs built-in frameskip=4",
+      "post_fix_observation": "seed 1 scripted: score 110, 371 steps (unchanged), bombs detected on 252/371 steps",
+      "type_lesson": "WORLD_STATE != OBSERVED_FRAME; see TYPE_ERROR_T7"
+    }
+  ],
+  "reference_digests": "evidence/s01/REFERENCE_RUNTIME_DIGESTS.json",
+  "jev_calls_used": 0,
+  "jev_credit_state": "NO_KEY"
+}

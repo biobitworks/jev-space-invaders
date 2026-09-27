@@ -1,0 +1,110 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/biobitworks/jev-space-invaders/schemas/s01/VITA_STATE_V1.json",
+  "title": "VITA_STATE_V1",
+  "description": "Finite persistent state produced by System 0. Public fields only; private context appears as a commitment.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema",
+    "vita_state_id",
+    "predecessor_id",
+    "source_atom_ids",
+    "context",
+    "evidence_level",
+    "observation_status",
+    "execution_status",
+    "claim_status",
+    "transform_build",
+    "config_id"
+  ],
+  "properties": {
+    "schema": {
+      "const": "VITA_STATE_V1"
+    },
+    "vita_state_id": {
+      "type": "string",
+      "pattern": "^sha256:[0-9a-f]{64}$"
+    },
+    "predecessor_id": {
+      "oneOf": [
+        {
+          "type": "string",
+          "pattern": "^sha256:[0-9a-f]{64}$"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "source_atom_ids": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "pattern": "^sha256:[0-9a-f]{64}$"
+      }
+    },
+    "context": {
+      "type": "object"
+    },
+    "evidence_level": {
+      "enum": [
+        "SIMULATED",
+        "IN_VITRO",
+        "EX_VIVO",
+        "IN_VIVO",
+        "CLINICAL",
+        "OTHER"
+      ]
+    },
+    "observation_status": {
+      "enum": [
+        "PREDICTED",
+        "OBSERVED",
+        "DERIVED",
+        "UNOBSERVED"
+      ]
+    },
+    "execution_status": {
+      "enum": [
+        "PROPOSED",
+        "IMPLEMENTED",
+        "EXECUTED",
+        "NOT_EXECUTED"
+      ]
+    },
+    "claim_status": {
+      "type": "string"
+    },
+    "transform_build": {
+      "type": "object",
+      "required": [
+        "code_commit",
+        "kernel_sha256"
+      ],
+      "properties": {
+        "code_commit": {
+          "type": "string"
+        },
+        "kernel_sha256": {
+          "type": "object"
+        }
+      }
+    },
+    "config_id": {
+      "type": "string",
+      "pattern": "^sha256:[0-9a-f]{64}$"
+    },
+    "private_commitment": {
+      "oneOf": [
+        {
+          "type": "string",
+          "pattern": "^sha256:[0-9a-f]{64}$"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    }
+  }
+}

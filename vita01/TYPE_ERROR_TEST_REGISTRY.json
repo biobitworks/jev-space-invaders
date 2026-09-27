@@ -1,0 +1,43 @@
+{
+  "registry": "VITA01_TYPE_ERROR_TEST_REGISTRY_V1",
+  "implementation": "tests/test_type_errors.py",
+  "checks": "src/vita01/typecheck.py",
+  "tests": [
+    {
+      "id": "T1",
+      "name": "IDENTITY_AS_MEANING",
+      "expected": "same SourceAtom content id, distinct Context kept as separate objects",
+      "verdict_on_attempt": "ALLOW (separate ContextFCOs)"
+    },
+    {
+      "id": "T2",
+      "name": "PREDICTION_AS_OBSERVATION",
+      "expected": "REJECT without an independent ObservationReceipt; TRANSITION schema requires observation_status=OBSERVED + receipt"
+    },
+    {
+      "id": "T3",
+      "name": "SIMULATION_AS_WET_LAB",
+      "expected": "REJECT SIMULATED -> IN_VITRO/IN_VIVO/CLINICAL without a receipt at the target level"
+    },
+    {
+      "id": "T4",
+      "name": "GRAPH_EDGE_AS_CAUSALITY",
+      "expected": "ABSTAIN without a ControlledInterventionReceipt"
+    },
+    {
+      "id": "T5",
+      "name": "CUSTODY_AS_CORRECTNESS",
+      "expected": "custody PASS on a deliberately wrong ECA result; correctness check fails; verdict REJECT (ABSTAIN if correctness unchecked)"
+    },
+    {
+      "id": "T6",
+      "name": "HISTORY_ERASURE",
+      "expected": "CORRECT/SHUFFLED/NO history recorded as distinct measured conditions; confirmatory measurement is E2 H2d"
+    },
+    {
+      "id": "T7",
+      "name": "OBSERVATION_LAYER_LOSS",
+      "expected": "RawFrameSequence shows bombs, sampled AggregatedObservation (built-in frameskip=4) does not, pooled AggregatedObservation does; types kept distinct"
+    }
+  ]
+}

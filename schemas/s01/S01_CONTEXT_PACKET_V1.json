@@ -97,6 +97,16 @@
         "required": [
           "recommended_move"
         ]
+      },
+      {
+        "required": [
+          "golden_action"
+        ]
+      },
+      {
+        "required": [
+          "best_action"
+        ]
       }
     ]
   }

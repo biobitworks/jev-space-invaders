@@ -15,7 +15,7 @@ from typing import Protocol
 from src.s01.canon import cbytes, content_id
 
 SCHEMA_DIR = Path(__file__).resolve().parents[2] / "schemas" / "s01"
-FORBIDDEN_KEYS = {"recommended_action", "recommended_move"}
+FORBIDDEN_KEYS = {"recommended_action", "recommended_move", "golden_action", "best_action"}
 
 
 class System0Provider(Protocol):

@@ -171,6 +171,9 @@ def run() -> dict:
 
     t_mr, t_ex = [t_final(o) for o in sel("missing_row", rnd)], [t_final(o) for o in sel("exact", rnd)]
     p1e = float(mannwhitneyu(t_mr, t_ex, alternative="greater").pvalue)
+    # H1e_v2 (post-rehearsal, prospectively specified; H1e above is unchanged): sparse regime, single-cell IC
+    s_mr, s_ex = [t_final(o) for o in sel("missing_row", ["single"])], [t_final(o) for o in sel("exact", ["single"])]
+    p1e2 = float(mannwhitneyu(s_mr, s_ex, alternative="greater").pvalue)
     claims = [
         {"id": "G1", "state": "SUPPORTED" if xc["state"] == "PASS" else ("NOT_TESTED" if xc["state"] == "NOT_TESTED" else "NOT_SUPPORTED"),
          "cross_check": xc},
@@ -180,7 +183,11 @@ def run() -> dict:
          "median_log2_map_random": float(np.median(a_r)), "median_log2_map_single": float(np.median(a_s))},
         {"id": "H1d", "state": "SUPPORTED" if frac1d >= 0.90 else "NOT_SUPPORTED", "fraction_rank1": round(frac1d, 4), "runs": len(bf)},
         {"id": "H1e", "state": "SUPPORTED" if p1e < 0.05 else "FAIL_TO_REJECT_H0", "p": p1e,
-         "median_t_missing_row": float(np.median(t_mr)), "median_t_exact": float(np.median(t_ex))},
+         "median_t_missing_row": float(np.median(t_mr)), "median_t_exact": float(np.median(t_ex)),
+         "discrimination_note": "NULL/METRIC_NOT_DISCRIMINATING if both medians are 1"},
+        {"id": "H1e_v2", "state": "SUPPORTED" if p1e2 < 0.05 else "FAIL_TO_REJECT_H0", "p": p1e2,
+         "median_t_missing_row_single": float(np.median(s_mr)), "median_t_exact_single": float(np.median(s_ex)),
+         "status": "NEW successor hypothesis, post-rehearsal prospective (not blind)"},
     ]
     m = write_manifest(d, dataset_id=OUT_ID, schema="rows: {rule, ic, kind, series{...}, question_final, final_map, equivalence_class}",
                        kind="output", source=IN_ID, generation_code=CODE, config={}, seeds=[],

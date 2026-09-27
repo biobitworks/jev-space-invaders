@@ -58,9 +58,9 @@ def run() -> dict:
         {"id": "H0b", "state": "SUPPORTED" if addr_coll == 0 else "NOT_SUPPORTED", "address_collisions": addr_coll},
         {"id": "H0c", "state": "SUPPORTED" if cid_coll == 0 else "NOT_SUPPORTED", "content_id_collisions": cid_coll},
         {"id": "H0d", "state": "SUPPORTED" if eq_fail == 0 else "NOT_SUPPORTED", "address_equals_hash_rows": eq_fail},
-        {"id": "H0e", "state": "SEE_REPLAY_CHECK", "output_rows_sha256": sha},
+        {"id": "H0e", "state": "OBSERVED", "output_rows_sha256": sha, "note": "replay level recorded by the runner"},
     ]
-    terminal = "SUPPORTED" if all(c["state"] in ("SUPPORTED", "SEE_REPLAY_CHECK") for c in claims) else "NOT_SUPPORTED"
+    terminal = "SUPPORTED" if all(c["state"] in ("SUPPORTED", "OBSERVED") for c in claims) else "NOT_SUPPORTED"
     return {"experiment_id": EXP, "question": "Can finite canonical states be reversibly addressed independently from their cryptographic content identity?",
             "preregistration": prereg_ref("E0_ADDRESSABILITY.md"), "output_manifest": m,
             "terminal_state": terminal, "claims": claims, "not_tested": []}
