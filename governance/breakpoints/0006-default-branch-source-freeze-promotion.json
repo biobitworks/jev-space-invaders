@@ -1,0 +1,25 @@
+{
+  "breakpoint_id": "UFA-JEV-BP-0006",
+  "parent": "UFA-JEV-BP-0005",
+  "state": "SOURCE_FREEZE_PROMOTED_TO_DEFAULT_BRANCH",
+  "project": "VITHIA_SPACE",
+  "repo": "https://github.com/biobitworks/jev-space-invaders",
+  "source_freeze_commit": "49db49a72bca1726c4078783ea447728d88eab5d",
+  "source_fmo_root": "28c9beac8c617df2c8409b50d45ee6240408455c53db5b845261fb4005171a81",
+  "root_kind": "FRACTAL_MERKLE_OBJECT_V1_SOURCE_FREEZE",
+  "default_branch": "main",
+  "promotion": "FAST_FORWARD",
+  "executed": [
+    "pushed source-freeze commit to vithia-space",
+    "fast-forwarded main to source-freeze commit",
+    "pushed main"
+  ],
+  "observed": [
+    "JEV games=0",
+    "baseline games=0",
+    "ROM=NOT_PRESENT",
+    "MMR=NOT_COMPUTED",
+    "SIGNATURE=NOT_SIGNED"
+  ],
+  "next_action": "acquire/runtime-bind ROM only with explicit provenance/license receipt, then create successor runtime dataset before any environment execution"
+}
