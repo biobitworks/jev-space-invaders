@@ -1,0 +1,14 @@
+{
+  "id": "UFA-JEV-BP-0003",
+  "parent": "UFA-JEV-BP-0002",
+  "state": "MCP_REACHABLE_PUBLIC_REPO_READY",
+  "verified_new": ["UFA MCP initialize PASS", "UFA MCP tools/list PASS", "UFA get_jev_arena PASS", "entries_open=true", "public repo URL established"],
+  "executed": ["UFA MCP connectivity checks", "GitHub public repo bootstrap"],
+  "observed": ["hours_remaining=42 at UFA check", "0 JEV games", "0 baseline games"],
+  "decisions": ["HTTP submission fallback authorized by official spec", "registration waits for unresolved human fields"],
+  "proposed": ["pilot track", "confidence-aware temporal control", "Mitosis per-episode strategy memory", "Tenki replay/tuning lane"],
+  "not_tested": ["JEV API", "ALE runtime", "LLM baseline", "sponsor integrations"],
+  "failures": ["claude CLI absent", "pytest absent from base Python"],
+  "unresolved": ["team name", "teammates", "track", "pitch approval", "sponsor usage", "JEV access", "in-person attendance", "baseline provider/model", "demo video"],
+  "next_action": "Collect human fields, create untracked entry.local.json, submit, require ok=true."
+}
