@@ -1,0 +1,20 @@
+{
+  "breakpoint_id": "UFA-JEV-BP-0008",
+  "parent": "UFA-JEV-BP-0007",
+  "state": "SPONSOR_SOURCE_FREEZE_PROMOTED_TO_DEFAULT_BRANCH",
+  "project": "VITHIA_SPACE",
+  "source_commit": "26ec67e8fedf8d8ab964b92082391e705ae1a7ed",
+  "runtime_fmo_root": "28c9beac8c617df2c8409b50d45ee6240408455c53db5b845261fb4005171a81",
+  "sponsor_fmo_root": "336efec74f0c742db4c6c671e387f35338f4f6ebface923123be6428f9d28a14",
+  "default_branch": "main",
+  "promotion": "FAST_FORWARD_THEN_RECEIPT",
+  "observed": [
+    "Mitosis integration=NOT_EXECUTED",
+    "Tenki integration=NOT_EXECUTED",
+    "JEV games=0",
+    "baseline games=0",
+    "MMR=NOT_COMPUTED",
+    "SIGNATURE=NOT_SIGNED"
+  ],
+  "next_action": "resolve sponsor credentials and hackathon-specific terms; execute only a bounded load-bearing sponsor smoke test before claiming sponsor use"
+}
