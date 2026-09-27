@@ -104,6 +104,19 @@
       "manifest": "data/s01/S01_MINESWEEPER_RESULTS_V1/MANIFEST.json",
       "manifest_sha256": "0aeedcbdb3083c9306b4a12dc0cc7e852acc0143d3715eab6c728e59141ce97c",
       "evidence_level": "SIMULATED"
+    },
+    {
+      "dataset_id": "S01_SPACE_INVADERS_SNAPSHOT_EVAL_V1",
+      "kind": "evaluation",
+      "source": "ALE/SpaceInvaders-v5 replay of scripted policy",
+      "license": "derived observations only; no ROM bytes",
+      "fmo_root": "d8ff2d1ef45fcc90aa2e8e85dd7dcaf037aa2db9d95ce515bdd5f284f9a3f180",
+      "visibility": "public",
+      "claim_ceiling": "frozen inputs only; no decider has been queried",
+      "code_commit_at_generation": "afe7f0f9237912ef64b5b2166261df6dcd6639d3",
+      "manifest": "data/s01/S01_SPACE_INVADERS_SNAPSHOT_EVAL_V1/MANIFEST.json",
+      "manifest_sha256": "226169d12adf07147a3cbc65b4ae09ab8f2c02ac0be7453530caaa3b6dfe512c",
+      "evidence_level": "SIMULATED"
     }
   ]
 }

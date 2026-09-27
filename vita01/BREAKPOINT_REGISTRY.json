@@ -285,6 +285,21 @@
       "mmr_root_after": "e8e0de7b6617b15f06cf268a04c1f2b835a3489d25d276311d4997b99b790e89",
       "signature_state": "NOT_SIGNED",
       "verification_command": "python scripts/verify_breakpoints.py"
+    },
+    {
+      "breakpoint_id": "UFA-JEV-BP-0020",
+      "parent": "UFA-JEV-BP-0019",
+      "state": "INPUT_FROZEN_NO_DECIDER_CALLS",
+      "stage": "PREREG",
+      "experiment_id": "E4A_SPACE_INVADERS_SNAPSHOTS",
+      "file": "governance/breakpoints/0020-e4a-prereg.json",
+      "file_sha256": "8f873084bc45353826a857c9b42d7e89295beea665d8d8d3f03e80854df7686e",
+      "root_kind": "FMO_V1_BREAKPOINT_ATOMS",
+      "bp_root": "23e45097955d0a62d1de282dd47f0ac0b5774060f4a980da8693aeb15d9fa06f",
+      "mmr_seq": 19,
+      "mmr_root_after": "4b1ab52ae6ad0dc8e7a436fc91947fa25946d2edf5e16378222abc947388ef26",
+      "signature_state": "NOT_SIGNED",
+      "verification_command": "python scripts/verify_breakpoints.py"
     }
   ]
 }

@@ -1,0 +1,208 @@
+{
+  "breakpoint_id": "UFA-JEV-BP-0020",
+  "parent": "UFA-JEV-BP-0019",
+  "state": "INPUT_FROZEN_NO_DECIDER_CALLS",
+  "project": "VITHIA_SPACE",
+  "created_utc": "2026-09-27T17:11:44+00:00",
+  "git_head_at_creation": "afe7f0f9237912ef64b5b2166261df6dcd6639d3",
+  "root_kind": "FMO_V1_BREAKPOINT_ATOMS",
+  "bp_root": "23e45097955d0a62d1de282dd47f0ac0b5774060f4a980da8693aeb15d9fa06f",
+  "group_roots": {
+    "code": "2b8e2b99391e5e8f7e6f9a79f56cfa342a4e2cdf3ad04c61ce08459251768f35",
+    "input_dataset": "4f74944e6ca6f801cc0bfcc60b62f09d42065f8c9a735a752211b55c12d41f56",
+    "prereg": "2912d176b8dc5603ee7ec2744e38cd0f1da9f45d1f658b5e02f1af647e4b18bb"
+  },
+  "atoms": [
+    {
+      "path": "docs/prereg/COMMON.md",
+      "kind": "PreregistrationFCO",
+      "group": "prereg",
+      "bytes": 1120,
+      "sha256": "1a45163f867474a32673c8acb2bd4b28b9c55ac4c75d46c5ce30fc941fc46645",
+      "location": "public",
+      "fmo_leaf": "bf2cd2ba9ee20a1e26074c65d2aaa2a90cab37ae276bb8da9bf49102cace18da"
+    },
+    {
+      "path": "docs/prereg/E4A_SPACE_INVADERS_SNAPSHOTS.md",
+      "kind": "PreregistrationFCO",
+      "group": "prereg",
+      "bytes": 1888,
+      "sha256": "2c926b6e35d399d925a53a2f62ca59224e45ed3d2da39d7e38cb2a59c5cd404f",
+      "location": "public",
+      "fmo_leaf": "fac62d2bdd0a76c9e8859d2325811865a9f2e368f03589fcc750e4f664450a88"
+    },
+    {
+      "path": "vita01/VITA01_CONFIRMATORY_PREREGISTRATION.md",
+      "kind": "PreregistrationFCO",
+      "group": "prereg",
+      "bytes": 5051,
+      "sha256": "54691c60434ae4ecf5ba9cfee5878912ef79e5ec4494953f88717091d6aea213",
+      "location": "public",
+      "fmo_leaf": "9150b984bf1b13dce9e1de2615706939d471de7a19b11a5c3ceace588352890a"
+    },
+    {
+      "path": "data/s01/S01_SPACE_INVADERS_SNAPSHOT_EVAL_V1/MANIFEST.json",
+      "kind": "DatasetManifestFCO",
+      "group": "input_dataset",
+      "bytes": 2739,
+      "sha256": "226169d12adf07147a3cbc65b4ae09ab8f2c02ac0be7453530caaa3b6dfe512c",
+      "location": "public",
+      "fmo_leaf": "4b26d162c951fb8f1806a4cc037e6e6fe1489a3e806e0db80b3bf8330f721958"
+    },
+    {
+      "path": "data/s01/S01_SPACE_INVADERS_SNAPSHOT_EVAL_V1/rows.jsonl",
+      "kind": "DatasetFileFCO",
+      "group": "input_dataset",
+      "bytes": 372153,
+      "sha256": "cb08c3611d1b9f909031cb278a4c9da22d891d1d7b51374e6261273502f2fc78",
+      "location": "public",
+      "fmo_leaf": "99e166ae091f36b4c08b7670a3490700418fc99521ae4418a88885fe3ff6af63"
+    },
+    {
+      "path": "experiments/common.py",
+      "kind": "CodeFCO",
+      "group": "code",
+      "bytes": 751,
+      "sha256": "49d62a22c32c8b6ad91ae0f79c25e22053fca364ba6387a2a9a5bfd59267f03b",
+      "location": "public",
+      "fmo_leaf": "62132f2d7b6705ea9cbc87ba5ad97c6226c08d04d78bc872083096e061aa7475"
+    },
+    {
+      "path": "experiments/e4a_snapshots.py",
+      "kind": "CodeFCO",
+      "group": "code",
+      "bytes": 7229,
+      "sha256": "e473901844cc12b0b53e4f920873a26f90384e59a6f60a8171e86f29a4ed6c80",
+      "location": "public",
+      "fmo_leaf": "9a0b0429ef679eebea6274f9f172d02f240a887e309be86963e9fa52f366cd16"
+    },
+    {
+      "path": "schemas/s01/S01_CONTEXT_PACKET_V1.json",
+      "kind": "CodeFCO",
+      "group": "code",
+      "bytes": 2433,
+      "sha256": "9ec4d57d482ff2f7f34c4a016ee768d4ee6b051094cfa85c62d9da026751063b",
+      "location": "public",
+      "fmo_leaf": "383a8db03eebcbd61e0e9a08886c5d9c82aa40f69e57c018699e1f089e488c13"
+    },
+    {
+      "path": "schemas/s01/S01_DECISION_RECEIPT_V1.json",
+      "kind": "CodeFCO",
+      "group": "code",
+      "bytes": 1454,
+      "sha256": "15de4de06ea1517b21cb911f35b8df6bd23e8f8abf98cbe7093d97f3cc1d621c",
+      "location": "public",
+      "fmo_leaf": "affaeda96fa0981b89a41b848a4aebdea5c3d6609ad4bf96dbb3dcf4cc5f2287"
+    },
+    {
+      "path": "schemas/s01/S01_EXPERIMENT_RECEIPT_V1.json",
+      "kind": "CodeFCO",
+      "group": "code",
+      "bytes": 1528,
+      "sha256": "76fe5681d49fb1ebb30636a639b73f809f17460e375e26e11be7ff4ffc759a34",
+      "location": "public",
+      "fmo_leaf": "92c7725a8c72d005656ad2cb809155775994db6ec88997d21c796004b844beac"
+    },
+    {
+      "path": "schemas/s01/S01_TRANSITION_RECEIPT_V1.json",
+      "kind": "CodeFCO",
+      "group": "code",
+      "bytes": 1392,
+      "sha256": "3b9bc185035bc3208c2ddba13729e1bf10c4fabf2a8df55d42b94922947b90b4",
+      "location": "public",
+      "fmo_leaf": "1054b9ba067df4ac6c28899dbdf44632c20eac1d76befc4bc070d9e4ec094a05"
+    },
+    {
+      "path": "scripts/run_experiment.py",
+      "kind": "CodeFCO",
+      "group": "code",
+      "bytes": 12151,
+      "sha256": "f151bf91d9a5fb49e4d9ed95bf4f6508163e8bef1716dc9c1e59de01db0e87f6",
+      "location": "public",
+      "fmo_leaf": "3652745481f2fa510d61ceab3704c354ff3f91010ca58f7ea72d99b4adc6f13d"
+    },
+    {
+      "path": "src/breakpoints.py",
+      "kind": "CodeFCO",
+      "group": "code",
+      "bytes": 4719,
+      "sha256": "9ba8554a140760ced785ffa0b51c29f3d9a666fbee40e7c004a0cb791d73a323",
+      "location": "public",
+      "fmo_leaf": "a8a31a018f630be95f9288e9ee746637cd67f4f7bdbb535a4ec279da2a68171c"
+    },
+    {
+      "path": "src/deciders.py",
+      "kind": "CodeFCO",
+      "group": "code",
+      "bytes": 7817,
+      "sha256": "ef5e9bb37fa3957a0728d654bdbb20cb1eeccb321c057a4824d31000b08619f7",
+      "location": "public",
+      "fmo_leaf": "af8a740bf61abe43e71b05c8b64f22072f757d3d13c3c17344c49cc7e9b2f6da"
+    },
+    {
+      "path": "src/envcfg.py",
+      "kind": "CodeFCO",
+      "group": "code",
+      "bytes": 2688,
+      "sha256": "7b32f5565412029b39098f1d8314b4cfb63a14c723face31a44dcfa0229e1493",
+      "location": "public",
+      "fmo_leaf": "c9302ddb7d82e381ee78efca344885d5ae7227633abd1865a680fdef9523a95b"
+    },
+    {
+      "path": "src/fmo.py",
+      "kind": "CodeFCO",
+      "group": "code",
+      "bytes": 2539,
+      "sha256": "aa266307c2fe1a4a86df4066ae2635bc1068b1157a9b05ae90df206ec941fde1",
+      "location": "public",
+      "fmo_leaf": "21b2fdd7c5e2189484408078ddaa7e79188870390c7e3cbb851f271663f42fbb"
+    },
+    {
+      "path": "src/perception.py",
+      "kind": "CodeFCO",
+      "group": "code",
+      "bytes": 4860,
+      "sha256": "fcd5a53760d33c910052a8b2562d2b49be2ab36232b709c3a33d18a785ccfb41",
+      "location": "public",
+      "fmo_leaf": "aad493cfbbea5ef989a2d5934df80cc6ce90f750c3a1664f6af35f4133246d89"
+    },
+    {
+      "path": "src/s01/canon.py",
+      "kind": "CodeFCO",
+      "group": "code",
+      "bytes": 2452,
+      "sha256": "b6698b4cf15484c8390630eef8e41aa184b1a4a4f6c134d21ea0acb01fc03f0d",
+      "location": "public",
+      "fmo_leaf": "92fb64cf5354e5ee73c233d24a37d545c42a0b9747fc6ec6d74ef73ded79472c"
+    },
+    {
+      "path": "src/s01/protocol.py",
+      "kind": "CodeFCO",
+      "group": "code",
+      "bytes": 2966,
+      "sha256": "f1237bd1b6dbc4bd75783ba3b3ec1d09bfefd8c06687d45566c559083ba24e1a",
+      "location": "public",
+      "fmo_leaf": "0dc08a754259fca6cd6646cfe470c43fbacdb5398ebd838f599ec70ba1f9db87"
+    }
+  ],
+  "experiment_id": "E4A_SPACE_INVADERS_SNAPSHOTS",
+  "stage": "PREREG",
+  "code_freeze": "UFA-JEV-BP-0011",
+  "mode": "CONFIRMATORY",
+  "evidence_level": "SIMULATED",
+  "input_dataset": {
+    "dataset_id": "S01_SPACE_INVADERS_SNAPSHOT_EVAL_V1",
+    "fmo_root": "d8ff2d1ef45fcc90aa2e8e85dd7dcaf037aa2db9d95ce515bdd5f284f9a3f180"
+  },
+  "pre_mmr_root": "e8e0de7b6617b15f06cf268a04c1f2b835a3489d25d276311d4997b99b790e89",
+  "fcg_edges": [
+    {
+      "src": "S01_SPACE_INVADERS_SNAPSHOT_EVAL_V1",
+      "rel": "FROZEN_UNDER",
+      "dst": "PreregistrationFCO"
+    }
+  ],
+  "claim_ceiling_note": "sealing proves identity of the prereg text, not that it predates rehearsal executions (see docs/prereg/COMMON.md)",
+  "claim_ceiling": "IDENTITY_AND_INCLUSION_ONLY; hashes do not establish correctness",
+  "signature_state": "NOT_SIGNED"
+}
