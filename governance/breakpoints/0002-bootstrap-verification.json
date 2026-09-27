@@ -1,0 +1,14 @@
+{
+  "id": "UFA-JEV-BP-0002",
+  "parent": "UFA-JEV-BP-0001",
+  "state": "PUBLIC_REPO_BOOTSTRAPPED",
+  "verified_new": ["Python source compilation PASS", "results.json schema check PASS", "public GitHub repository pushed"],
+  "executed": ["py_compile", "results schema validator", "git commit", "git push"],
+  "observed": ["0 JEV games", "0 baseline games"],
+  "decisions": ["Preserve missing pytest as NOT_EXECUTED rather than PASS"],
+  "proposed": ["Create isolated venv and install pinned runtime dependencies after track/credential resolution"],
+  "not_tested": ["pytest suite", "JEV API", "ALE runtime", "LLM baseline", "Mitosis sponsor integration", "Tenki sponsor integration"],
+  "failures": ["pytest module absent from base Python on magicSTUDIObox"],
+  "unresolved": ["team name", "teammates", "track", "pitch approval", "sponsor usage", "JEV access", "in-person attendance", "baseline provider/model", "demo video"],
+  "next_action": "Collect unresolved human fields and submit first registration."
+}
