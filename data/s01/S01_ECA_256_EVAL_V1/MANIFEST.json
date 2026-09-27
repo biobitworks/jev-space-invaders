@@ -1,0 +1,63 @@
+{
+  "dataset_id": "S01_ECA_256_EVAL_V1",
+  "kind": "evaluation",
+  "schema": "rows: {rule, ic, clean_hex[T+1], corruptions{kind:{seed,obs_sha256}}}",
+  "source": "generated",
+  "license": "CC-BY-4.0",
+  "generation_code": [
+    {
+      "path": "experiments/e1_eca.py",
+      "sha256": "93fc70bc51e4ccaed4a0ff78a3afe7d82906ef2f4fe5357227d180f4f78dd26c"
+    },
+    {
+      "path": "src/kernels/eca.py",
+      "sha256": "31d4e8c8b107db08bf47d0cd8c462e589e8c9a0c611cb279b1a83f0ea73d5ed3"
+    },
+    {
+      "path": "src/s01/canon.py",
+      "sha256": "b6698b4cf15484c8390630eef8e41aa184b1a4a4f6c134d21ea0acb01fc03f0d"
+    }
+  ],
+  "code_commit_at_generation": "4c79a1d4ccb8902d41af1bfbab991322142f6390",
+  "config": {
+    "width": 64,
+    "steps": 48,
+    "boundary": "periodic",
+    "ics": [
+      "single",
+      "rand1",
+      "rand2",
+      "rand3"
+    ],
+    "kinds": [
+      "exact",
+      "missing_cell",
+      "bit_flip",
+      "missing_row",
+      "mixed"
+    ],
+    "corruption_spec": {
+      "missing_cell": 0.1,
+      "bit_flip": 0.02,
+      "missing_row": "every 4th",
+      "mixed": "0.05 missing + 0.01 flip + every 8th row"
+    }
+  },
+  "seeds": {
+    "rand1": 11,
+    "rand2": 12,
+    "rand3": 13,
+    "corruption": "sha256(E1|rule|ic|kind)[:8]"
+  },
+  "files": [
+    {
+      "path": "data/s01/S01_ECA_256_EVAL_V1/rows.jsonl",
+      "bytes": 1627973,
+      "sha256": "9c4aef6e8385c8e96d8d451861dd474a218afd3a915c6f38337d815668932e75"
+    }
+  ],
+  "fmo_root": "2535de95267ff0abe69f820a5bc706e4c097d326c0160dd9e8621c0b3793c2be",
+  "visibility": "public",
+  "parent_evidence": [],
+  "claim_ceiling": "deterministic synthetic trajectories"
+}

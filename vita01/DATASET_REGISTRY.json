@@ -26,6 +26,19 @@
       "manifest": "data/s01/S01_ADDRESSABILITY_RESULTS_V1/MANIFEST.json",
       "manifest_sha256": "2b92570aa8c2730359926be90e0854328b0fc085b664b47f1be86a17ec19da68",
       "evidence_level": "SIMULATED"
+    },
+    {
+      "dataset_id": "S01_ECA_256_EVAL_V1",
+      "kind": "evaluation",
+      "source": "generated",
+      "license": "CC-BY-4.0",
+      "fmo_root": "2535de95267ff0abe69f820a5bc706e4c097d326c0160dd9e8621c0b3793c2be",
+      "visibility": "public",
+      "claim_ceiling": "deterministic synthetic trajectories",
+      "code_commit_at_generation": "4c79a1d4ccb8902d41af1bfbab991322142f6390",
+      "manifest": "data/s01/S01_ECA_256_EVAL_V1/MANIFEST.json",
+      "manifest_sha256": "c5c5874577099eb0b12392d5db47ba162a4d4f70274711e69c6ad7bf5ebc0457",
+      "evidence_level": "SIMULATED"
     }
   ]
 }
