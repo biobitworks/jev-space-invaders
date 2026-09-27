@@ -1,0 +1,190 @@
+{
+  "breakpoint_id": "UFA-JEV-BP-0016",
+  "parent": "UFA-JEV-BP-0015",
+  "state": "PREREG_SEALED",
+  "project": "VITHIA_SPACE",
+  "created_utc": "2026-09-27T16:57:13+00:00",
+  "git_head_at_creation": "d4f075150759417b3af73eea3c7862a9e608cafd",
+  "root_kind": "FMO_V1_BREAKPOINT_ATOMS",
+  "bp_root": "51bd062b39fdaeaaca92f3f6d30a50a0dbc54c325b2326cc2b82de09d6872938",
+  "group_roots": {
+    "code": "c78e514e1c18679e97d5f72e7590d4dc04109a469d4644da6916eeee00a0f13c",
+    "input_dataset": "1c2dbc622aefe14b2baa8b41c19f16f2fddea672a45d60a02ce210ad2ca1951b",
+    "prereg": "67040a63a39cab1c57d2310a597061ba574a6f2c8a36ca122d950e553aedb38d"
+  },
+  "atoms": [
+    {
+      "path": "docs/prereg/COMMON.md",
+      "kind": "PreregistrationFCO",
+      "group": "prereg",
+      "bytes": 1120,
+      "sha256": "1a45163f867474a32673c8acb2bd4b28b9c55ac4c75d46c5ce30fc941fc46645",
+      "location": "public",
+      "fmo_leaf": "bf2cd2ba9ee20a1e26074c65d2aaa2a90cab37ae276bb8da9bf49102cace18da"
+    },
+    {
+      "path": "docs/prereg/E2_LIFE.md",
+      "kind": "PreregistrationFCO",
+      "group": "prereg",
+      "bytes": 1715,
+      "sha256": "b6de90e5f67776b763772bca1104243661e75e33b9731c29de7e0e373eac9c05",
+      "location": "public",
+      "fmo_leaf": "e4c9a62bfc2b968a46bfb4483c46ad2373e41d9cb9d5a9de9725960a2588b8e3"
+    },
+    {
+      "path": "vita01/VITA01_CONFIRMATORY_PREREGISTRATION.md",
+      "kind": "PreregistrationFCO",
+      "group": "prereg",
+      "bytes": 5051,
+      "sha256": "54691c60434ae4ecf5ba9cfee5878912ef79e5ec4494953f88717091d6aea213",
+      "location": "public",
+      "fmo_leaf": "9150b984bf1b13dce9e1de2615706939d471de7a19b11a5c3ceace588352890a"
+    },
+    {
+      "path": "data/s01/S01_LIFE_CONTEXT_EVAL_V1/MANIFEST.json",
+      "kind": "DatasetManifestFCO",
+      "group": "input_dataset",
+      "bytes": 1255,
+      "sha256": "86197cf3fa30c3e5e3010ce475cc800b159942d52550fe99c0673f922594f001",
+      "location": "public",
+      "fmo_leaf": "297ad89dd1a4d47ab395a1be3c756921ff4568251bdea9f22a73cfbecec022e7"
+    },
+    {
+      "path": "data/s01/S01_LIFE_CONTEXT_EVAL_V1/rows.jsonl",
+      "kind": "DatasetFileFCO",
+      "group": "input_dataset",
+      "bytes": 19888,
+      "sha256": "f474b4a23ca045547eb707db593b28732749cc55c47441616cc3e14bc24659a1",
+      "location": "public",
+      "fmo_leaf": "027850053d8c2e0c1a549b02ac22bc98a99ad4899a791bf47e7a830d6e0706d6"
+    },
+    {
+      "path": "experiments/common.py",
+      "kind": "CodeFCO",
+      "group": "code",
+      "bytes": 751,
+      "sha256": "49d62a22c32c8b6ad91ae0f79c25e22053fca364ba6387a2a9a5bfd59267f03b",
+      "location": "public",
+      "fmo_leaf": "62132f2d7b6705ea9cbc87ba5ad97c6226c08d04d78bc872083096e061aa7475"
+    },
+    {
+      "path": "experiments/e2_life.py",
+      "kind": "CodeFCO",
+      "group": "code",
+      "bytes": 9319,
+      "sha256": "dd3f0bec53878909b36586e17eec941c9943587b1bc0371bbf78e47993c15b51",
+      "location": "public",
+      "fmo_leaf": "a05d617a8acea72744e6889498fb833c8443c66f228bdedcbcfbb3c8064ce392"
+    },
+    {
+      "path": "schemas/s01/S01_CONTEXT_PACKET_V1.json",
+      "kind": "CodeFCO",
+      "group": "code",
+      "bytes": 2433,
+      "sha256": "9ec4d57d482ff2f7f34c4a016ee768d4ee6b051094cfa85c62d9da026751063b",
+      "location": "public",
+      "fmo_leaf": "383a8db03eebcbd61e0e9a08886c5d9c82aa40f69e57c018699e1f089e488c13"
+    },
+    {
+      "path": "schemas/s01/S01_DECISION_RECEIPT_V1.json",
+      "kind": "CodeFCO",
+      "group": "code",
+      "bytes": 1454,
+      "sha256": "15de4de06ea1517b21cb911f35b8df6bd23e8f8abf98cbe7093d97f3cc1d621c",
+      "location": "public",
+      "fmo_leaf": "affaeda96fa0981b89a41b848a4aebdea5c3d6609ad4bf96dbb3dcf4cc5f2287"
+    },
+    {
+      "path": "schemas/s01/S01_EXPERIMENT_RECEIPT_V1.json",
+      "kind": "CodeFCO",
+      "group": "code",
+      "bytes": 1528,
+      "sha256": "76fe5681d49fb1ebb30636a639b73f809f17460e375e26e11be7ff4ffc759a34",
+      "location": "public",
+      "fmo_leaf": "92c7725a8c72d005656ad2cb809155775994db6ec88997d21c796004b844beac"
+    },
+    {
+      "path": "schemas/s01/S01_TRANSITION_RECEIPT_V1.json",
+      "kind": "CodeFCO",
+      "group": "code",
+      "bytes": 1392,
+      "sha256": "3b9bc185035bc3208c2ddba13729e1bf10c4fabf2a8df55d42b94922947b90b4",
+      "location": "public",
+      "fmo_leaf": "1054b9ba067df4ac6c28899dbdf44632c20eac1d76befc4bc070d9e4ec094a05"
+    },
+    {
+      "path": "scripts/run_experiment.py",
+      "kind": "CodeFCO",
+      "group": "code",
+      "bytes": 12151,
+      "sha256": "f151bf91d9a5fb49e4d9ed95bf4f6508163e8bef1716dc9c1e59de01db0e87f6",
+      "location": "public",
+      "fmo_leaf": "3652745481f2fa510d61ceab3704c354ff3f91010ca58f7ea72d99b4adc6f13d"
+    },
+    {
+      "path": "src/breakpoints.py",
+      "kind": "CodeFCO",
+      "group": "code",
+      "bytes": 4719,
+      "sha256": "9ba8554a140760ced785ffa0b51c29f3d9a666fbee40e7c004a0cb791d73a323",
+      "location": "public",
+      "fmo_leaf": "a8a31a018f630be95f9288e9ee746637cd67f4f7bdbb535a4ec279da2a68171c"
+    },
+    {
+      "path": "src/fmo.py",
+      "kind": "CodeFCO",
+      "group": "code",
+      "bytes": 2539,
+      "sha256": "aa266307c2fe1a4a86df4066ae2635bc1068b1157a9b05ae90df206ec941fde1",
+      "location": "public",
+      "fmo_leaf": "21b2fdd7c5e2189484408078ddaa7e79188870390c7e3cbb851f271663f42fbb"
+    },
+    {
+      "path": "src/kernels/life.py",
+      "kind": "CodeFCO",
+      "group": "code",
+      "bytes": 5444,
+      "sha256": "99cfe8a395bbb7cdead5a35e1f021cab1f17c3f69a48f96905dfe4da52f887c7",
+      "location": "public",
+      "fmo_leaf": "237edfd0f4f8f90d61ac41e55537bf78fbb06fd009e0991ec7e7c2f3f2867825"
+    },
+    {
+      "path": "src/s01/canon.py",
+      "kind": "CodeFCO",
+      "group": "code",
+      "bytes": 2452,
+      "sha256": "b6698b4cf15484c8390630eef8e41aa184b1a4a4f6c134d21ea0acb01fc03f0d",
+      "location": "public",
+      "fmo_leaf": "92fb64cf5354e5ee73c233d24a37d545c42a0b9747fc6ec6d74ef73ded79472c"
+    },
+    {
+      "path": "src/s01/protocol.py",
+      "kind": "CodeFCO",
+      "group": "code",
+      "bytes": 2966,
+      "sha256": "f1237bd1b6dbc4bd75783ba3b3ec1d09bfefd8c06687d45566c559083ba24e1a",
+      "location": "public",
+      "fmo_leaf": "0dc08a754259fca6cd6646cfe470c43fbacdb5398ebd838f599ec70ba1f9db87"
+    }
+  ],
+  "experiment_id": "E2_LIFE",
+  "stage": "PREREG",
+  "code_freeze": "UFA-JEV-BP-0011",
+  "mode": "CONFIRMATORY",
+  "evidence_level": "SIMULATED",
+  "input_dataset": {
+    "dataset_id": "S01_LIFE_CONTEXT_EVAL_V1",
+    "fmo_root": "7b707eeb0b2054c8fe97233038c276e23608d4dc2ce2e44883f2e11007e1c214"
+  },
+  "pre_mmr_root": "4ed2857b222bf4453f65e02c39ae3d248cca8cbb8bdd0c26f08cf907716ae8ed",
+  "fcg_edges": [
+    {
+      "src": "S01_LIFE_CONTEXT_EVAL_V1",
+      "rel": "FROZEN_UNDER",
+      "dst": "PreregistrationFCO"
+    }
+  ],
+  "claim_ceiling_note": "sealing proves identity of the prereg text, not that it predates rehearsal executions (see docs/prereg/COMMON.md)",
+  "claim_ceiling": "IDENTITY_AND_INCLUSION_ONLY; hashes do not establish correctness",
+  "signature_state": "NOT_SIGNED"
+}

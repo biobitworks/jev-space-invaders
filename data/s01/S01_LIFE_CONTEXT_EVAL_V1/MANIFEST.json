@@ -1,0 +1,44 @@
+{
+  "dataset_id": "S01_LIFE_CONTEXT_EVAL_V1",
+  "kind": "evaluation",
+  "schema": "rows: {scene, family, T, source_atom, perturbations[[y,x]], masks[]}",
+  "source": "generated",
+  "license": "CC-BY-4.0",
+  "generation_code": [
+    {
+      "path": "experiments/e2_life.py",
+      "sha256": "dd3f0bec53878909b36586e17eec941c9943587b1bc0371bbf78e47993c15b51"
+    },
+    {
+      "path": "src/kernels/life.py",
+      "sha256": "99cfe8a395bbb7cdead5a35e1f021cab1f17c3f69a48f96905dfe4da52f887c7"
+    },
+    {
+      "path": "src/s01/canon.py",
+      "sha256": "b6698b4cf15484c8390630eef8e41aa184b1a4a4f6c134d21ea0acb01fc03f0d"
+    }
+  ],
+  "code_commit_at_generation": "d4f075150759417b3af73eea3c7862a9e608cafd",
+  "config": {
+    "grid": [
+      32,
+      32
+    ],
+    "topology": "torus",
+    "rule": "B3/S23"
+  },
+  "seeds": {
+    "masks": "sha256(E2mask|scene)[:8]"
+  },
+  "files": [
+    {
+      "path": "data/s01/S01_LIFE_CONTEXT_EVAL_V1/rows.jsonl",
+      "bytes": 19888,
+      "sha256": "f474b4a23ca045547eb707db593b28732749cc55c47441616cc3e14bc24659a1"
+    }
+  ],
+  "fmo_root": "7b707eeb0b2054c8fe97233038c276e23608d4dc2ce2e44883f2e11007e1c214",
+  "visibility": "public",
+  "parent_evidence": [],
+  "claim_ceiling": "deterministic synthetic patterns"
+}

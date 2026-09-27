@@ -52,6 +52,19 @@
       "manifest": "data/s01/S01_ECA_256_RESULTS_V1/MANIFEST.json",
       "manifest_sha256": "b617b9699dde7a1a440257239b601b1e3b4519960511c0380d570872ee0b90fa",
       "evidence_level": "SIMULATED"
+    },
+    {
+      "dataset_id": "S01_LIFE_CONTEXT_EVAL_V1",
+      "kind": "evaluation",
+      "source": "generated",
+      "license": "CC-BY-4.0",
+      "fmo_root": "7b707eeb0b2054c8fe97233038c276e23608d4dc2ce2e44883f2e11007e1c214",
+      "visibility": "public",
+      "claim_ceiling": "deterministic synthetic patterns",
+      "code_commit_at_generation": "d4f075150759417b3af73eea3c7862a9e608cafd",
+      "manifest": "data/s01/S01_LIFE_CONTEXT_EVAL_V1/MANIFEST.json",
+      "manifest_sha256": "86197cf3fa30c3e5e3010ce475cc800b159942d52550fe99c0673f922594f001",
+      "evidence_level": "SIMULATED"
     }
   ]
 }
