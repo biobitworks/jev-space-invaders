@@ -1,0 +1,458 @@
+{
+  "breakpoint_id": "UFA-JEV-BP-0011",
+  "parent": "UFA-JEV-BP-0010",
+  "state": "VITA01_CONFIRMATORY_PROTOCOL_FROZEN",
+  "project": "VITHIA_SPACE",
+  "created_utc": "2026-09-27T16:54:02+00:00",
+  "git_head_at_creation": "1501aa6a52d7ca625fa44952ef6d30cae7379a61",
+  "root_kind": "FMO_V1_BREAKPOINT_ATOMS",
+  "bp_root": "06933cfd1b82b47934f7853ff5458a3eb437b7bbd856716eb580637f4dd04da9",
+  "group_roots": {
+    "code": "0d8461836861c20b25a7b4a8bfdb410530943f3dc0f80131a0605a60964a9529",
+    "contract": "7bad54574970d99fac77e0651b25ee79371c535f4e0ad6e2ddd19da7b1e89daa",
+    "evidence": "44c7368ad57e6a6296e38133c16a7c7cbef7fb9ca9e57bba3d26e2f136e48b62",
+    "prereg": "8c41cb53fa86a25e7a58b267851b79f38e344f230465286dd944e21340252b31",
+    "schema": "75c81b2a89268fce74abf3ecd30006487cbeabb82688fab6218f773820ccfc93"
+  },
+  "atoms": [
+    {
+      "path": "docs/prereg/COMMON.md",
+      "kind": "FrozenProtocolFCO",
+      "group": "prereg",
+      "bytes": 1120,
+      "sha256": "1a45163f867474a32673c8acb2bd4b28b9c55ac4c75d46c5ce30fc941fc46645",
+      "location": "public",
+      "fmo_leaf": "bf2cd2ba9ee20a1e26074c65d2aaa2a90cab37ae276bb8da9bf49102cace18da"
+    },
+    {
+      "path": "docs/prereg/E0_ADDRESSABILITY.md",
+      "kind": "FrozenProtocolFCO",
+      "group": "prereg",
+      "bytes": 1005,
+      "sha256": "382bfac7354afb7181d187e677d4642f6cc44aa3b0a4104ef5dbf62dd59bdc53",
+      "location": "public",
+      "fmo_leaf": "4788b894ab110070393216249d989deb6da7e21cfa5b342b6fc76aa4f73873aa"
+    },
+    {
+      "path": "docs/prereg/E1_ECA.md",
+      "kind": "FrozenProtocolFCO",
+      "group": "prereg",
+      "bytes": 2753,
+      "sha256": "f0807f351292fdbe6bae4ab0edec7f2ad4eeee28637c868005f6d1e22b176721",
+      "location": "public",
+      "fmo_leaf": "7fb8214b877e1f67ca8d582d93426d2ab977cbf0ddb05087337534b1c3830888"
+    },
+    {
+      "path": "docs/prereg/E2_LIFE.md",
+      "kind": "FrozenProtocolFCO",
+      "group": "prereg",
+      "bytes": 1715,
+      "sha256": "b6de90e5f67776b763772bca1104243661e75e33b9731c29de7e0e373eac9c05",
+      "location": "public",
+      "fmo_leaf": "e4c9a62bfc2b968a46bfb4483c46ad2373e41d9cb9d5a9de9725960a2588b8e3"
+    },
+    {
+      "path": "docs/prereg/E3_MINESWEEPER.md",
+      "kind": "FrozenProtocolFCO",
+      "group": "prereg",
+      "bytes": 1919,
+      "sha256": "c7b15e5e382ddeee37182dbf59379e0e5d063a74826e7b4e931f00fd08cf2e28",
+      "location": "public",
+      "fmo_leaf": "e79e8a76e414a293e0ca48f2522047cee998aceecf6f98b6921c982a08b4f54e"
+    },
+    {
+      "path": "docs/prereg/E4A_SPACE_INVADERS_SNAPSHOTS.md",
+      "kind": "FrozenProtocolFCO",
+      "group": "prereg",
+      "bytes": 1888,
+      "sha256": "2c926b6e35d399d925a53a2f62ca59224e45ed3d2da39d7e38cb2a59c5cd404f",
+      "location": "public",
+      "fmo_leaf": "fac62d2bdd0a76c9e8859d2325811865a9f2e368f03589fcc750e4f664450a88"
+    },
+    {
+      "path": "experiments/__init__.py",
+      "kind": "FrozenProtocolFCO",
+      "group": "code",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "location": "public",
+      "fmo_leaf": "4fe44bda0159cb5ee0fdbcc895c8275d22e3898928acb1cca0f74f8246a7cf6b"
+    },
+    {
+      "path": "experiments/common.py",
+      "kind": "FrozenProtocolFCO",
+      "group": "code",
+      "bytes": 751,
+      "sha256": "49d62a22c32c8b6ad91ae0f79c25e22053fca364ba6387a2a9a5bfd59267f03b",
+      "location": "public",
+      "fmo_leaf": "62132f2d7b6705ea9cbc87ba5ad97c6226c08d04d78bc872083096e061aa7475"
+    },
+    {
+      "path": "experiments/e0_babel.py",
+      "kind": "FrozenProtocolFCO",
+      "group": "code",
+      "bytes": 3804,
+      "sha256": "9747ffc3f90dbd94563d22974396c76edfb0c4250d0411736447523fa42cff89",
+      "location": "public",
+      "fmo_leaf": "65625ccc1cfc2003c8107926de81ac816d812908181b7868ec525c25f793b3e7"
+    },
+    {
+      "path": "experiments/e1_eca.py",
+      "kind": "FrozenProtocolFCO",
+      "group": "code",
+      "bytes": 10404,
+      "sha256": "93fc70bc51e4ccaed4a0ff78a3afe7d82906ef2f4fe5357227d180f4f78dd26c",
+      "location": "public",
+      "fmo_leaf": "d85361eb9170f9376751599461f810fe82304dfc04d4e64f7552372cc6a9ca22"
+    },
+    {
+      "path": "experiments/e2_life.py",
+      "kind": "FrozenProtocolFCO",
+      "group": "code",
+      "bytes": 9319,
+      "sha256": "dd3f0bec53878909b36586e17eec941c9943587b1bc0371bbf78e47993c15b51",
+      "location": "public",
+      "fmo_leaf": "a05d617a8acea72744e6889498fb833c8443c66f228bdedcbcfbb3c8064ce392"
+    },
+    {
+      "path": "experiments/e3_minesweeper.py",
+      "kind": "FrozenProtocolFCO",
+      "group": "code",
+      "bytes": 8895,
+      "sha256": "b5f691639fdd0b66b2761028501c085371c8b151a64dcbefe2d401f93afaed64",
+      "location": "public",
+      "fmo_leaf": "1e83c9b8a3a5de57cac4b6055e96cb761608ec6ced8e4efe2a6a133707f37202"
+    },
+    {
+      "path": "experiments/e4a_snapshots.py",
+      "kind": "FrozenProtocolFCO",
+      "group": "code",
+      "bytes": 7229,
+      "sha256": "e473901844cc12b0b53e4f920873a26f90384e59a6f60a8171e86f29a4ed6c80",
+      "location": "public",
+      "fmo_leaf": "9a0b0429ef679eebea6274f9f172d02f240a887e309be86963e9fa52f366cd16"
+    },
+    {
+      "path": "requirements.txt",
+      "kind": "FrozenProtocolFCO",
+      "group": "code",
+      "bytes": 220,
+      "sha256": "05e3bd06898a6e9d2a169057f8be5433c8627aa5b4ad7a1a5078a5719592fa2a",
+      "location": "public",
+      "fmo_leaf": "e33ef113c6e6e0595b20488014d1d8768b62c5649aa64c5275378e476a83ff74"
+    },
+    {
+      "path": "schemas/s01/S01_CONTEXT_PACKET_V1.json",
+      "kind": "FrozenProtocolFCO",
+      "group": "schema",
+      "bytes": 2433,
+      "sha256": "9ec4d57d482ff2f7f34c4a016ee768d4ee6b051094cfa85c62d9da026751063b",
+      "location": "public",
+      "fmo_leaf": "383a8db03eebcbd61e0e9a08886c5d9c82aa40f69e57c018699e1f089e488c13"
+    },
+    {
+      "path": "schemas/s01/S01_DECISION_RECEIPT_V1.json",
+      "kind": "FrozenProtocolFCO",
+      "group": "schema",
+      "bytes": 1454,
+      "sha256": "15de4de06ea1517b21cb911f35b8df6bd23e8f8abf98cbe7093d97f3cc1d621c",
+      "location": "public",
+      "fmo_leaf": "affaeda96fa0981b89a41b848a4aebdea5c3d6609ad4bf96dbb3dcf4cc5f2287"
+    },
+    {
+      "path": "schemas/s01/S01_EXPERIMENT_RECEIPT_V1.json",
+      "kind": "FrozenProtocolFCO",
+      "group": "schema",
+      "bytes": 1528,
+      "sha256": "76fe5681d49fb1ebb30636a639b73f809f17460e375e26e11be7ff4ffc759a34",
+      "location": "public",
+      "fmo_leaf": "92c7725a8c72d005656ad2cb809155775994db6ec88997d21c796004b844beac"
+    },
+    {
+      "path": "schemas/s01/S01_TRANSITION_RECEIPT_V1.json",
+      "kind": "FrozenProtocolFCO",
+      "group": "schema",
+      "bytes": 1392,
+      "sha256": "3b9bc185035bc3208c2ddba13729e1bf10c4fabf2a8df55d42b94922947b90b4",
+      "location": "public",
+      "fmo_leaf": "1054b9ba067df4ac6c28899dbdf44632c20eac1d76befc4bc070d9e4ec094a05"
+    },
+    {
+      "path": "schemas/s01/VITA_STATE_V1.json",
+      "kind": "FrozenProtocolFCO",
+      "group": "schema",
+      "bytes": 2258,
+      "sha256": "10e40231b3ee778875f2618bbee4b449d034f9c90e09f07e250388e41642e601",
+      "location": "public",
+      "fmo_leaf": "b9a05a90795533c83250304dce1aa19b977fe916c03f8b62eb99a4fabb3e88d4"
+    },
+    {
+      "path": "schemas/s01/VITA_TRAJECTORY_V1.json",
+      "kind": "FrozenProtocolFCO",
+      "group": "schema",
+      "bytes": 1541,
+      "sha256": "b7f0686874085f7c66a6937b898612603bc4e1658340510ccb12f00ccba2b9f1",
+      "location": "public",
+      "fmo_leaf": "74aa25345d031e74a784dcc79a3b7b47ed4aeadf07ce3bc686471fc6102a20c3"
+    },
+    {
+      "path": "scripts/freeze_vita01.py",
+      "kind": "FrozenProtocolFCO",
+      "group": "code",
+      "bytes": 2960,
+      "sha256": "7da53f6a0fbb1eaa87cbfef5eb7c58335bd8c13db4903aed1c02d656775bd8e4",
+      "location": "public",
+      "fmo_leaf": "2c9d08e15aeb6f0cf6dc84f8fbed4d2a19b504e05afad488e0543dc350b00f3d"
+    },
+    {
+      "path": "scripts/run_experiment.py",
+      "kind": "FrozenProtocolFCO",
+      "group": "code",
+      "bytes": 12151,
+      "sha256": "f151bf91d9a5fb49e4d9ed95bf4f6508163e8bef1716dc9c1e59de01db0e87f6",
+      "location": "public",
+      "fmo_leaf": "3652745481f2fa510d61ceab3704c354ff3f91010ca58f7ea72d99b4adc6f13d"
+    },
+    {
+      "path": "src/envcfg.py",
+      "kind": "FrozenProtocolFCO",
+      "group": "code",
+      "bytes": 2688,
+      "sha256": "7b32f5565412029b39098f1d8314b4cfb63a14c723face31a44dcfa0229e1493",
+      "location": "public",
+      "fmo_leaf": "c9302ddb7d82e381ee78efca344885d5ae7227633abd1865a680fdef9523a95b"
+    },
+    {
+      "path": "src/kernels/__init__.py",
+      "kind": "FrozenProtocolFCO",
+      "group": "code",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "location": "public",
+      "fmo_leaf": "67e05d923469c63be0bd73664683c327d2f2647d3dc02e68f6f01f897ee51767"
+    },
+    {
+      "path": "src/kernels/address.py",
+      "kind": "FrozenProtocolFCO",
+      "group": "code",
+      "bytes": 1967,
+      "sha256": "706759f513777a037d480fcd64fe8b675a23c576e8f46fd7868dca7e6dd9d0cf",
+      "location": "public",
+      "fmo_leaf": "b76906bb363540d5a3d4b0fe48df7e624b1ac561bcfa0dc37a1294845b62fe74"
+    },
+    {
+      "path": "src/kernels/eca.py",
+      "kind": "FrozenProtocolFCO",
+      "group": "code",
+      "bytes": 1354,
+      "sha256": "31d4e8c8b107db08bf47d0cd8c462e589e8c9a0c611cb279b1a83f0ea73d5ed3",
+      "location": "public",
+      "fmo_leaf": "522238b25e703b993f82527cf55664fc2f1e5f16ee9ab0c77d321b951ae5a560"
+    },
+    {
+      "path": "src/kernels/life.py",
+      "kind": "FrozenProtocolFCO",
+      "group": "code",
+      "bytes": 5444,
+      "sha256": "99cfe8a395bbb7cdead5a35e1f021cab1f17c3f69a48f96905dfe4da52f887c7",
+      "location": "public",
+      "fmo_leaf": "237edfd0f4f8f90d61ac41e55537bf78fbb06fd009e0991ec7e7c2f3f2867825"
+    },
+    {
+      "path": "src/kernels/minesweeper.py",
+      "kind": "FrozenProtocolFCO",
+      "group": "code",
+      "bytes": 9512,
+      "sha256": "3b687d9a2ed4b61b455aa54d5837016758b68d3b9ba515f5dd3252ca4fe327d1",
+      "location": "public",
+      "fmo_leaf": "4ba66ff0b7db4b25489753bce7aa73717d148569b3c7409f42adfb8753b8a58c"
+    },
+    {
+      "path": "src/perception.py",
+      "kind": "FrozenProtocolFCO",
+      "group": "code",
+      "bytes": 4860,
+      "sha256": "fcd5a53760d33c910052a8b2562d2b49be2ab36232b709c3a33d18a785ccfb41",
+      "location": "public",
+      "fmo_leaf": "aad493cfbbea5ef989a2d5934df80cc6ce90f750c3a1664f6af35f4133246d89"
+    },
+    {
+      "path": "src/s01/__init__.py",
+      "kind": "FrozenProtocolFCO",
+      "group": "code",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "location": "public",
+      "fmo_leaf": "e61a98ec4084d7c5e3c2f4e2060a692e219796e37d20012a1f4cc685389e2f64"
+    },
+    {
+      "path": "src/s01/canon.py",
+      "kind": "FrozenProtocolFCO",
+      "group": "code",
+      "bytes": 2452,
+      "sha256": "b6698b4cf15484c8390630eef8e41aa184b1a4a4f6c134d21ea0acb01fc03f0d",
+      "location": "public",
+      "fmo_leaf": "92fb64cf5354e5ee73c233d24a37d545c42a0b9747fc6ec6d74ef73ded79472c"
+    },
+    {
+      "path": "src/s01/protocol.py",
+      "kind": "FrozenProtocolFCO",
+      "group": "code",
+      "bytes": 2966,
+      "sha256": "f1237bd1b6dbc4bd75783ba3b3ec1d09bfefd8c06687d45566c559083ba24e1a",
+      "location": "public",
+      "fmo_leaf": "0dc08a754259fca6cd6646cfe470c43fbacdb5398ebd838f599ec70ba1f9db87"
+    },
+    {
+      "path": "src/vita01/__init__.py",
+      "kind": "FrozenProtocolFCO",
+      "group": "code",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "location": "public",
+      "fmo_leaf": "4cfc0acae8d4c860397762b0575ef197f5de5e689b66cd1ff20c910a59282301"
+    },
+    {
+      "path": "src/vita01/equivalence.py",
+      "kind": "FrozenProtocolFCO",
+      "group": "code",
+      "bytes": 4121,
+      "sha256": "5295e92bfb34ebdcb5eebd695294f3099538e30cbc396b530d8b6eaf70ef164d",
+      "location": "public",
+      "fmo_leaf": "a191e8948985414735dd90fc3612f0127524c63bef03b5db628095788f541cda"
+    },
+    {
+      "path": "src/vita01/typecheck.py",
+      "kind": "FrozenProtocolFCO",
+      "group": "code",
+      "bytes": 3874,
+      "sha256": "4e1222e8940cc75b72741bed7e1d24d3c3e690a153f4698c848f4c021dabe8f2",
+      "location": "public",
+      "fmo_leaf": "5f5bb3b9619e2226e0edc5e4dc037dae841a1722cbc18f5c7fd8a74cc7ed0b8a"
+    },
+    {
+      "path": "tests/test_envcfg.py",
+      "kind": "FrozenProtocolFCO",
+      "group": "code",
+      "bytes": 1059,
+      "sha256": "fe645b7b0c7213803cb01156386578fb03e93e43c1e5a3f9a099d1c44559af16",
+      "location": "public",
+      "fmo_leaf": "4268f8ffb26163f0927a213cbfdc17b1be9e30aa94e7db45847dc00bc9be0dc9"
+    },
+    {
+      "path": "tests/test_kernels.py",
+      "kind": "FrozenProtocolFCO",
+      "group": "code",
+      "bytes": 1825,
+      "sha256": "d5e11e827e8c493a7816841626609d4c9feadca21bea7721603da275a6e6ac39",
+      "location": "public",
+      "fmo_leaf": "0464ad4c0f3dd950506160b4e97e50567b519ccb5e3c5c0903bb9b78c07750b9"
+    },
+    {
+      "path": "tests/test_type_errors.py",
+      "kind": "FrozenProtocolFCO",
+      "group": "code",
+      "bytes": 5236,
+      "sha256": "bd9b3633be5dcc57396bf70a28d7b22458e57d1330a8a9acffa301d5149f3303",
+      "location": "public",
+      "fmo_leaf": "85fa3ee82b132a5edd3c13d89a1070aa813a938a94ac66ef6bdd0e0fcc2b8cc9"
+    },
+    {
+      "path": "vita01/BIOLOGICAL_TRANSLATION_CONTRACT.md",
+      "kind": "FrozenProtocolFCO",
+      "group": "contract",
+      "bytes": 1409,
+      "sha256": "276d9e6ddb63ef66165cdb31e3aa7bbb4d251b98a1251309712a3202ad0f09d2",
+      "location": "public",
+      "fmo_leaf": "9f1d6dae27044136f3989d245bbd7e48ef0007426f36fe56f1bb14be58361894"
+    },
+    {
+      "path": "vita01/EXPLORATORY_REHEARSAL_RECEIPT.json",
+      "kind": "FrozenProtocolFCO",
+      "group": "contract",
+      "bytes": 3939,
+      "sha256": "0eb1ea0a7b5079a824959f6e4730880b72d53fd1a793d729142b66f168dd6ac6",
+      "location": "public",
+      "fmo_leaf": "ac4a5251169a3a6df119127977b4ee5b4f7ee1a0d034dc368123d7adb7754991"
+    },
+    {
+      "path": "vita01/S01_PROTOCOL_SPEC_DRAFT.md",
+      "kind": "FrozenProtocolFCO",
+      "group": "contract",
+      "bytes": 2129,
+      "sha256": "328416a7c26e4c51918f2be27394e6d2c96960cb21e80c5511f7cf9d0b509d22",
+      "location": "public",
+      "fmo_leaf": "cf1348d7673334285227777867aa4c94597fe9ceace146a79998d17a147d2932"
+    },
+    {
+      "path": "vita01/TYPE_ERROR_TEST_REGISTRY.json",
+      "kind": "FrozenProtocolFCO",
+      "group": "contract",
+      "bytes": 1544,
+      "sha256": "421b5e98c1678946ec2586ba16a26e0420f0dad19c3d798518073961745fee16",
+      "location": "public",
+      "fmo_leaf": "72475330cee2ff6e72c2952ab96dac552889d44689e14b9a9f8c5a28803b62d2"
+    },
+    {
+      "path": "vita01/VITA01_CONFIRMATORY_PREREGISTRATION.md",
+      "kind": "FrozenProtocolFCO",
+      "group": "contract",
+      "bytes": 5051,
+      "sha256": "54691c60434ae4ecf5ba9cfee5878912ef79e5ec4494953f88717091d6aea213",
+      "location": "public",
+      "fmo_leaf": "9150b984bf1b13dce9e1de2615706939d471de7a19b11a5c3ceace588352890a"
+    },
+    {
+      "path": "vita01/VITA01_CONTINUOUS_EQUIVALENCE_CONTRACT_V1.json",
+      "kind": "FrozenProtocolFCO",
+      "group": "contract",
+      "bytes": 1574,
+      "sha256": "640b96339bc90d7ec39cc5bc0d062fa1327fec2f9ea6a8f85ac15b0542beead0",
+      "location": "public",
+      "fmo_leaf": "54b0261de1e7dd0e19abb0f37421b493a7ed2bcf537aa0b18eb43fc0d5c4c113"
+    },
+    {
+      "path": "vita01/VITA01_TERMINOLOGY_V2.json",
+      "kind": "FrozenProtocolFCO",
+      "group": "contract",
+      "bytes": 1621,
+      "sha256": "fe55f7f842eec3537ac9e108cd8c9a0802814cf2518c019ce25510f3935922a8",
+      "location": "public",
+      "fmo_leaf": "9ca9002c5e928f6a5df820ed1075bcb95d342b25015bd61bfa71bb7ad5da318a"
+    },
+    {
+      "path": "vita01/VITA01_TYPE_CONTRACT_V1.json",
+      "kind": "FrozenProtocolFCO",
+      "group": "contract",
+      "bytes": 4311,
+      "sha256": "a2653e3afeec3d2f1cb0a7bdebe080c61118ac44a03cfe64809a8a08e32aca79",
+      "location": "public",
+      "fmo_leaf": "22f99115654acb85a04c69b77960961c2a37c770df272463040feefa333614e0"
+    },
+    {
+      "path": "evidence/vita01/FREEZE_TEST_LOG.txt",
+      "kind": "TestLogFCO",
+      "group": "evidence",
+      "bytes": 161,
+      "sha256": "46552c70e92886cf8d1083339ea42d6a36af113dfcf289641aff190a3dfd7fd2",
+      "location": "public",
+      "fmo_leaf": "44c7368ad57e6a6296e38133c16a7c7cbef7fb9ca9e57bba3d26e2f136e48b62"
+    }
+  ],
+  "stage": "VITA01_FREEZE",
+  "protocol": "0-Vita-1",
+  "mode": "POST_REHEARSAL_PROSPECTIVE_CONFIRMATORY",
+  "blind_preregistration": false,
+  "exploratory_rehearsal_preceded": true,
+  "evidence_level": "SIMULATED",
+  "biological_transfer": "NOT_TESTED",
+  "fcg_edges": [
+    {
+      "src": "VITA01_CONFIRMATORY_PREREGISTRATION",
+      "rel": "SUPERSEDES",
+      "dst": "EXPLORATORY_REHEARSAL (preserved, not rewritten)"
+    }
+  ],
+  "claim_ceiling": "IDENTITY_AND_INCLUSION_ONLY; hashes do not establish correctness",
+  "signature_state": "NOT_SIGNED"
+}

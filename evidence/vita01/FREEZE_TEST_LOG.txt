@@ -1,0 +1,7 @@
+## pytest
+..........................                                               [100%]
+26 passed in 19.22s
+
+## secret_scan
+SECRET_SCAN=PASS
+SCANNED_FILES=122

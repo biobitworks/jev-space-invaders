@@ -148,6 +148,22 @@
         "55556fb32de26551eaf8658ee312efbf76b0b4eee436c24885ad3f07b889d744",
         "b348aef577ea855c6a2de4fccf02e31316c6fe2f5a0d23f0c4f2c086e28f94af"
       ]
+    },
+    {
+      "seq": 10,
+      "bp_id": "UFA-JEV-BP-0011",
+      "bp_file": "governance/breakpoints/0011-vita01-confirmatory-freeze.json",
+      "bp_file_sha256": "730cdb971c04a3af0a13f9f41b0bd7ea881688cfbbd981fc5d29ae9ad51a838a",
+      "bp_root": "06933cfd1b82b47934f7853ff5458a3eb437b7bbd856716eb580637f4dd04da9",
+      "root_kind": "FMO_V1_BREAKPOINT_ATOMS",
+      "mmr_leaf": "5faeb827233c737cb09ca00483280368f4646676ae53c39345d1a2a2a750f848",
+      "mmr_size": 11,
+      "mmr_root_after": "836b22d82982e322b1b9190b9c4b20e95479da6b640fcfd9fb920ff620cbf567",
+      "mmr_peaks_after": [
+        "55556fb32de26551eaf8658ee312efbf76b0b4eee436c24885ad3f07b889d744",
+        "b348aef577ea855c6a2de4fccf02e31316c6fe2f5a0d23f0c4f2c086e28f94af",
+        "5faeb827233c737cb09ca00483280368f4646676ae53c39345d1a2a2a750f848"
+      ]
     }
   ]
 }
