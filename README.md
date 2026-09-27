@@ -1,6 +1,6 @@
-# JEV Space Invaders — UFA Bake-Off 2026
+# Vithia-Space — UFA JEV Bake-Off 2026
 
-Public, reproducible entry scaffold for the UFA JEV Bake-Off Space Invaders arena.
+Public, reproducible UFA arena branch of the Vithia model family. Competition-facing code and measured results are public; credentials and unrelated proprietary Vithia architecture are not.
 
 ## Current state
 
@@ -39,6 +39,12 @@ Run: python scripts/validate_results.py
 Run: python -m pytest -q
 
 Game execution remains NOT_EXECUTED until credentials and track are resolved.
+
+## Vithia lineage and secrecy boundary
+
+Vithia-Space is a bounded competition/evaluation branch of the Vithia family. JEV receives only the minimum game state needed for action selection. API keys, private prompts, patent-sensitive notes, and unrelated Vithia architecture stay outside Git and outside JEV inputs.
+
+The TypeSafe license gate in `TYPESAFE_LICENSE_GATE.md` must pass before the first JEV call.
 
 ## Governance
 

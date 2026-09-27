@@ -28,3 +28,11 @@ Preserve FAILED, NULL, NEGATIVE, DEFERRED, NOT_TESTED, UNKNOWN, and NOT_COMPUTED
 Performance > speed/cost > first-15-second demo clarity > originality > sponsor stack, while satisfying all rules.
 
 Default engineering path: deterministic harness first; JEV pilot second; identical System One adapter baseline third; sponsor integration only if genuinely load-bearing and measured.
+
+## Vithia-Space identity
+
+Vithia-Space is a bounded branch of the Vithia family for the UFA Space Invaders evaluation. Do not generalize competition results to the broader Vithia family without explicit evidence.
+
+## TypeSafe license and secrecy gate
+
+Before any JEV execution, verify `TYPESAFE_LICENSE_GATE.md`. Never train or distill from JEV Output; send only minimal game-state evidence; do not send unrelated proprietary Vithia architecture, patient/biomedical data, private prompts, credentials, or patent-sensitive ideas. Do not provide novel architecture as TypeSafe feedback without explicit review.

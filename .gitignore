@@ -5,3 +5,6 @@ __pycache__/
 .DS_Store
 artifacts/private/
 entry.local.json
+
+.secrets/
+*.local.json

@@ -47,5 +47,36 @@
   },
   "claim_policy": "MEASURED_ONLY",
   "mmr_state": "NOT_COMPUTED",
-  "signature_state": "NOT_SIGNED"
+  "signature_state": "NOT_SIGNED",
+  "lineage": {
+    "family": "VITHIA",
+    "branch_name": "VITHIA_SPACE",
+    "display_name": "Vithia-Space",
+    "role": "UFA JEV Space Invaders competition/evaluation branch",
+    "lineage_state": "IMPLEMENTED_METADATA_ONLY"
+  },
+  "typesafe_license_gate": {
+    "state": "ENFORCED_BEFORE_FIRST_JEV_EXECUTION",
+    "source_mca": "https://typesafe.ai/legal/mca",
+    "source_quickstart": "https://docs.typesafe.ai/introduction/quickstart",
+    "rules": [
+      "NO_JEV_OUTPUT_DISTILLATION_OR_IMITATION_TRAINING",
+      "MINIMIZE_PROPRIETARY_ARCHITECTURE_IN_JEV_INPUT",
+      "NO_NOVEL_PROPRIETARY_FEEDBACK_WITHOUT_EXPLICIT_REVIEW",
+      "NO_ASSUMED_TYPESAFE_BRAND_OR_LOGO_LICENSE",
+      "NO_SENSITIVE_BIOMEDICAL_OR_PATIENT_DATA",
+      "JEV_OUTPUT_IS_EVIDENCE_NOT_EXCLUSIVE_OR_IP_INDEMNIFIED"
+    ]
+  },
+  "secret_handling": {
+    "policy": "PUBLIC_REPRODUCIBILITY_WITH_PRIVATE_SECRETS",
+    "never_commit": [
+      "API keys",
+      "tokens",
+      "entry.local.json",
+      "private prompts",
+      "patent-sensitive notes"
+    ],
+    "jev_input_rule": "SEND_ONLY_MINIMUM_GAME_STATE_REQUIRED_FOR_DECISION"
+  }
 }
