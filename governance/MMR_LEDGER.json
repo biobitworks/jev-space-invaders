@@ -133,6 +133,21 @@
         "55556fb32de26551eaf8658ee312efbf76b0b4eee436c24885ad3f07b889d744",
         "a65eb0f0d576347d9b2f9e252d81770cd0b1ece37c0af4c2cd08801621d7cad0"
       ]
+    },
+    {
+      "seq": 9,
+      "bp_id": "UFA-JEV-BP-0010",
+      "bp_file": "governance/breakpoints/0010-harness-autopush.json",
+      "bp_file_sha256": "a8aa10c6f88bc1d06a34e52cc37a005c21f8909f11baec5baf33b307ecb06230",
+      "bp_root": "8e63f3a097ae8022fa132e931504e17581e1f5ad39288c0e5ecac501e91f567e",
+      "root_kind": "FMO_V1_BREAKPOINT_ATOMS",
+      "mmr_leaf": "735ef87bc360baaa1d34167b45898638db4de7b123f79e9c1681007cce659ee8",
+      "mmr_size": 10,
+      "mmr_root_after": "270053cd3cbf09c8f2875b8c44f5f19a81054d7675d94b2204f4fabef031c425",
+      "mmr_peaks_after": [
+        "55556fb32de26551eaf8658ee312efbf76b0b4eee436c24885ad3f07b889d744",
+        "b348aef577ea855c6a2de4fccf02e31316c6fe2f5a0d23f0c4f2c086e28f94af"
+      ]
     }
   ]
 }

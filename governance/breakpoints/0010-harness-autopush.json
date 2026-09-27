@@ -1,0 +1,227 @@
+{
+  "breakpoint_id": "UFA-JEV-BP-0010",
+  "parent": "UFA-JEV-BP-0009",
+  "state": "HARNESS_AUTOPUSH_PASS",
+  "project": "VITHIA_SPACE",
+  "created_utc": "2026-09-27T16:52:56+00:00",
+  "git_head_at_creation": "957b3984070b0991b8661b8fb56b6b6ab9ee13ea",
+  "root_kind": "FMO_V1_BREAKPOINT_ATOMS",
+  "bp_root": "8e63f3a097ae8022fa132e931504e17581e1f5ad39288c0e5ecac501e91f567e",
+  "group_roots": {
+    "code": "ce45f20aeb55ea219f74880ae90d9aecc8e9e27474fa63c31377dfcf4bca14a7",
+    "results": "bcd23dbe81db21722ce44fd5a1af10f8beeeb3310da396c82ecf3265f96f9be6",
+    "traces": "c2bfebd54d6c20a154c6e0ef87be1d4e5bd931ee8f97f4c45b94ab75389ea909"
+  },
+  "atoms": [
+    {
+      "path": "scripts/verify_episode_mmr.py",
+      "kind": "CodeFCO",
+      "group": "code",
+      "bytes": 1324,
+      "sha256": "a8aff8a149f8e1070a3a1ec9acc9fa688cb7ad74663002d002e3e16f98c06369",
+      "location": "public",
+      "fmo_leaf": "0bc79e37c8011bc446cc7c4b1575b27733eedb7c49919278f1f9c19a61eb6cc5"
+    },
+    {
+      "path": "src/harness.py",
+      "kind": "CodeFCO",
+      "group": "code",
+      "bytes": 7960,
+      "sha256": "95905f959fe67a86a7dffe254a4d7dd31e930ad78b2cbc365997cf896f732fd3",
+      "location": "public",
+      "fmo_leaf": "ac4d193a232f604e4d6f0b8593b02b45638c00eeae2ac97d17d3a226666a9552"
+    },
+    {
+      "path": "src/deciders.py",
+      "kind": "CodeFCO",
+      "group": "code",
+      "bytes": 7817,
+      "sha256": "ef5e9bb37fa3957a0728d654bdbb20cb1eeccb321c057a4824d31000b08619f7",
+      "location": "public",
+      "fmo_leaf": "af8a740bf61abe43e71b05c8b64f22072f757d3d13c3c17344c49cc7e9b2f6da"
+    },
+    {
+      "path": "src/perception.py",
+      "kind": "CodeFCO",
+      "group": "code",
+      "bytes": 4860,
+      "sha256": "fcd5a53760d33c910052a8b2562d2b49be2ab36232b709c3a33d18a785ccfb41",
+      "location": "public",
+      "fmo_leaf": "aad493cfbbea5ef989a2d5934df80cc6ce90f750c3a1664f6af35f4133246d89"
+    },
+    {
+      "path": "src/validate.py",
+      "kind": "CodeFCO",
+      "group": "code",
+      "bytes": 1374,
+      "sha256": "fbd66302e7cedf0b9c1a7a4eee35f831d0dbd763d3c588f195514ab26cbb5d10",
+      "location": "public",
+      "fmo_leaf": "70d3a5af8ec3a2b7f507e77791ab1a5d165e7378b40ba7c32e18880533a846dd"
+    },
+    {
+      "path": "src/envcfg.py",
+      "kind": "CodeFCO",
+      "group": "code",
+      "bytes": 2688,
+      "sha256": "7b32f5565412029b39098f1d8314b4cfb63a14c723face31a44dcfa0229e1493",
+      "location": "public",
+      "fmo_leaf": "c9302ddb7d82e381ee78efca344885d5ae7227633abd1865a680fdef9523a95b"
+    },
+    {
+      "path": "src/actions.py",
+      "kind": "CodeFCO",
+      "group": "code",
+      "bytes": 128,
+      "sha256": "0a2f1dcd8c7b871951de3c25edcbc25055e1026be7faf0ae20f9104b6de3e628",
+      "location": "public",
+      "fmo_leaf": "ceef12c10f021a9f6fdeb31961df2ae81c23952f42b2ee362676e8bf32244461"
+    },
+    {
+      "path": "scripts/run_games.py",
+      "kind": "CodeFCO",
+      "group": "code",
+      "bytes": 3437,
+      "sha256": "25c5051499f0062f75289b21888d705eb534c15c505432671d777ba45930e392",
+      "location": "public",
+      "fmo_leaf": "8934fe79ff2fa1d60f83fca706daccfaa619d85869d1f6e2cdf2a32e4733779d"
+    },
+    {
+      "path": "scripts/bp_harness.py",
+      "kind": "CodeFCO",
+      "group": "code",
+      "bytes": 3380,
+      "sha256": "ea612b2c63b13a4ecfdfc30300247df73df0352a6fe263b10e6d8d13b6def63b",
+      "location": "public",
+      "fmo_leaf": "fe8f9e8b128f5a5fa32f204dcb065982a2ac606b69f7762f8fa592c96c90cf46"
+    },
+    {
+      "path": "results.json",
+      "kind": "ResultsFCO",
+      "group": "results",
+      "bytes": 6793,
+      "sha256": "a3cfcc6d93b1f44ebaad8746b0d80ff3a0c908c5bc378a68bcf9c51ddfbb6077",
+      "location": "public",
+      "fmo_leaf": "bcd23dbe81db21722ce44fd5a1af10f8beeeb3310da396c82ecf3265f96f9be6"
+    },
+    {
+      "path": "runs/run_0001_seed1_none.jsonl.gz",
+      "kind": "EpisodeTraceFCO",
+      "group": "traces",
+      "bytes": 43933,
+      "sha256": "1084a831bab9aaef7ae81d22207e9f98fb32bc087294f659f744ef26687de039",
+      "location": "public",
+      "fmo_leaf": "9dd196c873751d73e0632e26a9f807b78ab898a1b66be2fbf4761c130d687c1f"
+    },
+    {
+      "path": "runs/run_0002_seed2_none.jsonl.gz",
+      "kind": "EpisodeTraceFCO",
+      "group": "traces",
+      "bytes": 55218,
+      "sha256": "c65852c3bd3d26cdc59147d4d402b1e0f2c6943cadd8621c172665d204327078",
+      "location": "public",
+      "fmo_leaf": "b40bce14f1701bcc0f05c80e4441d201b46785c399fe7332b2f1d629aa7adff4"
+    },
+    {
+      "path": "runs/run_0003_seed3_none.jsonl.gz",
+      "kind": "EpisodeTraceFCO",
+      "group": "traces",
+      "bytes": 93269,
+      "sha256": "7cddee285c0408b86d0c535bdd55768f2f826aa96ecba3265affc0c5a8a6d3d3",
+      "location": "public",
+      "fmo_leaf": "e1db244f5163ec8da199657f244508f089f9c11267e9fc4ee5f0f5a646636f29"
+    },
+    {
+      "path": "runs/run_0004_seed4_none.jsonl.gz",
+      "kind": "EpisodeTraceFCO",
+      "group": "traces",
+      "bytes": 43959,
+      "sha256": "63d6af714a45d31a72903e39ffb421ae847cb7789eddf20bf8372268cc15128d",
+      "location": "public",
+      "fmo_leaf": "729f1bb9c8859dce251407addc12b83dd56154074c02b4bbcbc8fcae428eba88"
+    },
+    {
+      "path": "runs/run_0005_seed5_none.jsonl.gz",
+      "kind": "EpisodeTraceFCO",
+      "group": "traces",
+      "bytes": 93655,
+      "sha256": "974adceb0831b09ba2a1258378392bb1432695b2c505c24acf8fddec930045ae",
+      "location": "public",
+      "fmo_leaf": "77db9acb7b76ad4e5001a3303fd93603a8aefc2f1e4fa9af3f989d7699bad80c"
+    }
+  ],
+  "fcg_edges": [
+    {
+      "src": "Harness",
+      "rel": "EXECUTED_WITH",
+      "dst": "RuntimeSourceDataset_V2"
+    },
+    {
+      "src": "EpisodeTrace",
+      "rel": "RESULTS_IN",
+      "dst": "ResultsFCO"
+    },
+    {
+      "src": "ResultsFCO",
+      "rel": "PUBLISHED_TO",
+      "dst": "git:origin/vithia-space"
+    }
+  ],
+  "executed": [
+    "scripted-policy episodes",
+    "per-game results.json append + commit + push"
+  ],
+  "observed": {
+    "scripted_runs": [
+      {
+        "run": 1,
+        "seed": 1,
+        "score": 110.0,
+        "pushed_commit": "591d554842a79ed9056248226eab7727d8bc1792",
+        "trace_sha_ok": true
+      },
+      {
+        "run": 2,
+        "seed": 2,
+        "score": 165.0,
+        "pushed_commit": "6d54075b6a1ea28fe66666738d2df0f3dae96671",
+        "trace_sha_ok": true
+      },
+      {
+        "run": 3,
+        "seed": 3,
+        "score": 325.0,
+        "pushed_commit": "4cba1894c84a411b90d50926d59f5cae865743fb",
+        "trace_sha_ok": true
+      },
+      {
+        "run": 4,
+        "seed": 4,
+        "score": 110.0,
+        "pushed_commit": "085e3346757e2abce4689f13b9917825883969c7",
+        "trace_sha_ok": true
+      },
+      {
+        "run": 5,
+        "seed": 5,
+        "score": 210.0,
+        "pushed_commit": "957b3984070b0991b8661b8fb56b6b6ab9ee13ea",
+        "trace_sha_ok": true
+      }
+    ],
+    "results_summary": {
+      "runs": 5,
+      "counted_jev_runs": 0,
+      "non_jev_runs": 5,
+      "baseline_runs": 0
+    }
+  },
+  "labels": "scripted runs are provider=none / served_model=scripted-policy: NON-JEV, do not count toward Performance",
+  "not_tested": [
+    "JEV",
+    "OpenJev",
+    "LLM baseline"
+  ],
+  "next_action": "Vithia preprocessor (Anticube, CA field, Minesweeper, path integral)",
+  "claim_ceiling": "IDENTITY_AND_INCLUSION_ONLY; hashes do not establish correctness",
+  "signature_state": "NOT_SIGNED"
+}
