@@ -1,0 +1,47 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/biobitworks/jev-space-invaders/schemas/s01/S01_TRANSITION_RECEIPT_V1.json",
+  "title": "S01_TRANSITION_RECEIPT_V1",
+  "type": "object",
+  "required": [
+    "schema",
+    "packet_id",
+    "action",
+    "successor_atoms"
+  ],
+  "properties": {
+    "schema": {
+      "const": "S01_TRANSITION_RECEIPT_V1"
+    },
+    "packet_id": {
+      "type": "string"
+    },
+    "action": {
+      "type": "string"
+    },
+    "successor_atoms": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "reward": {
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "predicted": {
+      "type": [
+        "object",
+        "null"
+      ]
+    },
+    "prediction_error": {
+      "type": [
+        "number",
+        "null"
+      ]
+    }
+  }
+}

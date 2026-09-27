@@ -1,0 +1,103 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/biobitworks/jev-space-invaders/schemas/s01/S01_CONTEXT_PACKET_V1.json",
+  "title": "S01_CONTEXT_PACKET_V1",
+  "description": "What System 0 hands System 1 for one decision. Never contains a recommended action.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema",
+    "packet_id",
+    "domain",
+    "source_atoms",
+    "context",
+    "legal_actions",
+    "question",
+    "s0_provider",
+    "s0_compile_ms"
+  ],
+  "properties": {
+    "schema": {
+      "const": "S01_CONTEXT_PACKET_V1"
+    },
+    "packet_id": {
+      "type": "string",
+      "pattern": "^sha256:[0-9a-f]{64}$",
+      "description": "content id of the packet with packet_id removed"
+    },
+    "domain": {
+      "enum": [
+        "babel",
+        "eca",
+        "life",
+        "minesweeper",
+        "space_invaders"
+      ]
+    },
+    "source_atoms": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "pattern": "^sha256:[0-9a-f]{64}$"
+      },
+      "description": "content ids of immutable SourceAtomFCOs"
+    },
+    "context": {
+      "type": "object",
+      "description": "public, approved interpretation; successor ContextFCOs never mutate source atoms"
+    },
+    "anticube": {
+      "type": "object",
+      "description": "public labels: identity SELF|NONSELF|UNKNOWN x safety SAFE|UNSAFE|UNKNOWN"
+    },
+    "path_summary": {
+      "type": "object"
+    },
+    "private_commitment": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "sha256 commitment to private S0 context; contents never public"
+    },
+    "legal_actions": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "minItems": 1
+    },
+    "question": {
+      "type": "object",
+      "required": [
+        "type",
+        "instructions"
+      ]
+    },
+    "s0_provider": {
+      "type": "object",
+      "required": [
+        "name",
+        "version"
+      ]
+    },
+    "s0_compile_ms": {
+      "type": "number",
+      "minimum": 0
+    }
+  },
+  "not": {
+    "anyOf": [
+      {
+        "required": [
+          "recommended_action"
+        ]
+      },
+      {
+        "required": [
+          "recommended_move"
+        ]
+      }
+    ]
+  }
+}

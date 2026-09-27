@@ -1,0 +1,80 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/biobitworks/jev-space-invaders/schemas/s01/S01_EXPERIMENT_RECEIPT_V1.json",
+  "title": "S01_EXPERIMENT_RECEIPT_V1",
+  "type": "object",
+  "required": [
+    "schema",
+    "experiment_id",
+    "question",
+    "preregistration",
+    "input_dataset",
+    "output_dataset",
+    "code_commit",
+    "terminal_state",
+    "claims"
+  ],
+  "properties": {
+    "schema": {
+      "const": "S01_EXPERIMENT_RECEIPT_V1"
+    },
+    "experiment_id": {
+      "type": "string"
+    },
+    "question": {
+      "type": "string"
+    },
+    "preregistration": {
+      "type": "object",
+      "required": [
+        "path",
+        "sha256"
+      ]
+    },
+    "input_dataset": {
+      "type": "object",
+      "required": [
+        "dataset_id",
+        "fmo_root"
+      ]
+    },
+    "output_dataset": {
+      "type": "object",
+      "required": [
+        "dataset_id",
+        "fmo_root"
+      ]
+    },
+    "code_commit": {
+      "type": "string"
+    },
+    "terminal_state": {
+      "enum": [
+        "SUPPORTED",
+        "NOT_SUPPORTED",
+        "FAIL_TO_REJECT_H0",
+        "NULL",
+        "NEGATIVE",
+        "PARTIAL",
+        "FAILED",
+        "DEFERRED",
+        "CREDIT_EXHAUSTED",
+        "ABSTAIN",
+        "NOT_TESTED"
+      ]
+    },
+    "claims": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "state"
+        ]
+      }
+    },
+    "not_tested": {
+      "type": "array"
+    }
+  }
+}

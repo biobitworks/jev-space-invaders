@@ -1,0 +1,87 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/biobitworks/jev-space-invaders/schemas/s01/S01_DECISION_RECEIPT_V1.json",
+  "title": "S01_DECISION_RECEIPT_V1",
+  "type": "object",
+  "required": [
+    "schema",
+    "packet_id",
+    "provider",
+    "model_requested",
+    "choice",
+    "latency_ms"
+  ],
+  "properties": {
+    "schema": {
+      "const": "S01_DECISION_RECEIPT_V1"
+    },
+    "packet_id": {
+      "type": "string"
+    },
+    "provider": {
+      "type": "string"
+    },
+    "model_requested": {
+      "type": "string"
+    },
+    "model_served": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "choice": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "executed_action": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "adapter_reason": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "probabilities": {
+      "oneOf": [
+        {
+          "type": "object"
+        },
+        {
+          "const": "NOT_AVAILABLE"
+        }
+      ]
+    },
+    "confidence": {
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "latency_ms": {
+      "type": "number",
+      "minimum": 0
+    },
+    "usage": {
+      "type": [
+        "object",
+        "null"
+      ]
+    },
+    "errors": {
+      "type": "object"
+    },
+    "raw_response_id": {
+      "type": [
+        "string",
+        "null"
+      ]
+    }
+  }
+}

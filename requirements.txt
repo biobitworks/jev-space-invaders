@@ -4,3 +4,8 @@ numpy>=2,<3
 typesafe-sdk
 system-one-adapter[openai,anthropic,gemini]
 pytest>=8,<10
+# S01 experiment ladder (E0-E4A)
+jsonschema==4.26.0
+scipy==1.17.1
+python-sat==1.9.dev15
+cellpylib==2.4.0

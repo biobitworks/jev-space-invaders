@@ -1,0 +1,159 @@
+{
+  "schema": "S01_REFERENCE_RUNTIME_DIGESTS_V1",
+  "purpose": "cross-runtime replay comparison only; these are rehearsal outputs, not sealed results",
+  "note": "rehearsal executed before prereg sealing; see docs/prereg/COMMON.md",
+  "E0": {
+    "runtime": {
+      "host": "Claude sandbox (not the playing machine)",
+      "platform": "Linux-6.18.44-fc-v42-x86_64-with-glibc2.39",
+      "python": "3.12.3",
+      "numpy": "2.4.4",
+      "scipy": "1.17.1",
+      "python-sat": "1.9.dev15",
+      "cellpylib": "2.4.0",
+      "ale-py": "0.12.1",
+      "gymnasium": "1.3.0"
+    },
+    "input_rows_sha256": "3f516c60ba63f9c5d33847781ce225f11d1310bdff70c084e06e3396946ed85a",
+    "output_rows_sha256": "68c9101a1069d3477043b013c1b96dfa9e04a53a50ba175bb182bfdaf7458bf6",
+    "rehearsal_terminal_state": "SUPPORTED",
+    "rehearsal_claims": [
+      [
+        "H0a",
+        "SUPPORTED"
+      ],
+      [
+        "H0b",
+        "SUPPORTED"
+      ],
+      [
+        "H0c",
+        "SUPPORTED"
+      ],
+      [
+        "H0d",
+        "SUPPORTED"
+      ],
+      [
+        "H0e",
+        "SEE_REPLAY_CHECK"
+      ]
+    ]
+  },
+  "E1": {
+    "runtime": {
+      "host": "Claude sandbox (not the playing machine)",
+      "platform": "Linux-6.18.44-fc-v42-x86_64-with-glibc2.39",
+      "python": "3.12.3",
+      "numpy": "2.4.4",
+      "scipy": "1.17.1",
+      "python-sat": "1.9.dev15",
+      "cellpylib": "2.4.0",
+      "ale-py": "0.12.1",
+      "gymnasium": "1.3.0"
+    },
+    "input_rows_sha256": "9c4aef6e8385c8e96d8d451861dd474a218afd3a915c6f38337d815668932e75",
+    "output_rows_sha256": "05f1937b45786c773a9aac8c78722ab385e464d8fafadee509691a41d38b1468",
+    "rehearsal_terminal_state": "PARTIAL",
+    "rehearsal_claims": [
+      [
+        "G1",
+        "SUPPORTED"
+      ],
+      [
+        "H1a",
+        "SUPPORTED"
+      ],
+      [
+        "H1b",
+        "SUPPORTED"
+      ],
+      [
+        "H1c",
+        "SUPPORTED"
+      ],
+      [
+        "H1d",
+        "NOT_SUPPORTED"
+      ],
+      [
+        "H1e",
+        "FAIL_TO_REJECT_H0"
+      ]
+    ]
+  },
+  "E2": {
+    "runtime": {
+      "host": "Claude sandbox (not the playing machine)",
+      "platform": "Linux-6.18.44-fc-v42-x86_64-with-glibc2.39",
+      "python": "3.12.3",
+      "numpy": "2.4.4",
+      "scipy": "1.17.1",
+      "python-sat": "1.9.dev15",
+      "cellpylib": "2.4.0",
+      "ale-py": "0.12.1",
+      "gymnasium": "1.3.0"
+    },
+    "input_rows_sha256": "f474b4a23ca045547eb707db593b28732749cc55c47441616cc3e14bc24659a1",
+    "output_rows_sha256": "e2b9f84d51e8222ef8668104402ec781e3b5db1032ab310ed0b50d6c6250201e",
+    "rehearsal_terminal_state": "SUPPORTED",
+    "rehearsal_claims": [
+      [
+        "H2a",
+        "SUPPORTED"
+      ],
+      [
+        "H2b",
+        "SUPPORTED"
+      ],
+      [
+        "H2c",
+        "DESCRIPTIVE"
+      ]
+    ]
+  },
+  "E3": {
+    "runtime": {
+      "host": "Claude sandbox (not the playing machine)",
+      "platform": "Linux-6.18.44-fc-v42-x86_64-with-glibc2.39",
+      "python": "3.12.3",
+      "numpy": "2.4.4",
+      "scipy": "1.17.1",
+      "python-sat": "1.9.dev15",
+      "cellpylib": "2.4.0",
+      "ale-py": "0.12.1",
+      "gymnasium": "1.3.0"
+    },
+    "input_rows_sha256": "460bca708404013fb4f9490a1c85a193b272ffbf2e5e195d575c472fe42cc8b0",
+    "output_rows_sha256": "f2ec41619935f5c058250723afafedb5db0ca790bf30db7a53492ffe73a100ac",
+    "rehearsal_terminal_state": "SUPPORTED",
+    "rehearsal_claims": [
+      [
+        "H3a",
+        "SUPPORTED"
+      ],
+      [
+        "H3b",
+        "SUPPORTED"
+      ],
+      [
+        "H3c",
+        "SUPPORTED"
+      ]
+    ]
+  },
+  "E4A": {
+    "runtime": {
+      "host": "Claude sandbox (not the playing machine)",
+      "platform": "Linux-6.18.44-fc-v42-x86_64-with-glibc2.39",
+      "python": "3.12.3",
+      "numpy": "2.4.4",
+      "scipy": "1.17.1",
+      "python-sat": "1.9.dev15",
+      "cellpylib": "2.4.0",
+      "ale-py": "0.12.1",
+      "gymnasium": "1.3.0"
+    },
+    "input_rows_sha256": "cb08c3611d1b9f909031cb278a4c9da22d891d1d7b51374e6261273502f2fc78"
+  }
+}
