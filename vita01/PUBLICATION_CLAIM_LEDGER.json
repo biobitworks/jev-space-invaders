@@ -108,6 +108,42 @@
       "evidence_level": "SIMULATED",
       "promotable_to_biological": false,
       "receipt": "evidence/s01/E1_ECA/EXPERIMENT_RECEIPT.json"
+    },
+    {
+      "experiment_id": "E2_LIFE",
+      "claim": "H2a",
+      "state": "SUPPORTED",
+      "mode": "CONFIRMATORY",
+      "evidence_level": "SIMULATED",
+      "promotable_to_biological": false,
+      "receipt": "evidence/s01/E2_LIFE/EXPERIMENT_RECEIPT.json"
+    },
+    {
+      "experiment_id": "E2_LIFE",
+      "claim": "H2b",
+      "state": "SUPPORTED",
+      "mode": "CONFIRMATORY",
+      "evidence_level": "SIMULATED",
+      "promotable_to_biological": false,
+      "receipt": "evidence/s01/E2_LIFE/EXPERIMENT_RECEIPT.json"
+    },
+    {
+      "experiment_id": "E2_LIFE",
+      "claim": "H2c",
+      "state": "OBSERVED",
+      "mode": "CONFIRMATORY",
+      "evidence_level": "SIMULATED",
+      "promotable_to_biological": false,
+      "receipt": "evidence/s01/E2_LIFE/EXPERIMENT_RECEIPT.json"
+    },
+    {
+      "experiment_id": "E2_LIFE",
+      "claim": "H2d",
+      "state": "SUPPORTED",
+      "mode": "CONFIRMATORY",
+      "evidence_level": "SIMULATED",
+      "promotable_to_biological": false,
+      "receipt": "evidence/s01/E2_LIFE/EXPERIMENT_RECEIPT.json"
     }
   ]
 }

@@ -24,6 +24,18 @@
       "replay_level": "REPLAY_LEVEL_4",
       "receipt": "evidence/s01/E1_ECA/EXPERIMENT_RECEIPT.json",
       "receipt_sha256": "5286a53f5ef7e2c046c905774e2050a7f5316e107a2c304a699ab9811c1f2d82"
+    },
+    {
+      "experiment_id": "E2_LIFE",
+      "mode": "CONFIRMATORY",
+      "terminal_state": "SUPPORTED",
+      "input": "S01_LIFE_CONTEXT_EVAL_V1",
+      "output": "S01_LIFE_CONTEXT_RESULTS_V1",
+      "prereg_breakpoint": "UFA-JEV-BP-0016",
+      "code_freeze": "UFA-JEV-BP-0011",
+      "replay_level": "REPLAY_LEVEL_4",
+      "receipt": "evidence/s01/E2_LIFE/EXPERIMENT_RECEIPT.json",
+      "receipt_sha256": "3febdda1b5a6a0d9b4ec0007eda91034b8f23987cf393f661cd96e3b9d5ff46c"
     }
   ]
 }

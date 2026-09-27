@@ -65,6 +65,19 @@
       "manifest": "data/s01/S01_LIFE_CONTEXT_EVAL_V1/MANIFEST.json",
       "manifest_sha256": "86197cf3fa30c3e5e3010ce475cc800b159942d52550fe99c0673f922594f001",
       "evidence_level": "SIMULATED"
+    },
+    {
+      "dataset_id": "S01_LIFE_CONTEXT_RESULTS_V1",
+      "kind": "output",
+      "source": "S01_LIFE_CONTEXT_EVAL_V1",
+      "license": "CC-BY-4.0",
+      "fmo_root": "0c82f7ce7603c6a305a689ac965cf3ef97c44460f997ab86e0e3b4061fa8990f",
+      "visibility": "public",
+      "claim_ceiling": "deterministic rule dynamics; no biological or emergence claim",
+      "code_commit_at_generation": "855086e501186d55dccd49cabed92c8926f3cab4",
+      "manifest": "data/s01/S01_LIFE_CONTEXT_RESULTS_V1/MANIFEST.json",
+      "manifest_sha256": "95221d041a501f67ca249c12f648c11f06fe3c75a3e3aefc2506bf2cb4985c9c",
+      "evidence_level": "SIMULATED"
     }
   ]
 }

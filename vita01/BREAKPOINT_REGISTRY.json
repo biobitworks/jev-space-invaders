@@ -240,6 +240,21 @@
       "mmr_root_after": "1303f691fcfdee6145f710febf29e2146b6ced8c2f89b643dd1e4371cafbabe7",
       "signature_state": "NOT_SIGNED",
       "verification_command": "python scripts/verify_breakpoints.py"
+    },
+    {
+      "breakpoint_id": "UFA-JEV-BP-0017",
+      "parent": "UFA-JEV-BP-0016",
+      "state": "RESULT_SUPPORTED",
+      "stage": "RESULT",
+      "experiment_id": "E2_LIFE",
+      "file": "governance/breakpoints/0017-e2-result.json",
+      "file_sha256": "3d94a78336b2c0fa8f02cda93b29728d90f8555d8d625398c03d2bf97e393e53",
+      "root_kind": "FMO_V1_BREAKPOINT_ATOMS",
+      "bp_root": "66638254248ff4a718063020a40c2b3fe39ed992b656aac3ab937b669e1cce77",
+      "mmr_seq": 16,
+      "mmr_root_after": "7963f6fb34256050c18ff5670dd16d699cf25befeb07ad211d9594853db9ceb1",
+      "signature_state": "NOT_SIGNED",
+      "verification_command": "python scripts/verify_breakpoints.py"
     }
   ]
 }

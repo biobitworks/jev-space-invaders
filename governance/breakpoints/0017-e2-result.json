@@ -1,0 +1,105 @@
+{
+  "breakpoint_id": "UFA-JEV-BP-0017",
+  "parent": "UFA-JEV-BP-0016",
+  "state": "RESULT_SUPPORTED",
+  "project": "VITHIA_SPACE",
+  "created_utc": "2026-09-27T16:57:38+00:00",
+  "git_head_at_creation": "855086e501186d55dccd49cabed92c8926f3cab4",
+  "root_kind": "FMO_V1_BREAKPOINT_ATOMS",
+  "bp_root": "66638254248ff4a718063020a40c2b3fe39ed992b656aac3ab937b669e1cce77",
+  "group_roots": {
+    "output_dataset": "1e6256055efd94fc3ff494faf730fe280d97642978ef91ddf18858f842ddf94b",
+    "receipt": "f3441bc46d46bff6f299b672b9b7ae051dcd916bb47651d41364c9e14730a2ab"
+  },
+  "atoms": [
+    {
+      "path": "data/s01/S01_LIFE_CONTEXT_RESULTS_V1/MANIFEST.json",
+      "kind": "DatasetManifestFCO",
+      "group": "output_dataset",
+      "bytes": 1396,
+      "sha256": "95221d041a501f67ca249c12f648c11f06fe3c75a3e3aefc2506bf2cb4985c9c",
+      "location": "public",
+      "fmo_leaf": "4be2106af945041f86fc6c404b2beba02dbc32b5951eebdc37fc426cc1d042d0"
+    },
+    {
+      "path": "data/s01/S01_LIFE_CONTEXT_RESULTS_V1/history_controls.jsonl",
+      "kind": "DatasetFileFCO",
+      "group": "output_dataset",
+      "bytes": 46194,
+      "sha256": "449c27f413e2ef3ac9ffb7b71975f00cfb48a90dd3509cff734fa7a44e755425",
+      "location": "public",
+      "fmo_leaf": "472a39b3895dd67c944b8877a82e608c2040931f887bce2bd338b6be2f79b0c0"
+    },
+    {
+      "path": "data/s01/S01_LIFE_CONTEXT_RESULTS_V1/rows.jsonl",
+      "kind": "DatasetFileFCO",
+      "group": "output_dataset",
+      "bytes": 196492,
+      "sha256": "e2b9f84d51e8222ef8668104402ec781e3b5db1032ab310ed0b50d6c6250201e",
+      "location": "public",
+      "fmo_leaf": "baa1a5ddeb5c3ec249bbe1b12df0374c4e2556345fcb7370587c9ce73a5106fc"
+    },
+    {
+      "path": "evidence/s01/E2_LIFE/EXPERIMENT_RECEIPT.json",
+      "kind": "ExperimentReceiptFCO",
+      "group": "receipt",
+      "bytes": 2853,
+      "sha256": "3febdda1b5a6a0d9b4ec0007eda91034b8f23987cf393f661cd96e3b9d5ff46c",
+      "location": "public",
+      "fmo_leaf": "f3441bc46d46bff6f299b672b9b7ae051dcd916bb47651d41364c9e14730a2ab"
+    }
+  ],
+  "experiment_id": "E2_LIFE",
+  "stage": "RESULT",
+  "prereg_breakpoint": "UFA-JEV-BP-0016",
+  "pre_mmr_root": "1303f691fcfdee6145f710febf29e2146b6ced8c2f89b643dd1e4371cafbabe7",
+  "terminal_state": "SUPPORTED",
+  "claims_summary": [
+    {
+      "id": "H2a",
+      "state": "SUPPORTED"
+    },
+    {
+      "id": "H2b",
+      "state": "SUPPORTED"
+    },
+    {
+      "id": "H2c",
+      "state": "OBSERVED"
+    },
+    {
+      "id": "H2d",
+      "state": "SUPPORTED"
+    }
+  ],
+  "replay": {
+    "reference_runtime": {
+      "host": "Claude sandbox (not the playing machine)",
+      "platform": "Linux-6.18.44-fc-v42-x86_64-with-glibc2.39",
+      "python": "3.12.3",
+      "numpy": "2.4.4",
+      "scipy": "1.17.1",
+      "python-sat": "1.9.dev15",
+      "cellpylib": "2.4.0",
+      "ale-py": "0.12.1",
+      "gymnasium": "1.3.0"
+    },
+    "input_rows_equal": true,
+    "output_rows_equal": true,
+    "replay_level": "REPLAY_LEVEL_4"
+  },
+  "fcg_edges": [
+    {
+      "src": "S01_LIFE_CONTEXT_RESULTS_V1",
+      "rel": "DERIVED_FROM",
+      "dst": "S01_LIFE_CONTEXT_EVAL_V1"
+    },
+    {
+      "src": "ExperimentReceipt",
+      "rel": "EXECUTED_UNDER",
+      "dst": "UFA-JEV-BP-0016"
+    }
+  ],
+  "claim_ceiling": "IDENTITY_AND_INCLUSION_ONLY; hashes do not establish correctness",
+  "signature_state": "NOT_SIGNED"
+}

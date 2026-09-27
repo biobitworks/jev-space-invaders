@@ -1,0 +1,42 @@
+{
+  "dataset_id": "S01_LIFE_CONTEXT_RESULTS_V1",
+  "kind": "output",
+  "schema": "rows: one_cell {...first_divergence, outcome} | mask {...correct}",
+  "source": "S01_LIFE_CONTEXT_EVAL_V1",
+  "license": "CC-BY-4.0",
+  "generation_code": [
+    {
+      "path": "experiments/e2_life.py",
+      "sha256": "dd3f0bec53878909b36586e17eec941c9943587b1bc0371bbf78e47993c15b51"
+    },
+    {
+      "path": "src/kernels/life.py",
+      "sha256": "99cfe8a395bbb7cdead5a35e1f021cab1f17c3f69a48f96905dfe4da52f887c7"
+    },
+    {
+      "path": "src/s01/canon.py",
+      "sha256": "b6698b4cf15484c8390630eef8e41aa184b1a4a4f6c134d21ea0acb01fc03f0d"
+    }
+  ],
+  "code_commit_at_generation": "855086e501186d55dccd49cabed92c8926f3cab4",
+  "config": {},
+  "seeds": [],
+  "files": [
+    {
+      "path": "data/s01/S01_LIFE_CONTEXT_RESULTS_V1/history_controls.jsonl",
+      "bytes": 46194,
+      "sha256": "449c27f413e2ef3ac9ffb7b71975f00cfb48a90dd3509cff734fa7a44e755425"
+    },
+    {
+      "path": "data/s01/S01_LIFE_CONTEXT_RESULTS_V1/rows.jsonl",
+      "bytes": 196492,
+      "sha256": "e2b9f84d51e8222ef8668104402ec781e3b5db1032ab310ed0b50d6c6250201e"
+    }
+  ],
+  "fmo_root": "0c82f7ce7603c6a305a689ac965cf3ef97c44460f997ab86e0e3b4061fa8990f",
+  "visibility": "public",
+  "parent_evidence": [
+    "S01_LIFE_CONTEXT_EVAL_V1"
+  ],
+  "claim_ceiling": "deterministic rule dynamics; no biological or emergence claim"
+}
