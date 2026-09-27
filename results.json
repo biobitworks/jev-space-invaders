@@ -66,6 +66,40 @@
       },
       "trace_file": "runs/run_0001_seed1_none.jsonl.gz",
       "trace_sha256": "1084a831bab9aaef7ae81d22207e9f98fb32bc087294f659f744ef26687de039"
+    },
+    {
+      "run": 2,
+      "seed": 2,
+      "score": 165.0,
+      "steps": 463,
+      "frames": 1849,
+      "lives_lost": 3,
+      "terminated": true,
+      "truncated": false,
+      "model_calls": 0,
+      "latency_ms_p50": 0.009,
+      "latency_ms_p95": 0.012,
+      "latency_ms_total": 4.703,
+      "errors_by_status": {},
+      "retries": 0,
+      "fallback_actions": 0,
+      "wall_clock_s": 1.83,
+      "served_model": "scripted-policy",
+      "provider": "none",
+      "requested_model": "scripted-policy",
+      "state_encoding": "perception_v1",
+      "episode_mmr_root": "459898702a8f10e0d0edb21bc2e2b46c42df681b77de053c6357abe3ec56e926",
+      "episode_mmr_size": 463,
+      "episode_mmr_protocol": "leaf = SHA256('EPISODE_LEAF_V1' 0 t 0 content_id(record without leaf, ms)); MMR per docs/BREAKPOINT_PROTOCOL.md",
+      "runtime": {
+        "python": "3.14.7",
+        "platform": "macOS-27.0-arm64-arm-64bit-Mach-O",
+        "ale_py": "0.12.1",
+        "gymnasium": "1.3.0",
+        "numpy": "2.5.3"
+      },
+      "trace_file": "runs/run_0002_seed2_none.jsonl.gz",
+      "trace_sha256": "c65852c3bd3d26cdc59147d4d402b1e0f2c6943cadd8621c172665d204327078"
     }
   ],
   "baseline": {
