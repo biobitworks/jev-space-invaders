@@ -1,0 +1,98 @@
+{
+  "schema": "VITHIA_RUNTIME_SOURCE_DATASET_V2",
+  "dataset_id": "VITHIA_SPACE_RUNTIME_SOURCE_V2",
+  "supersedes": "VITHIA_SPACE_RUNTIME_SOURCE_FREEZE_20260927_001",
+  "supersede_reason": "Pilot runtime is ALE/SpaceInvaders-v5 via ale-py, which bundles the ROM; the PettingZoo/multi-agent-ALE freeze recorded ROM=NOT_PRESENT.",
+  "classification": "EXECUTABLE_EVIDENCE_DATASET",
+  "runtime": {
+    "python": "3.14.7",
+    "platform": "macOS-27.0-arm64-arm-64bit-Mach-O",
+    "ale_py": "0.12.1",
+    "gymnasium": "1.3.0",
+    "numpy": "2.5.3"
+  },
+  "env_config": {
+    "env_id": "ALE/SpaceInvaders-v5",
+    "frameskip": 4,
+    "repeat_action_probability": 0.25,
+    "full_action_space": false,
+    "max_num_frames_per_episode": 108000,
+    "obs_type": "rgb",
+    "wrappers": [
+      "RepeatActionMaxPool(k=4, pool=max of last 2 frames) over ALE frameskip=1"
+    ],
+    "decision_interval_steps": 1
+  },
+  "packages": {
+    "ale-py": {
+      "version": "0.12.1",
+      "file_count": 120,
+      "state": "HASHED_INSTALLED_FILES"
+    },
+    "gymnasium": {
+      "version": "1.3.0",
+      "file_count": 222,
+      "state": "HASHED_INSTALLED_FILES"
+    },
+    "numpy": {
+      "version": "2.5.3",
+      "file_count": 906,
+      "state": "HASHED_INSTALLED_FILES"
+    },
+    "cloudpickle": {
+      "version": "3.1.2",
+      "file_count": 5,
+      "state": "HASHED_INSTALLED_FILES"
+    },
+    "farama-notifications": {
+      "version": "0.0.6",
+      "file_count": 3,
+      "state": "HASHED_INSTALLED_FILES"
+    },
+    "typing-extensions": {
+      "version": "4.16.0",
+      "file_count": 3,
+      "state": "HASHED_INSTALLED_FILES"
+    },
+    "typesafe-sdk": {
+      "version": "0.7.2",
+      "file_count": 30,
+      "state": "HASHED_INSTALLED_FILES"
+    },
+    "system-one-adapter": {
+      "version": "0.2.1",
+      "file_count": 17,
+      "state": "HASHED_INSTALLED_FILES"
+    }
+  },
+  "rom": {
+    "path": "rom/space_invaders.bin",
+    "bytes": 4096,
+    "sha256": "7224b17462b992d67f4e06a3c85f269c9822b06df6015bf038b55f384ced0301",
+    "md5": "72ffbef6504b75e69ee1045af9075f66",
+    "source": "bundled in ale-py wheel"
+  },
+  "leaves_file": "evidence/runtime_v2/RUNTIME_LEAVES.jsonl",
+  "fmo": {
+    "root": "cb74078eea22e71b3bf946f34e22f6f89ac62f0632e78c5457bb82e2095be006",
+    "groups": {
+      "ale-py": "5487bca2b998677bf54efa95a1f2e254af4012a299d0993bd1619760c8b881d4",
+      "cloudpickle": "1ef0055703d3f66d56ac9d517147ac81d0922431ef84d9ad11bddb532a3b5d75",
+      "farama-notifications": "5ce85104c875f113008e73c9b2429306847d2a774c74bce49ae25dfca1b9fbd7",
+      "gymnasium": "57da982f87d6c20776c68bb9bc3a7f43017b5e8a3bb3e34594ab3496fb65e27a",
+      "interpreter": "6c7b764ea11bece808f48bd01eb978cc2d27065303d75bba82b75c5da2464ec6",
+      "numpy": "cc53435c8c115c27c487afa2eb56c4845d9b67b2e2a376e45a5ac2ea60713aba",
+      "rom": "8ccbb6f2745596d91aaa5c29d14cafdcb3bea71e292f2b9449767d0b3e078a6f",
+      "system-one-adapter": "49a42ba8503a607280ce11ffcf4aa50645e8ba13994312c5f41c61afb39b84c9",
+      "typesafe-sdk": "da0463430a547a44ead467dd35959a25b897b225bad5268983e6fabad015641b",
+      "typing-extensions": "1bf749b7c59039924e16e763ceea140814331dc7098e5a7cf9fdec27163076a3"
+    },
+    "leaf_count": 1308
+  },
+  "unknowns": [
+    "NATIVE_BUILD_PROVENANCE: NOT_VERIFIED",
+    "TRANSITIVE_LICENSE_REVIEW: PARTIAL",
+    "INTERPRETER_BUILD_PROVENANCE: NOT_VERIFIED"
+  ],
+  "claim_ceiling": "IDENTITY_OF_INSTALLED_BYTES_ON_THIS_MACHINE"
+}

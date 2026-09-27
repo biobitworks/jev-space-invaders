@@ -118,6 +118,21 @@
       "mmr_peaks_after": [
         "55556fb32de26551eaf8658ee312efbf76b0b4eee436c24885ad3f07b889d744"
       ]
+    },
+    {
+      "seq": 8,
+      "bp_id": "UFA-JEV-BP-0009",
+      "bp_file": "governance/breakpoints/0009-rom-bound-runtime.json",
+      "bp_file_sha256": "8cc32b20ba8557d2ff307865630a72d8af300173576a8b047a48e823921a6f75",
+      "bp_root": "76aecd6c04f0534b45d4f63006ae69455b082d8643bfa1147607ea3115efea1d",
+      "root_kind": "FMO_V1_BREAKPOINT_ATOMS",
+      "mmr_leaf": "a65eb0f0d576347d9b2f9e252d81770cd0b1ece37c0af4c2cd08801621d7cad0",
+      "mmr_size": 9,
+      "mmr_root_after": "d107aaae3264bf7396e73b3ab48f97394f98c29f752b1166ffcecadcc538f394",
+      "mmr_peaks_after": [
+        "55556fb32de26551eaf8658ee312efbf76b0b4eee436c24885ad3f07b889d744",
+        "a65eb0f0d576347d9b2f9e252d81770cd0b1ece37c0af4c2cd08801621d7cad0"
+      ]
     }
   ]
 }

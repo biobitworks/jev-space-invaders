@@ -1,0 +1,133 @@
+{
+  "breakpoint_id": "UFA-JEV-BP-0009",
+  "parent": "UFA-JEV-BP-0008",
+  "state": "ROM_BOUND_RUNTIME_PASS",
+  "project": "VITHIA_SPACE",
+  "created_utc": "2026-09-27T16:50:48+00:00",
+  "git_head_at_creation": "77a67bea7b20cbcdb7a3aecbadc31342d95d2621",
+  "root_kind": "FMO_V1_BREAKPOINT_ATOMS",
+  "bp_root": "76aecd6c04f0534b45d4f63006ae69455b082d8643bfa1147607ea3115efea1d",
+  "group_roots": {
+    "code": "29b158d38542c052db077ba37ca6eca609d8f7ae2b8d66d3f6f8d91fa73182f2",
+    "entry": "97f64fb2a113275e0d5e8d198ec62cfb614183968524007db6bdbe850e0ff17b",
+    "runtime": "1f3b4a38ef2e3a3b5aaa3b8e82ade617527ca9df6b932597269849352459d7c0",
+    "smoke": "d7a9dbbf60c2116364748d333fd98754f4c24811fe90a8384561fd2144454cde"
+  },
+  "atoms": [
+    {
+      "path": "evidence/runtime_v2/RUNTIME_SOURCE_DATASET_V2.json",
+      "kind": "RuntimeSourceDatasetFCO",
+      "group": "runtime",
+      "bytes": 3440,
+      "sha256": "e9eebbf6609780606900643ed97202850c39dde2323d044b5ef10f04a32a00b7",
+      "location": "public",
+      "fmo_leaf": "db311cd042c565eb027b1ec2923e85685c6b0728f45e0948e15b52b2b265ee48"
+    },
+    {
+      "path": "evidence/runtime_v2/RUNTIME_LEAVES.jsonl",
+      "kind": "RuntimeLeavesFCO",
+      "group": "runtime",
+      "bytes": 227013,
+      "sha256": "f5bd48b8b524441435ec1cd202ce713463aa6673ac0eadb336376b0dc31d1280",
+      "location": "public",
+      "fmo_leaf": "08f49735507641b1d870cf72f57d879fca5194b6020d8384dd04403ae6462253"
+    },
+    {
+      "path": "evidence/runtime_v2/SMOKE_DETERMINISM.json",
+      "kind": "EnvSmokeReceiptFCO",
+      "group": "smoke",
+      "bytes": 2738,
+      "sha256": "75cb658d20b4c40122d04d191c8a4ead8037ab2a7afa423b85b03312a56ad10e",
+      "location": "public",
+      "fmo_leaf": "d7a9dbbf60c2116364748d333fd98754f4c24811fe90a8384561fd2144454cde"
+    },
+    {
+      "path": "scripts/bp_runtime.py",
+      "kind": "CodeFCO",
+      "group": "code",
+      "bytes": 8497,
+      "sha256": "846e28c5033b99357a2004caa089ca818a78ec5410d52b1f716e3d67f136d9ea",
+      "location": "public",
+      "fmo_leaf": "ed4a298513ebddff4bbc71c3a4d34ce73b13b2bd618ffad826a8a89996d3b1da"
+    },
+    {
+      "path": "src/envcfg.py",
+      "kind": "CodeFCO",
+      "group": "code",
+      "bytes": 2688,
+      "sha256": "7b32f5565412029b39098f1d8314b4cfb63a14c723face31a44dcfa0229e1493",
+      "location": "public",
+      "fmo_leaf": "c9302ddb7d82e381ee78efca344885d5ae7227633abd1865a680fdef9523a95b"
+    },
+    {
+      "path": "src/fmo.py",
+      "kind": "CodeFCO",
+      "group": "code",
+      "bytes": 2539,
+      "sha256": "aa266307c2fe1a4a86df4066ae2635bc1068b1157a9b05ae90df206ec941fde1",
+      "location": "public",
+      "fmo_leaf": "21b2fdd7c5e2189484408078ddaa7e79188870390c7e3cbb851f271663f42fbb"
+    },
+    {
+      "path": "src/breakpoints.py",
+      "kind": "CodeFCO",
+      "group": "code",
+      "bytes": 4719,
+      "sha256": "9ba8554a140760ced785ffa0b51c29f3d9a666fbee40e7c004a0cb791d73a323",
+      "location": "public",
+      "fmo_leaf": "a8a31a018f630be95f9288e9ee746637cd67f4f7bdbb535a4ec279da2a68171c"
+    },
+    {
+      "path": "evidence/entry/ENTRY_RECEIPT_001.json",
+      "kind": "EntryReceiptFCO",
+      "group": "entry",
+      "bytes": 1519,
+      "sha256": "9f9ff8933e2f5dc97407e19da4db1ee940e2860890b503d756227bd1593bf7bd",
+      "location": "public",
+      "fmo_leaf": "97f64fb2a113275e0d5e8d198ec62cfb614183968524007db6bdbe850e0ff17b"
+    }
+  ],
+  "runtime_fmo_root": "cb74078eea22e71b3bf946f34e22f6f89ac62f0632e78c5457bb82e2095be006",
+  "rom_sha256": "7224b17462b992d67f4e06a3c85f269c9822b06df6015bf038b55f384ced0301",
+  "rom_md5": "72ffbef6504b75e69ee1045af9075f66",
+  "fcg_edges": [
+    {
+      "src": "RuntimeSourceDataset_V2",
+      "rel": "SUPERSEDES",
+      "dst": "VITHIA_SPACE_RUNTIME_SOURCE_FREEZE_20260927_001"
+    },
+    {
+      "src": "EnvSmokeReceipt",
+      "rel": "EXECUTED_WITH",
+      "dst": "RuntimeSourceDataset_V2"
+    },
+    {
+      "src": "EntryReceipt_001",
+      "rel": "REFERENCES",
+      "dst": "repo:biobitworks/jev-space-invaders"
+    }
+  ],
+  "executed": [
+    "hashed installed runtime files",
+    "hashed bundled ROM",
+    "determinism smoke x2 (spawned processes)"
+  ],
+  "observed": {
+    "determinism_gate": "PASS",
+    "seeds": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ]
+  },
+  "not_tested": [
+    "JEV",
+    "LLM baseline",
+    "full episodes"
+  ],
+  "next_action": "harness breakpoint: record_run() auto-push; scripted-policy games",
+  "claim_ceiling": "IDENTITY_AND_INCLUSION_ONLY; hashes do not establish correctness",
+  "signature_state": "NOT_SIGNED"
+}
