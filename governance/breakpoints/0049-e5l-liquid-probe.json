@@ -1,0 +1,69 @@
+{
+  "breakpoint_id": "UFA-JEV-BP-0049",
+  "parent": "UFA-JEV-BP-0048",
+  "state": "SETUP_SMOKE_NON_EXPERIMENTAL",
+  "project": "VITHIA_SPACE",
+  "created_utc": "2026-09-28T14:25:09+00:00",
+  "git_head_at_creation": "f457c23e1c57b1fb8bcc8241ea3283f72a7ab36c",
+  "root_kind": "FMO_V1_BREAKPOINT_ATOMS",
+  "bp_root": "3ed4357de68b192677a9d5f8bbac23590c8eec1c67e86a1191cf2a557a78c37d",
+  "group_roots": {
+    "e5l": "399f7b1a7f36225b5a983dad45edc6216bfdb8c339f8ad33b21c038a58efc16c"
+  },
+  "atoms": [
+    {
+      "path": "evidence/liquid/E5L_LATENCY_PROBE.json",
+      "kind": "E5LFCO",
+      "group": "e5l",
+      "bytes": 444,
+      "sha256": "87ca14d5b5278efc3a5e36cd4fe58820b321c94b39066e043af0fb2f97d226f3",
+      "location": "public",
+      "fmo_leaf": "36ec1c24bfe5f1e2b68fc6f0db07ccb3f9a8f69acbc6aeaa6f840a7937c4e310"
+    },
+    {
+      "path": "evidence/liquid/RUNTIME_MANIFEST.json",
+      "kind": "E5LFCO",
+      "group": "e5l",
+      "bytes": 958,
+      "sha256": "2dd72aaa49e56166d466695d21d22bf7c9f9cdb111add963fa58a1ebb570c77b",
+      "location": "public",
+      "fmo_leaf": "ccb429c828f35ce9294094f86a571358035fb10f8971c285ba339f1d51b17047"
+    }
+  ],
+  "experiment_id": "E5L_LIQUID_VS_VITA01_1P",
+  "pre_mmr_root": "9f41ea933fc66585efe681c17b23e5c5ceedd78cc77ed2fc77ccacaf7fc45375",
+  "stage": "E5L_PROBE",
+  "probe": {
+    "n": 20,
+    "p50_ms": 430.19,
+    "p95_ms": 727.09,
+    "valid_action_rate": 1.0,
+    "fallback_rate": 0.0,
+    "choices": [
+      "LEFT",
+      "LEFT",
+      "LEFT",
+      "LEFT",
+      "LEFT",
+      "LEFT",
+      "LEFT",
+      "LEFT",
+      "LEFT",
+      "LEFT",
+      "LEFT",
+      "LEFT",
+      "LEFT",
+      "LEFT",
+      "LEFT",
+      "LEFT",
+      "LEFT",
+      "LEFT",
+      "LEFT",
+      "LEFT"
+    ],
+    "label": "SETUP_SMOKE NON_EXPERIMENTAL",
+    "probabilities": "NOT_AVAILABLE"
+  },
+  "claim_ceiling": "IDENTITY_AND_INCLUSION_ONLY; hashes do not establish correctness",
+  "signature_state": "NOT_SIGNED"
+}

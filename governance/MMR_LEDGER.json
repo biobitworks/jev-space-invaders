@@ -755,6 +755,22 @@
         "026514586974a2fb18c9fefe6f92208e2008b44751f5380417c4129b185b831f",
         "75be8b4a1b7202ab2045b31e332e04471e0fa5d990c8d9c5097b1ed82456cb9d"
       ]
+    },
+    {
+      "seq": 48,
+      "bp_id": "UFA-JEV-BP-0049",
+      "bp_file": "governance/breakpoints/0049-e5l-liquid-probe.json",
+      "bp_file_sha256": "4016a97f8a8d103ff583f2be5da79437561b37f76d4851e2c6e26b61b3fbfb96",
+      "bp_root": "3ed4357de68b192677a9d5f8bbac23590c8eec1c67e86a1191cf2a557a78c37d",
+      "root_kind": "FMO_V1_BREAKPOINT_ATOMS",
+      "mmr_leaf": "ca98bf3a4f12c39a4b42be358a96e138f45fb988e34ac0a6e34c5207dbfda14d",
+      "mmr_size": 49,
+      "mmr_root_after": "9fab4145f9c9c5a25ca6c36f1f715bac6fe1fa28e8df31b4ab01ed9d22a04b47",
+      "mmr_peaks_after": [
+        "026514586974a2fb18c9fefe6f92208e2008b44751f5380417c4129b185b831f",
+        "75be8b4a1b7202ab2045b31e332e04471e0fa5d990c8d9c5097b1ed82456cb9d",
+        "ca98bf3a4f12c39a4b42be358a96e138f45fb988e34ac0a6e34c5207dbfda14d"
+      ]
     }
   ]
 }

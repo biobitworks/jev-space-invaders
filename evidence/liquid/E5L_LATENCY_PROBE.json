@@ -1,0 +1,31 @@
+{
+  "n": 20,
+  "p50_ms": 430.19,
+  "p95_ms": 727.09,
+  "valid_action_rate": 1.0,
+  "fallback_rate": 0.0,
+  "choices": [
+    "LEFT",
+    "LEFT",
+    "LEFT",
+    "LEFT",
+    "LEFT",
+    "LEFT",
+    "LEFT",
+    "LEFT",
+    "LEFT",
+    "LEFT",
+    "LEFT",
+    "LEFT",
+    "LEFT",
+    "LEFT",
+    "LEFT",
+    "LEFT",
+    "LEFT",
+    "LEFT",
+    "LEFT",
+    "LEFT"
+  ],
+  "label": "SETUP_SMOKE NON_EXPERIMENTAL",
+  "probabilities": "NOT_AVAILABLE"
+}
