@@ -1,0 +1,60 @@
+{
+  "breakpoint_id": "UFA-JEV-BP-0030",
+  "parent": "UFA-JEV-BP-0029",
+  "state": "ONTOLOGY_AND_RULE_FCO_FROZEN",
+  "project": "VITHIA_SPACE",
+  "created_utc": "2026-09-28T07:28:40+00:00",
+  "git_head_at_creation": "3e4a2e2a56b9ce077152c5b9411fc5b6625f03b8",
+  "root_kind": "FMO_V1_BREAKPOINT_ATOMS",
+  "bp_root": "2164e3c5a6a45eafd1516dc5cca07eb5cd48000a95fb8d3a017282afea2d4fbf",
+  "group_roots": {
+    "ontology": "a4603468e412765ca039b136a6d5c5ec51014f9f9536a3ed47828d03bd8d2e02",
+    "rules": "21dc8f078ec409959d4975a5155b07295639b4b5a59b53e2144ea1933f2c48ba"
+  },
+  "atoms": [
+    {
+      "path": "schemas/e1r/E1R_OBJECT_MODEL_V1.json",
+      "kind": "SchemaFCO",
+      "group": "ontology",
+      "bytes": 1370,
+      "sha256": "73db2f0da965d140b1d58da5bd77a05cc68ac076a5fcaa613a11db9a997ff597",
+      "location": "public",
+      "fmo_leaf": "a4603468e412765ca039b136a6d5c5ec51014f9f9536a3ed47828d03bd8d2e02"
+    },
+    {
+      "path": "data/e1r/E1R_RULE_FCO_REGISTRY_V1/rules.jsonl",
+      "kind": "RuleFCORegistry",
+      "group": "rules",
+      "bytes": 232374,
+      "sha256": "73958e05fbfd3223217a70284166cf44ffb7951773145bc0605ac7486f327475",
+      "location": "public",
+      "fmo_leaf": "e223c85bfa78e0dba915e9c97bb7271ce6ba37811e7c5b9fbe0832e30e9b0ab2"
+    },
+    {
+      "path": "data/e1r/E1R_RULE_FCO_REGISTRY_V1/MANIFEST.json",
+      "kind": "DatasetManifestFCO",
+      "group": "rules",
+      "bytes": 678,
+      "sha256": "229a0cf51cf96ecafcca5d09a659eb52001e30ae88a98e9eaf16da5a8ea37cf2",
+      "location": "public",
+      "fmo_leaf": "2c0251fabb7394b9b20202c64eed13c3ead72bdb36cdccfcdea89d9ca8bc6a54"
+    },
+    {
+      "path": "RULE_FCO_REGISTRY.json",
+      "kind": "RegistryFCO",
+      "group": "rules",
+      "bytes": 145,
+      "sha256": "8e10aeb2ab08417af9fa238454634265f319edf4244cff58c12e8f34135a81b3",
+      "location": "public",
+      "fmo_leaf": "f421a37113526085aa71fe8a07e77f4d532e62cac3acad7eedf2a97c7d721de7"
+    }
+  ],
+  "stage": "E1R_ONTOLOGY_RULE_FREEZE",
+  "rules": 256,
+  "rule_registry_root": "a3b17a0a623af2c91f428786a58fa3000724ad3944fce613be7283881a14d0e1",
+  "scientific_parent_commit": "4c1bbb19b89a7ee1e1dee662cfd0f227186ebafd",
+  "scientific_parent_breakpoint": "UFA-JEV-BP-0028",
+  "scientific_parent_mmr_root": "5f742663f7e0c12e100e292cc794eefb0360a068a5c20c2b1be019ace1cb298b",
+  "claim_ceiling": "IDENTITY_AND_INCLUSION_ONLY; hashes do not establish correctness",
+  "signature_state": "NOT_SIGNED"
+}

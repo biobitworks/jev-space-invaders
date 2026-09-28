@@ -1,0 +1,22 @@
+{
+  "claim_ceiling": "identity only",
+  "code_commit_at_generation": "3e4a2e2a56b9ce077152c5b9411fc5b6625f03b8",
+  "config": {
+    "boundary": "periodic",
+    "rules": 256
+  },
+  "dataset_id": "E1R_RULE_FCO_REGISTRY_V1",
+  "files": [
+    {
+      "bytes": 232374,
+      "path": "data/e1r/E1R_RULE_FCO_REGISTRY_V1/rules.jsonl",
+      "sha256": "73958e05fbfd3223217a70284166cf44ffb7951773145bc0605ac7486f327475"
+    }
+  ],
+  "fmo_root": "a3b17a0a623af2c91f428786a58fa3000724ad3944fce613be7283881a14d0e1",
+  "kind": "scientific_successor",
+  "license": "NOT_ESTABLISHED_FOR_E1R_SUCCESSOR",
+  "schema": "E1R_DATASET_MANIFEST_V1",
+  "source": "VITHIA_E1R",
+  "visibility": "public"
+}

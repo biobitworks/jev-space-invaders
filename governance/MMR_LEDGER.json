@@ -449,6 +449,23 @@
         "55f6d29ea129f774fd3ad8fb26d23fa5955c2f92ffc8781e0108ebb46b8d42c4",
         "29e5b30c037133f24407e2efa172cb3131b855c28a7cbf01573c004e0e67b512"
       ]
+    },
+    {
+      "seq": 29,
+      "bp_id": "UFA-JEV-BP-0030",
+      "bp_file": "governance/breakpoints/0030-e1r-rule-fcos.json",
+      "bp_file_sha256": "e58ad607e0a294413c7ff5d1ba4a182ddda5e074596fec66ece6210ee08ebcb2",
+      "bp_root": "2164e3c5a6a45eafd1516dc5cca07eb5cd48000a95fb8d3a017282afea2d4fbf",
+      "root_kind": "FMO_V1_BREAKPOINT_ATOMS",
+      "mmr_leaf": "0bf3efc210ceeb161d950e105c08474526387b07e06d3da8bebe155121caad36",
+      "mmr_size": 30,
+      "mmr_root_after": "92ec9a8b29420461d5f756c6ab871bf084b511ffe1241ad35ab63e72ada5fea1",
+      "mmr_peaks_after": [
+        "1303f691fcfdee6145f710febf29e2146b6ced8c2f89b643dd1e4371cafbabe7",
+        "0e7a36ac6f8774ee554efef13de36399f4f1888362f636fada0cece1ef85cd5e",
+        "55f6d29ea129f774fd3ad8fb26d23fa5955c2f92ffc8781e0108ebb46b8d42c4",
+        "6547c71465e8c8367d782e928a052cec7da24aa5ed0df80618a72b280aead2ad"
+      ]
     }
   ]
 }

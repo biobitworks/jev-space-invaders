@@ -1,0 +1,70 @@
+{
+  "edge_semantics": "declared relationship, not causality",
+  "edges": [
+    "DERIVED_FROM",
+    "EXECUTED_WITH",
+    "PERTURBED_BY",
+    "OBSERVED_AS",
+    "CONTEXTUALIZED_BY",
+    "COMPARED_WITH",
+    "INTERVENED_BY",
+    "RESTORED_UNDER",
+    "EQUIVALENT_UNDER",
+    "CONTRADICTED_BY",
+    "EVIDENCE_FOR",
+    "REPLAY_OF",
+    "SUPERSEDES"
+  ],
+  "objects": {
+    "DistributionFCO": [
+      "distribution_type",
+      "support",
+      "probabilities",
+      "evidence_refs"
+    ],
+    "InterventionFCO": [
+      "policy",
+      "budget",
+      "source_context_refs",
+      "changed_indices"
+    ],
+    "PerturbationFCO": [
+      "condition",
+      "orientation",
+      "severity",
+      "window",
+      "seed"
+    ],
+    "RestorationClassificationFCO": [
+      "R_EXACT",
+      "R_SHIFT",
+      "R_CONTEXT",
+      "R_FUNCTIONAL",
+      "R_TRAJECTORY"
+    ],
+    "RuleApplicationFCO": [
+      "rule_fco_ref",
+      "input_state_ref",
+      "context_ref",
+      "time",
+      "orientation",
+      "perturbation_condition",
+      "seed",
+      "output_state_ref"
+    ],
+    "RuleFCO": [
+      "rule_id",
+      "wolfram_rule_number",
+      "truth_table",
+      "canonical_rule_bytes_hex",
+      "rule_hash",
+      "kernel_version"
+    ],
+    "TrajectoryFCO": [
+      "trajectory_id",
+      "rule_refs",
+      "state_refs"
+    ]
+  },
+  "schema": "E1R_OBJECT_MODEL_V1"
+}
