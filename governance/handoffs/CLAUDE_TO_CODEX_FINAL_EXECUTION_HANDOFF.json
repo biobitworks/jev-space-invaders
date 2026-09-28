@@ -4,8 +4,8 @@
   "lineage_id": "UFA-JEV-COMP",
 
   "CANONICAL_BRANCH": "competition/final-integration-v01",
-  "CANONICAL_HEAD": "PENDING_THIS_COMMIT",
-  "ORIGIN_HEAD": "PENDING_THIS_PUSH",
+  "CANONICAL_HEAD": "2ad840bd91641495ddb3ce70bed0610bc624c7de",
+  "ORIGIN_HEAD": "2ad840bd91641495ddb3ce70bed0610bc624c7de",
   "note_on_canonical_branch": "competition/qualified-lineage-v01 is the parent lineage (verified MMR size 10 before this pass); this branch (final-integration-v01) is its admitted successor, 1 breakpoint ahead (UFA-JEV-COMP-BP-0011) after this preparation pass.",
 
   "WRITER_AUTHORITY": "TRANSFER_TO_CODEX_AFTER_VERIFICATION",
@@ -53,7 +53,7 @@
   "QUALIFIED_MMR_STATE": {
     "size_before_this_pass": 10,
     "size_after_this_pass": 11,
-    "root_after_this_pass": "PENDING_VERIFY_AFTER_COMMIT",
+    "root_after_this_pass": "a9f91de58e0abfd0c0943a30a5afdeb0fc39200efa1dc6d21c530385288acf4f",
     "verify_command": "python scripts/verify_competition_lineage.py"
   },
 
