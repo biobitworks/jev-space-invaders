@@ -1,0 +1,76 @@
+{
+  "breakpoint_id": "UFA-JEV-BP-0056",
+  "parent": "UFA-JEV-BP-0055",
+  "state": "RESULT_FAIL_TO_REJECT_H0",
+  "project": "VITHIA_SPACE",
+  "created_utc": "2026-09-28T14:45:05+00:00",
+  "git_head_at_creation": "a0af71395b6d683cdce3273b65c09cd23d056b1a",
+  "root_kind": "FMO_V1_BREAKPOINT_ATOMS",
+  "bp_root": "53274130b87ef8f79dee1a07e1419d335ff54a5bc4306b86f232e8d5e9639ac3",
+  "group_roots": {
+    "output_dataset": "fdbcc099fab24d87f3e2f987f097a82a0b9e4c5b96507adf09c326c7157e5276",
+    "receipt": "5d76a09f2683b90d98910de4d2a22a47e9bba75ec220b2234f4cd691750fe721"
+  },
+  "atoms": [
+    {
+      "path": "data/s01/S01_E5L_1P_LIQUID_RESULTS_V1/MANIFEST.json",
+      "kind": "DatasetManifestFCO",
+      "group": "output_dataset",
+      "bytes": 3109,
+      "sha256": "3ae987033e93c5c7f1657f3a775154d74142363999710318a52e33f54519d16c",
+      "location": "public",
+      "fmo_leaf": "11005a00c9bcefeb43457c0ac3e609addc606e2e25e981d9b283e320b9497007"
+    },
+    {
+      "path": "data/s01/S01_E5L_1P_LIQUID_RESULTS_V1/rows.jsonl",
+      "kind": "DatasetFileFCO",
+      "group": "output_dataset",
+      "bytes": 7585,
+      "sha256": "eb52a79cfe603461ba1751f2f6befc0822f12952842ef5371c929fc31e7fde2c",
+      "location": "public",
+      "fmo_leaf": "b02c7a29f61b06f3be6ce7bfa51d8ab666f11b1d2de017edbc05d335dca25a0d"
+    },
+    {
+      "path": "evidence/liquid/E5L_1P_EXPERIMENT_RECEIPT.json",
+      "kind": "ExperimentReceiptFCO",
+      "group": "receipt",
+      "bytes": 1549,
+      "sha256": "f24506b19217a3071d0022e64514c5c521e0c8f644c97e586fb471e181f6e7a6",
+      "location": "public",
+      "fmo_leaf": "5d76a09f2683b90d98910de4d2a22a47e9bba75ec220b2234f4cd691750fe721"
+    }
+  ],
+  "experiment_id": "E5L_LIQUID_VS_VITA01_1P",
+  "stage": "E5L_1P_RESULT",
+  "prereg": "UFA-JEV-BP-0050",
+  "pre_mmr_root": "b9f24956ea5484db5b74268e93838c7a677bb1e356af4d09a0eb046473172884",
+  "terminal_state": "FAIL_TO_REJECT_H0",
+  "analysis": {
+    "paired_score_differences_lv_minus_lq": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "mean_score_difference": 0.0,
+    "median_score_difference": 0.0,
+    "bootstrap_95ci_mean": [
+      0.0,
+      0.0
+    ],
+    "wilcoxon_two_sided_p": 1.0,
+    "minimum_attainable_two_sided_p_n5": 0.0625,
+    "claim_state": "FAIL_TO_REJECT_H0",
+    "net_time_saved_ms_lq_minus_lv_per_seed": [
+      135.45000000000005,
+      7.479999999999961,
+      37.129999999999995,
+      -390.28000000000003,
+      135.08000000000004
+    ],
+    "quality_source": "episode score only; E4C remains BLOCKED_OR_UNDERPOWERED; no E4C action-quality claim"
+  },
+  "claim_ceiling": "IDENTITY_AND_INCLUSION_ONLY; hashes do not establish correctness",
+  "signature_state": "NOT_SIGNED"
+}

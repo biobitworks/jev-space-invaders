@@ -1,0 +1,106 @@
+{
+  "dataset_id": "S01_E5L_1P_LIQUID_RESULTS_V1",
+  "kind": "output",
+  "schema": "episode-level LiquidAI raw vs Vita01-context rows",
+  "source": "E5L_LIQUID_1P",
+  "license": "CC-BY-4.0",
+  "generation_code": [
+    {
+      "path": "src/liquid_client.py",
+      "sha256": "ab2977d777a6f5635ee0fbb254061c7017608fa898d557a697194faef3bdb961"
+    },
+    {
+      "path": "scripts/liquid_runtime.py",
+      "sha256": "46abd2a73264f0ecc9592355467ef344f6d150ef6f64335908f3e22fb67099fd"
+    },
+    {
+      "path": "experiments/e5l_episodes.py",
+      "sha256": "262131f67d46356d2b92f715ebacf157b092e4ef5c8d2bd8d8d1f29d1249c0e6"
+    },
+    {
+      "path": "scripts/run_e5l.py",
+      "sha256": "75fe6f63839427c97df6f38b6306a6708a2d163bca9ccb4f115bb5a5c89f2bf0"
+    },
+    {
+      "path": "experiments/e5_episodes.py",
+      "sha256": "fa2c26460de91a01f127d912e0374d65b726c4e66b0e09038ad10f2420bbdb59"
+    },
+    {
+      "path": "experiments/e4b_ablation.py",
+      "sha256": "e30d34d1525c45f1dcada9be3d8aefaa25e4de62a5fcf86d70a8bb135798a3e6"
+    },
+    {
+      "path": "experiments/e4a_snapshots.py",
+      "sha256": "e473901844cc12b0b53e4f920873a26f90384e59a6f60a8171e86f29a4ed6c80"
+    },
+    {
+      "path": "src/perception.py",
+      "sha256": "fcd5a53760d33c910052a8b2562d2b49be2ab36232b709c3a33d18a785ccfb41"
+    },
+    {
+      "path": "src/envcfg.py",
+      "sha256": "7b32f5565412029b39098f1d8314b4cfb63a14c723face31a44dcfa0229e1493"
+    },
+    {
+      "path": "src/s01/protocol.py",
+      "sha256": "f1237bd1b6dbc4bd75783ba3b3ec1d09bfefd8c06687d45566c559083ba24e1a"
+    }
+  ],
+  "code_commit_at_generation": "a0af71395b6d683cdce3273b65c09cd23d056b1a",
+  "config": {
+    "arms": {
+      "LQ_RAW": "A0_RAW",
+      "LV_VITA01": "A5_VITA01_FULL"
+    },
+    "max_decisions": 100,
+    "analysis": {
+      "paired_score_differences_lv_minus_lq": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "mean_score_difference": 0.0,
+      "median_score_difference": 0.0,
+      "bootstrap_95ci_mean": [
+        0.0,
+        0.0
+      ],
+      "wilcoxon_two_sided_p": 1.0,
+      "minimum_attainable_two_sided_p_n5": 0.0625,
+      "claim_state": "FAIL_TO_REJECT_H0",
+      "net_time_saved_ms_lq_minus_lv_per_seed": [
+        135.45000000000005,
+        7.479999999999961,
+        37.129999999999995,
+        -390.28000000000003,
+        135.08000000000004
+      ],
+      "quality_source": "episode score only; E4C remains BLOCKED_OR_UNDERPOWERED; no E4C action-quality claim"
+    }
+  },
+  "seeds": {
+    "episodes": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ]
+  },
+  "files": [
+    {
+      "path": "data/s01/S01_E5L_1P_LIQUID_RESULTS_V1/rows.jsonl",
+      "bytes": 7585,
+      "sha256": "eb52a79cfe603461ba1751f2f6befc0822f12952842ef5371c929fc31e7fde2c"
+    }
+  ],
+  "fmo_root": "d9b47060411eb12c730728748976e782698747cdbaffed6875f6cf1f208636b9",
+  "visibility": "public",
+  "parent_evidence": [
+    "UFA-JEV-BP-0050",
+    "evidence/liquid/RUNTIME_MANIFEST.json"
+  ],
+  "claim_ceiling": "development comparator only; NON_TYPESAFE_JEV; NON_OPENJEV; n=5 descriptive/fail-to-reject only"
+}

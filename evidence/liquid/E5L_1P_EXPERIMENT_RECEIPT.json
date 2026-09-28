@@ -1,0 +1,53 @@
+{
+  "schema": "E5L_EXPERIMENT_RECEIPT_V1",
+  "experiment_id": "E5L_LIQUID_VS_VITA01_1P",
+  "prereg_breakpoint": "UFA-JEV-BP-0050",
+  "provider": "liquid",
+  "served_model": "liquid-vithia-1.2b:latest",
+  "input_contracts": {
+    "LQ_RAW": "A0_RAW",
+    "LV_VITA01": "A5_VITA01_FULL"
+  },
+  "output_dataset": {
+    "dataset_id": "S01_E5L_1P_LIQUID_RESULTS_V1",
+    "fmo_root": "d9b47060411eb12c730728748976e782698747cdbaffed6875f6cf1f208636b9",
+    "rows_sha256": "eb52a79cfe603461ba1751f2f6befc0822f12952842ef5371c929fc31e7fde2c",
+    "rows": 10
+  },
+  "analysis": {
+    "paired_score_differences_lv_minus_lq": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "mean_score_difference": 0.0,
+    "median_score_difference": 0.0,
+    "bootstrap_95ci_mean": [
+      0.0,
+      0.0
+    ],
+    "wilcoxon_two_sided_p": 1.0,
+    "minimum_attainable_two_sided_p_n5": 0.0625,
+    "claim_state": "FAIL_TO_REJECT_H0",
+    "net_time_saved_ms_lq_minus_lv_per_seed": [
+      135.45000000000005,
+      7.479999999999961,
+      37.129999999999995,
+      -390.28000000000003,
+      135.08000000000004
+    ],
+    "quality_source": "episode score only; E4C remains BLOCKED_OR_UNDERPOWERED; no E4C action-quality claim"
+  },
+  "terminal_state": "FAIL_TO_REJECT_H0",
+  "code_commit": "a0af71395b6d683cdce3273b65c09cd23d056b1a",
+  "not_tested": [
+    "TypeSafe JEV",
+    "OpenJev",
+    "governed DeltaG*",
+    "2P Liquid successor"
+  ],
+  "e4c_quality": "BLOCKED_OR_UNDERPOWERED; not cited as action-quality evidence",
+  "signature_state": "NOT_SIGNED"
+}
