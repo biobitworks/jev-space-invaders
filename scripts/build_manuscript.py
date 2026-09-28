@@ -44,13 +44,13 @@ fig("F7_e4a_pipeline","E4A boundary; downstream System-1 is not tested",".86"),
 r"\section{Post-confirmatory statistics}% CLAIM:STAT::SECONDARY",
 f"Secondary analyses use frozen outputs and do not alter confirmatory states. E3 paired Cohen d-z is {st['E3']['H3b']['paired_cohen_dz']:.3f}; E3 abstention fraction is {st['E3']['abstention']['fraction']:.3f}.",
 r"\section{Reproducibility and custody}% CLAIM:GOV::MMR24",
-f"The publication evidence lock references {lock['scientific_breakpoint']}, scientific MMR size {lock['scientific_mmr_size']}, root \\texttt{{{lock['scientific_mmr_root']}}}. Manuscript evolution uses a distinct publication MMR.",
+f"The publication evidence lock references {lock['scientific_breakpoint']}, scientific MMR size {lock['scientific_mmr_size']}, root {lock['scientific_mmr_root'][:12]}...{lock['scientific_mmr_root'][-6:]}. The complete root is retained in the governed evidence lock and supplement. Manuscript evolution uses a distinct publication MMR.",
 fig("F8_breakpoint_timeline","Ordered scientific breakpoint lineage",".92"),
 r"\section{Discussion}The results support a narrow architectural conclusion: exact evidence can remain immutable while deterministic rules produce versioned context and uncertainty remains explicit. Deterministic evidence handling does not imply a deterministic downstream model or world. Artificial Infinite Systems is structural rather than literal: every committed state is finite, while successor states can extend without rewriting predecessors.",
 r"\section{Limitations}% CLAIM:LIMIT::DELTAGSTAR"+"\nDeltaGStar is NOT\\_COMPUTED; private DeltaGStar and Anticube mathematics are not disclosed and no surrogate is labeled DeltaGStar.",
 r"% CLAIM:LIMIT::CROSSHOST"+"\nCross-host replication is DEFERRED\\_NOT\\_FAILED because magicPRObox was unavailable. E3 is Level-2 replay. Hosted JEV, OpenJEV, System One, Liquid, and Ollama/Ollarma utility are NOT\\_TESTED. All evidence is simulated; biological transfer is NOT\\_TESTED. Signatures are NOT\\_SIGNED.",
 r"\section{Conclusion}0-Vita-1 provides a testable boundary between immutable evidence, deterministic context compilation, explicit uncertainty, downstream decisions, and successor observations. v0.1.0 establishes the substrate through E4A while preserving negative, null, partial, abstention, and not-tested states.",
-r"\begin{thebibliography}{3}",r"\bibitem{ale} Bellemare et al. The Arcade Learning Environment. JAIR 47 (2013). doi:10.1613/JAIR.3912.",r"\bibitem{cellpylib} Antunes. CellPyLib. JOSS 6(67) (2021). doi:10.21105/joss.03608.",r"\bibitem{pysat} Ignatiev et al. PySAT. SAT 2018. doi:10.1007/978-3-319-94144-8_26.",r"\end{thebibliography}",r"\end{document}"
+r"\begin{thebibliography}{3}",r"\bibitem{ale} Bellemare et al. The Arcade Learning Environment. JAIR 47 (2013). doi:10.1613/JAIR.3912.",r"\bibitem{cellpylib} Antunes. CellPyLib. JOSS 6(67) (2021). doi:10.21105/joss.03608.",r"\bibitem{pysat} Ignatiev et al. PySAT. SAT 2018. doi:10.1007/978-3-319-94144-8\_26.",r"\end{thebibliography}",r"\end{document}"
 ]
 main="\n".join(parts)+"\n"; (M/"main.tex").write_text(main)
 bindings=[]
