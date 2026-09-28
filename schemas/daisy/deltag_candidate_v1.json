@@ -1,0 +1,12 @@
+{
+  "definition": "PUBLIC_CANDIDATE_DELTAGSTAR_V1",
+  "not": "the governed/private \u0394G* (NOT_COMPUTED in this repository)",
+  "U_star": "1 if chosen action has no surviving continuation to the oracle horizon else 0",
+  "H_norm": "Shannon entropy of returned decider probabilities / log2(|legal actions|)",
+  "tau": 1.0,
+  "G_star": "U_star - tau*H_norm",
+  "reference": "uniform-random decider on the same state",
+  "delta_G_star": "G_star(decider) - G_star(reference)",
+  "requires": "real decider probabilities; otherwise NOT_COMPUTED",
+  "claim_ceiling": "dimensionless diagnostic; no thermodynamic claim"
+}

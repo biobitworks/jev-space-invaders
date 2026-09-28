@@ -1,0 +1,41 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "DAISY_1P_ROW_V1",
+  "type": "object",
+  "required": [
+    "corpus_id",
+    "split",
+    "state_id",
+    "action",
+    "legal_actions"
+  ],
+  "not": {
+    "anyOf": [
+      {
+        "required": [
+          "opponent_action"
+        ]
+      },
+      {
+        "required": [
+          "relative_payoff"
+        ]
+      },
+      {
+        "required": [
+          "vita_action"
+        ]
+      },
+      {
+        "required": [
+          "recommended_action"
+        ]
+      },
+      {
+        "required": [
+          "recommended_move"
+        ]
+      }
+    ]
+  }
+}

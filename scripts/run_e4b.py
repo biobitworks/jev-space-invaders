@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""E4B_LATENCY_DECISION and E4C_QUALITY stages. Reuses the sealed scripts/run_experiment.py (imported, never modified) and adds:
+"""E4B_LATENCY_DECISION and E4C_EXHAUSTIVE_REACHABLE_ACTION_GRAPH stages. Reuses the sealed scripts/run_experiment.py (imported, never modified) and adds:
 runtime-identity atoms, the OPENJEV_LOADED gate, and a code/runtime atom check before execution.
 
   python scripts/run_e4b.py --stage prereg  --push      # E4B freeze (needs OPENJEV_LOADED=YES)
@@ -45,11 +45,11 @@ def check_frozen():
 
 
 def e4c(stage, push):
-    from experiments import e4c_quality as q
+    from experiments import e4c_graph as q
     code = [rx.atom_record(x, "CodeFCO", "e4c_code") for x in q.CODE]
-    doc = rx.atom_record("docs/prereg/E4C_QUALITY_CONSTRUCTION.md", "PreregistrationFCO", "prereg")
+    doc = rx.atom_record("docs/prereg/E4C_EXHAUSTIVE_REACHABLE_ACTION_GRAPH.md", "PreregistrationFCO", "prereg")
     if stage == "e4c-protocol":
-        out = rx.create_breakpoint("e4c-quality-protocol", "PROTOCOL_FROZEN_PANEL_NOT_BUILT", [doc, *code],
+        out = rx.create_breakpoint("e4c-graph-protocol", "PROTOCOL_FROZEN_PANEL_NOT_BUILT", [doc, *code],
                                    {"experiment_id": q.EXP, "stage": "E4C_PROTOCOL", "pre_mmr_root": rx.pre_mmr(),
                                     "note": "construction parameters frozen before any candidate state is generated"})
         paths = ["governance"]
@@ -67,7 +67,7 @@ def e4c(stage, push):
         man = q.build_input()
         atoms = rx.dataset_atoms(q.IN_ID, "input_dataset")
         state = "PANEL_FROZEN_GATE_PASS_NO_MODEL_CALLS" if man["gate"] == "PASS" else "BLOCKED_OR_UNDERPOWERED"
-        out = rx.create_breakpoint("e4c-quality-panel", state, atoms,
+        out = rx.create_breakpoint("e4c-graph-panel", state, atoms,
                                    {"experiment_id": q.EXP, "stage": "E4C_PANEL", "protocol_breakpoint": fz["breakpoint_id"],
                                     "pre_mmr_root": rx.pre_mmr(), "gate": man["gate"], "input_dataset": {"dataset_id": q.IN_ID, "fmo_root": man["fmo_root"]}})
         paths = ["governance", "data/s01"]
