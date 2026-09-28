@@ -288,6 +288,43 @@
         "notes": "M3 local-Ollama baseline (llama3.2:3b); no hosted provider key available, operator-directed substitute for System One adapter path",
         "trace_file": "runs/run_0007_seed2_ollama.jsonl.gz",
         "trace_sha256": "d23473ba3be9334a5afa7dca6bb9d142e0b72642ba0cb8212153bb409b46ff01"
+      },
+      {
+        "run": 8,
+        "seed": 3,
+        "score": 270.0,
+        "steps": 538,
+        "frames": 2151,
+        "lives_lost": 3,
+        "terminated": true,
+        "truncated": false,
+        "model_calls": 538,
+        "latency_ms_p50": 565.094,
+        "latency_ms_p95": 791.329,
+        "latency_ms_total": 301031.95,
+        "errors_by_status": {},
+        "retries": 0,
+        "fallback_actions": 0,
+        "wall_clock_s": 302.92,
+        "served_model": "llama3.2:3b",
+        "provider": "ollama",
+        "requested_model": "llama3.2:3b",
+        "state_encoding": "perception_v1",
+        "episode_mmr_root": "cfad1da9fbbf264b1914c01e2c9bc479a31a3823f1d60fbd27d1720148627ccc",
+        "episode_mmr_size": 538,
+        "episode_mmr_protocol": "leaf = SHA256('EPISODE_LEAF_V1' 0 t 0 content_id(record without leaf, ms)); MMR per docs/BREAKPOINT_PROTOCOL.md",
+        "runtime": {
+          "python": "3.13.9",
+          "platform": "macOS-26.6.2-arm64-arm-64bit-Mach-O",
+          "ale_py": "0.12.1",
+          "gymnasium": "1.3.0",
+          "numpy": "2.5.3"
+        },
+        "input_tokens": 241841,
+        "output_tokens": 4842,
+        "notes": "M3 local-Ollama baseline (llama3.2:3b); no hosted provider key available, operator-directed substitute for System One adapter path",
+        "trace_file": "runs/run_0008_seed3_ollama.jsonl.gz",
+        "trace_sha256": "1e954c7b9d1d2be84d8369baf1727c2cb5909b4273a22d39d30b0801bf4cef41"
       }
     ]
   }
