@@ -141,6 +141,24 @@
       "parent_root": "5d3da0259231307f9c1d1e309055c4e93c93e13060e927393b8332e0a807256b",
       "root_kind": "FMO_V1_BREAKPOINT_ATOMS",
       "seq": 7
+    },
+    {
+      "seq": 8,
+      "bp_id": "UFA-JEV-COMP-BP-0009",
+      "bp_file": "governance/competition/breakpoints/0009-concurrent-writer-collision-receipt.json",
+      "bp_file_sha256": "5bdd058d3052ba78be37c03cac2b3e0b101c524883b7f8881100b10cb0936382",
+      "bp_root": "1190037922f1cbe49bd40cffe74a3d7c0c045fa4c40b9a327eb2e744555af265",
+      "branch": "competition/final-integration-v01",
+      "lineage_id": "UFA-JEV-COMP",
+      "parent_root": "c930d2260ea6a1090f97c79c1b0a96be38996ed7c81b2da08570ed2b37079e31",
+      "root_kind": "FMO_V1_BREAKPOINT_ATOMS",
+      "mmr_leaf": "ff06f76e0b6f3e72cdfaa8e9e02fff6abf5f0a26370b0a9f90ed966d1465499e",
+      "mmr_size": 9,
+      "mmr_root_after": "6b7a677736201583751a64e0775e5fe83aa3307acb64f716e7d3074e149e9bab",
+      "mmr_peaks_after": [
+        "c930d2260ea6a1090f97c79c1b0a96be38996ed7c81b2da08570ed2b37079e31",
+        "ff06f76e0b6f3e72cdfaa8e9e02fff6abf5f0a26370b0a9f90ed966d1465499e"
+      ]
     }
   ],
   "lineage_id": "UFA-JEV-COMP",

@@ -1,0 +1,50 @@
+{
+  "schema": "CONCURRENT_WRITER_COLLISION_RECEIPT_V1",
+  "lineage_id": "UFA-JEV-COMP",
+  "created_utc": "2026-09-28T20:45:00Z",
+  "purpose": "Document observed concurrent-writer collisions across this repo's branches before proceeding with final-integration work, per operator instruction to record this before any further competition-lineage mutation.",
+  "incidents": [
+    {
+      "id": "LEGACY_BP0058_DOUBLE_ALLOCATION",
+      "branch_lineage": "vithia-space -> openjev/kaggle-systemone-v01, magicstudio/sponsor-ollama-adapter-20260928",
+      "description": "Two distinct commits, 50 seconds apart, both titled 'UFA-JEV-BP-0058', same git identity (biobitworks <byron@biobitworks.com>).",
+      "evidence": [
+        "98da06c96ff8ba09221b932ccff37d3ef222e6d0 2026-09-28T08:19:03-07:00 chore: freeze System One runtime (UFA-JEV-BP-0058)",
+        "71f23686b28d223b2b9fa953a9b9c0e6363baee1 2026-09-28T08:18:13-07:00 chore: freeze System One runtime (UFA-JEV-BP-0058)"
+      ],
+      "acknowledged_by_other_writer": "6c56e6e007bd3e83fdeeb01cd0d2ed6620db90b4 'fix: preserve BP0059 race and reconcile at BP0060'",
+      "classification": "UNQUALIFIED_LEGACY_ID_COLLISION",
+      "resolution": "Not renumbered (historical states remain immutable). Both branches are treated as READ_ONLY_EVIDENCE_BRANCHES per operator instruction; not merged into the qualified competition lineage."
+    },
+    {
+      "id": "QUALIFIED_LINEAGE_LIVE_PARENT_DRIFT",
+      "branch_lineage": "competition/qualified-lineage-v01",
+      "description": "Operator's stated EXPECTED_PARENT_HEAD (2e8b5c060873b75e7632133901bb8723215deb88, UFA-JEV-COMP-BP-0004) had already been superseded by the time this successor branch was created. A concurrent writer pushed UFA-JEV-COMP-BP-0005..0008 (real Mitosis directive/retrieval + Tenki sandbox run) between the independent audit that confirmed BP-0004 and this branch's creation, moving the actual head to d1123688c9b3995e499bbecb57f67e046d5c93ba.",
+      "evidence": {
+        "expected_parent_head": "2e8b5c060873b75e7632133901bb8723215deb88",
+        "actual_head_at_branch_creation": "d1123688c9b3995e499bbecb57f67e046d5c93ba",
+        "intervening_commits": [
+          "5aa85a8 2026-09-28T09:20:47-07:00 competition: prepare guarded resubmission path (UFA-JEV-COMP-BP-0005)",
+          "bc2faa3 2026-09-28T13:28:08-07:00 sponsors: verify Tenki code review and auth (UFA-JEV-COMP-BP-0006)",
+          "37eb151 2026-09-28T13:30:34-07:00 sponsors: persist Mitosis demo directive (UFA-JEV-COMP-BP-0007)",
+          "d112368 2026-09-28T13:38:20-07:00 sponsors: seal Tenki Mitosis-fed run (UFA-JEV-COMP-BP-0008)"
+        ]
+      },
+      "classification": "STALE_EXPECTED_HEAD_NOT_A_COLLISION",
+      "note": "The qualified lineage's own sequential numbering (0001..0008) remained internally consistent throughout; this was a stale expectation in the operator's prompt, not an actual ID collision. Caught by re-fetching origin before branching rather than trusting the prompt's stated head, per this session's established discipline.",
+      "risk_avoided": "Had this branch been created from the stale 2e8b5c0 parent without re-verifying, any new breakpoint sealed here would have recorded an incorrect parent_root, silently forking the qualified MMR chain from a superseded state.",
+      "resolution": "Branched from the verified actual head (d112368) instead. governance/multimodel/STATUS.json's next_action ('push BP0008 before any Tenki teardown; then record video and execute Mitosis load-bearing ablation') confirms a live Tenki sandbox (session 01a0e9b9-dbf4-77ff-8d28-2e057cb00cbc, sticky=true) and an active Mitosis memory loop are still in flight. This session will not touch Mitosis or Tenki to avoid duplicating that active process."
+    }
+  ],
+  "active_process_state_at_creation": {
+    "tenki_session_id": "01a0e9b9-dbf4-77ff-8d28-2e057cb00cbc",
+    "tenki_session_state": "RUNNING",
+    "tenki_teardown_state": "HELD_NO_TERMINATE_CALL",
+    "mitosis_office_id": "b236ff3a-8250-4ac5-bda2-4fc35c43d35f",
+    "mitosis_office_name": "vithia-space-jev-20260928",
+    "mitosis_load_bearing_ablation": "NOT_EXECUTED_OWNED_BY_OTHER_WRITER"
+  },
+  "conclusion": "Multiple concurrent writers, same git identity, are active on this repo across at least 4 branch lineages. Breakpoint-numbering collisions have occurred in the legacy (unqualified) chain but not in the qualified UFA-JEV-COMP chain. This branch (competition/final-integration-v01) proceeds only on work not currently owned by the in-flight Mitosis/Tenki session: 1P/2P readiness, realtime/cost benchmark, and red-team review.",
+  "claim_ceiling": "IDENTITY_AND_INCLUSION_ONLY; hashes do not establish correctness",
+  "signature_state": "NOT_SIGNED"
+}

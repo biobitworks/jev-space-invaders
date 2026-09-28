@@ -1,0 +1,32 @@
+{
+  "schema": "UFA_JEV_QUALIFIED_BREAKPOINT_V1",
+  "lineage_id": "UFA-JEV-COMP",
+  "branch": "competition/final-integration-v01",
+  "breakpoint_id": "UFA-JEV-COMP-BP-0009",
+  "state": "CONCURRENT_WRITER_COLLISION_DOCUMENTED",
+  "project": "VITHIA_SPACE",
+  "created_utc": "2026-09-28T20:45:05+00:00",
+  "git_head_at_creation": "d1123688c9b3995e499bbecb57f67e046d5c93ba",
+  "root_kind": "FMO_V1_BREAKPOINT_ATOMS",
+  "bp_root": "1190037922f1cbe49bd40cffe74a3d7c0c045fa4c40b9a327eb2e744555af265",
+  "breakpoint_root": "1190037922f1cbe49bd40cffe74a3d7c0c045fa4c40b9a327eb2e744555af265",
+  "parent_root": "c930d2260ea6a1090f97c79c1b0a96be38996ed7c81b2da08570ed2b37079e31",
+  "group_roots": {
+    "governance": "5ec5162ec944f43f9bcce0a9d9f5ecb2f4adb28577dd14f9ab3316c99edce0f9"
+  },
+  "atoms": [
+    {
+      "path": "evidence/competition/governance/CONCURRENT_WRITER_COLLISION_RECEIPT.json",
+      "kind": "CollisionReceiptFCO",
+      "group": "governance",
+      "bytes": 4741,
+      "sha256": "d8eddb28bc38f4ce9ed54863814ebf58b3020aaf36dc3daf82fc52c74eca22b1",
+      "location": "public",
+      "fmo_leaf": "5ec5162ec944f43f9bcce0a9d9f5ecb2f4adb28577dd14f9ab3316c99edce0f9"
+    }
+  ],
+  "historical_mutation_performed": false,
+  "mmr_reconciliation_performed": false,
+  "claim_ceiling": "IDENTITY_AND_INCLUSION_ONLY; hashes do not establish correctness",
+  "signature_state": "NOT_SIGNED"
+}
