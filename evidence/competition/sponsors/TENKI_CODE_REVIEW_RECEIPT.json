@@ -1,0 +1,23 @@
+{
+  "claim": "Tenki Code Review was used on public PR #1 and approved that PR. This receipt does not claim Tenki Sandbox executed a Vithia-Space run.",
+  "classification": "TENKI_PUBLIC_CODE_REVIEW_EXECUTED",
+  "created_utc": "2026-09-28T20:27:16+00:00",
+  "lineage_id": "UFA-JEV-COMP",
+  "load_bearing_runtime_integration": false,
+  "pull_request": 1,
+  "pull_request_head_sha": "d45a25131518381415263c81c395ea7bc4c48042",
+  "pull_request_title": "Intake: automata, Minesweeper, and Library of Babel MVP sources",
+  "pull_request_url": "https://github.com/biobitworks/jev-space-invaders/pull/1",
+  "repository": "biobitworks/jev-space-invaders",
+  "review": {
+    "author": "tenki-reviewer",
+    "body": "",
+    "id": "PRR_kwDOUuZx2c8AAAABPbs_4g",
+    "state": "APPROVED",
+    "submitted_at": "2026-09-27T14:18:42Z"
+  },
+  "schema": "TENKI_CODE_REVIEW_RECEIPT_V1",
+  "signature_state": "NOT_SIGNED",
+  "tenki_code_review_used": true,
+  "tenki_sandbox_runtime": "NOT_EXECUTED_AT_THIS_RECEIPT"
+}

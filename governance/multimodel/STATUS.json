@@ -17,10 +17,10 @@
     ]
   },
   "failure": null,
-  "head_before_commit": "2e8b5c060873b75e7632133901bb8723215deb88",
-  "latest_breakpoint": "UFA-JEV-COMP-BP-0005",
-  "latest_mmr_root": "30304a0a1f8eeea703bc570ec13c9c6f97891dbb2cf622927b258200389d5cd0",
-  "next_action": "human records/uploads demo and supplies actual URL; verify accepted resubmission path; then create a new immutable successor and only then submit",
+  "head_before_commit": "5aa85a843d370204a68a279578f7632e827fc1c7",
+  "latest_breakpoint": "UFA-JEV-COMP-BP-0006",
+  "latest_mmr_root": "ccaf186be4f7b1a2fbd5a951f73b6c51ec775f1f7efb0ac4d7c00aff1cbf44db",
+  "next_action": "create governed Tenki sandbox; consume Mitosis evidence; retrieve receipts; seal/push before sandbox pause/termination",
   "schema": "VITHIA_MULTIMODEL_STATUS_V1",
-  "stage": "POST_UPLOAD_RESUBMISSION_PROCEDURE_PREPARED"
+  "stage": "TENKI_CODE_REVIEW_AND_SPONSOR_AUTH_VERIFIED"
 }

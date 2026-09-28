@@ -1,0 +1,14 @@
+{
+  "created_utc": "2026-09-28T20:27:16+00:00",
+  "final_sponsor_boolean_state": {
+    "mitosis": false,
+    "tenki": false
+  },
+  "lineage_id": "UFA-JEV-COMP",
+  "mitosis_auth": "PASS",
+  "mitosis_memory_integration": "NOT_EXECUTED",
+  "next_action": "governed Tenki Sandbox execution consuming Mitosis evidence; commit/push receipt before sandbox pause/termination",
+  "schema": "SPONSOR_STATUS_V2",
+  "tenki_code_review": "EXECUTED_SUPPORTED",
+  "tenki_sandbox": "NOT_EXECUTED"
+}

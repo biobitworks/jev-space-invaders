@@ -87,6 +87,24 @@
       "parent_root": "e07cb2b1ccdb295b922fc55984551b66300875ebda56f39df95c88a9f9cfeb83",
       "root_kind": "FMO_V1_BREAKPOINT_ATOMS",
       "seq": 4
+    },
+    {
+      "bp_file": "governance/competition/breakpoints/0006-tenki-code-review-sponsor-auth.json",
+      "bp_file_sha256": "db7e633e2773c067f450763106f9086f3106fe20276ce1f3bbe6353b7b6e9e29",
+      "bp_id": "UFA-JEV-COMP-BP-0006",
+      "bp_root": "b31471c72f0a171fe0aac862464d216286c42e0ed7e4cf46d538b7e3ff52d8bf",
+      "branch": "competition/qualified-lineage-v01",
+      "lineage_id": "UFA-JEV-COMP",
+      "mmr_leaf": "666b2c17d87351b98baae1da03e9479437b1ae58015e0cf3e9b378606b1374e9",
+      "mmr_peaks_after": [
+        "e07cb2b1ccdb295b922fc55984551b66300875ebda56f39df95c88a9f9cfeb83",
+        "b76967c3247b2ece4baaa937331e7d51669c3b38177fafe78f6409d96fb90761"
+      ],
+      "mmr_root_after": "ccaf186be4f7b1a2fbd5a951f73b6c51ec775f1f7efb0ac4d7c00aff1cbf44db",
+      "mmr_size": 6,
+      "parent_root": "30304a0a1f8eeea703bc570ec13c9c6f97891dbb2cf622927b258200389d5cd0",
+      "root_kind": "FMO_V1_BREAKPOINT_ATOMS",
+      "seq": 5
     }
   ],
   "lineage_id": "UFA-JEV-COMP",

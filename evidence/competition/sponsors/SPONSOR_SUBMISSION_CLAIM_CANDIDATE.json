@@ -1,0 +1,22 @@
+{
+  "created_utc": "2026-09-28T20:27:16+00:00",
+  "current_form_boolean_policy": {
+    "mitosis": false,
+    "reason": "Existing governance requires load-bearing execution receipts before sponsor-used booleans are upgraded.",
+    "tenki": false
+  },
+  "lineage_id": "UFA-JEV-COMP",
+  "mitosis": {
+    "authentication": "PASS",
+    "candidate_text": "Mitosis Cortex authentication is verified for the dedicated Vithia-Space office; memory-fed execution is governed separately.",
+    "memory_runtime": "NOT_EXECUTED"
+  },
+  "next_upgrade_gate": "Execute the governed Tenki Sandbox + Mitosis memory-fed integration, preserve receipts, seal/push before sandbox teardown.",
+  "schema": "SPONSOR_SUBMISSION_CLAIM_CANDIDATE_V1",
+  "submission_mutation_performed": false,
+  "tenki": {
+    "candidate_text": "Tenki Code Review reviewed the public Vithia-Space repository and approved PR #1; sandbox execution is governed separately.",
+    "code_review": "SUPPORTED_EXECUTED",
+    "sandbox_runtime": "NOT_EXECUTED"
+  }
+}
