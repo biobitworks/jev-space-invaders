@@ -705,6 +705,23 @@
         "4e309638f9312ead5a695f1913df60f966a0ea3e6f0e8eeb7ec6e6048beb4c33",
         "7423713dfc3f8b80274d0f2d0ee2f02c98acd1d9f9790b58133e4e77716d6b7a"
       ]
+    },
+    {
+      "seq": 45,
+      "bp_id": "UFA-JEV-BP-0046",
+      "bp_file": "governance/breakpoints/0046-e1r-vcc-translation-prereg.json",
+      "bp_file_sha256": "20f430d8acdedceff3582c56ce1d902ede686d3ea3d464798cd58a904fbc157e",
+      "bp_root": "7f3a9d0a6b75e14389cc1cc32b083254490faa89d37310e29c536aa8280cf4dc",
+      "root_kind": "FMO_V1_BREAKPOINT_ATOMS",
+      "mmr_leaf": "10d723c245dfdf3981015581c93aeb064a24d70a5fa2feb514be27b5626f19a6",
+      "mmr_size": 46,
+      "mmr_root_after": "974f985663c1c6477002d819eaa6cfa9fa05a10ab936b78b7edb71a01edc7916",
+      "mmr_peaks_after": [
+        "026514586974a2fb18c9fefe6f92208e2008b44751f5380417c4129b185b831f",
+        "2c19c9c86cde650380546093e0e06537bfb81037e47bfd05c7d1b596710c22b8",
+        "4e309638f9312ead5a695f1913df60f966a0ea3e6f0e8eeb7ec6e6048beb4c33",
+        "07981d9fc0ef58117f24f2ac5c3707526de235d908451d417e1df7be1cd750a1"
+      ]
     }
   ]
 }
