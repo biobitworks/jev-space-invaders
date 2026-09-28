@@ -1,0 +1,5 @@
+id,note,pipeline,state,type_valid
+O_ECA_THEN_ANTICUBE,,"[""SOURCE"", ""ECA"", ""ANTICUBE"", ""CONTEXTPACKET""]",EXECUTED_IN_E1R_SCREEN,True
+O_ANTICUBE_THEN_ECA,No frozen projection maps a five-state probability vector back to an ECA binary lattice.,"[""SOURCE"", ""ANTICUBE"", ""ECA"", ""CONTEXTPACKET""]",ABSTAIN_TYPE_ERROR,False
+O_ECA_THEN_DELTAGSTAR_THEN_ANTICUBE,,,NOT_TESTED_DELTAGSTAR_NOT_COMPUTED,
+O_RAW_CONTEXT,,"[""SOURCE"", ""CONTEXTPACKET""]",VALID_CONTROL,True

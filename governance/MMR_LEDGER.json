@@ -722,6 +722,24 @@
         "4e309638f9312ead5a695f1913df60f966a0ea3e6f0e8eeb7ec6e6048beb4c33",
         "07981d9fc0ef58117f24f2ac5c3707526de235d908451d417e1df7be1cd750a1"
       ]
+    },
+    {
+      "seq": 46,
+      "bp_id": "UFA-JEV-BP-0047",
+      "bp_file": "governance/breakpoints/0047-e1r-handoff.json",
+      "bp_file_sha256": "3e96456b2623beb23b851f401245ec376e1b7e626863d73baf236182c3e5c873",
+      "bp_root": "df441d935c58aef31debec7a564ffcc8fde51dd5935f96f4ec033642ee730f7e",
+      "root_kind": "FMO_V1_BREAKPOINT_ATOMS",
+      "mmr_leaf": "c1aa6435de0e219d1d1cffe5521af746a47f134a2e4f9d84903fa121505c196b",
+      "mmr_size": 47,
+      "mmr_root_after": "1c535ea6a15d2da21d563b5aecd38d95d20f674803939f688449d441bfda3d0a",
+      "mmr_peaks_after": [
+        "026514586974a2fb18c9fefe6f92208e2008b44751f5380417c4129b185b831f",
+        "2c19c9c86cde650380546093e0e06537bfb81037e47bfd05c7d1b596710c22b8",
+        "4e309638f9312ead5a695f1913df60f966a0ea3e6f0e8eeb7ec6e6048beb4c33",
+        "07981d9fc0ef58117f24f2ac5c3707526de235d908451d417e1df7be1cd750a1",
+        "c1aa6435de0e219d1d1cffe5521af746a47f134a2e4f9d84903fa121505c196b"
+      ]
     }
   ]
 }

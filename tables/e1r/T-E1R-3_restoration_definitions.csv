@@ -1,0 +1,6 @@
+definition,metric
+bitwise equality,R_EXACT
+zero Hamming under shifts -3..3,R_SHIFT
+same frozen density/transition bins,R_CONTEXT
+same safe-action signature,R_FUNCTIONAL
+normalized Hamming divergence/AUD,R_TRAJECTORY
