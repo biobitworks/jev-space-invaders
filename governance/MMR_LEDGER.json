@@ -335,6 +335,23 @@
         "46fc9c85843aee3f1f1d3cb1c13d6d809cf6e3e5848b424e100113a2b24c580d",
         "888e68e9d2964eab0901a72d85b8191a013d68df55492d09620d2a0a41057f4e"
       ]
+    },
+    {
+      "seq": 22,
+      "bp_id": "UFA-JEV-BP-0023",
+      "bp_file": "governance/breakpoints/0023-cross-host-replication-prereg.json",
+      "bp_file_sha256": "d384bb0264021b2a1ac888eed4bb3163da26b5fd34b5ffbb4b29b2740c3eefe5",
+      "bp_root": "faee265a537b97f741580513c31658d5ee220d0d6bfd443e1052632fdda3908d",
+      "root_kind": "FMO_V1_BREAKPOINT_ATOMS",
+      "mmr_leaf": "ec2979933e1089a4f9f62501ee523f8beb6c95b135d036fdf9ba0bc4ada08cfb",
+      "mmr_size": 23,
+      "mmr_root_after": "5af168dcbc2878c9ecd124b4cde747b236a4197f8e52d71e35de52d2842b68bd",
+      "mmr_peaks_after": [
+        "1303f691fcfdee6145f710febf29e2146b6ced8c2f89b643dd1e4371cafbabe7",
+        "46fc9c85843aee3f1f1d3cb1c13d6d809cf6e3e5848b424e100113a2b24c580d",
+        "888e68e9d2964eab0901a72d85b8191a013d68df55492d09620d2a0a41057f4e",
+        "ec2979933e1089a4f9f62501ee523f8beb6c95b135d036fdf9ba0bc4ada08cfb"
+      ]
     }
   ]
 }

@@ -1,0 +1,50 @@
+{
+  "breakpoint_id": "UFA-JEV-BP-0023",
+  "parent": "UFA-JEV-BP-0022",
+  "state": "CROSS_HOST_REPLICATION_PREREGISTERED",
+  "project": "VITHIA_SPACE",
+  "created_utc": "2026-09-28T05:18:11+00:00",
+  "git_head_at_creation": "43a0afe89a14fa39dc776e1a2f181b3eb360e15d",
+  "root_kind": "FMO_V1_BREAKPOINT_ATOMS",
+  "bp_root": "faee265a537b97f741580513c31658d5ee220d0d6bfd443e1052632fdda3908d",
+  "group_roots": {
+    "prereg": "04b8ec880bb576dec4e387229dad1028ea4c6bc22178c8ef07a8b1828f9e7638",
+    "source": "9dcf401db1d469135e186895ee03eac8df2cd887cc77cd71cbc6b1c1c4605da4"
+  },
+  "atoms": [
+    {
+      "path": "docs/prereg/CROSS_HOST_REPLICATION.md",
+      "kind": "PreregistrationFCO",
+      "group": "prereg",
+      "bytes": 649,
+      "sha256": "1094133f0dfd207c7989645eead44919f80a328299679b4f0b17b857e5288f2b",
+      "location": "public",
+      "fmo_leaf": "04b8ec880bb576dec4e387229dad1028ea4c6bc22178c8ef07a8b1828f9e7638"
+    },
+    {
+      "path": "governance/breakpoints/0020-e4a-prereg.json",
+      "kind": "ExternalBreakpointRefFCO",
+      "group": "source",
+      "bytes": 7792,
+      "sha256": "8f873084bc45353826a857c9b42d7e89295beea665d8d8d3f03e80854df7686e",
+      "location": "public",
+      "fmo_leaf": "c9dddffc198029210323ba7cfec589df8c8b8a79092e303a5c2501e7590b85ee"
+    },
+    {
+      "path": "governance/breakpoints/0022-d0-d9-statistical-analysis-result.json",
+      "kind": "ExternalBreakpointRefFCO",
+      "group": "source",
+      "bytes": 3096,
+      "sha256": "096e9eb05a4fd69e5918ee9ce4ce8c3eb4351d19a7eed21c714c36b4ec100b73",
+      "location": "public",
+      "fmo_leaf": "7a5e44b608b30b762ecfe3efcb4c8b7caf298b96e139eaa0e5772895bf344789"
+    }
+  ],
+  "stage": "CROSS_HOST_REPLICATION_PREREG",
+  "primary_host": "magicSTUDIObox",
+  "replica_host": "magicPRObox",
+  "historical_mutation": false,
+  "next_action": "attempt independent replay if magicPRObox is available",
+  "claim_ceiling": "IDENTITY_AND_INCLUSION_ONLY; hashes do not establish correctness",
+  "signature_state": "NOT_SIGNED"
+}
