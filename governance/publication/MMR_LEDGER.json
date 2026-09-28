@@ -164,6 +164,53 @@
         "2404676d3fb8b90ea4d7b4d35aa34ef551e8e9047fa1cffbe0fd0ef9148ed907",
         "15ea7033132be7daeac44658a52098c755f3af3975fcc93d9a26d40805bb3da2"
       ]
+    },
+    {
+      "seq": 11,
+      "bp_id": "VITA-PUB-BP-0012",
+      "bp_file": "governance/publication/breakpoints/0012-citation-audit.json",
+      "bp_file_sha256": "97feffd61fdf02597b6a1d05dd3a81faf3d724f43f22cc5a3292483d3f75b87c",
+      "bp_root": "26bb95f92ba1434e3295efe4dc87603578da471b6e7dba31dbf382a98fc001fd",
+      "root_kind": "FMO_V1_PUBLICATION_BREAKPOINT_ATOMS",
+      "mmr_leaf": "cbe7a4f05c4e6bcd46de48a8f1e377076c0c11ab256d260d1378dcab7e88608c",
+      "mmr_size": 12,
+      "mmr_root_after": "8e0df48bef3532e035ffd166006fa714c12c7707e6a7cbfb11315ce3d6326458",
+      "mmr_peaks_after": [
+        "9ad2f5877374a791dcca848fab93eccf098bfbf0af0ce837c2751d56471651be",
+        "a61903f9ffc48b81ac706c7ddd70c07d770bdd7cff0078383487f90cd8bcf277"
+      ]
+    },
+    {
+      "seq": 12,
+      "bp_id": "VITA-PUB-BP-0013",
+      "bp_file": "governance/publication/breakpoints/0013-claim-audit.json",
+      "bp_file_sha256": "74fb5e6e97abbea85a240d5d55f1be9ac10f5f4dcf4adc106c7e725798817c6b",
+      "bp_root": "ddcd741ac981ab59354609c21ffbb8f55609011c25bdc70e39cc5800179b3395",
+      "root_kind": "FMO_V1_PUBLICATION_BREAKPOINT_ATOMS",
+      "mmr_leaf": "bcb492d660fbc57773d8f1197fa89d6d0c0cc2db64c27a0bea6f923aeec8b5e7",
+      "mmr_size": 13,
+      "mmr_root_after": "e116adf4d3218770daa29a2393f0ede24d8c69de1180b91577429a99292a3fe8",
+      "mmr_peaks_after": [
+        "9ad2f5877374a791dcca848fab93eccf098bfbf0af0ce837c2751d56471651be",
+        "a61903f9ffc48b81ac706c7ddd70c07d770bdd7cff0078383487f90cd8bcf277",
+        "bcb492d660fbc57773d8f1197fa89d6d0c0cc2db64c27a0bea6f923aeec8b5e7"
+      ]
+    },
+    {
+      "seq": 13,
+      "bp_id": "VITA-PUB-BP-0014",
+      "bp_file": "governance/publication/breakpoints/0014-type-safety-audit.json",
+      "bp_file_sha256": "6883fd1feac7248c837370abf210144beb9730f5265061cce5e4549db54c5a13",
+      "bp_root": "f80b4739cdb40ace33d8275aa84fa6ca3fe4b2e4d39d48f63fa0eb0ebe9b95c8",
+      "root_kind": "FMO_V1_PUBLICATION_BREAKPOINT_ATOMS",
+      "mmr_leaf": "1f75efc92b4b61497dd35793ab1d0bfeabf05bed16f300f2244df23fbf257b39",
+      "mmr_size": 14,
+      "mmr_root_after": "5d407a68b4136be6cd8bd694ae065c01e0c3ffa2137e3b9ace0d991321a20b32",
+      "mmr_peaks_after": [
+        "9ad2f5877374a791dcca848fab93eccf098bfbf0af0ce837c2751d56471651be",
+        "a61903f9ffc48b81ac706c7ddd70c07d770bdd7cff0078383487f90cd8bcf277",
+        "ffc78f83923c98b56282c51c5b88d5a6b805308a860a21aa0137fa6a25631bf8"
+      ]
     }
   ]
 }

@@ -1,0 +1,16 @@
+{
+  "schema": "VITHIA_CITATION_AUDIT_V1",
+  "state": "PASS",
+  "citation_uses": 3,
+  "unique_citations": [
+    "ale",
+    "cellpylib",
+    "pysat"
+  ],
+  "bibliography_keys": [
+    "ale",
+    "cellpylib",
+    "pysat"
+  ],
+  "missing_keys": []
+}

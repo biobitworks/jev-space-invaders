@@ -1,0 +1,14 @@
+{
+  "schema": "VITHIA_TYPE_SAFETY_AUDIT_V1",
+  "state": "PASS",
+  "forbidden_conflation_hits": [],
+  "missing_required_boundary_phrases": [],
+  "checks": [
+    "identity!=meaning",
+    "custody!=correctness",
+    "prediction!=observation",
+    "MMR inclusion != truth",
+    "FCG relationship != causality",
+    "simulation != biological evidence"
+  ]
+}

@@ -1,0 +1,33 @@
+{
+  "schema": "VITHIA_CLAIM_AUDIT_V1",
+  "state": "PASS",
+  "bindings": 12,
+  "covered_claim_ids": [
+    "ARCH::S0_ROLE",
+    "E0_ADDRESSABILITY::H0a",
+    "E1_ECA::H1d",
+    "E2_LIFE::H2d",
+    "E3_MINESWEEPER::H3a",
+    "E3_MINESWEEPER::H3b",
+    "GOV::MMR24",
+    "LIMIT::CROSSHOST",
+    "LIMIT::DELTAGSTAR",
+    "LIMIT::E4A",
+    "STAT::SECONDARY"
+  ],
+  "required_claims": [
+    "ARCH::S0_ROLE",
+    "E0_ADDRESSABILITY::H0a",
+    "E1_ECA::H1d",
+    "E2_LIFE::H2d",
+    "E3_MINESWEEPER::H3a",
+    "E3_MINESWEEPER::H3b",
+    "GOV::MMR24",
+    "LIMIT::CROSSHOST",
+    "LIMIT::DELTAGSTAR",
+    "LIMIT::E4A",
+    "STAT::SECONDARY"
+  ],
+  "errors": [],
+  "coverage_rule": "all required substantive manuscript result/architecture/limitation claims are bound to governed evidence"
+}

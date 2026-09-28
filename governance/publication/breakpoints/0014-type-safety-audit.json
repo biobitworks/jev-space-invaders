@@ -1,0 +1,54 @@
+{
+  "breakpoint_id": "VITA-PUB-BP-0014",
+  "parent": "VITA-PUB-BP-0013",
+  "state": "PASS",
+  "project": "VITHIA_0_VITA_1_PUBLICATION",
+  "created_utc": "2026-09-28T05:48:47+00:00",
+  "root_kind": "FMO_V1_PUBLICATION_BREAKPOINT_ATOMS",
+  "bp_root": "f80b4739cdb40ace33d8275aa84fa6ca3fe4b2e4d39d48f63fa0eb0ebe9b95c8",
+  "group_roots": {
+    "audit": "b915addde941709cb5df3264eb7eb8232b522a4351656d7217cf513b1bd99995",
+    "source": "96a6fe2b4fa9ff5077fc88cd2cf2cc3782012d2950ed093b02a7257335498ea7"
+  },
+  "atoms": [
+    {
+      "path": "publication/audits/TYPE_SAFETY_AUDIT.json",
+      "kind": "AuditReceiptFCO",
+      "group": "audit",
+      "bytes": 353,
+      "sha256": "61b8ffd97b4766ad1f8a0ba18301f6a9f594b9b79df345d2fd88f6e5012e9ad1",
+      "location": "public",
+      "fmo_leaf": "9b44d638d5387b4885e3b39fc95ea29d58b16cac1b6074d73a543afc9bd8201c"
+    },
+    {
+      "path": "publication/audits/AUDIT_SUMMARY.json",
+      "kind": "AuditSummaryFCO",
+      "group": "audit",
+      "bytes": 139,
+      "sha256": "52c8b2a6b8ffd2e60d5aa3e933c23f05fee2084ad8bd61c0d2ed05c60879ccf7",
+      "location": "public",
+      "fmo_leaf": "fcdeb37afe901753c55e863a331af14bcf6b364f425893dc2514c27b13cf25d0"
+    },
+    {
+      "path": "publication/manuscript/main.tex",
+      "kind": "ManuscriptFCO",
+      "group": "source",
+      "bytes": 7770,
+      "sha256": "d12f8667d9ea952b17e0c645ff25fd76860fa7e4c4c868c6cc7950d84dedd8d7",
+      "location": "public",
+      "fmo_leaf": "7d7cdeb97e86002687d3107d958d7c4d3e6a4e9f8e323b1c6f83ebaf44a79a1e"
+    },
+    {
+      "path": "publication/supplement/supplement.tex",
+      "kind": "SupplementFCO",
+      "group": "source",
+      "bytes": 3558,
+      "sha256": "c0bfa8610a4b4f312932a0110d7d2c48923399492f6ed5168fe0cf279527f1f2",
+      "location": "public",
+      "fmo_leaf": "0b1703959ad35c5e95dd3bf1d62d5a915b55ce4e786a27d88db44b4d9d281d34"
+    }
+  ],
+  "stage": "TYPE_SAFETY_AUDIT",
+  "claim_ceiling": "IDENTITY_AND_INCLUSION_ONLY; publication roots do not establish scientific truth",
+  "signature_state": "NOT_SIGNED"
+}
