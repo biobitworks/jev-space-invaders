@@ -1,0 +1,39 @@
+{
+  "candidate_gap": "typed integration of exact evidence identity, world-state vs observation-history corruption, intrinsic vs intervention-induced vs contextual vs functional restoration, Anticube successor state, bounded model interfaces, and append-only custody",
+  "claim_ceiling": "NOVELTY_CANDIDATE only",
+  "novelty_state": "NOVELTY_CANDIDATE",
+  "retrieval_date": "2026-09-28",
+  "schema": "E1R_PRIOR_ART_REGISTRY_V1",
+  "sources": [
+    {
+      "doi": "10.1016/j.biosystems.2026.105869",
+      "id": "Ather_Gordon_2026",
+      "implication": "all-256 perturbation/restoration is prior art",
+      "supported_scope": "all 256 ECA rules; localized perturbations; Hamming/XOR restoration; 100 trials per rule",
+      "title": "Ruliological resilience: Pattern restoration and robustness in Wolfram patterns. A basis for regeneration, not just in Cone Shells?",
+      "venue": "BioSystems 267 (2026) 105869"
+    },
+    {
+      "doi": "10.1103/PhysRevE.104.034301",
+      "id": "Elser_2021",
+      "implication": "rule reconstruction from incomplete temporal observations is prior art",
+      "supported_scope": "CA rule and hidden-state reconstruction from nonconsecutive observations",
+      "title": "Reconstructing cellular automata rules from observations at nonconsecutive times",
+      "venue": "Physical Review E 104, 034301"
+    },
+    {
+      "doi": "10.1006/jcom.1998.0474",
+      "id": "Bagnoli_Rechtman_Ruffo_1998",
+      "implication": "perturbation propagation is prior art",
+      "supported_scope": "sensitivity and perturbation propagation in cellular automata",
+      "title": "Lyapunov Exponents versus Expansivity and Sensitivity in Cellular Automata",
+      "venue": "Journal of Complexity 14(2):210-233"
+    },
+    {
+      "breakpoint": "UFA-JEV-BP-0015",
+      "id": "Vithia_E1_predecessor",
+      "supported_scope": "all 256 ECA rules under observation corruption for rule identification, not restoration",
+      "type": "internal_governed"
+    }
+  ]
+}
