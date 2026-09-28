@@ -1,0 +1,11 @@
+{
+  "schema": "VITA01_CROSS_HOST_REPLICATION_RECEIPT_V1",
+  "state": "DEFERRED_NOT_FAILED",
+  "primary_host": "magicSTUDIObox",
+  "replica_host": "magicPRObox",
+  "reason": "magicPRObox Desktop Commander endpoint was offline at execution time; no replica result inferred",
+  "historical_results_mutated": false,
+  "e4a_regenerated": false,
+  "claim_effect": "NONE",
+  "next_action": "run non-mutating cross-host replay when magicPRObox is available"
+}

@@ -1,0 +1,40 @@
+{
+  "breakpoint_id": "UFA-JEV-BP-0024",
+  "parent": "UFA-JEV-BP-0023",
+  "state": "DEFERRED_NOT_FAILED",
+  "project": "VITHIA_SPACE",
+  "created_utc": "2026-09-28T05:18:13+00:00",
+  "git_head_at_creation": "b4a1df5ce69b0b3aa59eca8173ab004bae85a506",
+  "root_kind": "FMO_V1_BREAKPOINT_ATOMS",
+  "bp_root": "ea5a307a15265675e41bdb5ccd78a063a9841208aad0dfb77297330fd5b87f3d",
+  "group_roots": {
+    "prereg": "04b8ec880bb576dec4e387229dad1028ea4c6bc22178c8ef07a8b1828f9e7638",
+    "receipt": "f03850da7645c5d791c6c131a5aebfb971e2c9eb63faaf36ad89a49fe8716feb"
+  },
+  "atoms": [
+    {
+      "path": "docs/prereg/CROSS_HOST_REPLICATION.md",
+      "kind": "PreregistrationFCO",
+      "group": "prereg",
+      "bytes": 649,
+      "sha256": "1094133f0dfd207c7989645eead44919f80a328299679b4f0b17b857e5288f2b",
+      "location": "public",
+      "fmo_leaf": "04b8ec880bb576dec4e387229dad1028ea4c6bc22178c8ef07a8b1828f9e7638"
+    },
+    {
+      "path": "evidence/cross_host/CROSS_HOST_REPLICATION_RECEIPT.json",
+      "kind": "ReplicationReceiptFCO",
+      "group": "receipt",
+      "bytes": 452,
+      "sha256": "3c2e2554be2723da6de13aa17bc39e0efc0299b3f595dcc95750a8aae750e8a9",
+      "location": "public",
+      "fmo_leaf": "f03850da7645c5d791c6c131a5aebfb971e2c9eb63faaf36ad89a49fe8716feb"
+    }
+  ],
+  "stage": "CROSS_HOST_REPLICATION_RESULT",
+  "prereg_breakpoint": "UFA-JEV-BP-0023",
+  "claim_mutation": false,
+  "next_action": "publication evidence lock; replication may be appended later as successor",
+  "claim_ceiling": "IDENTITY_AND_INCLUSION_ONLY; hashes do not establish correctness",
+  "signature_state": "NOT_SIGNED"
+}
