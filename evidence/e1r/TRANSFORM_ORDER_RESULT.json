@@ -1,0 +1,45 @@
+{
+  "claim_ceiling": "type safety/order sensitivity only; no causal claim",
+  "finding": "rule-pair order evaluated empirically; Anticube-before-ECA rejected as type error absent frozen projection",
+  "ordered_rule_pair_dataset": "E1R_RULE_COMPOSITION_SCREEN_V1",
+  "orders": [
+    {
+      "id": "O_ECA_THEN_ANTICUBE",
+      "pipeline": [
+        "SOURCE",
+        "ECA",
+        "ANTICUBE",
+        "CONTEXTPACKET"
+      ],
+      "state": "EXECUTED_IN_E1R_SCREEN",
+      "type_valid": true
+    },
+    {
+      "id": "O_ANTICUBE_THEN_ECA",
+      "note": "No frozen projection maps a five-state probability vector back to an ECA binary lattice.",
+      "pipeline": [
+        "SOURCE",
+        "ANTICUBE",
+        "ECA",
+        "CONTEXTPACKET"
+      ],
+      "state": "ABSTAIN_TYPE_ERROR",
+      "type_valid": false
+    },
+    {
+      "id": "O_ECA_THEN_DELTAGSTAR_THEN_ANTICUBE",
+      "state": "NOT_TESTED_DELTAGSTAR_NOT_COMPUTED",
+      "type_valid": null
+    },
+    {
+      "id": "O_RAW_CONTEXT",
+      "pipeline": [
+        "SOURCE",
+        "CONTEXTPACKET"
+      ],
+      "state": "VALID_CONTROL",
+      "type_valid": true
+    }
+  ],
+  "schema": "E1R_TRANSFORM_ORDER_RESULT_V1"
+}
