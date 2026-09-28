@@ -1,0 +1,9 @@
+{
+  "figure": "F8_breakpoint_timeline",
+  "source_refs": [
+    "governance/MMR_LEDGER.json"
+  ],
+  "claim_refs": [
+    "GOV::MMR24"
+  ]
+}

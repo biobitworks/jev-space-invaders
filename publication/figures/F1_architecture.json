@@ -1,0 +1,10 @@
+{
+  "figure": "F1_architecture",
+  "source_refs": [
+    "vita01/VITA01_TERMINOLOGY_V2.json",
+    "vita01/S01_PROTOCOL_SPEC_DRAFT.md"
+  ],
+  "claim_refs": [
+    "ARCH::S0_ROLE"
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "figure": "F4_e1_outcomes",
+  "source_refs": [
+    "publication/data/plot_data.json"
+  ],
+  "claim_refs": [
+    "E1_ECA::H1d",
+    "E1_ECA::H1e",
+    "E1_ECA::H1e_v2"
+  ]
+}

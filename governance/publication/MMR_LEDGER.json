@@ -73,6 +73,21 @@
         "9a2259c82477edc3c3643691d87dbd0f4461983e9f3d6878584835644e5bda72",
         "3cd805719909545f78a487d9a8984c6da3bf4b17a159a0fd050aafd30cb5462a"
       ]
+    },
+    {
+      "seq": 5,
+      "bp_id": "VITA-PUB-BP-0006",
+      "bp_file": "governance/publication/breakpoints/0006-figure-freeze.json",
+      "bp_file_sha256": "08a40c9795a14a9d6a346f69729320f255da298a389f5f926e9f49a0476b730a",
+      "bp_root": "58e913ca57deeabe8df74586ad701c77b0df30086cf1b53cde21f8263da5d5ae",
+      "root_kind": "FMO_V1_PUBLICATION_BREAKPOINT_ATOMS",
+      "mmr_leaf": "c0c89c906a53b48342d48e516518ffbc34e907e6fdfd081e9293e9beb397046e",
+      "mmr_size": 6,
+      "mmr_root_after": "e6caed4f1d61799009e57962044b16152a08035154a32e167d0902785c3f7a12",
+      "mmr_peaks_after": [
+        "9a2259c82477edc3c3643691d87dbd0f4461983e9f3d6878584835644e5bda72",
+        "3b47c55bffe2bc0b9958bbe9da2bef8b52ed0e9570b11e12ccf05a455e741846"
+      ]
     }
   ]
 }

@@ -1,0 +1,9 @@
+{
+  "figure": "F7_e4a_pipeline",
+  "source_refs": [
+    "governance/breakpoints/0020-e4a-prereg.json"
+  ],
+  "claim_refs": [
+    "LIMIT::E4A"
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "figure": "F5_e2_history",
+  "source_refs": [
+    "publication/data/plot_data.json",
+    "data/s01/S01_LIFE_CONTEXT_RESULTS_V1/history_controls.jsonl"
+  ],
+  "claim_refs": [
+    "E2_LIFE::H2d"
+  ]
+}

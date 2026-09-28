@@ -1,0 +1,10 @@
+{
+  "figure": "F2_custody",
+  "source_refs": [
+    "docs/BREAKPOINT_PROTOCOL.md",
+    "governance/MMR_LEDGER.json"
+  ],
+  "claim_refs": [
+    "GOV::MMR24"
+  ]
+}

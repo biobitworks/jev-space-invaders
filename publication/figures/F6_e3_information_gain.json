@@ -1,0 +1,11 @@
+{
+  "figure": "F6_e3_information_gain",
+  "source_refs": [
+    "publication/data/plot_data.json",
+    "data/s01/S01_MINESWEEPER_RESULTS_V1/rows.jsonl"
+  ],
+  "claim_refs": [
+    "E3_MINESWEEPER::H3b",
+    "E3_MINESWEEPER::H3c"
+  ]
+}

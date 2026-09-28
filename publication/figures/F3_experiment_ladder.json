@@ -1,0 +1,9 @@
+{
+  "figure": "F3_experiment_ladder",
+  "source_refs": [
+    "publication/data/experiment_summary.csv"
+  ],
+  "claim_refs": [
+    "LIMIT::E4A"
+  ]
+}
