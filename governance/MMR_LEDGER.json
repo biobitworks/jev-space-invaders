@@ -787,6 +787,23 @@
         "75be8b4a1b7202ab2045b31e332e04471e0fa5d990c8d9c5097b1ed82456cb9d",
         "4428843dc3af613f3204968042883e6e979cc6d47642a101f919c298b5819de1"
       ]
+    },
+    {
+      "seq": 50,
+      "bp_id": "UFA-JEV-BP-0051",
+      "bp_file": "governance/breakpoints/0051-m4b-openjev-local-infeasible.json",
+      "bp_file_sha256": "ca02b7f6b4fda0b9ddae4846610688f3f59e00470ad7d3971ab1439be53736c7",
+      "bp_root": "4d5fc52ae3fa271cb19940d802f7fd7835986c1ee59c2afea14c3ce2b138f406",
+      "root_kind": "FMO_V1_BREAKPOINT_ATOMS",
+      "mmr_leaf": "f751612dca1e5e09dc2f9c02f3e0983495663c8da8aad35ce28294461c9e40a8",
+      "mmr_size": 51,
+      "mmr_root_after": "28aaba4c6686a10fd9ed39202f497e1c3b2e88e7ae77a05e5ca3e891b13dd5b8",
+      "mmr_peaks_after": [
+        "026514586974a2fb18c9fefe6f92208e2008b44751f5380417c4129b185b831f",
+        "75be8b4a1b7202ab2045b31e332e04471e0fa5d990c8d9c5097b1ed82456cb9d",
+        "4428843dc3af613f3204968042883e6e979cc6d47642a101f919c298b5819de1",
+        "f751612dca1e5e09dc2f9c02f3e0983495663c8da8aad35ce28294461c9e40a8"
+      ]
     }
   ]
 }

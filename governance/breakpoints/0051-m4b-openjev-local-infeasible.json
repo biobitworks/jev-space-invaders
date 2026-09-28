@@ -1,0 +1,31 @@
+{
+  "breakpoint_id": "UFA-JEV-BP-0051",
+  "parent": "UFA-JEV-BP-0050",
+  "state": "OPENJEV_LOCAL_INFEASIBLE",
+  "project": "VITHIA_SPACE",
+  "created_utc": "2026-09-28T14:48:23+00:00",
+  "git_head_at_creation": "1840ad2d778cbf6d2d83bc79975d2df73e06faa7",
+  "root_kind": "FMO_V1_BREAKPOINT_ATOMS",
+  "bp_root": "4d5fc52ae3fa271cb19940d802f7fd7835986c1ee59c2afea14c3ce2b138f406",
+  "group_roots": {
+    "m4b_openjev_local": "e51347f01beb119b856b380bba4d9e643d2a4ee05c298f250be7754d39d20a38"
+  },
+  "atoms": [
+    {
+      "path": "evidence/openjev/RUNTIME_MANIFEST.json",
+      "kind": "RECEIPTFCO",
+      "group": "m4b_openjev_local",
+      "bytes": 198,
+      "sha256": "6a03a1012f7a40d47a03205de0c7fab81f31caa39b1a1e429d498e26ac6956d7",
+      "location": "public",
+      "fmo_leaf": "e51347f01beb119b856b380bba4d9e643d2a4ee05c298f250be7754d39d20a38"
+    }
+  ],
+  "stage": "M4B_OPENJEV_LOCAL_INFEASIBILITY",
+  "OPENJEV_LOADED": "NO",
+  "host": "magicPRObox",
+  "ram_bytes": 17179869184,
+  "note": "Local OpenJev MLX helper (pid 54731, port 8765) timed out on smoke test on this 16GB-RAM box, confirming the handoff-documented magicPRObox infeasibility. Process killed per operator direction; operator directed running OpenJev on magicSTUDIObox instead. This session cannot reach magicSTUDIObox (ssh blocked in this sandbox workspace), so that lane is NOT_TESTED from here.",
+  "claim_ceiling": "IDENTITY_AND_INCLUSION_ONLY; hashes do not establish correctness",
+  "signature_state": "NOT_SIGNED"
+}

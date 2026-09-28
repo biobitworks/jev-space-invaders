@@ -1,0 +1,8 @@
+{
+  "schema": "OPENJEV_RUNTIME_MANIFEST_V1",
+  "utc": "2026-09-28T07:00:38+00:00",
+  "OPENJEV_LOADED": "NO",
+  "failure": "smoke failed: TimeoutError('timed out')",
+  "pid": 54731,
+  "port": 8765
+}
