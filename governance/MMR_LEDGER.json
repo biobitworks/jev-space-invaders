@@ -837,6 +837,23 @@
         "fdf2b911c7a68df00ffcd400ef233920512b277f05bba192a1badc427b91c2d1",
         "5252ddbb2a5ced6456698c51e4aed9d05a2c781117171ab317111924cf09c19d"
       ]
+    },
+    {
+      "seq": 53,
+      "bp_id": "UFA-JEV-BP-0054",
+      "bp_file": "governance/breakpoints/0054-e5l-1p-seed4.json",
+      "bp_file_sha256": "81344cc40b2674c34485334cf0d744b559554a647824d6232b194192d3580a66",
+      "bp_root": "52941f4dc4649dee1b30bb68cbff0bb4e7c64f2505ece10a4b0e19cb4b269635",
+      "root_kind": "FMO_V1_BREAKPOINT_ATOMS",
+      "mmr_leaf": "7171404012541645f0064963575c1176b472f099cb5ddb63b47f1590ebd66973",
+      "mmr_size": 54,
+      "mmr_root_after": "513e609c9ad04e5110264bc026715ec3e83151593c31f016f61246d8e774f8a7",
+      "mmr_peaks_after": [
+        "026514586974a2fb18c9fefe6f92208e2008b44751f5380417c4129b185b831f",
+        "75be8b4a1b7202ab2045b31e332e04471e0fa5d990c8d9c5097b1ed82456cb9d",
+        "fdf2b911c7a68df00ffcd400ef233920512b277f05bba192a1badc427b91c2d1",
+        "f18661cec4fe07c27830695690bbab1753c2857326a7fad95d7a71a53073c7e6"
+      ]
     }
   ]
 }
