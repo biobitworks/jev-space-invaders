@@ -639,6 +639,22 @@
         "2c19c9c86cde650380546093e0e06537bfb81037e47bfd05c7d1b596710c22b8",
         "225dbc1a977d8c4f75091d47445e03ed9a5b54d4040ae304281943e75138f86d"
       ]
+    },
+    {
+      "seq": 41,
+      "bp_id": "UFA-JEV-BP-0042",
+      "bp_file": "governance/breakpoints/0042-e1r-anticube-temporal.json",
+      "bp_file_sha256": "f3be66f808cd6889cd2bc8733ecb6dd205512297242ef18bf8ca904c4a838e5a",
+      "bp_root": "c9247d3d6559ebc9707a5d0b59ea7da419ec4c1f0e533f888f785c1c0e9b70ee",
+      "root_kind": "FMO_V1_BREAKPOINT_ATOMS",
+      "mmr_leaf": "fdb87f57a031629409a6586254eb46b8936858711c68f84ab82321c10557954f",
+      "mmr_size": 42,
+      "mmr_root_after": "b23cd846850060ca817cfb257882c7dcf0f7f8bcd471c36ec233e33e03048c69",
+      "mmr_peaks_after": [
+        "026514586974a2fb18c9fefe6f92208e2008b44751f5380417c4129b185b831f",
+        "2c19c9c86cde650380546093e0e06537bfb81037e47bfd05c7d1b596710c22b8",
+        "134a834834709c5aa7a59a619a637d8ae0cc6518effaf56130a396174e60f597"
+      ]
     }
   ]
 }
