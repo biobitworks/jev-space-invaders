@@ -1,0 +1,582 @@
+{
+  "cases": {
+    "1P_NONE_OLLAMA_QWEN": {
+      "result": {
+        "after": {
+          "decision_index": 1,
+          "joint_step": 0,
+          "mode": "1P"
+        },
+        "before": {
+          "decision_index": 0,
+          "joint_step": 0,
+          "mode": "1P"
+        },
+        "history": [
+          {
+            "backend": "ollama:qwen2.5:0.5b",
+            "confidence": null,
+            "decider_backend": "qwen2.5:0.5b",
+            "decider_provider": "OLLAMA",
+            "decision_index": 0,
+            "decision_layer": "DIRECT",
+            "env_advanced": true,
+            "environment_frame": 4,
+            "exact_model": "qwen2.5:0.5b",
+            "executed_action": "LEFTFIRE",
+            "fallback": false,
+            "generation_id": 9,
+            "latency_ms": 126.57,
+            "lives": 3,
+            "mode": "1P",
+            "model_call": true,
+            "preprocessor_actual": "NONE",
+            "preprocessor_input_hash": "a6a8b5d87eca6391d18fedc4c241ac8fad862a50aaa056e1450b4eb989ec42b9",
+            "preprocessor_latency_ms": 0.06,
+            "preprocessor_output_hash": "a90479cae716c6f8f8e7ceebf78e30192e36501fffd6908b93cca6b1701d0895",
+            "preprocessor_requested": "NONE",
+            "projected_plan": [
+              "LEFTFIRE"
+            ],
+            "reason": "validated_model_action",
+            "requested_action": "LEFTFIRE",
+            "requested_backend": "OLLAMA/qwen2.5:0.5b",
+            "reward": 0.0,
+            "run_id": "3ac67dbf74574d25aa3cfd984db67747",
+            "score": 0.0,
+            "seat_id": "PLAYER_0",
+            "timestamp": 1790638837.966689,
+            "trace_id": "454cac1e440845d7bc4187772418f594"
+          }
+        ]
+      },
+      "status": "PASS"
+    },
+    "1P_VITHIA_OLLAMA_QWEN": {
+      "result": {
+        "after": {
+          "decision_index": 2,
+          "joint_step": 0,
+          "mode": "1P"
+        },
+        "before": {
+          "decision_index": 0,
+          "joint_step": 0,
+          "mode": "1P"
+        },
+        "history": [
+          {
+            "backend": "ollama:qwen2.5:0.5b",
+            "confidence": null,
+            "decider_backend": "qwen2.5:0.5b",
+            "decider_provider": "OLLAMA",
+            "decision_index": 0,
+            "decision_layer": "DIRECT",
+            "env_advanced": true,
+            "environment_frame": 4,
+            "exact_model": "qwen2.5:0.5b",
+            "executed_action": "RIGHTFIRE",
+            "fallback": false,
+            "generation_id": 5,
+            "latency_ms": 176.72,
+            "lives": 3,
+            "mode": "1P",
+            "model_call": true,
+            "preprocessor_actual": "perception_v1",
+            "preprocessor_input_hash": "a6a8b5d87eca6391d18fedc4c241ac8fad862a50aaa056e1450b4eb989ec42b9",
+            "preprocessor_latency_ms": 0.5,
+            "preprocessor_output_hash": "c82f65214515e5b872cdeebfa2dc98c28f6fb6e33ba4f65e26183f1e874929a9",
+            "preprocessor_requested": "VITHIA_SPACE",
+            "projected_plan": [
+              "RIGHTFIRE"
+            ],
+            "reason": "validated_model_action",
+            "requested_action": "RIGHTFIRE",
+            "requested_backend": "OLLAMA/qwen2.5:0.5b",
+            "reward": 0.0,
+            "run_id": "9e5e9da2cca74ff2af0251933bef36ad",
+            "score": 0.0,
+            "seat_id": "PLAYER_0",
+            "timestamp": 1790638837.451585,
+            "trace_id": "69ae6fd904f549ba9611a00340484cce"
+          },
+          {
+            "backend": "ollama:qwen2.5:0.5b",
+            "confidence": null,
+            "decider_backend": "qwen2.5:0.5b",
+            "decider_provider": "OLLAMA",
+            "decision_index": 1,
+            "decision_layer": "DIRECT",
+            "env_advanced": true,
+            "environment_frame": 8,
+            "exact_model": "qwen2.5:0.5b",
+            "executed_action": "RIGHTFIRE",
+            "fallback": false,
+            "generation_id": 5,
+            "latency_ms": 168.22,
+            "lives": 3,
+            "mode": "1P",
+            "model_call": true,
+            "preprocessor_actual": "perception_v1",
+            "preprocessor_input_hash": "0e58e5425d2e7e44b905d0fba7f74596b801c81392f50224f0f93b070f6348e9",
+            "preprocessor_latency_ms": 0.34,
+            "preprocessor_output_hash": "b4dd6a8f40f4ad7cb909af8bed6776190fb7ef40114d640ba2eb543b511d1177",
+            "preprocessor_requested": "VITHIA_SPACE",
+            "projected_plan": [
+              "RIGHTFIRE"
+            ],
+            "reason": "validated_model_action",
+            "requested_action": "RIGHTFIRE",
+            "requested_backend": "OLLAMA/qwen2.5:0.5b",
+            "reward": 0.0,
+            "run_id": "9e5e9da2cca74ff2af0251933bef36ad",
+            "score": 0.0,
+            "seat_id": "PLAYER_0",
+            "timestamp": 1790638837.622166,
+            "trace_id": "fc53e503c12e4c289bf6f219bfa3f49f"
+          }
+        ]
+      },
+      "status": "PASS"
+    },
+    "2P_VITHIA_QWEN_VS_NONE_LIQUID": {
+      "result": {
+        "after": {
+          "decision_index": 2,
+          "joint_step": 1,
+          "mode": "2P"
+        },
+        "before": {
+          "decision_index": 0,
+          "joint_step": 0,
+          "mode": "2P"
+        },
+        "history": [
+          {
+            "env_advanced": true,
+            "environment_state_hash": "2bb3f42b74b98991b1ea57eadc36a7b00cf514f9b1310a5ffc3d94cf6a6f9d20",
+            "generation_id": 19,
+            "joint_step": 0,
+            "joint_transition_executed": true,
+            "mode": "2P",
+            "player0": {
+              "backend": "ollama:qwen2.5:0.5b",
+              "confidence": null,
+              "decider_backend": "qwen2.5:0.5b",
+              "decider_provider": "OLLAMA",
+              "decision_layer": "DIRECT",
+              "exact_model": "qwen2.5:0.5b",
+              "executed_action": "FIRE",
+              "fallback": false,
+              "generation_id": 19,
+              "latency_ms": 170.96,
+              "model_call": true,
+              "preprocessor_actual": "perception_v1",
+              "preprocessor_input_hash": "c03e5cfbb99f37dd4add06aabf4431e3ba5e6d5976174ff0c43de91c5c8e71d8",
+              "preprocessor_latency_ms": 0.35,
+              "preprocessor_output_hash": "47318a8d20e466108f5e7c50169d7e968db3ef230a7c0ca7eee7c869cdb4c03f",
+              "preprocessor_requested": "VITHIA_SPACE",
+              "projected_plan": [
+                "FIRE"
+              ],
+              "reason": "validated_model_action",
+              "requested_action": "FIRE",
+              "requested_backend": "OLLAMA/qwen2.5:0.5b",
+              "seat_id": "PLAYER_0",
+              "trace_id": "122358a45a5b4217aac89ecb0580aa04"
+            },
+            "player1": {
+              "backend": "liquid_local:longhorizon-liquid-230m:latest",
+              "confidence": null,
+              "decider_backend": "longhorizon-liquid-230m:latest",
+              "decider_provider": "LIQUID_LOCAL",
+              "decision_layer": "DIRECT",
+              "exact_model": "longhorizon-liquid-230m:latest",
+              "executed_action": "NOOP",
+              "fallback": true,
+              "generation_id": 19,
+              "latency_ms": 51.94,
+              "model_call": true,
+              "preprocessor_actual": "NONE",
+              "preprocessor_input_hash": "c03e5cfbb99f37dd4add06aabf4431e3ba5e6d5976174ff0c43de91c5c8e71d8",
+              "preprocessor_latency_ms": 0.06,
+              "preprocessor_output_hash": "a90479cae716c6f8f8e7ceebf78e30192e36501fffd6908b93cca6b1701d0895",
+              "preprocessor_requested": "NONE",
+              "projected_plan": [],
+              "reason": "provider_unavailable:HTTPError",
+              "requested_action": null,
+              "requested_backend": "LIQUID_LOCAL/longhorizon-liquid-230m:latest",
+              "seat_id": "PLAYER_1",
+              "trace_id": "3e4f460a21814311ab493ac22f6de349"
+            },
+            "run_id": "720b9a1a7c634fbaafe6b58f5bd95ebb",
+            "seed": 3,
+            "timestamp": 1790638839.372305
+          }
+        ]
+      },
+      "status": "PARTIAL_INVALID_PZ_ACTION_FAIL_CLOSED"
+    },
+    "2P_VITHIA_QWEN_VS_VITHIA_QWEN": {
+      "result": {
+        "after": {
+          "decision_index": 2,
+          "joint_step": 1,
+          "mode": "2P"
+        },
+        "before": {
+          "decision_index": 0,
+          "joint_step": 0,
+          "mode": "2P"
+        },
+        "history": [
+          {
+            "env_advanced": true,
+            "environment_state_hash": "2bb3f42b74b98991b1ea57eadc36a7b00cf514f9b1310a5ffc3d94cf6a6f9d20",
+            "generation_id": 14,
+            "joint_step": 0,
+            "joint_transition_executed": true,
+            "mode": "2P",
+            "player0": {
+              "backend": "ollama:qwen2.5:0.5b",
+              "confidence": null,
+              "decider_backend": "qwen2.5:0.5b",
+              "decider_provider": "OLLAMA",
+              "decision_layer": "DIRECT",
+              "exact_model": "qwen2.5:0.5b",
+              "executed_action": "FIRE",
+              "fallback": false,
+              "generation_id": 14,
+              "latency_ms": 119.5,
+              "model_call": true,
+              "preprocessor_actual": "perception_v1",
+              "preprocessor_input_hash": "c03e5cfbb99f37dd4add06aabf4431e3ba5e6d5976174ff0c43de91c5c8e71d8",
+              "preprocessor_latency_ms": 0.44,
+              "preprocessor_output_hash": "47318a8d20e466108f5e7c50169d7e968db3ef230a7c0ca7eee7c869cdb4c03f",
+              "preprocessor_requested": "VITHIA_SPACE",
+              "projected_plan": [
+                "FIRE"
+              ],
+              "reason": "validated_model_action",
+              "requested_action": "FIRE",
+              "requested_backend": "OLLAMA/qwen2.5:0.5b",
+              "seat_id": "PLAYER_0",
+              "trace_id": "fa27bac527a941a5b7f539c774831415"
+            },
+            "player1": {
+              "backend": "ollama:qwen2.5:0.5b",
+              "confidence": null,
+              "decider_backend": "qwen2.5:0.5b",
+              "decider_provider": "OLLAMA",
+              "decision_layer": "DIRECT",
+              "exact_model": "qwen2.5:0.5b",
+              "executed_action": "FIRE",
+              "fallback": false,
+              "generation_id": 14,
+              "latency_ms": 151.46,
+              "model_call": true,
+              "preprocessor_actual": "perception_v1",
+              "preprocessor_input_hash": "c03e5cfbb99f37dd4add06aabf4431e3ba5e6d5976174ff0c43de91c5c8e71d8",
+              "preprocessor_latency_ms": 0.35,
+              "preprocessor_output_hash": "47318a8d20e466108f5e7c50169d7e968db3ef230a7c0ca7eee7c869cdb4c03f",
+              "preprocessor_requested": "VITHIA_SPACE",
+              "projected_plan": [
+                "FIRE"
+              ],
+              "reason": "validated_model_action",
+              "requested_action": "FIRE",
+              "requested_backend": "OLLAMA/qwen2.5:0.5b",
+              "seat_id": "PLAYER_1",
+              "trace_id": "d10f1b5c99be4c99b926c78f45a95388"
+            },
+            "run_id": "5a2a7ce9aa5e46d2a68d706526dfb165",
+            "seed": 3,
+            "timestamp": 1790638838.73649
+          }
+        ]
+      },
+      "status": "PASS"
+    }
+  },
+  "claim_policy": "PASS only for executed cells; historical evidence is separate",
+  "generated_utc": "2026-09-28T23:40:39Z",
+  "integration_status": {
+    "JEV_API_REMOTE": {
+      "authenticated": false,
+      "available": false,
+      "configured": false,
+      "current_status": "NOT_TESTED",
+      "display_name": "JEV API Remote",
+      "exact_model": null,
+      "historical_evidence": "none recorded",
+      "live_probe": "NOT_TESTED",
+      "provider_id": "JEV_API_REMOTE",
+      "reason": "future API path; no remote request made",
+      "role": "DECIDER",
+      "runtime": "HTTPS",
+      "supports_1p": true,
+      "supports_2p": true
+    },
+    "LIQUID_API": {
+      "authenticated": false,
+      "available": false,
+      "configured": false,
+      "current_status": "NOT_TESTED",
+      "display_name": "Liquid API",
+      "exact_model": null,
+      "historical_evidence": "none recorded",
+      "live_probe": "NOT_TESTED",
+      "provider_id": "LIQUID_API",
+      "reason": "API credentials/model not configured",
+      "role": "DECIDER",
+      "runtime": "HTTPS",
+      "supports_1p": true,
+      "supports_2p": true
+    },
+    "LIQUID_LOCAL": {
+      "authenticated": true,
+      "available": true,
+      "configured": true,
+      "current_status": "PASS",
+      "display_name": "Liquid Local",
+      "exact_model": "longhorizon-liquid-230m:latest",
+      "historical_evidence": "none recorded",
+      "live_probe": "PASS",
+      "provider_id": "LIQUID_LOCAL",
+      "reason": "exact local Liquid tag discovered",
+      "role": "DECIDER",
+      "runtime": "Ollama-compatible HTTP",
+      "supports_1p": true,
+      "supports_2p": true
+    },
+    "MITOSIS_LABS": {
+      "authenticated": false,
+      "available": false,
+      "configured": false,
+      "current_status": "NOT_TESTED",
+      "display_name": "Mitosis Labs",
+      "exact_model": null,
+      "historical_evidence": "prior memory/directive receipts present",
+      "live_probe": "NOT_TESTED",
+      "provider_id": "MITOSIS_LABS",
+      "reason": "memory/context provider; not a decision model",
+      "role": "CONTEXT_PROVIDER",
+      "runtime": "HTTPS",
+      "supports_1p": false,
+      "supports_2p": false
+    },
+    "OLLAMA": {
+      "authenticated": true,
+      "available": true,
+      "configured": true,
+      "current_status": "PASS",
+      "display_name": "Ollama",
+      "exact_model": null,
+      "historical_evidence": "none recorded",
+      "live_probe": "PASS",
+      "provider_id": "OLLAMA",
+      "reason": "dynamically discovered local tags",
+      "role": "DECIDER",
+      "runtime": "Ollama HTTP",
+      "supports_1p": true,
+      "supports_2p": true
+    },
+    "OPENJEV_LOCAL": {
+      "authenticated": false,
+      "available": false,
+      "configured": false,
+      "current_status": "NOT_TESTED",
+      "display_name": "OpenJEV Local",
+      "exact_model": null,
+      "historical_evidence": "none recorded",
+      "live_probe": "NOT_TESTED",
+      "provider_id": "OPENJEV_LOCAL",
+      "reason": "HTTPError",
+      "role": "DECIDER",
+      "runtime": "MLX/local HTTP",
+      "supports_1p": true,
+      "supports_2p": true
+    },
+    "SCRIPTED_BASELINE": {
+      "authenticated": true,
+      "available": true,
+      "configured": true,
+      "current_status": "PASS",
+      "display_name": "Scripted Baseline",
+      "exact_model": "scripted-policy",
+      "historical_evidence": "none recorded",
+      "live_probe": "PASS",
+      "provider_id": "SCRIPTED_BASELINE",
+      "reason": "non-model reference",
+      "role": "NON_MODEL_REFERENCE",
+      "runtime": "stdlib",
+      "supports_1p": true,
+      "supports_2p": true
+    },
+    "SYSTEM_ONE": {
+      "authenticated": false,
+      "available": false,
+      "configured": true,
+      "current_status": "NOT_TESTED",
+      "display_name": "System-One",
+      "exact_model": null,
+      "historical_evidence": "none recorded",
+      "live_probe": "NOT_TESTED",
+      "provider_id": "SYSTEM_ONE",
+      "reason": "OPENJEV_LOCAL not resident",
+      "role": "DECIDER",
+      "runtime": "local interface",
+      "supports_1p": true,
+      "supports_2p": true
+    },
+    "TENKI": {
+      "authenticated": false,
+      "available": false,
+      "configured": false,
+      "current_status": "NOT_TESTED",
+      "display_name": "Tenki",
+      "exact_model": null,
+      "historical_evidence": "prior sandbox receipt present",
+      "live_probe": "NOT_TESTED",
+      "provider_id": "TENKI",
+      "reason": "TENKI_API_KEY/TENKI_AUTH_TOKEN absent",
+      "role": "DECIDER",
+      "runtime": "HTTPS",
+      "supports_1p": true,
+      "supports_2p": true
+    }
+  },
+  "provider_registry": {
+    "providers": [
+      {
+        "authenticated": false,
+        "available": false,
+        "configured": true,
+        "display_name": "System-One",
+        "exact_model": null,
+        "live_probe": "NOT_TESTED",
+        "provider_id": "SYSTEM_ONE",
+        "reason": "OPENJEV_LOCAL not resident",
+        "role": "DECIDER",
+        "runtime": "local interface",
+        "supports_1p": true,
+        "supports_2p": true
+      },
+      {
+        "authenticated": false,
+        "available": false,
+        "configured": false,
+        "display_name": "OpenJEV Local",
+        "exact_model": null,
+        "live_probe": "NOT_TESTED",
+        "provider_id": "OPENJEV_LOCAL",
+        "reason": "HTTPError",
+        "role": "DECIDER",
+        "runtime": "MLX/local HTTP",
+        "supports_1p": true,
+        "supports_2p": true
+      },
+      {
+        "authenticated": false,
+        "available": false,
+        "configured": false,
+        "display_name": "JEV API Remote",
+        "exact_model": null,
+        "live_probe": "NOT_TESTED",
+        "provider_id": "JEV_API_REMOTE",
+        "reason": "future API path; no remote request made",
+        "role": "DECIDER",
+        "runtime": "HTTPS",
+        "supports_1p": true,
+        "supports_2p": true
+      },
+      {
+        "authenticated": true,
+        "available": true,
+        "configured": true,
+        "display_name": "Ollama",
+        "exact_model": null,
+        "live_probe": "PASS",
+        "provider_id": "OLLAMA",
+        "reason": "dynamically discovered local tags",
+        "role": "DECIDER",
+        "runtime": "Ollama HTTP",
+        "supports_1p": true,
+        "supports_2p": true
+      },
+      {
+        "authenticated": true,
+        "available": true,
+        "configured": true,
+        "display_name": "Liquid Local",
+        "exact_model": "longhorizon-liquid-230m:latest",
+        "live_probe": "PASS",
+        "provider_id": "LIQUID_LOCAL",
+        "reason": "exact local Liquid tag discovered",
+        "role": "DECIDER",
+        "runtime": "Ollama-compatible HTTP",
+        "supports_1p": true,
+        "supports_2p": true
+      },
+      {
+        "authenticated": false,
+        "available": false,
+        "configured": false,
+        "display_name": "Liquid API",
+        "exact_model": null,
+        "live_probe": "NOT_TESTED",
+        "provider_id": "LIQUID_API",
+        "reason": "API credentials/model not configured",
+        "role": "DECIDER",
+        "runtime": "HTTPS",
+        "supports_1p": true,
+        "supports_2p": true
+      },
+      {
+        "authenticated": false,
+        "available": false,
+        "configured": false,
+        "display_name": "Tenki",
+        "exact_model": null,
+        "live_probe": "NOT_TESTED",
+        "provider_id": "TENKI",
+        "reason": "TENKI_API_KEY/TENKI_AUTH_TOKEN absent",
+        "role": "DECIDER",
+        "runtime": "HTTPS",
+        "supports_1p": true,
+        "supports_2p": true
+      },
+      {
+        "authenticated": false,
+        "available": false,
+        "configured": false,
+        "display_name": "Mitosis Labs",
+        "exact_model": null,
+        "live_probe": "NOT_TESTED",
+        "provider_id": "MITOSIS_LABS",
+        "reason": "memory/context provider; not a decision model",
+        "role": "CONTEXT_PROVIDER",
+        "runtime": "HTTPS",
+        "supports_1p": false,
+        "supports_2p": false
+      },
+      {
+        "authenticated": true,
+        "available": true,
+        "configured": true,
+        "display_name": "Scripted Baseline",
+        "exact_model": "scripted-policy",
+        "live_probe": "PASS",
+        "provider_id": "SCRIPTED_BASELINE",
+        "reason": "non-model reference",
+        "role": "NON_MODEL_REFERENCE",
+        "runtime": "stdlib",
+        "supports_1p": true,
+        "supports_2p": true
+      }
+    ]
+  },
+  "receipt_sha256": "3ae162e8b31eb17f4490cb56a739b237ffd416466c0d945374a054023c8c2eb7",
+  "schema": "PER_SEAT_DECIDER_PREPROCESSOR_E2E_V02",
+  "server": "http://127.0.0.1:8788"
+}
