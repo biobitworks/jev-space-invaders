@@ -1,0 +1,10 @@
+{
+  "schema": "VITHIA_SCIENTIFIC_SUCCESSOR_OUTSIDE_RELEASE_V1",
+  "release": "v0.1.0-rc",
+  "evidence_lock_scientific_breakpoint": "UFA-JEV-BP-0024",
+  "evidence_lock_scientific_commit": "754945f572543452f6b9e3a21ccee16c175605af",
+  "observed_new_remote_scientific_head": "0a86efd7fbc105af8558f560b6e0b67d21716769",
+  "state": "EXCLUDED_FROM_CURRENT_RELEASE_EVIDENCE_LOCK",
+  "reason": "The scientific successor appeared after the publication evidence lock. Importing it mid-build would change the release predecessor. It is reserved for a later publication successor/version.",
+  "claim_mutation": false
+}

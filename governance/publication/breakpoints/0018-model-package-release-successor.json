@@ -1,0 +1,177 @@
+{
+  "breakpoint_id": "VITA-PUB-BP-0018",
+  "parent": "VITA-PUB-BP-0017",
+  "state": "HF_MODEL_PACKAGE_RELEASE_CANDIDATE_FROZEN",
+  "project": "VITHIA_0_VITA_1_PUBLICATION",
+  "created_utc": "2026-09-28T06:21:58+00:00",
+  "root_kind": "FMO_V1_PUBLICATION_BREAKPOINT_ATOMS",
+  "bp_root": "8b89422b9afd4391f08e70ae6e07b7582d7fd53e184ccc8658fbd5b3cca9f7f0",
+  "group_roots": {
+    "audit": "7084526c8d95b3c69cf700c9fbe415d608ea1267b045abdb3c3df29b62367db1",
+    "model": "18091594187c9f6a6ce5c72e473bbe4fcc262c2ddce1aa32d8e6a7e682a5440d"
+  },
+  "atoms": [
+    {
+      "path": "publication/model/vithia-s0/HF_PUBLICATION_RECEIPT.json",
+      "kind": "ModelArtifactFCO",
+      "group": "model",
+      "bytes": 348,
+      "sha256": "e3f4e5ebc5ff8dd73c1b67896a4475a9b850afe8b4e13013de7c4af7d215033b",
+      "location": "public",
+      "fmo_leaf": "f951e701802a0063754a176a597460821fd9a88673e315902507cbe04d1b8df5"
+    },
+    {
+      "path": "publication/model/vithia-s0/MODEL_RECEIPT.json",
+      "kind": "ModelArtifactFCO",
+      "group": "model",
+      "bytes": 915,
+      "sha256": "abec914f696efbcd9ac9e8c889fa6532b30887eab1b1fda2b81736d06090b83a",
+      "location": "public",
+      "fmo_leaf": "93bde5552d81ddce6351427da9725950a3d25f200a1f809db7c0bd9df02fcae9"
+    },
+    {
+      "path": "publication/model/vithia-s0/README.md",
+      "kind": "ModelArtifactFCO",
+      "group": "model",
+      "bytes": 1133,
+      "sha256": "760a785e52e708f3b11727c90b0bcdfc41c8b122dc3dc1bfad275d3b6ac30d7e",
+      "location": "public",
+      "fmo_leaf": "6eca93ad05e246eb048fb4cfea36a271c248920bc3556199cb23e2924bd98a82"
+    },
+    {
+      "path": "publication/model/vithia-s0/SHA256SUMS.txt",
+      "kind": "ModelArtifactFCO",
+      "group": "model",
+      "bytes": 1338,
+      "sha256": "a0cdd97fa2eb3bc2d7e0eaebe2a061a4c04376d2e70ccc58e15d4e7ff52c0952",
+      "location": "public",
+      "fmo_leaf": "13b488f6af63be892f2032503cd9fe0afd07829e18706ddf947217f57fd3282e"
+    },
+    {
+      "path": "publication/model/vithia-s0/config.json",
+      "kind": "ModelArtifactFCO",
+      "group": "model",
+      "bytes": 284,
+      "sha256": "5cb618708c62b7b5a7c53544d6e6290fbec4ee61542a41b20a8eb40e1741495e",
+      "location": "public",
+      "fmo_leaf": "29278a1376523fc7ff33167c18d482bc203abcba003465e27bccab5dc2ac2c91"
+    },
+    {
+      "path": "publication/model/vithia-s0/contracts/S01_CONTEXT_PACKET_V1.json",
+      "kind": "ModelArtifactFCO",
+      "group": "model",
+      "bytes": 2433,
+      "sha256": "9ec4d57d482ff2f7f34c4a016ee768d4ee6b051094cfa85c62d9da026751063b",
+      "location": "public",
+      "fmo_leaf": "9b4ee92a3509ad6d988f2cd901d535381e2ca28fa3ba21ef388ded841041c866"
+    },
+    {
+      "path": "publication/model/vithia-s0/contracts/VITA01_CONTINUOUS_EQUIVALENCE_CONTRACT_V1.json",
+      "kind": "ModelArtifactFCO",
+      "group": "model",
+      "bytes": 1574,
+      "sha256": "640b96339bc90d7ec39cc5bc0d062fa1327fec2f9ea6a8f85ac15b0542beead0",
+      "location": "public",
+      "fmo_leaf": "eea9d7e56e76df3f7f3e0f82572ecbfc509628d220184577c5966b7657109d00"
+    },
+    {
+      "path": "publication/model/vithia-s0/contracts/VITA01_TYPE_CONTRACT_V1.json",
+      "kind": "ModelArtifactFCO",
+      "group": "model",
+      "bytes": 4311,
+      "sha256": "a2653e3afeec3d2f1cb0a7bdebe080c61118ac44a03cfe64809a8a08e32aca79",
+      "location": "public",
+      "fmo_leaf": "0e28595e472b72637726c4637f1fd5d3cf5f56ce105b2dab37ae958c78a5da3b"
+    },
+    {
+      "path": "publication/model/vithia-s0/example_input.json",
+      "kind": "ModelArtifactFCO",
+      "group": "model",
+      "bytes": 279,
+      "sha256": "c3a5a1e9f620ac7a7112fc1b4c22ec8eee6917cdfe46171a53d6099d9f48eae1",
+      "location": "public",
+      "fmo_leaf": "a4d0567c199b5977d4787b56512aa8c6b946bafbfdc7b42a70558a720310d772"
+    },
+    {
+      "path": "publication/model/vithia-s0/example_output.json",
+      "kind": "ModelArtifactFCO",
+      "group": "model",
+      "bytes": 485,
+      "sha256": "21c30a042440022ffd088a04b5ed72647dffdef6d6efbcb27770c0b8046e47f9",
+      "location": "public",
+      "fmo_leaf": "1afbf4cc391f42e1918d8ad4d65befe9ff2c843c1655b3dd88cfa46eaa404200"
+    },
+    {
+      "path": "publication/model/vithia-s0/modeling_vithia_s0.py",
+      "kind": "ModelArtifactFCO",
+      "group": "model",
+      "bytes": 1603,
+      "sha256": "a29971703e0e45193c77034c209d27a58436567989a573369d226b8187b11bbd",
+      "location": "public",
+      "fmo_leaf": "f3b680d62db852203175d621d1a56770260a690cec416cd4e15c4701faa8b40c"
+    },
+    {
+      "path": "publication/model/vithia-s0/source_snapshot/src/s01/canon.py",
+      "kind": "ModelArtifactFCO",
+      "group": "model",
+      "bytes": 2452,
+      "sha256": "b6698b4cf15484c8390630eef8e41aa184b1a4a4f6c134d21ea0acb01fc03f0d",
+      "location": "public",
+      "fmo_leaf": "359a0c2cff1f9bb33891585f4e699d681af206f3ec9eb8e7a631e02b6d5bb5ff"
+    },
+    {
+      "path": "publication/model/vithia-s0/source_snapshot/src/s01/protocol.py",
+      "kind": "ModelArtifactFCO",
+      "group": "model",
+      "bytes": 2966,
+      "sha256": "f1237bd1b6dbc4bd75783ba3b3ec1d09bfefd8c06687d45566c559083ba24e1a",
+      "location": "public",
+      "fmo_leaf": "7788f0ce040df6296758a230eed897d35790f15fcdd4f7ae15a8e08ec3565eec"
+    },
+    {
+      "path": "publication/model/vithia-s0/source_snapshot/src/vita01/equivalence.py",
+      "kind": "ModelArtifactFCO",
+      "group": "model",
+      "bytes": 4121,
+      "sha256": "5295e92bfb34ebdcb5eebd695294f3099538e30cbc396b530d8b6eaf70ef164d",
+      "location": "public",
+      "fmo_leaf": "2acd60836b2782affa08e55b6c00913e13be84660a0ae5423d0f289d5f68bddb"
+    },
+    {
+      "path": "publication/model/vithia-s0/source_snapshot/src/vita01/typecheck.py",
+      "kind": "ModelArtifactFCO",
+      "group": "model",
+      "bytes": 3874,
+      "sha256": "4e1222e8940cc75b72741bed7e1d24d3c3e690a153f4698c848f4c021dabe8f2",
+      "location": "public",
+      "fmo_leaf": "73adeb0e15743eca050286413650a048c5112b941e67ba8e0fe5769fa139fff5"
+    },
+    {
+      "path": "publication/audits/SCIENTIFIC_SUCCESSOR_OUTSIDE_V0_1_0.json",
+      "kind": "AuditReceiptFCO",
+      "group": "audit",
+      "bytes": 607,
+      "sha256": "e158abd79710e3e38c34bd7bf5a0048e44e1096fb7f988868092862f2d6e7722",
+      "location": "public",
+      "fmo_leaf": "403c464f45cb901e9ea1ec8bedcffb6e50ca312fb536938a667bc5c9305885bb"
+    },
+    {
+      "path": "publication/audits/RELEASE_PACKAGING_FAILURE_RECEIPT.json",
+      "kind": "FailureReceiptFCO",
+      "group": "audit",
+      "bytes": 523,
+      "sha256": "2027bd31b724061e352618ad596fe11607f944abce76636d68ca67a4bcaa9bff",
+      "location": "public",
+      "fmo_leaf": "69de8ecd726e71e2883d471098a4c924807897cb5e2279c06db16d1f71d9d592"
+    }
+  ],
+  "stage": "HF_MODEL_PACKAGE_RELEASE_SUCCESSOR",
+  "model_kind": "DETERMINISTIC_PROTOCOL_REFERENCE_IMPLEMENTATION",
+  "trained": false,
+  "hf_remote_state": "BLOCKED_MISSING_WRITE_AUTH",
+  "rights_state": "LICENSE_NOT_ESTABLISHED_FOR_THIS_RELEASE",
+  "successor_of": "VITA-PUB-BP-0015",
+  "scientific_successor_outside_release": "0a86efd7fbc105af8558f560b6e0b67d21716769",
+  "claim_ceiling": "IDENTITY_AND_INCLUSION_ONLY; publication roots do not establish scientific truth",
+  "signature_state": "NOT_SIGNED"
+}

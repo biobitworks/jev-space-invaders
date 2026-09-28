@@ -257,6 +257,21 @@
         "38225c02b9c0e198d4da872ddc9f9160d7e1c772cbb1da2e69ae4778a5cd07b5",
         "46ee057cf18f281d3d60c944cca96d4c06c5fc85d3b93f3074a12ec8d9f36f46"
       ]
+    },
+    {
+      "seq": 17,
+      "bp_id": "VITA-PUB-BP-0018",
+      "bp_file": "governance/publication/breakpoints/0018-model-package-release-successor.json",
+      "bp_file_sha256": "db138a48e6377e170e409e6884b96b245cbc093e91a40dca9a5829ca17d0c02d",
+      "bp_root": "8b89422b9afd4391f08e70ae6e07b7582d7fd53e184ccc8658fbd5b3cca9f7f0",
+      "root_kind": "FMO_V1_PUBLICATION_BREAKPOINT_ATOMS",
+      "mmr_leaf": "91998b9741cf0666321911a81761a2654555704d239ddaf4688852bbfd66d881",
+      "mmr_size": 18,
+      "mmr_root_after": "12d7228f77eb5c43ddeea536e84a274206d3a855e3bef4dd9e1e77d55f46e65f",
+      "mmr_peaks_after": [
+        "38225c02b9c0e198d4da872ddc9f9160d7e1c772cbb1da2e69ae4778a5cd07b5",
+        "4e499bc59d5e03705de3bd8f64c6dc9b8195f22e3657c8679081bc78b41ed8dc"
+      ]
     }
   ]
 }
