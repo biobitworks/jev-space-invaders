@@ -1,0 +1,24 @@
+{
+  "schema": "VITHIA_RELEASE_GATE_V1",
+  "state": "BLOCKED",
+  "target_version": "0.1.0",
+  "required_local_gates": {
+    "scientific_mmr": "PASS",
+    "publication_mmr": "PASS",
+    "citation_audit": "PASS",
+    "claim_audit": "PASS",
+    "type_safety_audit": "PASS",
+    "pdf_visual_audit": "PASS",
+    "model_package": "PASS"
+  },
+  "external_blockers": [
+    "LICENSE_NOT_ESTABLISHED_FOR_THIS_RELEASE",
+    "HF_WRITE_AUTH_MISSING",
+    "ZENODO_AUTH_MISSING"
+  ],
+  "tag_state": "NOT_CREATED",
+  "zenodo_state": "NOT_CREATED",
+  "hf_remote_state": "NOT_CREATED",
+  "signature_state": "NOT_SIGNED",
+  "publish_authorized": false
+}

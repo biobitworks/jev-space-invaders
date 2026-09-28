@@ -1,0 +1,122 @@
+{
+  "generated_by": "scripts/build_registries.py",
+  "entries": [
+    {
+      "dataset_id": "S01_ADDRESSABILITY_EVAL_V1",
+      "kind": "evaluation",
+      "source": "generated",
+      "license": "CC-BY-4.0",
+      "fmo_root": "af82e60b9871e40982a2277597b6877452abb170929f4d153002cdc6806e2acc",
+      "visibility": "public",
+      "claim_ceiling": "synthetic finite states; no external data",
+      "code_commit_at_generation": "e7d43c92ebb19d25dad28acf7faf895d29be4f73",
+      "manifest": "data/s01/S01_ADDRESSABILITY_EVAL_V1/MANIFEST.json",
+      "manifest_sha256": "4dadd4c429cefc4b47b831db0fe1852b69d9ffd35c2aa9f4434eb8a49ae2a999",
+      "evidence_level": "SIMULATED"
+    },
+    {
+      "dataset_id": "S01_ADDRESSABILITY_RESULTS_V1",
+      "kind": "output",
+      "source": "S01_ADDRESSABILITY_EVAL_V1",
+      "license": "CC-BY-4.0",
+      "fmo_root": "bf7e2031bd709f8be167b94d8b114d8fdcacd1da513f7a63b1919ac17a3e1aab",
+      "visibility": "public",
+      "claim_ceiling": "deterministic computation over the frozen input",
+      "code_commit_at_generation": "9311f61d91e05e5c854e36bc1e8ade8dc4164a93",
+      "manifest": "data/s01/S01_ADDRESSABILITY_RESULTS_V1/MANIFEST.json",
+      "manifest_sha256": "2b92570aa8c2730359926be90e0854328b0fc085b664b47f1be86a17ec19da68",
+      "evidence_level": "SIMULATED"
+    },
+    {
+      "dataset_id": "S01_ECA_256_EVAL_V1",
+      "kind": "evaluation",
+      "source": "generated",
+      "license": "CC-BY-4.0",
+      "fmo_root": "2535de95267ff0abe69f820a5bc706e4c097d326c0160dd9e8621c0b3793c2be",
+      "visibility": "public",
+      "claim_ceiling": "deterministic synthetic trajectories",
+      "code_commit_at_generation": "4c79a1d4ccb8902d41af1bfbab991322142f6390",
+      "manifest": "data/s01/S01_ECA_256_EVAL_V1/MANIFEST.json",
+      "manifest_sha256": "c5c5874577099eb0b12392d5db47ba162a4d4f70274711e69c6ad7bf5ebc0457",
+      "evidence_level": "SIMULATED"
+    },
+    {
+      "dataset_id": "S01_ECA_256_RESULTS_V1",
+      "kind": "output",
+      "source": "S01_ECA_256_EVAL_V1",
+      "license": "CC-BY-4.0",
+      "fmo_root": "f72a332e4050cbfbc71c33ecf4cc2fb72fe877f90cf55f8231b2f5a87cdaeafa",
+      "visibility": "public",
+      "claim_ceiling": "public reference S0 (consistency filter); private S0 NOT_TESTED",
+      "code_commit_at_generation": "e3dca8c6a8d4544eaab9aa89a728813144fcc79f",
+      "manifest": "data/s01/S01_ECA_256_RESULTS_V1/MANIFEST.json",
+      "manifest_sha256": "b617b9699dde7a1a440257239b601b1e3b4519960511c0380d570872ee0b90fa",
+      "evidence_level": "SIMULATED"
+    },
+    {
+      "dataset_id": "S01_LIFE_CONTEXT_EVAL_V1",
+      "kind": "evaluation",
+      "source": "generated",
+      "license": "CC-BY-4.0",
+      "fmo_root": "7b707eeb0b2054c8fe97233038c276e23608d4dc2ce2e44883f2e11007e1c214",
+      "visibility": "public",
+      "claim_ceiling": "deterministic synthetic patterns",
+      "code_commit_at_generation": "d4f075150759417b3af73eea3c7862a9e608cafd",
+      "manifest": "data/s01/S01_LIFE_CONTEXT_EVAL_V1/MANIFEST.json",
+      "manifest_sha256": "86197cf3fa30c3e5e3010ce475cc800b159942d52550fe99c0673f922594f001",
+      "evidence_level": "SIMULATED"
+    },
+    {
+      "dataset_id": "S01_LIFE_CONTEXT_RESULTS_V1",
+      "kind": "output",
+      "source": "S01_LIFE_CONTEXT_EVAL_V1",
+      "license": "CC-BY-4.0",
+      "fmo_root": "0c82f7ce7603c6a305a689ac965cf3ef97c44460f997ab86e0e3b4061fa8990f",
+      "visibility": "public",
+      "claim_ceiling": "deterministic rule dynamics; no biological or emergence claim",
+      "code_commit_at_generation": "855086e501186d55dccd49cabed92c8926f3cab4",
+      "manifest": "data/s01/S01_LIFE_CONTEXT_RESULTS_V1/MANIFEST.json",
+      "manifest_sha256": "95221d041a501f67ca249c12f648c11f06fe3c75a3e3aefc2506bf2cb4985c9c",
+      "evidence_level": "SIMULATED"
+    },
+    {
+      "dataset_id": "S01_MINESWEEPER_EVAL_V1",
+      "kind": "evaluation",
+      "source": "generated",
+      "license": "CC-BY-4.0",
+      "fmo_root": "9840b65a71d29b740d42259a5452eaeac140336dd544c1b2e04693d04fab6947",
+      "visibility": "public",
+      "claim_ceiling": "synthetic boards; true board recoverable from seed",
+      "code_commit_at_generation": "cabea25fa8cea2c3fefbc75f057ad2a91e941da5",
+      "manifest": "data/s01/S01_MINESWEEPER_EVAL_V1/MANIFEST.json",
+      "manifest_sha256": "86e2fca2b9157181383edc82237b56a5ac20968410ec6c373efa1e0f3677f59b",
+      "evidence_level": "SIMULATED"
+    },
+    {
+      "dataset_id": "S01_MINESWEEPER_RESULTS_V1",
+      "kind": "output",
+      "source": "S01_MINESWEEPER_EVAL_V1",
+      "license": "CC-BY-4.0",
+      "fmo_root": "1ab7c39c148ea8643e94db9f3979c900347295cf13643cc50e8c07374b2a057a",
+      "visibility": "public",
+      "claim_ceiling": "rows.jsonl deterministic; timings.jsonl machine-specific",
+      "code_commit_at_generation": "f34cc8fd76342c9cd109bdc568d4f27adc79156a",
+      "manifest": "data/s01/S01_MINESWEEPER_RESULTS_V1/MANIFEST.json",
+      "manifest_sha256": "0aeedcbdb3083c9306b4a12dc0cc7e852acc0143d3715eab6c728e59141ce97c",
+      "evidence_level": "SIMULATED"
+    },
+    {
+      "dataset_id": "S01_SPACE_INVADERS_SNAPSHOT_EVAL_V1",
+      "kind": "evaluation",
+      "source": "ALE/SpaceInvaders-v5 replay of scripted policy",
+      "license": "derived observations only; no ROM bytes",
+      "fmo_root": "d8ff2d1ef45fcc90aa2e8e85dd7dcaf037aa2db9d95ce515bdd5f284f9a3f180",
+      "visibility": "public",
+      "claim_ceiling": "frozen inputs only; no decider has been queried",
+      "code_commit_at_generation": "afe7f0f9237912ef64b5b2166261df6dcd6639d3",
+      "manifest": "data/s01/S01_SPACE_INVADERS_SNAPSHOT_EVAL_V1/MANIFEST.json",
+      "manifest_sha256": "226169d12adf07147a3cbc65b4ae09ab8f2c02ac0be7453530caaa3b6dfe512c",
+      "evidence_level": "SIMULATED"
+    }
+  ]
+}

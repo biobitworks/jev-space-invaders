@@ -1,0 +1,303 @@
+{
+  "schema": "VITHIA_PUBLICATION_CLAIM_MATRIX_V1",
+  "coverage_policy": "every substantive manuscript claim must reference one or more evidence_refs",
+  "entries": [
+    {
+      "claim_id": "E0_ADDRESSABILITY::H0a",
+      "claim": "H0a",
+      "experiment": "E0_ADDRESSABILITY",
+      "state": "SUPPORTED",
+      "evidence_level": "SIMULATED",
+      "evidence_refs": [
+        "evidence/s01/E0_ADDRESSABILITY/EXPERIMENT_RECEIPT.json"
+      ],
+      "allowed_wording": "H0a is reported as SUPPORTED in the confirmatory E0_ADDRESSABILITY receipt.",
+      "forbidden_stronger_wording": "Do not upgrade beyond the recorded state."
+    },
+    {
+      "claim_id": "E0_ADDRESSABILITY::H0b",
+      "claim": "H0b",
+      "experiment": "E0_ADDRESSABILITY",
+      "state": "SUPPORTED",
+      "evidence_level": "SIMULATED",
+      "evidence_refs": [
+        "evidence/s01/E0_ADDRESSABILITY/EXPERIMENT_RECEIPT.json"
+      ],
+      "allowed_wording": "H0b is reported as SUPPORTED in the confirmatory E0_ADDRESSABILITY receipt.",
+      "forbidden_stronger_wording": "Do not upgrade beyond the recorded state."
+    },
+    {
+      "claim_id": "E0_ADDRESSABILITY::H0c",
+      "claim": "H0c",
+      "experiment": "E0_ADDRESSABILITY",
+      "state": "SUPPORTED",
+      "evidence_level": "SIMULATED",
+      "evidence_refs": [
+        "evidence/s01/E0_ADDRESSABILITY/EXPERIMENT_RECEIPT.json"
+      ],
+      "allowed_wording": "H0c is reported as SUPPORTED in the confirmatory E0_ADDRESSABILITY receipt.",
+      "forbidden_stronger_wording": "Do not upgrade beyond the recorded state."
+    },
+    {
+      "claim_id": "E0_ADDRESSABILITY::H0d",
+      "claim": "H0d",
+      "experiment": "E0_ADDRESSABILITY",
+      "state": "SUPPORTED",
+      "evidence_level": "SIMULATED",
+      "evidence_refs": [
+        "evidence/s01/E0_ADDRESSABILITY/EXPERIMENT_RECEIPT.json"
+      ],
+      "allowed_wording": "H0d is reported as SUPPORTED in the confirmatory E0_ADDRESSABILITY receipt.",
+      "forbidden_stronger_wording": "Do not upgrade beyond the recorded state."
+    },
+    {
+      "claim_id": "E0_ADDRESSABILITY::H0e",
+      "claim": "H0e",
+      "experiment": "E0_ADDRESSABILITY",
+      "state": "OBSERVED",
+      "evidence_level": "SIMULATED",
+      "evidence_refs": [
+        "evidence/s01/E0_ADDRESSABILITY/EXPERIMENT_RECEIPT.json"
+      ],
+      "allowed_wording": "H0e is reported as OBSERVED in the confirmatory E0_ADDRESSABILITY receipt.",
+      "forbidden_stronger_wording": "Do not upgrade beyond the recorded state."
+    },
+    {
+      "claim_id": "E1_ECA::G1",
+      "claim": "G1",
+      "experiment": "E1_ECA",
+      "state": "SUPPORTED",
+      "evidence_level": "SIMULATED",
+      "evidence_refs": [
+        "evidence/s01/E1_ECA/EXPERIMENT_RECEIPT.json"
+      ],
+      "allowed_wording": "G1 is reported as SUPPORTED in the confirmatory E1_ECA receipt.",
+      "forbidden_stronger_wording": "Do not upgrade beyond the recorded state."
+    },
+    {
+      "claim_id": "E1_ECA::H1a",
+      "claim": "H1a",
+      "experiment": "E1_ECA",
+      "state": "SUPPORTED",
+      "evidence_level": "SIMULATED",
+      "evidence_refs": [
+        "evidence/s01/E1_ECA/EXPERIMENT_RECEIPT.json"
+      ],
+      "allowed_wording": "H1a is reported as SUPPORTED in the confirmatory E1_ECA receipt.",
+      "forbidden_stronger_wording": "Do not upgrade beyond the recorded state."
+    },
+    {
+      "claim_id": "E1_ECA::H1b",
+      "claim": "H1b",
+      "experiment": "E1_ECA",
+      "state": "SUPPORTED",
+      "evidence_level": "SIMULATED",
+      "evidence_refs": [
+        "evidence/s01/E1_ECA/EXPERIMENT_RECEIPT.json"
+      ],
+      "allowed_wording": "H1b is reported as SUPPORTED in the confirmatory E1_ECA receipt.",
+      "forbidden_stronger_wording": "Do not upgrade beyond the recorded state."
+    },
+    {
+      "claim_id": "E1_ECA::H1c",
+      "claim": "H1c",
+      "experiment": "E1_ECA",
+      "state": "SUPPORTED",
+      "evidence_level": "SIMULATED",
+      "evidence_refs": [
+        "evidence/s01/E1_ECA/EXPERIMENT_RECEIPT.json"
+      ],
+      "allowed_wording": "H1c is reported as SUPPORTED in the confirmatory E1_ECA receipt.",
+      "forbidden_stronger_wording": "Do not upgrade beyond the recorded state."
+    },
+    {
+      "claim_id": "E1_ECA::H1d",
+      "claim": "H1d",
+      "experiment": "E1_ECA",
+      "state": "NOT_SUPPORTED",
+      "evidence_level": "SIMULATED",
+      "evidence_refs": [
+        "evidence/s01/E1_ECA/EXPERIMENT_RECEIPT.json"
+      ],
+      "allowed_wording": "H1d is reported as NOT_SUPPORTED in the confirmatory E1_ECA receipt.",
+      "forbidden_stronger_wording": "Do not upgrade beyond the recorded state."
+    },
+    {
+      "claim_id": "E1_ECA::H1e",
+      "claim": "H1e",
+      "experiment": "E1_ECA",
+      "state": "FAIL_TO_REJECT_H0",
+      "evidence_level": "SIMULATED",
+      "evidence_refs": [
+        "evidence/s01/E1_ECA/EXPERIMENT_RECEIPT.json"
+      ],
+      "allowed_wording": "H1e is reported as FAIL_TO_REJECT_H0 in the confirmatory E1_ECA receipt.",
+      "forbidden_stronger_wording": "Do not upgrade beyond the recorded state."
+    },
+    {
+      "claim_id": "E1_ECA::H1e_v2",
+      "claim": "H1e_v2",
+      "experiment": "E1_ECA",
+      "state": "FAIL_TO_REJECT_H0",
+      "evidence_level": "SIMULATED",
+      "evidence_refs": [
+        "evidence/s01/E1_ECA/EXPERIMENT_RECEIPT.json"
+      ],
+      "allowed_wording": "H1e_v2 is reported as FAIL_TO_REJECT_H0 in the confirmatory E1_ECA receipt.",
+      "forbidden_stronger_wording": "Do not upgrade beyond the recorded state."
+    },
+    {
+      "claim_id": "E2_LIFE::H2a",
+      "claim": "H2a",
+      "experiment": "E2_LIFE",
+      "state": "SUPPORTED",
+      "evidence_level": "SIMULATED",
+      "evidence_refs": [
+        "evidence/s01/E2_LIFE/EXPERIMENT_RECEIPT.json"
+      ],
+      "allowed_wording": "H2a is reported as SUPPORTED in the confirmatory E2_LIFE receipt.",
+      "forbidden_stronger_wording": "Do not upgrade beyond the recorded state."
+    },
+    {
+      "claim_id": "E2_LIFE::H2b",
+      "claim": "H2b",
+      "experiment": "E2_LIFE",
+      "state": "SUPPORTED",
+      "evidence_level": "SIMULATED",
+      "evidence_refs": [
+        "evidence/s01/E2_LIFE/EXPERIMENT_RECEIPT.json"
+      ],
+      "allowed_wording": "H2b is reported as SUPPORTED in the confirmatory E2_LIFE receipt.",
+      "forbidden_stronger_wording": "Do not upgrade beyond the recorded state."
+    },
+    {
+      "claim_id": "E2_LIFE::H2c",
+      "claim": "H2c",
+      "experiment": "E2_LIFE",
+      "state": "OBSERVED",
+      "evidence_level": "SIMULATED",
+      "evidence_refs": [
+        "evidence/s01/E2_LIFE/EXPERIMENT_RECEIPT.json"
+      ],
+      "allowed_wording": "H2c is reported as OBSERVED in the confirmatory E2_LIFE receipt.",
+      "forbidden_stronger_wording": "Do not upgrade beyond the recorded state."
+    },
+    {
+      "claim_id": "E2_LIFE::H2d",
+      "claim": "H2d",
+      "experiment": "E2_LIFE",
+      "state": "SUPPORTED",
+      "evidence_level": "SIMULATED",
+      "evidence_refs": [
+        "evidence/s01/E2_LIFE/EXPERIMENT_RECEIPT.json"
+      ],
+      "allowed_wording": "H2d is reported as SUPPORTED in the confirmatory E2_LIFE receipt.",
+      "forbidden_stronger_wording": "Do not upgrade beyond the recorded state."
+    },
+    {
+      "claim_id": "E3_MINESWEEPER::H3a",
+      "claim": "H3a",
+      "experiment": "E3_MINESWEEPER",
+      "state": "SUPPORTED",
+      "evidence_level": "SIMULATED",
+      "evidence_refs": [
+        "evidence/s01/E3_MINESWEEPER/EXPERIMENT_RECEIPT.json"
+      ],
+      "allowed_wording": "H3a is reported as SUPPORTED in the confirmatory E3_MINESWEEPER receipt.",
+      "forbidden_stronger_wording": "Do not upgrade beyond the recorded state."
+    },
+    {
+      "claim_id": "E3_MINESWEEPER::H3b",
+      "claim": "H3b",
+      "experiment": "E3_MINESWEEPER",
+      "state": "SUPPORTED",
+      "evidence_level": "SIMULATED",
+      "evidence_refs": [
+        "evidence/s01/E3_MINESWEEPER/EXPERIMENT_RECEIPT.json"
+      ],
+      "allowed_wording": "H3b is reported as SUPPORTED in the confirmatory E3_MINESWEEPER receipt.",
+      "forbidden_stronger_wording": "Do not upgrade beyond the recorded state."
+    },
+    {
+      "claim_id": "E3_MINESWEEPER::H3c",
+      "claim": "H3c",
+      "experiment": "E3_MINESWEEPER",
+      "state": "SUPPORTED",
+      "evidence_level": "SIMULATED",
+      "evidence_refs": [
+        "evidence/s01/E3_MINESWEEPER/EXPERIMENT_RECEIPT.json"
+      ],
+      "allowed_wording": "H3c is reported as SUPPORTED in the confirmatory E3_MINESWEEPER receipt.",
+      "forbidden_stronger_wording": "Do not upgrade beyond the recorded state."
+    },
+    {
+      "claim_id": "ARCH::S0_ROLE",
+      "claim": "Vithia-S0 is a context compiler; downstream S1 performs decisions.",
+      "state": "IMPLEMENTED",
+      "evidence_level": "SIMULATED",
+      "evidence_refs": [
+        "vita01/VITA01_TERMINOLOGY_V2.json",
+        "vita01/S01_PROTOCOL_SPEC_DRAFT.md"
+      ],
+      "allowed_wording": "The public protocol separates deterministic context compilation from downstream decision-making.",
+      "forbidden_stronger_wording": "Do not claim the downstream world or model is deterministic."
+    },
+    {
+      "claim_id": "GOV::MMR24",
+      "claim": "The scientific lineage is committed through UFA-JEV-BP-0024 in a verified MMR.",
+      "state": "OBSERVED",
+      "evidence_level": "CUSTODY",
+      "evidence_refs": [
+        "governance/MMR_LEDGER.json",
+        "governance/breakpoints/0024-cross-host-replication-result.json"
+      ],
+      "allowed_wording": "The repository verifier reconstructs the ordered breakpoint MMR through BP-0024.",
+      "forbidden_stronger_wording": "Do not equate MMR inclusion with truth or correctness."
+    },
+    {
+      "claim_id": "STAT::SECONDARY",
+      "claim": "Post-confirmatory secondary statistics were computed from frozen E1-E3 outputs without mutating original claims.",
+      "state": "OBSERVED",
+      "evidence_level": "SIMULATED",
+      "evidence_refs": [
+        "evidence/statistical_successor/STATISTICAL_ANALYSIS.json",
+        "governance/breakpoints/0022-d0-d9-statistical-analysis-result.json"
+      ],
+      "allowed_wording": "Secondary uncertainty/effect summaries supplement, but do not replace, the confirmatory decisions.",
+      "forbidden_stronger_wording": "Do not recast secondary analyses as preregistered confirmatory endpoints."
+    },
+    {
+      "claim_id": "LIMIT::E4A",
+      "claim": "E4A freezes Space Invaders snapshots and contains no decider calls.",
+      "state": "INPUT_FROZEN_NO_DECIDER_CALLS",
+      "evidence_level": "SIMULATED",
+      "evidence_refs": [
+        "governance/breakpoints/0020-e4a-prereg.json"
+      ],
+      "allowed_wording": "E4A supplies a frozen partially observed testbed; downstream model utility remains untested in v0.1.0.",
+      "forbidden_stronger_wording": "Do not claim JEV/OpenJEV/System-1 utility from E4A."
+    },
+    {
+      "claim_id": "LIMIT::DELTAGSTAR",
+      "claim": "DeltaGStar was not computed in the completed v0.1.0 evidence chain.",
+      "state": "NOT_COMPUTED",
+      "evidence_level": "SIMULATED",
+      "evidence_refs": [
+        "vita01/VITA01_CONFIRMATORY_PREREGISTRATION.md"
+      ],
+      "allowed_wording": "DeltaGStar remains a proposed/private successor component and is not an empirical result here.",
+      "forbidden_stronger_wording": "Do not report DeltaGStar values or effects."
+    },
+    {
+      "claim_id": "LIMIT::CROSSHOST",
+      "claim": "Cross-host replication was deferred because magicPRObox was unavailable.",
+      "state": "DEFERRED_NOT_FAILED",
+      "evidence_level": "REPLICATION",
+      "evidence_refs": [
+        "evidence/cross_host/CROSS_HOST_REPLICATION_RECEIPT.json"
+      ],
+      "allowed_wording": "Cross-host replication is deferred and does not alter the single-host confirmatory results.",
+      "forbidden_stronger_wording": "Do not claim independent two-host byte-identical replication."
+    }
+  ]
+}

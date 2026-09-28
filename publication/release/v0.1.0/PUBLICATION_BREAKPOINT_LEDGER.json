@@ -272,22 +272,6 @@
         "38225c02b9c0e198d4da872ddc9f9160d7e1c772cbb1da2e69ae4778a5cd07b5",
         "4e499bc59d5e03705de3bd8f64c6dc9b8195f22e3657c8679081bc78b41ed8dc"
       ]
-    },
-    {
-      "seq": 18,
-      "bp_id": "VITA-PUB-BP-0019",
-      "bp_file": "governance/publication/breakpoints/0019-reproducibility-release-package.json",
-      "bp_file_sha256": "335fd9d8b20c55edb33f29a957a7c3180d3430d6d16b5bccc2397313f4081c3d",
-      "bp_root": "63e50bcf3f19242cd93a2df5d7bbe701383e589a7a62a362e03cb1db1488ea1f",
-      "root_kind": "FMO_V1_PUBLICATION_BREAKPOINT_ATOMS",
-      "mmr_leaf": "0beb7fcc263e173c63369b3d6688ad8a96cb6a364af122fc18d7e945bae4b2e7",
-      "mmr_size": 19,
-      "mmr_root_after": "0843edb95d2eb32f210156974acb661401ce2e571529ebeaa7abeeb96871a43c",
-      "mmr_peaks_after": [
-        "38225c02b9c0e198d4da872ddc9f9160d7e1c772cbb1da2e69ae4778a5cd07b5",
-        "4e499bc59d5e03705de3bd8f64c6dc9b8195f22e3657c8679081bc78b41ed8dc",
-        "0beb7fcc263e173c63369b3d6688ad8a96cb6a364af122fc18d7e945bae4b2e7"
-      ]
     }
   ]
 }

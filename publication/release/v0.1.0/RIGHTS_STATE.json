@@ -1,0 +1,9 @@
+{
+  "schema": "VITHIA_RELEASE_RIGHTS_STATE_V1",
+  "state": "LICENSE_NOT_ESTABLISHED_FOR_THIS_RELEASE",
+  "publication_author": "Byron P. Lee",
+  "affiliation": "Biobitworks",
+  "reason": "No governed VITHIA_RIGHTS_V1 or artifact-specific release-license record was recovered in the active repository tree during this build.",
+  "third_party_notice": "Third-party components retain upstream licenses; no ROM bytes are intentionally packaged in this release.",
+  "release_authorized": false
+}

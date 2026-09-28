@@ -1,0 +1,372 @@
+{
+  "schema": "VITHIA_MMR_LEDGER_V1",
+  "protocol": "docs/BREAKPOINT_PROTOCOL.md",
+  "entries": [
+    {
+      "seq": 0,
+      "bp_id": "UFA-JEV-BP-0001",
+      "bp_file": "governance/breakpoints/0001-bootstrap.json",
+      "bp_file_sha256": "854a08952fe75bbbab075b33b706b95a7d4aaf55bbfbf12aefe47a4682096cf4",
+      "bp_root": "e544afa90816d5c28afbdaa2b9e13f641fcc9e55da0d094920d0c0e80a780949",
+      "root_kind": "LEGACY_SINGLE_ATOM",
+      "mmr_leaf": "eac48d908682aefacca08326d374d1772d3b1bef79f2c445e9bc60e4030142bb",
+      "mmr_size": 1,
+      "mmr_root_after": "eac48d908682aefacca08326d374d1772d3b1bef79f2c445e9bc60e4030142bb",
+      "mmr_peaks_after": [
+        "eac48d908682aefacca08326d374d1772d3b1bef79f2c445e9bc60e4030142bb"
+      ]
+    },
+    {
+      "seq": 1,
+      "bp_id": "UFA-JEV-BP-0002",
+      "bp_file": "governance/breakpoints/0002-bootstrap-verification.json",
+      "bp_file_sha256": "f30fd82d8a66e246b95ae6fe43d00184437509a00a4609b8608ff51b968b4fad",
+      "bp_root": "53fc96b2e09678f9119539d9960344ab15396ae819f6e7304b2d93ae3ba6f62c",
+      "root_kind": "LEGACY_SINGLE_ATOM",
+      "mmr_leaf": "f7602a37a4717819e28b080b6f1ea1b9b5454914a193273cd81dea25ba6e0899",
+      "mmr_size": 2,
+      "mmr_root_after": "bd2facb24b5be15e3021b45ad0de0e3aae8a6e7244cee41c0de76f97fa55f544",
+      "mmr_peaks_after": [
+        "bd2facb24b5be15e3021b45ad0de0e3aae8a6e7244cee41c0de76f97fa55f544"
+      ]
+    },
+    {
+      "seq": 2,
+      "bp_id": "UFA-JEV-BP-0003",
+      "bp_file": "governance/breakpoints/0003-mcp-and-public-repo.json",
+      "bp_file_sha256": "fd9e5ea88e8a8bd34db71d276b15600419b27a59bb79518cf70ae191a3f3c558",
+      "bp_root": "40cb3c1b13b3137f1eb098aa02c03e469381baa2f08720e7719edbf761e8fc08",
+      "root_kind": "LEGACY_SINGLE_ATOM",
+      "mmr_leaf": "a15073351ac8f1f64890ef5eae1921695a361649288c67967a0fca2ce971b24d",
+      "mmr_size": 3,
+      "mmr_root_after": "d61fef1091d74229ba974a0e0be449f78e5948bb29756ae75dfd79f32443a9a2",
+      "mmr_peaks_after": [
+        "bd2facb24b5be15e3021b45ad0de0e3aae8a6e7244cee41c0de76f97fa55f544",
+        "a15073351ac8f1f64890ef5eae1921695a361649288c67967a0fca2ce971b24d"
+      ]
+    },
+    {
+      "seq": 3,
+      "bp_id": "UFA-JEV-BP-0004",
+      "bp_file": "governance/breakpoints/0004-vithia-space-license-gate.json",
+      "bp_file_sha256": "1a53889db219b53b15ba02f99569a505b8c5dc4a52315c8e3dd10c01f755c156",
+      "bp_root": "5fe8ae2bef94d8012d0e1ee4465d82d812c6e4cc5b0a4c2fd9083d1b9b791324",
+      "root_kind": "LEGACY_SINGLE_ATOM",
+      "mmr_leaf": "36a8fce6b5f4692fec09b723d0ec7b320786f6dd39827fb8f2f87666d225efe9",
+      "mmr_size": 4,
+      "mmr_root_after": "ae8709d1ad93ea711326dcc9e5dbdb6ccb177db72575616fe017f5e6f344e8a2",
+      "mmr_peaks_after": [
+        "ae8709d1ad93ea711326dcc9e5dbdb6ccb177db72575616fe017f5e6f344e8a2"
+      ]
+    },
+    {
+      "seq": 4,
+      "bp_id": "UFA-JEV-BP-0005",
+      "bp_file": "governance/breakpoints/0005-runtime-source-freeze.json",
+      "bp_file_sha256": "38477252c18d0a78fefeb6f6a4dfd71363527f06bfa983771eb5e9e40e0517e6",
+      "bp_root": "f4ac6bdac405f40257c2a7a4a7a49251641790a1a0cee6505096386d973ec13f",
+      "root_kind": "LEGACY_SINGLE_ATOM",
+      "mmr_leaf": "a8b630370f8d068352d847f86f85927ff7d27c19692a96a75110ce39d053db7c",
+      "mmr_size": 5,
+      "mmr_root_after": "4c5100bb1bd8131ed8fd5e2a083e82a869aeab5470d0f0f913b9187c6dd07092",
+      "mmr_peaks_after": [
+        "ae8709d1ad93ea711326dcc9e5dbdb6ccb177db72575616fe017f5e6f344e8a2",
+        "a8b630370f8d068352d847f86f85927ff7d27c19692a96a75110ce39d053db7c"
+      ]
+    },
+    {
+      "seq": 5,
+      "bp_id": "UFA-JEV-BP-0006",
+      "bp_file": "governance/breakpoints/0006-default-branch-source-freeze-promotion.json",
+      "bp_file_sha256": "a5df63efab0e67d11968f9b98777db31af30024507815412d0df4db5b8654507",
+      "bp_root": "b2e540759ced2031d606d7382a57f0de39ebbf3c88e6595541e924d82a44c49d",
+      "root_kind": "LEGACY_SINGLE_ATOM",
+      "mmr_leaf": "3507b6cd96f85a4eb738cde73124d1dd87b6ef4df0e023f333c090984ed93e68",
+      "mmr_size": 6,
+      "mmr_root_after": "ffd3d4639dec5a98372a37d689251433d01fffad317a5cff863caa067e180df6",
+      "mmr_peaks_after": [
+        "ae8709d1ad93ea711326dcc9e5dbdb6ccb177db72575616fe017f5e6f344e8a2",
+        "202ca177e0cd0dd6b51f2b1769f2d217a457fc3a841385a0ae903f9ca1832eb4"
+      ]
+    },
+    {
+      "seq": 6,
+      "bp_id": "UFA-JEV-BP-0007",
+      "bp_file": "governance/breakpoints/0007-sponsor-source-freeze.json",
+      "bp_file_sha256": "be2095455598de5dc39c2351194d45e538d6046996a849d204f1658be333efe9",
+      "bp_root": "6eea18b32f5b020c1951b1c1217a9b0f5124a13f0bf19938aaa0d13cc5400f62",
+      "root_kind": "LEGACY_SINGLE_ATOM",
+      "mmr_leaf": "50b385da247ff96c47e843f158a60f56100c01343b8cf18688c4551200da83a7",
+      "mmr_size": 7,
+      "mmr_root_after": "ae3a05cefd19ab3bd6af721aa70ee8e5520487a4cee5cdd84d31f3cc89a5727e",
+      "mmr_peaks_after": [
+        "ae8709d1ad93ea711326dcc9e5dbdb6ccb177db72575616fe017f5e6f344e8a2",
+        "202ca177e0cd0dd6b51f2b1769f2d217a457fc3a841385a0ae903f9ca1832eb4",
+        "50b385da247ff96c47e843f158a60f56100c01343b8cf18688c4551200da83a7"
+      ]
+    },
+    {
+      "seq": 7,
+      "bp_id": "UFA-JEV-BP-0008",
+      "bp_file": "governance/breakpoints/0008-sponsor-source-default-branch-promotion.json",
+      "bp_file_sha256": "48128828c194e9714d90685c5961c489c4739a94a34b057214ffe047d797e3c5",
+      "bp_root": "9e9a392a58359f319fdef2d9fe59d22c108489230abf62cd309d72c5fd2b79ac",
+      "root_kind": "LEGACY_SINGLE_ATOM",
+      "mmr_leaf": "db940e353e346b5affb95352d8cbf3b35587c6a69c238314d41eccb6fc3f5ed1",
+      "mmr_size": 8,
+      "mmr_root_after": "55556fb32de26551eaf8658ee312efbf76b0b4eee436c24885ad3f07b889d744",
+      "mmr_peaks_after": [
+        "55556fb32de26551eaf8658ee312efbf76b0b4eee436c24885ad3f07b889d744"
+      ]
+    },
+    {
+      "seq": 8,
+      "bp_id": "UFA-JEV-BP-0009",
+      "bp_file": "governance/breakpoints/0009-rom-bound-runtime.json",
+      "bp_file_sha256": "8cc32b20ba8557d2ff307865630a72d8af300173576a8b047a48e823921a6f75",
+      "bp_root": "76aecd6c04f0534b45d4f63006ae69455b082d8643bfa1147607ea3115efea1d",
+      "root_kind": "FMO_V1_BREAKPOINT_ATOMS",
+      "mmr_leaf": "a65eb0f0d576347d9b2f9e252d81770cd0b1ece37c0af4c2cd08801621d7cad0",
+      "mmr_size": 9,
+      "mmr_root_after": "d107aaae3264bf7396e73b3ab48f97394f98c29f752b1166ffcecadcc538f394",
+      "mmr_peaks_after": [
+        "55556fb32de26551eaf8658ee312efbf76b0b4eee436c24885ad3f07b889d744",
+        "a65eb0f0d576347d9b2f9e252d81770cd0b1ece37c0af4c2cd08801621d7cad0"
+      ]
+    },
+    {
+      "seq": 9,
+      "bp_id": "UFA-JEV-BP-0010",
+      "bp_file": "governance/breakpoints/0010-harness-autopush.json",
+      "bp_file_sha256": "a8aa10c6f88bc1d06a34e52cc37a005c21f8909f11baec5baf33b307ecb06230",
+      "bp_root": "8e63f3a097ae8022fa132e931504e17581e1f5ad39288c0e5ecac501e91f567e",
+      "root_kind": "FMO_V1_BREAKPOINT_ATOMS",
+      "mmr_leaf": "735ef87bc360baaa1d34167b45898638db4de7b123f79e9c1681007cce659ee8",
+      "mmr_size": 10,
+      "mmr_root_after": "270053cd3cbf09c8f2875b8c44f5f19a81054d7675d94b2204f4fabef031c425",
+      "mmr_peaks_after": [
+        "55556fb32de26551eaf8658ee312efbf76b0b4eee436c24885ad3f07b889d744",
+        "b348aef577ea855c6a2de4fccf02e31316c6fe2f5a0d23f0c4f2c086e28f94af"
+      ]
+    },
+    {
+      "seq": 10,
+      "bp_id": "UFA-JEV-BP-0011",
+      "bp_file": "governance/breakpoints/0011-vita01-confirmatory-freeze.json",
+      "bp_file_sha256": "730cdb971c04a3af0a13f9f41b0bd7ea881688cfbbd981fc5d29ae9ad51a838a",
+      "bp_root": "06933cfd1b82b47934f7853ff5458a3eb437b7bbd856716eb580637f4dd04da9",
+      "root_kind": "FMO_V1_BREAKPOINT_ATOMS",
+      "mmr_leaf": "5faeb827233c737cb09ca00483280368f4646676ae53c39345d1a2a2a750f848",
+      "mmr_size": 11,
+      "mmr_root_after": "836b22d82982e322b1b9190b9c4b20e95479da6b640fcfd9fb920ff620cbf567",
+      "mmr_peaks_after": [
+        "55556fb32de26551eaf8658ee312efbf76b0b4eee436c24885ad3f07b889d744",
+        "b348aef577ea855c6a2de4fccf02e31316c6fe2f5a0d23f0c4f2c086e28f94af",
+        "5faeb827233c737cb09ca00483280368f4646676ae53c39345d1a2a2a750f848"
+      ]
+    },
+    {
+      "seq": 11,
+      "bp_id": "UFA-JEV-BP-0012",
+      "bp_file": "governance/breakpoints/0012-e0-prereg.json",
+      "bp_file_sha256": "21bc6aabb4bd6ba8aa2e2d3b657af025de08ae42df8fa58b70ba094d3e8b86b2",
+      "bp_root": "bc7829011804cf1349cc9383f68ba28493fa6db2521608f48dc66200e3cff988",
+      "root_kind": "FMO_V1_BREAKPOINT_ATOMS",
+      "mmr_leaf": "1e364a2e70714465e77a6219bc13c129180df49d09554ccd6f0ede4159d8bb96",
+      "mmr_size": 12,
+      "mmr_root_after": "4ba4e03d1b81e8da895b3b4b83c933cf27a0ff5dde740d947ed2157755bc9e38",
+      "mmr_peaks_after": [
+        "55556fb32de26551eaf8658ee312efbf76b0b4eee436c24885ad3f07b889d744",
+        "96973d89dae95f9abc15a6d0fa4157cb72ffe2de893bae6633df0fda001e4ed2"
+      ]
+    },
+    {
+      "seq": 12,
+      "bp_id": "UFA-JEV-BP-0013",
+      "bp_file": "governance/breakpoints/0013-e0-result.json",
+      "bp_file_sha256": "7ed4b38fb74b6fb39032683b2b69710b109b5c3ff393cdcc80c62742649eac7c",
+      "bp_root": "5a64d4a5298630c7cf65317bff1f4f31b786e8e471430f2058fcd690fe28ae5b",
+      "root_kind": "FMO_V1_BREAKPOINT_ATOMS",
+      "mmr_leaf": "504c0096b392bc7937f9cec7c92672cc15d586d81e8e23e536067b156d4adbb5",
+      "mmr_size": 13,
+      "mmr_root_after": "ac330ed465c25d42a56726cfdb3319bb992f0f4f9858c3c52cb224a85068b734",
+      "mmr_peaks_after": [
+        "55556fb32de26551eaf8658ee312efbf76b0b4eee436c24885ad3f07b889d744",
+        "96973d89dae95f9abc15a6d0fa4157cb72ffe2de893bae6633df0fda001e4ed2",
+        "504c0096b392bc7937f9cec7c92672cc15d586d81e8e23e536067b156d4adbb5"
+      ]
+    },
+    {
+      "seq": 13,
+      "bp_id": "UFA-JEV-BP-0014",
+      "bp_file": "governance/breakpoints/0014-e1-prereg.json",
+      "bp_file_sha256": "fac782da494959ce4663b368b20d0c6787a9405ce61316faa9f3436747e543cc",
+      "bp_root": "62ba6f78de3eaa9051c7618e4184a93b45a5d48de0d2399d41225a45f529c2c8",
+      "root_kind": "FMO_V1_BREAKPOINT_ATOMS",
+      "mmr_leaf": "7511a96600bb511489e87112c3c8a88c60a30601c72e11f60c2ab56cb136910a",
+      "mmr_size": 14,
+      "mmr_root_after": "1d82244501468b65deea5dd9c0ce0a257b6eb921085f5bb5f04ef78a36fba313",
+      "mmr_peaks_after": [
+        "55556fb32de26551eaf8658ee312efbf76b0b4eee436c24885ad3f07b889d744",
+        "96973d89dae95f9abc15a6d0fa4157cb72ffe2de893bae6633df0fda001e4ed2",
+        "d54a05ced5ecbbceb244b3685aa2565ffa91c33bd0fc2d887823cac169bf14ca"
+      ]
+    },
+    {
+      "seq": 14,
+      "bp_id": "UFA-JEV-BP-0015",
+      "bp_file": "governance/breakpoints/0015-e1-result.json",
+      "bp_file_sha256": "67a6f20d4f6cd2ba4445d99718b96e803c23a415d15644c0baf21b3a99196143",
+      "bp_root": "1071979df23c4b5b31d8a4319faa912154cdc7f26f69cc8162569292822a2784",
+      "root_kind": "FMO_V1_BREAKPOINT_ATOMS",
+      "mmr_leaf": "7c42d49d091ef5b55c66aa877dcae030e59f2892f7a15db1b028bb4855457c76",
+      "mmr_size": 15,
+      "mmr_root_after": "4ed2857b222bf4453f65e02c39ae3d248cca8cbb8bdd0c26f08cf907716ae8ed",
+      "mmr_peaks_after": [
+        "55556fb32de26551eaf8658ee312efbf76b0b4eee436c24885ad3f07b889d744",
+        "96973d89dae95f9abc15a6d0fa4157cb72ffe2de893bae6633df0fda001e4ed2",
+        "d54a05ced5ecbbceb244b3685aa2565ffa91c33bd0fc2d887823cac169bf14ca",
+        "7c42d49d091ef5b55c66aa877dcae030e59f2892f7a15db1b028bb4855457c76"
+      ]
+    },
+    {
+      "seq": 15,
+      "bp_id": "UFA-JEV-BP-0016",
+      "bp_file": "governance/breakpoints/0016-e2-prereg.json",
+      "bp_file_sha256": "8a1b7df1a17c3116ada4debd673b617d56ccecae0625f07451ec467ff92597cc",
+      "bp_root": "51bd062b39fdaeaaca92f3f6d30a50a0dbc54c325b2326cc2b82de09d6872938",
+      "root_kind": "FMO_V1_BREAKPOINT_ATOMS",
+      "mmr_leaf": "af9b088e53f850d8159b7fee54d4e4eef0c8c934dbe9563b0f58b8a541980e95",
+      "mmr_size": 16,
+      "mmr_root_after": "1303f691fcfdee6145f710febf29e2146b6ced8c2f89b643dd1e4371cafbabe7",
+      "mmr_peaks_after": [
+        "1303f691fcfdee6145f710febf29e2146b6ced8c2f89b643dd1e4371cafbabe7"
+      ]
+    },
+    {
+      "seq": 16,
+      "bp_id": "UFA-JEV-BP-0017",
+      "bp_file": "governance/breakpoints/0017-e2-result.json",
+      "bp_file_sha256": "3d94a78336b2c0fa8f02cda93b29728d90f8555d8d625398c03d2bf97e393e53",
+      "bp_root": "66638254248ff4a718063020a40c2b3fe39ed992b656aac3ab937b669e1cce77",
+      "root_kind": "FMO_V1_BREAKPOINT_ATOMS",
+      "mmr_leaf": "24f09c50446eb16410c4fb5c990caa054b64b650b23248890bae9a5b90c30881",
+      "mmr_size": 17,
+      "mmr_root_after": "7963f6fb34256050c18ff5670dd16d699cf25befeb07ad211d9594853db9ceb1",
+      "mmr_peaks_after": [
+        "1303f691fcfdee6145f710febf29e2146b6ced8c2f89b643dd1e4371cafbabe7",
+        "24f09c50446eb16410c4fb5c990caa054b64b650b23248890bae9a5b90c30881"
+      ]
+    },
+    {
+      "seq": 17,
+      "bp_id": "UFA-JEV-BP-0018",
+      "bp_file": "governance/breakpoints/0018-e3-prereg.json",
+      "bp_file_sha256": "3b149b8330ee78f1109c3e7bed2b0886652f2912c76d269d7d693b14f1ce8ae0",
+      "bp_root": "541a295037231b7d7cfa1f0d20bc5e61b9d7bd536bf3caaf6a87fc647d852be8",
+      "root_kind": "FMO_V1_BREAKPOINT_ATOMS",
+      "mmr_leaf": "435614cece38d6961ad4a3fdc23c74c970a23265b01e394c6d8bd2cbdc534ede",
+      "mmr_size": 18,
+      "mmr_root_after": "08b86981d8cc5f8f9bf7fbc68333c672ccc1ab75fbdf2e1ca77ca251b7a42c0d",
+      "mmr_peaks_after": [
+        "1303f691fcfdee6145f710febf29e2146b6ced8c2f89b643dd1e4371cafbabe7",
+        "c25019d117697098b34c8ad7178d532c260345c0b69a95a986733a32ce853bff"
+      ]
+    },
+    {
+      "seq": 18,
+      "bp_id": "UFA-JEV-BP-0019",
+      "bp_file": "governance/breakpoints/0019-e3-result.json",
+      "bp_file_sha256": "2c00d95ca6af97cfedd696346502a51c34197588b313f73a4aafa938fc8a1b1c",
+      "bp_root": "a32d8000d471b73aa0a8da64014404bb2a887ad3831d11545cd5591b2bd94f8c",
+      "root_kind": "FMO_V1_BREAKPOINT_ATOMS",
+      "mmr_leaf": "82a1f74cfc3d19e54792b581e7c6cb1bf2f820d99096123ea9d5e354a5103ab7",
+      "mmr_size": 19,
+      "mmr_root_after": "e8e0de7b6617b15f06cf268a04c1f2b835a3489d25d276311d4997b99b790e89",
+      "mmr_peaks_after": [
+        "1303f691fcfdee6145f710febf29e2146b6ced8c2f89b643dd1e4371cafbabe7",
+        "c25019d117697098b34c8ad7178d532c260345c0b69a95a986733a32ce853bff",
+        "82a1f74cfc3d19e54792b581e7c6cb1bf2f820d99096123ea9d5e354a5103ab7"
+      ]
+    },
+    {
+      "seq": 19,
+      "bp_id": "UFA-JEV-BP-0020",
+      "bp_file": "governance/breakpoints/0020-e4a-prereg.json",
+      "bp_file_sha256": "8f873084bc45353826a857c9b42d7e89295beea665d8d8d3f03e80854df7686e",
+      "bp_root": "23e45097955d0a62d1de282dd47f0ac0b5774060f4a980da8693aeb15d9fa06f",
+      "root_kind": "FMO_V1_BREAKPOINT_ATOMS",
+      "mmr_leaf": "ab6b1e078e165f18f74682b9a025100c1b50da7c94b261997922378c4cf0f85c",
+      "mmr_size": 20,
+      "mmr_root_after": "4b1ab52ae6ad0dc8e7a436fc91947fa25946d2edf5e16378222abc947388ef26",
+      "mmr_peaks_after": [
+        "1303f691fcfdee6145f710febf29e2146b6ced8c2f89b643dd1e4371cafbabe7",
+        "46fc9c85843aee3f1f1d3cb1c13d6d809cf6e3e5848b424e100113a2b24c580d"
+      ]
+    },
+    {
+      "seq": 20,
+      "bp_id": "UFA-JEV-BP-0021",
+      "bp_file": "governance/breakpoints/0021-d0-d9-statistical-analysis-prereg.json",
+      "bp_file_sha256": "493e3eb6fb5ea58f6ed42264d419a59ea790f1b6483e37a328df3edf36211833",
+      "bp_root": "d2da0b62e50873f8f0d4a90b8a90414c25bac2f37636c4304d38d5ec180648b2",
+      "root_kind": "FMO_V1_BREAKPOINT_ATOMS",
+      "mmr_leaf": "727ad8010b7410467e9909a195804df8a85911c2ad4e024ad5bb63ec62e12915",
+      "mmr_size": 21,
+      "mmr_root_after": "91f9774b46a239dc3d8314cf2968ec955329de968dfa0802cfa2d5bea30a42b5",
+      "mmr_peaks_after": [
+        "1303f691fcfdee6145f710febf29e2146b6ced8c2f89b643dd1e4371cafbabe7",
+        "46fc9c85843aee3f1f1d3cb1c13d6d809cf6e3e5848b424e100113a2b24c580d",
+        "727ad8010b7410467e9909a195804df8a85911c2ad4e024ad5bb63ec62e12915"
+      ]
+    },
+    {
+      "seq": 21,
+      "bp_id": "UFA-JEV-BP-0022",
+      "bp_file": "governance/breakpoints/0022-d0-d9-statistical-analysis-result.json",
+      "bp_file_sha256": "096e9eb05a4fd69e5918ee9ce4ce8c3eb4351d19a7eed21c714c36b4ec100b73",
+      "bp_root": "df163dde1fe575f699324df5f9fc9216fd3c5b02d2e7581478f18af07b35f951",
+      "root_kind": "FMO_V1_BREAKPOINT_ATOMS",
+      "mmr_leaf": "c3b2e49e8805726cb77fe5852e7b1da8f2d5fd020f4bf7767d167f1cfa9b37a7",
+      "mmr_size": 22,
+      "mmr_root_after": "929b767a0f3a1175966dddb9a61ee6e292d5f21168b46a7e9a285268a611c326",
+      "mmr_peaks_after": [
+        "1303f691fcfdee6145f710febf29e2146b6ced8c2f89b643dd1e4371cafbabe7",
+        "46fc9c85843aee3f1f1d3cb1c13d6d809cf6e3e5848b424e100113a2b24c580d",
+        "888e68e9d2964eab0901a72d85b8191a013d68df55492d09620d2a0a41057f4e"
+      ]
+    },
+    {
+      "seq": 22,
+      "bp_id": "UFA-JEV-BP-0023",
+      "bp_file": "governance/breakpoints/0023-cross-host-replication-prereg.json",
+      "bp_file_sha256": "d384bb0264021b2a1ac888eed4bb3163da26b5fd34b5ffbb4b29b2740c3eefe5",
+      "bp_root": "faee265a537b97f741580513c31658d5ee220d0d6bfd443e1052632fdda3908d",
+      "root_kind": "FMO_V1_BREAKPOINT_ATOMS",
+      "mmr_leaf": "ec2979933e1089a4f9f62501ee523f8beb6c95b135d036fdf9ba0bc4ada08cfb",
+      "mmr_size": 23,
+      "mmr_root_after": "5af168dcbc2878c9ecd124b4cde747b236a4197f8e52d71e35de52d2842b68bd",
+      "mmr_peaks_after": [
+        "1303f691fcfdee6145f710febf29e2146b6ced8c2f89b643dd1e4371cafbabe7",
+        "46fc9c85843aee3f1f1d3cb1c13d6d809cf6e3e5848b424e100113a2b24c580d",
+        "888e68e9d2964eab0901a72d85b8191a013d68df55492d09620d2a0a41057f4e",
+        "ec2979933e1089a4f9f62501ee523f8beb6c95b135d036fdf9ba0bc4ada08cfb"
+      ]
+    },
+    {
+      "seq": 23,
+      "bp_id": "UFA-JEV-BP-0024",
+      "bp_file": "governance/breakpoints/0024-cross-host-replication-result.json",
+      "bp_file_sha256": "fd32823d2634e3b054cd32e8783570d6498b40abd07fa4430eebc1e11b94b295",
+      "bp_root": "ea5a307a15265675e41bdb5ccd78a063a9841208aad0dfb77297330fd5b87f3d",
+      "root_kind": "FMO_V1_BREAKPOINT_ATOMS",
+      "mmr_leaf": "996e80ddf21f109b1341f7c6074702c0046839c7ae856abd5f132c8f32fca79b",
+      "mmr_size": 24,
+      "mmr_root_after": "a461def1576e4a0600cb3c738e885961678dfef300a1696e958c6b9173d76692",
+      "mmr_peaks_after": [
+        "1303f691fcfdee6145f710febf29e2146b6ced8c2f89b643dd1e4371cafbabe7",
+        "0e7a36ac6f8774ee554efef13de36399f4f1888362f636fada0cece1ef85cd5e"
+      ]
+    }
+  ]
+}

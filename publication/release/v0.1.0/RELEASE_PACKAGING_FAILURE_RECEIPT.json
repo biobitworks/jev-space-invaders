@@ -1,0 +1,8 @@
+{
+  "schema": "VITHIA_RELEASE_PACKAGING_FAILURE_RECEIPT_V1",
+  "state": "FAILED_PRE_BREAKPOINT",
+  "failure": "An unquoted shell heredoc interpreted Markdown backticks while generating REPRODUCIBILITY.md.",
+  "effect": "Partial untracked release-package files were created; no publication breakpoint or canonical release state was created from that attempt.",
+  "recovery": "The partial candidate files are overwritten deterministically below; sealed PDFs from VITA-PUB-BP-0017 are preserved.",
+  "claim_mutation": false
+}

@@ -1,0 +1,53 @@
+{
+  "generated_by": "scripts/build_registries.py",
+  "entries": [
+    {
+      "experiment_id": "E0_ADDRESSABILITY",
+      "mode": "CONFIRMATORY",
+      "terminal_state": "SUPPORTED",
+      "input": "S01_ADDRESSABILITY_EVAL_V1",
+      "output": "S01_ADDRESSABILITY_RESULTS_V1",
+      "prereg_breakpoint": "UFA-JEV-BP-0012",
+      "code_freeze": "UFA-JEV-BP-0011",
+      "replay_level": "REPLAY_LEVEL_4",
+      "receipt": "evidence/s01/E0_ADDRESSABILITY/EXPERIMENT_RECEIPT.json",
+      "receipt_sha256": "4fdbbccdfd82e4927b0d7f9325443ea2dc9b0f0b0ffc6c38398e91e7a63843ea"
+    },
+    {
+      "experiment_id": "E1_ECA",
+      "mode": "CONFIRMATORY",
+      "terminal_state": "PARTIAL",
+      "input": "S01_ECA_256_EVAL_V1",
+      "output": "S01_ECA_256_RESULTS_V1",
+      "prereg_breakpoint": "UFA-JEV-BP-0014",
+      "code_freeze": "UFA-JEV-BP-0011",
+      "replay_level": "REPLAY_LEVEL_4",
+      "receipt": "evidence/s01/E1_ECA/EXPERIMENT_RECEIPT.json",
+      "receipt_sha256": "5286a53f5ef7e2c046c905774e2050a7f5316e107a2c304a699ab9811c1f2d82"
+    },
+    {
+      "experiment_id": "E2_LIFE",
+      "mode": "CONFIRMATORY",
+      "terminal_state": "SUPPORTED",
+      "input": "S01_LIFE_CONTEXT_EVAL_V1",
+      "output": "S01_LIFE_CONTEXT_RESULTS_V1",
+      "prereg_breakpoint": "UFA-JEV-BP-0016",
+      "code_freeze": "UFA-JEV-BP-0011",
+      "replay_level": "REPLAY_LEVEL_4",
+      "receipt": "evidence/s01/E2_LIFE/EXPERIMENT_RECEIPT.json",
+      "receipt_sha256": "3febdda1b5a6a0d9b4ec0007eda91034b8f23987cf393f661cd96e3b9d5ff46c"
+    },
+    {
+      "experiment_id": "E3_MINESWEEPER",
+      "mode": "CONFIRMATORY",
+      "terminal_state": "SUPPORTED",
+      "input": "S01_MINESWEEPER_EVAL_V1",
+      "output": "S01_MINESWEEPER_RESULTS_V1",
+      "prereg_breakpoint": "UFA-JEV-BP-0018",
+      "code_freeze": "UFA-JEV-BP-0011",
+      "replay_level": "REPLAY_LEVEL_2",
+      "receipt": "evidence/s01/E3_MINESWEEPER/EXPERIMENT_RECEIPT.json",
+      "receipt_sha256": "20551b2a4ed2bed55f42a8c512b1f8240f4acfff6641de6abe0d583e0d26a17b"
+    }
+  ]
+}

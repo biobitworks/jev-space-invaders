@@ -1,0 +1,97 @@
+{
+  "schema": "VITHIA_RELEASE_MANIFEST_V1",
+  "title": "Vithia 0-Vita-1: A Deterministic Context Protocol for Verifiable Scientific State Transitions",
+  "target_version": "0.1.0",
+  "state": "RELEASE_CANDIDATE_BLOCKED_EXTERNAL",
+  "publication_author": "Byron P. Lee",
+  "affiliation": "Biobitworks",
+  "source_archive_commit": "d0062eb5776c1e96b68f445b4fbcafcb13fc3dc9",
+  "scientific_breakpoint": "UFA-JEV-BP-0024",
+  "scientific_mmr_size": 24,
+  "scientific_mmr_root": "a461def1576e4a0600cb3c738e885961678dfef300a1696e958c6b9173d76692",
+  "publication_predecessor_breakpoint": "VITA-PUB-BP-0018",
+  "publication_predecessor_mmr_size": 18,
+  "publication_predecessor_mmr_root": "12d7228f77eb5c43ddeea536e84a274206d3a855e3bef4dd9e1e77d55f46e65f",
+  "rights_state": "LICENSE_NOT_ESTABLISHED_FOR_THIS_RELEASE",
+  "hf_state": "BLOCKED_MISSING_WRITE_AUTH",
+  "zenodo_state": "BLOCKED_MISSING_AUTH_AND_RIGHTS",
+  "signature_state": "NOT_SIGNED",
+  "files": {
+    "BREAKPOINT_REGISTRY.json": {
+      "bytes": 13917,
+      "sha256": "a5894b95cc8163525eb08ea4bbadc9d7d18826f24a1b0176d99411f7593dcf42"
+    },
+    "CITATION.cff": {
+      "bytes": 404,
+      "sha256": "5761b3d1e1c46a7cfc92920ac9eef0e72da0af9c0a048439700b1e3e0189f99a"
+    },
+    "CLAIM_LEDGER.json": {
+      "bytes": 11928,
+      "sha256": "0c5c865c1e2a80cae83f6447994ceab6b4d677f13d64e0587691b373e65a95eb"
+    },
+    "DATASET_REGISTRY.json": {
+      "bytes": 5753,
+      "sha256": "ad9e2972aa0731eeea5bddfa7f30c3f50a29101c56d98be317b55b1afa878804"
+    },
+    "EXPERIMENT_REGISTRY.json": {
+      "bytes": 2037,
+      "sha256": "b8f01ac3e3d50f1fbdcab4c3514be6a03661e5dc91efe9db664e7bb5055d02f3"
+    },
+    "MODEL_RELEASE_RECEIPT.json": {
+      "bytes": 348,
+      "sha256": "e3f4e5ebc5ff8dd73c1b67896a4475a9b850afe8b4e13013de7c4af7d215033b"
+    },
+    "PUBLICATION_BREAKPOINT_LEDGER.json": {
+      "bytes": 14054,
+      "sha256": "4d65fbcfac5478219f51dd3fdf45279ae7d2247dd63d071f2f7bd614fa4a5558"
+    },
+    "README.md": {
+      "bytes": 1194,
+      "sha256": "30209f5df9fd3f32d6b9044141394bc2c6b9502eadc1b59c3de102fdf08987b6"
+    },
+    "RELEASE_GATE.json": {
+      "bytes": 634,
+      "sha256": "8dbdef33dd3341ac277e7def07c656b7ae99a62d4665ff267cec87a14f4bf5f7"
+    },
+    "RELEASE_PACKAGING_FAILURE_RECEIPT.json": {
+      "bytes": 523,
+      "sha256": "2027bd31b724061e352618ad596fe11607f944abce76636d68ca67a4bcaa9bff"
+    },
+    "REPRODUCIBILITY.md": {
+      "bytes": 889,
+      "sha256": "fc2ed35d725008db742dea8cb0d18278da1303d886d08e949ef054f1854e0472"
+    },
+    "RIGHTS_STATE.json": {
+      "bytes": 491,
+      "sha256": "4fba6b7da0ac07a70ae0492287c75d8a6e1970b560904f29c61acbd687ab761d"
+    },
+    "SCIENTIFIC_MMR_LEDGER.json": {
+      "bytes": 18407,
+      "sha256": "cd23c478867dded3d1ad039ed7d5e593d921650ded9f9ff8c1ccafb91219a1a9"
+    },
+    "SCIENTIFIC_SUCCESSOR_OUTSIDE_V0_1_0.json": {
+      "bytes": 607,
+      "sha256": "e158abd79710e3e38c34bd7bf5a0048e44e1096fb7f988868092862f2d6e7722"
+    },
+    "SOURCE_REGISTRY.json": {
+      "bytes": 1259,
+      "sha256": "9835a08b3ea19202b8a345b7ca821244ac089edcf4c539cdade07d53a91dca51"
+    },
+    "main.pdf": {
+      "bytes": 138558,
+      "sha256": "03571aa6ba35a0d92007360a8378cdbeaa596a1010c5a57b02d0f2e2ddf9e4d6"
+    },
+    "supplement.pdf": {
+      "bytes": 36387,
+      "sha256": "21827b48b8fd393ec9f1f378edca745cb86e22cde7af1e519e1e75c3b021b69d"
+    },
+    "vithia-0-vita-1-v0.1.0-source.tar.gz": {
+      "bytes": 391152,
+      "sha256": "6e6ab0c21f31223fe64da096cd5d86cca692cc578c4f0954f845040e77f6a9ca"
+    },
+    "vithia-s0-hf-v0.1.0.tar.gz": {
+      "bytes": 11319,
+      "sha256": "a70781c425a648dbb0c11d04906636b8c522fdeebbeaf02f1ef798e54e829cfe"
+    }
+  }
+}

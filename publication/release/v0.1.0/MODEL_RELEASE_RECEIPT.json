@@ -1,0 +1,8 @@
+{
+  "schema": "VITHIA_HF_PUBLICATION_RECEIPT_V1",
+  "state": "BLOCKED_MISSING_WRITE_AUTH",
+  "target_repo": "biobitworks/vithia-s0",
+  "remote_commit": null,
+  "reason": "MagicStudio hf CLI is not authenticated with write capability; ChatGPT connector has read-only repository scope",
+  "rights_state": "LICENSE_NOT_ESTABLISHED_FOR_THIS_RELEASE"
+}

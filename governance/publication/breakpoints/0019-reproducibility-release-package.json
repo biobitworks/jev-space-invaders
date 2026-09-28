@@ -1,0 +1,247 @@
+{
+  "breakpoint_id": "VITA-PUB-BP-0019",
+  "parent": "VITA-PUB-BP-0018",
+  "state": "REPRODUCIBILITY_PACKAGE_FROZEN",
+  "project": "VITHIA_0_VITA_1_PUBLICATION",
+  "created_utc": "2026-09-28T06:22:35+00:00",
+  "root_kind": "FMO_V1_PUBLICATION_BREAKPOINT_ATOMS",
+  "bp_root": "63e50bcf3f19242cd93a2df5d7bbe701383e589a7a62a362e03cb1db1488ea1f",
+  "group_roots": {
+    "audit": "169cb92ec7f7933325b4b4741526d811aff648e2c7150e031c6c3da54b61a329",
+    "release_package": "85a69adfa7e705cdad77b5d9a6b52b45e32fd408e9c1e2748118ed1e546a01b7"
+  },
+  "atoms": [
+    {
+      "path": "publication/release/v0.1.0/BREAKPOINT_REGISTRY.json",
+      "kind": "ReleasePackageFCO",
+      "group": "release_package",
+      "bytes": 13917,
+      "sha256": "a5894b95cc8163525eb08ea4bbadc9d7d18826f24a1b0176d99411f7593dcf42",
+      "location": "public",
+      "fmo_leaf": "66cce8214dead03c075d657a9b3aa4748be5fff572936ea794e89fe9b5a177ea"
+    },
+    {
+      "path": "publication/release/v0.1.0/CITATION.cff",
+      "kind": "ReleasePackageFCO",
+      "group": "release_package",
+      "bytes": 404,
+      "sha256": "5761b3d1e1c46a7cfc92920ac9eef0e72da0af9c0a048439700b1e3e0189f99a",
+      "location": "public",
+      "fmo_leaf": "85c90e0306190615c65b9f56c5d79cfdf94da85233b669df5cad837af9d24777"
+    },
+    {
+      "path": "publication/release/v0.1.0/CLAIM_LEDGER.json",
+      "kind": "ReleasePackageFCO",
+      "group": "release_package",
+      "bytes": 11928,
+      "sha256": "0c5c865c1e2a80cae83f6447994ceab6b4d677f13d64e0587691b373e65a95eb",
+      "location": "public",
+      "fmo_leaf": "848991140503f49771db38ba3690528aca34ec6265db72086bec93910cb99781"
+    },
+    {
+      "path": "publication/release/v0.1.0/DATASET_REGISTRY.json",
+      "kind": "ReleasePackageFCO",
+      "group": "release_package",
+      "bytes": 5753,
+      "sha256": "ad9e2972aa0731eeea5bddfa7f30c3f50a29101c56d98be317b55b1afa878804",
+      "location": "public",
+      "fmo_leaf": "5fc05d65f92996401caaed85d4584ac22565755b560458c8cfff76acdd6f8529"
+    },
+    {
+      "path": "publication/release/v0.1.0/EXPERIMENT_REGISTRY.json",
+      "kind": "ReleasePackageFCO",
+      "group": "release_package",
+      "bytes": 2037,
+      "sha256": "b8f01ac3e3d50f1fbdcab4c3514be6a03661e5dc91efe9db664e7bb5055d02f3",
+      "location": "public",
+      "fmo_leaf": "ba76f1a89b837bc36a1c1f97ac3171775eb428aec618c2dd9e11395282f07afe"
+    },
+    {
+      "path": "publication/release/v0.1.0/MODEL_RELEASE_RECEIPT.json",
+      "kind": "ReleasePackageFCO",
+      "group": "release_package",
+      "bytes": 348,
+      "sha256": "e3f4e5ebc5ff8dd73c1b67896a4475a9b850afe8b4e13013de7c4af7d215033b",
+      "location": "public",
+      "fmo_leaf": "769247da3dc1012722f3ac97d1046b579d15979a8254f2cc93337ae0a963cb3e"
+    },
+    {
+      "path": "publication/release/v0.1.0/PUBLICATION_BREAKPOINT_LEDGER.json",
+      "kind": "ReleasePackageFCO",
+      "group": "release_package",
+      "bytes": 14054,
+      "sha256": "4d65fbcfac5478219f51dd3fdf45279ae7d2247dd63d071f2f7bd614fa4a5558",
+      "location": "public",
+      "fmo_leaf": "ebaaf2379a79fd0322dcb3bcca2d1451132e85067c8104babfb01a8db3cc8ff6"
+    },
+    {
+      "path": "publication/release/v0.1.0/README.md",
+      "kind": "ReleasePackageFCO",
+      "group": "release_package",
+      "bytes": 1194,
+      "sha256": "30209f5df9fd3f32d6b9044141394bc2c6b9502eadc1b59c3de102fdf08987b6",
+      "location": "public",
+      "fmo_leaf": "ebcd58b676bd54a8a84ecf3f5642e2ae7c7822327635c086fcad5cb1a9f3b217"
+    },
+    {
+      "path": "publication/release/v0.1.0/RELEASE_GATE.json",
+      "kind": "ReleasePackageFCO",
+      "group": "release_package",
+      "bytes": 634,
+      "sha256": "8dbdef33dd3341ac277e7def07c656b7ae99a62d4665ff267cec87a14f4bf5f7",
+      "location": "public",
+      "fmo_leaf": "431845e325e8d749973c4e6a304c8260bf98739ab8e6dc510a9fea54b30e02ea"
+    },
+    {
+      "path": "publication/release/v0.1.0/RELEASE_MANIFEST.json",
+      "kind": "ReleasePackageFCO",
+      "group": "release_package",
+      "bytes": 3690,
+      "sha256": "73ff8bc653f21085794827cf405fa7511a47f2e67fe39178e5bcfbcf6efd6fe3",
+      "location": "public",
+      "fmo_leaf": "b5575ec89d4d57c6e72a99a02d865297394c0aa71083dd3ac0d1b83546241c51"
+    },
+    {
+      "path": "publication/release/v0.1.0/RELEASE_PACKAGING_FAILURE_RECEIPT.json",
+      "kind": "ReleasePackageFCO",
+      "group": "release_package",
+      "bytes": 523,
+      "sha256": "2027bd31b724061e352618ad596fe11607f944abce76636d68ca67a4bcaa9bff",
+      "location": "public",
+      "fmo_leaf": "e011f09a78408e45a9a44df64558d64a0dba8b4a82779b2dae556bfbaca681ff"
+    },
+    {
+      "path": "publication/release/v0.1.0/REPRODUCIBILITY.md",
+      "kind": "ReleasePackageFCO",
+      "group": "release_package",
+      "bytes": 889,
+      "sha256": "fc2ed35d725008db742dea8cb0d18278da1303d886d08e949ef054f1854e0472",
+      "location": "public",
+      "fmo_leaf": "7f83ec7e996aab8f40f7ecbfa9b99d4af45f4e932e4c319548b884b1b5819e9d"
+    },
+    {
+      "path": "publication/release/v0.1.0/RIGHTS_STATE.json",
+      "kind": "ReleasePackageFCO",
+      "group": "release_package",
+      "bytes": 491,
+      "sha256": "4fba6b7da0ac07a70ae0492287c75d8a6e1970b560904f29c61acbd687ab761d",
+      "location": "public",
+      "fmo_leaf": "7bb2439cb687826e9d5c272994334add0ac7e908027894c750964e91fee7fb1e"
+    },
+    {
+      "path": "publication/release/v0.1.0/SCIENTIFIC_MMR_LEDGER.json",
+      "kind": "ReleasePackageFCO",
+      "group": "release_package",
+      "bytes": 18407,
+      "sha256": "cd23c478867dded3d1ad039ed7d5e593d921650ded9f9ff8c1ccafb91219a1a9",
+      "location": "public",
+      "fmo_leaf": "1552d1a2e18594f90dfdbcfeb0ed41e633a10a35cd5dea39881adaf0357cb6df"
+    },
+    {
+      "path": "publication/release/v0.1.0/SCIENTIFIC_SUCCESSOR_OUTSIDE_V0_1_0.json",
+      "kind": "ReleasePackageFCO",
+      "group": "release_package",
+      "bytes": 607,
+      "sha256": "e158abd79710e3e38c34bd7bf5a0048e44e1096fb7f988868092862f2d6e7722",
+      "location": "public",
+      "fmo_leaf": "01acf9f6e7c2bb63649d8ab2ae7281e6d974ce20ec90d1c77f72aca6cfb9f5f2"
+    },
+    {
+      "path": "publication/release/v0.1.0/SHA256SUMS.txt",
+      "kind": "ReleasePackageFCO",
+      "group": "release_package",
+      "bytes": 1788,
+      "sha256": "67be8f20bfa18ffbc6267c37b3cdc52a5a56e939677741c46bd806484aa0d806",
+      "location": "public",
+      "fmo_leaf": "f1482290ad3012b3fb1ef49d18f13bfd45840fc3ed1363f9d7278193d612ce87"
+    },
+    {
+      "path": "publication/release/v0.1.0/SOURCE_REGISTRY.json",
+      "kind": "ReleasePackageFCO",
+      "group": "release_package",
+      "bytes": 1259,
+      "sha256": "9835a08b3ea19202b8a345b7ca821244ac089edcf4c539cdade07d53a91dca51",
+      "location": "public",
+      "fmo_leaf": "bd591bfc0644adcbe95f62636ef0139ea8af9e0eed99b1b7308098ee56b1df98"
+    },
+    {
+      "path": "publication/release/v0.1.0/main.pdf",
+      "kind": "ReleasePackageFCO",
+      "group": "release_package",
+      "bytes": 138558,
+      "sha256": "03571aa6ba35a0d92007360a8378cdbeaa596a1010c5a57b02d0f2e2ddf9e4d6",
+      "location": "public",
+      "fmo_leaf": "b3f3d6ec20652858908baa21b79b3593c58b6cd89caeb694159f97acb9a8b16a"
+    },
+    {
+      "path": "publication/release/v0.1.0/supplement.pdf",
+      "kind": "ReleasePackageFCO",
+      "group": "release_package",
+      "bytes": 36387,
+      "sha256": "21827b48b8fd393ec9f1f378edca745cb86e22cde7af1e519e1e75c3b021b69d",
+      "location": "public",
+      "fmo_leaf": "583089bbde283cf30fa2bbb9385e7b654246880d5f611dabdbce07b837692162"
+    },
+    {
+      "path": "publication/release/v0.1.0/vithia-0-vita-1-v0.1.0-source.tar.gz",
+      "kind": "ReleasePackageFCO",
+      "group": "release_package",
+      "bytes": 391152,
+      "sha256": "6e6ab0c21f31223fe64da096cd5d86cca692cc578c4f0954f845040e77f6a9ca",
+      "location": "public",
+      "fmo_leaf": "5ce7acf4a7a28f88f6d5e40d07a4ed8f7044ff31a661247aba691bb9fd49daff"
+    },
+    {
+      "path": "publication/release/v0.1.0/vithia-s0-hf-v0.1.0.tar.gz",
+      "kind": "ReleasePackageFCO",
+      "group": "release_package",
+      "bytes": 11319,
+      "sha256": "a70781c425a648dbb0c11d04906636b8c522fdeebbeaf02f1ef798e54e829cfe",
+      "location": "public",
+      "fmo_leaf": "8e8bc0e091e8677b154a1a76700accf88932b6880d48d77dc2b1ff934a8aedb5"
+    },
+    {
+      "path": "publication/audits/PDF_VISUAL_AUDIT.json",
+      "kind": "AuditReceiptFCO",
+      "group": "audit",
+      "bytes": 756,
+      "sha256": "d477e0ae7dd3f0889a6cc899c1842eb4e84b493150373ef6e87829667cc9a25a",
+      "location": "public",
+      "fmo_leaf": "60175aefbad1050089db79bd1ddfdf1a276946e116e1141e77f8dd214b257bea"
+    },
+    {
+      "path": "publication/audits/AUDIT_RERUN_AFTER_TEX_FIX.json",
+      "kind": "AuditReceiptFCO",
+      "group": "audit",
+      "bytes": 1567,
+      "sha256": "f239405289254590a885d2a345affbc6bff613740d7d3f44f873eca50b61c213",
+      "location": "public",
+      "fmo_leaf": "455df112b46eaa4fbfc7b6e2ce35deb75750081aa914db2d6b8498034ac4d7eb"
+    },
+    {
+      "path": "publication/audits/SCIENTIFIC_SUCCESSOR_OUTSIDE_V0_1_0.json",
+      "kind": "AuditReceiptFCO",
+      "group": "audit",
+      "bytes": 607,
+      "sha256": "e158abd79710e3e38c34bd7bf5a0048e44e1096fb7f988868092862f2d6e7722",
+      "location": "public",
+      "fmo_leaf": "403c464f45cb901e9ea1ec8bedcffb6e50ca312fb536938a667bc5c9305885bb"
+    },
+    {
+      "path": "publication/audits/RELEASE_PACKAGING_FAILURE_RECEIPT.json",
+      "kind": "FailureReceiptFCO",
+      "group": "audit",
+      "bytes": 523,
+      "sha256": "2027bd31b724061e352618ad596fe11607f944abce76636d68ca67a4bcaa9bff",
+      "location": "public",
+      "fmo_leaf": "69de8ecd726e71e2883d471098a4c924807897cb5e2279c06db16d1f71d9d592"
+    }
+  ],
+  "stage": "REPRODUCIBILITY_PACKAGE",
+  "target_version": "0.1.0",
+  "scientific_evidence_lock": "UFA-JEV-BP-0024",
+  "rights_state": "LICENSE_NOT_ESTABLISHED_FOR_THIS_RELEASE",
+  "external_release_authorized": false,
+  "claim_ceiling": "IDENTITY_AND_INCLUSION_ONLY; publication roots do not establish scientific truth",
+  "signature_state": "NOT_SIGNED"
+}
