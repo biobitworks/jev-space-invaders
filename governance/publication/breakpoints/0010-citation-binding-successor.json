@@ -1,0 +1,70 @@
+{
+  "breakpoint_id": "VITA-PUB-BP-0010",
+  "parent": "VITA-PUB-BP-0009",
+  "state": "MANUSCRIPT_CITATION_BINDING_SUCCESSOR",
+  "project": "VITHIA_0_VITA_1_PUBLICATION",
+  "created_utc": "2026-09-28T05:46:00+00:00",
+  "root_kind": "FMO_V1_PUBLICATION_BREAKPOINT_ATOMS",
+  "bp_root": "b54292460aed21d56e341bd083e07d5044e735f618668c2e6f32b6de05008841",
+  "group_roots": {
+    "claims": "98b06aecbc08c347e8d32b34219a8f2025df58acfd20018bbfa6ed987a4c519f",
+    "code": "6678ac0bb9cf2780900f190cb6e32110b6d7d72fd4276817e247e53c3b52e515",
+    "manuscript": "7d7cdeb97e86002687d3107d958d7c4d3e6a4e9f8e323b1c6f83ebaf44a79a1e",
+    "receipt": "74d4f32c3b0b113a3032628488b1ff0aa683fb5398406ab265151430dbb858a7",
+    "supplement": "0b1703959ad35c5e95dd3bf1d62d5a915b55ce4e786a27d88db44b4d9d281d34"
+  },
+  "atoms": [
+    {
+      "path": "publication/manuscript/main.tex",
+      "kind": "ManuscriptFCO",
+      "group": "manuscript",
+      "bytes": 7770,
+      "sha256": "d12f8667d9ea952b17e0c645ff25fd76860fa7e4c4c868c6cc7950d84dedd8d7",
+      "location": "public",
+      "fmo_leaf": "7d7cdeb97e86002687d3107d958d7c4d3e6a4e9f8e323b1c6f83ebaf44a79a1e"
+    },
+    {
+      "path": "publication/supplement/supplement.tex",
+      "kind": "SupplementFCO",
+      "group": "supplement",
+      "bytes": 3558,
+      "sha256": "c0bfa8610a4b4f312932a0110d7d2c48923399492f6ed5168fe0cf279527f1f2",
+      "location": "public",
+      "fmo_leaf": "0b1703959ad35c5e95dd3bf1d62d5a915b55ce4e786a27d88db44b4d9d281d34"
+    },
+    {
+      "path": "publication/MANUSCRIPT_CLAIM_BINDINGS.json",
+      "kind": "ClaimBindingFCO",
+      "group": "claims",
+      "bytes": 2582,
+      "sha256": "2ebf36959047e82742ea8d20f12d12426fe1612ff5ec120767b953ee6091f28e",
+      "location": "public",
+      "fmo_leaf": "98b06aecbc08c347e8d32b34219a8f2025df58acfd20018bbfa6ed987a4c519f"
+    },
+    {
+      "path": "publication/data/BUILD_MANUSCRIPT_RECEIPT.json",
+      "kind": "ExecutionReceiptFCO",
+      "group": "receipt",
+      "bytes": 72,
+      "sha256": "4421b7322cca1d6d0742733b6ace8ba4b31b4dd753560b23c888e21f2268b0eb",
+      "location": "public",
+      "fmo_leaf": "74d4f32c3b0b113a3032628488b1ff0aa683fb5398406ab265151430dbb858a7"
+    },
+    {
+      "path": "scripts/build_manuscript.py",
+      "kind": "CodeFCO",
+      "group": "code",
+      "bytes": 11463,
+      "sha256": "d0352dca238555abd30ce82b70b72e5f6fdb8f50bddf51f63e4c5c2907573e8c",
+      "location": "public",
+      "fmo_leaf": "6678ac0bb9cf2780900f190cb6e32110b6d7d72fd4276817e247e53c3b52e515"
+    }
+  ],
+  "stage": "MANUSCRIPT_CITATION_BINDING_SUCCESSOR",
+  "supersedes": [
+    "VITA-PUB-BP-0008",
+    "VITA-PUB-BP-0009"
+  ],
+  "claim_ceiling": "IDENTITY_AND_INCLUSION_ONLY; publication roots do not establish scientific truth",
+  "signature_state": "NOT_SIGNED"
+}

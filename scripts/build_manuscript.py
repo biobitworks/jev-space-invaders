@@ -25,6 +25,7 @@ r"\[\mathrm{identity}\neq\mathrm{meaning},\quad\mathrm{custody}\neq\mathrm{corre
 r"\section{Mechanical Scientific Method}"+"\nThe execution chain is question, hypothesis, preregistration, input freeze, execution, observation, analysis, claim decision, breakpoint, independent verification, and successor. Historical failures, nulls, and abstentions remain addressable.",
 fig("F2_custody","FCO, typed FCG, breakpoint, and ordered MMR custody",".90"),
 r"\section{Experiment ladder}"+fig("F3_experiment_ladder","Progressive experimental burden from identity to partial observation",".80"),
+r"E1 uses CellPyLib as an independent cellular-automaton implementation comparison \cite{cellpylib}; E3 uses a separately implemented SAT-oracle lane based on PySAT \cite{pysat}; E4A uses the Arcade Learning Environment as the single-player partially observed game substrate \cite{ale}.",
 r"\section{Results}",
 r"\subsection{E0: exact addressability}% CLAIM:E0_ADDRESSABILITY::H0a"+"\nE0 is SUPPORTED. Across 10,010 rows the receipt records zero round-trip failures, zero address collisions, zero content-ID collisions, and zero address/hash-equality rows. Replay is Level 4.",
 r"\subsection{E1: rule inference}% CLAIM:E1_ECA::H1d",

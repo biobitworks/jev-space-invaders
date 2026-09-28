@@ -133,6 +133,21 @@
         "9ad2f5877374a791dcca848fab93eccf098bfbf0af0ce837c2751d56471651be",
         "1a37dd0ab671880972f7c0a807a8ffb76e3fbf1bbbd85952adaab5f00ed7f293"
       ]
+    },
+    {
+      "seq": 9,
+      "bp_id": "VITA-PUB-BP-0010",
+      "bp_file": "governance/publication/breakpoints/0010-citation-binding-successor.json",
+      "bp_file_sha256": "140bce3f7eaa245054d2e14effce90bf45c04e6763e65002b334cfb740bc32b6",
+      "bp_root": "b54292460aed21d56e341bd083e07d5044e735f618668c2e6f32b6de05008841",
+      "root_kind": "FMO_V1_PUBLICATION_BREAKPOINT_ATOMS",
+      "mmr_leaf": "4b97157ea46787de908f1bf91511794255f92c673fe71d9fb85e7098f5cf5b23",
+      "mmr_size": 10,
+      "mmr_root_after": "32ba285cb879075cf7fd57d744a685de0b9d8690b487e14c34b387d1a628af3c",
+      "mmr_peaks_after": [
+        "9ad2f5877374a791dcca848fab93eccf098bfbf0af0ce837c2751d56471651be",
+        "2404676d3fb8b90ea4d7b4d35aa34ef551e8e9047fa1cffbe0fd0ef9148ed907"
+      ]
     }
   ]
 }

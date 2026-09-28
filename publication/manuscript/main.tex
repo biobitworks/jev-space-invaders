@@ -21,6 +21,7 @@ Vithia-S0 compiles source evidence into finite VitaState context. A bounded Cont
 The execution chain is question, hypothesis, preregistration, input freeze, execution, observation, analysis, claim decision, breakpoint, independent verification, and successor. Historical failures, nulls, and abstentions remain addressable.
 \begin{figure}[H]\centering\includegraphics[width=.90\textwidth]{../figures/F2_custody.pdf}\caption{FCO, typed FCG, breakpoint, and ordered MMR custody}\end{figure}
 \section{Experiment ladder}\begin{figure}[H]\centering\includegraphics[width=.80\textwidth]{../figures/F3_experiment_ladder.pdf}\caption{Progressive experimental burden from identity to partial observation}\end{figure}
+E1 uses CellPyLib as an independent cellular-automaton implementation comparison \cite{cellpylib}; E3 uses a separately implemented SAT-oracle lane based on PySAT \cite{pysat}; E4A uses the Arcade Learning Environment as the single-player partially observed game substrate \cite{ale}.
 \section{Results}
 \subsection{E0: exact addressability}% CLAIM:E0_ADDRESSABILITY::H0a
 E0 is SUPPORTED. Across 10,010 rows the receipt records zero round-trip failures, zero address collisions, zero content-ID collisions, and zero address/hash-equality rows. Replay is Level 4.
