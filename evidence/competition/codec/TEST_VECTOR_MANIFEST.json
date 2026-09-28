@@ -1,0 +1,54 @@
+{
+  "created_utc": "2026-09-28T21:29:37Z",
+  "schema": "TEST_VECTOR_MANIFEST_V1",
+  "source": "derived from verified final execution frame/video",
+  "source_frame_sha256": "f77794e7ff5e5268b3054d76bd2cf3c6d4bb2928abfd6dc475e037399073781e",
+  "source_video_sha256": "d9f977296d42e414a4c1e1c9ccd2cc3d69a5f093fef10be4821781265c458a06",
+  "vectors": [
+    {
+      "media_class": "raw_rgb",
+      "source_bytes": 100800,
+      "source_sha256": "a6a8b5d87eca6391d18fedc4c241ac8fad862a50aaa056e1450b4eb989ec42b9"
+    },
+    {
+      "media_class": "png",
+      "source_bytes": 931,
+      "source_sha256": "f77794e7ff5e5268b3054d76bd2cf3c6d4bb2928abfd6dc475e037399073781e"
+    },
+    {
+      "media_class": "webp_lossless",
+      "source_bytes": 386,
+      "source_sha256": "01cbf5e54faedc02e67a56e1e7fd4049ab58b25e94f57348b30a4e59e8643e95"
+    },
+    {
+      "media_class": "tiff",
+      "source_bytes": 100940,
+      "source_sha256": "472aa3b1d53b3a074ff55baf97d188c74ff30969fac66796afffa9a7d32f513f"
+    },
+    {
+      "media_class": "jpeg",
+      "source_bytes": 8178,
+      "source_sha256": "a64ff3b3477e0e132d6bb12fc9ca4dd6accb51b1281c135281e8552b8fce0347"
+    },
+    {
+      "media_class": "webp_lossy",
+      "source_bytes": 3490,
+      "source_sha256": "bed78ee983674e17b1f693d458c4b8b6400263c8c2a5af101e8b195f7a17d85a"
+    },
+    {
+      "media_class": "h264_mp4",
+      "source_bytes": 109511,
+      "source_sha256": "d9f977296d42e414a4c1e1c9ccd2cc3d69a5f093fef10be4821781265c458a06"
+    },
+    {
+      "media_class": "vp9_webm",
+      "source_bytes": 26051,
+      "source_sha256": "20a75b6e3d55237588c81e46333b01a1ae3543f2e678e274bfd45a35aae49bde"
+    },
+    {
+      "media_class": "ffv1",
+      "source_bytes": 2311167,
+      "source_sha256": "67cebd58d511d172e30027222fc422a477da71d1cd141fa4bee9b5ce22e2215e"
+    }
+  ]
+}

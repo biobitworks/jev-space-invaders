@@ -1,0 +1,150 @@
+{
+  "created_utc": "2026-09-28T21:29:37Z",
+  "rows": [
+    {
+      "error": 0,
+      "fail": 13,
+      "media_class": "ffv1",
+      "mode": "EXACT_CUSTODY",
+      "pass": 2,
+      "tested": 15
+    },
+    {
+      "error": 0,
+      "fail": 0,
+      "media_class": "ffv1",
+      "mode": "ROBUST_ATTRIBUTION",
+      "pass": 15,
+      "tested": 15
+    },
+    {
+      "error": 0,
+      "fail": 13,
+      "media_class": "h264_mp4",
+      "mode": "EXACT_CUSTODY",
+      "pass": 2,
+      "tested": 15
+    },
+    {
+      "error": 0,
+      "fail": 0,
+      "media_class": "h264_mp4",
+      "mode": "ROBUST_ATTRIBUTION",
+      "pass": 15,
+      "tested": 15
+    },
+    {
+      "error": 0,
+      "fail": 7,
+      "media_class": "jpeg",
+      "mode": "EXACT_CUSTODY",
+      "pass": 2,
+      "tested": 9
+    },
+    {
+      "error": 0,
+      "fail": 0,
+      "media_class": "jpeg",
+      "mode": "ROBUST_ATTRIBUTION",
+      "pass": 9,
+      "tested": 9
+    },
+    {
+      "error": 0,
+      "fail": 4,
+      "media_class": "png",
+      "mode": "EXACT_CUSTODY",
+      "pass": 5,
+      "tested": 9
+    },
+    {
+      "error": 0,
+      "fail": 1,
+      "media_class": "png",
+      "mode": "ROBUST_ATTRIBUTION",
+      "pass": 8,
+      "tested": 9
+    },
+    {
+      "error": 0,
+      "fail": 6,
+      "media_class": "raw_rgb",
+      "mode": "EXACT_CUSTODY",
+      "pass": 3,
+      "tested": 9
+    },
+    {
+      "error": 0,
+      "fail": 1,
+      "media_class": "raw_rgb",
+      "mode": "ROBUST_ATTRIBUTION",
+      "pass": 8,
+      "tested": 9
+    },
+    {
+      "error": 0,
+      "fail": 7,
+      "media_class": "tiff",
+      "mode": "EXACT_CUSTODY",
+      "pass": 2,
+      "tested": 9
+    },
+    {
+      "error": 0,
+      "fail": 1,
+      "media_class": "tiff",
+      "mode": "ROBUST_ATTRIBUTION",
+      "pass": 8,
+      "tested": 9
+    },
+    {
+      "error": 0,
+      "fail": 13,
+      "media_class": "vp9_webm",
+      "mode": "EXACT_CUSTODY",
+      "pass": 2,
+      "tested": 15
+    },
+    {
+      "error": 0,
+      "fail": 0,
+      "media_class": "vp9_webm",
+      "mode": "ROBUST_ATTRIBUTION",
+      "pass": 15,
+      "tested": 15
+    },
+    {
+      "error": 0,
+      "fail": 7,
+      "media_class": "webp_lossless",
+      "mode": "EXACT_CUSTODY",
+      "pass": 2,
+      "tested": 9
+    },
+    {
+      "error": 0,
+      "fail": 1,
+      "media_class": "webp_lossless",
+      "mode": "ROBUST_ATTRIBUTION",
+      "pass": 8,
+      "tested": 9
+    },
+    {
+      "error": 0,
+      "fail": 7,
+      "media_class": "webp_lossy",
+      "mode": "EXACT_CUSTODY",
+      "pass": 2,
+      "tested": 9
+    },
+    {
+      "error": 0,
+      "fail": 1,
+      "media_class": "webp_lossy",
+      "mode": "ROBUST_ATTRIBUTION",
+      "pass": 8,
+      "tested": 9
+    }
+  ],
+  "schema": "CODEC_MATRIX_V1"
+}

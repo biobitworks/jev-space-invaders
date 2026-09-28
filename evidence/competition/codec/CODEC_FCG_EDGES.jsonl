@@ -1,0 +1,12 @@
+{"object": "ActorRunFCO:CODEX_MAGICSTUDIO_CODEC_STAGE_001", "predicate": "PRODUCED_BY", "subject": "evidence/competition/codec/CODEC_AGGREGATE_RESULT.json"}
+{"object": "ActorRunFCO:CODEX_MAGICSTUDIO_CODEC_STAGE_001", "predicate": "PRODUCED_BY", "subject": "evidence/competition/codec/CODEC_MATRIX.json"}
+{"object": "ActorRunFCO:CODEX_MAGICSTUDIO_CODEC_STAGE_001", "predicate": "PRODUCED_BY", "subject": "evidence/competition/codec/PRIVATE_CODEC_PUBLIC_RECEIPT.json"}
+{"object": "ActorRunFCO:CODEX_MAGICSTUDIO_CODEC_STAGE_001", "predicate": "PRODUCED_BY", "subject": "evidence/competition/codec/ROUNDTRIP_RESULTS.jsonl"}
+{"object": "ActorRunFCO:CODEX_MAGICSTUDIO_CODEC_STAGE_001", "predicate": "PRODUCED_BY", "subject": "evidence/competition/codec/TEST_VECTOR_MANIFEST.json"}
+{"object": "ActorRunFCO:CODEX_MAGICSTUDIO_CODEC_STAGE_001", "predicate": "PRODUCED_BY", "subject": "evidence/competition/codec/TRANSFORM_RESULTS.jsonl"}
+{"object": "ActorRunFCO:CODEX_MAGICSTUDIO_CODEC_STAGE_001", "predicate": "PRODUCED_BY", "subject": "evidence/competition/codec/UNIVERSAL_CODEC_PREREG.json"}
+{"object": "ROUNDTRIP_RESULTS.jsonl", "predicate": "VERIFIED_BY", "subject": "PRIVATE_CODEC_PUBLIC_RECEIPT.json"}
+{"object": "TRANSFORM_RESULTS.jsonl", "predicate": "VERIFIED_BY", "subject": "PRIVATE_CODEC_PUBLIC_RECEIPT.json"}
+{"object": "ROUNDTRIP_RESULTS.jsonl", "predicate": "DERIVED_FROM", "subject": "CODEC_AGGREGATE_RESULT.json"}
+{"object": "TRANSFORM_RESULTS.jsonl", "predicate": "DERIVED_FROM", "subject": "CODEC_AGGREGATE_RESULT.json"}
+{"object": "PlaythroughFCO:e55a47a7f16064477c4f101a38a849391c2fbc9f6557c5244daf0406b36dbd74", "predicate": "DERIVED_FROM", "subject": "TEST_VECTOR_MANIFEST.json"}

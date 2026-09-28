@@ -214,6 +214,25 @@
         "c930d2260ea6a1090f97c79c1b0a96be38996ed7c81b2da08570ed2b37079e31",
         "703db14ed49600c550aa1fb4f45ad5a30e6b1ea6221db0148d43d031f2e4b6ce"
       ]
+    },
+    {
+      "seq": 12,
+      "bp_id": "UFA-JEV-COMP-BP-0013",
+      "bp_file": "governance/competition/breakpoints/0013-private-codec-experiment-public-receipts.json",
+      "bp_file_sha256": "351581fd61a4531f71e6c519494a965e7d9685e49bdc788e391b18692462f48a",
+      "bp_root": "ecae952e4adba895594e716088ae933f11b948d29f680854c31e8d19cf2178d2",
+      "branch": "competition/final-integration-v01",
+      "lineage_id": "UFA-JEV-COMP",
+      "parent_root": "2108cc21f037766b1047b0363e20f1bf1de960ef93a8d51ff9ced98768984898",
+      "root_kind": "FMO_V1_BREAKPOINT_ATOMS",
+      "mmr_leaf": "83fa9e029cbf2722badbe33ccb7fb9a12599d4fd68e427bc8d6c1b36433785a2",
+      "mmr_size": 13,
+      "mmr_root_after": "250e3b6630ac0955c7e0ad65848d51b0131abbd338512d6693bed87e531dd32a",
+      "mmr_peaks_after": [
+        "c930d2260ea6a1090f97c79c1b0a96be38996ed7c81b2da08570ed2b37079e31",
+        "703db14ed49600c550aa1fb4f45ad5a30e6b1ea6221db0148d43d031f2e4b6ce",
+        "83fa9e029cbf2722badbe33ccb7fb9a12599d4fd68e427bc8d6c1b36433785a2"
+      ]
     }
   ],
   "lineage_id": "UFA-JEV-COMP",
