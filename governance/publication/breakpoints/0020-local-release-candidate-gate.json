@@ -1,0 +1,119 @@
+{
+  "breakpoint_id": "VITA-PUB-BP-0020",
+  "parent": "VITA-PUB-BP-0019",
+  "state": "LOCAL_RELEASE_CANDIDATE_BLOCKED_EXTERNAL",
+  "project": "VITHIA_0_VITA_1_PUBLICATION",
+  "created_utc": "2026-09-28T06:22:38+00:00",
+  "root_kind": "FMO_V1_PUBLICATION_BREAKPOINT_ATOMS",
+  "bp_root": "e740a9b0d5324a90315fbe8df8087a7c8154f369c5398e51157cd16bb23bc841",
+  "group_roots": {
+    "audit": "403c464f45cb901e9ea1ec8bedcffb6e50ca312fb536938a667bc5c9305885bb",
+    "gate": "5b8f37a0d732f6bd130d66bfcbf599a74fe66e582fe0bcc35362e6c8454b0775",
+    "model": "6023b1f3aa06bc75058ba3487736609b0e11a669a4b07e4f5a2780fae33d0e28",
+    "package_snapshot": "1a630629e8a8c399735f96487ce90b585dabd65c1cd7774e8ab00c40493b8b6b",
+    "rights": "7bb2439cb687826e9d5c272994334add0ac7e908027894c750964e91fee7fb1e"
+  },
+  "atoms": [
+    {
+      "path": "publication/LOCAL_RELEASE_GATE_RECEIPT.json",
+      "kind": "ReleaseGateFCO",
+      "group": "gate",
+      "bytes": 536,
+      "sha256": "09797e87be892cdcbe539595d126e6dd65aa510d868f251911ee917fdb498a33",
+      "location": "public",
+      "fmo_leaf": "5b8f37a0d732f6bd130d66bfcbf599a74fe66e582fe0bcc35362e6c8454b0775"
+    },
+    {
+      "path": "publication/release/v0.1.0/RELEASE_GATE.json",
+      "kind": "ReleaseGateFCO",
+      "group": "package_snapshot",
+      "bytes": 634,
+      "sha256": "8dbdef33dd3341ac277e7def07c656b7ae99a62d4665ff267cec87a14f4bf5f7",
+      "location": "public",
+      "fmo_leaf": "431845e325e8d749973c4e6a304c8260bf98739ab8e6dc510a9fea54b30e02ea"
+    },
+    {
+      "path": "publication/release/v0.1.0/RELEASE_MANIFEST.json",
+      "kind": "ReleaseManifestFCO",
+      "group": "package_snapshot",
+      "bytes": 3690,
+      "sha256": "73ff8bc653f21085794827cf405fa7511a47f2e67fe39178e5bcfbcf6efd6fe3",
+      "location": "public",
+      "fmo_leaf": "b5575ec89d4d57c6e72a99a02d865297394c0aa71083dd3ac0d1b83546241c51"
+    },
+    {
+      "path": "publication/release/v0.1.0/SHA256SUMS.txt",
+      "kind": "ChecksumManifestFCO",
+      "group": "package_snapshot",
+      "bytes": 1788,
+      "sha256": "67be8f20bfa18ffbc6267c37b3cdc52a5a56e939677741c46bd806484aa0d806",
+      "location": "public",
+      "fmo_leaf": "f1482290ad3012b3fb1ef49d18f13bfd45840fc3ed1363f9d7278193d612ce87"
+    },
+    {
+      "path": "publication/release/v0.1.0/main.pdf",
+      "kind": "PublicationPDFFCO",
+      "group": "package_snapshot",
+      "bytes": 138558,
+      "sha256": "03571aa6ba35a0d92007360a8378cdbeaa596a1010c5a57b02d0f2e2ddf9e4d6",
+      "location": "public",
+      "fmo_leaf": "b3f3d6ec20652858908baa21b79b3593c58b6cd89caeb694159f97acb9a8b16a"
+    },
+    {
+      "path": "publication/release/v0.1.0/supplement.pdf",
+      "kind": "PublicationPDFFCO",
+      "group": "package_snapshot",
+      "bytes": 36387,
+      "sha256": "21827b48b8fd393ec9f1f378edca745cb86e22cde7af1e519e1e75c3b021b69d",
+      "location": "public",
+      "fmo_leaf": "583089bbde283cf30fa2bbb9385e7b654246880d5f611dabdbce07b837692162"
+    },
+    {
+      "path": "publication/model/vithia-s0/MODEL_RECEIPT.json",
+      "kind": "ModelReceiptFCO",
+      "group": "model",
+      "bytes": 915,
+      "sha256": "abec914f696efbcd9ac9e8c889fa6532b30887eab1b1fda2b81736d06090b83a",
+      "location": "public",
+      "fmo_leaf": "93bde5552d81ddce6351427da9725950a3d25f200a1f809db7c0bd9df02fcae9"
+    },
+    {
+      "path": "publication/model/vithia-s0/HF_PUBLICATION_RECEIPT.json",
+      "kind": "ExternalPublicationReceiptFCO",
+      "group": "model",
+      "bytes": 348,
+      "sha256": "e3f4e5ebc5ff8dd73c1b67896a4475a9b850afe8b4e13013de7c4af7d215033b",
+      "location": "public",
+      "fmo_leaf": "f951e701802a0063754a176a597460821fd9a88673e315902507cbe04d1b8df5"
+    },
+    {
+      "path": "publication/release/v0.1.0/RIGHTS_STATE.json",
+      "kind": "RightsStateFCO",
+      "group": "rights",
+      "bytes": 491,
+      "sha256": "4fba6b7da0ac07a70ae0492287c75d8a6e1970b560904f29c61acbd687ab761d",
+      "location": "public",
+      "fmo_leaf": "7bb2439cb687826e9d5c272994334add0ac7e908027894c750964e91fee7fb1e"
+    },
+    {
+      "path": "publication/audits/SCIENTIFIC_SUCCESSOR_OUTSIDE_V0_1_0.json",
+      "kind": "AuditReceiptFCO",
+      "group": "audit",
+      "bytes": 607,
+      "sha256": "e158abd79710e3e38c34bd7bf5a0048e44e1096fb7f988868092862f2d6e7722",
+      "location": "public",
+      "fmo_leaf": "403c464f45cb901e9ea1ec8bedcffb6e50ca312fb536938a667bc5c9305885bb"
+    }
+  ],
+  "stage": "LOCAL_RELEASE_CANDIDATE_GATE",
+  "target_version": "0.1.0",
+  "publish_authorized": false,
+  "external_blockers": [
+    "LICENSE_NOT_ESTABLISHED_FOR_THIS_RELEASE",
+    "HF_WRITE_AUTH_MISSING",
+    "ZENODO_AUTH_MISSING"
+  ],
+  "tag_state": "NOT_CREATED",
+  "signature_state": "NOT_SIGNED",
+  "claim_ceiling": "IDENTITY_AND_INCLUSION_ONLY; publication roots do not establish scientific truth"
+}

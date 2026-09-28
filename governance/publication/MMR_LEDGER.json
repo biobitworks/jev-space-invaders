@@ -288,6 +288,21 @@
         "4e499bc59d5e03705de3bd8f64c6dc9b8195f22e3657c8679081bc78b41ed8dc",
         "0beb7fcc263e173c63369b3d6688ad8a96cb6a364af122fc18d7e945bae4b2e7"
       ]
+    },
+    {
+      "seq": 19,
+      "bp_id": "VITA-PUB-BP-0020",
+      "bp_file": "governance/publication/breakpoints/0020-local-release-candidate-gate.json",
+      "bp_file_sha256": "4db08884721a1fb6443376d15c07ccb19c53fd47e078c085a202bc201a9056f2",
+      "bp_root": "e740a9b0d5324a90315fbe8df8087a7c8154f369c5398e51157cd16bb23bc841",
+      "root_kind": "FMO_V1_PUBLICATION_BREAKPOINT_ATOMS",
+      "mmr_leaf": "d5cc1897cd81a4ffd93706cc434b16fe612ed8c85c74d6a6d4f454b23773b182",
+      "mmr_size": 20,
+      "mmr_root_after": "8c664ee83bdcdfe38b793a429e5225d84dec4369a9b83e763782c80c80a87f28",
+      "mmr_peaks_after": [
+        "38225c02b9c0e198d4da872ddc9f9160d7e1c772cbb1da2e69ae4778a5cd07b5",
+        "16346dd446d8fde4d60bde80c8bfd808556d7b8076cfc7ab45529cbaa100e802"
+      ]
     }
   ]
 }

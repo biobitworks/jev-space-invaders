@@ -1,0 +1,17 @@
+{
+  "schema": "VITHIA_LOCAL_RELEASE_GATE_RECEIPT_V1",
+  "target_version": "0.1.0",
+  "state": "LOCAL_RELEASE_CANDIDATE_BLOCKED_EXTERNAL",
+  "scientific_evidence_lock": "UFA-JEV-BP-0024",
+  "local_package_breakpoint": "VITA-PUB-BP-0019",
+  "external_blockers": [
+    "LICENSE_NOT_ESTABLISHED_FOR_THIS_RELEASE",
+    "HF_WRITE_AUTH_MISSING",
+    "ZENODO_AUTH_MISSING"
+  ],
+  "tag_state": "NOT_CREATED",
+  "zenodo_state": "NOT_CREATED",
+  "hf_remote_state": "NOT_CREATED",
+  "signature_state": "NOT_SIGNED",
+  "publish_authorized": false
+}
