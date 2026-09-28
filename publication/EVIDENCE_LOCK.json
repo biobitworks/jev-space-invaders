@@ -1,0 +1,24 @@
+{
+  "schema": "VITHIA_PUBLICATION_EVIDENCE_LOCK_V1",
+  "publication_title": "Vithia 0-Vita-1: A Deterministic Context Protocol for Verifiable Scientific State Transitions",
+  "version": "0.1.0-rc",
+  "framework": "Mechanical Scientific Method for Artificial Infinite Systems",
+  "protocol": "0-Vita-1",
+  "program": "Vitaology",
+  "model_family": "Vithia",
+  "scientific_repo": "biobitworks/jev-space-invaders",
+  "scientific_branch": "vithia-space",
+  "scientific_commit": "754945f572543452f6b9e3a21ccee16c175605af",
+  "scientific_breakpoint": "UFA-JEV-BP-0024",
+  "scientific_breakpoint_root": "ea5a307a15265675e41bdb5ccd78a063a9841208aad0dfb77297330fd5b87f3d",
+  "scientific_mmr_size": 24,
+  "scientific_mmr_root": "a461def1576e4a0600cb3c738e885961678dfef300a1696e958c6b9173d76692",
+  "claim_sources": [
+    "vita01/PUBLICATION_CLAIM_LEDGER.json",
+    "evidence/statistical_successor/STATISTICAL_ANALYSIS.json",
+    "evidence/cross_host/CROSS_HOST_REPLICATION_RECEIPT.json"
+  ],
+  "terminology": "vita01/VITA01_TERMINOLOGY_V2.json",
+  "rights_state": "LICENSE_NOT_ESTABLISHED_FOR_THIS_RELEASE",
+  "signature_state": "NOT_SIGNED"
+}

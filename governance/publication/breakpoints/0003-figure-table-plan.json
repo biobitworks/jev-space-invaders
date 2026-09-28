@@ -1,0 +1,38 @@
+{
+  "breakpoint_id": "VITA-PUB-BP-0003",
+  "parent": "VITA-PUB-BP-0002",
+  "state": "FIGURE_TABLE_PLAN_FROZEN",
+  "project": "VITHIA_0_VITA_1_PUBLICATION",
+  "created_utc": "2026-09-28T05:22:45+00:00",
+  "root_kind": "FMO_V1_PUBLICATION_BREAKPOINT_ATOMS",
+  "bp_root": "04331aba82941667754aa2e5eb85fde039e4b50e469c8aebe685f2e48d51fdd4",
+  "group_roots": {
+    "plan": "c82ad542cadc7f50eec8af622c97cbe39da501f1c2715a737d69b8a1a3d97d64",
+    "source": "318d7e8ad0fbd596e90f467c2be88b5773610f08bd8aa5d8d2cf62c0ab3620ef"
+  },
+  "atoms": [
+    {
+      "path": "publication/FIGURE_TABLE_PLAN.md",
+      "kind": "PublicationPlanFCO",
+      "group": "plan",
+      "bytes": 1203,
+      "sha256": "48fc80d79e6149b69df158235027e08659895681934c10b6769a716977a107cc",
+      "location": "public",
+      "fmo_leaf": "c82ad542cadc7f50eec8af622c97cbe39da501f1c2715a737d69b8a1a3d97d64"
+    },
+    {
+      "path": "publication/CLAIM_MATRIX.json",
+      "kind": "PublicationClaimMatrixFCO",
+      "group": "source",
+      "bytes": 11928,
+      "sha256": "0c5c865c1e2a80cae83f6447994ceab6b4d677f13d64e0587691b373e65a95eb",
+      "location": "public",
+      "fmo_leaf": "318d7e8ad0fbd596e90f467c2be88b5773610f08bd8aa5d8d2cf62c0ab3620ef"
+    }
+  ],
+  "stage": "FIGURE_TABLE_PLAN",
+  "planned_figures": 8,
+  "planned_tables": 7,
+  "claim_ceiling": "IDENTITY_AND_INCLUSION_ONLY; publication roots do not establish scientific truth",
+  "signature_state": "NOT_SIGNED"
+}

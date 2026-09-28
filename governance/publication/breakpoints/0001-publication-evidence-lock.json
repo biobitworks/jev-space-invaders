@@ -1,0 +1,85 @@
+{
+  "breakpoint_id": "VITA-PUB-BP-0001",
+  "parent": "UFA-JEV-BP-0024",
+  "state": "PUBLICATION_EVIDENCE_LOCKED",
+  "project": "VITHIA_0_VITA_1_PUBLICATION",
+  "created_utc": "2026-09-28T05:22:45+00:00",
+  "root_kind": "FMO_V1_PUBLICATION_BREAKPOINT_ATOMS",
+  "bp_root": "a26f233564a880ee130afbdcffb18ad6f304081a8f4a4f4e017f2c862ac5b114",
+  "group_roots": {
+    "publication": "a4393269653fb03b3fc2f2dcd3311e54e036ec7138094e4c4e27103bce20033f",
+    "scientific_ref": "f698295aceeff02d747a292fd1b9d77f34f97581ebbd008d19c27a26fdb848de",
+    "terminology": "9ca9002c5e928f6a5df820ed1075bcb95d342b25015bd61bfa71bb7ad5da318a"
+  },
+  "atoms": [
+    {
+      "path": "publication/EVIDENCE_LOCK.json",
+      "kind": "PublicationEvidenceLockFCO",
+      "group": "publication",
+      "bytes": 1134,
+      "sha256": "0bf79cb29a9042b010e1b242d6ab53ed25d7900e6894266f3d69b343296ce1a1",
+      "location": "public",
+      "fmo_leaf": "a4393269653fb03b3fc2f2dcd3311e54e036ec7138094e4c4e27103bce20033f"
+    },
+    {
+      "path": "governance/MMR_LEDGER.json",
+      "kind": "ScientificMMRLedgerFCO",
+      "group": "scientific_ref",
+      "bytes": 18407,
+      "sha256": "cd23c478867dded3d1ad039ed7d5e593d921650ded9f9ff8c1ccafb91219a1a9",
+      "location": "public",
+      "fmo_leaf": "4eef9582f9bfdef39654f3b69e306053393bda06ddc8e8da8b8ddec129d4d54d"
+    },
+    {
+      "path": "governance/breakpoints/0024-cross-host-replication-result.json",
+      "kind": "ScientificBreakpointRefFCO",
+      "group": "scientific_ref",
+      "bytes": 1622,
+      "sha256": "fd32823d2634e3b054cd32e8783570d6498b40abd07fa4430eebc1e11b94b295",
+      "location": "public",
+      "fmo_leaf": "c8514b57064d3dcb284c492c423ff83932411afffda2cc49eda443f988db0c94"
+    },
+    {
+      "path": "vita01/PUBLICATION_CLAIM_LEDGER.json",
+      "kind": "ScientificClaimLedgerFCO",
+      "group": "scientific_ref",
+      "bytes": 5330,
+      "sha256": "463a0273be931c7299fe36e1cfc72d60a85551254066d1f14211a2b43be057bd",
+      "location": "public",
+      "fmo_leaf": "d9c62277568fb47687d27d58c179a5cc94e7822ab9e4210776299ab82eff2111"
+    },
+    {
+      "path": "evidence/statistical_successor/STATISTICAL_ANALYSIS.json",
+      "kind": "DerivedEvidenceFCO",
+      "group": "scientific_ref",
+      "bytes": 2292,
+      "sha256": "9ac16e0dd207db3281cec221ff5f5ce099c064718f58d5fa213873aa30eef71f",
+      "location": "public",
+      "fmo_leaf": "306fe3b23d818119460ae9cfee7fbbc42cf528ea8699e0640ec03bc7cfce7b30"
+    },
+    {
+      "path": "evidence/cross_host/CROSS_HOST_REPLICATION_RECEIPT.json",
+      "kind": "ReplicationReceiptFCO",
+      "group": "scientific_ref",
+      "bytes": 452,
+      "sha256": "3c2e2554be2723da6de13aa17bc39e0efc0299b3f595dcc95750a8aae750e8a9",
+      "location": "public",
+      "fmo_leaf": "f03850da7645c5d791c6c131a5aebfb971e2c9eb63faaf36ad89a49fe8716feb"
+    },
+    {
+      "path": "vita01/VITA01_TERMINOLOGY_V2.json",
+      "kind": "TerminologyFCO",
+      "group": "terminology",
+      "bytes": 1621,
+      "sha256": "fe55f7f842eec3537ac9e108cd8c9a0802814cf2518c019ce25510f3935922a8",
+      "location": "public",
+      "fmo_leaf": "9ca9002c5e928f6a5df820ed1075bcb95d342b25015bd61bfa71bb7ad5da318a"
+    }
+  ],
+  "stage": "PUBLICATION_EVIDENCE_LOCK",
+  "scientific_parent": "UFA-JEV-BP-0024",
+  "version": "0.1.0-rc",
+  "rights_state": "LICENSE_NOT_ESTABLISHED_FOR_THIS_RELEASE",
+  "claim_ceiling": "IDENTITY_AND_INCLUSION_ONLY; publication roots do not establish scientific truth",
+  "signature_state": "NOT_SIGNED"
+}

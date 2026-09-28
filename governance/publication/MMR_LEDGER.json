@@ -1,0 +1,49 @@
+{
+  "schema": "VITA_PUBLICATION_MMR_LEDGER_V1",
+  "protocol": "scripts/publication_breakpoints.py",
+  "entries": [
+    {
+      "seq": 0,
+      "bp_id": "VITA-PUB-BP-0001",
+      "bp_file": "governance/publication/breakpoints/0001-publication-evidence-lock.json",
+      "bp_file_sha256": "6b1764fad75ac97dc97651866e4503754eae5470939f61de7ab094e30b2a1dff",
+      "bp_root": "a26f233564a880ee130afbdcffb18ad6f304081a8f4a4f4e017f2c862ac5b114",
+      "root_kind": "FMO_V1_PUBLICATION_BREAKPOINT_ATOMS",
+      "mmr_leaf": "23a383fdbf7aaea8fc462470ec1377ff154258f81d91767beca0ea45b6ff3a1c",
+      "mmr_size": 1,
+      "mmr_root_after": "23a383fdbf7aaea8fc462470ec1377ff154258f81d91767beca0ea45b6ff3a1c",
+      "mmr_peaks_after": [
+        "23a383fdbf7aaea8fc462470ec1377ff154258f81d91767beca0ea45b6ff3a1c"
+      ]
+    },
+    {
+      "seq": 1,
+      "bp_id": "VITA-PUB-BP-0002",
+      "bp_file": "governance/publication/breakpoints/0002-claim-matrix.json",
+      "bp_file_sha256": "29033368cd768e5440c14c4d04a7027fff3a106cd5c69fe673d5940e248c5e69",
+      "bp_root": "66ce4532d36d4fcf94ae25aba6fde7078c703048cb79bdce8fb689cf3ec3afcc",
+      "root_kind": "FMO_V1_PUBLICATION_BREAKPOINT_ATOMS",
+      "mmr_leaf": "3d16ab7c22e0986e58263c0ba3315965e2bd9de1afa3806a40bc92f31e4cd0c7",
+      "mmr_size": 2,
+      "mmr_root_after": "b772fc84a760b2b586a0382417ffb3d0be4e0e02f9c8315f1c2668a4bbb238a4",
+      "mmr_peaks_after": [
+        "b772fc84a760b2b586a0382417ffb3d0be4e0e02f9c8315f1c2668a4bbb238a4"
+      ]
+    },
+    {
+      "seq": 2,
+      "bp_id": "VITA-PUB-BP-0003",
+      "bp_file": "governance/publication/breakpoints/0003-figure-table-plan.json",
+      "bp_file_sha256": "e91c62854e212f9d6c3f1226a49004d1048762b7340ec1e8bce8a007d7b5fb42",
+      "bp_root": "04331aba82941667754aa2e5eb85fde039e4b50e469c8aebe685f2e48d51fdd4",
+      "root_kind": "FMO_V1_PUBLICATION_BREAKPOINT_ATOMS",
+      "mmr_leaf": "832e8e53fb5dfc1e07a30e4ff624000fc8602a58e05b8ccd8a17692d06b23a80",
+      "mmr_size": 3,
+      "mmr_root_after": "f8624fcc8d066bf03e94fd0f796be8a4296dc8b359e768f766e77ab9594d79a1",
+      "mmr_peaks_after": [
+        "b772fc84a760b2b586a0382417ffb3d0be4e0e02f9c8315f1c2668a4bbb238a4",
+        "832e8e53fb5dfc1e07a30e4ff624000fc8602a58e05b8ccd8a17692d06b23a80"
+      ]
+    }
+  ]
+}
