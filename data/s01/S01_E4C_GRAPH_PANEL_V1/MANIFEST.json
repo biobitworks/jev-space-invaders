@@ -1,0 +1,88 @@
+{
+  "dataset_id": "S01_E4C_GRAPH_PANEL_V1",
+  "kind": "evaluation",
+  "schema": "rows: panel roots with exhaustive per-first-action outcomes; all_roots: every expanded root",
+  "source": "ALE/SpaceInvaders-v5 scripted-policy states, seeds 6-15",
+  "license": "CC-BY-4.0",
+  "generation_code": [
+    {
+      "path": "experiments/e4c_graph.py",
+      "sha256": "da888db1f0078962ac8ce321cdc549b08d206f2bcae9b728f1b03045883fa880"
+    },
+    {
+      "path": "src/envcfg.py",
+      "sha256": "7b32f5565412029b39098f1d8314b4cfb63a14c723face31a44dcfa0229e1493"
+    },
+    {
+      "path": "src/perception.py",
+      "sha256": "fcd5a53760d33c910052a8b2562d2b49be2ab36232b709c3a33d18a785ccfb41"
+    },
+    {
+      "path": "src/deciders.py",
+      "sha256": "ef5e9bb37fa3957a0728d654bdbb20cb1eeccb321c057a4824d31000b08619f7"
+    }
+  ],
+  "code_commit_at_generation": "2823a2e0f58db42ed627396c383b11fdf672c4c3",
+  "config": {
+    "env": {
+      "env_id": "ALE/SpaceInvaders-v5",
+      "frameskip": 4,
+      "repeat_action_probability": 0.25,
+      "full_action_space": false,
+      "max_num_frames_per_episode": 108000,
+      "obs_type": "rgb",
+      "wrappers": [
+        "RepeatActionMaxPool(k=4, pool=max of last 2 frames) over ALE frameskip=1"
+      ],
+      "decision_interval_steps": 1
+    },
+    "H": 4,
+    "every": 10,
+    "root_cap": 240,
+    "min_discriminating": 24,
+    "per_stratum_cap": 48,
+    "actions": [
+      "NOOP",
+      "FIRE",
+      "RIGHT",
+      "LEFT",
+      "RIGHTFIRE",
+      "LEFTFIRE"
+    ],
+    "gate": "BLOCKED_OR_UNDERPOWERED",
+    "node_key": "sha256(ALEState.serialize()) per depth (includes RAM, RNG, frame counters)",
+    "compression": "none"
+  },
+  "seeds": {
+    "episodes": [
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15
+    ],
+    "roots": "E4C_EXHAUSTIVE_REACHABLE_ACTION_GRAPH|roots",
+    "sampling": "E4C_EXHAUSTIVE_REACHABLE_ACTION_GRAPH|<stratum>"
+  },
+  "files": [
+    {
+      "path": "data/s01/S01_E4C_GRAPH_PANEL_V1/all_roots.jsonl",
+      "bytes": 357268,
+      "sha256": "e3798e83157cb85c54f69fe1d2cb5d7681d1372e9119cbbf88c9a6b25c0a9bac"
+    },
+    {
+      "path": "data/s01/S01_E4C_GRAPH_PANEL_V1/rows.jsonl",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ],
+  "fmo_root": "9ebf17331e6da3d6141f69f480aacb5b98594af1d2c273c134d19bfebc3e9df0",
+  "visibility": "public",
+  "parent_evidence": [],
+  "claim_ceiling": "exhaustive ground truth to horizon H only; no model has seen these states"
+}

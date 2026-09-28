@@ -1,0 +1,53 @@
+{
+  "breakpoint_id": "UFA-JEV-BP-0026",
+  "parent": "UFA-JEV-BP-0025",
+  "state": "BLOCKED_OR_UNDERPOWERED",
+  "project": "VITHIA_SPACE",
+  "created_utc": "2026-09-28T06:18:08+00:00",
+  "git_head_at_creation": "2823a2e0f58db42ed627396c383b11fdf672c4c3",
+  "root_kind": "FMO_V1_BREAKPOINT_ATOMS",
+  "bp_root": "083ba06fa758231acf498ac986aecd610fa4651003c2d034bee8990c2fce5c8f",
+  "group_roots": {
+    "input_dataset": "5edddeace794fa8164269efb5b194ab6302ddc9638b262f56b0c6da2b83d33f1"
+  },
+  "atoms": [
+    {
+      "path": "data/s01/S01_E4C_GRAPH_PANEL_V1/MANIFEST.json",
+      "kind": "DatasetManifestFCO",
+      "group": "input_dataset",
+      "bytes": 2543,
+      "sha256": "f624735cdd61955cb23502e1e738399cf454b983856e4aa9f592804bad137c7c",
+      "location": "public",
+      "fmo_leaf": "92eb8896ec2f1b3137e38774d1ef7f2fb15d3abe229af08f3297c473b1143bca"
+    },
+    {
+      "path": "data/s01/S01_E4C_GRAPH_PANEL_V1/all_roots.jsonl",
+      "kind": "DatasetFileFCO",
+      "group": "input_dataset",
+      "bytes": 357268,
+      "sha256": "e3798e83157cb85c54f69fe1d2cb5d7681d1372e9119cbbf88c9a6b25c0a9bac",
+      "location": "public",
+      "fmo_leaf": "fd0d758030cffd29c508f3fbac12e44c631a15b70cf4fe8088d828ba943a28d3"
+    },
+    {
+      "path": "data/s01/S01_E4C_GRAPH_PANEL_V1/rows.jsonl",
+      "kind": "DatasetFileFCO",
+      "group": "input_dataset",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "location": "public",
+      "fmo_leaf": "477ac9b368e06af3fd4db3841f56b317c9aacee500b205c6928caad795c7bbe7"
+    }
+  ],
+  "experiment_id": "E4C_EXHAUSTIVE_REACHABLE_ACTION_GRAPH",
+  "stage": "E4C_PANEL",
+  "protocol_breakpoint": "UFA-JEV-BP-0025",
+  "pre_mmr_root": "031500131fcab30f70c46f515832ef4c3e1f0f65197a6eeb8a038733df4bd519",
+  "gate": "BLOCKED_OR_UNDERPOWERED",
+  "input_dataset": {
+    "dataset_id": "S01_E4C_GRAPH_PANEL_V1",
+    "fmo_root": "9ebf17331e6da3d6141f69f480aacb5b98594af1d2c273c134d19bfebc3e9df0"
+  },
+  "claim_ceiling": "IDENTITY_AND_INCLUSION_ONLY; hashes do not establish correctness",
+  "signature_state": "NOT_SIGNED"
+}
