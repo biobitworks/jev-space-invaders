@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 from __future__ import annotations
-import hashlib, json, os, time
+import hashlib, json, os, sys, time
 from collections import defaultdict
 from concurrent.futures import ProcessPoolExecutor
 from pathlib import Path
