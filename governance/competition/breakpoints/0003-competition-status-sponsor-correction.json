@@ -1,0 +1,88 @@
+{
+  "atoms": [
+    {
+      "bytes": 1438,
+      "fmo_leaf": "0ae7dab10b709b9aff55cd5245962308cdc43962051ef7f0f20e41e3c48c5583",
+      "group": "sponsors",
+      "kind": "SponsorStateReceiptFCO",
+      "location": "public",
+      "path": "evidence/competition/sponsors/SPONSOR_STATE_SUCCESSOR_RECEIPT.json",
+      "sha256": "bcf416ce26a575e071a4fb0064650ba3f468687b983b757cc43c71c7f40dd6d5"
+    },
+    {
+      "bytes": 712,
+      "fmo_leaf": "5481b885ded07a0bd3dc1beba1c44c2c3df78cbed3060fd767302b83c353d3a1",
+      "group": "entry",
+      "kind": "EntryUpdateCandidateFCO",
+      "location": "public",
+      "path": "evidence/competition/entry/FINAL_ENTRY_UPDATE.json",
+      "sha256": "5f3b2997c0345dfee49e522b442afc7af622f71c8bdfab3f4c30060b55f0a9f4"
+    },
+    {
+      "bytes": 879,
+      "fmo_leaf": "bd544979500cf5953acc05803829881650f8011c74f6ee492ad760e9eafc957b",
+      "group": "package",
+      "kind": "CompetitionStatusFCO",
+      "location": "public",
+      "path": "evidence/competition/package/COMPETITION_STATUS.json",
+      "sha256": "a8036711bd35cbfc00d9102c802984e30baed09876293100738381f005d0a470"
+    },
+    {
+      "bytes": 5575,
+      "fmo_leaf": "d8b7482107b27ca8ba4b6965a79219887b6397bed168b45db75c130299bfb59d",
+      "group": "package",
+      "kind": "ReadmeSnapshotFCO",
+      "location": "public",
+      "path": "evidence/competition/package/README.bp0003.snapshot.md",
+      "sha256": "ce7f4cc798a969b1ed24e8d7d689cf19361fe5dad16cc47e6d49c7f9276e409c"
+    },
+    {
+      "bytes": 1519,
+      "fmo_leaf": "97f64fb2a113275e0d5e8d198ec62cfb614183968524007db6bdbe850e0ff17b",
+      "group": "historical",
+      "kind": "HistoricalEntryReceiptFCO",
+      "location": "public",
+      "path": "evidence/entry/ENTRY_RECEIPT_001.json",
+      "sha256": "9f9ff8933e2f5dc97407e19da4db1ee940e2860890b503d756227bd1593bf7bd"
+    },
+    {
+      "bytes": 2203,
+      "fmo_leaf": "6a14ce661660a89098ae6283e04be362697086bd980d0dc480b4321c779c02e5",
+      "group": "historical",
+      "kind": "SponsorExecutionContractFCO",
+      "location": "public",
+      "path": "evidence/sponsor_source/SPONSOR_EXECUTION_CONTRACT.json",
+      "sha256": "13388e8d21e275dda6257ea34cc583cd4928b1ddbcabfcc39d8bfa40e0f94fcc"
+    }
+  ],
+  "bp_root": "d50c5222a3677d25883f08307625744693499f75154cbf09ea1224bb8a9975dc",
+  "branch": "competition/qualified-lineage-v01",
+  "breakpoint_id": "UFA-JEV-COMP-BP-0003",
+  "breakpoint_root": "d50c5222a3677d25883f08307625744693499f75154cbf09ea1224bb8a9975dc",
+  "claim_ceiling": "IDENTITY_AND_INCLUSION_ONLY; hashes do not establish correctness",
+  "created_utc": "2026-09-28T15:50:30+00:00",
+  "demo_video_state": "BLOCKED_HUMAN_ACTION",
+  "entry_update_state": "PREPARED_NOT_SUBMITTED",
+  "git_head_at_creation": "25d3cfff5da5252d169bd411c8314ad5af4432a1",
+  "group_roots": {
+    "entry": "5481b885ded07a0bd3dc1beba1c44c2c3df78cbed3060fd767302b83c353d3a1",
+    "historical": "da5aa27b763dc43648b66ba7eca126d015e6e44ccf0198acf7a5452dd5f0a830",
+    "package": "d5fcdc26164860abf977ec648db31f9265ade3e965cf2b5bbe7ababf4a6e55f0",
+    "sponsors": "0ae7dab10b709b9aff55cd5245962308cdc43962051ef7f0f20e41e3c48c5583"
+  },
+  "historical_mutation_performed": false,
+  "lineage_id": "UFA-JEV-COMP",
+  "parent_occurrence": {
+    "breakpoint_id": "UFA-JEV-COMP-BP-0002",
+    "commit": "25d3cfff5da5252d169bd411c8314ad5af4432a1",
+    "mmr_root_after": "b2a572b20f42bdb60df5fc31188d1a982fd1340d2d5fc1b974f46ecb18323eec"
+  },
+  "parent_root": "b2a572b20f42bdb60df5fc31188d1a982fd1340d2d5fc1b974f46ecb18323eec",
+  "project": "VITHIA_SPACE",
+  "root_kind": "FMO_V1_BREAKPOINT_ATOMS",
+  "schema": "UFA_JEV_QUALIFIED_BREAKPOINT_V1",
+  "signature_state": "NOT_SIGNED",
+  "sponsor_mitosis_state": "NOT_EXECUTED",
+  "sponsor_tenki_state": "NOT_EXECUTED",
+  "state": "COMPETITION_STATUS_AND_SPONSOR_CLAIMS_CORRECTED"
+}

@@ -17,10 +17,10 @@
     ]
   },
   "failure": null,
-  "head_before_commit": "1b6d4cc26b802083f5a35038a7d1d1c6e9dc4ccc",
-  "latest_breakpoint": "UFA-JEV-COMP-BP-0002",
-  "latest_mmr_root": "b2a572b20f42bdb60df5fc31188d1a982fd1340d2d5fc1b974f46ecb18323eec",
-  "next_action": "finish competition results/README honestly; verify sponsor receipts; prepare demo package",
+  "head_before_commit": "25d3cfff5da5252d169bd411c8314ad5af4432a1",
+  "latest_breakpoint": "UFA-JEV-COMP-BP-0003",
+  "latest_mmr_root": "c65ea10f06a8fe67536f764333546c7438a78235c45d8a49c5bfb60576fe5997",
+  "next_action": "prepare demo video package; human must record/upload video URL",
   "schema": "VITHIA_MULTIMODEL_STATUS_V1",
-  "stage": "JEV_ACCESS_AND_OPENJEV_CAPABILITY_STATE_FROZEN"
+  "stage": "COMPETITION_STATUS_AND_SPONSOR_CLAIMS_CORRECTED"
 }
