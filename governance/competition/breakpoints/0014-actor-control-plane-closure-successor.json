@@ -1,0 +1,106 @@
+{
+  "schema": "UFA_JEV_QUALIFIED_BREAKPOINT_V1",
+  "lineage_id": "UFA-JEV-COMP",
+  "branch": "competition/final-integration-v01",
+  "breakpoint_id": "UFA-JEV-COMP-BP-0014",
+  "state": "ACTOR_AND_CONTROL_PLANE_CLOSURE_SUCCESSOR",
+  "project": "VITHIA_SPACE",
+  "created_utc": "2026-09-28T21:47:22+00:00",
+  "git_head_at_creation": "37ef623e93dabe74e896de9e8b5e2ce49be183c1",
+  "root_kind": "FMO_V1_BREAKPOINT_ATOMS",
+  "bp_root": "e1b61ea5e0d824c5e96ce432461c9dda78f1fd10498aa5dabb76b5a88f663e76",
+  "breakpoint_root": "e1b61ea5e0d824c5e96ce432461c9dda78f1fd10498aa5dabb76b5a88f663e76",
+  "parent_root": "250e3b6630ac0955c7e0ad65848d51b0131abbd338512d6693bed87e531dd32a",
+  "group_roots": {
+    "adapter_candidates": "81d70a408902d1fc295f15aec651447943d4e072ddd1ee26ecf8f6344df8d7be",
+    "control_plane_fcg": "cf8f2e18ae43c1b15bbe18634cd7e7e20d487ddca09c3a963016e0a51c50904e",
+    "control_plane_fcos": "83d0ffd221914ac2451e9ec0c814631e56312a4399db4af6fa0f6523ccde3615",
+    "control_plane_status": "485bae32bf77dd4b4483cd13bc33559ef43a755ee71f90b88f692b0a1e9bea8f",
+    "status_successor": "4f61ea365fabbf6c057f274bb104a1a1c3cf622ac09c99b85a2284d15f1d7566",
+    "verification": "7c9b54fc3e552768472abfc64e707ad316b588f93ee2941a1ead34b396fee9ee",
+    "verification_code": "ee32f0071c73cea5c18c0da64df7de4c82916a3a4d6aad26cc27b62babc5c3ad"
+  },
+  "atoms": [
+    {
+      "path": "governance/multimodel/STATUS.json",
+      "kind": "StatusFCO",
+      "group": "control_plane_status",
+      "bytes": 3185,
+      "sha256": "fb61429ad317e0b78259cb7b1815d652aef252dfdc7a53cf26a48bb86b786645",
+      "location": "public",
+      "fmo_leaf": "485bae32bf77dd4b4483cd13bc33559ef43a755ee71f90b88f692b0a1e9bea8f"
+    },
+    {
+      "path": "evidence/competition/control_plane/BP0014_ACTOR_CONTROL_PLANE_FCOS.json",
+      "kind": "ActorControlPlaneFCO",
+      "group": "control_plane_fcos",
+      "bytes": 6163,
+      "sha256": "8b24b67123fd0653aff17ab629ea466e88fbfe104a3f8208fe08996498a50970",
+      "location": "public",
+      "fmo_leaf": "83d0ffd221914ac2451e9ec0c814631e56312a4399db4af6fa0f6523ccde3615"
+    },
+    {
+      "path": "evidence/competition/control_plane/BP0014_CONTROL_PLANE_FCG_EDGES.jsonl",
+      "kind": "FCGEdgesFCO",
+      "group": "control_plane_fcg",
+      "bytes": 1833,
+      "sha256": "a2cd6c212a9d762773098008af7dd77c3524a33982a7e89c8b1099d876c3132f",
+      "location": "public",
+      "fmo_leaf": "cf8f2e18ae43c1b15bbe18634cd7e7e20d487ddca09c3a963016e0a51c50904e"
+    },
+    {
+      "path": "evidence/competition/control_plane/BP0014_OLLAMA_ADAPTER_WORKTREE_CANDIDATES.json",
+      "kind": "ExternalCandidateEvidenceFCO",
+      "group": "adapter_candidates",
+      "bytes": 3016,
+      "sha256": "f0b469deb7fcf75b89b64acc8864a6738095036d111b59102d46713878c43634",
+      "location": "public",
+      "fmo_leaf": "81d70a408902d1fc295f15aec651447943d4e072ddd1ee26ecf8f6344df8d7be"
+    },
+    {
+      "path": "evidence/competition/control_plane/BP0014_STATUS_SUCCESSOR_RECEIPT.json",
+      "kind": "StatusSuccessorReceiptFCO",
+      "group": "status_successor",
+      "bytes": 1098,
+      "sha256": "207a3e8af32e42c92ac6250d5dd4f78fa46250e543e38ff4731bda284afce213",
+      "location": "public",
+      "fmo_leaf": "4f61ea365fabbf6c057f274bb104a1a1c3cf622ac09c99b85a2284d15f1d7566"
+    },
+    {
+      "path": "evidence/competition/control_plane/BP0014_VERIFICATION_RECEIPT.json",
+      "kind": "VerificationReceiptFCO",
+      "group": "verification",
+      "bytes": 1859,
+      "sha256": "3e105bd9894e15ee98bc3103df08c21dece00eeae892e6c41e0fdf9079d9ce04",
+      "location": "public",
+      "fmo_leaf": "7c9b54fc3e552768472abfc64e707ad316b588f93ee2941a1ead34b396fee9ee"
+    },
+    {
+      "path": "scripts/check_control_plane_fcg_orphans.py",
+      "kind": "CodeFCO",
+      "group": "verification_code",
+      "bytes": 1554,
+      "sha256": "1dfa73a98a0496a33ebe3cc58c46b1b624826953d8be32453e7a4ba90f630dd9",
+      "location": "public",
+      "fmo_leaf": "ee32f0071c73cea5c18c0da64df7de4c82916a3a4d6aad26cc27b62babc5c3ad"
+    }
+  ],
+  "historical_mutation_performed": false,
+  "mmr_reconciliation_performed": false,
+  "actor_run": "ActorRunFCO:CODEX_MAGICSTUDIO_BP0012_CONTROL_PLANE_001",
+  "successor_to_breakpoint": "UFA-JEV-COMP-BP-0013",
+  "control_plane_closes_for_breakpoint": "UFA-JEV-COMP-BP-0012",
+  "parent_head_verified": "37ef623e93dabe74e896de9e8b5e2ce49be183c1",
+  "parent_mmr_size_verified": 13,
+  "parent_mmr_root_verified": "250e3b6630ac0955c7e0ad65848d51b0131abbd338512d6693bed87e531dd32a",
+  "adapter_worktrees_state": "CANDIDATE_UNADMITTED",
+  "system_one_ollama_state": "DEFERRED_NOT_EXECUTED_IN_THIS_STAGE",
+  "private_codec_state": "PUBLIC_SAFE_RECEIPTS_ONLY_IN_CANONICAL_REPO",
+  "exact_mode_state": "SUPPORTED_FOR_SOURCE_SELF_VERIFY_IN_BP0013_RECEIPTS",
+  "robust_mode_state": "SUPPORTED_FOR_SOURCE_SELF_VERIFY_IN_BP0013_RECEIPTS",
+  "cross_codec_state": "BP0013_TRANSFORM_MATRIX_RECORDED_98_PASS_82_FAIL",
+  "private_implementation_exposed": false,
+  "conversation_fcos_from_recollection_created": false,
+  "claim_ceiling": "IDENTITY_AND_INCLUSION_ONLY; hashes do not establish correctness",
+  "signature_state": "NOT_SIGNED"
+}

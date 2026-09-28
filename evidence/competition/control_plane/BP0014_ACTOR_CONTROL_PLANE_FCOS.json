@@ -1,0 +1,153 @@
+{
+  "schema": "ACTOR_CONTROL_PLANE_FCO_BUNDLE_V1",
+  "lineage_id": "UFA-JEV-COMP",
+  "stage": "ACTOR_AND_CONTROL_PLANE_CLOSURE_SUCCESSOR",
+  "successor_to_breakpoint": "UFA-JEV-COMP-BP-0013",
+  "target_breakpoint": "UFA-JEV-COMP-BP-0014",
+  "parent_head": "37ef623e93dabe74e896de9e8b5e2ce49be183c1",
+  "bp0012_commit": "5307a1a304730628c75b81b382e05db5a51c1197",
+  "claim_ceiling": "Public-safe actor and control-plane identity records only. No private codec implementation details are included.",
+  "fcos": [
+    {
+      "id": "AgentActorFCO:Codex",
+      "type": "AgentActorFCO",
+      "name": "Codex",
+      "role": "competition/private-codec-writer",
+      "claim_state": "IDENTITY_RECORDED"
+    },
+    {
+      "id": "HardwareHostFCO:magicSTUDIObox",
+      "type": "HardwareHostFCO",
+      "name": "magicSTUDIObox",
+      "claim_state": "HOST_IDENTITY_RECORDED"
+    },
+    {
+      "id": "RepositoryFCO:jev-space-invaders",
+      "type": "RepositoryFCO",
+      "repo": "/Users/byron/projects/active/jev-space-invaders",
+      "claim_state": "CANONICAL_REPO_PATH_RECORDED"
+    },
+    {
+      "id": "BranchStateFCO:competition/final-integration-v01@37ef623e93dabe74e896de9e8b5e2ce49be183c1",
+      "type": "BranchStateFCO",
+      "branch": "competition/final-integration-v01",
+      "head": "37ef623e93dabe74e896de9e8b5e2ce49be183c1",
+      "origin_head": "37ef623e93dabe74e896de9e8b5e2ce49be183c1",
+      "worktree_state": "CLEAN",
+      "claim_state": "VERIFIED_BEFORE_SUCCESSOR"
+    },
+    {
+      "id": "GitCommitFCO:5307a1a304730628c75b81b382e05db5a51c1197",
+      "type": "GitCommitFCO",
+      "commit": "5307a1a304730628c75b81b382e05db5a51c1197",
+      "breakpoint": "UFA-JEV-COMP-BP-0012",
+      "state": "FINAL_EXECUTION_CAPTURE_SPONSOR_PROOF_PACKAGE",
+      "claim_state": "BP0012_EXECUTION_COMMIT_RECORDED"
+    },
+    {
+      "id": "GitCommitFCO:37ef623e93dabe74e896de9e8b5e2ce49be183c1",
+      "type": "GitCommitFCO",
+      "commit": "37ef623e93dabe74e896de9e8b5e2ce49be183c1",
+      "breakpoint": "UFA-JEV-COMP-BP-0013",
+      "state": "PRIVATE_CODEC_EXPERIMENT_PUBLIC_RECEIPTS_READY_AND_HANDOFF_DELIVERED",
+      "claim_state": "SUCCESSOR_PARENT_COMMIT_RECORDED"
+    },
+    {
+      "id": "ActorRunFCO:CODEX_MAGICSTUDIO_BP0012_CONTROL_PLANE_001",
+      "type": "ActorRunFCO",
+      "actor": "AgentActorFCO:Codex",
+      "host": "HardwareHostFCO:magicSTUDIObox",
+      "repo": "RepositoryFCO:jev-space-invaders",
+      "branch_state": "BranchStateFCO:competition/final-integration-v01@37ef623e93dabe74e896de9e8b5e2ce49be183c1",
+      "parent_head": "37ef623e93dabe74e896de9e8b5e2ce49be183c1",
+      "executed_work": "actor/control-plane closure over BP-0012 final execution as successor to BP-0013",
+      "claim_state": "BOUNDED_STAGE_RECORDED"
+    },
+    {
+      "id": "HumanDecisionOccurrenceFCO:CONFIRM_BP0013_SUCCESSOR_PARENT_2026-09-28",
+      "type": "HumanDecisionOccurrenceFCO",
+      "decision": "Use BP-0013 corrected parent guard for ACTOR_AND_CONTROL_PLANE_CLOSURE_SUCCESSOR.",
+      "evidence": "User supplied corrected EXPECTED_PARENT_TO_VERIFY_NOT_ASSUME block with HEAD 37ef623e93dabe74e896de9e8b5e2ce49be183c1, BP-0013, MMR size 13, and MMR root 250e3b6630ac0955c7e0ad65848d51b0131abbd338512d6693bed87e531dd32a.",
+      "claim_state": "EXPLICIT_GOVERNED_OPERATOR_DECISION_RECORDED"
+    },
+    {
+      "id": "VerificationFCO:qualified-lineage-before-bp0014",
+      "type": "VerificationFCO",
+      "tool": "scripts/verify_competition_lineage.py",
+      "state": "PASS",
+      "mmr_size": 13,
+      "mmr_root": "250e3b6630ac0955c7e0ad65848d51b0131abbd338512d6693bed87e531dd32a"
+    },
+    {
+      "id": "VerificationFCO:bp0012-playthrough-custody",
+      "type": "VerificationFCO",
+      "tool": "scripts/verify_final_playthrough_custody.py",
+      "state": "PASS",
+      "frames_checked": 240,
+      "playthrough_mmr_root": "e55a47a7f16064477c4f101a38a849391c2fbc9f6557c5244daf0406b36dbd74",
+      "frame_signature_state": "SIGNED_VERIFIED",
+      "signature_domain": "FRAME_ED25519_ONLY",
+      "git_commit_signature_state": "NOT_INFERRED"
+    },
+    {
+      "id": "ServiceFCO:Mitosis",
+      "type": "ServiceFCO",
+      "name": "Mitosis",
+      "state": "EXECUTED_REMEMBER_AND_RETRIEVE",
+      "claim_state": "BP0012_RECEIPT_RECORDED"
+    },
+    {
+      "id": "ServiceFCO:Tenki",
+      "type": "ServiceFCO",
+      "name": "Tenki",
+      "state": "BLOCKED_INVALID_OR_REVOKED_API_KEY",
+      "claim_state": "BP0012_FINAL_ACCESS_BLOCK_RECORDED"
+    },
+    {
+      "id": "SoftwareFCO:qualified-breakpoint-tools",
+      "type": "SoftwareFCO",
+      "paths": [
+        "scripts/qualified_breakpoint.py",
+        "scripts/verify_competition_lineage.py",
+        "scripts/verify_final_playthrough_custody.py"
+      ],
+      "claim_state": "PUBLIC_TOOLING_REFERENCED"
+    },
+    {
+      "id": "ModelFCO:Codex",
+      "type": "ModelFCO",
+      "name": "Codex",
+      "claim_state": "AGENT_MODEL_IDENTITY_RECORDED"
+    },
+    {
+      "id": "ControlPlaneSuccessorFCO:UFA-JEV-COMP-BP-0014",
+      "type": "ControlPlaneSuccessorFCO",
+      "successor_to": "UFA-JEV-COMP-BP-0013",
+      "closes_actor_plane_for": "UFA-JEV-COMP-BP-0012",
+      "claim_state": "SUCCESSOR_STAGE_RECORD"
+    }
+  ],
+  "nulls": [
+    "No ChatGPT ConversationFCO created from semantic recollection.",
+    "No Claude ConversationFCO created from semantic recollection.",
+    "No System-One to Ollama execution started in this stage."
+  ],
+  "private_carrier_public_fields": {
+    "protocol_identifier": "PRIVATE_UNIVERSAL_MEDIA_CARRIER_PUBLIC_RECEIPTS_ONLY",
+    "specification_hash": null,
+    "implementation_hash": "71baf3cddb31212477813da15dbe669fdace9f1b23b8b61f548b133c00cdf0a6",
+    "public_key_fingerprint": "becbb94df1bdde14440c5dd81c977cb4e66980abbf385f552201a8fee46429ed",
+    "schema_identifiers": [
+      "ACTOR_CONTROL_PLANE_FCO_BUNDLE_V1",
+      "PLAYTHROUGH_MMR_VERIFICATION_RECEIPT_V1",
+      "UFA_JEV_QUALIFIED_BREAKPOINT_V1"
+    ],
+    "test_vector_hashes": [
+      "b610b154aae29725f0e048e91b9a2b26a03cf5a2cc0bbc9f536372a6370fee61"
+    ],
+    "claim_states": [
+      "PUBLIC_SAFE_RECEIPTS_ONLY",
+      "PRIVATE_IMPLEMENTATION_NOT_EXPOSED"
+    ]
+  }
+}

@@ -233,6 +233,25 @@
         "703db14ed49600c550aa1fb4f45ad5a30e6b1ea6221db0148d43d031f2e4b6ce",
         "83fa9e029cbf2722badbe33ccb7fb9a12599d4fd68e427bc8d6c1b36433785a2"
       ]
+    },
+    {
+      "seq": 13,
+      "bp_id": "UFA-JEV-COMP-BP-0014",
+      "bp_file": "governance/competition/breakpoints/0014-actor-control-plane-closure-successor.json",
+      "bp_file_sha256": "0d00c03f1e11cb856d9787f76bb4222d3ea95653d914908a2ad203305eb67609",
+      "bp_root": "e1b61ea5e0d824c5e96ce432461c9dda78f1fd10498aa5dabb76b5a88f663e76",
+      "branch": "competition/final-integration-v01",
+      "lineage_id": "UFA-JEV-COMP",
+      "parent_root": "250e3b6630ac0955c7e0ad65848d51b0131abbd338512d6693bed87e531dd32a",
+      "root_kind": "FMO_V1_BREAKPOINT_ATOMS",
+      "mmr_leaf": "0bcbc4b30f6688aa3a1a424f44257dca489f430f04db924a1bb10725cab9e943",
+      "mmr_size": 14,
+      "mmr_root_after": "788f69af75ebf53420e77fc5a90620af6dd012eea2183f89f8dc7647c4073031",
+      "mmr_peaks_after": [
+        "c930d2260ea6a1090f97c79c1b0a96be38996ed7c81b2da08570ed2b37079e31",
+        "703db14ed49600c550aa1fb4f45ad5a30e6b1ea6221db0148d43d031f2e4b6ce",
+        "1e7cae119dc9ca49831b8090e9aa1cf9d65919c2c6fb078b91a3720439aca869"
+      ]
     }
   ],
   "lineage_id": "UFA-JEV-COMP",

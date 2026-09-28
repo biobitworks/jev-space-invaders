@@ -1,26 +1,70 @@
 {
-  "active_process": null,
-  "active_seed": null,
-  "blocked": [
-    "SYSTEM_ONE_OFFICIAL_BASELINE:NO_PROVIDER_CREDENTIAL",
-    "JEV_HOSTED:NOT_AVAILABLE",
-    "OPENJEV_MATCHED_COMPARATOR:READOUT_CAPABILITY_MISMATCH"
-  ],
-  "branch": "competition/qualified-lineage-v01",
-  "completed_seeds": {
-    "LOCAL_OLLAMA_BASELINE": [
-      1,
-      2,
-      3,
-      4,
-      5
-    ]
+  "schema": "VITHIA_MULTIMODEL_STATUS_V2",
+  "project": "VITA01_END_TO_END_SOCIO_TECHNICAL_SYSTEM_001",
+  "program": "VITAOLOGY",
+  "lineage_id": "UFA-JEV-COMP",
+  "branch": "competition/final-integration-v01",
+  "stage": "ACTOR_AND_CONTROL_PLANE_CLOSURE_SUCCESSOR",
+  "successor_to_breakpoint": "UFA-JEV-COMP-BP-0013",
+  "successor_parent_head": "37ef623e93dabe74e896de9e8b5e2ce49be183c1",
+  "successor_parent_mmr_size": 13,
+  "successor_parent_mmr_root": "250e3b6630ac0955c7e0ad65848d51b0131abbd338512d6693bed87e531dd32a",
+  "successor_breakpoint_target": "UFA-JEV-COMP-BP-0014",
+  "current_canonical_state": {
+    "repo": "/Users/byron/projects/active/jev-space-invaders",
+    "branch": "competition/final-integration-v01",
+    "head_verified_before_successor": "37ef623e93dabe74e896de9e8b5e2ce49be183c1",
+    "origin_head_verified_before_successor": "37ef623e93dabe74e896de9e8b5e2ce49be183c1",
+    "worktree_state_verified_before_successor": "CLEAN",
+    "breakpoint_verify_before_successor": "PASS",
+    "latest_breakpoint_before_successor": "UFA-JEV-COMP-BP-0013"
   },
-  "failure": "TRACE_IMPORT_AND_PREVIEW_PARTIAL_AFTER_REMOTE_RUN_SUCCESS",
-  "head_before_commit": "37eb15189cb2b526c52d513c0241e3c2455adf4d",
-  "latest_breakpoint": "UFA-JEV-COMP-BP-0008",
-  "latest_mmr_root": "c930d2260ea6a1090f97c79c1b0a96be38996ed7c81b2da08570ed2b37079e31",
-  "next_action": "push BP0008 before any Tenki teardown; then record video and execute Mitosis load-bearing ablation",
-  "schema": "VITHIA_MULTIMODEL_STATUS_V1",
-  "stage": "TENKI_SANDBOX_MITOSIS_FED_RUN_EXECUTED"
+  "bp0012_execution_state": {
+    "state": "FINAL_EXECUTION_CAPTURE_SPONSOR_PROOF_PACKAGE",
+    "commit": "5307a1a304730628c75b81b382e05db5a51c1197",
+    "playthrough_verify": "PASS",
+    "playthrough_mmr_size": 240,
+    "playthrough_mmr_root": "e55a47a7f16064477c4f101a38a849391c2fbc9f6557c5244daf0406b36dbd74",
+    "frame_signature_state": "SIGNED_VERIFIED",
+    "signature_domain": "FRAME_ED25519_ONLY",
+    "git_commit_signature_state": "NOT_INFERRED"
+  },
+  "sponsor_state": {
+    "mitosis": "EXECUTED_REMEMBER_AND_RETRIEVE",
+    "tenki": "BLOCKED_INVALID_OR_REVOKED_API_KEY",
+    "final_sponsor_boolean_candidate": {
+      "mitosis": true,
+      "tenki": false
+    }
+  },
+  "system_one_ollama_state": "DEFERRED_NOT_EXECUTED_IN_THIS_STAGE",
+  "adapter_worktrees": "CANDIDATE_UNADMITTED",
+  "private_codec_state": "PUBLIC_SAFE_RECEIPTS_ONLY_IN_CANONICAL_REPO",
+  "exact_mode_state": "SUPPORTED_FOR_SOURCE_SELF_VERIFY_IN_BP0013_RECEIPTS",
+  "robust_mode_state": "SUPPORTED_FOR_SOURCE_SELF_VERIFY_IN_BP0013_RECEIPTS",
+  "cross_codec_state": "BP0013_TRANSFORM_MATRIX_RECORDED_98_PASS_82_FAIL",
+  "preserved_historical_status": {
+    "schema": "VITHIA_MULTIMODEL_STATUS_V1",
+    "branch": "competition/qualified-lineage-v01",
+    "stage": "TENKI_SANDBOX_MITOSIS_FED_RUN_EXECUTED",
+    "latest_breakpoint": "UFA-JEV-COMP-BP-0008",
+    "latest_mmr_root": "c930d2260ea6a1090f97c79c1b0a96be38996ed7c81b2da08570ed2b37079e31",
+    "failure": "TRACE_IMPORT_AND_PREVIEW_PARTIAL_AFTER_REMOTE_RUN_SUCCESS",
+    "head_before_commit": "37eb15189cb2b526c52d513c0241e3c2455adf4d",
+    "blocked": [
+      "SYSTEM_ONE_OFFICIAL_BASELINE:NO_PROVIDER_CREDENTIAL",
+      "JEV_HOSTED:NOT_AVAILABLE",
+      "OPENJEV_MATCHED_COMPARATOR:READOUT_CAPABILITY_MISMATCH"
+    ],
+    "completed_seeds": {
+      "LOCAL_OLLAMA_BASELINE": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ]
+    }
+  },
+  "claim_ceiling": "Status successor records governance state and public-safe receipts. It does not create or admit external adapter worktree results, and it does not infer git commit signing from frame Ed25519 verification."
 }

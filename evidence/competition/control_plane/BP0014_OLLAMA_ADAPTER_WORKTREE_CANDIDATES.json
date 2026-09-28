@@ -1,0 +1,74 @@
+{
+  "schema": "OLLAMA_ADAPTER_WORKTREE_CANDIDATES_V1",
+  "lineage_id": "UFA-JEV-COMP",
+  "inspection_mode": "READ_ONLY",
+  "admission_state": "CANDIDATE_UNADMITTED",
+  "claim_ceiling": "Records external candidate worktree status only. No candidate adapter result is admitted into the canonical lineage by this file.",
+  "canonical_parent": {
+    "repo": "/Users/byron/projects/active/jev-space-invaders",
+    "branch": "competition/final-integration-v01",
+    "head": "37ef623e93dabe74e896de9e8b5e2ce49be183c1",
+    "origin_head": "37ef623e93dabe74e896de9e8b5e2ce49be183c1",
+    "worktree_state": "CLEAN"
+  },
+  "candidate_worktrees": [
+    {
+      "path": "/Volumes/magicBLACKbox/openjev/jev-space-invaders-final-ollama-20260928",
+      "branch": "magicstudio/final-ollama-adapter-20260928",
+      "head": "61cd8adc99f7dbe5ff808ab074318c664b4c7226",
+      "tracking_status": "behind origin/competition/final-integration-v01 by 3",
+      "status_short": [
+        "M  .env.example",
+        "M  scripts/run_games.py",
+        "M  scripts/secret_scan.py",
+        "M  src/deciders.py",
+        "A  tests/test_ollama_system_one_adapter.py"
+      ],
+      "admission_state": "CANDIDATE_UNADMITTED"
+    },
+    {
+      "path": "/Volumes/magicBLACKbox/openjev/jev-space-invaders-final-ollama-v02-20260928",
+      "branch": "magicstudio/final-ollama-adapter-v02-20260928",
+      "head": "37ef623e93dabe74e896de9e8b5e2ce49be183c1",
+      "tracking_status": "no upstream shown by status",
+      "status_short": [
+        "M  .env.example",
+        "M  scripts/run_games.py",
+        "M  scripts/secret_scan.py",
+        "MM src/deciders.py",
+        "AM tests/test_ollama_system_one_adapter.py",
+        "?? evidence/competition/ollama/",
+        "?? evidence/competition/sponsors/SPONSOR_CREDENTIAL_STATE_V1.json",
+        "?? evidence/failures/BP0014_PREDECESSOR_RACE_ABORTS.json"
+      ],
+      "diff_stat": [
+        "src/deciders.py | 9 +++++++--",
+        "tests/test_ollama_system_one_adapter.py | 3 +++"
+      ],
+      "admission_state": "CANDIDATE_UNADMITTED"
+    },
+    {
+      "path": "/Volumes/magicBLACKbox/openjev/jev-space-invaders-sponsor-ollama-20260928",
+      "branch": "magicstudio/sponsor-ollama-adapter-20260928",
+      "head": "65610bd295a354329118fed6b16a3663679a1c7f",
+      "tracking_status": "tracks origin/magicstudio/sponsor-ollama-adapter-20260928",
+      "status_short": [
+        " M scripts/run_games.py",
+        " M src/deciders.py",
+        "?? evidence/failures/BP0061_CANDIDATE_ATOM_MUTATION_FAILURE.json",
+        "?? evidence/failures/BP0061_UNADMITTED_CANDIDATE.json",
+        "?? evidence/sponsor_execution/"
+      ],
+      "diff_stat": [
+        "scripts/run_games.py | 8 +-------",
+        "src/deciders.py | 27 +++------------------------"
+      ],
+      "admission_state": "CANDIDATE_UNADMITTED"
+    }
+  ],
+  "negatives": [
+    "No Ollama adapter worktree was merged.",
+    "No System-One to Ollama execution was started.",
+    "No candidate adapter receipt was admitted."
+  ]
+}
