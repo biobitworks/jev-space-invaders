@@ -1,0 +1,53 @@
+{
+  "breakpoint_id": "UFA-JEV-BP-0037",
+  "parent": "UFA-JEV-BP-0036",
+  "state": "RULE_SELECTION_CONFIRMATORY_COMPLETE",
+  "project": "VITHIA_SPACE",
+  "created_utc": "2026-09-28T07:45:33+00:00",
+  "git_head_at_creation": "5de4b7d594d7a073473b301ce7a787ce93f82444",
+  "root_kind": "FMO_V1_BREAKPOINT_ATOMS",
+  "bp_root": "beddc3c188197e15ac0e192e683bd60b4e66ddc65467ca5e6b571e53c8372ebe",
+  "group_roots": {
+    "dataset": "2945b245a49f3534f98b8541331159e793747c389bd92f6ee57f675363d705db",
+    "result": "37b29df57ad859531a21d067fdf59090826c43ec8427e2b9c1382b0b575d6125"
+  },
+  "atoms": [
+    {
+      "path": "data/e1r/E1R_RULE_SELECTION_CONFIRMATORY_V1/MANIFEST.json",
+      "kind": "DatasetManifestFCO",
+      "group": "dataset",
+      "bytes": 11362,
+      "sha256": "c2e8ac73cb1276c785cc9399a6c81acc9ab48ec1cc6942191779e013a0764a83",
+      "location": "public",
+      "fmo_leaf": "2945b245a49f3534f98b8541331159e793747c389bd92f6ee57f675363d705db"
+    },
+    {
+      "path": "data/e1r/E1R_RULE_SELECTION_CONFIRMATORY_V1/RESULT.json",
+      "kind": "ClaimDecisionFCO",
+      "group": "result",
+      "bytes": 232,
+      "sha256": "e78be3318f954803de37ab993a850faae02b5663336d563ae8a8a954ff984657",
+      "location": "public",
+      "fmo_leaf": "ef202c20b80ecb638b47980e50ecf67dabc93db33a76123bddb5f2e8ddc527fd"
+    },
+    {
+      "path": "data/e1r/E1R_RULE_SELECTION_CONFIRMATORY_V1/CONTEXT_RESULTS.json",
+      "kind": "DerivedEvidenceFCO",
+      "group": "result",
+      "bytes": 4262,
+      "sha256": "960fad2a704a80d777bc486cf1a2e8ad9adc4a5c0b3cf477f052113c3fa4117b",
+      "location": "public",
+      "fmo_leaf": "64f3e5f90437e3cb3814638f60afb3885884b273e1c46c1df326346b9d69dfdb"
+    }
+  ],
+  "stage": "E1R_RULE_SELECTION_RESULT",
+  "dataset_root": "65c4a447495a50d733b96c544dd79fa4cec24a0509ada033dd0e3c183f56b006",
+  "claim_state": "SUPPORTED",
+  "model_calls": 0,
+  "delta_g_star": "NOT_COMPUTED",
+  "scientific_parent_commit": "4c1bbb19b89a7ee1e1dee662cfd0f227186ebafd",
+  "scientific_parent_breakpoint": "UFA-JEV-BP-0028",
+  "scientific_parent_mmr_root": "5f742663f7e0c12e100e292cc794eefb0360a068a5c20c2b1be019ace1cb298b",
+  "claim_ceiling": "IDENTITY_AND_INCLUSION_ONLY; hashes do not establish correctness",
+  "signature_state": "NOT_SIGNED"
+}
