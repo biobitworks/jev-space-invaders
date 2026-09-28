@@ -1,0 +1,22 @@
+{
+  "created_utc": "2026-09-28T20:37:43+00:00",
+  "dashboard_preview": "NOT_EXPOSED",
+  "failure_1": {
+    "detail": "Initial local importer assumed /home/tenki/jev/runs/<trace>; Tenki readFile returned not_found after receipt generation.",
+    "type": "TRACE_PATH_ASSUMPTION"
+  },
+  "failure_2": {
+    "detail": "A later attempt to reload the local Tenki credential for SDK reattachment was blocked by the secret-handling guard; credential was not exposed or copied.",
+    "type": "LOCAL_REATTACH_SECRET_GUARD"
+  },
+  "remote_receipt_generated": true,
+  "remote_run_succeeded": true,
+  "sandbox_last_known_policy": "sticky=true; teardown held pending GitHub seal and video",
+  "sandbox_termination_executed": false,
+  "schema": "FAILURE_RECEIPT_V1",
+  "stage": "TENKI_POST_RUN_TRACE_IMPORT_AND_PREVIEW",
+  "state": "PARTIAL_AFTER_REMOTE_RUN_SUCCESS",
+  "trace_bytes_imported": false,
+  "trace_sha256_independently_recomputed_after_import": false,
+  "trace_sha256_reported_by_remote": "93ad31b971f525c3164356ce3ab7f4e75a3b3bb8ffdbc295aa821ecefa6170a3"
+}

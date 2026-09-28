@@ -1,0 +1,23 @@
+{
+  "created_utc": "2026-09-28T20:37:43+00:00",
+  "final_sponsor_boolean_candidate": {
+    "mitosis": false,
+    "tenki": true
+  },
+  "lineage_id": "UFA-JEV-COMP",
+  "mitosis_consumed_by_tenki": "EXECUTED_SUPPORTED",
+  "mitosis_load_bearing_ablation": "NOT_EXECUTED",
+  "mitosis_memory": "EXECUTED_SUPPORTED",
+  "next_action": "record Tenki run/dashboard; execute Mitosis same-seed load-bearing ablation before upgrading Mitosis boolean",
+  "schema": "SPONSOR_STATUS_V3",
+  "tenki_code_review": "EXECUTED_SUPPORTED",
+  "tenki_run": {
+    "counted_as_jev": false,
+    "frames": 400,
+    "score": 15.0,
+    "seed": 3,
+    "steps": 100
+  },
+  "tenki_sandbox": "EXECUTED_SUPPORTED",
+  "tenki_session_id": "01a0e9b9-dbf4-77ff-8d28-2e057cb00cbc"
+}

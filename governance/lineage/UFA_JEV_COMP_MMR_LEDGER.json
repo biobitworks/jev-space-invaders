@@ -124,6 +124,23 @@
       "parent_root": "ccaf186be4f7b1a2fbd5a951f73b6c51ec775f1f7efb0ac4d7c00aff1cbf44db",
       "root_kind": "FMO_V1_BREAKPOINT_ATOMS",
       "seq": 6
+    },
+    {
+      "bp_file": "governance/competition/breakpoints/0008-tenki-sandbox-mitosis-fed-run.json",
+      "bp_file_sha256": "36956e4ce98a929485b3720e840f1305ce533664e875180df3767934f8d7e333",
+      "bp_id": "UFA-JEV-COMP-BP-0008",
+      "bp_root": "726e1c34caaf3ce29c326907814159bd0f5e1aa72777516f1e7e6bfbd808e4ee",
+      "branch": "competition/qualified-lineage-v01",
+      "lineage_id": "UFA-JEV-COMP",
+      "mmr_leaf": "6c0807709c0f81a400ebf28e0f7512988d23d226df2786d425bf97bf89777ddd",
+      "mmr_peaks_after": [
+        "c930d2260ea6a1090f97c79c1b0a96be38996ed7c81b2da08570ed2b37079e31"
+      ],
+      "mmr_root_after": "c930d2260ea6a1090f97c79c1b0a96be38996ed7c81b2da08570ed2b37079e31",
+      "mmr_size": 8,
+      "parent_root": "5d3da0259231307f9c1d1e309055c4e93c93e13060e927393b8332e0a807256b",
+      "root_kind": "FMO_V1_BREAKPOINT_ATOMS",
+      "seq": 7
     }
   ],
   "lineage_id": "UFA-JEV-COMP",

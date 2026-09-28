@@ -16,11 +16,11 @@
       5
     ]
   },
-  "failure": null,
-  "head_before_commit": "bc2faa30a772f2cfb6bab1d8108259f66ba84d20",
-  "latest_breakpoint": "UFA-JEV-COMP-BP-0007",
-  "latest_mmr_root": "5d3da0259231307f9c1d1e309055c4e93c93e13060e927393b8332e0a807256b",
-  "next_action": "Tenki sandbox queries Mitosis directive, executes governed seed, exports receipt; do not terminate sandbox before receipt commit/push parity",
+  "failure": "TRACE_IMPORT_AND_PREVIEW_PARTIAL_AFTER_REMOTE_RUN_SUCCESS",
+  "head_before_commit": "37eb15189cb2b526c52d513c0241e3c2455adf4d",
+  "latest_breakpoint": "UFA-JEV-COMP-BP-0008",
+  "latest_mmr_root": "c930d2260ea6a1090f97c79c1b0a96be38996ed7c81b2da08570ed2b37079e31",
+  "next_action": "push BP0008 before any Tenki teardown; then record video and execute Mitosis load-bearing ablation",
   "schema": "VITHIA_MULTIMODEL_STATUS_V1",
-  "stage": "MITOSIS_DIRECTIVE_PERSISTED_AND_RETRIEVED"
+  "stage": "TENKI_SANDBOX_MITOSIS_FED_RUN_EXECUTED"
 }
