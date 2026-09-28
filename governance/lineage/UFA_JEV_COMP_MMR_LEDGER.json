@@ -159,6 +159,24 @@
         "c930d2260ea6a1090f97c79c1b0a96be38996ed7c81b2da08570ed2b37079e31",
         "ff06f76e0b6f3e72cdfaa8e9e02fff6abf5f0a26370b0a9f90ed966d1465499e"
       ]
+    },
+    {
+      "seq": 9,
+      "bp_id": "UFA-JEV-COMP-BP-0010",
+      "bp_file": "governance/competition/breakpoints/0010-readiness-benchmark-redteam.json",
+      "bp_file_sha256": "577b2163b58116f04092a900c4298b06d53532bb9223d1bc581293460c7390ff",
+      "bp_root": "00a732c90b772f1d108343ebc1f17b51d04bd365896bcea426a3b1706de93979",
+      "branch": "competition/final-integration-v01",
+      "lineage_id": "UFA-JEV-COMP",
+      "parent_root": "6b7a677736201583751a64e0775e5fe83aa3307acb64f716e7d3074e149e9bab",
+      "root_kind": "FMO_V1_BREAKPOINT_ATOMS",
+      "mmr_leaf": "46db04fd063b2bc402a098e5f087a28276e6629838b18e1114c5fdd72464d49d",
+      "mmr_size": 10,
+      "mmr_root_after": "dd1bee1740ec3de4654504cb662ff433583bb00feac4ed82e1e581b176c2c608",
+      "mmr_peaks_after": [
+        "c930d2260ea6a1090f97c79c1b0a96be38996ed7c81b2da08570ed2b37079e31",
+        "485a5b14565fcfdf70a35dd5bd177aff58ff0a688201e14273ba289527feb88d"
+      ]
     }
   ],
   "lineage_id": "UFA-JEV-COMP",

@@ -1,0 +1,84 @@
+{
+  "schema": "UFA_JEV_QUALIFIED_BREAKPOINT_V1",
+  "lineage_id": "UFA-JEV-COMP",
+  "branch": "competition/final-integration-v01",
+  "breakpoint_id": "UFA-JEV-COMP-BP-0010",
+  "state": "READINESS_BENCHMARK_REDTEAM_COMPLETE",
+  "project": "VITHIA_SPACE",
+  "created_utc": "2026-09-28T20:50:19+00:00",
+  "git_head_at_creation": "50f33988a095d8a17069a7154f90f150c9035ba9",
+  "root_kind": "FMO_V1_BREAKPOINT_ATOMS",
+  "bp_root": "00a732c90b772f1d108343ebc1f17b51d04bd365896bcea426a3b1706de93979",
+  "breakpoint_root": "00a732c90b772f1d108343ebc1f17b51d04bd365896bcea426a3b1706de93979",
+  "parent_root": "6b7a677736201583751a64e0775e5fe83aa3307acb64f716e7d3074e149e9bab",
+  "group_roots": {
+    "benchmark": "273a85527b9ab16b6b990b09a6d57d97101c255a74db26b54c2a4ad13cce225c",
+    "readiness": "df3296ddc4803a4f6be7c27a320ceaf63969d1b3ef361bbf37fdd6dc92897f81",
+    "redteam": "0bcaaf4989e1e8dd0de55402807d4debd776aef8469613fa5a1ffbf8d3bf403a"
+  },
+  "atoms": [
+    {
+      "path": "evidence/competition/readiness/ONE_PLAYER_READINESS_RECEIPT.json",
+      "kind": "ReadinessFCO",
+      "group": "readiness",
+      "bytes": 3098,
+      "sha256": "f2a27206818ac75c05f2b6539af574ecd260737f5e7e6f453931149541701450",
+      "location": "public",
+      "fmo_leaf": "f370bb0f772e35da90f2f14e568a66d5751c5eaa8030d487684061a9d3926a2d"
+    },
+    {
+      "path": "evidence/competition/readiness/TWO_PLAYER_READINESS_RECEIPT.json",
+      "kind": "ReadinessFCO",
+      "group": "readiness",
+      "bytes": 2521,
+      "sha256": "555a2df8c8eeb866326a8b12d09bb3a6a9dd1bf057127c62e4bec6fa28479e83",
+      "location": "public",
+      "fmo_leaf": "d7bd181f5637e88fa04afc6627ebc93c5106888689a2e0c2f241f7771f3ed127"
+    },
+    {
+      "path": "evidence/competition/benchmark/REALTIME_COST_BENCHMARK.json",
+      "kind": "BenchmarkFCO",
+      "group": "benchmark",
+      "bytes": 6443,
+      "sha256": "6b1fe5f9edf66ab538679b2dfba9a1af4235807970d9f4cf4320c51252e16a43",
+      "location": "public",
+      "fmo_leaf": "c8e56a3d1ccdc17d9623998a96622eafa13fac8c129ced7b254773d486eead5f"
+    },
+    {
+      "path": "evidence/competition/benchmark/MODEL_COMPARISON.csv",
+      "kind": "BenchmarkFCO",
+      "group": "benchmark",
+      "bytes": 665,
+      "sha256": "cedbc6b90b60cca357ba0f2bb2fb1587b1068e2c25006f2a1bcbbf2036b8e539",
+      "location": "public",
+      "fmo_leaf": "84856250eb96559f8a2af730d01f47b9166f1ae16f665825a8c437a4b7437841"
+    },
+    {
+      "path": "evidence/competition/redteam/CLAIM_EVIDENCE_MATRIX.json",
+      "kind": "RedTeamFCO",
+      "group": "redteam",
+      "bytes": 10064,
+      "sha256": "55fd0b6078ed4ffbbb9ad27cab35a973023e2e54e818224e7aa539f1035a6ede",
+      "location": "public",
+      "fmo_leaf": "5fee478a4b24fdb4f3d4e5c7a2ee99470d13161594ce3dc9709178a7fbf089de"
+    },
+    {
+      "path": "evidence/competition/redteam/SUBMISSION_RED_TEAM_REPORT.md",
+      "kind": "RedTeamFCO",
+      "group": "redteam",
+      "bytes": 5647,
+      "sha256": "3d386419d04216f3ce17284b3d83a7eb1cb0641c4cfa8803a955a4b3946b3e7a",
+      "location": "public",
+      "fmo_leaf": "79e106b127fa017e8fa67e801de6dc62dd05220108d4b8aa4ea2fd4ebc6ffb7b"
+    }
+  ],
+  "historical_mutation_performed": false,
+  "mmr_reconciliation_performed": false,
+  "one_player_state": "READY",
+  "two_player_state": "BLOCKED",
+  "mean_real_time_factor": 0.1062,
+  "red_team_findings_count": 5,
+  "note": "Mitosis/Tenki lanes intentionally not touched (owned by a concurrent in-flight session per BP-0009 collision receipt). Video recording intentionally not attempted (no screen-recording capability in this session; requires human action per the existing demo checklist).",
+  "claim_ceiling": "IDENTITY_AND_INCLUSION_ONLY; hashes do not establish correctness",
+  "signature_state": "NOT_SIGNED"
+}

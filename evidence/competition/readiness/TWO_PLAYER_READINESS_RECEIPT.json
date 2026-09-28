@@ -1,0 +1,38 @@
+{
+  "schema": "TWO_PLAYER_READINESS_RECEIPT_V1",
+  "lineage_id": "UFA-JEV-COMP",
+  "created_utc": "2026-09-28T20:55:00Z",
+  "implementation_found": {
+    "file": "experiments/e5_2p.py",
+    "description": "Real (non-mock) PettingZoo space_invaders_v2 (Parallel API) integration: distinct action ontology (NOOP, FIRE, UP, RIGHT, LEFT, DOWN vs the 1P ALE ontology), distinct per-seat perception (seat_state), distinct question schema (QUESTION_2P), explicit ROM licence gate.",
+    "not_mock": "This is not the 'old mock 2P environment'; it is written against the real PettingZoo Parallel API and a real ROM path, but has never been executed end-to-end in this environment."
+  },
+  "blockers": [
+    {
+      "type": "DEPENDENCY_MISSING",
+      "detail": "pettingzoo is not installed in .venv and is not listed in requirements.txt or requirements-openjev.txt.",
+      "evidence": "pip show pettingzoo -> 'Package(s) not found'; grep -i pettingzoo requirements*.txt -> no matches"
+    },
+    {
+      "type": "ROM_GATE_BLOCKED",
+      "detail": "experiments/e5_2p.py's rom_gate() requires an explicit ROM directory containing space_invaders.bin; none is supplied anywhere in this repo or environment. The code comment states this is an explicit licensing decision that was never made ('Byron's licence decision').",
+      "evidence": "rom_gate(rom_dir=None) -> {'state': 'ROM_GATE_BLOCKED', 'reason': 'no ROM directory supplied; licence acceptance is Byron's decision'}"
+    }
+  ],
+  "checks": {
+    "2P_IMPORT": "NOT_TESTED",
+    "2P_RESET": "NOT_TESTED",
+    "2P_AGENT_ENUMERATION": "NOT_TESTED",
+    "2P_STEP": "NOT_TESTED",
+    "2P_SYNCHRONIZATION": "NOT_TESTED",
+    "2P_FIXED_SEED_REPLAY": "NOT_TESTED",
+    "2P_TRACE": "NOT_TESTED",
+    "2P_EPISODE_MMR": "NOT_TESTED",
+    "reason_not_tested": "Blocked before any of these could be attempted: the pettingzoo package is absent and the ROM licence gate was never cleared. Installing an untested third-party dependency and/or acquiring the ROM under time pressure, without the operator's explicit licence decision, was judged out of scope for this receipt."
+  },
+  "2P_REAL_ENVIRONMENT": "NOT_READY",
+  "state": "BLOCKED",
+  "claim_ceiling": "No 2P gameplay claim of any kind (real or otherwise) is supported. Do not present 2P as ready or as having run.",
+  "next_action_if_pursued": "Operator must explicitly decide the ROM licensing question and approve installing pettingzoo; only then can 2P_IMPORT..2P_EPISODE_MMR be attempted.",
+  "signature_state": "NOT_SIGNED"
+}

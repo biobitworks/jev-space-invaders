@@ -1,0 +1,93 @@
+{
+  "schema": "CLAIM_EVIDENCE_MATRIX_V1",
+  "lineage_id": "UFA-JEV-COMP",
+  "created_utc": "2026-09-28T21:10:00Z",
+  "claims": [
+    {
+      "claim": "JEV used",
+      "classification": "NOT_SUPPORTED",
+      "evidence": "evidence/jev/JEV_ACCESS_RECEIPT.json, evidence/competition/access/HOSTED_JEV_STATE_RECEIPT.json: TYPESAFE_API_KEY absent from .env (dotenv_values returns []), counted_jev_runs=0, results.json has no provider=\"typesafe\" entries.",
+      "falsification_attempt": "Searched results.json for any provider=typesafe run: none found. Searched .env for the key: absent.",
+      "verdict": "0 hosted-JEV runs exist anywhere in this repo."
+    },
+    {
+      "claim": "System-One (official) baseline used",
+      "classification": "NOT_SUPPORTED",
+      "evidence": "src/deciders.py AdapterLLMDecider requires provider in {openai,anthropic,gemini}; no such run appears in results.json. governance/multimodel/STATUS.json: system_one_official_baseline=BLOCKED_NO_PROVIDER_CREDENTIAL.",
+      "falsification_attempt": "Checked for any results.json entry with sdk_package=system-one-adapter and a real cloud provider: none. The M3 baseline used provider=ollama via a bespoke decider, not the official adapter path.",
+      "verdict": "Never executed. The only 'baseline' data is a local-Ollama substitute, correctly labeled as such."
+    },
+    {
+      "claim": "OpenJEV comparator valid (matched, probability-capable)",
+      "classification": "NOT_SUPPORTED",
+      "evidence": "evidence/competition/openjev/OPENJEV_MATCHED_COMPARATOR_CAPABILITY_RECEIPT.json; independently confirmed by reading /Volumes/magicBLACKbox/openjev/helper/helper/shim_mlx.py directly over SSH: it asserts os.environ.get('READOUT_TARGETED')=='1' and states the MLX stand-in implements only the TARGETED readout.",
+      "falsification_attempt": "Attempted to launch the shim (after fixing a missing 'openai' pip dependency, verified via successful pip install); it refused to start without READOUT_TARGETED=1. Did not set that variable, per the pre-existing matched-comparator preregistration.",
+      "verdict": "matched_comparator_state=BLOCKED_READOUT_CAPABILITY_MISMATCH. A targeted-only exploratory lane exists as PROPOSED_NOT_PREREGISTERED_NOT_EXECUTED, not run."
+    },
+    {
+      "claim": "Vithia trained",
+      "classification": "NOT_SUPPORTED",
+      "evidence": "No training run, gradient update, or model-weight-modification claim was found anywhere in the competition-lineage evidence audited in this session.",
+      "falsification_attempt": "Searched competition evidence tree and receipts for any 'training'/'trained' claim tied to the submission; none present. (The separate vithia-space research branch's E1R/E5L work concerns rule-context restoration and comparator evaluation, not training, and is out of scope for the competition claim.)",
+      "verdict": "No training claim is made or supported by this submission."
+    },
+    {
+      "claim": "Mitosis used",
+      "classification": "PARTIAL",
+      "evidence": "evidence/competition/sponsors/SPONSOR_AUTH_RECEIPT.json (real auth, office b236ff3a-8250-4ac5-bda2-4fc35c43d35f 'vithia-space-jev-20260928'), evidence/competition/mitosis/MITOSIS_DIRECTIVE_RECEIPT.json (real remember+retrieve with a real universal_id, similarity score, and latency), evidence/competition/tenki/TENKI_RUNTIME_IMPORT_RECEIPT.json (mitosis_consumed_by_tenki=EXECUTED_SUPPORTED: the seed Mitosis returned, 3, is the seed the Tenki run actually used).",
+      "falsification_attempt": "Checked whether the retrieved value was actually used downstream, not just written and ignored: confirmed (selected_seed=3 in both the Mitosis directive and the Tenki execution record match).",
+      "verdict": "A real write-then-retrieve-then-consumed-by-execution loop happened. But the receipts themselves state mitosis_load_bearing_ablation=NOT_EXECUTED: no comparison exists showing the outcome would have differed without Mitosis (a seed selection is a thin form of load-bearing). Classified PARTIAL, not full SUPPORTED."
+    },
+    {
+      "claim": "Tenki used",
+      "classification": "SUPPORTED",
+      "evidence": "evidence/competition/tenki/TENKI_SESSION_CREATE_RECEIPT.json (session 01a0e9b9-dbf4-77ff-8d28-2e057cb00cbc, RUNNING, sticky); evidence/competition/tenki/TENKI_RUNTIME_IMPORT_RECEIPT.json shows a real remote run: runtime.platform='Linux-6.18.29-x86_64-with-glibc2.39' (this session's own host is macOS Darwin arm64 - the Linux platform string is strong independent evidence of genuine remote execution, not local fabrication), checkout_commit=37eb1518... at a real repo commit, score=15, seed=3 (matching the Mitosis-selected seed), qualified_verify_pass=true, results_validation_pass=true.",
+      "falsification_attempt": "Independently re-fetched governance/multimodel/STATUS.json's own next_action field and cross-checked it references this exact session id and a teardown-hold policy consistent with an actually-open remote session, not a claimed-but-fake one. Also independently verified the separately-claimed Tenki Code Review via the real GitHub API (gh api repos/biobitworks/jev-space-invaders/pulls/1/reviews): review id PRR_kwDOUuZx2c8AAAABPbs_4g, reviewer tenki-reviewer[bot], state APPROVED, submitted_at 2026-09-27T14:18:42Z - matches the receipt exactly.",
+      "verdict": "Both Tenki code review (independently GitHub-verified) and Tenki sandbox runtime execution (Linux platform fingerprint, real checkout commit, real trace) are genuinely supported. Trace byte-import into the local repo is honestly marked incomplete (evidence/failures/BP0008_TENKI_POST_RUN_IMPORT_PARTIAL.json)."
+    },
+    {
+      "claim": "2P ready",
+      "classification": "NOT_SUPPORTED",
+      "evidence": "evidence/competition/readiness/TWO_PLAYER_READINESS_RECEIPT.json: pettingzoo is not installed (pip show -> not found, not in requirements.txt), and experiments/e5_2p.py's rom_gate() returns ROM_GATE_BLOCKED (ROM licensing decision never made). All 2P_* checks are NOT_TESTED.",
+      "falsification_attempt": "Ran pip show pettingzoo directly; ran the actual rom_gate(None) logic path by reading the source; confirmed no ROM file or PettingZoo install anywhere in this environment.",
+      "verdict": "2P_REAL_ENVIRONMENT=NOT_READY. Real (non-mock) code exists but is blocked by an uninstalled dependency and an unresolved licensing gate."
+    },
+    {
+      "claim": "Real-time capable",
+      "classification": "NOT_SUPPORTED",
+      "evidence": "evidence/competition/benchmark/REALTIME_COST_BENCHMARK.json: mean real_time_factor across 5 executed seeds = 0.1062 (roughly 9-12x slower than real-time).",
+      "falsification_attempt": "Computed independently from raw frames/wall_clock_s/model_calls already in results.json, not from a marketing figure.",
+      "verdict": "The only executed lane (local llama3.2:3b baseline) is measurably far from real-time."
+    },
+    {
+      "claim": "Cost advantage (of anything, over anything)",
+      "classification": "NOT_TESTED",
+      "evidence": "evidence/competition/benchmark/REALTIME_COST_BENCHMARK.json: only one lane (local Ollama) has real cost data (=$0 metered, local compute); hosted JEV and official System-One baseline have zero executed runs, so no comparable cost exists.",
+      "falsification_attempt": "Checked whether a cross-provider cost projection could be built from available token counts; rejected because it would require substituting one provider's tokenizer for another, explicitly disallowed.",
+      "verdict": "No cost comparison is possible with current evidence. Not claimed."
+    },
+    {
+      "claim": "Reproducible",
+      "classification": "PARTIAL",
+      "evidence": "Fixed-seed replay is byte-identical when re-run locally (verified twice, identical episode_mmr_root). scripts/verify_competition_lineage.py and scripts/validate_results.py both independently PASS on this lineage.",
+      "falsification_attempt": "Re-ran the exact same seed+config twice; also checked whether a fresh clone of the repo at this commit could reproduce the qualified-lineage verification: yes (verifier recomputes every hash from source bytes, doesn't trust stored values). However: the repo currently has at least 4 divergent branches with inconsistent breakpoint numbering (see evidence/competition/governance/CONCURRENT_WRITER_COLLISION_RECEIPT.json), and two of those branches delete files this lineage's own breakpoints cite as atoms. A judge cloning the 'wrong' branch would not see a coherent, reproducible state.",
+      "verdict": "The harness/decision mechanics are genuinely reproducible in isolation. The overall multi-branch repository state is not currently coherent enough to call the submission as a whole cleanly reproducible without specifying exactly which branch to check out."
+    },
+    {
+      "claim": "MMR/Merkle inclusion proves correctness",
+      "classification": "NOT_SUPPORTED",
+      "evidence": "Every breakpoint file in this repo (legacy and qualified) carries the explicit field claim_ceiling: 'IDENTITY_AND_INCLUSION_ONLY; hashes do not establish correctness'.",
+      "falsification_attempt": "N/A - this is a claim the repo's own authors already explicitly disclaim everywhere; no one in the evidence audited claims otherwise.",
+      "verdict": "Not claimed by the repo. Confirmed correctly scoped throughout."
+    },
+    {
+      "claim": "Sponsor integration is load-bearing (general)",
+      "classification": "PARTIAL",
+      "evidence": "See Mitosis and Tenki rows above.",
+      "falsification_attempt": "See above.",
+      "verdict": "Tenki: SUPPORTED load-bearing (a real remote run executed against real Git state). Mitosis: PARTIAL - real and functionally consumed, but not ablation-validated as improving anything."
+    }
+  ],
+  "claim_ceiling": "This matrix reflects evidence available in this repository and independently re-checked GitHub/filesystem/SSH state as of the creation timestamp above. It is not a claim that no other evidence exists elsewhere.",
+  "signature_state": "NOT_SIGNED"
+}
