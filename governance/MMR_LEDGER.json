@@ -771,6 +771,22 @@
         "75be8b4a1b7202ab2045b31e332e04471e0fa5d990c8d9c5097b1ed82456cb9d",
         "3085220196e80b9261c55295b0357cf5c27b5f2ca571f6411dbe0656adcd9bf8"
       ]
+    },
+    {
+      "seq": 49,
+      "bp_id": "UFA-JEV-BP-0050",
+      "bp_file": "governance/breakpoints/0050-m4-jev-access-not-available.json",
+      "bp_file_sha256": "cc2ad0ff3a3cb8b1344ab040113ba3a171ccd92561c8fe2f8e1c75ae44233c50",
+      "bp_root": "322fed430a2b5c22be5fed281024e9570260429786e03ad39b50f0b396d75765",
+      "root_kind": "FMO_V1_BREAKPOINT_ATOMS",
+      "mmr_leaf": "980bda98b51c8dbe2ea7b475cbcbb1a36bb6b01df1c6cd634c8e02ae122d3a43",
+      "mmr_size": 50,
+      "mmr_root_after": "7f9fb622faed2deb2a7fb5e959e338267206b50ac1afdf186b33823c159edd33",
+      "mmr_peaks_after": [
+        "026514586974a2fb18c9fefe6f92208e2008b44751f5380417c4129b185b831f",
+        "75be8b4a1b7202ab2045b31e332e04471e0fa5d990c8d9c5097b1ed82456cb9d",
+        "4428843dc3af613f3204968042883e6e979cc6d47642a101f919c298b5819de1"
+      ]
     }
   ]
 }

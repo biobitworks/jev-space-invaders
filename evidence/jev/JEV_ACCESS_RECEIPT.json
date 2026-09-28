@@ -1,0 +1,9 @@
+{
+  "schema": "JEV_ACCESS_RECEIPT_V1",
+  "state": "NOT_AVAILABLE",
+  "reason": "TYPESAFE_API_KEY absent from .env at repo root; confirmed with operator, who directed moving to the M4b OpenJev stand-in lane instead of adding a key.",
+  "checked_utc": "2026-09-28T14:41:00Z",
+  "checked_by": "python -c \"import dotenv;print(sorted(k for k in dotenv.dotenv_values('.env')))\" -> []",
+  "counted_jev_runs": 0,
+  "claim_ceiling": "NOT_TESTED; this is an access-state receipt, not a performance claim"
+}

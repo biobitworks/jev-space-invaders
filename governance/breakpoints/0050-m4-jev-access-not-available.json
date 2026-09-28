@@ -1,0 +1,29 @@
+{
+  "breakpoint_id": "UFA-JEV-BP-0050",
+  "parent": "UFA-JEV-BP-0049",
+  "state": "JEV_ACCESS_NOT_AVAILABLE",
+  "project": "VITHIA_SPACE",
+  "created_utc": "2026-09-28T14:40:27+00:00",
+  "git_head_at_creation": "98e9ff7995b0004040dada543d8c90e1708358d4",
+  "root_kind": "FMO_V1_BREAKPOINT_ATOMS",
+  "bp_root": "322fed430a2b5c22be5fed281024e9570260429786e03ad39b50f0b396d75765",
+  "group_roots": {
+    "m4_jev_access": "6021b0fe8bea9e3c95b04cf4aa9a28af6ba806dcf49ff079aae4506a549a8ab9"
+  },
+  "atoms": [
+    {
+      "path": "evidence/jev/JEV_ACCESS_RECEIPT.json",
+      "kind": "RECEIPTFCO",
+      "group": "m4_jev_access",
+      "bytes": 499,
+      "sha256": "34a6ba48eda96260d5628983c9f045a50732085e4794eb1d4e82d54aa938df39",
+      "location": "public",
+      "fmo_leaf": "6021b0fe8bea9e3c95b04cf4aa9a28af6ba806dcf49ff079aae4506a549a8ab9"
+    }
+  ],
+  "stage": "M4_JEV_ACCESS_CHECK",
+  "JEV_ACCESS": "NOT_AVAILABLE",
+  "note": "TYPESAFE_API_KEY absent; operator confirmed and directed proceeding to M4b (OpenJev stand-in) instead",
+  "claim_ceiling": "IDENTITY_AND_INCLUSION_ONLY; hashes do not establish correctness",
+  "signature_state": "NOT_SIGNED"
+}
