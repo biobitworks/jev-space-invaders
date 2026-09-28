@@ -1,0 +1,91 @@
+{
+  "breakpoint_id": "VITA-PUB-BP-0007",
+  "parent": "VITA-PUB-BP-0006",
+  "state": "TABLES_FROZEN",
+  "project": "VITHIA_0_VITA_1_PUBLICATION",
+  "created_utc": "2026-09-28T05:33:34+00:00",
+  "root_kind": "FMO_V1_PUBLICATION_BREAKPOINT_ATOMS",
+  "bp_root": "c7bf5d1b74a60d9f2f55a544d53d3ac588a2d5262606522e364f6cd13dda3e26",
+  "group_roots": {
+    "code": "462713654e4f051747e5d6cdeca35b76c9529af532f2c398751d6446ff822c74",
+    "tables": "c8c7ea15c9446aad8c81dfc89093efb6581c3c9c744d2980ce513c6e56f25453"
+  },
+  "atoms": [
+    {
+      "path": "publication/tables/T1_terminology.tex",
+      "kind": "TableFCO",
+      "group": "tables",
+      "bytes": 811,
+      "sha256": "85e8aad68ee0833d75ede1a72e43a9599227ed9855fe592f8a17c7a7324c5fe8",
+      "location": "public",
+      "fmo_leaf": "ce9059205abc8b37d9805bcd317c5541e519ce64fc9309beb748c4ace2666f9c"
+    },
+    {
+      "path": "publication/tables/T2_experiments.tex",
+      "kind": "TableFCO",
+      "group": "tables",
+      "bytes": 630,
+      "sha256": "cfdf9cc7618a9e7838b31da3ae6fe6568e92b0190ab8e59623e562bf1fcb7b8c",
+      "location": "public",
+      "fmo_leaf": "6c1611734735c5496cbd1671815ff46d2fdc7e90b47da1e3eb50c1894b337352"
+    },
+    {
+      "path": "publication/tables/T3_claims.tex",
+      "kind": "TableFCO",
+      "group": "tables",
+      "bytes": 903,
+      "sha256": "8e997a36079bf3610ba50e35a5e70e653320fd94aa095c0ba7534683f3180ba8",
+      "location": "public",
+      "fmo_leaf": "d1f87aea2081fa988cad50e122c158994d14359fe4545f03dff1da27ad7d2f59"
+    },
+    {
+      "path": "publication/tables/T4_replay.tex",
+      "kind": "TableFCO",
+      "group": "tables",
+      "bytes": 341,
+      "sha256": "96ab868b570cdc59cae007e7c72d377ed8dad9c5695914682968a57ada037115",
+      "location": "public",
+      "fmo_leaf": "7a590cfbf350cd0392ffe15ab4b4ecf08e5e8644ab402af8ec9d3e341763ffab"
+    },
+    {
+      "path": "publication/tables/T5_breakpoints.tex",
+      "kind": "TableFCO",
+      "group": "tables",
+      "bytes": 1247,
+      "sha256": "5e0d77a5e59e01b7ae656b81484acd8b1f8f26e74ca78f6a4fd3d4d436bef3c4",
+      "location": "public",
+      "fmo_leaf": "e91f62b766d43c4454a756f6066c9e2ddb93784bc39be08da5a30333f1b1b13e"
+    },
+    {
+      "path": "publication/tables/T6_models.tex",
+      "kind": "TableFCO",
+      "group": "tables",
+      "bytes": 648,
+      "sha256": "cfddff800ac5b7e75daba99b6c9f4a602cb047e90142d5570ef7cf0361cb581e",
+      "location": "public",
+      "fmo_leaf": "9783dbf00fe3fc1fe75d36a6dc9d837db13e8a9d7e0066b0c92c8364c66969fa"
+    },
+    {
+      "path": "publication/tables/T7_limitations.tex",
+      "kind": "TableFCO",
+      "group": "tables",
+      "bytes": 1124,
+      "sha256": "d7c6668484ebb182e385e5d2b4eef252617a31702b757dea88e2f425c6bdf691",
+      "location": "public",
+      "fmo_leaf": "f368161c6f7fedc209b3eaafc925524b369ea11e13d12762536dc7b6814a3fc8"
+    },
+    {
+      "path": "scripts/build_results_tables.py",
+      "kind": "CodeFCO",
+      "group": "code",
+      "bytes": 6454,
+      "sha256": "72d848d9c27af40ae55dcc05317de23d0edb806d9c68317c3511f7e0da74cb7c",
+      "location": "public",
+      "fmo_leaf": "462713654e4f051747e5d6cdeca35b76c9529af532f2c398751d6446ff822c74"
+    }
+  ],
+  "stage": "TABLE_FREEZE",
+  "table_count": 7,
+  "claim_ceiling": "IDENTITY_AND_INCLUSION_ONLY; publication roots do not establish scientific truth",
+  "signature_state": "NOT_SIGNED"
+}
