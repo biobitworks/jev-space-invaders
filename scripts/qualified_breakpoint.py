@@ -17,6 +17,19 @@ BP_DIR = ROOT / "governance" / "competition" / "breakpoints"
 LEDGER = ROOT / "governance" / "lineage" / "UFA_JEV_COMP_MMR_LEDGER.json"
 LINEAGE_ID = "UFA-JEV-COMP"
 BRANCH = "competition/final-integration-v01"
+RESERVED_FIELDS = {
+    "schema",
+    "lineage_id",
+    "branch",
+    "breakpoint_id",
+    "state",
+    "created_utc",
+    "git_head_at_creation",
+    "root_kind",
+    "bp_root",
+    "breakpoint_root",
+    "parent_root",
+}
 
 
 def git_head() -> str:
@@ -47,14 +60,10 @@ def latest_number() -> int:
     return max(nums) if nums else 0
 
 
-IDENTITY_FIELDS = frozenset({"lineage_id", "branch", "breakpoint_id", "parent_root",
-                              "bp_root", "breakpoint_root", "root_kind", "atoms", "group_roots"})
-
-
 def create(slug: str, state: str, atoms: list[dict], body: dict) -> dict:
-    clobbering = IDENTITY_FIELDS & set(body)
-    if clobbering:
-        raise ValueError(f"body must not set identity fields: {sorted(clobbering)}")
+    conflicts = sorted(RESERVED_FIELDS.intersection(body))
+    if conflicts:
+        raise ValueError("reserved breakpoint field supplied by caller: " + ",".join(conflicts))
     ledger = load_ledger()
     number = latest_number() + 1
     bp_id = f"{LINEAGE_ID}-BP-{number:04d}"

@@ -1,0 +1,51 @@
+{
+  "schema": "LOCAL_MODEL_REVIEW_RECEIPTS_V1",
+  "lineage_id": "UFA-JEV-COMP",
+  "stage": "P0_VERIFIER_AND_EXECUTION_INFRASTRUCTURE_HARDENING",
+  "runtime": "ollama",
+  "host": "magicSTUDIObox",
+  "canonical_writer": "Codex",
+  "file_modification_authority": "CODEX_ONLY",
+  "reviewers": [
+    {
+      "model": "qwen2.5:0.5b",
+      "requested_role": "Qwen coder code diff + adversarial test review fallback",
+      "task": "read-only review of P0 hardening summary",
+      "prompt_sha256": "36ffc49bef40633b1e0f5842777707f75d92fe65007265e2bef988346b533bcf",
+      "response_sha256": "27141c518ed48be30ebe5fd8f47bc366e69045c0b8093fb112026c99c5f5e558",
+      "verdict": "PASS",
+      "findings": []
+    },
+    {
+      "model": "longhorizon-liquid-230m:latest",
+      "requested_role": "LiquidAI independent lightweight critique fallback",
+      "task": "read-only governance invariant review",
+      "prompt_sha256": "6015aff1b1c273705ec0e9d0bfca7bf9d4d6b9f1cb455029a0c56429f289b475",
+      "response_sha256": "b3750a414ed6e446693e3accb255adff524af071571f410bdcc810747eaa7dd9",
+      "verdict": "INCONCLUSIVE_RESPONSE",
+      "findings": [
+        "Model echoed the requested verdict format rather than providing an independent review."
+      ]
+    },
+    {
+      "model": "qwen-coder",
+      "requested_role": "code diff + adversarial test review",
+      "verdict": "NOT_AVAILABLE",
+      "findings": []
+    },
+    {
+      "model": "qwen3.8-large",
+      "requested_role": "governance invariant review",
+      "verdict": "NOT_AVAILABLE",
+      "findings": []
+    },
+    {
+      "model": "phi4/deepseek reasoning",
+      "requested_role": "MMR/verifier logic review",
+      "verdict": "NOT_AVAILABLE",
+      "findings": []
+    }
+  ],
+  "local_model_review_state": "COMPLETED_WITH_ABSENCES_AND_ONE_INCONCLUSIVE_LIGHTWEIGHT_RESPONSE",
+  "claim_ceiling": "Local model reviews are advisory only and did not modify files."
+}
