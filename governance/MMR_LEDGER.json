@@ -888,6 +888,23 @@
         "75be8b4a1b7202ab2045b31e332e04471e0fa5d990c8d9c5097b1ed82456cb9d",
         "b356c06fb0470f4881c79ed3e83ad55a99ac5b6adca45586a26d47ff6b2d1af8"
       ]
+    },
+    {
+      "seq": 56,
+      "bp_id": "UFA-JEV-BP-0057",
+      "bp_file": "governance/breakpoints/0057-conversation-pause-handoff.json",
+      "bp_file_sha256": "2b0db1ee52427785f7820b180507214dce01d31efb5a97d4a340a420ba923292",
+      "bp_root": "83ab0feee2cedba533ac351a827c1b985c0a1aea675975655a328e9f30afec47",
+      "root_kind": "FMO_V1_BREAKPOINT_ATOMS",
+      "mmr_leaf": "9cef58e98555b6b62923c823181519b239df8726787e5b8224f4a6e156c1a3bd",
+      "mmr_size": 57,
+      "mmr_root_after": "dabf7684b7eba5c3d948277d91f904e95419a6930f30f184e92021c683e3c942",
+      "mmr_peaks_after": [
+        "026514586974a2fb18c9fefe6f92208e2008b44751f5380417c4129b185b831f",
+        "75be8b4a1b7202ab2045b31e332e04471e0fa5d990c8d9c5097b1ed82456cb9d",
+        "b356c06fb0470f4881c79ed3e83ad55a99ac5b6adca45586a26d47ff6b2d1af8",
+        "9cef58e98555b6b62923c823181519b239df8726787e5b8224f4a6e156c1a3bd"
+      ]
     }
   ]
 }

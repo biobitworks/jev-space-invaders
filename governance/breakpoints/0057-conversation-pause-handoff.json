@@ -1,0 +1,31 @@
+{
+  "breakpoint_id": "UFA-JEV-BP-0057",
+  "parent": "UFA-JEV-BP-0056",
+  "state": "PAUSED_HANDOFF_SEALED",
+  "project": "VITHIA_SPACE",
+  "created_utc": "2026-09-28T14:58:37+00:00",
+  "git_head_at_creation": "71ffbebd864704b20602a7ad2cb4da5247b015ee",
+  "root_kind": "FMO_V1_BREAKPOINT_ATOMS",
+  "bp_root": "83ab0feee2cedba533ac351a827c1b985c0a1aea675975655a328e9f30afec47",
+  "group_roots": {
+    "handoff": "6ae2af3e7a68235ffd093b6703fd52ac4d3b23784a065b7c82f3d403454e3e1a"
+  },
+  "atoms": [
+    {
+      "path": "evidence/handoff/VITHIA_PAUSE_HANDOFF_BP0057.json",
+      "kind": "ConversationHandoffFCO",
+      "group": "handoff",
+      "bytes": 3253,
+      "sha256": "fb100c4a7868cd3806261fe64713f79725d49b014e08c3f41e70514b8bf6defb",
+      "location": "public",
+      "fmo_leaf": "6ae2af3e7a68235ffd093b6703fd52ac4d3b23784a065b7c82f3d403454e3e1a"
+    }
+  ],
+  "stage": "CONVERSATION_PAUSE_HANDOFF",
+  "claim_mutation": false,
+  "canonical_mutation_performed": false,
+  "latest_scientific_breakpoint": "UFA-JEV-BP-0056",
+  "next_action": "recover BP-0057 handoff before any successor work",
+  "signature_state": "NOT_SIGNED",
+  "claim_ceiling": "IDENTITY_AND_INCLUSION_ONLY; hashes do not establish correctness"
+}

@@ -1,0 +1,92 @@
+{
+  "schema": "VITHIA_CONVERSATION_HANDOFF_V1",
+  "project": "VITHIA_0_VITA_1",
+  "task": "PAUSE_AND_HANDOFF_AFTER_E5L_1P",
+  "canonical_branch": "vithia-space",
+  "local_head": "71ffbebd864704b20602a7ad2cb4da5247b015ee",
+  "remote_head": "71ffbebd864704b20602a7ad2cb4da5247b015ee",
+  "latest_scientific_breakpoint": "UFA-JEV-BP-0056",
+  "latest_scientific_state": "RESULT_FAIL_TO_REJECT_H0",
+  "latest_scientific_bp_root": "53274130b87ef8f79dee1a07e1419d335ff54a5bc4306b86f232e8d5e9639ac3",
+  "latest_scientific_mmr_size": 56,
+  "latest_scientific_mmr_root": "f45db9a3c8823223371caa2c2a5bdcc080bf1e335cb6afe3af6676d86a506ecd",
+  "e5l": {
+    "experiment_id": "E5L_LIQUID_VS_VITA01_1P",
+    "prereg_breakpoint": "UFA-JEV-BP-0050",
+    "provider": "liquid",
+    "served_model": "liquid-vithia-1.2b:latest",
+    "system1_contract": {
+      "LQ_RAW": "A0_RAW",
+      "LV_VITA01": "A5_VITA01_FULL"
+    },
+    "seeds": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "max_decisions": 100,
+    "result_dataset": "S01_E5L_1P_LIQUID_RESULTS_V1",
+    "result_fmo_root": "d9b47060411eb12c730728748976e782698747cdbaffed6875f6cf1f208636b9",
+    "result_rows_sha256": "eb52a79cfe603461ba1751f2f6befc0822f12952842ef5371c929fc31e7fde2c",
+    "paired_score_differences_lv_minus_lq": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "mean_score_difference": 0.0,
+    "wilcoxon_two_sided_p": 1.0,
+    "claim_state": "FAIL_TO_REJECT_H0",
+    "net_time_saved_ms_lq_minus_lv_per_seed": [
+      135.45000000000005,
+      7.479999999999961,
+      37.129999999999995,
+      -390.28000000000003,
+      135.08000000000004
+    ],
+    "interpretation_ceiling": "100-decision capped development comparison; all paired score differences were 0; no action-quality claim; E4C remains BLOCKED_OR_UNDERPOWERED"
+  },
+  "e1r": {
+    "branch_merged_into_vithia_space": true,
+    "source_branch": "e1r/restoration-rule-context-v01",
+    "source_head": "6a0144a",
+    "breakpoints": "UFA-JEV-BP-0029..0047",
+    "mmr_at_bp47": "1c535ea6a15d2da21d563b5aecd38d95d20f674803939f688449d441bfda3d0a",
+    "rule_selection_state": "SUPPORTED_ON_HELD_OUT_REPLICATES_NOT_UNSEEN_CONTEXTS",
+    "delta_g_star": "NOT_COMPUTED"
+  },
+  "runtime": {
+    "host": "magicSTUDIObox",
+    "heavy_storage": "/Volumes/magicBLACKbox",
+    "liquid_runtime_breakpoint": "UFA-JEV-BP-0048",
+    "liquid_probe_breakpoint": "UFA-JEV-BP-0049"
+  },
+  "not_tested": [
+    "TypeSafe JEV",
+    "OpenJev scientific execution",
+    "governed DeltaG*",
+    "Liquid 2P successor",
+    "PettingZoo 2P ROM-gated lane",
+    "VCC execution"
+  ],
+  "deferred": [
+    "2P ROM admission/licensing decision",
+    "OpenJev comparator",
+    "TypeSafe JEV counted run",
+    "context-level holdout E1R successor",
+    "VCC exact-state recovery",
+    "demo/submission packaging if still relevant"
+  ],
+  "resume_order": [
+    "git fetch origin and require exact successor recovery before mutation",
+    "verify breakpoints and episode MMR",
+    "inspect BP-0057 pause handoff",
+    "choose next successor: context-level E1R holdout or Liquid/OpenJev comparator extension",
+    "do not reinterpret E5L as supported quality improvement"
+  ],
+  "signature_state": "NOT_SIGNED",
+  "canonical_mutation_performed": false
+}
