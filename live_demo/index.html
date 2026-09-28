@@ -1,0 +1,160 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Vithia-Space Live Gameplay</title>
+<style>
+:root{--bg:#080b10;--panel:#10151d;--line:#2b3442;--text:#eef2f7;--muted:#9aa8b8;--ok:#62d995;--warn:#f1bd63;--bad:#ff6e74;--blue:#61c7ff}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--text);font:14px/1.45 system-ui,-apple-system,sans-serif}
+header{display:flex;justify-content:space-between;gap:14px;padding:16px 20px;border-bottom:1px solid var(--line);align-items:end}
+h1{margin:0;font-size:25px}.sub{color:var(--muted)}main{display:grid;grid-template-columns:minmax(0,54%) minmax(360px,46%);min-height:calc(100vh - 74px)}
+.left,.right{padding:16px}.left{border-right:1px solid var(--line)}.panel{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:12px;margin-bottom:12px}
+.controls{display:grid;grid-template-columns:repeat(4,minmax(110px,1fr));gap:8px}.controls .wide{grid-column:span 2}
+label{font-size:11px;color:var(--muted);display:block;margin-bottom:3px}select,input,button{width:100%;background:#151b24;color:var(--text);border:1px solid #394657;border-radius:8px;padding:8px}
+button{cursor:pointer;font-weight:700}button.primary{border-color:#357454;background:#163829}button.stop{border-color:#764247;background:#35191c}
+.buttons{display:grid;grid-template-columns:repeat(5,1fr);gap:7px;margin-top:9px}
+.gamewrap{display:grid;grid-template-columns:minmax(0,1fr) 170px;gap:12px}
+canvas{width:100%;image-rendering:pixelated;background:#000;border:1px solid #303846;border-radius:10px;aspect-ratio:160/210}
+.metric{border-bottom:1px solid #26303b;padding:8px 0}.metric b{font-size:18px;display:block}.metric span{font-size:11px;color:var(--muted)}
+.badge{display:inline-block;border:1px solid var(--line);padding:4px 7px;border-radius:999px;margin:2px;font-size:11px}.ok{color:var(--ok);border-color:#2e674a}.warn{color:var(--warn);border-color:#69512d}.bad{color:var(--bad);border-color:#71383d}
+.queue{display:grid;grid-template-columns:repeat(13,1fr);gap:4px}.q{min-height:58px;border:1px solid var(--line);border-radius:8px;padding:5px;text-align:center}.q small{display:block;color:var(--muted)}.now{outline:2px solid white}
+.a-NOOP{background:#232933}.a-FIRE{background:#5e501a}.a-RIGHT{background:#164d63}.a-LEFT{background:#1f3868}.a-RIGHTFIRE{background:#1c593d}.a-LEFTFIRE{background:#4f2d68}.a-UNKNOWN{background:#2b2b2b;color:#888}
+.stream{max-height:390px;overflow:auto}.row{border-bottom:1px solid #26303b;padding:8px 3px}.row .top{display:flex;justify-content:space-between;gap:8px}.mono{font:11px ui-monospace,SFMono-Regular,monospace;color:#b9c6d5}.small{font-size:11px;color:var(--muted)}
+.integrations{display:grid;grid-template-columns:1fr 1fr;gap:8px}.int{border:1px solid var(--line);border-radius:9px;padding:8px}
+@media(max-width:950px){main{grid-template-columns:1fr}.left{border-right:0;border-bottom:1px solid var(--line)}.controls{grid-template-columns:1fr 1fr}.gamewrap{grid-template-columns:1fr}.queue{grid-template-columns:repeat(7,1fr)}}
+</style>
+</head>
+<body>
+<header>
+<div><h1>Vithia-Space · Live Agent Gameplay</h1><div class="sub">Actual ALE/PettingZoo state → optional Vita01 preprocessor → selected controller → action</div></div>
+<div id="runbadge" class="badge warn">PAUSED</div>
+</header>
+<main>
+<section class="left">
+<div class="panel">
+<div class="controls">
+<div><label>MODE</label><select id="mode"><option>1P</option><option>2P</option></select></div>
+<div><label>MODEL / SEAT A</label><select id="modelA"></select></div>
+<div><label>MODEL / SEAT B (2P)</label><select id="modelB"></select></div>
+<div><label>SEED</label><input id="seed" type="number" value="3"></div>
+<div><label>VITHIA PREPROCESSOR</label><select id="pre"><option value="1">A5_VITA01_FULL</option><option value="0">OFF / RAW</option></select></div>
+<div><label>BACKTRACE</label><input id="back" type="number" min="1" max="12" value="6"></div>
+<div><label>FORECAST</label><input id="fore" type="number" min="1" max="12" value="6"></div>
+<div><label>SPEED</label><select id="speed"><option>MODEL_PACED</option><option>1X_VISUAL</option><option>FAST</option></select></div>
+</div>
+<div class="buttons">
+<button onclick="applyConfig()">APPLY / RESET</button>
+<button class="primary" onclick="post('/api/play')">PLAY</button>
+<button onclick="post('/api/pause')">PAUSE</button>
+<button onclick="post('/api/step')">STEP ONCE</button>
+<button class="stop" onclick="post('/api/stop')">STOP</button>
+</div>
+</div>
+
+<div class="gamewrap">
+<div><canvas id="game" width="160" height="210"></canvas></div>
+<div class="panel">
+<div class="metric"><span>MODE</span><b id="mMode">—</b></div>
+<div class="metric"><span>SCORE</span><b id="mScore">—</b></div>
+<div class="metric"><span>LIVES</span><b id="mLives">—</b></div>
+<div class="metric"><span>DECISION</span><b id="mStep">—</b></div>
+<div class="metric"><span>CONTROLLER</span><b style="font-size:12px" id="mModel">—</b></div>
+<div class="metric"><span>VITA01</span><b style="font-size:12px" id="mPre">—</b></div>
+<div id="success"></div>
+</div>
+</div>
+
+<div class="panel">
+<div style="display:flex;justify-content:space-between"><b>Tetris-style action timeline</b><span class="small">past = executed · future = projected/not executed</span></div>
+<div id="queue" class="queue" style="margin-top:9px"></div>
+</div>
+
+<div class="panel">
+<b>Integration status</b>
+<div id="integrations" class="integrations" style="margin-top:8px"></div>
+</div>
+</section>
+
+<section class="right">
+<div class="panel">
+<div style="display:flex;justify-content:space-between"><b>Decision stream</b><span class="small">No hidden chain-of-thought</span></div>
+<div id="stream" class="stream"></div>
+</div>
+<div class="panel">
+<b>Current evidence</b>
+<div class="mono" id="evidence">—</div>
+</div>
+<div class="panel">
+<b>Reference thresholds</b>
+<div class="small">Local Ollama baseline: 270<br>Historical scripted reference: 325<br>These are references, not live competitors.</div>
+</div>
+</section>
+</main>
+
+<script>
+let models=[];
+async function getj(u){const r=await fetch(u,{cache:'no-store'});return await r.json()}
+async function post(u,b={}){await fetch(u,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(b)});await refresh()}
+function actionClass(a){return 'a-'+String(a||'UNKNOWN')}
+async function loadModels(){
+ const d=await getj('/api/models');models=d.models||[];
+ for(const id of ['modelA','modelB']){
+   const s=document.getElementById(id);s.innerHTML='';
+   for(const m of models){const o=document.createElement('option');o.value=m.name;o.textContent=m.name+(m.enabled?'':' [gated]');o.disabled=!m.enabled;s.appendChild(o)}
+ }
+}
+async function applyConfig(){
+ await post('/api/config',{
+   mode:mode.value,model_a:modelA.value,model_b:modelB.value,seed:Number(seed.value),
+   preprocessor:pre.value==='1',backtrace:Number(back.value),forecast:Number(fore.value),speed:speed.value
+ })
+}
+function drawFrame(fr){
+ if(!fr)return;const bytes=Uint8Array.from(atob(fr.rgb_b64),c=>c.charCodeAt(0));const c=document.getElementById('game');c.width=fr.width;c.height=fr.height;
+ const ctx=c.getContext('2d');const im=ctx.createImageData(fr.width,fr.height);for(let i=0,j=0;i<bytes.length;i+=3,j+=4){im.data[j]=bytes[i];im.data[j+1]=bytes[i+1];im.data[j+2]=bytes[i+2];im.data[j+3]=255}ctx.putImageData(im,0,0)
+}
+function latest1p(h){return h&&h.length?h[h.length-1]:null}
+function renderQueue(d){
+ const q=document.getElementById('queue');q.innerHTML='';const n=d.config.backtrace||6,f=d.config.forecast||6,h=d.history||[];
+ let past=[];
+ if(d.mode==='1P')past=h.slice(-n).map(x=>x.action);
+ else past=h.slice(-n).map(x=>{const s=x.seats||{};const k=Object.keys(s)[0];return k?s[k].action:'UNKNOWN'});
+ let proj=[];
+ if(d.mode==='1P')proj=(latest1p(h)||{}).projected||[];
+ else {const last=latest1p(h)||{};const s=last.seats||{};const k=Object.keys(s)[0];proj=k?(s[k].projected||[]):[]}
+ const all=[];
+ for(let i=-n;i<0;i++)all.push({i,a:past[past.length+i]||'—',kind:'past'});
+ const now=past[past.length-1]||'—';all.push({i:0,a:now,kind:'now'});
+ for(let i=1;i<=f;i++)all.push({i,a:proj[i-1]||'UNKNOWN',kind:'future'});
+ for(const x of all){const e=document.createElement('div');e.className='q '+(x.a==='—'?'':actionClass(x.a))+(x.kind==='now'?' now':'');e.innerHTML='<small>'+(x.i>0?'+':'')+x.i+'</small><b>'+x.a+'</b><small>'+x.kind+'</small>';q.appendChild(e)}
+}
+function renderStream(d){
+ const s=document.getElementById('stream');s.innerHTML='';const h=[...(d.history||[])].reverse();
+ for(const x of h){
+   const e=document.createElement('div');e.className='row';
+   if(d.mode==='1P'){
+    e.innerHTML='<div class="top"><b>#'+x.decision+' '+x.action+'</b><span>'+x.latency_ms+' ms</span></div><div class="small">score '+x.score_before+' → '+x.score_after+' · reward '+x.reward+' · lives '+x.lives+'</div><div class="small">'+x.model+(x.fallback?' · FALLBACK':'')+' · '+x.reason+'</div><div class="mono">forecast: '+(x.projected||[]).join(' → ')+'</div>';
+   }else{
+    let z='<div class="top"><b>#'+x.decision+' 2P</b></div>';for(const [seat,v] of Object.entries(x.seats||{})){z+='<div class="small"><b>'+seat+'</b> '+v.action+' · '+v.model+' · '+v.latency_ms+' ms · score '+v.score_after+(v.fallback?' · FALLBACK':'')+'</div><div class="mono">'+(v.projected||[]).join(' → ')+'</div>'}e.innerHTML=z;
+   }
+   s.appendChild(e)
+ }
+}
+function statusClass(v){const t=JSON.stringify(v);if(/PASS|EXECUTED|AVAILABLE|true/i.test(t)&&!/BLOCKED|NOT_TESTED|false/i.test(t))return'ok';if(/BLOCKED|FAIL|INVALID/i.test(t))return'bad';return'warn'}
+async function loadIntegrations(){
+ const d=await getj('/api/integrations');const x=document.getElementById('integrations');x.innerHTML='';
+ for(const [k,v] of Object.entries(d)){const e=document.createElement('div');e.className='int';e.innerHTML='<b>'+k+'</b><div class="badge '+statusClass(v)+'">'+(v.state||v.final_state||v.matched_state||v.runtime_state||'see details')+'</div><div class="small">'+(v.scope||'')+'</div>';x.appendChild(e)}
+}
+async function refresh(){
+ try{
+ const d=await getj('/api/state');drawFrame(d.frame);mMode.textContent=d.mode;mScore.textContent=typeof d.score==='object'?JSON.stringify(d.score):d.score;mLives.textContent=d.lives??'n/a';mStep.textContent=d.step;mModel.textContent=d.config.model_a+(d.mode==='2P'?' vs '+d.config.model_b:'');mPre.textContent=d.config.preprocessor?'A5_VITA01_FULL':'RAW';
+ runbadge.textContent=d.blocked?d.blocked.state:(d.playing&&!d.paused?'PLAYING':d.done?'DONE':d.stopped?'STOPPED':'PAUSED');runbadge.className='badge '+(d.blocked?'bad':d.playing&&!d.paused?'ok':'warn');
+ success.innerHTML=(d.success?.baseline_exceeded?'<div class="badge ok">BASELINE EXCEEDED</div>':'')+(d.success?.scripted_reference_exceeded?'<div class="badge ok">325 REFERENCE EXCEEDED</div>':'')+(d.blocked?'<div class="badge bad">'+d.blocked.state+'</div>':'');
+ renderQueue(d);renderStream(d);evidence.textContent='frame_sha256='+(d.frame?.sha256||'—')+'\nlog='+d.log_path+'\nmode='+d.mode+'\nseed='+d.config.seed+'\nbacktrace='+d.config.backtrace+' forecast='+d.config.forecast;
+ }catch(e){runbadge.textContent='DISCONNECTED';runbadge.className='badge bad'}
+}
+(async()=>{await loadModels();await loadIntegrations();await refresh();setInterval(refresh,220);setInterval(loadIntegrations,5000)})()
+</script>
+</body>
+</html>
