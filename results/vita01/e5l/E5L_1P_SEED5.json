@@ -1,0 +1,70 @@
+{
+  "prereg_breakpoint": "UFA-JEV-BP-0050",
+  "seed": 5,
+  "runs": [
+    {
+      "experiment_id": "E5L_LIQUID_VS_VITA01_1P",
+      "arm": "LQ_RAW",
+      "context_arm": "A0_RAW",
+      "seed": 5,
+      "score": 0.0,
+      "decisions": 100,
+      "frames": 400,
+      "lives_lost": 0,
+      "terminated": false,
+      "truncated": true,
+      "max_decisions": 100,
+      "fallback_rate": 0.0,
+      "valid_action_rate": 1.0,
+      "latency_ms_p50": 607.93,
+      "latency_ms_p95": 1121.06,
+      "total_ms_p50": 609.31,
+      "total_ms_mean": 650.83,
+      "wall_clock_s": 65.3,
+      "served_model": "liquid-vithia-1.2b:latest",
+      "provider": "liquid",
+      "labels": [
+        "provider=liquid",
+        "NON_TYPESAFE_JEV",
+        "NON_OPENJEV",
+        "NON_COUNTED_FOR_TYPESAFE_PERFORMANCE"
+      ],
+      "probability_entropy": "NOT_AVAILABLE",
+      "episode_mmr_root": "50f6d8815e50b996893ad07a44bcda5b17a30429834a2f6c8e2b211047ddfb94",
+      "episode_mmr_size": 100,
+      "trace_sha256": "f565bf4b6a726c33d0364444c7498e714b23f63705206ed24058e3e35ebd8570"
+    },
+    {
+      "experiment_id": "E5L_LIQUID_VS_VITA01_1P",
+      "arm": "LV_VITA01",
+      "context_arm": "A5_VITA01_FULL",
+      "seed": 5,
+      "score": 0.0,
+      "decisions": 100,
+      "frames": 400,
+      "lives_lost": 0,
+      "terminated": false,
+      "truncated": true,
+      "max_decisions": 100,
+      "fallback_rate": 0.0,
+      "valid_action_rate": 1.0,
+      "latency_ms_p50": 495.81,
+      "latency_ms_p95": 812.12,
+      "total_ms_p50": 498.66,
+      "total_ms_mean": 515.75,
+      "wall_clock_s": 51.8,
+      "served_model": "liquid-vithia-1.2b:latest",
+      "provider": "liquid",
+      "labels": [
+        "provider=liquid",
+        "NON_TYPESAFE_JEV",
+        "NON_OPENJEV",
+        "NON_COUNTED_FOR_TYPESAFE_PERFORMANCE"
+      ],
+      "probability_entropy": "NOT_AVAILABLE",
+      "episode_mmr_root": "586e259b8710e17e952c066b48ffaeb6a01875ce4dc1932697ce018ad41e4e91",
+      "episode_mmr_size": 100,
+      "trace_sha256": "a41a2916c898e0cdfc351ab56e29b2294e56b3935851989dad4780c797d1c746"
+    }
+  ]
+}
