@@ -1,0 +1,27 @@
+{
+  "provider": "liquid",
+  "served_model": "liquid-vithia-1.2b:latest",
+  "weight_sha256": "2ea801949d760cdf1a2cc04a54262c22c3c0c54f0769d57760c9adeb0e59233f",
+  "arms": {
+    "LQ_RAW": "A0_RAW",
+    "LV_VITA01": "A5_VITA01_FULL"
+  },
+  "seeds": [
+    1,
+    2,
+    3,
+    4,
+    5
+  ],
+  "order": "interleave LQ_RAW then LV_VITA01 by seed",
+  "max_decisions": 100,
+  "cap_kind": "prospectively frozen development cap",
+  "probe_p50_ms": 430.19,
+  "probe_p95_ms": 727.09,
+  "primary": "paired episode score LV_VITA01 - LQ_RAW",
+  "statistics": "Wilcoxon two-sided n=5; min p=.0625; SUPPORTED at alpha=.05 impossible; deterministic bootstrap CI",
+  "delta_g_star": "NOT_COMPUTED",
+  "e4c": "BLOCKED_OR_UNDERPOWERED BP-0026",
+  "probabilities": "NOT_AVAILABLE",
+  "confidence": "NOT_AVAILABLE"
+}

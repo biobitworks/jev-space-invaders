@@ -1,0 +1,173 @@
+{
+  "breakpoint_id": "UFA-JEV-BP-0050",
+  "parent": "UFA-JEV-BP-0049",
+  "state": "PREREG_SEALED",
+  "project": "VITHIA_SPACE",
+  "created_utc": "2026-09-28T14:26:37+00:00",
+  "git_head_at_creation": "85602f3bb3151fb0abc3a2219807be6e330440ca",
+  "root_kind": "FMO_V1_BREAKPOINT_ATOMS",
+  "bp_root": "1c5fd881078e9494df8eb631b58d5c0bdbd9c10efea5030912c4855017d9cd7b",
+  "group_roots": {
+    "e5l": "5acbcc0248c8143747ac813d90a84eb4627b7b56efbf81704739cd91705ecbbc"
+  },
+  "atoms": [
+    {
+      "path": "docs/prereg/E5L_LIQUID_1P.md",
+      "kind": "E5LFCO",
+      "group": "e5l",
+      "bytes": 2085,
+      "sha256": "cbc1b4cecbe6cd9464d5d4b81e2d4b2d5c415055935549a08e3dacb5fca7bfe6",
+      "location": "public",
+      "fmo_leaf": "1a389f35a28b2c48dfa45886ae7687c8654418582e4573d708809a9c930dde16"
+    },
+    {
+      "path": "evidence/liquid/E5L_PREREG_CONFIG.json",
+      "kind": "E5LFCO",
+      "group": "e5l",
+      "bytes": 794,
+      "sha256": "5126058e84429b3c681078d9e9c2e4d47260dfe2de11937046d0284d0444d93b",
+      "location": "public",
+      "fmo_leaf": "00445e8a2cd601eb23c470d2b2271728e3e9711fe859c6dae5f1fd9f670840d5"
+    },
+    {
+      "path": "evidence/liquid/RUNTIME_MANIFEST.json",
+      "kind": "E5LFCO",
+      "group": "e5l",
+      "bytes": 958,
+      "sha256": "2dd72aaa49e56166d466695d21d22bf7c9f9cdb111add963fa58a1ebb570c77b",
+      "location": "public",
+      "fmo_leaf": "ccb429c828f35ce9294094f86a571358035fb10f8971c285ba339f1d51b17047"
+    },
+    {
+      "path": "evidence/liquid/E5L_LATENCY_PROBE.json",
+      "kind": "E5LFCO",
+      "group": "e5l",
+      "bytes": 444,
+      "sha256": "87ca14d5b5278efc3a5e36cd4fe58820b321c94b39066e043af0fb2f97d226f3",
+      "location": "public",
+      "fmo_leaf": "36ec1c24bfe5f1e2b68fc6f0db07ccb3f9a8f69acbc6aeaa6f840a7937c4e310"
+    },
+    {
+      "path": "src/liquid_client.py",
+      "kind": "E5LFCO",
+      "group": "e5l",
+      "bytes": 3302,
+      "sha256": "ab2977d777a6f5635ee0fbb254061c7017608fa898d557a697194faef3bdb961",
+      "location": "public",
+      "fmo_leaf": "c4e991f5664c9f7a9a9197914028cec4d72040a88f124a5d72b8693a01d5e80b"
+    },
+    {
+      "path": "scripts/liquid_runtime.py",
+      "kind": "E5LFCO",
+      "group": "e5l",
+      "bytes": 2825,
+      "sha256": "46abd2a73264f0ecc9592355467ef344f6d150ef6f64335908f3e22fb67099fd",
+      "location": "public",
+      "fmo_leaf": "7cb9c4f1ff232f63a160255402fc704804fbd9df25c544d756ef02f4faafa556"
+    },
+    {
+      "path": "experiments/e5l_episodes.py",
+      "kind": "E5LFCO",
+      "group": "e5l",
+      "bytes": 5772,
+      "sha256": "262131f67d46356d2b92f715ebacf157b092e4ef5c8d2bd8d8d1f29d1249c0e6",
+      "location": "public",
+      "fmo_leaf": "b31f83459c8e093b0a1462f49d4279a10cb0af0e99c6bf5a815ba7bfb9128bbc"
+    },
+    {
+      "path": "scripts/run_e5l.py",
+      "kind": "E5LFCO",
+      "group": "e5l",
+      "bytes": 8849,
+      "sha256": "75fe6f63839427c97df6f38b6306a6708a2d163bca9ccb4f115bb5a5c89f2bf0",
+      "location": "public",
+      "fmo_leaf": "67f706e67513e758106cb8552ec8f8358a6fc6b685b65cdde82f2749cf70bd12"
+    },
+    {
+      "path": "experiments/e5_episodes.py",
+      "kind": "E5LFCO",
+      "group": "e5l",
+      "bytes": 5268,
+      "sha256": "fa2c26460de91a01f127d912e0374d65b726c4e66b0e09038ad10f2420bbdb59",
+      "location": "public",
+      "fmo_leaf": "8e5e2d22a158addb356f23eb6ee6abfda5c76b618bead01d12a454da04f7c473"
+    },
+    {
+      "path": "experiments/e4b_ablation.py",
+      "kind": "E5LFCO",
+      "group": "e5l",
+      "bytes": 14725,
+      "sha256": "e30d34d1525c45f1dcada9be3d8aefaa25e4de62a5fcf86d70a8bb135798a3e6",
+      "location": "public",
+      "fmo_leaf": "86de22c3ab908322ce19c486b18b884f7f8d50a7c2f652a26b56f84bc6bb3850"
+    },
+    {
+      "path": "experiments/e4a_snapshots.py",
+      "kind": "E5LFCO",
+      "group": "e5l",
+      "bytes": 7229,
+      "sha256": "e473901844cc12b0b53e4f920873a26f90384e59a6f60a8171e86f29a4ed6c80",
+      "location": "public",
+      "fmo_leaf": "9a0b0429ef679eebea6274f9f172d02f240a887e309be86963e9fa52f366cd16"
+    },
+    {
+      "path": "src/perception.py",
+      "kind": "E5LFCO",
+      "group": "e5l",
+      "bytes": 4860,
+      "sha256": "fcd5a53760d33c910052a8b2562d2b49be2ab36232b709c3a33d18a785ccfb41",
+      "location": "public",
+      "fmo_leaf": "aad493cfbbea5ef989a2d5934df80cc6ce90f750c3a1664f6af35f4133246d89"
+    },
+    {
+      "path": "src/envcfg.py",
+      "kind": "E5LFCO",
+      "group": "e5l",
+      "bytes": 2688,
+      "sha256": "7b32f5565412029b39098f1d8314b4cfb63a14c723face31a44dcfa0229e1493",
+      "location": "public",
+      "fmo_leaf": "c9302ddb7d82e381ee78efca344885d5ae7227633abd1865a680fdef9523a95b"
+    },
+    {
+      "path": "src/s01/protocol.py",
+      "kind": "E5LFCO",
+      "group": "e5l",
+      "bytes": 2966,
+      "sha256": "f1237bd1b6dbc4bd75783ba3b3ec1d09bfefd8c06687d45566c559083ba24e1a",
+      "location": "public",
+      "fmo_leaf": "0dc08a754259fca6cd6646cfe470c43fbacdb5398ebd838f599ec70ba1f9db87"
+    }
+  ],
+  "experiment_id": "E5L_LIQUID_VS_VITA01_1P",
+  "pre_mmr_root": "9fab4145f9c9c5a25ca6c36f1f715bac6fe1fa28e8df31b4ab01ed9d22a04b47",
+  "stage": "E5L_PREREG",
+  "config": {
+    "provider": "liquid",
+    "served_model": "liquid-vithia-1.2b:latest",
+    "weight_sha256": "2ea801949d760cdf1a2cc04a54262c22c3c0c54f0769d57760c9adeb0e59233f",
+    "arms": {
+      "LQ_RAW": "A0_RAW",
+      "LV_VITA01": "A5_VITA01_FULL"
+    },
+    "seeds": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "order": "interleave LQ_RAW then LV_VITA01 by seed",
+    "max_decisions": 100,
+    "cap_kind": "prospectively frozen development cap",
+    "probe_p50_ms": 430.19,
+    "probe_p95_ms": 727.09,
+    "primary": "paired episode score LV_VITA01 - LQ_RAW",
+    "statistics": "Wilcoxon two-sided n=5; min p=.0625; SUPPORTED at alpha=.05 impossible; deterministic bootstrap CI",
+    "delta_g_star": "NOT_COMPUTED",
+    "e4c": "BLOCKED_OR_UNDERPOWERED BP-0026",
+    "probabilities": "NOT_AVAILABLE",
+    "confidence": "NOT_AVAILABLE"
+  },
+  "claim_ceiling": "IDENTITY_AND_INCLUSION_ONLY; hashes do not establish correctness",
+  "signature_state": "NOT_SIGNED"
+}
