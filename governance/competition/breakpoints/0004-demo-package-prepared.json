@@ -1,0 +1,67 @@
+{
+  "atoms": [
+    {
+      "bytes": 1638,
+      "fmo_leaf": "0254a02e6161783906c1989a3319e155646469719b0026cea26876cd08faa1f5",
+      "group": "demo",
+      "kind": "DemoScriptFCO",
+      "location": "public",
+      "path": "evidence/competition/demo/DEMO_SCRIPT.md",
+      "sha256": "fd160d2bd5ca192701f56723979fd3ab86137788df6f97c8b79ff82f468e435a"
+    },
+    {
+      "bytes": 1256,
+      "fmo_leaf": "3d11d6523ae89d8eae6fcc5dff063188a494c9fb5cbb878f7b2d4609272e1d38",
+      "group": "demo",
+      "kind": "DemoChecklistFCO",
+      "location": "public",
+      "path": "evidence/competition/demo/DEMO_CHECKLIST.md",
+      "sha256": "cab8bab79ee66ea4529174d3bace74ad318fd3e89a79c4bd8bc56e0e83739421"
+    },
+    {
+      "bytes": 596,
+      "fmo_leaf": "f2c67323d242331ac8e4695877f8dc68b121951aa6dae1f3f1a2f63e704349f5",
+      "group": "demo",
+      "kind": "DemoPackageReceiptFCO",
+      "location": "public",
+      "path": "evidence/competition/demo/DEMO_PACKAGE_RECEIPT.json",
+      "sha256": "29cef987d06b1577053dd13014c219dfcd38e9be6b8c2bfbb3753658bf9e3e2d"
+    },
+    {
+      "bytes": 856,
+      "fmo_leaf": "95ca95a815c2224de2c606cc1e12b37e72f8a67a5e46709e25cab9bce184f01a",
+      "group": "entry",
+      "kind": "EntryUpdateCandidateFCO",
+      "location": "public",
+      "path": "evidence/competition/entry/FINAL_ENTRY_UPDATE_V2.json",
+      "sha256": "7d7aa1826157d6af60db32ad45e2157278872061b5f7c498964d8f6555fbbd96"
+    }
+  ],
+  "bp_root": "ddde23d507322b27d1edbcc41a1995ef5437eff3b4e5ed6c3df3f7184057b457",
+  "branch": "competition/qualified-lineage-v01",
+  "breakpoint_id": "UFA-JEV-COMP-BP-0004",
+  "breakpoint_root": "ddde23d507322b27d1edbcc41a1995ef5437eff3b4e5ed6c3df3f7184057b457",
+  "claim_ceiling": "IDENTITY_AND_INCLUSION_ONLY; hashes do not establish correctness",
+  "created_utc": "2026-09-28T15:51:54+00:00",
+  "demo_video_state": "BLOCKED_HUMAN_ACTION",
+  "git_head_at_creation": "82470fdd888d675b32a1ae0b733e98337ff4206d",
+  "group_roots": {
+    "demo": "202f14921d045d33e02782346207e1a365c48705a7b7fd27e422ab8b17f2873b",
+    "entry": "95ca95a815c2224de2c606cc1e12b37e72f8a67a5e46709e25cab9bce184f01a"
+  },
+  "historical_mutation_performed": false,
+  "lineage_id": "UFA-JEV-COMP",
+  "parent_occurrence": {
+    "breakpoint_id": "UFA-JEV-COMP-BP-0003",
+    "commit": "82470fdd888d675b32a1ae0b733e98337ff4206d",
+    "mmr_root_after": "c65ea10f06a8fe67536f764333546c7438a78235c45d8a49c5bfb60576fe5997"
+  },
+  "parent_root": "c65ea10f06a8fe67536f764333546c7438a78235c45d8a49c5bfb60576fe5997",
+  "project": "VITHIA_SPACE",
+  "recording_executed": false,
+  "root_kind": "FMO_V1_BREAKPOINT_ATOMS",
+  "schema": "UFA_JEV_QUALIFIED_BREAKPOINT_V1",
+  "signature_state": "NOT_SIGNED",
+  "state": "DEMO_PACKAGE_PREPARED_VIDEO_BLOCKED_HUMAN_ACTION",
+  "upload_executed": false
+}

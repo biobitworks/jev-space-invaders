@@ -1,0 +1,22 @@
+{
+  "created_utc": "2026-09-28T15:51:54+00:00",
+  "demo_package": "evidence/competition/demo/DEMO_PACKAGE_RECEIPT.json",
+  "demo_video_state": "BLOCKED_HUMAN_ACTION",
+  "demo_video_url": null,
+  "entry_id": "b968c199-5d7e-4228-b8fe-b0003b7ab94f",
+  "jev_execution_state": "NOT_AVAILABLE_NOT_TESTED",
+  "needs_jev_access": true,
+  "note": "This is a correction payload candidate. It does not rewrite the historical server receipt.",
+  "predecessor": "evidence/competition/entry/FINAL_ENTRY_UPDATE.json",
+  "repo_url": "https://github.com/biobitworks/jev-space-invaders",
+  "schema": "FINAL_ENTRY_UPDATE_V2",
+  "sponsors": {
+    "basis": "No load-bearing execution receipt exists.",
+    "mitosis": false,
+    "tenki": false
+  },
+  "state": "PREPARED_NOT_SUBMITTED",
+  "submission_mutation_performed": false,
+  "team": "Vithia in Space",
+  "track": "pilot"
+}

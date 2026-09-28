@@ -17,10 +17,10 @@
     ]
   },
   "failure": null,
-  "head_before_commit": "25d3cfff5da5252d169bd411c8314ad5af4432a1",
-  "latest_breakpoint": "UFA-JEV-COMP-BP-0003",
-  "latest_mmr_root": "c65ea10f06a8fe67536f764333546c7438a78235c45d8a49c5bfb60576fe5997",
-  "next_action": "prepare demo video package; human must record/upload video URL",
+  "head_before_commit": "82470fdd888d675b32a1ae0b733e98337ff4206d",
+  "latest_breakpoint": "UFA-JEV-COMP-BP-0004",
+  "latest_mmr_root": "e07cb2b1ccdb295b922fc55984551b66300875ebda56f39df95c88a9f9cfeb83",
+  "next_action": "human records/uploads demo video; then create a new immutable entry-update successor with the actual URL",
   "schema": "VITHIA_MULTIMODEL_STATUS_V1",
-  "stage": "COMPETITION_STATUS_AND_SPONSOR_CLAIMS_CORRECTED"
+  "stage": "DEMO_PACKAGE_PREPARED_VIDEO_BLOCKED_HUMAN_ACTION"
 }
