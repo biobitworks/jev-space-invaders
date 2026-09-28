@@ -1,0 +1,31 @@
+{
+  "claim": "Both branch histories remain valid in their own occurrence context. The duplicate human-readable breakpoint numbers are no longer globally unique identifiers.",
+  "classification": "PARALLEL_BRANCH_IDENTIFIER_COLLISION",
+  "colliding_ids": [
+    "0049",
+    "0050",
+    "0051"
+  ],
+  "common_ancestor_breakpoint": "UFA-JEV-BP-0048",
+  "common_ancestor_root": "9f41ea933fc66585efe681c17b23e5c5ceedd78cc77ed2fc77ccacaf7fc45375",
+  "common_ancestor_root_kind": "MMR_ROOT_AFTER",
+  "competition_branch": "main",
+  "competition_terminal_legacy_breakpoint": "UFA-JEV-BP-0051",
+  "competition_terminal_legacy_root": "28aaba4c6686a10fd9ed39202f497e1c3b2e88e7ae77a05e5ca3e891b13dd5b8",
+  "created_utc": "2026-09-28T15:39:03+00:00",
+  "historical_mutation_performed": false,
+  "project": "VITHIA_SPACE",
+  "reconciliation_rule": "Predecessor MMR roots are committed separately. Their leaves are not concatenated and neither root implies inclusion of the other.",
+  "research_branch": "vithia-space",
+  "research_terminal_breakpoint": "UFA-JEV-BP-0057",
+  "research_terminal_root": "dabf7684b7eba5c3d948277d91f904e95419a6930f30f184e92021c683e3c942",
+  "schema": "BREAKPOINT_NAMESPACE_FORK_RECEIPT_V1",
+  "signature_state": "NOT_SIGNED",
+  "subsequent_pre_namespace_legacy_occurrence": {
+    "branch": "main",
+    "breakpoint_id": "UFA-JEV-BP-0052",
+    "commit": "a990a38a1fcc0190221491398630b611552280e4",
+    "mmr_root_after": "51744c6a5212e6d11a93fa7fdfec57d1902a2628d57a48d2a54fd0ea7d820266",
+    "note": "Created before the namespace-stop instruction was received; preserved immutably and not renumbered."
+  }
+}

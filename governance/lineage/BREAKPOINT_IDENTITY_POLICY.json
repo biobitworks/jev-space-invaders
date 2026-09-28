@@ -1,0 +1,22 @@
+{
+  "canonical_occurrence_identity_fields": [
+    "lineage_id",
+    "branch",
+    "parent_root",
+    "breakpoint_id",
+    "breakpoint_root"
+  ],
+  "claim_ceiling": "IDENTITY_AND_INCLUSION_ONLY; hashes do not establish correctness",
+  "competition_lineage_id": "UFA-JEV-COMP",
+  "content_identity": "breakpoint_root/content hashes",
+  "context_identity": "lineage_id + branch + parent_root + breakpoint_id + breakpoint_root",
+  "created_utc": "2026-09-28T15:39:03+00:00",
+  "legacy_breakpoint_labels": "IMMUTABLE_DISPLAY_HISTORY_FIELDS",
+  "legacy_unqualified_allocation": "PROHIBITED_FROM_THIS_SUCCESSOR_FORWARD",
+  "mmr_reconciliation": "NO_RECONVERGENCE_YET; predecessor roots remain separate commitments",
+  "new_competition_id_pattern": "UFA-JEV-COMP-BP-%04d",
+  "project": "VITHIA_SPACE",
+  "research_lineage_id": "VITHIA-RESEARCH",
+  "schema": "BREAKPOINT_IDENTITY_POLICY_V1",
+  "signature_state": "NOT_SIGNED"
+}

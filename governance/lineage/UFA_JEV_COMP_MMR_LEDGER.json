@@ -1,0 +1,47 @@
+{
+  "branch": "competition/qualified-lineage-v01",
+  "entries": [
+    {
+      "bp_file": "governance/competition/breakpoints/0001-m3-local-ollama-baseline-complete.json",
+      "bp_file_sha256": "539c621a72c9b6d3194986fb94fa73ae0caaedd8a511462c9051a57f5561d8ad",
+      "bp_id": "UFA-JEV-COMP-BP-0001",
+      "bp_root": "ee15e69ba0f7e6daa87f7184869b63353eaa2ae77d0414a62ccf24aeded0e557",
+      "branch": "competition/qualified-lineage-v01",
+      "lineage_id": "UFA-JEV-COMP",
+      "mmr_leaf": "612c570d29b54e5e0a21ecd89663c83b13b43a35f9802ce9ae8429529617ccbd",
+      "mmr_peaks_after": [
+        "612c570d29b54e5e0a21ecd89663c83b13b43a35f9802ce9ae8429529617ccbd"
+      ],
+      "mmr_root_after": "612c570d29b54e5e0a21ecd89663c83b13b43a35f9802ce9ae8429529617ccbd",
+      "mmr_size": 1,
+      "parent_root": "51744c6a5212e6d11a93fa7fdfec57d1902a2628d57a48d2a54fd0ea7d820266",
+      "root_kind": "FMO_V1_BREAKPOINT_ATOMS",
+      "seq": 0
+    }
+  ],
+  "lineage_id": "UFA-JEV-COMP",
+  "predecessor_commitments": {
+    "common_ancestor": {
+      "breakpoint_id": "UFA-JEV-BP-0048",
+      "mmr_root_after": "9f41ea933fc66585efe681c17b23e5c5ceedd78cc77ed2fc77ccacaf7fc45375"
+    },
+    "competition_legacy_terminal_at_fork": {
+      "breakpoint_id": "UFA-JEV-BP-0051",
+      "mmr_root_after": "28aaba4c6686a10fd9ed39202f497e1c3b2e88e7ae77a05e5ca3e891b13dd5b8"
+    },
+    "pre_namespace_legacy_m3": {
+      "breakpoint_id": "UFA-JEV-BP-0052",
+      "commit": "a990a38a1fcc0190221491398630b611552280e4",
+      "mmr_root_after": "51744c6a5212e6d11a93fa7fdfec57d1902a2628d57a48d2a54fd0ea7d820266"
+    },
+    "research_terminal": {
+      "breakpoint_id": "UFA-JEV-BP-0057",
+      "mmr_root_after": "dabf7684b7eba5c3d948277d91f904e95419a6930f30f184e92021c683e3c942"
+    }
+  },
+  "predecessor_roots_are_mmr_leaves": false,
+  "project": "VITHIA_SPACE",
+  "protocol": "docs/BREAKPOINT_PROTOCOL.md hashing primitives + governance/lineage/BREAKPOINT_IDENTITY_POLICY.json occurrence identity",
+  "reconciliation_state": "SEPARATE_PREDECESSOR_COMMITMENTS_NOT_RECONVERGED",
+  "schema": "UFA_JEV_QUALIFIED_MMR_LEDGER_V1"
+}

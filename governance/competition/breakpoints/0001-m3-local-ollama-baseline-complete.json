@@ -1,0 +1,116 @@
+{
+  "atoms": [
+    {
+      "bytes": 1620,
+      "fmo_leaf": "562ef30a68cf77a9c77bb7a73635b15d05deb2cbb0c0a47eba3352f9cd80b6ba",
+      "group": "lineage",
+      "kind": "LineageForkReceiptFCO",
+      "location": "public",
+      "path": "governance/lineage/BREAKPOINT_NAMESPACE_FORK_RECEIPT.json",
+      "sha256": "007d7afaebd4f6acabf7929f647c6a008847d7c24ee474443adaf77ad775166b"
+    },
+    {
+      "bytes": 919,
+      "fmo_leaf": "9172741326bebce8cecaf7abcf413f5572f4ade6ad1bd23e6a810d3ed6f12757",
+      "group": "lineage",
+      "kind": "IdentityPolicyFCO",
+      "location": "public",
+      "path": "governance/lineage/BREAKPOINT_IDENTITY_POLICY.json",
+      "sha256": "ffaa44f735c974aa5a966b71ddac338faa2d4ebab7c98b5def31e7746c09f13d"
+    },
+    {
+      "bytes": 14352,
+      "fmo_leaf": "74f0bd2ff4b87041ac1543fa871705d43f97442bd15f49189ffbf20a91838cec",
+      "group": "m3_results",
+      "kind": "ResultsSnapshotFCO",
+      "location": "public",
+      "path": "evidence/competition/m3/results.main-a990a38.snapshot.json",
+      "sha256": "54d4db6cccfb12b2472ebc0d673ab92e6fc64f84e77fa576d85058584fa9c563"
+    },
+    {
+      "bytes": 8198,
+      "fmo_leaf": "9354a42ced540afd047ca536682db81ecdfec8cbb3f977abdcbe241a0a4fe679",
+      "group": "m3_result",
+      "kind": "ExperimentReceiptFCO",
+      "location": "public",
+      "path": "evidence/competition/m3/M3_LOCAL_OLLAMA_BASELINE_COMPLETE.json",
+      "sha256": "2d45cbb719e6dc68373343c641bd5335450a75076ffc1146bb0636e1d06a0ec8"
+    },
+    {
+      "bytes": 1887,
+      "fmo_leaf": "4f718d7b5f085215c8fc0827218defc8deb8ad617578c49476c3efeab9ca0b62",
+      "group": "m3_result",
+      "kind": "TraceManifestFCO",
+      "location": "public",
+      "path": "evidence/competition/m3/M3_TRACE_MANIFEST.json",
+      "sha256": "c32c083bee7e12685b906094aff96bf5528809d722f6c4fb557bbca2e1d0740e"
+    },
+    {
+      "bytes": 2117,
+      "fmo_leaf": "c84f3c92b22381e8f6396c7404ed8b78f5e0f1461b24116664ba7f67e10e6933",
+      "group": "m3_runtime",
+      "kind": "RuntimeModelReceiptFCO",
+      "location": "public",
+      "path": "evidence/competition/m3/M3_RUNTIME_MODEL_RECEIPT.json",
+      "sha256": "5b2343fa2e7ef39b2cb455be88adbe9d412da225e83b9f68a2d145b20b891334"
+    },
+    {
+      "bytes": 1793,
+      "fmo_leaf": "4c2bcfd57aa7cfb7083347af2e72aa54d09caa58574d42d1267acf566a2bc1c2",
+      "group": "m3_analysis",
+      "kind": "AnalysisFCO",
+      "location": "public",
+      "path": "evidence/competition/m3/M3_AGGREGATE_ANALYSIS.json",
+      "sha256": "22113d1015ba6ea390b3a935532dba4f080d09851007b45dcec173487efb41ea"
+    },
+    {
+      "bytes": 2120,
+      "fmo_leaf": "1d1a118a74959b76587594a18ba98b0b20549be6753c126ae9d2346a4109588f",
+      "group": "m3_gates",
+      "kind": "GateReceiptFCO",
+      "location": "public",
+      "path": "evidence/competition/m3/M3_GATE_RECEIPT.json",
+      "sha256": "26971c1fe8bad5bc87908142039d674a1eba7706777bdf9cc33a8a2c228d1f46"
+    }
+  ],
+  "bp_root": "ee15e69ba0f7e6daa87f7184869b63353eaa2ae77d0414a62ccf24aeded0e557",
+  "branch": "competition/qualified-lineage-v01",
+  "breakpoint_id": "UFA-JEV-COMP-BP-0001",
+  "breakpoint_root": "ee15e69ba0f7e6daa87f7184869b63353eaa2ae77d0414a62ccf24aeded0e557",
+  "claim_ceiling": "IDENTITY_AND_INCLUSION_ONLY; hashes do not establish correctness",
+  "common_ancestor": {
+    "breakpoint_id": "UFA-JEV-BP-0048",
+    "mmr_root_after": "9f41ea933fc66585efe681c17b23e5c5ceedd78cc77ed2fc77ccacaf7fc45375"
+  },
+  "created_utc": "2026-09-28T15:39:03+00:00",
+  "git_head_at_creation": "a990a38a1fcc0190221491398630b611552280e4",
+  "group_roots": {
+    "lineage": "d4c51c5dde08d5dbf8f19af68f6394a26a268e6dca4e4dc75c6b84a7e4d7c679",
+    "m3_analysis": "4c2bcfd57aa7cfb7083347af2e72aa54d09caa58574d42d1267acf566a2bc1c2",
+    "m3_gates": "1d1a118a74959b76587594a18ba98b0b20549be6753c126ae9d2346a4109588f",
+    "m3_result": "b50e9d49b0ea806c2e2de70f36834903850c4af19ae45076ed8b27b1964451c1",
+    "m3_results": "74f0bd2ff4b87041ac1543fa871705d43f97442bd15f49189ffbf20a91838cec",
+    "m3_runtime": "c84f3c92b22381e8f6396c7404ed8b78f5e0f1461b24116664ba7f67e10e6933"
+  },
+  "historical_mutation_performed": false,
+  "lineage_id": "UFA-JEV-COMP",
+  "mmr_reconciliation_performed": false,
+  "parent_occurrence": {
+    "branch": "main",
+    "breakpoint_id": "UFA-JEV-BP-0052",
+    "commit": "a990a38a1fcc0190221491398630b611552280e4",
+    "mmr_root_after": "51744c6a5212e6d11a93fa7fdfec57d1902a2628d57a48d2a54fd0ea7d820266"
+  },
+  "parent_root": "51744c6a5212e6d11a93fa7fdfec57d1902a2628d57a48d2a54fd0ea7d820266",
+  "project": "VITHIA_SPACE",
+  "research_predecessor_commitment": {
+    "branch": "vithia-space",
+    "breakpoint_id": "UFA-JEV-BP-0057",
+    "lineage_id": "VITHIA-RESEARCH",
+    "mmr_root_after": "dabf7684b7eba5c3d948277d91f904e95419a6930f30f184e92021c683e3c942"
+  },
+  "root_kind": "FMO_V1_BREAKPOINT_ATOMS",
+  "schema": "UFA_JEV_QUALIFIED_BREAKPOINT_V1",
+  "signature_state": "NOT_SIGNED",
+  "state": "M3_LOCAL_OLLAMA_BASELINE_COMPLETE"
+}

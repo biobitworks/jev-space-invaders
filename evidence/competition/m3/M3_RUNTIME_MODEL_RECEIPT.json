@@ -1,0 +1,74 @@
+{
+  "classification_note": "Execution rows prove provider/model labels and runtime metadata; they do not prove a model-byte digest or host identity.",
+  "execution_host": "UNKNOWN_FROM_RESULTS_JSON",
+  "hosted_jev": false,
+  "lane": "LOCAL_OLLAMA_BASELINE",
+  "model_content_digest": "NOT_COMPUTED",
+  "model_registry_identity_at_seal": "NOT_OBSERVED_ON_MAGICSTUDIO",
+  "official_system_one_baseline": false,
+  "provider": "ollama",
+  "requested_model": "llama3.2:3b",
+  "runtime_rows": [
+    {
+      "runtime": {
+        "ale_py": "0.12.1",
+        "gymnasium": "1.3.0",
+        "numpy": "2.5.3",
+        "platform": "macOS-26.6.2-arm64-arm-64bit-Mach-O",
+        "python": "3.13.9"
+      },
+      "seed": 1
+    },
+    {
+      "runtime": {
+        "ale_py": "0.12.1",
+        "gymnasium": "1.3.0",
+        "numpy": "2.5.3",
+        "platform": "macOS-26.6.2-arm64-arm-64bit-Mach-O",
+        "python": "3.13.9"
+      },
+      "seed": 2
+    },
+    {
+      "runtime": {
+        "ale_py": "0.12.1",
+        "gymnasium": "1.3.0",
+        "numpy": "2.5.3",
+        "platform": "macOS-26.6.2-arm64-arm-64bit-Mach-O",
+        "python": "3.13.9"
+      },
+      "seed": 3
+    },
+    {
+      "runtime": {
+        "ale_py": "0.12.1",
+        "gymnasium": "1.3.0",
+        "numpy": "2.5.3",
+        "platform": "macOS-26.6.2-arm64-arm-64bit-Mach-O",
+        "python": "3.13.9"
+      },
+      "seed": 4
+    },
+    {
+      "runtime": {
+        "ale_py": "0.12.1",
+        "gymnasium": "1.3.0",
+        "numpy": "2.5.3",
+        "platform": "macOS-26.6.2-arm64-arm-64bit-Mach-O",
+        "python": "3.13.9"
+      },
+      "seed": 5
+    }
+  ],
+  "schema": "M3_RUNTIME_MODEL_RECEIPT_V1",
+  "served_model": "llama3.2:3b",
+  "signature_state": "NOT_SIGNED",
+  "source_commits": {
+    "legacy_m3_seal": "a990a38a1fcc0190221491398630b611552280e4",
+    "seed1": "d284f467cdb619e74c11ecc47a7b090cd21c10a8",
+    "seed2": "120be04cb3e61a78b60c248f11fed2ac30940e23",
+    "seed3": "47382233b73bcfc03200105f247a2902a842207c",
+    "seed4": "b18134c4367d5cd9a34bd752fb9f66767f497e3c",
+    "seed5": "2b6878b942a609ca40a84e1816f186019c636ee3"
+  }
+}
