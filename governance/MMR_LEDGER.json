@@ -544,6 +544,21 @@
         "3e38eaff0f1f7aab4837c8d82636aae736b555dd7cc9298e90ba9fae888a3b77",
         "83f89c0062d11ac4ad5d1bc96d76383affe549bb97df2e0b75d79e7bc8644957"
       ]
+    },
+    {
+      "seq": 35,
+      "bp_id": "UFA-JEV-BP-0036",
+      "bp_file": "governance/breakpoints/0036-e1r-rule-selection-prereg.json",
+      "bp_file_sha256": "48f87034049a331a420144f9afc012da753eba234e2e2959b3495964fcf2967f",
+      "bp_root": "0daa673172e33532bbe94d71a44a2ad9f98db5ebea488ea9faef9ad829974726",
+      "root_kind": "FMO_V1_BREAKPOINT_ATOMS",
+      "mmr_leaf": "16e981f51071e29962942aaedf16b0cca8d3e9622caf81eaaa47d524121095c1",
+      "mmr_size": 36,
+      "mmr_root_after": "09abf598179ed0199655423f64863e00ee2a7bcaa0dae8129cffd3e416684ed2",
+      "mmr_peaks_after": [
+        "026514586974a2fb18c9fefe6f92208e2008b44751f5380417c4129b185b831f",
+        "9e4e348e13b5947e3ed65e46d31b6e9f59c55267b5b4f65b0d79f0b7ab9530d2"
+      ]
     }
   ]
 }
