@@ -1,0 +1,54 @@
+{
+  "schema": "P0_HARDENING_VERIFICATION_RECEIPT_V1",
+  "lineage_id": "UFA-JEV-COMP",
+  "stage": "P0_VERIFIER_AND_EXECUTION_INFRASTRUCTURE_HARDENING",
+  "parent_head": "963dd108386bde7dcc10363cc450cf3b96c9e797",
+  "parent_breakpoint": "UFA-JEV-COMP-BP-0014",
+  "parent_mmr_size": 14,
+  "parent_mmr_root": "788f69af75ebf53420e77fc5a90620af6dd012eea2183f89f8dc7647c4073031",
+  "p0_hardening_state": "PASS",
+  "fingerprint_check_state": "PASS",
+  "ffmpeg_bounding_state": "PASS",
+  "dependency_declaration_state": "PASS",
+  "reserved_field_protection_state": "PASS",
+  "ledger_crosscheck_state": "PASS",
+  "adversarial_test_state": "PASS",
+  "protected_atom_state": "PASS",
+  "test_state": {
+    "targeted": "PASS_33",
+    "full_pytest": "PASS_84"
+  },
+  "verification_commands": {
+    "targeted_new_tests": ".venv/bin/python -m pytest tests/test_p0_hardening.py -q",
+    "full_pytest": ".venv/bin/python -m pytest",
+    "qualified_lineage_verifier": ".venv/bin/python scripts/verify_competition_lineage.py",
+    "hardened_lineage_verifier": ".venv/bin/python scripts/verify_competition_lineage_hardened.py",
+    "control_plane_fcg_orphan_check": ".venv/bin/python scripts/check_control_plane_fcg_orphans.py",
+    "frame_media_verifier": ".venv/bin/python scripts/verify_final_playthrough_custody.py evidence/competition/final_execution/frames",
+    "hardened_fingerprint_media_verifier": ".venv/bin/python scripts/verify_final_playthrough_custody_hardened.py evidence/competition/final_execution/frames",
+    "codec_public_safe_verifier": ".venv/bin/python scripts/verify_codec_public_safe.py",
+    "secret_scan": ".venv/bin/python scripts/secret_scan.py",
+    "dependency_resolution": "fresh temporary venv install -r requirements-vita01-final.txt"
+  },
+  "verification_results": {
+    "qualified_lineage": "PASS",
+    "hardened_lineage": "PASS",
+    "control_plane_fcg_orphan_check": "PASS",
+    "frame_media": "PASS",
+    "hardened_fingerprint_media": "PASS",
+    "codec_public_safe": "PASS",
+    "secret_scan": "PASS",
+    "credential_scan": "PASS_NO_LIVE_CREDENTIAL_PATTERN",
+    "key_material_scan": "PASS_NO_PRIVATE_KEY_MATERIAL_PATTERN",
+    "private_ip_scan": "PASS_NO_MATCHES",
+    "dependency_resolution": "PASS"
+  },
+  "claim_discipline": {
+    "system_one_ollama_state": "DEFERRED_NOT_EXECUTED_IN_THIS_STAGE",
+    "two_player_state": "INHERITED_NOT_EXECUTED_OR_LATEST_EXISTING_STATE",
+    "mitosis_state": "INHERITED",
+    "tenki_state": "INHERITED",
+    "codec_scientific_support_matrix": "NOT_UPGRADED"
+  },
+  "claim_ceiling": "Infrastructure hardening only. No new external/model execution or experimental claim upgrade."
+}
