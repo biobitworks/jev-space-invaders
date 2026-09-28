@@ -303,6 +303,22 @@
         "38225c02b9c0e198d4da872ddc9f9160d7e1c772cbb1da2e69ae4778a5cd07b5",
         "16346dd446d8fde4d60bde80c8bfd808556d7b8076cfc7ab45529cbaa100e802"
       ]
+    },
+    {
+      "seq": 20,
+      "bp_id": "VITA-PUB-BP-0021",
+      "bp_file": "governance/publication/breakpoints/0021-historical-atom-custody-gap.json",
+      "bp_file_sha256": "3b727f1be251a8a1349d2351ac56baa5e97acb005ac23eef1a94d491c4f439fa",
+      "bp_root": "dfc5d53caeeef68a6858862d1a1b973fbd2cd31e53e39526598e16a5b924d1cc",
+      "root_kind": "FMO_V1_PUBLICATION_BREAKPOINT_ATOMS",
+      "mmr_leaf": "a663d9f158b2e83acb1d28853346813682ed8d8a09071462d995902ef1e3caf7",
+      "mmr_size": 21,
+      "mmr_root_after": "1fd37b2a46e91f876a5ee48fc6bf1d2e9e4568e091bbdf14dea1f689fc0e16c6",
+      "mmr_peaks_after": [
+        "38225c02b9c0e198d4da872ddc9f9160d7e1c772cbb1da2e69ae4778a5cd07b5",
+        "16346dd446d8fde4d60bde80c8bfd808556d7b8076cfc7ab45529cbaa100e802",
+        "a663d9f158b2e83acb1d28853346813682ed8d8a09071462d995902ef1e3caf7"
+      ]
     }
   ]
 }

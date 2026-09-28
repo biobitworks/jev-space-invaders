@@ -1,14 +1,20 @@
 {
-  "schema": "VITHIA_LOCAL_RELEASE_GATE_RECEIPT_V1",
+  "schema": "VITHIA_LOCAL_RELEASE_GATE_RECEIPT_V2",
   "target_version": "0.1.0",
-  "state": "LOCAL_RELEASE_CANDIDATE_BLOCKED_EXTERNAL",
+  "state": "LOCAL_RELEASE_CANDIDATE_BLOCKED_INTERNAL_AND_EXTERNAL",
   "scientific_evidence_lock": "UFA-JEV-BP-0024",
-  "local_package_breakpoint": "VITA-PUB-BP-0019",
+  "release_package_predecessor": "VITA-PUB-BP-0019",
+  "publication_predecessor": "VITA-PUB-BP-0020",
+  "internal_blockers": [
+    "PUBLICATION_ATOM_REPLAY_GAP_BP0015"
+  ],
   "external_blockers": [
     "LICENSE_NOT_ESTABLISHED_FOR_THIS_RELEASE",
     "HF_WRITE_AUTH_MISSING",
     "ZENODO_AUTH_MISSING"
   ],
+  "publication_mmr_chain_state": "PASS_EXPECTED_PENDING_SUCCESSOR_VERIFICATION",
+  "publication_atom_replay_state": "PARTIAL",
   "tag_state": "NOT_CREATED",
   "zenodo_state": "NOT_CREATED",
   "hf_remote_state": "NOT_CREATED",

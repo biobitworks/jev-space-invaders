@@ -1,0 +1,52 @@
+{
+  "breakpoint_id": "VITA-PUB-BP-0021",
+  "parent": "VITA-PUB-BP-0020",
+  "state": "MMR_CHAIN_INTACT_ATOM_REPLAY_PARTIAL",
+  "project": "VITHIA_0_VITA_1_PUBLICATION",
+  "created_utc": "2026-09-28T06:29:12+00:00",
+  "root_kind": "FMO_V1_PUBLICATION_BREAKPOINT_ATOMS",
+  "bp_root": "dfc5d53caeeef68a6858862d1a1b973fbd2cd31e53e39526598e16a5b924d1cc",
+  "group_roots": {
+    "audit": "6ffeb1ce0a6450188c9c5d3cbf0c853901e717a28d451d5334991c1b9c02718f",
+    "code": "87ac4854d39d2d6bbe242bbb309e47f93b05a5e59b67d0e4281eafcc2e479633",
+    "gate": "5e30847f5c545b89d5c2e76dc01916fef156f9ca7243f3ed5f1da2f49ac4d8de"
+  },
+  "atoms": [
+    {
+      "path": "scripts/verify_publication_breakpoints.py",
+      "kind": "VerifierCodeFCO",
+      "group": "code",
+      "bytes": 4075,
+      "sha256": "4de866e602a55632ba84f32bd8c9a5ebc02907c8a32780dca0c0d19f84af0b20",
+      "location": "public",
+      "fmo_leaf": "87ac4854d39d2d6bbe242bbb309e47f93b05a5e59b67d0e4281eafcc2e479633"
+    },
+    {
+      "path": "publication/audits/BP0015_EPHEMERAL_PYC_CUSTODY_GAP.json",
+      "kind": "CustodyGapReceiptFCO",
+      "group": "audit",
+      "bytes": 1322,
+      "sha256": "03d267e46db5255b5b57126c163898d207a2766936472a3712343b4a202366bf",
+      "location": "public",
+      "fmo_leaf": "6ffeb1ce0a6450188c9c5d3cbf0c853901e717a28d451d5334991c1b9c02718f"
+    },
+    {
+      "path": "publication/LOCAL_RELEASE_GATE_RECEIPT.json",
+      "kind": "ReleaseGateFCO",
+      "group": "gate",
+      "bytes": 799,
+      "sha256": "5397c6bf02fd5a1c7327710ebd29a2a37cf54c26ccbd6c836fa312e7a0efedc4",
+      "location": "public",
+      "fmo_leaf": "5e30847f5c545b89d5c2e76dc01916fef156f9ca7243f3ed5f1da2f49ac4d8de"
+    }
+  ],
+  "stage": "HISTORICAL_ATOM_CUSTODY_GAP_CLASSIFICATION",
+  "affected_breakpoint": "VITA-PUB-BP-0015",
+  "affected_atom": "publication/model/vithia-s0/__pycache__/modeling_vithia_s0.cpython-314.pyc",
+  "mmr_chain_claim": "VERIFY_SEPARATELY",
+  "atom_replay_claim": "PARTIAL",
+  "scientific_claim_mutation": false,
+  "publish_authorized": false,
+  "claim_ceiling": "IDENTITY_AND_INCLUSION_ONLY; publication roots do not establish scientific truth",
+  "signature_state": "NOT_SIGNED"
+}

@@ -1,0 +1,14 @@
+{
+  "schema": "VITHIA_HISTORICAL_ATOM_CUSTODY_GAP_V1",
+  "state": "HISTORICAL_ATOM_UNRECOVERABLE",
+  "affected_breakpoint": "VITA-PUB-BP-0015",
+  "affected_path": "publication/model/vithia-s0/__pycache__/modeling_vithia_s0.cpython-314.pyc",
+  "recorded_bytes": 2638,
+  "recorded_sha256": "c210bc3ce218d2034040dc8d10b461fdba9e0d310bafce9c21a46725acec92d8",
+  "finding": "The breakpoint metadata and MMR leaf remain available, but the exact atom bytes are not recoverable from the publication Git history. The atom was ephemeral Python bytecode and was removed from the current model package.",
+  "bounded_recovery_attempt": "A filesystem search was started across selected MagicStudio user, project, and temporary locations and terminated after extended runtime with no matching candidate reported before termination. This is not evidence that no other copy exists.",
+  "mmr_semantics": "MMR-chain verification uses the committed breakpoint file and recorded atom metadata. It establishes ordered commitment integrity, not current atom availability or scientific truth.",
+  "scientific_claim_mutation": false,
+  "correction": "Future and current release packages exclude __pycache__ and .pyc artifacts. Full historical atom replay remains PARTIAL unless the exact bytes are recovered.",
+  "signature_state": "NOT_SIGNED"
+}
