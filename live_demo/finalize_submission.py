@@ -45,7 +45,12 @@ def main():
     if not public_url(a.demo_video_url):
         raise SystemExit("DEMO_URL_INVALID")
     try:
-        with urllib.request.urlopen(a.demo_video_url, timeout=20) as r:
+        check = urllib.request.Request(
+            a.demo_video_url,
+            headers={"User-Agent": "Mozilla/5.0 VithiaSpaceSubmissionCheck/1.0"},
+            method="GET",
+        )
+        with urllib.request.urlopen(check, timeout=20) as r:
             if r.status >= 400:
                 raise SystemExit(f"DEMO_URL_HTTP_{r.status}")
     except Exception as e:
