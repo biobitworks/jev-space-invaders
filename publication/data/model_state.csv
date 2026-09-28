@@ -1,0 +1,7 @@
+model_or_lane,state,note
+JEV hosted,NOT_TESTED,No hosted JEV counted run in v0.1.0
+OpenJEV local stand-in,NOT_TESTED,Prospective E4B successor
+System One adapter baseline,NOT_TESTED,Prospective E4B/E4C successor
+Liquid AI,NOT_TESTED,Prospective portability successor
+Ollama/Ollarma,NOT_TESTED,Prospective portability successor
+Vithia-S0,IMPLEMENTED,Deterministic context compiler; no learned weights in this release

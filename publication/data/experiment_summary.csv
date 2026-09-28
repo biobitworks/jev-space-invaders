@@ -1,0 +1,6 @@
+experiment,purpose,state,replay
+E0,Exact addressability,SUPPORTED,REPLAY_LEVEL_4
+E1,Elementary cellular automata,PARTIAL,REPLAY_LEVEL_4
+E2,Context/history in Life,SUPPORTED,REPLAY_LEVEL_4
+E3,Hidden-world uncertainty,SUPPORTED,REPLAY_LEVEL_2
+E4A,Space Invaders snapshot freeze,INPUT_FROZEN_NO_DECIDER_CALLS,REPLAY_VERIFIED_INPUT

@@ -1,0 +1,11 @@
+scope,item,state,note
+E1,H1d,NOT_SUPPORTED,rank-1 fraction 0.806 below 0.90 preregistered threshold
+E1,H1e,FAIL_TO_REJECT_H0,metric non-discriminating; medians both 1
+E1,H1e_v2,FAIL_TO_REJECT_H0,prospective successor also did not reject H0
+E3,Replay,REPLAY_LEVEL_2,frozen inputs match but output rows differ from rehearsal runtime
+E3,Size limit,ABSTAIN_SIZE_LIMIT,66 states / 6484 cells excluded by preregistered abstention rule
+E4A,Downstream model,NOT_TESTED,frozen input only; no decider calls
+Framework,DeltaGStar,NOT_COMPUTED,private successor component not computed here
+Replication,Cross-host,DEFERRED_NOT_FAILED,magicPRObox unavailable during this build
+Evidence,Biological transfer,NOT_TESTED,all current evidence is simulated
+Integrity,Signature,NOT_SIGNED,no verified cryptographic signing

@@ -1,0 +1,110 @@
+{
+  "breakpoint_id": "VITA-PUB-BP-0005",
+  "parent": "VITA-PUB-BP-0004",
+  "state": "RESULTS_DATA_FROZEN",
+  "project": "VITHIA_0_VITA_1_PUBLICATION",
+  "created_utc": "2026-09-28T05:33:20+00:00",
+  "root_kind": "FMO_V1_PUBLICATION_BREAKPOINT_ATOMS",
+  "bp_root": "1641237074ba2570638b852b7fa61984075257d6e264e298014214c224476c5f",
+  "group_roots": {
+    "code": "462713654e4f051747e5d6cdeca35b76c9529af532f2c398751d6446ff822c74",
+    "results_data": "ab7e4fe3678e36410e775b75fedc393928816e94cbc2a92198dd5552d397bcfe",
+    "source": "45fd3d20381f264a06426675764ce4a454f06ff82fa9a1eac906e98f5addd14f"
+  },
+  "atoms": [
+    {
+      "path": "publication/data/experiment_summary.csv",
+      "kind": "PublicationDataFCO",
+      "group": "results_data",
+      "bytes": 334,
+      "sha256": "b7f2ef34e2bc7c49ca91d3a4beb689f405c838b78e82ad34e281bd527e40cca8",
+      "location": "public",
+      "fmo_leaf": "b0891bc1ec60140afffbaec193492d95b51ada6cf8ce9e85cb6fadc191b193cf"
+    },
+    {
+      "path": "publication/data/claim_outcomes.csv",
+      "kind": "PublicationDataFCO",
+      "group": "results_data",
+      "bytes": 545,
+      "sha256": "ce78aa17ba34a14b07fb6c20ff6d713c5e25e2b87d6bf2cdb7bc0a92a2c0842d",
+      "location": "public",
+      "fmo_leaf": "2d41f4b596d6f396c6ff86a909cbb9dd3c1f7a028a96b91d6e004f091fd13af0"
+    },
+    {
+      "path": "publication/data/scientific_breakpoints.csv",
+      "kind": "PublicationDataFCO",
+      "group": "results_data",
+      "bytes": 3626,
+      "sha256": "e68301a240f30503d2aad7319b2bf6f13652bf1138ca0131fd620b314a9f41d1",
+      "location": "public",
+      "fmo_leaf": "adebabd813838e636e163091a2e628bdeb9b082b21278b215b0d303448c12430"
+    },
+    {
+      "path": "publication/data/model_state.csv",
+      "kind": "PublicationDataFCO",
+      "group": "results_data",
+      "bytes": 423,
+      "sha256": "6b3400758085b62ef8a4293c7a1c3cc68d6f38bbb0874089fdd7ebcb24ebf322",
+      "location": "public",
+      "fmo_leaf": "c3ca8ba32e1801200e7117054d3ce85c4f5920f8daa942b292c9d18e8985fc2d"
+    },
+    {
+      "path": "publication/data/limitations.csv",
+      "kind": "PublicationDataFCO",
+      "group": "results_data",
+      "bytes": 812,
+      "sha256": "a444eebad79182e66cae9f88b1f1c213fb48f451d6ea28db5c2afe5ab94025d8",
+      "location": "public",
+      "fmo_leaf": "3639b0b592a57f4ba0b5b9ac218d0ebaa4716308a767599485b8d3b6ff3a07ee"
+    },
+    {
+      "path": "publication/data/plot_data.json",
+      "kind": "PublicationDataFCO",
+      "group": "results_data",
+      "bytes": 1421,
+      "sha256": "bece68188c6d98adaba7bd1d5abbabeaa6288b32b5eb2218ebb71b81df071d24",
+      "location": "public",
+      "fmo_leaf": "5cf1d7dd08f31b3a87e9bfd9ae0876e8b8cc122d41ffc49b7744a95137e49d76"
+    },
+    {
+      "path": "publication/data/BUILD_RESULTS_RECEIPT.json",
+      "kind": "PublicationDataFCO",
+      "group": "results_data",
+      "bytes": 82,
+      "sha256": "c99e2c0e22e4a449bdb9573c35448e92e950e75d9ef6b6efc4b7feae35e70f57",
+      "location": "public",
+      "fmo_leaf": "e6e4646e4b7eecefb2859808ebfb91974faa90691ac1b089a8dd57ef5703d223"
+    },
+    {
+      "path": "evidence/statistical_successor/STATISTICAL_ANALYSIS.json",
+      "kind": "DerivedEvidenceFCO",
+      "group": "source",
+      "bytes": 2292,
+      "sha256": "9ac16e0dd207db3281cec221ff5f5ce099c064718f58d5fa213873aa30eef71f",
+      "location": "public",
+      "fmo_leaf": "306fe3b23d818119460ae9cfee7fbbc42cf528ea8699e0640ec03bc7cfce7b30"
+    },
+    {
+      "path": "vita01/PUBLICATION_CLAIM_LEDGER.json",
+      "kind": "ScientificClaimLedgerFCO",
+      "group": "source",
+      "bytes": 5330,
+      "sha256": "463a0273be931c7299fe36e1cfc72d60a85551254066d1f14211a2b43be057bd",
+      "location": "public",
+      "fmo_leaf": "d9c62277568fb47687d27d58c179a5cc94e7822ab9e4210776299ab82eff2111"
+    },
+    {
+      "path": "scripts/build_results_tables.py",
+      "kind": "CodeFCO",
+      "group": "code",
+      "bytes": 6454,
+      "sha256": "72d848d9c27af40ae55dcc05317de23d0edb806d9c68317c3511f7e0da74cb7c",
+      "location": "public",
+      "fmo_leaf": "462713654e4f051747e5d6cdeca35b76c9529af532f2c398751d6446ff822c74"
+    }
+  ],
+  "stage": "RESULTS_DATA_FREEZE",
+  "manual_numeric_transcription": false,
+  "claim_ceiling": "IDENTITY_AND_INCLUSION_ONLY; publication roots do not establish scientific truth",
+  "signature_state": "NOT_SIGNED"
+}

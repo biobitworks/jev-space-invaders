@@ -1,0 +1,58 @@
+{
+  "E1": {
+    "h1d_fraction": 0.8059895833333334,
+    "h1d_ci": [
+      0.7765278921028996,
+      0.8324054511747713
+    ],
+    "threshold": 0.9,
+    "h1e_delta": 0.0,
+    "h1e_v2_delta": -0.00701904296875
+  },
+  "E2": {
+    "matched_units": 52,
+    "mean_accuracy_difference_correct_minus_shuffled": 0.08653846153846154,
+    "bootstrap95_accuracy_difference": [
+      0.019230769230769232,
+      0.16346153846153846
+    ],
+    "mean_unknown_difference_no_history_minus_correct": 1.0,
+    "bootstrap95_unknown_difference": [
+      1.0,
+      1.0
+    ],
+    "original_state": "SUPPORTED"
+  },
+  "E3": {
+    "H3b": {
+      "pairs": 200,
+      "mean_paired_gain_difference": 0.20515706,
+      "median_paired_gain_difference": 0.0,
+      "paired_cohen_dz": 0.16842316774264438,
+      "bootstrap95_mean_difference": [
+        0.03791179662500002,
+        0.3774886713749999
+      ],
+      "original_state": "SUPPORTED"
+    },
+    "H3c": {
+      "pairs": 200,
+      "mean_signed_actual_minus_eig": 0.04493295499999995,
+      "abs_mean_gap": 0.04493295499999995,
+      "bootstrap95_signed_mean": [
+        -0.07003615625000006,
+        0.17089338862499995
+      ],
+      "bootstrap95_abs_mean_gap": [
+        0.07013741112500005,
+        0.1712627756249999
+      ],
+      "original_state": "SUPPORTED"
+    },
+    "abstention": {
+      "states": 66,
+      "total_states": 367,
+      "fraction": 0.17983651226158037
+    }
+  }
+}

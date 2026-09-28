@@ -58,6 +58,21 @@
       "mmr_peaks_after": [
         "9a2259c82477edc3c3643691d87dbd0f4461983e9f3d6878584835644e5bda72"
       ]
+    },
+    {
+      "seq": 4,
+      "bp_id": "VITA-PUB-BP-0005",
+      "bp_file": "governance/publication/breakpoints/0005-results-data-freeze.json",
+      "bp_file_sha256": "00769d591a132260ce962a67ee264d0a7263e45510e1e1b50a1d1586e83535a4",
+      "bp_root": "1641237074ba2570638b852b7fa61984075257d6e264e298014214c224476c5f",
+      "root_kind": "FMO_V1_PUBLICATION_BREAKPOINT_ATOMS",
+      "mmr_leaf": "3cd805719909545f78a487d9a8984c6da3bf4b17a159a0fd050aafd30cb5462a",
+      "mmr_size": 5,
+      "mmr_root_after": "ef5a0c7a62c5440927d7d740a8b5b119713ffc377b03d4710899736f9bfa6e9c",
+      "mmr_peaks_after": [
+        "9a2259c82477edc3c3643691d87dbd0f4461983e9f3d6878584835644e5bda72",
+        "3cd805719909545f78a487d9a8984c6da3bf4b17a159a0fd050aafd30cb5462a"
+      ]
     }
   ]
 }
