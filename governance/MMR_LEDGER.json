@@ -513,6 +513,21 @@
         "026514586974a2fb18c9fefe6f92208e2008b44751f5380417c4129b185b831f",
         "63c2f01e4b4281b332d4aa003a9458c8eaddb2839e70e31bdead9cdb637fef85"
       ]
+    },
+    {
+      "seq": 33,
+      "bp_id": "UFA-JEV-BP-0034",
+      "bp_file": "governance/breakpoints/0034-e1r-execution-amendment.json",
+      "bp_file_sha256": "e0778c78b48b337fe2354131e8ad7c569846b901cd3a087ba161b0f1f7432f34",
+      "bp_root": "3fa28fc6842cbb66a962f6dddba2eba8da5ed73261adb1359e7b216a1aca1dfa",
+      "root_kind": "FMO_V1_BREAKPOINT_ATOMS",
+      "mmr_leaf": "8131de0170aff69c74dd622a9467ec7ab9f60fe1faf8713d791d76437a20d3ff",
+      "mmr_size": 34,
+      "mmr_root_after": "01094278996bfaaf51848bb86a3ea506d19303d32a87aacd099a0d7e372663d8",
+      "mmr_peaks_after": [
+        "026514586974a2fb18c9fefe6f92208e2008b44751f5380417c4129b185b831f",
+        "3e38eaff0f1f7aab4837c8d82636aae736b555dd7cc9298e90ba9fae888a3b77"
+      ]
     }
   ]
 }

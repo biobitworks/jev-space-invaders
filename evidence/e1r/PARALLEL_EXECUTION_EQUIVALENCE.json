@@ -1,0 +1,17 @@
+{
+  "metrics_mutated": false,
+  "parallel_sha256": "b686cf997890a094cd9b0d1d8e1335f72b35e7ed264db38131b83bd510e3b673",
+  "parallel_workers": 8,
+  "pre_result_attempt": {
+    "elapsed_seconds_at_last_report": 165.1,
+    "last_reported_rule_completed": 32,
+    "result_breakpoint_created": false,
+    "state": "ABORTED_FOR_PERFORMANCE_BEFORE_RESULT_SERIALIZATION"
+  },
+  "rule": 30,
+  "schema": "E1R_PARALLEL_EXECUTION_EQUIVALENCE_V1",
+  "scientific_design_mutated": false,
+  "seed_contract_mutated": false,
+  "sequential_sha256": "b686cf997890a094cd9b0d1d8e1335f72b35e7ed264db38131b83bd510e3b673",
+  "state": "BYTE_IDENTICAL_PASS"
+}

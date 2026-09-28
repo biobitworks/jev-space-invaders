@@ -1,0 +1,51 @@
+{
+  "breakpoint_id": "UFA-JEV-BP-0034",
+  "parent": "UFA-JEV-BP-0033",
+  "state": "EXECUTION_PARALLELIZATION_BYTE_IDENTICAL_EQUIVALENCE",
+  "project": "VITHIA_SPACE",
+  "created_utc": "2026-09-28T07:38:27+00:00",
+  "git_head_at_creation": "bddbcad9875019633205280a2e937c48cb776924",
+  "root_kind": "FMO_V1_BREAKPOINT_ATOMS",
+  "bp_root": "3fa28fc6842cbb66a962f6dddba2eba8da5ed73261adb1359e7b216a1aca1dfa",
+  "group_roots": {
+    "amendment": "274aa6948b69bfb7f84ae5c3497f215b3f159245dab5086143f3529f046d0593",
+    "code": "837719bf05c2cdf13482d613a72168a212fefdade546e3a5551019c9eb8a84fd"
+  },
+  "atoms": [
+    {
+      "path": "evidence/e1r/PARALLEL_EXECUTION_EQUIVALENCE.json",
+      "kind": "ExecutionReceiptFCO",
+      "group": "amendment",
+      "bytes": 632,
+      "sha256": "b9c0469872b56c812d46dca8f02de18b107dfc20e02eebbb3f8bc3d88e3fec83",
+      "location": "public",
+      "fmo_leaf": "f734ce3222800eecd03321a1a324b4b6ee8cd9a405c19d67fee2bc237c8175d8"
+    },
+    {
+      "path": "docs/prereg/E1R_EXECUTION_IMPLEMENTATION_AMENDMENT.md",
+      "kind": "PreregistrationAmendmentFCO",
+      "group": "amendment",
+      "bytes": 509,
+      "sha256": "e6ab398dfc6fbad4253aaa2b98d405aad3dde37096fd2f39e1be48a8d3650713",
+      "location": "public",
+      "fmo_leaf": "feb027bcc15ca438400b936ff1d4a9cc44270a7addf8c9b7273fd042e9f7c824"
+    },
+    {
+      "path": "scripts/e1r_resume_parallel.py",
+      "kind": "CodeFCO",
+      "group": "code",
+      "bytes": 28578,
+      "sha256": "f4fb857aea76ad9e3b16ea141dce49af57ee4f15c134a363794ee0d224123d92",
+      "location": "public",
+      "fmo_leaf": "837719bf05c2cdf13482d613a72168a212fefdade546e3a5551019c9eb8a84fd"
+    }
+  ],
+  "stage": "E1R_EXECUTION_IMPLEMENTATION_AMENDMENT",
+  "scientific_design_mutated": false,
+  "equivalence": "BYTE_IDENTICAL_PASS",
+  "scientific_parent_commit": "4c1bbb19b89a7ee1e1dee662cfd0f227186ebafd",
+  "scientific_parent_breakpoint": "UFA-JEV-BP-0028",
+  "scientific_parent_mmr_root": "5f742663f7e0c12e100e292cc794eefb0360a068a5c20c2b1be019ace1cb298b",
+  "claim_ceiling": "IDENTITY_AND_INCLUSION_ONLY; hashes do not establish correctness",
+  "signature_state": "NOT_SIGNED"
+}
