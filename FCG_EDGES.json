@@ -115,6 +115,24 @@
       "type": "BREAKPOINT_BINDS_DATASET",
       "from": "CONV_FCO:VITHIA_SPACE:20260927:SPONSOR_SOURCE_FREEZE_001",
       "to": "FCO:VITHIA_SPACE_SPONSOR_SOURCE_DATASET:20260927:001"
+    },
+    {
+      "edge_id": "E20",
+      "type": "GENERATES_KEY",
+      "from": "FCO:FRAME_CUSTODY_PIPELINE:V1",
+      "to": "FCO:FRAME_CUSTODY_PUBLIC_KEY:frame-custody-ed25519-v1"
+    },
+    {
+      "edge_id": "E21",
+      "type": "PRODUCES_DATASET",
+      "from": "FCO:FRAME_CUSTODY_PIPELINE:V1",
+      "to": "FCO:PLAYTHROUGH_SMOKE_20260928:seed1"
+    },
+    {
+      "edge_id": "E22",
+      "type": "SIGNED_BY",
+      "from": "FCO:PLAYTHROUGH_SMOKE_20260928:seed1",
+      "to": "FCO:FRAME_CUSTODY_PUBLIC_KEY:frame-custody-ed25519-v1"
     }
   ]
 }

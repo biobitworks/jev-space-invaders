@@ -9,3 +9,5 @@ entry.local.json
 .secrets/
 *.local.json
 entry.resubmit.local.json
+.local_keystore/
+*.private.pem

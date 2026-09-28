@@ -191,6 +191,46 @@
         "transition_identity": "SPONSOR_SOURCE_DATASET_FREEZE",
         "conversation_turn_merkle": "NOT_COMPUTED"
       }
+    },
+    {
+      "fco_id": "FCO:FRAME_CUSTODY_PIPELINE:V1",
+      "type": "ProvenancePipelineFCO",
+      "state": "IMPLEMENTED_AND_SMOKE_VERIFIED",
+      "attributes": {
+        "modules": ["src/frame_custody.py", "scripts/record_governed_playthrough.py",
+                    "scripts/verify_playthrough_custody.py"],
+        "levels": "FrameContentFCO (raw RGB sha256) -> FrameOccurrenceFCO (PNG artifact, Ed25519 signature, provenance metadata) -> FrameBreakpointFCO (frame-local Merkle root) -> playthrough MMR",
+        "content_vs_artifact_separation": "raw_rgb_content_sha256 is computed from the untouched ALE frame (the same bytes the model/perception pipeline sees); png_artifact_sha256 is a separate field for the encoded PNG. No pixel data is modified for provenance purposes.",
+        "not_implemented": "pixel-level steganographic embedding was proposed and explicitly declined; public key is published in plaintext, not embedded in frames"
+      }
+    },
+    {
+      "fco_id": "FCO:FRAME_CUSTODY_PUBLIC_KEY:frame-custody-ed25519-v1",
+      "type": "PublicKeyFCO",
+      "state": "GENERATED",
+      "attributes": {
+        "algorithm": "Ed25519",
+        "key_id": "frame-custody-ed25519-v1",
+        "public_key_path": "evidence/competition/frames/FRAME_CUSTODY_PUBLIC_KEY.pem",
+        "public_key_fingerprint": "c5e12498288492521581ae8c95839c2e6d09469edc5650cc0e9e54dbde03c6c8",
+        "private_key_location": ".local_keystore/ (gitignored, never committed)"
+      }
+    },
+    {
+      "fco_id": "FCO:PLAYTHROUGH_SMOKE_20260928:seed1",
+      "type": "PlaythroughCustodyDatasetFCO",
+      "state": "SMOKE_VERIFIED",
+      "attributes": {
+        "label": "SETUP_SMOKE_NON_SUBMISSION_NON_EXPERIMENTAL",
+        "seed": 1,
+        "frame_count": 24,
+        "decider": "scripted-policy",
+        "mmr_size": 24,
+        "mmr_root": "3f882e795ef6f0a46da7fd3024ded2c9be6fbdeaf06d7e5b50c0199398c6c796",
+        "verification_receipt": "evidence/competition/frames/smoke/PLAYTHROUGH_MMR_VERIFICATION_RECEIPT.json",
+        "verify_state": "PASS",
+        "not_the_final_submission_demo": true
+      }
     }
   ]
 }

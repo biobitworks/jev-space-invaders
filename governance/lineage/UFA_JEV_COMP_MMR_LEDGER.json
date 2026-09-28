@@ -177,6 +177,25 @@
         "c930d2260ea6a1090f97c79c1b0a96be38996ed7c81b2da08570ed2b37079e31",
         "485a5b14565fcfdf70a35dd5bd177aff58ff0a688201e14273ba289527feb88d"
       ]
+    },
+    {
+      "seq": 10,
+      "bp_id": "UFA-JEV-COMP-BP-0011",
+      "bp_file": "governance/competition/breakpoints/0011-preparation-for-codex-handoff.json",
+      "bp_file_sha256": "26cf1d97d641fdd1714d4677169cbafadf383b173bbd82c062f365b83adb7802",
+      "bp_root": "eb5e1070867cc26f118dad32cf6105fa75831a21e813f9f92c4693fc87e040c5",
+      "branch": "competition/final-integration-v01",
+      "lineage_id": "UFA-JEV-COMP",
+      "parent_root": "dd1bee1740ec3de4654504cb662ff433583bb00feac4ed82e1e581b176c2c608",
+      "root_kind": "FMO_V1_BREAKPOINT_ATOMS",
+      "mmr_leaf": "1df088a616fb9fa24e991770db0002a0654de1429c0814112d6805dcb5b82097",
+      "mmr_size": 11,
+      "mmr_root_after": "a9f91de58e0abfd0c0943a30a5afdeb0fc39200efa1dc6d21c530385288acf4f",
+      "mmr_peaks_after": [
+        "c930d2260ea6a1090f97c79c1b0a96be38996ed7c81b2da08570ed2b37079e31",
+        "485a5b14565fcfdf70a35dd5bd177aff58ff0a688201e14273ba289527feb88d",
+        "1df088a616fb9fa24e991770db0002a0654de1429c0814112d6805dcb5b82097"
+      ]
     }
   ],
   "lineage_id": "UFA-JEV-COMP",

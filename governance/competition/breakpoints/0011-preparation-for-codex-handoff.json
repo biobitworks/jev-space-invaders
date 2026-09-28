@@ -1,0 +1,155 @@
+{
+  "schema": "UFA_JEV_QUALIFIED_BREAKPOINT_V1",
+  "lineage_id": "UFA-JEV-COMP",
+  "branch": "competition/final-integration-v01",
+  "breakpoint_id": "UFA-JEV-COMP-BP-0011",
+  "state": "PREPARATION_FOR_CODEX_HANDOFF_COMPLETE",
+  "project": "VITHIA_SPACE",
+  "created_utc": "2026-09-28T21:05:34+00:00",
+  "git_head_at_creation": "ae4955674ec95475e4f0d57cd7e3d8fabf9c4dde",
+  "root_kind": "FMO_V1_BREAKPOINT_ATOMS",
+  "bp_root": "eb5e1070867cc26f118dad32cf6105fa75831a21e813f9f92c4693fc87e040c5",
+  "breakpoint_root": "eb5e1070867cc26f118dad32cf6105fa75831a21e813f9f92c4693fc87e040c5",
+  "parent_root": "dd1bee1740ec3de4654504cb662ff433583bb00feac4ed82e1e581b176c2c608",
+  "group_roots": {
+    "framecustody": "d9b69b50bb9425f5cb3d9753c55111431a93b4830ea93cce81f837ad572d8da7",
+    "governance": "160ba04d61b087d6596b6b3e78176eab67226feb4936ef3b46e738cbbdafa7c3",
+    "redteam": "bafac0876f23a3e17dea069c2bdb1bfa89cf5dc87d5155c44756a3e39afdc901",
+    "twoplayer": "210a5be89a1a6d2949bb12c5131feedf072d04575f7d22c36e47d4616364a78d"
+  },
+  "atoms": [
+    {
+      "path": "requirements-2p.txt",
+      "kind": "DepFCO",
+      "group": "twoplayer",
+      "bytes": 494,
+      "sha256": "8d31743f9172923cc21cf3e57cc35a8d75ef6f6a5bcb66702bffbd3aa3dfb8dd",
+      "location": "public",
+      "fmo_leaf": "6b8633ed412dc2f91cff53a7277da9dd746f9ed654d32e305add9fa2064564e0"
+    },
+    {
+      "path": "evidence/competition/twoplayer/TWO_PLAYER_DEPENDENCY_MANIFEST.json",
+      "kind": "TwoPlayerFCO",
+      "group": "twoplayer",
+      "bytes": 2150,
+      "sha256": "c416e55cf693b6a05b3962afdea7b67ddb6bbd73b77913b61739cc6a6055060a",
+      "location": "public",
+      "fmo_leaf": "de359d11d6b27b6cafaca6eed70e41abf4c980f798d4f49e07da0f8e55ac2494"
+    },
+    {
+      "path": "evidence/competition/twoplayer/TWO_PLAYER_ROM_GATE_RECEIPT.json",
+      "kind": "TwoPlayerFCO",
+      "group": "twoplayer",
+      "bytes": 1428,
+      "sha256": "2b38ddffa82dac9e20f4babcec6a75fd6b186e7a2d9be7fdd685eb37c5ba129c",
+      "location": "public",
+      "fmo_leaf": "fc5f7ebd23a1d498cdeeb4576decc82c8217f78e8a598d5113bf9922f2fc53c0"
+    },
+    {
+      "path": "evidence/competition/twoplayer/TWO_PLAYER_CODE_READINESS_RECEIPT.json",
+      "kind": "TwoPlayerFCO",
+      "group": "twoplayer",
+      "bytes": 2748,
+      "sha256": "df0efb4ba42f9072ad9c7208a07c85988c89259348623d6756d1b5ff5335c115",
+      "location": "public",
+      "fmo_leaf": "923463ccc3e5ba04f54b9434568e301deaaa0ef12a44b965236eb988fcdd0b22"
+    },
+    {
+      "path": "src/frame_custody.py",
+      "kind": "CodeFCO",
+      "group": "framecustody",
+      "bytes": 4899,
+      "sha256": "5772aa5b3989f5a336e8527b7d239c7467d5bd58bb3be532958a2c100720edcb",
+      "location": "public",
+      "fmo_leaf": "dec9f33c91dc683bd8997245a0de5afa186610c710efba558eac2f0b85ddc0ed"
+    },
+    {
+      "path": "scripts/record_governed_playthrough.py",
+      "kind": "CodeFCO",
+      "group": "framecustody",
+      "bytes": 3542,
+      "sha256": "7ee3642e84427d2f5726517b8fb47d504a23e1bc9df6ec6f7b7eee7d4b82b1ef",
+      "location": "public",
+      "fmo_leaf": "1e86f95dbd9b97396dd92071732e4e3c8c542abe8d528b612cbf67267a81f49e"
+    },
+    {
+      "path": "scripts/verify_playthrough_custody.py",
+      "kind": "CodeFCO",
+      "group": "framecustody",
+      "bytes": 3518,
+      "sha256": "b26453d38d9397d09240764e72d09b55e0a23056ca012fb62fa8627cfcdeea2e",
+      "location": "public",
+      "fmo_leaf": "d7fdef7a697424d4873015365b8fa6f2c9fc9ea24d05b2271e95c70f770b3c02"
+    },
+    {
+      "path": "scripts/render_playthrough_video.py",
+      "kind": "CodeFCO",
+      "group": "framecustody",
+      "bytes": 3010,
+      "sha256": "ae5cf70d0318436ac45850b3405d46b526bf8c9e1b1d2ebd5402ba41c4c7e22c",
+      "location": "public",
+      "fmo_leaf": "937920911e36aeaa98884a6ffe6d142d7d5aee1e2f5ef83bbf12ce72652eb1b8"
+    },
+    {
+      "path": "tools/playthrough_tui.py",
+      "kind": "CodeFCO",
+      "group": "framecustody",
+      "bytes": 1570,
+      "sha256": "fe1ebce25480feb0887fd75191dd5946857b52f18b7127fee8ddb9c7415942eb",
+      "location": "public",
+      "fmo_leaf": "f7fc5334418b96c7df8248eab65ab58382c0abf8a552158912523f06e12b11f7"
+    },
+    {
+      "path": "evidence/competition/frames/smoke/PLAYTHROUGH_MMR_CONSTRUCTION_RECEIPT.json",
+      "kind": "PlaythroughFCO",
+      "group": "framecustody",
+      "bytes": 625,
+      "sha256": "451e501d27fe1a38b4978461834ea815f8397e8149fd93c486fe75940191620f",
+      "location": "public",
+      "fmo_leaf": "e9b5feb874235a35b4b8f9013765f08a22529e854337028b37efa3594fd8c6c0"
+    },
+    {
+      "path": "evidence/competition/frames/smoke/PLAYTHROUGH_MMR_VERIFICATION_RECEIPT.json",
+      "kind": "PlaythroughFCO",
+      "group": "framecustody",
+      "bytes": 314,
+      "sha256": "e67f4809a4748c55198461c458f6e5258ba35fb1b7c0fc26831c1b62211391af",
+      "location": "public",
+      "fmo_leaf": "8a11678fd6ed7919296f514d102524c97fe266a1be715f6d3b7919a13ae95b1a"
+    },
+    {
+      "path": "evidence/competition/redteam/PRE_EXECUTION_RED_TEAM_REPORT.md",
+      "kind": "RedTeamFCO",
+      "group": "redteam",
+      "bytes": 3733,
+      "sha256": "aa1e1ec191762b00b95c55221cf783359175affe9077b002ec2c9462b3ef2b37",
+      "location": "public",
+      "fmo_leaf": "bafac0876f23a3e17dea069c2bdb1bfa89cf5dc87d5155c44756a3e39afdc901"
+    },
+    {
+      "path": "FCO_REGISTRY.json",
+      "kind": "GovernanceFCO",
+      "group": "governance",
+      "bytes": 8530,
+      "sha256": "9cd9ed167aa6e24ce309ad4274ddbb20c194162e80f757e0bc53a0ef6081a85e",
+      "location": "public",
+      "fmo_leaf": "12f86fbc1df9d32f3125bfbe75b272859a6a7a1c9f6976a816398b84b3ef4b69"
+    },
+    {
+      "path": "FCG_EDGES.json",
+      "kind": "GovernanceFCO",
+      "group": "governance",
+      "bytes": 4269,
+      "sha256": "d13a0651da95a151f8c148aca28a9ad5064ce40987e10a3f5bccae43622d17d1",
+      "location": "public",
+      "fmo_leaf": "b0a6a9c0ec3aa769bff766be28b1325bdda0fd4dcaf413f96598bbdc86a2f0c1"
+    }
+  ],
+  "historical_mutation_performed": false,
+  "mmr_reconciliation_performed": false,
+  "two_player_implementation": "REAL_GATED",
+  "frame_custody_state": "IMPLEMENTED_AND_SMOKE_VERIFIED",
+  "note": "Preparation-only pass. No ROM acquired, no video rendered (operator-stopped), no pixel steganography implemented (proposed and explicitly declined). Mitosis/Tenki untouched (owned by a separate concurrent session, still at BP-0008 as of this seal).",
+  "claim_ceiling": "IDENTITY_AND_INCLUSION_ONLY; hashes do not establish correctness",
+  "signature_state": "NOT_SIGNED"
+}

@@ -1,0 +1,99 @@
+{
+  "schema": "CLAUDE_TO_CODEX_FINAL_EXECUTION_HANDOFF_V1",
+  "created_utc": "2026-09-28T21:40:00Z",
+  "lineage_id": "UFA-JEV-COMP",
+
+  "CANONICAL_BRANCH": "competition/final-integration-v01",
+  "CANONICAL_HEAD": "PENDING_THIS_COMMIT",
+  "ORIGIN_HEAD": "PENDING_THIS_PUSH",
+  "note_on_canonical_branch": "competition/qualified-lineage-v01 is the parent lineage (verified MMR size 10 before this pass); this branch (final-integration-v01) is its admitted successor, 1 breakpoint ahead (UFA-JEV-COMP-BP-0011) after this preparation pass.",
+
+  "WRITER_AUTHORITY": "TRANSFER_TO_CODEX_AFTER_VERIFICATION",
+  "writer_authority_note": "Claude held writer authority only for this preparation phase and stops writing after this commit+push. Codex should independently re-verify everything below (recompute hashes, re-run verify_competition_lineage.py, re-check the FCO registry) before treating any of it as ground truth, per this whole session's established discipline of not trusting prompts/claims over recomputed evidence.",
+
+  "ONE_PLAYER_STATE": "READY",
+
+  "TWO_PLAYER_IMPLEMENTATION": "REAL_GATED",
+  "TWO_PLAYER_MOCK": "NO",
+  "PETTINGZOO_STATE": "INSTALLED_AND_IMPORT_VERIFIED",
+  "pettingzoo_detail": "Isolated venv on magicSTUDIObox (/Volumes/magicBLACKbox/vithia-space-execution/pettingzoo-2p-venv, Python 3.12, pettingzoo==1.27.0). Not merged into base requirements.txt. See requirements-2p.txt and evidence/competition/twoplayer/TWO_PLAYER_DEPENDENCY_MANIFEST.json.",
+  "TWO_PLAYER_CODE_STATE": "CODE_READY",
+  "ROM_GATE_STATE": "BLOCKED",
+  "rom_gate_detail": "ROM_BYTES_PRESENT=UNKNOWN (no path configured anywhere in this repo to check; no broad filesystem search performed per instruction). LICENSE_DECISION_NOT_MADE. See evidence/competition/twoplayer/TWO_PLAYER_ROM_GATE_RECEIPT.json.",
+  "TWO_PLAYER_EXECUTION_STATE": "NOT_TESTED",
+
+  "MITOSIS_STATE": "PARTIAL",
+  "TENKI_STATE": "SUPPORTED",
+  "mitosis_tenki_note": "Not touched in this pass. Both are owned by a separate, concurrent in-flight session (breakpoints UFA-JEV-COMP-BP-0005..0008 on competition/qualified-lineage-v01, authored before this branch was created). As of this handoff that session's governance/multimodel/STATUS.json is still at latest_breakpoint=UFA-JEV-COMP-BP-0008, stage=TENKI_SANDBOX_MITOSIS_FED_RUN_EXECUTED, next_action='record video and execute Mitosis load-bearing ablation' - unchanged since first observed, suggesting it may also be stalled at the video step. Its Tenki sandbox (session 01a0e9b9-dbf4-77ff-8d28-2e057cb00cbc) was last observed RUNNING/sticky with teardown held. Codex should check whether that session is still active before assuming it is safe to act on Mitosis/Tenki.",
+
+  "FRAME_CAPTURE_STATE": "IMPLEMENTED_AND_SMOKE_VERIFIED",
+  "frame_capture_detail": {
+    "modules": ["src/frame_custody.py", "scripts/record_governed_playthrough.py", "scripts/verify_playthrough_custody.py"],
+    "smoke_test": "24 frames, seed=1, scripted-policy, label=SETUP_SMOKE_NON_SUBMISSION_NON_EXPERIMENTAL",
+    "PLAYTHROUGH_VERIFY": "PASS",
+    "recomputed_mmr_root": "3f882e795ef6f0a46da7fd3024ded2c9be6fbdeaf06d7e5b50c0199398c6c796",
+    "signing": "Ed25519, key_id=frame-custody-ed25519-v1, public key committed plaintext at evidence/competition/frames/FRAME_CUSTODY_PUBLIC_KEY.pem, private key in .local_keystore/ (gitignored, never committed)",
+    "declined_design": "Pixel-level steganographic embedding / erasure-coded key-shard distribution across frame pixels was proposed mid-session and explicitly declined: it would have written synthetic data into frames whose purpose is to hash unmodified ALE output. Do not reintroduce this without a concrete reason - the public key is not secret and needs no redundancy scheme."
+  },
+
+  "CANONICAL_VIDEO_PIPELINE_STATE": "CODE_WRITTEN_NOT_EXECUTED",
+  "video_pipeline_note": "scripts/render_playthrough_video.py exists (ffmpeg 9.0.1 confirmed available), refuses to run on an unverified frame corpus, but was never executed - the operator explicitly stopped this step mid-session ('no do not do that just update the FCG or FCO'). No canonical.mp4 exists anywhere. This is the most likely next real step for Codex once the operator gives a go-ahead.",
+
+  "PLAYWRIGHT_VIDEO_STATE": "NOT_AVAILABLE",
+  "playwright_note": "Python playwright module not installed; not attempted (not investigated further, given the ffmpeg canonical-video path is the priority and no browser dashboard was built this pass).",
+
+  "TUI_STATE": "IMPLEMENTED_AND_SMOKE_TESTED",
+  "tui_detail": "tools/playthrough_tui.py - replay-only terminal viewer over an existing trace or frame-leaves file. Verified against both a real M3 trace (runs/run_0006_seed1_ollama.jsonl.gz) and the new frame-custody leaves file. Explicitly documented as never fed back into any model's input.",
+
+  "TEST_STATE": "PASS",
+  "test_detail": "51 passed",
+  "SECRET_SCAN_STATE": "PASS",
+  "secret_scan_detail": "444 files scanned",
+
+  "QUALIFIED_MMR_STATE": {
+    "size_before_this_pass": 10,
+    "size_after_this_pass": 11,
+    "root_after_this_pass": "PENDING_VERIFY_AFTER_COMMIT",
+    "verify_command": "python scripts/verify_competition_lineage.py"
+  },
+
+  "FILES_CREATED": [
+    "requirements-2p.txt",
+    "evidence/competition/twoplayer/TWO_PLAYER_DEPENDENCY_MANIFEST.json",
+    "evidence/competition/twoplayer/TWO_PLAYER_ROM_GATE_RECEIPT.json",
+    "evidence/competition/twoplayer/TWO_PLAYER_CODE_READINESS_RECEIPT.json",
+    "src/frame_custody.py",
+    "scripts/record_governed_playthrough.py",
+    "scripts/verify_playthrough_custody.py",
+    "scripts/render_playthrough_video.py",
+    "tools/playthrough_tui.py",
+    "evidence/competition/frames/FRAME_CUSTODY_PUBLIC_KEY.pem",
+    "evidence/competition/frames/smoke/ (24 PNGs, 24 occurrence JSONs, leaves.jsonl, construction+verification receipts)",
+    "evidence/competition/redteam/PRE_EXECUTION_RED_TEAM_REPORT.md",
+    "governance/competition/breakpoints/0011-preparation-for-codex-handoff.json",
+    "governance/handoffs/CLAUDE_TO_CODEX_FINAL_EXECUTION_HANDOFF.json (this file)"
+  ],
+  "FILES_CHANGED": [
+    ".gitignore (added .local_keystore/, *.private.pem)",
+    "FCO_REGISTRY.json (appended 3 entries: FRAME_CUSTODY_PIPELINE, FRAME_CUSTODY_PUBLIC_KEY, PLAYTHROUGH_SMOKE_20260928)",
+    "FCG_EDGES.json (appended 3 edges: E20, E21, E22)",
+    "governance/lineage/UFA_JEV_COMP_MMR_LEDGER.json (appended entry for BP-0011)"
+  ],
+
+  "PROTECTED_ATOMS_CHANGED": "NO",
+  "protected_atoms_note": "Verified: run_games.py, src/deciders.py, src/harness.py, requirements.txt untouched. All new work is new files or additive-only appends to registry/ledger files, matching this session's established discipline.",
+
+  "KNOWN_BLOCKERS": [
+    "2P execution requires an explicit ROM licensing decision (operator's decision, not to be made by any agent) plus the ale-py env's own ROM check to pass.",
+    "Canonical video render is prepared but not run pending operator go-ahead.",
+    "Browser dashboard (section 14 of the preparation task) was not built this pass - deferred, not attempted.",
+    "Playwright capture was not installed or attempted - marked NOT_AVAILABLE per the task's own allowed outcome.",
+    "Mitosis load-bearing ablation and the demo video are owned by a separate concurrent session whose last-known state (BP-0008) has not advanced in >30 minutes of wall-clock observation; may be stalled or paused.",
+    "At least two other branches (openjev/kaggle-systemone-v01, magicstudio/sponsor-ollama-adapter-20260928) remain unreconciled and were not touched, per explicit instruction to treat them as read-only evidence."
+  ],
+
+  "NEXT_ACTION": "Codex: (1) independently re-verify this handoff's claims against the repo before acting on them; (2) check whether the other session's Tenki sandbox is still open and needs teardown or is mid-progress; (3) get an explicit operator go-ahead before running scripts/render_playthrough_video.py or attempting any real 2P/ROM work; (4) do not merge openjev/kaggle-systemone-v01 or magicstudio/sponsor-ollama-adapter-20260928 without an explicit reconciliation plan, since both delete evidence this lineage cites.",
+
+  "claim_ceiling": "IDENTITY_AND_INCLUSION_ONLY; hashes do not establish correctness. This handoff describes what was done and verified in this session; it is not a claim that the competition submission is complete.",
+  "signature_state": "NOT_SIGNED"
+}
