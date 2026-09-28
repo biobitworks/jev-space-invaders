@@ -20,6 +20,7 @@ from urllib.parse import urlparse
 import numpy as np
 
 from src.actions import ACTIONS as ALE_ACTIONS
+from src.eca_actions import decompose
 from src.envcfg import make_env
 from src.perception import Perception, VERSION as PREPROCESSOR_VERSION
 
@@ -270,7 +271,7 @@ class DemoController:
         with self.lock:
             if not self._valid_epoch(generation, episode, "1P"): self._write({"event": "DISCARD_STALE_RESULT", "generation_id": generation, "seat_id": "PLAYER_0"}); return self.state()
             next_obs, reward, term, trunc, info2 = self.env.step(ALE_ACTIONS.index(decision["executed_action"])); self.obs, self.info, self.current_frame = next_obs, info2, next_obs; self.score += float(reward)
-            row = {"timestamp": time.time(), "run_id": self.run_id, "mode": "1P", "seat_id": "PLAYER_0", "decision_index": self.decision_index, "generation_id": generation, "environment_frame": int(info2.get("episode_frame_number", self.frame_index)), "preprocessor_requested": prep["requested"], "preprocessor_actual": prep["actual"], "preprocessor_latency_ms": prep["latency_ms"], "preprocessor_input_hash": prep["input_hash"], "preprocessor_output_hash": prep["output_hash"], **decision, "reward": float(reward), "score": self.score, "lives": int(info2.get("lives", 0)), "env_advanced": True}; self._record(row, decision["executed_action"]); self.frame_index += 1
+            move, fire = decompose(decision["executed_action"]); row = {"timestamp": time.time(), "run_id": self.run_id, "mode": "1P", "seat_id": "PLAYER_0", "decision_index": self.decision_index, "generation_id": generation, "environment_frame": int(info2.get("episode_frame_number", self.frame_index)), "preprocessor_requested": prep["requested"], "preprocessor_actual": prep["actual"], "preprocessor_latency_ms": prep["latency_ms"], "preprocessor_input_hash": prep["input_hash"], "preprocessor_output_hash": prep["output_hash"], "eca_move": move, "eca_fire": fire, "eca_round_trip": decision["executed_action"], "environment_action_executed": True, **decision, "reward": float(reward), "score": self.score, "lives": int(info2.get("lives", 0)), "env_advanced": True}; self._record(row, decision["executed_action"]); self.frame_index += 1
             if term or trunc: self.status = "stopped"
             return self.state()
     def _compute_2p(self, generation: int, episode: str) -> dict[str, Any]:

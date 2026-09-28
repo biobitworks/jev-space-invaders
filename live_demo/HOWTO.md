@@ -64,6 +64,12 @@ curl -s -X POST http://127.0.0.1:8788/api/seat/PLAYER_0 \
 Use `/api/seat/PLAYER_1` for 2P. Use `/api/mode`, `/api/play`, `/api/pause`,
 `/api/stop`, `/api/reset`, and `/api/step` for lifecycle control.
 
+For 1P, counted actions use the strict six-class ECA bijection
+`MOVE={NONE,LEFT,RIGHT} x FIRE={NO,YES}` ->
+`NOOP,FIRE,LEFT,LEFTFIRE,RIGHT,RIGHTFIRE`. `NOOP` executes a real
+no-move/no-fire ALE step; PAUSE and STOP execute no environment step and are
+lifecycle states, not ECA actions.
+
 ## Provider and preprocessor diagnostics
 
 `python -m live_demo.probe_integrations` reports discovered/configured/
