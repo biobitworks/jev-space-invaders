@@ -1,0 +1,10 @@
+{
+  "claim_ceiling": "LINEAGE_RECONCILIATION_ONLY",
+  "created_utc": "2026-09-28T15:16:34+00:00",
+  "main_head_observed": "b18134c4367d5cd9a34bd752fb9f66767f497e3c",
+  "merge_policy": "DO_NOT_MERGE_MMR_LEDGERS",
+  "reason": "main and vithia-space independently allocated overlapping breakpoint IDs 0049..0051; useful main evidence must be re-addressed as successor atoms",
+  "schema": "MAIN_DIVERGENCE_RECEIPT_V1",
+  "signature_state": "NOT_SIGNED",
+  "vithia_parent": "01d20ca08fdf6f5341fbd1161f53762d3a75ee1a"
+}

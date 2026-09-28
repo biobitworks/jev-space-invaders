@@ -1,0 +1,40 @@
+{
+  "adapter": {
+    "license": "MIT",
+    "package": "system-one-adapter",
+    "python_requirement": ">=3.10",
+    "release_tag": "v0.2.1",
+    "upstream_commit": "e1d4cc938204b22fc5a3c3aca7044072fe3f712d",
+    "version": "0.2.1"
+  },
+  "baseline_execution": "BLOCKED_NO_PROVIDER_KEY",
+  "counted_jev_runs": 0,
+  "created_utc": "2026-09-28T15:16:34+00:00",
+  "credential_presence": {
+    "ANTHROPIC_API_KEY": false,
+    "GEMINI_API_KEY": false,
+    "OPENAI_API_KEY": false,
+    "TYPESAFE_API_KEY": false
+  },
+  "host": "magicSTUDIObox",
+  "hosted_jev_state": "BLOCKED_WAITING_API_KEY",
+  "installed_packages": {
+    "anthropic": "1.8.0",
+    "google-genai": "2.25.0",
+    "openai": "3.19.2",
+    "pydantic": "2.13.5",
+    "pydantic-core": "2.46.5",
+    "system-one-adapter": "0.2.1",
+    "tenacity": "9.1.4",
+    "typesafe-sdk": "0.7.2"
+  },
+  "preferred_adapter_contract": {
+    "llm_answer_mode": "probabilities",
+    "normalize_probabilities": true,
+    "structured_outputs": true
+  },
+  "python": "3.14.7",
+  "schema": "SYSTEM_ONE_RUNTIME_MANIFEST_V1",
+  "signature_state": "NOT_SIGNED",
+  "venv": "/Volumes/magicBLACKbox/vithia-space-exec/venv"
+}

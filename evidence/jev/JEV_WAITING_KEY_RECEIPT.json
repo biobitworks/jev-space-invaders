@@ -1,0 +1,9 @@
+{
+  "COUNTED_JEV_RUNS": 0,
+  "JEV_HOSTED": "BLOCKED_WAITING_API_KEY",
+  "TYPESAFE_API_KEY_PRESENT": false,
+  "claim_ceiling": "ACCESS_STATE_ONLY; NO HOSTED JEV CALL EXECUTED",
+  "created_utc": "2026-09-28T15:16:34+00:00",
+  "schema": "JEV_WAITING_KEY_RECEIPT_V1",
+  "signature_state": "NOT_SIGNED"
+}

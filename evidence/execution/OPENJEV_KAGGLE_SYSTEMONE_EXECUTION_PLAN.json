@@ -1,0 +1,40 @@
+{
+  "canonical_writer": "magicSTUDIObox",
+  "created_utc": "2026-09-28T15:16:34+00:00",
+  "execution_branch": "openjev/kaggle-systemone-v01",
+  "kaggle_role": "COMPUTE_ONLY",
+  "next_breakpoint": "DYNAMIC_AFTER_0057:SYSTEM_ONE_ADAPTER_RUNTIME_FREEZE",
+  "parent_breakpoint": "UFA-JEV-BP-0057",
+  "parent_commit": "01d20ca08fdf6f5341fbd1161f53762d3a75ee1a",
+  "parent_mmr_root": "dabf7684b7eba5c3d948277d91f904e95419a6930f30f184e92021c683e3c942",
+  "schema": "VITHIA_OPENJEV_KAGGLE_SYSTEMONE_EXECUTION_PLAN_V1",
+  "sequence": [
+    "SYSTEM_ONE_ADAPTER_RUNTIME_FREEZE",
+    "KAGGLE_HARDWARE_PROBE_NON_EXPERIMENTAL",
+    "OPENJEV_KAGGLE_RUNTIME_PREREG",
+    "OPENJEV_KAGGLE_SMOKE",
+    "OPENJEV_5_GAME_COMPARATOR",
+    "VITHIA_MATCHED_COMPARATOR",
+    "SYSTEM_ONE_BASELINE_IF_PROVIDER_KEY",
+    "RAW_VS_VITA_CONTEXT_IF_PREREGISTERED"
+  ],
+  "signature_state": "NOT_SIGNED",
+  "stop_conditions": [
+    "dirty canonical worktree",
+    "parent HEAD mismatch",
+    "secret scan failure",
+    "test failure",
+    "result validation failure",
+    "MMR verification failure",
+    "model hash mismatch",
+    "runtime hash mismatch",
+    "Kaggle artifact mismatch",
+    "future-state leakage",
+    "test-set rule selection",
+    "OpenJEV mislabeled JEV",
+    "JEV API called without gate",
+    "unfrozen runtime measured run",
+    "null/negative result rewritten",
+    "historical breakpoint modified"
+  ]
+}
