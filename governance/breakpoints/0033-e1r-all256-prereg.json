@@ -1,0 +1,62 @@
+{
+  "breakpoint_id": "UFA-JEV-BP-0033",
+  "parent": "UFA-JEV-BP-0032",
+  "state": "ALL_256_SINGLE_RULE_PREREGISTERED",
+  "project": "VITHIA_SPACE",
+  "created_utc": "2026-09-28T07:28:55+00:00",
+  "git_head_at_creation": "ca338090a21aff18773f4beecdc262737fecb333",
+  "root_kind": "FMO_V1_BREAKPOINT_ATOMS",
+  "bp_root": "7d003b7e72cf9231725d441e342604baa17edede44a4dbf13fe732dc4b7d3582",
+  "group_roots": {
+    "code": "a7bd17cc8fd01cefc7b9d4901c32db7ffbd062aef4d7cae35a0ec45b9b2c1165",
+    "prereg": "9ff0ba62e300d78f8b5ca954fbea532b1a274fc23a70be8753415099775c4d96"
+  },
+  "atoms": [
+    {
+      "path": "docs/prereg/E1R_RULE_CONTEXT_RESTORATION.md",
+      "kind": "PreregistrationFCO",
+      "group": "prereg",
+      "bytes": 605,
+      "sha256": "002992b5b6afccdb69dccab4c52d8336a487dba991ef30ecc0aeb8dc8606e31b",
+      "location": "public",
+      "fmo_leaf": "2275bcd7063e6646a16a6864a7ca2663966874ce8584cf3f7f3d722de9fbde59"
+    },
+    {
+      "path": "schemas/e1r/E1R_SCREEN_CONFIG_V1.json",
+      "kind": "SchemaFCO",
+      "group": "prereg",
+      "bytes": 644,
+      "sha256": "30b6554bb5493973d678d74ae1da3670e3cb45460ce107df02cc66e8a931cba9",
+      "location": "public",
+      "fmo_leaf": "8cb4818560bce4997ed182baa329d896492710760392c6ed2d868099ad8c3c07"
+    },
+    {
+      "path": "schemas/e1r/E1R_STATS_PLAN_V1.json",
+      "kind": "SchemaFCO",
+      "group": "prereg",
+      "bytes": 359,
+      "sha256": "89c760274d4f1f39cb7d374ded3970ec56198d0ac8086500bf139353e8420542",
+      "location": "public",
+      "fmo_leaf": "76e2932cacf8080b732285e1021f74578025a8c2807f58c37cb6b7f20643ad8a"
+    },
+    {
+      "path": "scripts/e1r_daisy_execute.py",
+      "kind": "CodeFCO",
+      "group": "code",
+      "bytes": 63297,
+      "sha256": "583f2dbf140ff9aef3567df2b251f7b280ef942139eec488cf1eb80c5be681ca",
+      "location": "public",
+      "fmo_leaf": "a7bd17cc8fd01cefc7b9d4901c32db7ffbd062aef4d7cae35a0ec45b9b2c1165"
+    }
+  ],
+  "stage": "E1R_ALL256_PREREG",
+  "rules": 256,
+  "pilot_replicates": 20,
+  "model_calls": 0,
+  "delta_g_star": "NOT_COMPUTED",
+  "scientific_parent_commit": "4c1bbb19b89a7ee1e1dee662cfd0f227186ebafd",
+  "scientific_parent_breakpoint": "UFA-JEV-BP-0028",
+  "scientific_parent_mmr_root": "5f742663f7e0c12e100e292cc794eefb0360a068a5c20c2b1be019ace1cb298b",
+  "claim_ceiling": "IDENTITY_AND_INCLUSION_ONLY; hashes do not establish correctness",
+  "signature_state": "NOT_SIGNED"
+}
