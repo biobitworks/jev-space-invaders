@@ -242,6 +242,21 @@
       "mmr_peaks_after": [
         "38225c02b9c0e198d4da872ddc9f9160d7e1c772cbb1da2e69ae4778a5cd07b5"
       ]
+    },
+    {
+      "seq": 16,
+      "bp_id": "VITA-PUB-BP-0017",
+      "bp_file": "governance/publication/breakpoints/0017-pdf-layout-fix-and-visual-audit.json",
+      "bp_file_sha256": "b1e58be1e91a9cb34ef64ee06654cc85b103e0d87461d4c30b9684de3dc05f6d",
+      "bp_root": "117e0b9d8e0e3f6b3ec620b499084333dffd12cac709c56e5b2a25e7a5f76f80",
+      "root_kind": "FMO_V1_PUBLICATION_BREAKPOINT_ATOMS",
+      "mmr_leaf": "46ee057cf18f281d3d60c944cca96d4c06c5fc85d3b93f3074a12ec8d9f36f46",
+      "mmr_size": 17,
+      "mmr_root_after": "84b8588fd1575c52be1e230baeaa4d9bf09b1c70abc30fec64ae336c8b1d981b",
+      "mmr_peaks_after": [
+        "38225c02b9c0e198d4da872ddc9f9160d7e1c772cbb1da2e69ae4778a5cd07b5",
+        "46ee057cf18f281d3d60c944cca96d4c06c5fc85d3b93f3074a12ec8d9f36f46"
+      ]
     }
   ]
 }

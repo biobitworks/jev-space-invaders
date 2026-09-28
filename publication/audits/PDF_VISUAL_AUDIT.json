@@ -1,0 +1,19 @@
+{
+  "schema": "VITHIA_PDF_VISUAL_AUDIT_V1",
+  "state": "PASS",
+  "main_pdf": {
+    "path": "publication/release/v0.1.0/main.pdf",
+    "pages": 5,
+    "render_dpi": 120,
+    "visual_state": "PASS",
+    "note": "All five rendered pages inspected; no visible clipping, overlap, black squares, or broken glyphs. TeX reports one non-clipping overfull hbox warning in the manuscript."
+  },
+  "supplement_pdf": {
+    "path": "publication/release/v0.1.0/supplement.pdf",
+    "pages": 2,
+    "render_dpi": 120,
+    "visual_state": "PASS",
+    "note": "Both rendered pages inspected after successor layout fix; claim matrix, evidence-key table, and reproduction commands are readable with no visible clipping or overlap."
+  },
+  "scientific_claim_mutation": false
+}

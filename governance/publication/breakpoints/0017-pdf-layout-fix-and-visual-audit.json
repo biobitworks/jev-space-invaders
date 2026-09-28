@@ -1,0 +1,79 @@
+{
+  "breakpoint_id": "VITA-PUB-BP-0017",
+  "parent": "VITA-PUB-BP-0016",
+  "state": "PDF_LAYOUT_SUCCESSOR_VISUAL_PASS",
+  "project": "VITHIA_0_VITA_1_PUBLICATION",
+  "created_utc": "2026-09-28T06:14:30+00:00",
+  "root_kind": "FMO_V1_PUBLICATION_BREAKPOINT_ATOMS",
+  "bp_root": "117e0b9d8e0e3f6b3ec620b499084333dffd12cac709c56e5b2a25e7a5f76f80",
+  "group_roots": {
+    "audit": "60175aefbad1050089db79bd1ddfdf1a276946e116e1141e77f8dd214b257bea",
+    "code": "3353fc6233a466b172005a72b14580b7ee9e5322ce1cd6dd4c6c80b2b59d5805",
+    "manuscript": "8a5935e81a922c1cf4f0a5c965d8a186129a34deec1ff513cc76317afccecc53",
+    "pdf": "17be3fdc4d7ffdf4452cd8a12ef81984b38249a4ed577a5499edfff0f0bb4bd0",
+    "supplement": "a100d87e14e93a84f84f1937f779e34caca1f61b191e13c358904dc521846585"
+  },
+  "atoms": [
+    {
+      "path": "scripts/build_manuscript.py",
+      "kind": "CodeFCO",
+      "group": "code",
+      "bytes": 12248,
+      "sha256": "5d8cb96f9fc071df9da634ac562ddb6189632a6bcb604acc8365e5342759506e",
+      "location": "public",
+      "fmo_leaf": "3353fc6233a466b172005a72b14580b7ee9e5322ce1cd6dd4c6c80b2b59d5805"
+    },
+    {
+      "path": "publication/supplement/supplement.tex",
+      "kind": "SupplementFCO",
+      "group": "supplement",
+      "bytes": 3486,
+      "sha256": "438bce78ce2f1d1fa6e2f5250b614263b5ac87b2948b94798f785d99035fdce4",
+      "location": "public",
+      "fmo_leaf": "a100d87e14e93a84f84f1937f779e34caca1f61b191e13c358904dc521846585"
+    },
+    {
+      "path": "publication/manuscript/main.tex",
+      "kind": "ManuscriptFCO",
+      "group": "manuscript",
+      "bytes": 7795,
+      "sha256": "d64e747c6b58ae9e6fad63cf20fcd814ae7a68744c42d6d051ef3ddcd6032030",
+      "location": "public",
+      "fmo_leaf": "8a5935e81a922c1cf4f0a5c965d8a186129a34deec1ff513cc76317afccecc53"
+    },
+    {
+      "path": "publication/release/v0.1.0/main.pdf",
+      "kind": "PublicationPDFFCO",
+      "group": "pdf",
+      "bytes": 138558,
+      "sha256": "03571aa6ba35a0d92007360a8378cdbeaa596a1010c5a57b02d0f2e2ddf9e4d6",
+      "location": "public",
+      "fmo_leaf": "b3f3d6ec20652858908baa21b79b3593c58b6cd89caeb694159f97acb9a8b16a"
+    },
+    {
+      "path": "publication/release/v0.1.0/supplement.pdf",
+      "kind": "PublicationPDFFCO",
+      "group": "pdf",
+      "bytes": 36387,
+      "sha256": "21827b48b8fd393ec9f1f378edca745cb86e22cde7af1e519e1e75c3b021b69d",
+      "location": "public",
+      "fmo_leaf": "583089bbde283cf30fa2bbb9385e7b654246880d5f611dabdbce07b837692162"
+    },
+    {
+      "path": "publication/audits/PDF_VISUAL_AUDIT.json",
+      "kind": "AuditReceiptFCO",
+      "group": "audit",
+      "bytes": 756,
+      "sha256": "d477e0ae7dd3f0889a6cc899c1842eb4e84b493150373ef6e87829667cc9a25a",
+      "location": "public",
+      "fmo_leaf": "60175aefbad1050089db79bd1ddfdf1a276946e116e1141e77f8dd214b257bea"
+    }
+  ],
+  "stage": "PDF_LAYOUT_FIX_AND_VISUAL_AUDIT",
+  "reason": "repair supplement evidence-reference overflow and literal newline rendering",
+  "scientific_claim_mutation": false,
+  "main_pages": 5,
+  "supplement_pages": 2,
+  "claim_ceiling": "IDENTITY_AND_INCLUSION_ONLY; publication roots do not establish scientific truth",
+  "signature_state": "NOT_SIGNED"
+}
