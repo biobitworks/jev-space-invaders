@@ -367,6 +367,22 @@
         "1303f691fcfdee6145f710febf29e2146b6ced8c2f89b643dd1e4371cafbabe7",
         "0e7a36ac6f8774ee554efef13de36399f4f1888362f636fada0cece1ef85cd5e"
       ]
+    },
+    {
+      "seq": 24,
+      "bp_id": "UFA-JEV-BP-0025",
+      "bp_file": "governance/breakpoints/0025-e4c-graph-protocol.json",
+      "bp_file_sha256": "9e1fec07d718b4703f0dd18635df850d71d9731e5b26a24fcd0db976165d1a04",
+      "bp_root": "724f35d58e4639213b706c76207ba78d83d316d082cc40339044a675d4b9a3de",
+      "root_kind": "FMO_V1_BREAKPOINT_ATOMS",
+      "mmr_leaf": "fa0b821c1e004e7cc9fc4ed8508ae1e5a230be8411027c13a24a1b5dd520adc1",
+      "mmr_size": 25,
+      "mmr_root_after": "031500131fcab30f70c46f515832ef4c3e1f0f65197a6eeb8a038733df4bd519",
+      "mmr_peaks_after": [
+        "1303f691fcfdee6145f710febf29e2146b6ced8c2f89b643dd1e4371cafbabe7",
+        "0e7a36ac6f8774ee554efef13de36399f4f1888362f636fada0cece1ef85cd5e",
+        "fa0b821c1e004e7cc9fc4ed8508ae1e5a230be8411027c13a24a1b5dd520adc1"
+      ]
     }
   ]
 }

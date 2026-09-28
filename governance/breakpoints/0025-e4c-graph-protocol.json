@@ -1,0 +1,67 @@
+{
+  "breakpoint_id": "UFA-JEV-BP-0025",
+  "parent": "UFA-JEV-BP-0024",
+  "state": "PROTOCOL_FROZEN_PANEL_NOT_BUILT",
+  "project": "VITHIA_SPACE",
+  "created_utc": "2026-09-28T06:16:40+00:00",
+  "git_head_at_creation": "2074385bdbf64d59717f9883be118d4d7514245e",
+  "root_kind": "FMO_V1_BREAKPOINT_ATOMS",
+  "bp_root": "724f35d58e4639213b706c76207ba78d83d316d082cc40339044a675d4b9a3de",
+  "group_roots": {
+    "e4c_code": "17f6610e7f8cefdc533c0ed36b28a1501491f427d762574151bb61dd2ab6d0d5",
+    "prereg": "4deee874375b81e7f895a172980b40327b80812d07a017093333db9eb020c28c"
+  },
+  "atoms": [
+    {
+      "path": "docs/prereg/E4C_EXHAUSTIVE_REACHABLE_ACTION_GRAPH.md",
+      "kind": "PreregistrationFCO",
+      "group": "prereg",
+      "bytes": 1754,
+      "sha256": "a9e30625afd070dd1745ff367e9efd72c6f58365491c48582f4af1b9a29e0443",
+      "location": "public",
+      "fmo_leaf": "4deee874375b81e7f895a172980b40327b80812d07a017093333db9eb020c28c"
+    },
+    {
+      "path": "experiments/e4c_graph.py",
+      "kind": "CodeFCO",
+      "group": "e4c_code",
+      "bytes": 6449,
+      "sha256": "da888db1f0078962ac8ce321cdc549b08d206f2bcae9b728f1b03045883fa880",
+      "location": "public",
+      "fmo_leaf": "c65a5e90965e4d7f110e94e20015b48564e02df7a32852d28106ace84ebd7346"
+    },
+    {
+      "path": "src/envcfg.py",
+      "kind": "CodeFCO",
+      "group": "e4c_code",
+      "bytes": 2688,
+      "sha256": "7b32f5565412029b39098f1d8314b4cfb63a14c723face31a44dcfa0229e1493",
+      "location": "public",
+      "fmo_leaf": "c9302ddb7d82e381ee78efca344885d5ae7227633abd1865a680fdef9523a95b"
+    },
+    {
+      "path": "src/perception.py",
+      "kind": "CodeFCO",
+      "group": "e4c_code",
+      "bytes": 4860,
+      "sha256": "fcd5a53760d33c910052a8b2562d2b49be2ab36232b709c3a33d18a785ccfb41",
+      "location": "public",
+      "fmo_leaf": "aad493cfbbea5ef989a2d5934df80cc6ce90f750c3a1664f6af35f4133246d89"
+    },
+    {
+      "path": "src/deciders.py",
+      "kind": "CodeFCO",
+      "group": "e4c_code",
+      "bytes": 7817,
+      "sha256": "ef5e9bb37fa3957a0728d654bdbb20cb1eeccb321c057a4824d31000b08619f7",
+      "location": "public",
+      "fmo_leaf": "af8a740bf61abe43e71b05c8b64f22072f757d3d13c3c17344c49cc7e9b2f6da"
+    }
+  ],
+  "experiment_id": "E4C_EXHAUSTIVE_REACHABLE_ACTION_GRAPH",
+  "stage": "E4C_PROTOCOL",
+  "pre_mmr_root": "a461def1576e4a0600cb3c738e885961678dfef300a1696e958c6b9173d76692",
+  "note": "construction parameters frozen before any candidate state is generated",
+  "claim_ceiling": "IDENTITY_AND_INCLUSION_ONLY; hashes do not establish correctness",
+  "signature_state": "NOT_SIGNED"
+}
