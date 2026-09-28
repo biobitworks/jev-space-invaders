@@ -1,0 +1,136 @@
+{
+  "atoms": [
+    {
+      "bytes": 215,
+      "fmo_leaf": "7b4d177ed68c2f785fec825132926c206264f347a389fb59c4232566fa112605",
+      "group": "implementation",
+      "kind": "ConfigTemplateFCO",
+      "location": "public",
+      "path": ".env.example",
+      "sha256": "72b30964461dbadebdfae42b74334401563847a4b7897aba32a94d767f281a7f"
+    },
+    {
+      "bytes": 8902,
+      "fmo_leaf": "ab62f990d2c9a7565526938776a84985cc1199b6a49023f3c5403e07dc9256bc",
+      "group": "implementation",
+      "kind": "CodeFCO",
+      "location": "public",
+      "path": "src/deciders.py",
+      "sha256": "56418d8ba88247530d44f5c436bd51b67762ab33f760d4bf4476227563b26de7"
+    },
+    {
+      "bytes": 3822,
+      "fmo_leaf": "4b33c5f9bef81c606bb6c8a5731c3d2e36f43ca8a761bc9cc54c7ba0f6f6cff5",
+      "group": "implementation",
+      "kind": "CodeFCO",
+      "location": "public",
+      "path": "scripts/run_games.py",
+      "sha256": "a30db3b7b1f2b921e0fbf783351fe4b68f462e90e91e123997cc6dd4f775bd38"
+    },
+    {
+      "bytes": 1483,
+      "fmo_leaf": "b387f6c6a31adc57ce8da3ed046e6a39d6c422ff6d3347ebcb16141e25d70a0e",
+      "group": "implementation",
+      "kind": "CodeFCO",
+      "location": "public",
+      "path": "scripts/secret_scan.py",
+      "sha256": "44184338b2a867f5977b5781fc6b51db7ecc84f8cb19590cd93722c186d95a33"
+    },
+    {
+      "bytes": 762,
+      "fmo_leaf": "8ff588a6bd10afa2f568d14d493c736ac526702cc16c86f0a8407553ee462091",
+      "group": "verification",
+      "kind": "TestFCO",
+      "location": "public",
+      "path": "tests/test_ollama_system_one_adapter.py",
+      "sha256": "1a4568cb5552e537c2845897004f23b9a6502104d790734b019d42993936edbb"
+    },
+    {
+      "bytes": 1954,
+      "fmo_leaf": "a7caeaa0007286e57c651d5901bec4aa75cf758ba9e1881a83114ceccfaf67b5",
+      "group": "verification",
+      "kind": "ExecutionReceiptFCO",
+      "location": "public",
+      "path": "evidence/competition/ollama/OLLAMA_SYSTEM_ONE_ADAPTER_RECEIPT.json",
+      "sha256": "baae12ed93b6fdc8199be0fe17213aac92780bcabfb0405a924c1c075cbae085"
+    },
+    {
+      "bytes": 900,
+      "fmo_leaf": "93b6b8a9a3b57c0126d30ce033f60aa8b7242d52c4b8692a0093af24f35e57b1",
+      "group": "credential_boundary",
+      "kind": "CredentialBoundaryFCO",
+      "location": "public",
+      "path": "evidence/competition/sponsors/SPONSOR_CREDENTIAL_STATE_V1.json",
+      "sha256": "85c336acc45f294c42a7ae246a21dfd90a2e390e8b1e22bd08feff01711de4b5"
+    },
+    {
+      "bytes": 939,
+      "fmo_leaf": "6dca8ea3033ae8f8dc4d7ae4015ddc7ee3a946882ca7c6358bb923977dfe25d8",
+      "group": "failure",
+      "kind": "FailureReceiptFCO",
+      "location": "public",
+      "path": "evidence/failures/BP0014_PREDECESSOR_RACE_ABORTS.json",
+      "sha256": "86f463ed3740710bf1dbdede4a0dc1a7a317404eea638356d9dc23d7cbbb6201"
+    },
+    {
+      "bytes": 510,
+      "fmo_leaf": "6e2c2da20c253133af3b1e1cedf82f34a7042dea1a9957f7d42d1e39f384bb1d",
+      "group": "failure",
+      "kind": "FailureReceiptFCO",
+      "location": "public",
+      "path": "evidence/failures/BP0014_FMO_API_MISMATCH_FAILURE.json",
+      "sha256": "953d4a6f74538650a306351f595c01c66116e58312fe84ad9f652adf5c789e71"
+    }
+  ],
+  "bp_id": "UFA-JEV-COMP-BP-0014",
+  "bp_root": "bd7c648486378c9c960c8a765237951fddf98cdb2294f66fdbf3d8a089729ee4",
+  "branch": "magicstudio/final-ollama-adapter-v02-20260928",
+  "breakpoint_id": "UFA-JEV-COMP-BP-0014",
+  "breakpoint_root": "bd7c648486378c9c960c8a765237951fddf98cdb2294f66fdbf3d8a089729ee4",
+  "claim_ceiling": "IDENTITY/INTEGRITY PLUS LOCAL EXECUTION RECEIPTS; HASHES DO NOT ESTABLISH SCIENTIFIC OR COMPETITION SUPERIORITY",
+  "created_utc": "2026-09-28T21:42:19+00:00",
+  "decisions": [
+    "Use local Ollama as LLM baseline/assistant route, not JEV core decider.",
+    "Use structured discrete mode for qwen2.5:0.5b after bounded reliability probe favored discrete 3/3 over probabilities 2/3.",
+    "Do not duplicate secret credentials into repository-adjacent files."
+  ],
+  "executed": {
+    "competition_lineage_predecessor_verify": "PASS",
+    "full_tests": "PASS_52_OF_52",
+    "live_repeatability": "PASS_5_OF_5",
+    "remote_race_check": "PASS",
+    "results_validation": "PASS"
+  },
+  "failures": [
+    "Two earlier breakpoint attempts aborted on canonical-branch races before admission.",
+    "One BP0014 construction attempt failed before root/ledger mutation due an FMO API calling-convention mismatch."
+  ],
+  "git_head_at_creation": "37ef623e93dabe74e896de9e8b5e2ce49be183c1",
+  "group_roots": {
+    "credential_boundary": "93b6b8a9a3b57c0126d30ce033f60aa8b7242d52c4b8692a0093af24f35e57b1",
+    "failure": "bc6d7f87b6dac028e52146cdfc3ef5c917314b6b0dde0c05e93d9c58213e1aaa",
+    "implementation": "82e32df88424bd1888d8375b347f32229922ff50a7406bef26b5689e977199b2",
+    "verification": "1a19d309bd2daa96e74de67255721046f5b7a4715802f6f60d930dc6a86c3015"
+  },
+  "lineage_id": "UFA-JEV-COMP",
+  "not_tested": [
+    "JEV API execution still requires TYPESAFE_API_KEY/access.",
+    "Tenki re-authentication from a persistent TENKI_API_KEY is not tested because no persistent local key was found."
+  ],
+  "observed": {
+    "answer_mode": "discrete",
+    "fallback_count_5_calls": 0,
+    "malformed_structure_retries": 2,
+    "mitosis_auth_state": "PRESENT_IN_EXISTING_SECURE_CLI_STORE",
+    "served_model": "qwen2.5:0.5b",
+    "structured_outputs": true,
+    "tenki_persistent_auth_state": "NOT_FOUND"
+  },
+  "predecessor_breakpoint": "UFA-JEV-COMP-BP-0013",
+  "predecessor_mmr_root": "250e3b6630ac0955c7e0ad65848d51b0131abbd338512d6693bed87e531dd32a",
+  "project": "VITHIA_SPACE",
+  "root_kind": "FMO_V1_BREAKPOINT_ATOMS",
+  "schema": "UFA_JEV_COMP_BREAKPOINT_V1",
+  "signature_state": "NOT_SIGNED",
+  "state": "OLLAMA_SYSTEM_ONE_BASELINE_ADAPTER_EXECUTED_PASS"
+}

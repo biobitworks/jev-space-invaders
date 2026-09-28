@@ -1,0 +1,17 @@
+{
+  "candidate_bp_root": "bd7c648486378c9c960c8a765237951fddf98cdb2294f66fdbf3d8a089729ee4",
+  "candidate_breakpoint_id": "UFA-JEV-COMP-BP-0014",
+  "candidate_mmr_root": "7f60c03a23cfde9f2c99178bf3a7d46b42169464b1dcaf8c84a7be482b1ed970",
+  "candidate_mmr_size": 14,
+  "candidate_snapshot": "evidence/failures/BP0014_OCCURRENCE_FIELD_CANDIDATE.json",
+  "canonical_admission": false,
+  "claim_ceiling": "REJECTED CANDIDATE IDENTITY ONLY; candidate roots are not canonical",
+  "correction": "Restore the canonical BP0013 ledger and recompute a successor BP0014 with all required occurrence fields.",
+  "historical_mutation_performed": false,
+  "project": "VITHIA_SPACE",
+  "root_valid": false,
+  "schema": "UFA_JEV_BREAKPOINT_CANDIDATE_FAILURE_V1",
+  "state": "FAILED_NOT_ADMITTED",
+  "verification_error": "OCCURRENCE_FIELD:UFA-JEV-COMP-BP-0014:parent_root",
+  "verification_state": "FAIL"
+}

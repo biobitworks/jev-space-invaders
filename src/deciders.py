@@ -125,22 +125,46 @@ class AdapterLLMDecider:
     role = "baseline"
     sdk_package = "system-one-adapter"
 
-    def __init__(self, provider: str, model: str) -> None:
+    def __init__(self, provider: str, model: str, base_url: str | None = None) -> None:
         from importlib.metadata import version
 
         from system_one_adapter import Choice, SystemOneAdapterClient
 
         self.provider, self.requested_model = provider, model
         self.sdk_version = version("system-one-adapter")
-        self.client = SystemOneAdapterClient(structured_outputs=True, llm_answer_mode="probabilities",
-                                             normalize_probabilities=True)
+        self.base_url = base_url
+        self._provider_instance = None
+        if provider == "ollama":
+            from system_one_adapter.providers.openai import OpenAIProvider
+
+            self.base_url = base_url or os.environ.get("OLLAMA_BASE_URL", "http://127.0.0.1:11434/v1")
+            self._provider_instance = OpenAIProvider(
+                model,
+                base_url=self.base_url,
+                api_key="ollama",
+                api="chat_completions",
+            )
+        self.llm_answer_mode = "discrete" if provider == "ollama" else "probabilities"
+        self.client = SystemOneAdapterClient(
+            structured_outputs=True,
+            llm_answer_mode=self.llm_answer_mode,
+            normalize_probabilities=self.llm_answer_mode == "probabilities",
+            n_retry_malformed_structure=2 if provider == "ollama" else 0,
+        )
         self.question = {"move": Choice(instructions=MOVE_QUESTION["instructions"],
                                         criteria=MOVE_QUESTION["criteria"])}
 
     def decide(self, state: dict, prev_action: str) -> Decision:
         try:
-            resp = self.client.system_one(state=state, questions=self.question,
-                                          provider=self.provider, model=self.requested_model)
+            if self._provider_instance is not None:
+                resp = self.client.system_one(
+                    state=state,
+                    questions=self.question,
+                    model=self._provider_instance,
+                )
+            else:
+                resp = self.client.system_one(state=state, questions=self.question,
+                                              provider=self.provider, model=self.requested_model)
             d = resp.model_dump()
             ans, usage = d["answers"]["move"], d.get("usage") or {}
             choice = ans.get("choice")
@@ -158,3 +182,5 @@ class AdapterLLMDecider:
 
     def close(self) -> None:
         self.client.close()
+        if self._provider_instance is not None:
+            self._provider_instance.close()

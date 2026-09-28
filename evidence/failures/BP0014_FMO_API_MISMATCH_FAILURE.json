@@ -1,0 +1,13 @@
+{
+  "bp_file_created": false,
+  "claim_ceiling": "FAILED CONSTRUCTION ATTEMPT ONLY",
+  "correction": "Recompute with canonical src.fmo.fmo_root(groups) API in successor construction.",
+  "created_utc": "2026-09-28T21:42:19+00:00",
+  "failure_class": "FMO_API_CALLING_CONVENTION_MISMATCH",
+  "intended_breakpoint": "UFA-JEV-COMP-BP-0014",
+  "ledger_mutated": false,
+  "project": "VITHIA_SPACE",
+  "root_valid": false,
+  "schema": "UFA_JEV_BREAKPOINT_CONSTRUCTION_FAILURE_V1",
+  "state": "FAILED_NOT_ADMITTED"
+}

@@ -1,0 +1,71 @@
+{
+  "claim_ceiling": "LOCAL_LLM BASELINE ADAPTER EXECUTION ONLY; DOES NOT ESTABLISH JEV ACCESS OR JEV COMPETITION PERFORMANCE",
+  "created_utc": "2026-09-28T21:45:05+00:00",
+  "credential_bytes_recorded": false,
+  "full_test_suite": {
+    "seconds": 25.53,
+    "state": "PASS",
+    "tests": 52
+  },
+  "implementation_files": [
+    ".env.example",
+    "src/deciders.py",
+    "scripts/run_games.py",
+    "scripts/secret_scan.py",
+    "tests/test_ollama_system_one_adapter.py"
+  ],
+  "jev_core_decision_role_changed": false,
+  "malformed_structure_retries": 2,
+  "network_endpoint_scope": "LOOPBACK_ONLY_FOR_OLLAMA",
+  "ollama_answer_mode": "discrete",
+  "ollama_models_observed": [
+    "longhorizon-liquid-230m:latest",
+    "qwen2.5:0.5b"
+  ],
+  "predecessor_commit": "37ef623e93dabe74e896de9e8b5e2ce49be183c1",
+  "predecessor_competition_lineage": {
+    "mmr_root": "250e3b6630ac0955c7e0ad65848d51b0131abbd338512d6693bed87e531dd32a",
+    "mmr_size": 13,
+    "state": "PASS"
+  },
+  "project": "VITHIA_SPACE",
+  "provider_chain": [
+    "system-one-adapter==0.2.1",
+    "OpenAIProvider(api=chat_completions)",
+    "http://127.0.0.1:11434/v1",
+    "Ollama",
+    "qwen2.5:0.5b"
+  ],
+  "reason_for_discrete_mode": {
+    "structured_discrete_probe": "PASS_3_OF_3",
+    "structured_probabilities_probe": "PASS_2_OF_3",
+    "unstructured_discrete_probe": "PASS_0_OF_3",
+    "unstructured_probabilities_probe": "PASS_0_OF_3"
+  },
+  "repeatability_smoke": {
+    "confidence_observed": 1.0,
+    "error_count": 0,
+    "fallback_count": 0,
+    "observed_actions": [
+      "RIGHT",
+      "FIRE",
+      "RIGHT",
+      "NOOP",
+      "LEFT"
+    ],
+    "served_model": "qwen2.5:0.5b",
+    "state": "PASS_5_OF_5"
+  },
+  "results_validation": {
+    "baseline_runs": 5,
+    "counted_jev_runs": 0,
+    "non_jev_runs": 5,
+    "runs": 5,
+    "state": "PASS"
+  },
+  "role": "baseline",
+  "schema": "UFA_JEV_OLLAMA_SYSTEM_ONE_ADAPTER_RECEIPT_V1",
+  "source_adapter_commit": "65610bd295a354329118fed6b16a3663679a1c7f",
+  "state": "EXECUTED_OBSERVED_PASS",
+  "structured_outputs": true
+}

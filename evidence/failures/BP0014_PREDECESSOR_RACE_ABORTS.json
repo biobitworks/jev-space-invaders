@@ -1,0 +1,24 @@
+{
+  "attempts": [
+    {
+      "intended_breakpoint": "UFA-JEV-COMP-BP-0012",
+      "local_base": "61cd8adc99f7dbe5ff808ab074318c664b4c7226",
+      "mutation_after_race_detection": false,
+      "observed_remote_successor": "5307a1a304730628c75b81b382e05db5a51c1197"
+    },
+    {
+      "expected_remote": "5307a1a304730628c75b81b382e05db5a51c1197",
+      "intended_breakpoint": "UFA-JEV-COMP-BP-0013",
+      "observed_remote_successor": "37ef623e93dabe74e896de9e8b5e2ce49be183c1",
+      "worktree_created": false
+    }
+  ],
+  "canonical_admission": false,
+  "claim_ceiling": "RACE DETECTION/ABORT EVIDENCE ONLY",
+  "correction": "Create BP0014 as successor of the verified BP0013 canonical lineage.",
+  "created_utc": "2026-09-28T21:40:39+00:00",
+  "project": "VITHIA_SPACE",
+  "roots_computed_for_failed_attempts": false,
+  "schema": "UFA_JEV_SUCCESSOR_RACE_ABORT_RECEIPT_V1",
+  "state": "FAILED_NOT_ADMITTED_THEN_RECOVERED_BY_SUCCESSOR"
+}

@@ -5,6 +5,7 @@
   python scripts/run_games.py --decider openjev --base-url http://127.0.0.1:3000 --seeds 1 2 3 4 5
   python scripts/run_games.py --decider jev --seeds 1 2 3 4 5            # needs TYPESAFE_API_KEY
   python scripts/run_games.py --decider llm --provider anthropic --model claude-haiku-4-5 --seeds 1 2 3 4 5
+  python scripts/run_games.py --decider ollama --model qwen2.5:0.5b --seeds 1 2 3 4 5
 
 Dry run (no git, separate file): add --dry-run --results /tmp/results.json
 """
@@ -12,6 +13,7 @@ from __future__ import annotations
 
 import argparse
 import json
+import os
 import shutil
 import sys
 from pathlib import Path
@@ -35,7 +37,7 @@ def load_dotenv() -> None:
 
 def main() -> int:
     ap = argparse.ArgumentParser()
-    ap.add_argument("--decider", required=True, choices=["scripted", "jev", "openjev", "llm"])
+    ap.add_argument("--decider", required=True, choices=["scripted", "jev", "openjev", "llm", "ollama"])
     ap.add_argument("--seeds", type=int, nargs="+", default=[1, 2, 3, 4, 5])
     ap.add_argument("--base-url")
     ap.add_argument("--provider", help="llm provider: openai | anthropic | gemini")
@@ -63,6 +65,10 @@ def main() -> int:
         dec = SystemOneHTTPDecider("typesafe", a.base_url, a.model)
     elif a.decider == "openjev":
         dec = SystemOneHTTPDecider("openjev", a.base_url, a.model)
+    elif a.decider == "ollama":
+        model = a.model or os.environ.get("OLLAMA_BASELINE_MODEL", "qwen2.5:0.5b")
+        base_url = a.base_url or os.environ.get("OLLAMA_BASE_URL", "http://127.0.0.1:11434/v1")
+        dec = AdapterLLMDecider("ollama", model, base_url=base_url)
     else:
         if not (a.provider and a.model):
             raise SystemExit("--decider llm needs --provider and --model")

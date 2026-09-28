@@ -143,96 +143,115 @@
       "seq": 7
     },
     {
-      "seq": 8,
-      "bp_id": "UFA-JEV-COMP-BP-0009",
       "bp_file": "governance/competition/breakpoints/0009-concurrent-writer-collision-receipt.json",
       "bp_file_sha256": "5bdd058d3052ba78be37c03cac2b3e0b101c524883b7f8881100b10cb0936382",
+      "bp_id": "UFA-JEV-COMP-BP-0009",
       "bp_root": "1190037922f1cbe49bd40cffe74a3d7c0c045fa4c40b9a327eb2e744555af265",
       "branch": "competition/final-integration-v01",
       "lineage_id": "UFA-JEV-COMP",
-      "parent_root": "c930d2260ea6a1090f97c79c1b0a96be38996ed7c81b2da08570ed2b37079e31",
-      "root_kind": "FMO_V1_BREAKPOINT_ATOMS",
       "mmr_leaf": "ff06f76e0b6f3e72cdfaa8e9e02fff6abf5f0a26370b0a9f90ed966d1465499e",
-      "mmr_size": 9,
-      "mmr_root_after": "6b7a677736201583751a64e0775e5fe83aa3307acb64f716e7d3074e149e9bab",
       "mmr_peaks_after": [
         "c930d2260ea6a1090f97c79c1b0a96be38996ed7c81b2da08570ed2b37079e31",
         "ff06f76e0b6f3e72cdfaa8e9e02fff6abf5f0a26370b0a9f90ed966d1465499e"
-      ]
+      ],
+      "mmr_root_after": "6b7a677736201583751a64e0775e5fe83aa3307acb64f716e7d3074e149e9bab",
+      "mmr_size": 9,
+      "parent_root": "c930d2260ea6a1090f97c79c1b0a96be38996ed7c81b2da08570ed2b37079e31",
+      "root_kind": "FMO_V1_BREAKPOINT_ATOMS",
+      "seq": 8
     },
     {
-      "seq": 9,
-      "bp_id": "UFA-JEV-COMP-BP-0010",
       "bp_file": "governance/competition/breakpoints/0010-readiness-benchmark-redteam.json",
       "bp_file_sha256": "577b2163b58116f04092a900c4298b06d53532bb9223d1bc581293460c7390ff",
+      "bp_id": "UFA-JEV-COMP-BP-0010",
       "bp_root": "00a732c90b772f1d108343ebc1f17b51d04bd365896bcea426a3b1706de93979",
       "branch": "competition/final-integration-v01",
       "lineage_id": "UFA-JEV-COMP",
-      "parent_root": "6b7a677736201583751a64e0775e5fe83aa3307acb64f716e7d3074e149e9bab",
-      "root_kind": "FMO_V1_BREAKPOINT_ATOMS",
       "mmr_leaf": "46db04fd063b2bc402a098e5f087a28276e6629838b18e1114c5fdd72464d49d",
-      "mmr_size": 10,
-      "mmr_root_after": "dd1bee1740ec3de4654504cb662ff433583bb00feac4ed82e1e581b176c2c608",
       "mmr_peaks_after": [
         "c930d2260ea6a1090f97c79c1b0a96be38996ed7c81b2da08570ed2b37079e31",
         "485a5b14565fcfdf70a35dd5bd177aff58ff0a688201e14273ba289527feb88d"
-      ]
+      ],
+      "mmr_root_after": "dd1bee1740ec3de4654504cb662ff433583bb00feac4ed82e1e581b176c2c608",
+      "mmr_size": 10,
+      "parent_root": "6b7a677736201583751a64e0775e5fe83aa3307acb64f716e7d3074e149e9bab",
+      "root_kind": "FMO_V1_BREAKPOINT_ATOMS",
+      "seq": 9
     },
     {
-      "seq": 10,
-      "bp_id": "UFA-JEV-COMP-BP-0011",
       "bp_file": "governance/competition/breakpoints/0011-preparation-for-codex-handoff.json",
       "bp_file_sha256": "26cf1d97d641fdd1714d4677169cbafadf383b173bbd82c062f365b83adb7802",
+      "bp_id": "UFA-JEV-COMP-BP-0011",
       "bp_root": "eb5e1070867cc26f118dad32cf6105fa75831a21e813f9f92c4693fc87e040c5",
       "branch": "competition/final-integration-v01",
       "lineage_id": "UFA-JEV-COMP",
-      "parent_root": "dd1bee1740ec3de4654504cb662ff433583bb00feac4ed82e1e581b176c2c608",
-      "root_kind": "FMO_V1_BREAKPOINT_ATOMS",
       "mmr_leaf": "1df088a616fb9fa24e991770db0002a0654de1429c0814112d6805dcb5b82097",
-      "mmr_size": 11,
-      "mmr_root_after": "a9f91de58e0abfd0c0943a30a5afdeb0fc39200efa1dc6d21c530385288acf4f",
       "mmr_peaks_after": [
         "c930d2260ea6a1090f97c79c1b0a96be38996ed7c81b2da08570ed2b37079e31",
         "485a5b14565fcfdf70a35dd5bd177aff58ff0a688201e14273ba289527feb88d",
         "1df088a616fb9fa24e991770db0002a0654de1429c0814112d6805dcb5b82097"
-      ]
+      ],
+      "mmr_root_after": "a9f91de58e0abfd0c0943a30a5afdeb0fc39200efa1dc6d21c530385288acf4f",
+      "mmr_size": 11,
+      "parent_root": "dd1bee1740ec3de4654504cb662ff433583bb00feac4ed82e1e581b176c2c608",
+      "root_kind": "FMO_V1_BREAKPOINT_ATOMS",
+      "seq": 10
     },
     {
-      "seq": 11,
-      "bp_id": "UFA-JEV-COMP-BP-0012",
       "bp_file": "governance/competition/breakpoints/0012-final-execution-capture-sponsor-proof-package.json",
       "bp_file_sha256": "dd1d8e0e4aea0a302996b7dd5a335d52f16ddafc97ed797d3af2f761862d4267",
+      "bp_id": "UFA-JEV-COMP-BP-0012",
       "bp_root": "6c5036fd412c9f4f214cc2d30f06137cbb8b561d87158213464706ba6781947b",
       "branch": "competition/final-integration-v01",
       "lineage_id": "UFA-JEV-COMP",
-      "parent_root": "a9f91de58e0abfd0c0943a30a5afdeb0fc39200efa1dc6d21c530385288acf4f",
-      "root_kind": "FMO_V1_BREAKPOINT_ATOMS",
       "mmr_leaf": "69cf39acfdeca38e1abe9a7cb1d01bcd5364618f6fb2d39e0f2bafc5ca4d51eb",
-      "mmr_size": 12,
-      "mmr_root_after": "2108cc21f037766b1047b0363e20f1bf1de960ef93a8d51ff9ced98768984898",
       "mmr_peaks_after": [
         "c930d2260ea6a1090f97c79c1b0a96be38996ed7c81b2da08570ed2b37079e31",
         "703db14ed49600c550aa1fb4f45ad5a30e6b1ea6221db0148d43d031f2e4b6ce"
-      ]
+      ],
+      "mmr_root_after": "2108cc21f037766b1047b0363e20f1bf1de960ef93a8d51ff9ced98768984898",
+      "mmr_size": 12,
+      "parent_root": "a9f91de58e0abfd0c0943a30a5afdeb0fc39200efa1dc6d21c530385288acf4f",
+      "root_kind": "FMO_V1_BREAKPOINT_ATOMS",
+      "seq": 11
     },
     {
-      "seq": 12,
-      "bp_id": "UFA-JEV-COMP-BP-0013",
       "bp_file": "governance/competition/breakpoints/0013-private-codec-experiment-public-receipts.json",
       "bp_file_sha256": "351581fd61a4531f71e6c519494a965e7d9685e49bdc788e391b18692462f48a",
+      "bp_id": "UFA-JEV-COMP-BP-0013",
       "bp_root": "ecae952e4adba895594e716088ae933f11b948d29f680854c31e8d19cf2178d2",
       "branch": "competition/final-integration-v01",
       "lineage_id": "UFA-JEV-COMP",
-      "parent_root": "2108cc21f037766b1047b0363e20f1bf1de960ef93a8d51ff9ced98768984898",
-      "root_kind": "FMO_V1_BREAKPOINT_ATOMS",
       "mmr_leaf": "83fa9e029cbf2722badbe33ccb7fb9a12599d4fd68e427bc8d6c1b36433785a2",
-      "mmr_size": 13,
-      "mmr_root_after": "250e3b6630ac0955c7e0ad65848d51b0131abbd338512d6693bed87e531dd32a",
       "mmr_peaks_after": [
         "c930d2260ea6a1090f97c79c1b0a96be38996ed7c81b2da08570ed2b37079e31",
         "703db14ed49600c550aa1fb4f45ad5a30e6b1ea6221db0148d43d031f2e4b6ce",
         "83fa9e029cbf2722badbe33ccb7fb9a12599d4fd68e427bc8d6c1b36433785a2"
-      ]
+      ],
+      "mmr_root_after": "250e3b6630ac0955c7e0ad65848d51b0131abbd338512d6693bed87e531dd32a",
+      "mmr_size": 13,
+      "parent_root": "2108cc21f037766b1047b0363e20f1bf1de960ef93a8d51ff9ced98768984898",
+      "root_kind": "FMO_V1_BREAKPOINT_ATOMS",
+      "seq": 12
+    },
+    {
+      "bp_file": "governance/competition/breakpoints/0014-ollama-system-one-baseline-adapter.json",
+      "bp_file_sha256": "e7113acdd57cccc7ddbb7bc8c5ad59146b61b44cb9a23f972bd908767c7a5912",
+      "bp_id": "UFA-JEV-COMP-BP-0014",
+      "bp_root": "fd1834d9d8ffb6a0ef6e0b668a87a6ef542250bb31a92ca79c09c70ee5394314",
+      "branch": "magicstudio/final-ollama-adapter-v02-20260928",
+      "lineage_id": "UFA-JEV-COMP",
+      "mmr_leaf": "2cee19be5e80da66f74980896f929edf8dfbcdc690c89c2273d4aea442b17fe8",
+      "mmr_peaks_after": [
+        "c930d2260ea6a1090f97c79c1b0a96be38996ed7c81b2da08570ed2b37079e31",
+        "703db14ed49600c550aa1fb4f45ad5a30e6b1ea6221db0148d43d031f2e4b6ce",
+        "4ba2f026644b198af0a4dc602a1f0aefa142c167952a6bd09af2a8e24582612b"
+      ],
+      "mmr_root_after": "3c1e7a340f1ed6adffaae1da2928f8ea960d5feecea9a91e13a67b6ba6fa17e5",
+      "mmr_size": 14,
+      "parent_root": "250e3b6630ac0955c7e0ad65848d51b0131abbd338512d6693bed87e531dd32a",
+      "root_kind": "FMO_V1_BREAKPOINT_ATOMS",
+      "seq": 13
     }
   ],
   "lineage_id": "UFA-JEV-COMP",
