@@ -1,0 +1,14 @@
+{
+  "claim_ceiling": "No hosted JEV performance claim; credential/access state only.",
+  "counted_jev_runs": 0,
+  "created_utc": "2026-09-28T15:46:59+00:00",
+  "current_process_env_typesafe_api_key_present": false,
+  "execution": "NOT_EXECUTED",
+  "legacy_breakpoint": "UFA-JEV-BP-0050",
+  "legacy_receipt": "evidence/jev/JEV_ACCESS_RECEIPT.json",
+  "lineage_id": "UFA-JEV-COMP",
+  "provider": "typesafe",
+  "schema": "HOSTED_JEV_STATE_SUCCESSOR_RECEIPT_V1",
+  "signature_state": "NOT_SIGNED",
+  "state": "NOT_AVAILABLE_NOT_TESTED"
+}

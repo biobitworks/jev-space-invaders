@@ -1,0 +1,26 @@
+{
+  "active_process": null,
+  "active_seed": null,
+  "blocked": [
+    "SYSTEM_ONE_OFFICIAL_BASELINE:NO_PROVIDER_CREDENTIAL",
+    "JEV_HOSTED:NOT_AVAILABLE",
+    "OPENJEV_MATCHED_COMPARATOR:READOUT_CAPABILITY_MISMATCH"
+  ],
+  "branch": "competition/qualified-lineage-v01",
+  "completed_seeds": {
+    "LOCAL_OLLAMA_BASELINE": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ]
+  },
+  "failure": null,
+  "head_before_commit": "1b6d4cc26b802083f5a35038a7d1d1c6e9dc4ccc",
+  "latest_breakpoint": "UFA-JEV-COMP-BP-0002",
+  "latest_mmr_root": "b2a572b20f42bdb60df5fc31188d1a982fd1340d2d5fc1b974f46ecb18323eec",
+  "next_action": "finish competition results/README honestly; verify sponsor receipts; prepare demo package",
+  "schema": "VITHIA_MULTIMODEL_STATUS_V1",
+  "stage": "JEV_ACCESS_AND_OPENJEV_CAPABILITY_STATE_FROZEN"
+}

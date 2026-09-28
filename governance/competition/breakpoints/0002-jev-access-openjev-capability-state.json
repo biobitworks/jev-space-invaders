@@ -1,0 +1,78 @@
+{
+  "atoms": [
+    {
+      "bytes": 534,
+      "fmo_leaf": "522f1e746335b7ee7643d7206cd61a7f378f73bfc06f96dce6f288b31bec9dcb",
+      "group": "access",
+      "kind": "AccessStateReceiptFCO",
+      "location": "public",
+      "path": "evidence/competition/access/HOSTED_JEV_STATE_RECEIPT.json",
+      "sha256": "fc7927483d1a93140817938c68455fab0e338d6ee8e5437d9fcaa68e530ce2c5"
+    },
+    {
+      "bytes": 1942,
+      "fmo_leaf": "baac0b97022046d9a3461634a3fa00860b116656128af8edfe6d9ba693985acc",
+      "group": "openjev",
+      "kind": "CapabilityReceiptFCO",
+      "location": "public",
+      "path": "evidence/competition/openjev/OPENJEV_MATCHED_COMPARATOR_CAPABILITY_RECEIPT.json",
+      "sha256": "38277b320f9ab146a0a7a24f91871b8e30c07ac43e3d066fa6ae241668c1260a"
+    },
+    {
+      "bytes": 499,
+      "fmo_leaf": "6021b0fe8bea9e3c95b04cf4aa9a28af6ba806dcf49ff079aae4506a549a8ab9",
+      "group": "legacy_evidence",
+      "kind": "LegacyAccessReceiptFCO",
+      "location": "public",
+      "path": "evidence/jev/JEV_ACCESS_RECEIPT.json",
+      "sha256": "34a6ba48eda96260d5628983c9f045a50732085e4794eb1d4e82d54aa938df39"
+    },
+    {
+      "bytes": 2186,
+      "fmo_leaf": "966e02a6cf089a59b74d939cda6500ec0b41973ea934f7bdab00574aaee86ff1",
+      "group": "legacy_evidence",
+      "kind": "LegacyCorrectionReceiptFCO",
+      "location": "public",
+      "path": "evidence/openjev/STUDIO_DISK_RECEIPT.json",
+      "sha256": "f3bc9f6ea2a86121a809f7c3ba769ca6ae1cf7ec1228d0196977200d357afc0d"
+    },
+    {
+      "bytes": 1704,
+      "fmo_leaf": "c67cb8608717779677a078fad4d4603e1dcaa13abfd627d1a94362fd246822da",
+      "group": "legacy_evidence",
+      "kind": "UpstreamIdentityFCO",
+      "location": "public",
+      "path": "evidence/openjev/UPSTREAM_IDENTITY.json",
+      "sha256": "c817f608f1455aeb7580421aa02fffb53dcae5683d81c7cd0fe819407a8ae06c"
+    }
+  ],
+  "bp_root": "d5c57e7aa1515d93f0db92c977688b3524695ce673557ad4e2b634efd4e8aba1",
+  "branch": "competition/qualified-lineage-v01",
+  "breakpoint_id": "UFA-JEV-COMP-BP-0002",
+  "breakpoint_root": "d5c57e7aa1515d93f0db92c977688b3524695ce673557ad4e2b634efd4e8aba1",
+  "claim_ceiling": "IDENTITY_AND_INCLUSION_ONLY; hashes do not establish correctness",
+  "created_utc": "2026-09-28T15:46:59+00:00",
+  "git_head_at_creation": "1b6d4cc26b802083f5a35038a7d1d1c6e9dc4ccc",
+  "group_roots": {
+    "access": "522f1e746335b7ee7643d7206cd61a7f378f73bfc06f96dce6f288b31bec9dcb",
+    "legacy_evidence": "cf7cd8ebbe254acfda118c1dce53ebb5a0cd1335149dcee0f154bea21651ac06",
+    "openjev": "baac0b97022046d9a3461634a3fa00860b116656128af8edfe6d9ba693985acc"
+  },
+  "historical_mutation_performed": false,
+  "hosted_jev_state": "NOT_AVAILABLE_NOT_TESTED",
+  "lineage_id": "UFA-JEV-COMP",
+  "mmr_reconciliation_performed": false,
+  "openjev_matched_comparator_state": "BLOCKED_READOUT_CAPABILITY_MISMATCH",
+  "openjev_targeted_exploratory_state": "PROPOSED_NOT_PREREGISTERED_NOT_EXECUTED",
+  "parent_occurrence": {
+    "breakpoint_id": "UFA-JEV-COMP-BP-0001",
+    "commit": "1b6d4cc26b802083f5a35038a7d1d1c6e9dc4ccc",
+    "mmr_root_after": "612c570d29b54e5e0a21ecd89663c83b13b43a35f9802ce9ae8429529617ccbd"
+  },
+  "parent_root": "612c570d29b54e5e0a21ecd89663c83b13b43a35f9802ce9ae8429529617ccbd",
+  "project": "VITHIA_SPACE",
+  "root_kind": "FMO_V1_BREAKPOINT_ATOMS",
+  "schema": "UFA_JEV_QUALIFIED_BREAKPOINT_V1",
+  "signature_state": "NOT_SIGNED",
+  "state": "JEV_ACCESS_AND_OPENJEV_CAPABILITY_STATE_FROZEN"
+}
