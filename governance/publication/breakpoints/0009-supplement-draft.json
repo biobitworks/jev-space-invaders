@@ -1,0 +1,57 @@
+{
+  "breakpoint_id": "VITA-PUB-BP-0009",
+  "parent": "VITA-PUB-BP-0008",
+  "state": "SUPPLEMENT_DRAFT_FROZEN",
+  "project": "VITHIA_0_VITA_1_PUBLICATION",
+  "created_utc": "2026-09-28T05:44:57+00:00",
+  "root_kind": "FMO_V1_PUBLICATION_BREAKPOINT_ATOMS",
+  "bp_root": "99630cad148c4756d263e655d0a965d29ec7696b1c87bca5374abea85bca85fa",
+  "group_roots": {
+    "claims": "8016a57a36b1099e06200d338ab7334816e254e9e96f1bb965a258cdbf7bf40b",
+    "code": "b602e5b656cf1c670cd06d231983a28d4c364b448ebf9861d79708d3b116983f",
+    "source": "4eef9582f9bfdef39654f3b69e306053393bda06ddc8e8da8b8ddec129d4d54d",
+    "supplement": "0b1703959ad35c5e95dd3bf1d62d5a915b55ce4e786a27d88db44b4d9d281d34"
+  },
+  "atoms": [
+    {
+      "path": "publication/supplement/supplement.tex",
+      "kind": "SupplementFCO",
+      "group": "supplement",
+      "bytes": 3558,
+      "sha256": "c0bfa8610a4b4f312932a0110d7d2c48923399492f6ed5168fe0cf279527f1f2",
+      "location": "public",
+      "fmo_leaf": "0b1703959ad35c5e95dd3bf1d62d5a915b55ce4e786a27d88db44b4d9d281d34"
+    },
+    {
+      "path": "publication/MANUSCRIPT_CLAIM_BINDINGS.json",
+      "kind": "ClaimBindingFCO",
+      "group": "claims",
+      "bytes": 2582,
+      "sha256": "06efb2171d8300a397e17f7ae142af54ea57cea124240445c0eff744d15de82f",
+      "location": "public",
+      "fmo_leaf": "8016a57a36b1099e06200d338ab7334816e254e9e96f1bb965a258cdbf7bf40b"
+    },
+    {
+      "path": "scripts/build_manuscript.py",
+      "kind": "CodeFCO",
+      "group": "code",
+      "bytes": 11174,
+      "sha256": "fa51273e07ffd5465fcd8818ffc231a6e1739696eec9c909491ce4cc4d399751",
+      "location": "public",
+      "fmo_leaf": "b602e5b656cf1c670cd06d231983a28d4c364b448ebf9861d79708d3b116983f"
+    },
+    {
+      "path": "governance/MMR_LEDGER.json",
+      "kind": "ScientificMMRLedgerFCO",
+      "group": "source",
+      "bytes": 18407,
+      "sha256": "cd23c478867dded3d1ad039ed7d5e593d921650ded9f9ff8c1ccafb91219a1a9",
+      "location": "public",
+      "fmo_leaf": "4eef9582f9bfdef39654f3b69e306053393bda06ddc8e8da8b8ddec129d4d54d"
+    }
+  ],
+  "stage": "SUPPLEMENT_DRAFT",
+  "version": "0.1.0-rc",
+  "claim_ceiling": "IDENTITY_AND_INCLUSION_ONLY; publication roots do not establish scientific truth",
+  "signature_state": "NOT_SIGNED"
+}

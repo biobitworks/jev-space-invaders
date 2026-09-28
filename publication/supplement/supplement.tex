@@ -1,0 +1,42 @@
+\documentclass[10pt]{article}
+\usepackage[margin=.65in]{geometry}
+\usepackage{longtable,booktabs,hyperref}
+\title{Supplement: Vithia 0-Vita-1 v0.1.0}
+\author{Byron P. Lee\\Biobitworks}
+\date{Release candidate --- DOI not yet reserved}
+\begin{document}
+\maketitle
+\section{Governance}Canonical state is governed repository artifacts and receipts. Identity is not meaning; custody is not correctness; graph connectivity is not causality; simulation is not biological evidence.
+\section{Complete claim matrix}
+\small\begin{longtable}{p{.28\textwidth}p{.18\textwidth}p{.45\textwidth}}\toprule Claim & State & Evidence refs\\\midrule\endhead
+E0\_ADDRESSABILITY::H0a & SUPPORTED & evidence/s01/E0\_ADDRESSABILITY/EXPERIMENT\_RECEIPT.json\\
+E0\_ADDRESSABILITY::H0b & SUPPORTED & evidence/s01/E0\_ADDRESSABILITY/EXPERIMENT\_RECEIPT.json\\
+E0\_ADDRESSABILITY::H0c & SUPPORTED & evidence/s01/E0\_ADDRESSABILITY/EXPERIMENT\_RECEIPT.json\\
+E0\_ADDRESSABILITY::H0d & SUPPORTED & evidence/s01/E0\_ADDRESSABILITY/EXPERIMENT\_RECEIPT.json\\
+E0\_ADDRESSABILITY::H0e & OBSERVED & evidence/s01/E0\_ADDRESSABILITY/EXPERIMENT\_RECEIPT.json\\
+E1\_ECA::G1 & SUPPORTED & evidence/s01/E1\_ECA/EXPERIMENT\_RECEIPT.json\\
+E1\_ECA::H1a & SUPPORTED & evidence/s01/E1\_ECA/EXPERIMENT\_RECEIPT.json\\
+E1\_ECA::H1b & SUPPORTED & evidence/s01/E1\_ECA/EXPERIMENT\_RECEIPT.json\\
+E1\_ECA::H1c & SUPPORTED & evidence/s01/E1\_ECA/EXPERIMENT\_RECEIPT.json\\
+E1\_ECA::H1d & NOT\_SUPPORTED & evidence/s01/E1\_ECA/EXPERIMENT\_RECEIPT.json\\
+E1\_ECA::H1e & FAIL\_TO\_REJECT\_H0 & evidence/s01/E1\_ECA/EXPERIMENT\_RECEIPT.json\\
+E1\_ECA::H1e\_v2 & FAIL\_TO\_REJECT\_H0 & evidence/s01/E1\_ECA/EXPERIMENT\_RECEIPT.json\\
+E2\_LIFE::H2a & SUPPORTED & evidence/s01/E2\_LIFE/EXPERIMENT\_RECEIPT.json\\
+E2\_LIFE::H2b & SUPPORTED & evidence/s01/E2\_LIFE/EXPERIMENT\_RECEIPT.json\\
+E2\_LIFE::H2c & OBSERVED & evidence/s01/E2\_LIFE/EXPERIMENT\_RECEIPT.json\\
+E2\_LIFE::H2d & SUPPORTED & evidence/s01/E2\_LIFE/EXPERIMENT\_RECEIPT.json\\
+E3\_MINESWEEPER::H3a & SUPPORTED & evidence/s01/E3\_MINESWEEPER/EXPERIMENT\_RECEIPT.json\\
+E3\_MINESWEEPER::H3b & SUPPORTED & evidence/s01/E3\_MINESWEEPER/EXPERIMENT\_RECEIPT.json\\
+E3\_MINESWEEPER::H3c & SUPPORTED & evidence/s01/E3\_MINESWEEPER/EXPERIMENT\_RECEIPT.json\\
+ARCH::S0\_ROLE & IMPLEMENTED & vita01/VITA01\_TERMINOLOGY\_V2.json; vita01/S01\_PROTOCOL\_SPEC\_DRAFT.md\\
+GOV::MMR24 & OBSERVED & governance/MMR\_LEDGER.json; governance/breakpoints/0024-cross-host-replication-result.json\\
+STAT::SECONDARY & OBSERVED & evidence/statistical\_successor/STATISTICAL\_ANALYSIS.json; governance/breakpoints/0022-d0-d9-statistical-analysis-result.json\\
+LIMIT::E4A & INPUT\_FROZEN\_NO\_DECIDER\_CALLS & governance/breakpoints/0020-e4a-prereg.json\\
+LIMIT::DELTAGSTAR & NOT\_COMPUTED & vita01/VITA01\_CONFIRMATORY\_PREREGISTRATION.md\\
+LIMIT::CROSSHOST & DEFERRED\_NOT\_FAILED & evidence/cross\_host/CROSS\_HOST\_REPLICATION\_RECEIPT.json\\
+\bottomrule\end{longtable}\normalsize
+\section{Secondary statistics}
+E1 H1d Wilson 95\% CI [0.776528,0.832405]. E2 matched history delta 0.086538. E3 paired gain delta 0.205157 bits and abstention fraction 0.179837.
+\section{Reproduction}\begin{verbatim}python -m pytest -q\npython scripts/secret_scan.py\npython scripts/verify_breakpoints.py\npython scripts/verify_episode_mmr.py\npython scripts/secondary_stats.py\npython scripts/verify_publication_breakpoints.py\end{verbatim}
+\section{External state}No DOI, Hugging Face commit, signature, or external publication is claimed until a successor receipt verifies it.
+\end{document}
