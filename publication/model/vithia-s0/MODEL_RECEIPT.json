@@ -1,0 +1,16 @@
+{
+  "schema": "VITHIA_S0_MODEL_RECEIPT_V1",
+  "repo_id_target": "biobitworks/vithia-s0",
+  "artifact_kind": "DETERMINISTIC_PROTOCOL_REFERENCE_IMPLEMENTATION",
+  "trained": false,
+  "learned_parameters": "NONE",
+  "private_system0_provider_included": false,
+  "scientific_breakpoint": "UFA-JEV-BP-0024",
+  "scientific_mmr_root": "a461def1576e4a0600cb3c738e885961678dfef300a1696e958c6b9173d76692",
+  "publication_breakpoint_at_packaging": "VITA-PUB-BP-0014",
+  "publication_mmr_root_at_packaging": "5d407a68b4136be6cd8bd694ae065c01e0c3ffa2137e3b9ace0d991321a20b32",
+  "git_commit_at_packaging": "3869727750b6b7b9ad4f98580560a9f1a82753c3",
+  "rights_state": "LICENSE_NOT_ESTABLISHED_FOR_THIS_RELEASE",
+  "hf_publication_state": "BLOCKED_MISSING_WRITE_AUTH",
+  "signature_state": "NOT_SIGNED"
+}

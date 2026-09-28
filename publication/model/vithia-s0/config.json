@@ -1,0 +1,10 @@
+{
+  "model_type": "vithia-s0",
+  "artifact_kind": "DETERMINISTIC_PROTOCOL_REFERENCE_IMPLEMENTATION",
+  "protocol": "0-Vita-1",
+  "trained": false,
+  "learned_parameters": "NONE",
+  "private_system0_provider_included": false,
+  "evidence_level": "SIMULATED",
+  "version": "0.1.0-rc"
+}

@@ -1,0 +1,8 @@
+{
+  "domain": "example",
+  "source_atoms": ["sha256:example-source"],
+  "context": {"state": "UNKNOWN"},
+  "legal_actions": ["A", "B"],
+  "question": {"type": "choice", "instructions": "Choose one legal action."},
+  "provider": {"name": "public-reference", "version": "0.1.0"}
+}

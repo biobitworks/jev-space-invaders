@@ -211,6 +211,23 @@
         "a61903f9ffc48b81ac706c7ddd70c07d770bdd7cff0078383487f90cd8bcf277",
         "ffc78f83923c98b56282c51c5b88d5a6b805308a860a21aa0137fa6a25631bf8"
       ]
+    },
+    {
+      "seq": 14,
+      "bp_id": "VITA-PUB-BP-0015",
+      "bp_file": "governance/publication/breakpoints/0015-model-package-freeze.json",
+      "bp_file_sha256": "26ca80c8708b47f6703a800374822295dbf23da35af655b50500200698a33c2e",
+      "bp_root": "f180ed369b116de02d2c454fffbf7498452c4a1f19b3cc2695f0f1ebd865bf5b",
+      "root_kind": "FMO_V1_PUBLICATION_BREAKPOINT_ATOMS",
+      "mmr_leaf": "788a58e7b78e75ddd6b619cf36945baba389498b5e2743734deef2b47ad98dae",
+      "mmr_size": 15,
+      "mmr_root_after": "adc6e5f5394eaa4b9e2bfd28d6a84571b6a6c1f4cd24da3673bc14c97a9bbd8f",
+      "mmr_peaks_after": [
+        "9ad2f5877374a791dcca848fab93eccf098bfbf0af0ce837c2751d56471651be",
+        "a61903f9ffc48b81ac706c7ddd70c07d770bdd7cff0078383487f90cd8bcf277",
+        "ffc78f83923c98b56282c51c5b88d5a6b805308a860a21aa0137fa6a25631bf8",
+        "788a58e7b78e75ddd6b619cf36945baba389498b5e2743734deef2b47ad98dae"
+      ]
     }
   ]
 }

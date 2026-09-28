@@ -1,0 +1,39 @@
+{
+  "contract_id": "VITA01_CONTINUOUS_EQUIVALENCE_CONTRACT_V1",
+  "protocol": "0-Vita-1",
+  "invariants": {
+    "RAW_VALUE_HASHES_PRESERVE_EXACT_IDENTITY": true,
+    "DIFFERENT_RAW_BYTES_SHARE_CONTENT_HASH": false,
+    "CONTEXTUAL_EQUIVALENCE_ALLOWED": true,
+    "EQUIVALENCE_REQUIRES_FROZEN_RULE": true,
+    "CLASS_IDENTITY_MAY_BE_SHARED": true,
+    "RULE_VERSION_REQUIRED": true,
+    "UNITS_REQUIRED": true,
+    "UNCERTAINTY_METHOD_REQUIRED": true,
+    "BOUNDARY_SEMANTICS_REQUIRED": true,
+    "HISTORICAL_CLASSIFICATIONS_IMMUTABLE": true,
+    "NEW_EVIDENCE_CREATES_SUCCESSOR_CONTEXT": true
+  },
+  "objects": {
+    "RawValueFCO": "{raw: exact string as observed, units, uncertainty?}; content_id over the exact raw string, so '1.0' and '1.00' are different identities",
+    "EquivalenceRuleFCO": "{rule_id, version, quantity, units, mode: tolerance|bin, tolerance{abs,rel,k_sigma} | bin{origin,width}, uncertainty_method, boundary}; rule_hash = content_id(rule)",
+    "EquivalenceClassFCO": "{class_id = content_id(rule_hash, bin_index), rule_hash}: shared by all members",
+    "ClassificationFCO": "{raw_id, class_id, rule_hash, predecessor_ref}: never edited; reclassification is a successor"
+  },
+  "boundary_semantics": {
+    "tolerance": [
+      "closed: |a-b| <= tol",
+      "open: |a-b| < tol"
+    ],
+    "bin": [
+      "left_closed: [lo, hi)",
+      "right_closed: (lo, hi]"
+    ]
+  },
+  "uncertainty_methods": [
+    "none_declared_exact",
+    "absolute_1sigma",
+    "relative_1sigma"
+  ],
+  "enforcement": "src/vita01/equivalence.py; tests/test_equivalence.py"
+}

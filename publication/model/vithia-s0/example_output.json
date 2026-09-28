@@ -1,0 +1,24 @@
+{
+  "schema": "S01_CONTEXT_PACKET_V1",
+  "domain": "example",
+  "source_atoms": [
+    "sha256:example-source"
+  ],
+  "context": {
+    "state": "UNKNOWN"
+  },
+  "legal_actions": [
+    "A",
+    "B"
+  ],
+  "question": {
+    "type": "choice",
+    "instructions": "Choose one legal action."
+  },
+  "s0_provider": {
+    "name": "public-reference",
+    "version": "0.1.0"
+  },
+  "s0_compile_ms": 0.0,
+  "packet_id": "sha256:160ea673f41020d4f0a16b1ad979d40d6e453df312986fcd7528496d1a12b4be"
+}
