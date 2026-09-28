@@ -1,0 +1,76 @@
+{
+  "breakpoint_id": "UFA-JEV-BP-0027",
+  "parent": "UFA-JEV-BP-0026",
+  "state": "TRAINING_CANDIDATE_CORPUS_PROTOCOL_FROZEN",
+  "project": "VITHIA_SPACE",
+  "created_utc": "2026-09-28T06:49:42+00:00",
+  "git_head_at_creation": "ea4af252a395dacd7c383d77b26bef896a254461",
+  "root_kind": "FMO_V1_BREAKPOINT_ATOMS",
+  "bp_root": "12159eff6b6d3202f418107ba133f49cc017685f00ea5ca404b3fb281624d6a4",
+  "group_roots": {
+    "code": "2398fd7b8c2fc4f9f3dae5f23e796e343eb23904f0e053d3d2a7c8bd91213ff3",
+    "prereg": "a229edd79363304ba989e0a7817aa72feebc1e4d2dcf18ed4e68457b6665d470"
+  },
+  "atoms": [
+    {
+      "path": "docs/prereg/DAISY_ECA_TEMPORAL_ACTION_GRAPH.md",
+      "kind": "PreregistrationFCO",
+      "group": "prereg",
+      "bytes": 1525,
+      "sha256": "dbea3bf6f49085f0593341bd71976edb9a27ab5115c43e35cbd8c85c8a806aad",
+      "location": "public",
+      "fmo_leaf": "a229edd79363304ba989e0a7817aa72feebc1e4d2dcf18ed4e68457b6665d470"
+    },
+    {
+      "path": "src/daisy/eca_corpus.py",
+      "kind": "CodeFCO",
+      "group": "code",
+      "bytes": 9442,
+      "sha256": "895d1096daf2c733008424356c676db44904a0a69560a2a116fda8c82369f624",
+      "location": "public",
+      "fmo_leaf": "acc676ce8893f4e7fad20c4f92bc8cfa01a8bc2846e25c17ff74ca596bcd80f5"
+    },
+    {
+      "path": "src/daisy/eca_temporal_corpus.py",
+      "kind": "CodeFCO",
+      "group": "code",
+      "bytes": 6210,
+      "sha256": "31214b9b889e83d394f77ac30738466409c05891d3c172593e3392dd134c1a9a",
+      "location": "public",
+      "fmo_leaf": "7dd09ad6a5845a3f402970ceea6ba0b11e6a5669978225048029b8afee7252df"
+    },
+    {
+      "path": "scripts/build_daisy_eca.py",
+      "kind": "CodeFCO",
+      "group": "code",
+      "bytes": 2053,
+      "sha256": "682c3cb3f2bb465118ee966840713b05cadbeec47387bef29f54ffd7b3df9c22",
+      "location": "public",
+      "fmo_leaf": "e9e577cdfcfe2ccdd09a6c80ea503d32f7941ae656ce540910cf4af3c04ce1ea"
+    },
+    {
+      "path": "scripts/build_daisy_eca_temporal.py",
+      "kind": "CodeFCO",
+      "group": "code",
+      "bytes": 222,
+      "sha256": "4e4724fdf917a41ca5eb9f2f87cc41e68b4e542f6e2c9c7dc5fe12b91f9e378d",
+      "location": "public",
+      "fmo_leaf": "c5c3724364eeaf5ff1b4fde829a3fa759e449dc57eed6a3766448eca18708a9a"
+    }
+  ],
+  "stage": "DAISY_ECA_CORPUS_PREREG",
+  "classification": "TRAINING_CANDIDATE",
+  "rules": 256,
+  "actions": [
+    "LEFT",
+    "STAY",
+    "RIGHT"
+  ],
+  "delta_g_star": "NOT_COMPUTED",
+  "model_calls": 0,
+  "claim_mutation": false,
+  "pre_mmr_root": "c47a1df560aca5d2885aa95e3edbec5c7d62fc9ddc2aafa3580f5f94b3be6235",
+  "next_action": "generate deterministic model-free ECA corpora",
+  "claim_ceiling": "IDENTITY_AND_INCLUSION_ONLY; hashes do not establish correctness",
+  "signature_state": "NOT_SIGNED"
+}

@@ -399,6 +399,23 @@
         "0e7a36ac6f8774ee554efef13de36399f4f1888362f636fada0cece1ef85cd5e",
         "9d726c0ca24843d044de6df7cf5c6ed795a1d75e5f72f60807c7937d6ba709ee"
       ]
+    },
+    {
+      "seq": 26,
+      "bp_id": "UFA-JEV-BP-0027",
+      "bp_file": "governance/breakpoints/0027-daisy-eca-training-candidate-prereg.json",
+      "bp_file_sha256": "793cda49d4fe80b5ce31393a900f3aac253a2326b9cfce00a75db7c13a29cbe1",
+      "bp_root": "12159eff6b6d3202f418107ba133f49cc017685f00ea5ca404b3fb281624d6a4",
+      "root_kind": "FMO_V1_BREAKPOINT_ATOMS",
+      "mmr_leaf": "7cd1c801bc376b22d193c104adae7d70891f346509fcff30e1fb1440b91a741d",
+      "mmr_size": 27,
+      "mmr_root_after": "47b9a5e338cc321178bc61a1755bb75ed2234c222131c33e444211887c5c6263",
+      "mmr_peaks_after": [
+        "1303f691fcfdee6145f710febf29e2146b6ced8c2f89b643dd1e4371cafbabe7",
+        "0e7a36ac6f8774ee554efef13de36399f4f1888362f636fada0cece1ef85cd5e",
+        "9d726c0ca24843d044de6df7cf5c6ed795a1d75e5f72f60807c7937d6ba709ee",
+        "7cd1c801bc376b22d193c104adae7d70891f346509fcff30e1fb1440b91a741d"
+      ]
     }
   ]
 }
