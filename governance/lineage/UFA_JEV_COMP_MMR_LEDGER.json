@@ -272,6 +272,23 @@
         "1e7cae119dc9ca49831b8090e9aa1cf9d65919c2c6fb078b91a3720439aca869",
         "f85d49ddfa6053558bbb03c759091d0161caf1af328f9d37aba700118e1f708f"
       ]
+    },
+    {
+      "seq": 15,
+      "bp_id": "UFA-JEV-COMP-BP-0016",
+      "bp_file": "governance/competition/breakpoints/0016-pr2-review-findings-v2-fixes.json",
+      "bp_file_sha256": "3f70241b7f70b2884e7f575d3a6840b2f7841950190b2af65b96daf55995ed18",
+      "bp_root": "50e26a0eba32b06a6648a6057de215fe117df442ca7109eba513ef2711b11485",
+      "branch": "competition/final-integration-v01",
+      "lineage_id": "UFA-JEV-COMP",
+      "parent_root": "ee7ac4dcb0e9dd95131b63bb1e6297ff6d112d386ae78dc6c1274494fc287148",
+      "root_kind": "FMO_V1_BREAKPOINT_ATOMS",
+      "mmr_leaf": "5c44766a4822f252749f0e43e4ca7b11da17a3197e59c3552beb54afb6ca7328",
+      "mmr_size": 16,
+      "mmr_root_after": "d5a34bcc5da38cb7a758c0af8e8e8708a6d7bfb7af9266b9f7181b54246999c4",
+      "mmr_peaks_after": [
+        "d5a34bcc5da38cb7a758c0af8e8e8708a6d7bfb7af9266b9f7181b54246999c4"
+      ]
     }
   ],
   "lineage_id": "UFA-JEV-COMP",
