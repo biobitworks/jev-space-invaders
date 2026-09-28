@@ -922,6 +922,24 @@
         "b356c06fb0470f4881c79ed3e83ad55a99ac5b6adca45586a26d47ff6b2d1af8",
         "195d13e9e2de4a2fcaaed75d23607885e03de09a8dea7099cc954fe2c38f081d"
       ]
+    },
+    {
+      "seq": 58,
+      "bp_id": "UFA-JEV-BP-0059",
+      "bp_file": "governance/breakpoints/0059-system-one-adapter-runtime-freeze.json",
+      "bp_file_sha256": "d1bf7f7cebbc8d9a20bd59d82c57635af1bfb1db5e2902651e9793a829c9823f",
+      "bp_root": "d416e5ddf9314afdd08c51550611677689b7fc0812417c7361c44f560b9c5881",
+      "root_kind": "FMO_V1_BREAKPOINT_ATOMS",
+      "mmr_leaf": "83214209b60cf5d15bd5d82d45511065412bad7a8fdda64c351dd9a98cfa9808",
+      "mmr_size": 59,
+      "mmr_root_after": "554eae3dd9433704a4aa761c9903f5d680931ec1a2bd9c0b6ef8f3ece2cd0c69",
+      "mmr_peaks_after": [
+        "026514586974a2fb18c9fefe6f92208e2008b44751f5380417c4129b185b831f",
+        "75be8b4a1b7202ab2045b31e332e04471e0fa5d990c8d9c5097b1ed82456cb9d",
+        "b356c06fb0470f4881c79ed3e83ad55a99ac5b6adca45586a26d47ff6b2d1af8",
+        "195d13e9e2de4a2fcaaed75d23607885e03de09a8dea7099cc954fe2c38f081d",
+        "83214209b60cf5d15bd5d82d45511065412bad7a8fdda64c351dd9a98cfa9808"
+      ]
     }
   ]
 }
