@@ -22,3 +22,7 @@ Publication release-candidate source commit: d0062eb5776c1e96b68f445b4fbcafcb13f
     tectonic -X compile publication/supplement/supplement.tex --outdir publication/release/v0.1.0
 
 Figures and tables are generated from governed frozen datasets and receipts. Manual numeric transcription is not used for figure/table generation.
+
+## Known historical custody gap
+
+The publication verifier distinguishes MMR-chain integrity from historical atom availability. For this release candidate, PUBLICATION_MMR_CHAIN_VERIFY is PASS and PUBLICATION_ATOM_REPLAY_VERIFY is PARTIAL because one ephemeral .pyc atom from VITA-PUB-BP-0015 is unavailable. The verifier exits with code 3 for this disclosed partial-replay state.

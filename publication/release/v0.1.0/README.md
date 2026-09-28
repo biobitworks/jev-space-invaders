@@ -22,3 +22,7 @@ The v0.1.0 evidence lock ends at scientific UFA-JEV-BP-0024. A later scientific 
 Hashes and Merkle/MMR inclusion establish identity, inclusion, and ordered custody only; they do not establish truth, correctness, safety, or causality.
 
 External release remains blocked until Hugging Face/Zenodo write authorization and release-rights state are established. No DOI is claimed by this release candidate.
+
+## Publication custody correction
+
+VITA-PUB-BP-0015 included an ephemeral Python bytecode atom whose exact bytes are no longer recoverable from Git. The publication MMR chain remains independently recomputable from committed breakpoint files and recorded atom metadata, but full historical atom replay is PARTIAL. This is an internal release blocker unless the exact bytes are recovered or a later governed release explicitly accepts the disclosed custody limitation.

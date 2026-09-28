@@ -319,6 +319,22 @@
         "16346dd446d8fde4d60bde80c8bfd808556d7b8076cfc7ab45529cbaa100e802",
         "a663d9f158b2e83acb1d28853346813682ed8d8a09071462d995902ef1e3caf7"
       ]
+    },
+    {
+      "seq": 21,
+      "bp_id": "VITA-PUB-BP-0022",
+      "bp_file": "governance/publication/breakpoints/0022-release-package-custody-gap-successor.json",
+      "bp_file_sha256": "f24801de310bf8404ff280f05e9fbe69624d8bf85d142597a9e4d5eb03d7ead1",
+      "bp_root": "d337e869bd5aa6c299cfbe67562574005f1eda3f2647cb3a41d85a35f36ed015",
+      "root_kind": "FMO_V1_PUBLICATION_BREAKPOINT_ATOMS",
+      "mmr_leaf": "0c36c4246b704b1167c9038ef8fd606cd10dc1f8ea3d95be31bb51408af6ae3b",
+      "mmr_size": 22,
+      "mmr_root_after": "44c597e1404a4915e96361c422670426bbcc0b381c2945f59fc823aaa904bad5",
+      "mmr_peaks_after": [
+        "38225c02b9c0e198d4da872ddc9f9160d7e1c772cbb1da2e69ae4778a5cd07b5",
+        "16346dd446d8fde4d60bde80c8bfd808556d7b8076cfc7ab45529cbaa100e802",
+        "367f783be0de25747258ed056fdb1b07e5849e9bdfe30bc2805a5e54862a2112"
+      ]
     }
   ]
 }

@@ -1,6 +1,6 @@
 {
-  "schema": "VITHIA_RELEASE_GATE_V1",
-  "state": "BLOCKED",
+  "schema": "VITHIA_RELEASE_GATE_V2",
+  "state": "BLOCKED_INTERNAL_AND_EXTERNAL",
   "target_version": "0.1.0",
   "required_local_gates": {
     "scientific_mmr": "PASS",
@@ -9,7 +9,9 @@
     "claim_audit": "PASS",
     "type_safety_audit": "PASS",
     "pdf_visual_audit": "PASS",
-    "model_package": "PASS"
+    "model_package": "PASS",
+    "publication_mmr_chain": "PASS",
+    "publication_atom_replay": "PARTIAL"
   },
   "external_blockers": [
     "LICENSE_NOT_ESTABLISHED_FOR_THIS_RELEASE",
@@ -20,5 +22,8 @@
   "zenodo_state": "NOT_CREATED",
   "hf_remote_state": "NOT_CREATED",
   "signature_state": "NOT_SIGNED",
-  "publish_authorized": false
+  "publish_authorized": false,
+  "internal_blockers": [
+    "PUBLICATION_ATOM_REPLAY_GAP_BP0015"
+  ]
 }

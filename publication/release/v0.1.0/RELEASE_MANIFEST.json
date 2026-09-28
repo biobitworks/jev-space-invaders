@@ -1,22 +1,26 @@
 {
-  "schema": "VITHIA_RELEASE_MANIFEST_V1",
+  "schema": "VITHIA_RELEASE_MANIFEST_V2",
   "title": "Vithia 0-Vita-1: A Deterministic Context Protocol for Verifiable Scientific State Transitions",
   "target_version": "0.1.0",
-  "state": "RELEASE_CANDIDATE_BLOCKED_EXTERNAL",
+  "state": "RELEASE_CANDIDATE_BLOCKED_INTERNAL_AND_EXTERNAL",
   "publication_author": "Byron P. Lee",
   "affiliation": "Biobitworks",
-  "source_archive_commit": "d0062eb5776c1e96b68f445b4fbcafcb13fc3dc9",
+  "source_archive_commit": "7b7c41bebdf5fedc6d5e05536568cf2d64a793b1",
   "scientific_breakpoint": "UFA-JEV-BP-0024",
   "scientific_mmr_size": 24,
   "scientific_mmr_root": "a461def1576e4a0600cb3c738e885961678dfef300a1696e958c6b9173d76692",
-  "publication_predecessor_breakpoint": "VITA-PUB-BP-0018",
-  "publication_predecessor_mmr_size": 18,
-  "publication_predecessor_mmr_root": "12d7228f77eb5c43ddeea536e84a274206d3a855e3bef4dd9e1e77d55f46e65f",
+  "publication_predecessor_breakpoint": "VITA-PUB-BP-0021",
+  "publication_predecessor_mmr_size": 21,
+  "publication_predecessor_mmr_root": "1fd37b2a46e91f876a5ee48fc6bf1d2e9e4568e091bbdf14dea1f689fc0e16c6",
   "rights_state": "LICENSE_NOT_ESTABLISHED_FOR_THIS_RELEASE",
   "hf_state": "BLOCKED_MISSING_WRITE_AUTH",
   "zenodo_state": "BLOCKED_MISSING_AUTH_AND_RIGHTS",
   "signature_state": "NOT_SIGNED",
   "files": {
+    "BP0015_EPHEMERAL_PYC_CUSTODY_GAP.json": {
+      "bytes": 1322,
+      "sha256": "03d267e46db5255b5b57126c163898d207a2766936472a3712343b4a202366bf"
+    },
     "BREAKPOINT_REGISTRY.json": {
       "bytes": 13917,
       "sha256": "a5894b95cc8163525eb08ea4bbadc9d7d18826f24a1b0176d99411f7593dcf42"
@@ -37,29 +41,33 @@
       "bytes": 2037,
       "sha256": "b8f01ac3e3d50f1fbdcab4c3514be6a03661e5dc91efe9db664e7bb5055d02f3"
     },
+    "LOCAL_RELEASE_GATE_RECEIPT.json": {
+      "bytes": 810,
+      "sha256": "ceb0d282a8845078c9e742f3165885a35b4bbc497f401a077ab1dd5392d7b0e6"
+    },
     "MODEL_RELEASE_RECEIPT.json": {
       "bytes": 348,
       "sha256": "e3f4e5ebc5ff8dd73c1b67896a4475a9b850afe8b4e13013de7c4af7d215033b"
     },
     "PUBLICATION_BREAKPOINT_LEDGER.json": {
-      "bytes": 14054,
-      "sha256": "4d65fbcfac5478219f51dd3fdf45279ae7d2247dd63d071f2f7bd614fa4a5558"
+      "bytes": 16548,
+      "sha256": "a6c9250520c0734d3ced919d94992674ebc61df77586b0767c1d2a3282353d0b"
     },
     "README.md": {
-      "bytes": 1194,
-      "sha256": "30209f5df9fd3f32d6b9044141394bc2c6b9502eadc1b59c3de102fdf08987b6"
+      "bytes": 1663,
+      "sha256": "a9a07f2a54cc5d5c5e474eaf60221cb14a40928191b47f89bda3245fca31147c"
     },
     "RELEASE_GATE.json": {
-      "bytes": 634,
-      "sha256": "8dbdef33dd3341ac277e7def07c656b7ae99a62d4665ff267cec87a14f4bf5f7"
+      "bytes": 806,
+      "sha256": "5443f91f7d4a5507762d7f02d2b9f4728e512d682c528002a86bf58e52f4d10d"
     },
     "RELEASE_PACKAGING_FAILURE_RECEIPT.json": {
       "bytes": 523,
       "sha256": "2027bd31b724061e352618ad596fe11607f944abce76636d68ca67a4bcaa9bff"
     },
     "REPRODUCIBILITY.md": {
-      "bytes": 889,
-      "sha256": "fc2ed35d725008db742dea8cb0d18278da1303d886d08e949ef054f1854e0472"
+      "bytes": 1270,
+      "sha256": "de403ba487db6b2cf997f592705a51d8d8c1ed02cca280e802565694a56b0f3c"
     },
     "RIGHTS_STATE.json": {
       "bytes": 491,
@@ -85,6 +93,14 @@
       "bytes": 36387,
       "sha256": "21827b48b8fd393ec9f1f378edca745cb86e22cde7af1e519e1e75c3b021b69d"
     },
+    "verify_publication_breakpoints.py": {
+      "bytes": 4075,
+      "sha256": "4de866e602a55632ba84f32bd8c9a5ebc02907c8a32780dca0c0d19f84af0b20"
+    },
+    "vithia-0-vita-1-v0.1.0-rc2-source.tar.gz": {
+      "bytes": 394519,
+      "sha256": "c9b914be8d83cb38c7b012fd14c69be59aa1a43dd08da781282f342a876abb0f"
+    },
     "vithia-0-vita-1-v0.1.0-source.tar.gz": {
       "bytes": 391152,
       "sha256": "6e6ab0c21f31223fe64da096cd5d86cca692cc578c4f0954f845040e77f6a9ca"
@@ -93,5 +109,8 @@
       "bytes": 11319,
       "sha256": "a70781c425a648dbb0c11d04906636b8c522fdeebbeaf02f1ef798e54e829cfe"
     }
-  }
+  },
+  "publication_mmr_chain_state": "PASS",
+  "publication_atom_replay_state": "PARTIAL",
+  "historical_atom_custody_gap": "VITA-PUB-BP-0015:publication/model/vithia-s0/__pycache__/modeling_vithia_s0.cpython-314.pyc"
 }

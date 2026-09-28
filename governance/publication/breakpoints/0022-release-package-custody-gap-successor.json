@@ -1,0 +1,286 @@
+{
+  "breakpoint_id": "VITA-PUB-BP-0022",
+  "parent": "VITA-PUB-BP-0021",
+  "state": "RELEASE_CANDIDATE_BLOCKED_INTERNAL_AND_EXTERNAL",
+  "project": "VITHIA_0_VITA_1_PUBLICATION",
+  "created_utc": "2026-09-28T06:30:08+00:00",
+  "root_kind": "FMO_V1_PUBLICATION_BREAKPOINT_ATOMS",
+  "bp_root": "d337e869bd5aa6c299cfbe67562574005f1eda3f2647cb3a41d85a35f36ed015",
+  "group_roots": {
+    "audit": "6ffeb1ce0a6450188c9c5d3cbf0c853901e717a28d451d5334991c1b9c02718f",
+    "code": "87ac4854d39d2d6bbe242bbb309e47f93b05a5e59b67d0e4281eafcc2e479633",
+    "gate": "bd991d9bd47f96efea52d3b461fd1c38a218632f4d538468c0a5fb534ad4d297",
+    "release_package": "ae567dfea4c54d030398746ce034bf7ec4c602b3e0d41da1da171de7c00fae23"
+  },
+  "atoms": [
+    {
+      "path": "publication/release/v0.1.0/BP0015_EPHEMERAL_PYC_CUSTODY_GAP.json",
+      "kind": "ReleasePackageSuccessorFCO",
+      "group": "release_package",
+      "bytes": 1322,
+      "sha256": "03d267e46db5255b5b57126c163898d207a2766936472a3712343b4a202366bf",
+      "location": "public",
+      "fmo_leaf": "7e8f7b1940e5ef8551c20d164ce969c6edf8cacb186ff0d149c10a61148b419a"
+    },
+    {
+      "path": "publication/release/v0.1.0/BREAKPOINT_REGISTRY.json",
+      "kind": "ReleasePackageSuccessorFCO",
+      "group": "release_package",
+      "bytes": 13917,
+      "sha256": "a5894b95cc8163525eb08ea4bbadc9d7d18826f24a1b0176d99411f7593dcf42",
+      "location": "public",
+      "fmo_leaf": "66cce8214dead03c075d657a9b3aa4748be5fff572936ea794e89fe9b5a177ea"
+    },
+    {
+      "path": "publication/release/v0.1.0/CITATION.cff",
+      "kind": "ReleasePackageSuccessorFCO",
+      "group": "release_package",
+      "bytes": 404,
+      "sha256": "5761b3d1e1c46a7cfc92920ac9eef0e72da0af9c0a048439700b1e3e0189f99a",
+      "location": "public",
+      "fmo_leaf": "85c90e0306190615c65b9f56c5d79cfdf94da85233b669df5cad837af9d24777"
+    },
+    {
+      "path": "publication/release/v0.1.0/CLAIM_LEDGER.json",
+      "kind": "ReleasePackageSuccessorFCO",
+      "group": "release_package",
+      "bytes": 11928,
+      "sha256": "0c5c865c1e2a80cae83f6447994ceab6b4d677f13d64e0587691b373e65a95eb",
+      "location": "public",
+      "fmo_leaf": "848991140503f49771db38ba3690528aca34ec6265db72086bec93910cb99781"
+    },
+    {
+      "path": "publication/release/v0.1.0/DATASET_REGISTRY.json",
+      "kind": "ReleasePackageSuccessorFCO",
+      "group": "release_package",
+      "bytes": 5753,
+      "sha256": "ad9e2972aa0731eeea5bddfa7f30c3f50a29101c56d98be317b55b1afa878804",
+      "location": "public",
+      "fmo_leaf": "5fc05d65f92996401caaed85d4584ac22565755b560458c8cfff76acdd6f8529"
+    },
+    {
+      "path": "publication/release/v0.1.0/EXPERIMENT_REGISTRY.json",
+      "kind": "ReleasePackageSuccessorFCO",
+      "group": "release_package",
+      "bytes": 2037,
+      "sha256": "b8f01ac3e3d50f1fbdcab4c3514be6a03661e5dc91efe9db664e7bb5055d02f3",
+      "location": "public",
+      "fmo_leaf": "ba76f1a89b837bc36a1c1f97ac3171775eb428aec618c2dd9e11395282f07afe"
+    },
+    {
+      "path": "publication/release/v0.1.0/LOCAL_RELEASE_GATE_RECEIPT.json",
+      "kind": "ReleasePackageSuccessorFCO",
+      "group": "release_package",
+      "bytes": 810,
+      "sha256": "ceb0d282a8845078c9e742f3165885a35b4bbc497f401a077ab1dd5392d7b0e6",
+      "location": "public",
+      "fmo_leaf": "46f1aec7fddd6ad1dd189813739bac79807aa59a9a7b36fa2377b1d3e8f71827"
+    },
+    {
+      "path": "publication/release/v0.1.0/MODEL_RELEASE_RECEIPT.json",
+      "kind": "ReleasePackageSuccessorFCO",
+      "group": "release_package",
+      "bytes": 348,
+      "sha256": "e3f4e5ebc5ff8dd73c1b67896a4475a9b850afe8b4e13013de7c4af7d215033b",
+      "location": "public",
+      "fmo_leaf": "769247da3dc1012722f3ac97d1046b579d15979a8254f2cc93337ae0a963cb3e"
+    },
+    {
+      "path": "publication/release/v0.1.0/PUBLICATION_BREAKPOINT_LEDGER.json",
+      "kind": "ReleasePackageSuccessorFCO",
+      "group": "release_package",
+      "bytes": 16548,
+      "sha256": "a6c9250520c0734d3ced919d94992674ebc61df77586b0767c1d2a3282353d0b",
+      "location": "public",
+      "fmo_leaf": "b1f7ed95eba126542955a1e828f8036c34703bebef4af9e22b0ff7150832b8a6"
+    },
+    {
+      "path": "publication/release/v0.1.0/README.md",
+      "kind": "ReleasePackageSuccessorFCO",
+      "group": "release_package",
+      "bytes": 1663,
+      "sha256": "a9a07f2a54cc5d5c5e474eaf60221cb14a40928191b47f89bda3245fca31147c",
+      "location": "public",
+      "fmo_leaf": "97bbece22f4d3534f7ffe703f5b228bfef99a84bbefe07ed616baa0653725919"
+    },
+    {
+      "path": "publication/release/v0.1.0/RELEASE_GATE.json",
+      "kind": "ReleasePackageSuccessorFCO",
+      "group": "release_package",
+      "bytes": 806,
+      "sha256": "5443f91f7d4a5507762d7f02d2b9f4728e512d682c528002a86bf58e52f4d10d",
+      "location": "public",
+      "fmo_leaf": "271d3f7f3673885f5d76053ebb7f4823ea31df9b613dc7b968ac3f5118c87606"
+    },
+    {
+      "path": "publication/release/v0.1.0/RELEASE_MANIFEST.json",
+      "kind": "ReleasePackageSuccessorFCO",
+      "group": "release_package",
+      "bytes": 4545,
+      "sha256": "58cd04e9fe495816784ec5efba378f9dd8cb28b5af0a5adc40bb77c6d33a2603",
+      "location": "public",
+      "fmo_leaf": "b1277743aa2a3e828ce4b143622047bd250742be9219ef62357288d7c1881347"
+    },
+    {
+      "path": "publication/release/v0.1.0/RELEASE_PACKAGING_FAILURE_RECEIPT.json",
+      "kind": "ReleasePackageSuccessorFCO",
+      "group": "release_package",
+      "bytes": 523,
+      "sha256": "2027bd31b724061e352618ad596fe11607f944abce76636d68ca67a4bcaa9bff",
+      "location": "public",
+      "fmo_leaf": "e011f09a78408e45a9a44df64558d64a0dba8b4a82779b2dae556bfbaca681ff"
+    },
+    {
+      "path": "publication/release/v0.1.0/REPRODUCIBILITY.md",
+      "kind": "ReleasePackageSuccessorFCO",
+      "group": "release_package",
+      "bytes": 1270,
+      "sha256": "de403ba487db6b2cf997f592705a51d8d8c1ed02cca280e802565694a56b0f3c",
+      "location": "public",
+      "fmo_leaf": "498c723971325aacd9a60abfa3c31b5a4c292306d0342ca2b841cebca3524ff8"
+    },
+    {
+      "path": "publication/release/v0.1.0/RIGHTS_STATE.json",
+      "kind": "ReleasePackageSuccessorFCO",
+      "group": "release_package",
+      "bytes": 491,
+      "sha256": "4fba6b7da0ac07a70ae0492287c75d8a6e1970b560904f29c61acbd687ab761d",
+      "location": "public",
+      "fmo_leaf": "7bb2439cb687826e9d5c272994334add0ac7e908027894c750964e91fee7fb1e"
+    },
+    {
+      "path": "publication/release/v0.1.0/SCIENTIFIC_MMR_LEDGER.json",
+      "kind": "ReleasePackageSuccessorFCO",
+      "group": "release_package",
+      "bytes": 18407,
+      "sha256": "cd23c478867dded3d1ad039ed7d5e593d921650ded9f9ff8c1ccafb91219a1a9",
+      "location": "public",
+      "fmo_leaf": "1552d1a2e18594f90dfdbcfeb0ed41e633a10a35cd5dea39881adaf0357cb6df"
+    },
+    {
+      "path": "publication/release/v0.1.0/SCIENTIFIC_SUCCESSOR_OUTSIDE_V0_1_0.json",
+      "kind": "ReleasePackageSuccessorFCO",
+      "group": "release_package",
+      "bytes": 607,
+      "sha256": "e158abd79710e3e38c34bd7bf5a0048e44e1096fb7f988868092862f2d6e7722",
+      "location": "public",
+      "fmo_leaf": "01acf9f6e7c2bb63649d8ab2ae7281e6d974ce20ec90d1c77f72aca6cfb9f5f2"
+    },
+    {
+      "path": "publication/release/v0.1.0/SHA256SUMS.txt",
+      "kind": "ReleasePackageSuccessorFCO",
+      "group": "release_package",
+      "bytes": 2197,
+      "sha256": "a02cf8aad170d1c8cd4fcbb4bb8a61bf41309cf5db8d53c81a132ee729ee4d14",
+      "location": "public",
+      "fmo_leaf": "f3309429b7a40973281a35fb665895c636fa0e582ac6933b23417fd9df50e514"
+    },
+    {
+      "path": "publication/release/v0.1.0/SOURCE_REGISTRY.json",
+      "kind": "ReleasePackageSuccessorFCO",
+      "group": "release_package",
+      "bytes": 1259,
+      "sha256": "9835a08b3ea19202b8a345b7ca821244ac089edcf4c539cdade07d53a91dca51",
+      "location": "public",
+      "fmo_leaf": "bd591bfc0644adcbe95f62636ef0139ea8af9e0eed99b1b7308098ee56b1df98"
+    },
+    {
+      "path": "publication/release/v0.1.0/main.pdf",
+      "kind": "ReleasePackageSuccessorFCO",
+      "group": "release_package",
+      "bytes": 138558,
+      "sha256": "03571aa6ba35a0d92007360a8378cdbeaa596a1010c5a57b02d0f2e2ddf9e4d6",
+      "location": "public",
+      "fmo_leaf": "b3f3d6ec20652858908baa21b79b3593c58b6cd89caeb694159f97acb9a8b16a"
+    },
+    {
+      "path": "publication/release/v0.1.0/supplement.pdf",
+      "kind": "ReleasePackageSuccessorFCO",
+      "group": "release_package",
+      "bytes": 36387,
+      "sha256": "21827b48b8fd393ec9f1f378edca745cb86e22cde7af1e519e1e75c3b021b69d",
+      "location": "public",
+      "fmo_leaf": "583089bbde283cf30fa2bbb9385e7b654246880d5f611dabdbce07b837692162"
+    },
+    {
+      "path": "publication/release/v0.1.0/verify_publication_breakpoints.py",
+      "kind": "ReleasePackageSuccessorFCO",
+      "group": "release_package",
+      "bytes": 4075,
+      "sha256": "4de866e602a55632ba84f32bd8c9a5ebc02907c8a32780dca0c0d19f84af0b20",
+      "location": "public",
+      "fmo_leaf": "e6e5935aec23e5ce02ab06da9912096f50426e40d4e020adefaf02a38c0f5781"
+    },
+    {
+      "path": "publication/release/v0.1.0/vithia-0-vita-1-v0.1.0-rc2-source.tar.gz",
+      "kind": "ReleasePackageSuccessorFCO",
+      "group": "release_package",
+      "bytes": 394519,
+      "sha256": "c9b914be8d83cb38c7b012fd14c69be59aa1a43dd08da781282f342a876abb0f",
+      "location": "public",
+      "fmo_leaf": "d73b2b5fd70b3901b3d3d74cc1785fb095515574d4261829f016af7f7637c530"
+    },
+    {
+      "path": "publication/release/v0.1.0/vithia-0-vita-1-v0.1.0-source.tar.gz",
+      "kind": "ReleasePackageSuccessorFCO",
+      "group": "release_package",
+      "bytes": 391152,
+      "sha256": "6e6ab0c21f31223fe64da096cd5d86cca692cc578c4f0954f845040e77f6a9ca",
+      "location": "public",
+      "fmo_leaf": "5ce7acf4a7a28f88f6d5e40d07a4ed8f7044ff31a661247aba691bb9fd49daff"
+    },
+    {
+      "path": "publication/release/v0.1.0/vithia-s0-hf-v0.1.0.tar.gz",
+      "kind": "ReleasePackageSuccessorFCO",
+      "group": "release_package",
+      "bytes": 11319,
+      "sha256": "a70781c425a648dbb0c11d04906636b8c522fdeebbeaf02f1ef798e54e829cfe",
+      "location": "public",
+      "fmo_leaf": "8e8bc0e091e8677b154a1a76700accf88932b6880d48d77dc2b1ff934a8aedb5"
+    },
+    {
+      "path": "publication/LOCAL_RELEASE_GATE_RECEIPT.json",
+      "kind": "ReleaseGateFCO",
+      "group": "gate",
+      "bytes": 810,
+      "sha256": "ceb0d282a8845078c9e742f3165885a35b4bbc497f401a077ab1dd5392d7b0e6",
+      "location": "public",
+      "fmo_leaf": "bd991d9bd47f96efea52d3b461fd1c38a218632f4d538468c0a5fb534ad4d297"
+    },
+    {
+      "path": "publication/audits/BP0015_EPHEMERAL_PYC_CUSTODY_GAP.json",
+      "kind": "CustodyGapReceiptFCO",
+      "group": "audit",
+      "bytes": 1322,
+      "sha256": "03d267e46db5255b5b57126c163898d207a2766936472a3712343b4a202366bf",
+      "location": "public",
+      "fmo_leaf": "6ffeb1ce0a6450188c9c5d3cbf0c853901e717a28d451d5334991c1b9c02718f"
+    },
+    {
+      "path": "scripts/verify_publication_breakpoints.py",
+      "kind": "VerifierCodeFCO",
+      "group": "code",
+      "bytes": 4075,
+      "sha256": "4de866e602a55632ba84f32bd8c9a5ebc02907c8a32780dca0c0d19f84af0b20",
+      "location": "public",
+      "fmo_leaf": "87ac4854d39d2d6bbe242bbb309e47f93b05a5e59b67d0e4281eafcc2e479633"
+    }
+  ],
+  "stage": "RELEASE_PACKAGE_CUSTODY_GAP_SUCCESSOR",
+  "target_version": "0.1.0",
+  "scientific_evidence_lock": "UFA-JEV-BP-0024",
+  "publication_mmr_chain_state": "PASS",
+  "publication_atom_replay_state": "PARTIAL",
+  "internal_blockers": [
+    "PUBLICATION_ATOM_REPLAY_GAP_BP0015"
+  ],
+  "external_blockers": [
+    "LICENSE_NOT_ESTABLISHED_FOR_THIS_RELEASE",
+    "HF_WRITE_AUTH_MISSING",
+    "ZENODO_AUTH_MISSING"
+  ],
+  "publish_authorized": false,
+  "tag_state": "NOT_CREATED",
+  "signature_state": "NOT_SIGNED",
+  "claim_ceiling": "IDENTITY_AND_INCLUSION_ONLY; publication roots do not establish scientific truth"
+}
