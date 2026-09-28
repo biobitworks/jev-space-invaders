@@ -1,0 +1,72 @@
+{
+  "breakpoint_id": "UFA-JEV-BP-0022",
+  "parent": "UFA-JEV-BP-0021",
+  "state": "POST_CONFIRMATORY_SECONDARY_ANALYSIS_COMPLETE",
+  "project": "VITHIA_SPACE",
+  "created_utc": "2026-09-28T05:18:09+00:00",
+  "git_head_at_creation": "39f87b7f77dcf77d5a123d2b83a992930e33acb9",
+  "root_kind": "FMO_V1_BREAKPOINT_ATOMS",
+  "bp_root": "df163dde1fe575f699324df5f9fc9216fd3c5b02d2e7581478f18af07b35f951",
+  "group_roots": {
+    "analysis": "df1c6998ab98ced9e8495ad19a36ba7b7786177f3ce52af6b0956762be2210bc",
+    "code": "e5f83cf686e2ae7ee36dfb47aa085c3c2c2fdf6c8ba806ebf3b4ee9eefa3c966",
+    "prereg": "7274d77f7f302a83ea7ea23141baaac730b6ecb092ed7596f43df2ff3bedc2bb",
+    "receipt": "fc1a8b626ce4883710a19e0168d76b0a96f0c951ce480dcee2860eae440ae448"
+  },
+  "atoms": [
+    {
+      "path": "docs/prereg/D0_D9_STATISTICAL_ANALYSIS.md",
+      "kind": "PreregistrationFCO",
+      "group": "prereg",
+      "bytes": 1364,
+      "sha256": "52557091ccb901fea2fbf3c0dfb3e61cc80b40c59bc7780e169f13db0209f2de",
+      "location": "public",
+      "fmo_leaf": "7274d77f7f302a83ea7ea23141baaac730b6ecb092ed7596f43df2ff3bedc2bb"
+    },
+    {
+      "path": "scripts/secondary_stats.py",
+      "kind": "CodeFCO",
+      "group": "code",
+      "bytes": 5438,
+      "sha256": "6bfb5af8fa80bf0b0128e723d02c4a631c3839fede3452e8b711d8eb00f2d03f",
+      "location": "public",
+      "fmo_leaf": "e5f83cf686e2ae7ee36dfb47aa085c3c2c2fdf6c8ba806ebf3b4ee9eefa3c966"
+    },
+    {
+      "path": "evidence/statistical_successor/STATISTICAL_ANALYSIS.json",
+      "kind": "DerivedEvidenceFCO",
+      "group": "analysis",
+      "bytes": 2292,
+      "sha256": "9ac16e0dd207db3281cec221ff5f5ce099c064718f58d5fa213873aa30eef71f",
+      "location": "public",
+      "fmo_leaf": "306fe3b23d818119460ae9cfee7fbbc42cf528ea8699e0640ec03bc7cfce7b30"
+    },
+    {
+      "path": "evidence/statistical_successor/STATISTICAL_ANALYSIS.csv",
+      "kind": "DerivedEvidenceFCO",
+      "group": "analysis",
+      "bytes": 1676,
+      "sha256": "98d7eb711b79431f8d3baa7231e322f6e23da1cb96f7a497e145e2dae06f40ad",
+      "location": "public",
+      "fmo_leaf": "ac7ec62002b1c02fb860f942131442ffd179052ce3593a43592989f9a0b97c61"
+    },
+    {
+      "path": "evidence/statistical_successor/STATISTICAL_ANALYSIS_STDOUT.json",
+      "kind": "ExecutionReceiptFCO",
+      "group": "receipt",
+      "bytes": 2292,
+      "sha256": "9ac16e0dd207db3281cec221ff5f5ce099c064718f58d5fa213873aa30eef71f",
+      "location": "public",
+      "fmo_leaf": "fc1a8b626ce4883710a19e0168d76b0a96f0c951ce480dcee2860eae440ae448"
+    }
+  ],
+  "stage": "D0_D9_STATISTICAL_ANALYSIS_RESULT",
+  "mode": "POST_CONFIRMATORY_SECONDARY",
+  "claim_mutation": false,
+  "prereg_breakpoint": "UFA-JEV-BP-0021",
+  "pre_execution_failure_preserved": "stdout redirection failed because output directory did not yet exist; no analysis result breakpoint existed before retry",
+  "original_claim_states_immutable": true,
+  "next_action": "cross-host replication preregistration",
+  "claim_ceiling": "IDENTITY_AND_INCLUSION_ONLY; hashes do not establish correctness",
+  "signature_state": "NOT_SIGNED"
+}
