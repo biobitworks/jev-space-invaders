@@ -1,0 +1,98 @@
+{
+  "breakpoint_id": "UFA-JEV-BP-0021",
+  "parent": "UFA-JEV-BP-0020",
+  "state": "POST_CONFIRMATORY_SECONDARY_ANALYSIS_PREREGISTERED",
+  "project": "VITHIA_SPACE",
+  "created_utc": "2026-09-28T05:17:35+00:00",
+  "git_head_at_creation": "efb8093b9452fe273d9e3a87e03bdb57b7588da8",
+  "root_kind": "FMO_V1_BREAKPOINT_ATOMS",
+  "bp_root": "d2da0b62e50873f8f0d4a90b8a90414c25bac2f37636c4304d38d5ec180648b2",
+  "group_roots": {
+    "code": "e5f83cf686e2ae7ee36dfb47aa085c3c2c2fdf6c8ba806ebf3b4ee9eefa3c966",
+    "prereg": "7274d77f7f302a83ea7ea23141baaac730b6ecb092ed7596f43df2ff3bedc2bb",
+    "source": "62a50f1dc57ccea712d00e51e77c4919f4887bb5ed0b62d20d547fd41ce06a76"
+  },
+  "atoms": [
+    {
+      "path": "docs/prereg/D0_D9_STATISTICAL_ANALYSIS.md",
+      "kind": "PreregistrationFCO",
+      "group": "prereg",
+      "bytes": 1364,
+      "sha256": "52557091ccb901fea2fbf3c0dfb3e61cc80b40c59bc7780e169f13db0209f2de",
+      "location": "public",
+      "fmo_leaf": "7274d77f7f302a83ea7ea23141baaac730b6ecb092ed7596f43df2ff3bedc2bb"
+    },
+    {
+      "path": "scripts/secondary_stats.py",
+      "kind": "CodeFCO",
+      "group": "code",
+      "bytes": 5438,
+      "sha256": "6bfb5af8fa80bf0b0128e723d02c4a631c3839fede3452e8b711d8eb00f2d03f",
+      "location": "public",
+      "fmo_leaf": "e5f83cf686e2ae7ee36dfb47aa085c3c2c2fdf6c8ba806ebf3b4ee9eefa3c966"
+    },
+    {
+      "path": "evidence/s01/E1_ECA/EXPERIMENT_RECEIPT.json",
+      "kind": "ExperimentReceiptFCO",
+      "group": "source",
+      "bytes": 3270,
+      "sha256": "5286a53f5ef7e2c046c905774e2050a7f5316e107a2c304a699ab9811c1f2d82",
+      "location": "public",
+      "fmo_leaf": "d09b4a7913ecb6de245a05464e0b6a6420e1fffe10883c3980b1f5aa58a9d2b0"
+    },
+    {
+      "path": "evidence/s01/E2_LIFE/EXPERIMENT_RECEIPT.json",
+      "kind": "ExperimentReceiptFCO",
+      "group": "source",
+      "bytes": 2853,
+      "sha256": "3febdda1b5a6a0d9b4ec0007eda91034b8f23987cf393f661cd96e3b9d5ff46c",
+      "location": "public",
+      "fmo_leaf": "f3441bc46d46bff6f299b672b9b7ae051dcd916bb47651d41364c9e14730a2ab"
+    },
+    {
+      "path": "evidence/s01/E3_MINESWEEPER/EXPERIMENT_RECEIPT.json",
+      "kind": "ExperimentReceiptFCO",
+      "group": "source",
+      "bytes": 2964,
+      "sha256": "20551b2a4ed2bed55f42a8c512b1f8240f4acfff6641de6abe0d583e0d26a17b",
+      "location": "public",
+      "fmo_leaf": "cfb67a43d67f68fc84e782c66ca6aeb0d4550b14dbb79e06f4f9d052db27b8fd"
+    },
+    {
+      "path": "data/s01/S01_ECA_256_RESULTS_V1/rows.jsonl",
+      "kind": "DatasetFileFCO",
+      "group": "source",
+      "bytes": 5256897,
+      "sha256": "05f1937b45786c773a9aac8c78722ab385e464d8fafadee509691a41d38b1468",
+      "location": "public",
+      "fmo_leaf": "3049b609172418a1acb591f289798fc40ce0c5361c818f6a9422cbd7abcf60df"
+    },
+    {
+      "path": "data/s01/S01_LIFE_CONTEXT_RESULTS_V1/history_controls.jsonl",
+      "kind": "DatasetFileFCO",
+      "group": "source",
+      "bytes": 46194,
+      "sha256": "449c27f413e2ef3ac9ffb7b71975f00cfb48a90dd3509cff734fa7a44e755425",
+      "location": "public",
+      "fmo_leaf": "472a39b3895dd67c944b8877a82e608c2040931f887bce2bd338b6be2f79b0c0"
+    },
+    {
+      "path": "data/s01/S01_MINESWEEPER_RESULTS_V1/rows.jsonl",
+      "kind": "DatasetFileFCO",
+      "group": "source",
+      "bytes": 95263,
+      "sha256": "d0db2ddcf51666e9c972e4aafb8059af8efe0a467650a1e1a8e6e9be8fbbf377",
+      "location": "public",
+      "fmo_leaf": "edd6e43eed2e4c2d8abe149c8d972933b4359527fca2072bff899c28c1558816"
+    }
+  ],
+  "stage": "D0_D9_STATISTICAL_ANALYSIS_PREREG",
+  "mode": "POST_CONFIRMATORY_SECONDARY",
+  "claim_mutation": false,
+  "scientific_parent": "UFA-JEV-BP-0020",
+  "bootstrap_seed": 20260927,
+  "bootstrap_resamples": 10000,
+  "next_action": "execute scripts/secondary_stats.py against frozen E1-E3 outputs",
+  "claim_ceiling": "IDENTITY_AND_INCLUSION_ONLY; hashes do not establish correctness",
+  "signature_state": "NOT_SIGNED"
+}
