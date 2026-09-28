@@ -1,0 +1,28 @@
+{
+  "bp0058": {
+    "bp_root": "d416e5ddf9314afdd08c51550611677689b7fc0812417c7361c44f560b9c5881",
+    "state": "VALID_SYSTEM_ONE_RUNTIME_FREEZE"
+  },
+  "bp0059": {
+    "bp_file_sha256": "d1bf7f7cebbc8d9a20bd59d82c57635af1bfb1db5e2902651e9793a829c9823f",
+    "bp_root": "d416e5ddf9314afdd08c51550611677689b7fc0812417c7361c44f560b9c5881",
+    "state": "DUPLICATE_CONTROL_BREAKPOINT_PRESERVED"
+  },
+  "broken_remote_commit_before_repair": "98da06c96ff8ba09221b932ccff37d3ef222e6d0",
+  "cause": "controller resume raced with first controller completion after BP0058; duplicate freeze BP0059 was computed, ledger staged/committed/pushed, but explicit add list omitted the newly allocated BP0059 file",
+  "claim_ceiling": "CONTROL_PLANE_FAILURE_AND_REPAIR_ONLY",
+  "classification": "FAILED_ATOMIC_PUBLISH",
+  "created_utc": "2026-09-28T15:21:05+00:00",
+  "failure_id": "BP0059_DUPLICATE_RACE_20260928",
+  "historical_breakpoints_rewritten": "NO",
+  "repair": [
+    "commit exact already-computed BP0059 file bytes",
+    "append reconciliation successor",
+    "rerun breakpoint verifier",
+    "push without force"
+  ],
+  "results_mutated": "NO",
+  "schema": "FAILURE_RECEIPT_FCO_V1",
+  "scientific_claim_mutation": "NO",
+  "signature_state": "NOT_SIGNED"
+}

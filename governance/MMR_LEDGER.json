@@ -940,6 +940,23 @@
         "195d13e9e2de4a2fcaaed75d23607885e03de09a8dea7099cc954fe2c38f081d",
         "83214209b60cf5d15bd5d82d45511065412bad7a8fdda64c351dd9a98cfa9808"
       ]
+    },
+    {
+      "seq": 59,
+      "bp_id": "UFA-JEV-BP-0060",
+      "bp_file": "governance/breakpoints/0060-bp0059-race-reconciliation.json",
+      "bp_file_sha256": "522d107f55e5994a08c146382f8896afc847cb206dd59fd15a2c6c0081e4b30b",
+      "bp_root": "a8b585c58cb4c7d8d53fdf329935c40175b121946e3abe7a4f153f49c5c61918",
+      "root_kind": "FMO_V1_BREAKPOINT_ATOMS",
+      "mmr_leaf": "3b50928d51b01777b6d7a38226747e6a1490301e9721cf6d3db33b1d13e54c12",
+      "mmr_size": 60,
+      "mmr_root_after": "6d91b2b9a788a5a5a3fe8935527355ee946019369adb9e75eed5ae7cc8c0b6cd",
+      "mmr_peaks_after": [
+        "026514586974a2fb18c9fefe6f92208e2008b44751f5380417c4129b185b831f",
+        "75be8b4a1b7202ab2045b31e332e04471e0fa5d990c8d9c5097b1ed82456cb9d",
+        "b356c06fb0470f4881c79ed3e83ad55a99ac5b6adca45586a26d47ff6b2d1af8",
+        "c0ff272e530687791a6ec8a52d3ceeb3200a2766d89716f5b6a6c202a4e3f694"
+      ]
     }
   ]
 }

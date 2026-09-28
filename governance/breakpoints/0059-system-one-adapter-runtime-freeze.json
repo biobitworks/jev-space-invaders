@@ -1,0 +1,88 @@
+{
+  "breakpoint_id": "UFA-JEV-BP-0059",
+  "parent": "UFA-JEV-BP-0058",
+  "state": "SYSTEM_ONE_ADAPTER_RUNTIME_FROZEN_BASELINE_BLOCKED_NO_PROVIDER_KEY",
+  "project": "VITHIA_SPACE",
+  "created_utc": "2026-09-28T15:18:41+00:00",
+  "git_head_at_creation": "71f23686b28d223b2b9fa953a9b9c0e6363baee1",
+  "root_kind": "FMO_V1_BREAKPOINT_ATOMS",
+  "bp_root": "d416e5ddf9314afdd08c51550611677689b7fc0812417c7361c44f560b9c5881",
+  "group_roots": {
+    "access": "daa2d3730ed3ea8d6b7843526758151d85824ac5143942ba329d42aac3925df3",
+    "plan": "0508c8ccd14c020d560cb2c78f30214919e708479e8404ed04251e96920c3d2d",
+    "reconciliation": "55cb24c0cbbaee708512d85fc5aac5ae0d1c3753e7adf183a617a681cdb9ffc0",
+    "system_one": "47273131a13d34fbf574f853624282e41490dfc7357d4646b3a4bd19c660562b"
+  },
+  "atoms": [
+    {
+      "path": "evidence/system_one/SYSTEM_ONE_RUNTIME_MANIFEST.json",
+      "kind": "RuntimeManifestFCO",
+      "group": "system_one",
+      "bytes": 1153,
+      "sha256": "02f6d3019b4297846d8df542f4cb23616489df1e6965595742ee0a0d1ea10f16",
+      "location": "public",
+      "fmo_leaf": "105aafd53262fc6b4b3f3262ce1339189befe2980b8978818f37d8afa024236a"
+    },
+    {
+      "path": "evidence/system_one/SYSTEM_ONE_UPSTREAM_RECEIPT.json",
+      "kind": "UpstreamReceiptFCO",
+      "group": "system_one",
+      "bytes": 726,
+      "sha256": "ec65b2820b8d6f908db15cc4be1db4fde9e57e6fd081bd5e9691615b98829aef",
+      "location": "public",
+      "fmo_leaf": "471a97c509e087e3a9045cdba6b8a81393a9d1f1afad95cd1878736ca83320af"
+    },
+    {
+      "path": "evidence/jev/JEV_WAITING_KEY_RECEIPT.json",
+      "kind": "CredentialGateReceiptFCO",
+      "group": "access",
+      "bytes": 300,
+      "sha256": "d1fc42441341721ef5d51e5db089660a9316cce26c7fd7440b2ae2554623701b",
+      "location": "public",
+      "fmo_leaf": "daa2d3730ed3ea8d6b7843526758151d85824ac5143942ba329d42aac3925df3"
+    },
+    {
+      "path": "evidence/execution/OPENJEV_KAGGLE_SYSTEMONE_EXECUTION_PLAN.json",
+      "kind": "ExecutionPlanFCO",
+      "group": "plan",
+      "bytes": 1396,
+      "sha256": "fa79c821dcb950834538689d7108e3182258c150a6e96e5cc4cb854bfbeaec69",
+      "location": "public",
+      "fmo_leaf": "0508c8ccd14c020d560cb2c78f30214919e708479e8404ed04251e96920c3d2d"
+    },
+    {
+      "path": "evidence/reconciliation/MAIN_DIVERGENCE_RECEIPT.json",
+      "kind": "LineageReceiptFCO",
+      "group": "reconciliation",
+      "bytes": 514,
+      "sha256": "1d6afa7682326405145cb0373d0638e54bc3a665ca4f02318d3ab2466f1afcc0",
+      "location": "public",
+      "fmo_leaf": "55cb24c0cbbaee708512d85fc5aac5ae0d1c3753e7adf183a617a681cdb9ffc0"
+    }
+  ],
+  "stage": "SYSTEM_ONE_ADAPTER_RUNTIME_FREEZE",
+  "baseline_execution": "BLOCKED_NO_PROVIDER_KEY",
+  "jev_hosted": "BLOCKED_WAITING_API_KEY",
+  "counted_jev_runs": 0,
+  "secret_scan": "PASS_NEW_ATOMS",
+  "parent_breakpoint_verify": "PASS",
+  "episode_mmr_verify": "PASS",
+  "executed": [
+    "installed exact adapter runtime",
+    "verified parent breakpoint chain",
+    "verified episode MMR chain",
+    "checked provider key presence without values"
+  ],
+  "observed": {
+    "system_one_adapter": "0.2.1",
+    "typesafe_sdk": "0.7.2",
+    "supported_provider_key_present": false,
+    "typesafe_api_key_present": false
+  },
+  "not_tested": [
+    "System One provider call",
+    "hosted TypeSafe JEV call"
+  ],
+  "claim_ceiling": "IDENTITY_AND_INCLUSION_ONLY; hashes do not establish correctness",
+  "signature_state": "NOT_SIGNED"
+}

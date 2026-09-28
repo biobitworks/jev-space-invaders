@@ -1,0 +1,40 @@
+{
+  "breakpoint_id": "UFA-JEV-BP-0060",
+  "parent": "UFA-JEV-BP-0059",
+  "state": "CONTROL_PLANE_RACE_RECONCILED_NO_CLAIM_MUTATION",
+  "project": "VITHIA_SPACE",
+  "created_utc": "2026-09-28T15:21:05+00:00",
+  "git_head_at_creation": "98da06c96ff8ba09221b932ccff37d3ef222e6d0",
+  "root_kind": "FMO_V1_BREAKPOINT_ATOMS",
+  "bp_root": "a8b585c58cb4c7d8d53fdf329935c40175b121946e3abe7a4f153f49c5c61918",
+  "group_roots": {
+    "failure": "8eec08c9ce5646b4c20792025664421be42be943d08e23a1e225dbd175e6ceb8"
+  },
+  "atoms": [
+    {
+      "path": "evidence/failures/BP0059_DUPLICATE_RACE_FAILURE_RECEIPT.json",
+      "kind": "FailureReceiptFCO",
+      "group": "failure",
+      "bytes": 1252,
+      "sha256": "a00e7fa89a6974eee0d6b7b9fa19cf4d7f5686e058edcc5e2d37ca1d2a8201ea",
+      "location": "public",
+      "fmo_leaf": "8eec08c9ce5646b4c20792025664421be42be943d08e23a1e225dbd175e6ceb8"
+    }
+  ],
+  "supersedes_control_state": "UFA-JEV-BP-0059",
+  "preserves": [
+    "UFA-JEV-BP-0058",
+    "UFA-JEV-BP-0059"
+  ],
+  "scientific_claim_mutation": "NO",
+  "executed": [
+    "restored omitted BP0059 breakpoint file from exact computed bytes",
+    "recorded failure receipt",
+    "recomputed full breakpoint/MMR chain"
+  ],
+  "failures": [
+    "FAILED_ATOMIC_PUBLISH at BP0059"
+  ],
+  "signature_state": "NOT_SIGNED",
+  "claim_ceiling": "IDENTITY_AND_INCLUSION_ONLY; hashes do not establish correctness"
+}
