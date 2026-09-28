@@ -1,0 +1,37 @@
+{
+  "breakpoint_id": "VITA-PUB-BP-0011",
+  "parent": "VITA-PUB-BP-0010",
+  "state": "HISTORICAL_ATOM_VERIFIER_POLICY_ADMITTED",
+  "project": "VITHIA_0_VITA_1_PUBLICATION",
+  "created_utc": "2026-09-28T05:47:41+00:00",
+  "root_kind": "FMO_V1_PUBLICATION_BREAKPOINT_ATOMS",
+  "bp_root": "12337f4c2c462731f1af60be7a60341290bce35eb7ace9399cb8486d49a88885",
+  "group_roots": {
+    "governance": "b30e02e37771db9542ee034f22b078dfbd2aea48efb20cea7ea5af358d45b746"
+  },
+  "atoms": [
+    {
+      "path": "scripts/verify_publication_breakpoints.py",
+      "kind": "VerifierCodeFCO",
+      "group": "governance",
+      "bytes": 2909,
+      "sha256": "8b72755360d23354f3a86190aed708a5883f620d3d18432cc48639da91f719da",
+      "location": "public",
+      "fmo_leaf": "260e7bb88f00730e998564b9395875a617e9f92341d2f2c13f7918711496eb8a"
+    },
+    {
+      "path": "governance/publication/HISTORICAL_ATOM_VERIFICATION_POLICY.md",
+      "kind": "GovernancePolicyFCO",
+      "group": "governance",
+      "bytes": 888,
+      "sha256": "78fcb233a75433c4089695cb64a759a8b8b8c48ca5df79cbc84a102eb19d9502",
+      "location": "public",
+      "fmo_leaf": "70f03f6dfde4ecd791222c728f8217962d152e2ce14fa38f9d585a263c22bde4"
+    }
+  ],
+  "stage": "PUBLICATION_VERIFIER_SUCCESSOR",
+  "reason": "publication successor changed working-tree paths referenced by prior breakpoints; exact predecessor bytes remain recoverable from Git history",
+  "truth_claim": false,
+  "claim_ceiling": "IDENTITY_AND_INCLUSION_ONLY; publication roots do not establish scientific truth",
+  "signature_state": "NOT_SIGNED"
+}

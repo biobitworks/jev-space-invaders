@@ -148,6 +148,22 @@
         "9ad2f5877374a791dcca848fab93eccf098bfbf0af0ce837c2751d56471651be",
         "2404676d3fb8b90ea4d7b4d35aa34ef551e8e9047fa1cffbe0fd0ef9148ed907"
       ]
+    },
+    {
+      "seq": 10,
+      "bp_id": "VITA-PUB-BP-0011",
+      "bp_file": "governance/publication/breakpoints/0011-historical-atom-verifier.json",
+      "bp_file_sha256": "230476907e740ffb9494bdcd2f49e167983b10ea284baf755e463a64aa3ea789",
+      "bp_root": "12337f4c2c462731f1af60be7a60341290bce35eb7ace9399cb8486d49a88885",
+      "root_kind": "FMO_V1_PUBLICATION_BREAKPOINT_ATOMS",
+      "mmr_leaf": "15ea7033132be7daeac44658a52098c755f3af3975fcc93d9a26d40805bb3da2",
+      "mmr_size": 11,
+      "mmr_root_after": "0fb0448cb3af230d74928485c2bf2e4930ded7fe07e5c708c4d327b7ebba73b7",
+      "mmr_peaks_after": [
+        "9ad2f5877374a791dcca848fab93eccf098bfbf0af0ce837c2751d56471651be",
+        "2404676d3fb8b90ea4d7b4d35aa34ef551e8e9047fa1cffbe0fd0ef9148ed907",
+        "15ea7033132be7daeac44658a52098c755f3af3975fcc93d9a26d40805bb3da2"
+      ]
     }
   ]
 }
