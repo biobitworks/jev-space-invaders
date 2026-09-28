@@ -1,0 +1,27 @@
+{
+  "schema": "LIQUID_RUNTIME_MANIFEST_V1",
+  "LIQUID_LOADED": "YES",
+  "provider": "liquid",
+  "served_model": "liquid-vithia-1.2b:latest",
+  "source_repo": "LiquidAI/LFM2.5-1.2B-Instruct-GGUF",
+  "source_revision": "8ed288026e23958ad9dfa92d53ed773a8eee7125",
+  "weight_file": "/Volumes/magicBLACKbox/liquid/LFM2.5-1.2B-Instruct-GGUF/LFM2.5-1.2B-Instruct-Q4_0.gguf",
+  "weight_bytes": 695751488,
+  "weight_sha256": "2ea801949d760cdf1a2cc04a54262c22c3c0c54f0769d57760c9adeb0e59233f",
+  "quantization": "Q4_0 GGUF",
+  "endpoint": "http://127.0.0.1:11437",
+  "engine": "Ollama",
+  "ollama_version": "ollama version is 0.33.0",
+  "host": "magicSTUDIObox",
+  "platform": "macOS-27.0-arm64-arm-64bit-Mach-O",
+  "chip": "Apple M1 Max",
+  "ram_bytes": 34359738368,
+  "setup_smoke": "PASS",
+  "probabilities": "NOT_AVAILABLE",
+  "confidence": "NOT_AVAILABLE",
+  "labels": [
+    "NON_TYPESAFE_JEV",
+    "NON_OPENJEV",
+    "NON_COUNTED_FOR_TYPESAFE_PERFORMANCE"
+  ]
+}

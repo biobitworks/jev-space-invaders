@@ -1,0 +1,51 @@
+{
+  "breakpoint_id": "UFA-JEV-BP-0048",
+  "parent": "UFA-JEV-BP-0047",
+  "state": "LIQUID_RUNTIME_VERIFIED",
+  "project": "VITHIA_SPACE",
+  "created_utc": "2026-09-28T14:23:51+00:00",
+  "git_head_at_creation": "e67fa3996ae42a6f987e0a9181d8e2fe4f771357",
+  "root_kind": "FMO_V1_BREAKPOINT_ATOMS",
+  "bp_root": "7a7ad7bb1bc7cbf5b7c77de10ff7e2c360f7f59e3e51378db35511f8b71ff45d",
+  "group_roots": {
+    "e5l": "50bdb1ffd5819bcbed9fbcf72cfbdbca597ebc31cc0966c81d49bd691ca9988a"
+  },
+  "atoms": [
+    {
+      "path": "evidence/liquid/RUNTIME_MANIFEST.json",
+      "kind": "E5LFCO",
+      "group": "e5l",
+      "bytes": 958,
+      "sha256": "2dd72aaa49e56166d466695d21d22bf7c9f9cdb111add963fa58a1ebb570c77b",
+      "location": "public",
+      "fmo_leaf": "ccb429c828f35ce9294094f86a571358035fb10f8971c285ba339f1d51b17047"
+    },
+    {
+      "path": "src/liquid_client.py",
+      "kind": "E5LFCO",
+      "group": "e5l",
+      "bytes": 3302,
+      "sha256": "ab2977d777a6f5635ee0fbb254061c7017608fa898d557a697194faef3bdb961",
+      "location": "public",
+      "fmo_leaf": "c4e991f5664c9f7a9a9197914028cec4d72040a88f124a5d72b8693a01d5e80b"
+    },
+    {
+      "path": "scripts/liquid_runtime.py",
+      "kind": "E5LFCO",
+      "group": "e5l",
+      "bytes": 2825,
+      "sha256": "46abd2a73264f0ecc9592355467ef344f6d150ef6f64335908f3e22fb67099fd",
+      "location": "public",
+      "fmo_leaf": "7cb9c4f1ff232f63a160255402fc704804fbd9df25c544d756ef02f4faafa556"
+    }
+  ],
+  "experiment_id": "E5L_LIQUID_VS_VITA01_1P",
+  "pre_mmr_root": "1c535ea6a15d2da21d563b5aecd38d95d20f674803939f688449d441bfda3d0a",
+  "stage": "E5L_RUNTIME",
+  "provider": "liquid",
+  "served_model": "liquid-vithia-1.2b:latest",
+  "weight_sha256": "2ea801949d760cdf1a2cc04a54262c22c3c0c54f0769d57760c9adeb0e59233f",
+  "probabilities": "NOT_AVAILABLE",
+  "claim_ceiling": "IDENTITY_AND_INCLUSION_ONLY; hashes do not establish correctness",
+  "signature_state": "NOT_SIGNED"
+}

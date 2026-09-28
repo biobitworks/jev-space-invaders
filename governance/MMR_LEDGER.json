@@ -740,6 +740,21 @@
         "07981d9fc0ef58117f24f2ac5c3707526de235d908451d417e1df7be1cd750a1",
         "c1aa6435de0e219d1d1cffe5521af746a47f134a2e4f9d84903fa121505c196b"
       ]
+    },
+    {
+      "seq": 47,
+      "bp_id": "UFA-JEV-BP-0048",
+      "bp_file": "governance/breakpoints/0048-e5l-liquid-runtime.json",
+      "bp_file_sha256": "4b27a781166eb0a7047d46dc142fe1f21ddab60bc3556f721828a30efc2d2182",
+      "bp_root": "7a7ad7bb1bc7cbf5b7c77de10ff7e2c360f7f59e3e51378db35511f8b71ff45d",
+      "root_kind": "FMO_V1_BREAKPOINT_ATOMS",
+      "mmr_leaf": "c20ce689402b92b5e233b6fd0487d4a06bed73e16417ef29899bfd11ced5281a",
+      "mmr_size": 48,
+      "mmr_root_after": "9f41ea933fc66585efe681c17b23e5c5ceedd78cc77ed2fc77ccacaf7fc45375",
+      "mmr_peaks_after": [
+        "026514586974a2fb18c9fefe6f92208e2008b44751f5380417c4129b185b831f",
+        "75be8b4a1b7202ab2045b31e332e04471e0fa5d990c8d9c5097b1ed82456cb9d"
+      ]
     }
   ]
 }
