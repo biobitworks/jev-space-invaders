@@ -1,0 +1,219 @@
+{
+  "abstains": [
+    {
+      "id": "O_ANTICUBE_THEN_ECA",
+      "state": "ABSTAIN_TYPE_ERROR"
+    }
+  ],
+  "all_256_screen_state": "COMPLETE_SCREENING",
+  "anticube_temporal_results": "evidence/e1r/ANTICUBE_TEMPORAL_RESULT.jsonl",
+  "antidote_results": "data/e1r/E1R_ALL256_SCREEN_PILOT_V1/horizontal_rows.jsonl.gz",
+  "branch": "e1r/restoration-rule-context-v01",
+  "breakpoints_created": [
+    "UFA-JEV-BP-0029",
+    "UFA-JEV-BP-0030",
+    "UFA-JEV-BP-0031",
+    "UFA-JEV-BP-0032",
+    "UFA-JEV-BP-0033",
+    "UFA-JEV-BP-0034",
+    "UFA-JEV-BP-0035",
+    "UFA-JEV-BP-0036",
+    "UFA-JEV-BP-0037",
+    "UFA-JEV-BP-0038",
+    "UFA-JEV-BP-0039",
+    "UFA-JEV-BP-0040",
+    "UFA-JEV-BP-0041",
+    "UFA-JEV-BP-0042",
+    "UFA-JEV-BP-0043",
+    "UFA-JEV-BP-0044",
+    "UFA-JEV-BP-0045",
+    "UFA-JEV-BP-0046"
+  ],
+  "contextual_restoration_results": "data/e1r/E1R_ALL256_SCREEN_PILOT_V1/rule_context_performance.jsonl",
+  "current_parent_state": {
+    "breakpoint": "UFA-JEV-BP-0028",
+    "commit": "4c1bbb19b89a7ee1e1dee662cfd0f227186ebafd",
+    "mmr_root": "5f742663f7e0c12e100e292cc794eefb0360a068a5c20c2b1be019ace1cb298b"
+  },
+  "delta_g_star_state": "NOT_COMPUTED",
+  "exact_restoration_results": "data/e1r/E1R_ALL256_SCREEN_PILOT_V1/rule_context_performance.jsonl",
+  "figures": {
+    "files": [
+      "figures/e1r/F-E1R-1_all256_context_heatmap.png",
+      "figures/e1r/F-E1R-2_horizontal_vertical.png",
+      "figures/e1r/F-E1R-4_restoration_types.png",
+      "figures/e1r/F-E1R-5_pareto.png",
+      "figures/e1r/F-E1R-6_context_selected.png",
+      "figures/e1r/F-E1R-7_order_asymmetry.png",
+      "figures/e1r/F-E1R-8_anticube_temporal.png"
+    ],
+    "state": "BUILT"
+  },
+  "functional_restoration_results": "data/e1r/E1R_ALL256_SCREEN_PILOT_V1/rule_context_performance.jsonl",
+  "horizontal_poison_results": "data/e1r/E1R_ALL256_SCREEN_PILOT_V1/rule_context_performance.jsonl",
+  "jev_state": "NOT_TESTED",
+  "mmr_root_before_handoff": "974f985663c1c6477002d819eaa6cfa9fa05a10ab936b78b7edb71a01edc7916",
+  "mmr_size_before_handoff": 46,
+  "negatives": [],
+  "neutral_results": "paired same-rule neutral reference in each horizontal condition",
+  "next_action": "Optionally freeze/load OpenJEV for matched ContextPacket comparison; separately recover canonical VCC repo/splits before VCC execution.",
+  "not_tested": [
+    "DELTAGSTAR",
+    "JEV_HOSTED",
+    "LIQUID_LOCAL",
+    "OLLAMA_OLLARMA",
+    "VCC_EXECUTION",
+    "OPENJEV_LOCAL"
+  ],
+  "nulls": [
+    {
+      "context": "HORIZONTAL|balanced|0.05",
+      "global_rule": 113,
+      "mean_gain_difference_selected_minus_global": 0.0,
+      "median_gain_difference": 0.0,
+      "n": 30,
+      "p_holm": 1.0,
+      "p_unadjusted": 1.0,
+      "random_rule": 36,
+      "selected_rule": 113,
+      "state": "FAIL_TO_REJECT_H0"
+    },
+    {
+      "context": "HORIZONTAL|balanced|0.10",
+      "global_rule": 113,
+      "mean_gain_difference_selected_minus_global": 0.11810416666666666,
+      "median_gain_difference": 0.164375,
+      "n": 30,
+      "p_holm": 0.36946305369463056,
+      "p_unadjusted": 0.07389261073892611,
+      "random_rule": 63,
+      "selected_rule": 99,
+      "state": "FAIL_TO_REJECT_H0"
+    },
+    {
+      "context": "HORIZONTAL|balanced|0.20",
+      "global_rule": 113,
+      "mean_gain_difference_selected_minus_global": 0.07637500000000003,
+      "median_gain_difference": 0.1278125,
+      "n": 30,
+      "p_holm": 0.547945205479452,
+      "p_unadjusted": 0.136986301369863,
+      "random_rule": 231,
+      "selected_rule": 57,
+      "state": "FAIL_TO_REJECT_H0"
+    },
+    {
+      "context": "HORIZONTAL|dense|0.05",
+      "global_rule": 113,
+      "mean_gain_difference_selected_minus_global": -0.004770833333333338,
+      "median_gain_difference": -0.009687499999999995,
+      "n": 30,
+      "p_holm": 1.0,
+      "p_unadjusted": 0.7788221177882212,
+      "random_rule": 253,
+      "selected_rule": 43,
+      "state": "FAIL_TO_REJECT_H0"
+    },
+    {
+      "context": "HORIZONTAL|dense|0.10",
+      "global_rule": 113,
+      "mean_gain_difference_selected_minus_global": 0.04383333333333333,
+      "median_gain_difference": 0.05187499999999999,
+      "n": 30,
+      "p_holm": 0.20077992200779923,
+      "p_unadjusted": 0.025097490250974904,
+      "random_rule": 186,
+      "selected_rule": 127,
+      "state": "FAIL_TO_REJECT_H0"
+    },
+    {
+      "context": "HORIZONTAL|dense|0.20",
+      "global_rule": 113,
+      "mean_gain_difference_selected_minus_global": 0.04077083333333333,
+      "median_gain_difference": 0.058437499999999996,
+      "n": 30,
+      "p_holm": 0.30416958304169583,
+      "p_unadjusted": 0.05069493050694931,
+      "random_rule": 161,
+      "selected_rule": 127,
+      "state": "FAIL_TO_REJECT_H0"
+    },
+    {
+      "context": "HORIZONTAL|single|0.05",
+      "global_rule": 113,
+      "mean_gain_difference_selected_minus_global": 0.045979166666666654,
+      "median_gain_difference": 0.06687499999999999,
+      "n": 30,
+      "p_holm": 0.05039496050394961,
+      "p_unadjusted": 0.005599440055994401,
+      "random_rule": 235,
+      "selected_rule": 41,
+      "state": "FAIL_TO_REJECT_H0"
+    },
+    {
+      "context": "HORIZONTAL|sparse|0.05",
+      "global_rule": 113,
+      "mean_gain_difference_selected_minus_global": 0.009437500000000007,
+      "median_gain_difference": -0.0075,
+      "n": 30,
+      "p_holm": 1.0,
+      "p_unadjusted": 0.47255274472552744,
+      "random_rule": 37,
+      "selected_rule": 1,
+      "state": "FAIL_TO_REJECT_H0"
+    },
+    {
+      "context": "HORIZONTAL|sparse|0.10",
+      "global_rule": 113,
+      "mean_gain_difference_selected_minus_global": 0.033791666666666664,
+      "median_gain_difference": 0.01968749999999999,
+      "n": 30,
+      "p_holm": 0.2015798420157984,
+      "p_unadjusted": 0.0287971202879712,
+      "random_rule": 123,
+      "selected_rule": 1,
+      "state": "FAIL_TO_REJECT_H0"
+    }
+  ],
+  "openjev_state": "NOT_TESTED_RUNTIME_NOT_FROZEN",
+  "order_cross_results": "evidence/e1r/TRANSFORM_ORDER_RESULT.json",
+  "pareto_rule_sets": "data/e1r/E1R_ALL256_SCREEN_PILOT_V1/PARETO_RULE_SETS.json",
+  "rule_context_dataset_id": "E1R_ALL256_SCREEN_PILOT_V1",
+  "rule_context_dataset_root": "d4516651479ee0da16d7a1c5f1719126b1b2ffc8072cd1ba96eaa9480415a44b",
+  "rule_pair_results": "data/e1r/E1R_RULE_COMPOSITION_SCREEN_V1/pair_context_summary.jsonl",
+  "rule_selection_result": {
+    "contexts_positive": 10,
+    "contexts_total": 12,
+    "global_rule": 113,
+    "mean_difference": 0.04497222222222222,
+    "median_difference": 0.03125,
+    "p_signflip": 9.999000099990002e-05,
+    "paired_n": 360,
+    "state": "SUPPORTED"
+  },
+  "schema": "E1R_DAISY_HANDOFF_V1",
+  "sham_results": "data/e1r/E1R_ALL256_SCREEN_PILOT_V1/horizontal_rows.jsonl.gz",
+  "signature_state": "NOT_SIGNED",
+  "tables": [
+    "tables/e1r/T-E1R-1_all256_rule_summary.csv",
+    "tables/e1r/T-E1R-2_context_pareto.csv",
+    "tables/e1r/T-E1R-3_restoration_definitions.csv",
+    "tables/e1r/T-E1R-4_confirmatory_statistics.csv",
+    "tables/e1r/T-E1R-5_rule_composition.csv",
+    "tables/e1r/T-E1R-6_transform_order.csv",
+    "tables/e1r/T-E1R-7_system1_comparators.csv",
+    "tables/e1r/T-LIMIT.csv",
+    "tables/e1r/T-VCC-1_arms.csv"
+  ],
+  "top_context_rules": "RULE_CONTEXT_REGISTRY.json",
+  "total_runs": {
+    "composition_rows": 1920,
+    "confirmatory_rows": 1080,
+    "horizontal_case_rows": 61440,
+    "pilot_total_case_rows": 184320,
+    "vertical_case_rows": 122880
+  },
+  "vcc_translation_state": "DEFERRED_PENDING_EXACT_VCC_STATE_RECOVERY",
+  "vertical_history_poison_results": "data/e1r/E1R_ALL256_SCREEN_PILOT_V1/rule_context_performance.jsonl",
+  "vithia_comparator_state": "EXECUTED_DETERMINISTIC_CONTEXT_POLICY"
+}

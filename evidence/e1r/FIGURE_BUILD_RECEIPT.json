@@ -1,0 +1,12 @@
+{
+  "files": [
+    "figures/e1r/F-E1R-1_all256_context_heatmap.png",
+    "figures/e1r/F-E1R-2_horizontal_vertical.png",
+    "figures/e1r/F-E1R-4_restoration_types.png",
+    "figures/e1r/F-E1R-5_pareto.png",
+    "figures/e1r/F-E1R-6_context_selected.png",
+    "figures/e1r/F-E1R-7_order_asymmetry.png",
+    "figures/e1r/F-E1R-8_anticube_temporal.png"
+  ],
+  "state": "BUILT"
+}

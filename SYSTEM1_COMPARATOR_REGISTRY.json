@@ -1,0 +1,38 @@
+{
+  "comparators": [
+    {
+      "calls": 0,
+      "id": "D0_DETERMINISTIC_ORACLE",
+      "state": "EXECUTED"
+    },
+    {
+      "calls": 0,
+      "id": "D1_VITHIA_DETERMINISTIC_CONTEXT_POLICY",
+      "state": "EXECUTED"
+    },
+    {
+      "calls": 0,
+      "id": "D2_OPENJEV_LOCAL",
+      "provider_label": "OPENJEV_LOCAL_STANDIN",
+      "state": "NOT_TESTED_RUNTIME_NOT_FROZEN"
+    },
+    {
+      "calls": 0,
+      "id": "D3_JEV_HOSTED",
+      "state": "NOT_TESTED"
+    },
+    {
+      "calls": 0,
+      "id": "D4_LIQUID_LOCAL",
+      "state": "NOT_TESTED"
+    },
+    {
+      "calls": 0,
+      "id": "D5_OLLAMA_OLLARMA",
+      "state": "NOT_TESTED"
+    }
+  ],
+  "model_weight_updates": false,
+  "same_contextpacket_requirement": true,
+  "schema": "SYSTEM1_COMPARATOR_REGISTRY_V1"
+}

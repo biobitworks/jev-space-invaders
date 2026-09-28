@@ -1,0 +1,33 @@
+{
+  "T": 48,
+  "W": 64,
+  "all_rules": true,
+  "conditions": [
+    "N0_NEUTRAL",
+    "P1_HORIZONTAL_STATE_POISON",
+    "P2_VERTICAL_HISTORY_POISON",
+    "S1_SHAM",
+    "A1_CONTEXTUAL_ANTIDOTE"
+  ],
+  "pilot_replicates": 20,
+  "schema": "E1R_SCREEN_CONFIG_V1",
+  "screening": "descriptive/Pareto; no per-rule discovery p-values",
+  "selection": "Pareto then fixed lexicographic shortlist; fresh replicate confirmation",
+  "severities": [
+    0.05,
+    0.1,
+    0.2
+  ],
+  "strata": [
+    "single",
+    "sparse",
+    "balanced",
+    "dense"
+  ],
+  "t_antidote": 24,
+  "t_poison": 16,
+  "vertical_operators": [
+    "missing",
+    "bit_flip"
+  ]
+}

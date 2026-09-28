@@ -1,0 +1,41 @@
+{
+  "breakpoint_id": "UFA-JEV-BP-0046",
+  "parent": "UFA-JEV-BP-0045",
+  "state": "VCC_TRANSLATION_PREREGISTERED_EXECUTION_DEFERRED",
+  "project": "VITHIA_SPACE",
+  "created_utc": "2026-09-28T07:46:31+00:00",
+  "git_head_at_creation": "23fcf470056721c507c9c4bd2ce46b5e7ba6a753",
+  "root_kind": "FMO_V1_BREAKPOINT_ATOMS",
+  "bp_root": "7f3a9d0a6b75e14389cc1cc32b083254490faa89d37310e29c536aa8280cf4dc",
+  "group_roots": {
+    "vcc": "f938e6da365bf1d86455d2a8a0483128064932f23386b9f72d5465c17b66f9de"
+  },
+  "atoms": [
+    {
+      "path": "VCC_TRANSLATION_REGISTRY.json",
+      "kind": "RegistryFCO",
+      "group": "vcc",
+      "bytes": 101049,
+      "sha256": "538ae955a2725b5203ce85524a83cf3959d31cf03c46d924b8dbed00d8f65ab2",
+      "location": "public",
+      "fmo_leaf": "eb78d1770b0e369bc9c1d76c1d1c784db04c5fd41483e67f0f9f401370bfd56f"
+    },
+    {
+      "path": "docs/prereg/E1R_VCC_TRANSLATION.md",
+      "kind": "PreregistrationFCO",
+      "group": "vcc",
+      "bytes": 296,
+      "sha256": "528421d3df9141127442702238429566bdc14348157866cd3bedcc5eb94cd367",
+      "location": "public",
+      "fmo_leaf": "e16dec7a3be21d78124be5339c71b643f4d809cb720492e23bbc5026877053c3"
+    }
+  ],
+  "stage": "E1R_VCC_TRANSLATION_PREREG",
+  "vcc_state": "DEFERRED_PENDING_EXACT_VCC_STATE_RECOVERY",
+  "biological_mechanism_claim": false,
+  "scientific_parent_commit": "4c1bbb19b89a7ee1e1dee662cfd0f227186ebafd",
+  "scientific_parent_breakpoint": "UFA-JEV-BP-0028",
+  "scientific_parent_mmr_root": "5f742663f7e0c12e100e292cc794eefb0360a068a5c20c2b1be019ace1cb298b",
+  "claim_ceiling": "IDENTITY_AND_INCLUSION_ONLY; hashes do not establish correctness",
+  "signature_state": "NOT_SIGNED"
+}

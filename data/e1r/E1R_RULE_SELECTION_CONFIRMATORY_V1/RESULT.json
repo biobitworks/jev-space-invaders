@@ -1,0 +1,10 @@
+{
+  "contexts_positive": 10,
+  "contexts_total": 12,
+  "global_rule": 113,
+  "mean_difference": 0.04497222222222222,
+  "median_difference": 0.03125,
+  "p_signflip": 9.999000099990002e-05,
+  "paired_n": 360,
+  "state": "SUPPORTED"
+}

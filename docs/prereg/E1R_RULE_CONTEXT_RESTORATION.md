@@ -1,0 +1,3 @@
+# E1R all-256 restoration screen
+
+All 256 rules are screened with paired initial states and perturbations. Horizontal corruption changes world state; vertical corruption changes observation/history only. Neutral, poison, sham and contextual antidote remain distinct. Restoration is recorded separately as exact, shift, contextual, functional and trajectory convergence. Pilot is screening only. Context rule selection uses fresh replicate IDs. DeltaGStar is NOT_COMPUTED unless the actual governed private implementation becomes available. VCC execution is separate and cannot imply biological mechanism.

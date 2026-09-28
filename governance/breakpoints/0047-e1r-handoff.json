@@ -1,0 +1,245 @@
+{
+  "breakpoint_id": "UFA-JEV-BP-0047",
+  "parent": "UFA-JEV-BP-0046",
+  "state": "E1R_DAISY_SUCCESSOR_COMPLETE_BOUNDED",
+  "project": "VITHIA_SPACE",
+  "created_utc": "2026-09-28T07:46:43+00:00",
+  "git_head_at_creation": "c299d9d5acf76167183c518b5345334b27cfc7b3",
+  "root_kind": "FMO_V1_BREAKPOINT_ATOMS",
+  "bp_root": "df441d935c58aef31debec7a564ffcc8fde51dd5935f96f4ec033642ee730f7e",
+  "group_roots": {
+    "figures": "beadbbd6bce17b385253f67e647187bee4453457b4803395d99469e695365648",
+    "handoff": "c5fb516426e778f6fa59cffbba57f26cf9967b7ce5473cf10144c5cfcf9b82af",
+    "tables": "1b4c2cb3c32736f59e99601fb8308a782763f16ab7e18d6b99f31f1f5bb3d5aa"
+  },
+  "atoms": [
+    {
+      "path": "E1R_DAISY_HANDOFF.json",
+      "kind": "HandoffFCO",
+      "group": "handoff",
+      "bytes": 7670,
+      "sha256": "b8418d447939bd84bea04d2eac6b275ee903a478204b8ce5b2d0a8c24379913a",
+      "location": "public",
+      "fmo_leaf": "1527f58f3ce3c1b1e9bbf1d7ccac7cb363c03c56974dbf4d018191278a9c9b68"
+    },
+    {
+      "path": "RULE_CONTEXT_REGISTRY.json",
+      "kind": "RegistryFCO",
+      "group": "handoff",
+      "bytes": 8470,
+      "sha256": "4d3f5e387338e23cd12a9f281d6160459e8179095ea212000aad69e62021b1fc",
+      "location": "public",
+      "fmo_leaf": "4df22983c3197925a1da362fe3b8042ef974a5bac44d52f670306144fdeb9cdd"
+    },
+    {
+      "path": "RULE_FCO_REGISTRY.json",
+      "kind": "RegistryFCO",
+      "group": "handoff",
+      "bytes": 145,
+      "sha256": "8e10aeb2ab08417af9fa238454634265f319edf4244cff58c12e8f34135a81b3",
+      "location": "public",
+      "fmo_leaf": "f421a37113526085aa71fe8a07e77f4d532e62cac3acad7eedf2a97c7d721de7"
+    },
+    {
+      "path": "RESTORATION_RESULT_REGISTRY.json",
+      "kind": "RegistryFCO",
+      "group": "handoff",
+      "bytes": 818,
+      "sha256": "85bd4cb419710cd20ea668b7d3c5e56cac7a48473bbc84b5d4e4b774598fda22",
+      "location": "public",
+      "fmo_leaf": "2620600e359eb86ff4584fdb7c43c91c7810ebb87cd7c17534bd76b9ef98b4af"
+    },
+    {
+      "path": "TRANSFORM_ORDER_REGISTRY.json",
+      "kind": "RegistryFCO",
+      "group": "handoff",
+      "bytes": 999,
+      "sha256": "976b2acb82f4a3398750eb6977a2279488dd42b90088b58f12002834876227ea",
+      "location": "public",
+      "fmo_leaf": "59ae14a1c942e7e869ea35248a0a8fd489b58ab9061a1508287e162e07da4974"
+    },
+    {
+      "path": "SYSTEM1_COMPARATOR_REGISTRY.json",
+      "kind": "RegistryFCO",
+      "group": "handoff",
+      "bytes": 783,
+      "sha256": "1de79c87bd5048bf12044a7e73bf36046749d160e3400b9fb8969b30f2986167",
+      "location": "public",
+      "fmo_leaf": "14fafa49e97fd3369400ccb1cb16e9fc4361ca554d6e1515dc0f2746966ba57e"
+    },
+    {
+      "path": "VCC_TRANSLATION_REGISTRY.json",
+      "kind": "RegistryFCO",
+      "group": "handoff",
+      "bytes": 101049,
+      "sha256": "538ae955a2725b5203ce85524a83cf3959d31cf03c46d924b8dbed00d8f65ab2",
+      "location": "public",
+      "fmo_leaf": "eb78d1770b0e369bc9c1d76c1d1c784db04c5fd41483e67f0f9f401370bfd56f"
+    },
+    {
+      "path": "evidence/e1r/FIGURE_BUILD_RECEIPT.json",
+      "kind": "ExecutionReceiptFCO",
+      "group": "handoff",
+      "bytes": 376,
+      "sha256": "707bbdeaf17e23bc47d80d63909ec2f53645199e29f08e2b5e394618b9538096",
+      "location": "public",
+      "fmo_leaf": "96492d337ad63fcbd5422e650250d9aa6336904a4c64761cf445f57d46a58c00"
+    },
+    {
+      "path": "figures/e1r/F-E1R-1_all256_context_heatmap.png",
+      "kind": "FigureFCO",
+      "group": "figures",
+      "bytes": 94047,
+      "sha256": "c6e52e7126cffef7f5301f1d8a2ba2020291bfb7985ffda60ed24bc80b831210",
+      "location": "public",
+      "fmo_leaf": "43e82680dcf8b70c2ed26388ec714184fef2d31d54348835307d3b47af5c7bae"
+    },
+    {
+      "path": "figures/e1r/F-E1R-2_horizontal_vertical.png",
+      "kind": "FigureFCO",
+      "group": "figures",
+      "bytes": 20072,
+      "sha256": "8f2bf66d062a976e2f62221dc6aa4ef3a277d5d77a3053c4ffba261016abb0e3",
+      "location": "public",
+      "fmo_leaf": "7a5481ded3703ab062ec939cc9af8c2a8238278ff522a62aeb167d8f4c8616b7"
+    },
+    {
+      "path": "figures/e1r/F-E1R-4_restoration_types.png",
+      "kind": "FigureFCO",
+      "group": "figures",
+      "bytes": 19875,
+      "sha256": "2f928837f0f2086d3194385bf97983e03460cfc6679e88ecceae045e54d617f0",
+      "location": "public",
+      "fmo_leaf": "9cd47ec89867534db8d2d860707076a469a66302d7e17ad266b1281291d58f29"
+    },
+    {
+      "path": "figures/e1r/F-E1R-5_pareto.png",
+      "kind": "FigureFCO",
+      "group": "figures",
+      "bytes": 50985,
+      "sha256": "058991d6ec027d0dec12013359a01fc3aadd8a33559c21d4cdc702ba6f2b5f2c",
+      "location": "public",
+      "fmo_leaf": "9afd3f2ba9d960574151f9dc1cf3db5a41196596f08bb96495614a4a9aa33c33"
+    },
+    {
+      "path": "figures/e1r/F-E1R-6_context_selected.png",
+      "kind": "FigureFCO",
+      "group": "figures",
+      "bytes": 47608,
+      "sha256": "397ae4b1aa2044a8c505cf1174b72358bc0cd6ca39ef47da7b4a0018209d51ba",
+      "location": "public",
+      "fmo_leaf": "0e0a3b72b9801f5a3db040a1ac9526289569382f0a20b6a929579ad87d4e3531"
+    },
+    {
+      "path": "figures/e1r/F-E1R-7_order_asymmetry.png",
+      "kind": "FigureFCO",
+      "group": "figures",
+      "bytes": 25849,
+      "sha256": "270c2dee837568f367aac7b094364d3f5386080b6cf12095bdf4728e0b03358f",
+      "location": "public",
+      "fmo_leaf": "84163056c69bc592ff982487d5c2aaa12c201ff9bb679710598bb66eb9b8629c"
+    },
+    {
+      "path": "figures/e1r/F-E1R-8_anticube_temporal.png",
+      "kind": "FigureFCO",
+      "group": "figures",
+      "bytes": 50962,
+      "sha256": "be3a31adcadb8802bc9c0257d54838c723ff21a8f6befaedbd759ed77eebe579",
+      "location": "public",
+      "fmo_leaf": "342821c2c9c0313aa18a5790984610f2e2ed4f8ad1432279a5faedf59565cccc"
+    },
+    {
+      "path": "tables/e1r/T-E1R-1_all256_rule_summary.csv",
+      "kind": "TableFCO",
+      "group": "tables",
+      "bytes": 24366,
+      "sha256": "3eb1f59d6d37ebd3d8bc9f0f4f3b9e99437e56720c542a997a6208b51a74d614",
+      "location": "public",
+      "fmo_leaf": "870bb677f0e33b2f8700b07739760f2e0dc7e93a4006d9759aad2684ddcab6a4"
+    },
+    {
+      "path": "tables/e1r/T-E1R-2_context_pareto.csv",
+      "kind": "TableFCO",
+      "group": "tables",
+      "bytes": 2403,
+      "sha256": "b064424aa0cbcaef0a360b0fb560f96aa750f068b95a885452174c69c1c685fb",
+      "location": "public",
+      "fmo_leaf": "8f42af99d76613841d620c0022728c66e7b27472c4b3ebd534f0ab5fea22013a"
+    },
+    {
+      "path": "tables/e1r/T-E1R-3_restoration_definitions.csv",
+      "kind": "TableFCO",
+      "group": "tables",
+      "bytes": 222,
+      "sha256": "601674d8acdca0b2a17dc3650bccf5704ed91581c8382bc4d5e322d5e3d66999",
+      "location": "public",
+      "fmo_leaf": "5cc5ec1f7f6ed67588d33bed1bf4f14aaf90d750a38abcce06ebd2dfb428f85b"
+    },
+    {
+      "path": "tables/e1r/T-E1R-4_confirmatory_statistics.csv",
+      "kind": "TableFCO",
+      "group": "tables",
+      "bytes": 1628,
+      "sha256": "2f542a6e0d8262f7e3f5ec474cfb533ae108f5b117df29205f8ee58a66e807b3",
+      "location": "public",
+      "fmo_leaf": "f357fc16b42999120009af5f64ef9a86faaa4152a30b108b88a8be481fa280ee"
+    },
+    {
+      "path": "tables/e1r/T-E1R-5_rule_composition.csv",
+      "kind": "TableFCO",
+      "group": "tables",
+      "bytes": 10346,
+      "sha256": "08121ccc2429dc5cfdec79a83675b5b6b4607a8d40542b1ef15ff15e3eb877c8",
+      "location": "public",
+      "fmo_leaf": "4d3e3d2ce55fc92f9f5a98f88d3590c40ac7ae1a027c39f96c0e8ff252726ff1"
+    },
+    {
+      "path": "tables/e1r/T-E1R-6_transform_order.csv",
+      "kind": "TableFCO",
+      "group": "tables",
+      "bytes": 478,
+      "sha256": "9e08ff94ea953daad68bd1cd48590a71e3a75b214af7c6b431a5ae4e8678a01a",
+      "location": "public",
+      "fmo_leaf": "d93fedd22ea5ee72ae35e9feab88b7e9bd65e945610ea3ea757c7f51d24e4363"
+    },
+    {
+      "path": "tables/e1r/T-E1R-7_system1_comparators.csv",
+      "kind": "TableFCO",
+      "group": "tables",
+      "bytes": 285,
+      "sha256": "139f609d048fefec313ed90b2265264065e01ce22a323b52880a5270da253308",
+      "location": "public",
+      "fmo_leaf": "f9848786ed4c4c9426b9b9138fc43a15e1c96593d56da92f0c59fe44812887f7"
+    },
+    {
+      "path": "tables/e1r/T-LIMIT.csv",
+      "kind": "TableFCO",
+      "group": "tables",
+      "bytes": 201,
+      "sha256": "d78c4e24c78838be75a7a55db8e0b069860537e994d26231a1b45fffcc61f286",
+      "location": "public",
+      "fmo_leaf": "a00295a6f420e6c57c399a564c20e30d6a4f00280594fb16c22b556ac0254139"
+    },
+    {
+      "path": "tables/e1r/T-VCC-1_arms.csv",
+      "kind": "TableFCO",
+      "group": "tables",
+      "bytes": 262,
+      "sha256": "5371c20b6bca3eaa576565d027cc58646f829608bab33288d1cf5f4d55ef028b",
+      "location": "public",
+      "fmo_leaf": "e07439f23a91bb1c1b1b0eaa26f975f2265ea0e5d05ade0e1118ca33506be427"
+    }
+  ],
+  "stage": "E1R_FINAL_HANDOFF",
+  "all256_screen": "COMPLETE_SCREENING",
+  "rule_selection": "SUPPORTED",
+  "rule_composition": "COMPLETE_SCREENING",
+  "delta_g_star": "NOT_COMPUTED",
+  "openjev": "NOT_TESTED_RUNTIME_NOT_FROZEN",
+  "vcc_translation": "DEFERRED_PENDING_EXACT_VCC_STATE_RECOVERY",
+  "signature_state": "NOT_SIGNED",
+  "scientific_parent_commit": "4c1bbb19b89a7ee1e1dee662cfd0f227186ebafd",
+  "scientific_parent_breakpoint": "UFA-JEV-BP-0028",
+  "scientific_parent_mmr_root": "5f742663f7e0c12e100e292cc794eefb0360a068a5c20c2b1be019ace1cb298b",
+  "claim_ceiling": "IDENTITY_AND_INCLUSION_ONLY; hashes do not establish correctness"
+}

@@ -1,0 +1,51 @@
+{
+  "breakpoint_id": "UFA-JEV-BP-0039",
+  "parent": "UFA-JEV-BP-0038",
+  "state": "RULE_COMPOSITION_SCREEN_COMPLETE",
+  "project": "VITHIA_SPACE",
+  "created_utc": "2026-09-28T07:45:49+00:00",
+  "git_head_at_creation": "33f637e7b8b00d7e02ef187e681a1d21ebbc6b4f",
+  "root_kind": "FMO_V1_BREAKPOINT_ATOMS",
+  "bp_root": "2fc36edeec9f6556b7cfe1f8935998758f87983eae4a9e846c26c6827aeb3329",
+  "group_roots": {
+    "dataset": "a35f9cce965d78fcd513eafa50a69b0d2a3839bdda7f627da03d6d787e67c0d7",
+    "result": "ccbcc6f080dae291e47462a1a4e79d08f0ad368de193a088e7d04bdc406bf8ab"
+  },
+  "atoms": [
+    {
+      "path": "data/e1r/E1R_RULE_COMPOSITION_SCREEN_V1/MANIFEST.json",
+      "kind": "DatasetManifestFCO",
+      "group": "dataset",
+      "bytes": 1646,
+      "sha256": "5014e8468cb9b6421e6a90a13d2c62eee4aa0281ebdf583c272943cd903ad2fb",
+      "location": "public",
+      "fmo_leaf": "a35f9cce965d78fcd513eafa50a69b0d2a3839bdda7f627da03d6d787e67c0d7"
+    },
+    {
+      "path": "data/e1r/E1R_RULE_COMPOSITION_SCREEN_V1/SUMMARY.json",
+      "kind": "ResultSummaryFCO",
+      "group": "result",
+      "bytes": 181,
+      "sha256": "a10c97628ac46dc3f6668436e2b23032514fa750c9636262e00cd659c112be92",
+      "location": "public",
+      "fmo_leaf": "cd444cafa645e38f5f47e7f790b7ba653c9ac0441fb5a77f4c018393826b47d5"
+    },
+    {
+      "path": "data/e1r/E1R_RULE_COMPOSITION_SCREEN_V1/pair_context_summary.jsonl",
+      "kind": "DerivedEvidenceFCO",
+      "group": "result",
+      "bytes": 31181,
+      "sha256": "12c13be9d930b177091c4390263b03a65e643e4e76e5c8b640b4753886cc99a0",
+      "location": "public",
+      "fmo_leaf": "c7790fb024bce23d28b210044179042fc4b01bed185f70a6eff6114e0014f6a4"
+    }
+  ],
+  "stage": "E1R_RULE_COMPOSITION_RESULT",
+  "dataset_root": "990163cd5c5bc6f83d0a6229a42864470039e48506c0ea872fba624a07569366",
+  "classification": "SCREENING_EXPLORATORY",
+  "scientific_parent_commit": "4c1bbb19b89a7ee1e1dee662cfd0f227186ebafd",
+  "scientific_parent_breakpoint": "UFA-JEV-BP-0028",
+  "scientific_parent_mmr_root": "5f742663f7e0c12e100e292cc794eefb0360a068a5c20c2b1be019ace1cb298b",
+  "claim_ceiling": "IDENTITY_AND_INCLUSION_ONLY; hashes do not establish correctness",
+  "signature_state": "NOT_SIGNED"
+}

@@ -1,0 +1,11 @@
+{
+  "composition": "screening only",
+  "confirmatory_rule_selection": {
+    "multiplicity": "Holm over 12 contexts",
+    "support": "Holm/overall p<0.05 and positive mean",
+    "test": "paired sign-flip permutation 10000 draws"
+  },
+  "restoration_rate": "Wilson 95% CI",
+  "schema": "E1R_STATS_PLAN_V1",
+  "screen": "no 256 uncorrected discovery p-values"
+}

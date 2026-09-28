@@ -1,0 +1,7 @@
+{
+  "calibration": "NOT_INDEPENDENTLY_VALIDATED",
+  "claim_ceiling": "descriptive simulation trajectory only",
+  "mapping": "PUBLIC_SIMULATION_ANTICUBE_E1R_V1",
+  "rows": 75,
+  "schema": "E1R_ANTICUBE_TEMPORAL_SUMMARY_V1"
+}

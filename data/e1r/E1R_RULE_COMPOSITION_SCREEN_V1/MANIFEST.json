@@ -1,0 +1,50 @@
+{
+  "claim_ceiling": "screening ordered rule-composition evidence; no global-best claim",
+  "code_commit_at_generation": "33f637e7b8b00d7e02ef187e681a1d21ebbc6b4f",
+  "config": {
+    "candidate_policy": "top 4 from each frozen context shortlist",
+    "classification": "SCREENING_EXPLORATORY",
+    "confirmatory_claim": false,
+    "endpoint": "final normalized Hamming divergence to same-order clean reference",
+    "fresh_replicates": [
+      200,
+      201,
+      202,
+      203,
+      204,
+      205,
+      206,
+      207,
+      208,
+      209
+    ],
+    "ordered_pairs": "all 4x4, including same-rule twice",
+    "schema": "E1R_RULE_COMPOSITION_SCREEN_V1",
+    "source_selection_breakpoint": "UFA-JEV-BP-0037",
+    "steps_per_rule": 4
+  },
+  "dataset_id": "E1R_RULE_COMPOSITION_SCREEN_V1",
+  "files": [
+    {
+      "bytes": 181,
+      "path": "data/e1r/E1R_RULE_COMPOSITION_SCREEN_V1/SUMMARY.json",
+      "sha256": "a10c97628ac46dc3f6668436e2b23032514fa750c9636262e00cd659c112be92"
+    },
+    {
+      "bytes": 31181,
+      "path": "data/e1r/E1R_RULE_COMPOSITION_SCREEN_V1/pair_context_summary.jsonl",
+      "sha256": "12c13be9d930b177091c4390263b03a65e643e4e76e5c8b640b4753886cc99a0"
+    },
+    {
+      "bytes": 11230,
+      "path": "data/e1r/E1R_RULE_COMPOSITION_SCREEN_V1/rows.jsonl.gz",
+      "sha256": "30dfcd8fb657899f49f81dd4cde6de6db42945114b316ced73b2e32bc850102b"
+    }
+  ],
+  "fmo_root": "990163cd5c5bc6f83d0a6229a42864470039e48506c0ea872fba624a07569366",
+  "kind": "scientific_successor",
+  "license": "NOT_ESTABLISHED_FOR_E1R_SUCCESSOR",
+  "schema": "E1R_DATASET_MANIFEST_V1",
+  "source": "VITHIA_E1R",
+  "visibility": "public"
+}

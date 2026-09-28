@@ -1,0 +1,26 @@
+{
+  "R_CONTEXT": "same 5-percent density and transition bins",
+  "R_EXACT": "bitwise equality",
+  "R_FUNCTIONAL": "same CA-dodge safe-action signature at three fixed observers",
+  "R_SHIFT": {
+    "shifts": [
+      -3,
+      -2,
+      -1,
+      0,
+      1,
+      2,
+      3
+    ]
+  },
+  "R_TRAJECTORY": "normalized Hamming divergence and AUD",
+  "invariant": "INTRINSIC_RECOVERY != INTERVENTION_RECOVERY != CONTEXTUAL_EQUIVALENCE != FUNCTIONAL_RECOVERY",
+  "schema": "E1R_RESTORATION_DEFINITIONS_V1",
+  "world": {
+    "T": 48,
+    "W": 64,
+    "boundary": "periodic",
+    "t_antidote": 24,
+    "t_poison": 16
+  }
+}

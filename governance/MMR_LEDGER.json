@@ -432,6 +432,314 @@
         "0e7a36ac6f8774ee554efef13de36399f4f1888362f636fada0cece1ef85cd5e",
         "55f6d29ea129f774fd3ad8fb26d23fa5955c2f92ffc8781e0108ebb46b8d42c4"
       ]
+    },
+    {
+      "seq": 28,
+      "bp_id": "UFA-JEV-BP-0029",
+      "bp_file": "governance/breakpoints/0029-e1r-prior-art.json",
+      "bp_file_sha256": "ce1453370935cadb4c810460ee8b3532d86060534f9c203859a1fcebd42f8dae",
+      "bp_root": "8ab9ad07ae91fe625a2b42437844b9d92cb2070125ad434c6177dda2b4ca6207",
+      "root_kind": "FMO_V1_BREAKPOINT_ATOMS",
+      "mmr_leaf": "29e5b30c037133f24407e2efa172cb3131b855c28a7cbf01573c004e0e67b512",
+      "mmr_size": 29,
+      "mmr_root_after": "856c7e208adfa5e64ccee386dc68b8cbe4d45e34da11279c774a34d6de8332d7",
+      "mmr_peaks_after": [
+        "1303f691fcfdee6145f710febf29e2146b6ced8c2f89b643dd1e4371cafbabe7",
+        "0e7a36ac6f8774ee554efef13de36399f4f1888362f636fada0cece1ef85cd5e",
+        "55f6d29ea129f774fd3ad8fb26d23fa5955c2f92ffc8781e0108ebb46b8d42c4",
+        "29e5b30c037133f24407e2efa172cb3131b855c28a7cbf01573c004e0e67b512"
+      ]
+    },
+    {
+      "seq": 29,
+      "bp_id": "UFA-JEV-BP-0030",
+      "bp_file": "governance/breakpoints/0030-e1r-rule-fcos.json",
+      "bp_file_sha256": "e58ad607e0a294413c7ff5d1ba4a182ddda5e074596fec66ece6210ee08ebcb2",
+      "bp_root": "2164e3c5a6a45eafd1516dc5cca07eb5cd48000a95fb8d3a017282afea2d4fbf",
+      "root_kind": "FMO_V1_BREAKPOINT_ATOMS",
+      "mmr_leaf": "0bf3efc210ceeb161d950e105c08474526387b07e06d3da8bebe155121caad36",
+      "mmr_size": 30,
+      "mmr_root_after": "92ec9a8b29420461d5f756c6ab871bf084b511ffe1241ad35ab63e72ada5fea1",
+      "mmr_peaks_after": [
+        "1303f691fcfdee6145f710febf29e2146b6ced8c2f89b643dd1e4371cafbabe7",
+        "0e7a36ac6f8774ee554efef13de36399f4f1888362f636fada0cece1ef85cd5e",
+        "55f6d29ea129f774fd3ad8fb26d23fa5955c2f92ffc8781e0108ebb46b8d42c4",
+        "6547c71465e8c8367d782e928a052cec7da24aa5ed0df80618a72b280aead2ad"
+      ]
+    },
+    {
+      "seq": 30,
+      "bp_id": "UFA-JEV-BP-0031",
+      "bp_file": "governance/breakpoints/0031-e1r-restoration-definitions.json",
+      "bp_file_sha256": "70f364663e7bbf75f4dbd6fadcf6cb8cb3b27ef79104386cba5e3b59cd15cd3c",
+      "bp_root": "e8cc8bf3a3b71eabe4422d0966e677196532aea4db08a159c0ad313a8b328cad",
+      "root_kind": "FMO_V1_BREAKPOINT_ATOMS",
+      "mmr_leaf": "68406fd1879ee1114cab4812de9c6e607a90a362e654b57ffcd9b3cbf9d3afba",
+      "mmr_size": 31,
+      "mmr_root_after": "e3409fa29a8db4d8aeb799953db9b5ccef1039f125d17c698179e4ee068f368e",
+      "mmr_peaks_after": [
+        "1303f691fcfdee6145f710febf29e2146b6ced8c2f89b643dd1e4371cafbabe7",
+        "0e7a36ac6f8774ee554efef13de36399f4f1888362f636fada0cece1ef85cd5e",
+        "55f6d29ea129f774fd3ad8fb26d23fa5955c2f92ffc8781e0108ebb46b8d42c4",
+        "6547c71465e8c8367d782e928a052cec7da24aa5ed0df80618a72b280aead2ad",
+        "68406fd1879ee1114cab4812de9c6e607a90a362e654b57ffcd9b3cbf9d3afba"
+      ]
+    },
+    {
+      "seq": 31,
+      "bp_id": "UFA-JEV-BP-0032",
+      "bp_file": "governance/breakpoints/0032-e1r-randomization.json",
+      "bp_file_sha256": "3958928a609d39ae9f5097629788197f5c6a0d560addfecae51186dc169d96a5",
+      "bp_root": "841f873eb6b3fdd9bff5bb491c5aedd46398ce38da0be881d50b87025986f4a8",
+      "root_kind": "FMO_V1_BREAKPOINT_ATOMS",
+      "mmr_leaf": "06eb5684679c16a2c67825d6c3168d79b5d6c740e0608e56d8bdf02e9b663a38",
+      "mmr_size": 32,
+      "mmr_root_after": "026514586974a2fb18c9fefe6f92208e2008b44751f5380417c4129b185b831f",
+      "mmr_peaks_after": [
+        "026514586974a2fb18c9fefe6f92208e2008b44751f5380417c4129b185b831f"
+      ]
+    },
+    {
+      "seq": 32,
+      "bp_id": "UFA-JEV-BP-0033",
+      "bp_file": "governance/breakpoints/0033-e1r-all256-prereg.json",
+      "bp_file_sha256": "aa3e58142457e8f91e2e812939a7a2cf3551b162cdffa82b3908010dfb64fb2d",
+      "bp_root": "7d003b7e72cf9231725d441e342604baa17edede44a4dbf13fe732dc4b7d3582",
+      "root_kind": "FMO_V1_BREAKPOINT_ATOMS",
+      "mmr_leaf": "63c2f01e4b4281b332d4aa003a9458c8eaddb2839e70e31bdead9cdb637fef85",
+      "mmr_size": 33,
+      "mmr_root_after": "f53a963a8249caf681b536166b0df98d1fade5c60688f7a9316e9a61244a9f49",
+      "mmr_peaks_after": [
+        "026514586974a2fb18c9fefe6f92208e2008b44751f5380417c4129b185b831f",
+        "63c2f01e4b4281b332d4aa003a9458c8eaddb2839e70e31bdead9cdb637fef85"
+      ]
+    },
+    {
+      "seq": 33,
+      "bp_id": "UFA-JEV-BP-0034",
+      "bp_file": "governance/breakpoints/0034-e1r-execution-amendment.json",
+      "bp_file_sha256": "e0778c78b48b337fe2354131e8ad7c569846b901cd3a087ba161b0f1f7432f34",
+      "bp_root": "3fa28fc6842cbb66a962f6dddba2eba8da5ed73261adb1359e7b216a1aca1dfa",
+      "root_kind": "FMO_V1_BREAKPOINT_ATOMS",
+      "mmr_leaf": "8131de0170aff69c74dd622a9467ec7ab9f60fe1faf8713d791d76437a20d3ff",
+      "mmr_size": 34,
+      "mmr_root_after": "01094278996bfaaf51848bb86a3ea506d19303d32a87aacd099a0d7e372663d8",
+      "mmr_peaks_after": [
+        "026514586974a2fb18c9fefe6f92208e2008b44751f5380417c4129b185b831f",
+        "3e38eaff0f1f7aab4837c8d82636aae736b555dd7cc9298e90ba9fae888a3b77"
+      ]
+    },
+    {
+      "seq": 34,
+      "bp_id": "UFA-JEV-BP-0035",
+      "bp_file": "governance/breakpoints/0035-e1r-all256-result.json",
+      "bp_file_sha256": "e3c0f686361ccdf565e6559ff4bd0667dedc5eea14c4cab9eccfc94525925d54",
+      "bp_root": "5f9e8c7dbfcfbbc842005f78619d6b092bdd8c870b7586505d79675f7fe67bd7",
+      "root_kind": "FMO_V1_BREAKPOINT_ATOMS",
+      "mmr_leaf": "83f89c0062d11ac4ad5d1bc96d76383affe549bb97df2e0b75d79e7bc8644957",
+      "mmr_size": 35,
+      "mmr_root_after": "21d8152acd7a07aab2aea1dcca8a5433eb1be7e248d64fc93dd9981ed1526e07",
+      "mmr_peaks_after": [
+        "026514586974a2fb18c9fefe6f92208e2008b44751f5380417c4129b185b831f",
+        "3e38eaff0f1f7aab4837c8d82636aae736b555dd7cc9298e90ba9fae888a3b77",
+        "83f89c0062d11ac4ad5d1bc96d76383affe549bb97df2e0b75d79e7bc8644957"
+      ]
+    },
+    {
+      "seq": 35,
+      "bp_id": "UFA-JEV-BP-0036",
+      "bp_file": "governance/breakpoints/0036-e1r-rule-selection-prereg.json",
+      "bp_file_sha256": "48f87034049a331a420144f9afc012da753eba234e2e2959b3495964fcf2967f",
+      "bp_root": "0daa673172e33532bbe94d71a44a2ad9f98db5ebea488ea9faef9ad829974726",
+      "root_kind": "FMO_V1_BREAKPOINT_ATOMS",
+      "mmr_leaf": "16e981f51071e29962942aaedf16b0cca8d3e9622caf81eaaa47d524121095c1",
+      "mmr_size": 36,
+      "mmr_root_after": "09abf598179ed0199655423f64863e00ee2a7bcaa0dae8129cffd3e416684ed2",
+      "mmr_peaks_after": [
+        "026514586974a2fb18c9fefe6f92208e2008b44751f5380417c4129b185b831f",
+        "9e4e348e13b5947e3ed65e46d31b6e9f59c55267b5b4f65b0d79f0b7ab9530d2"
+      ]
+    },
+    {
+      "seq": 36,
+      "bp_id": "UFA-JEV-BP-0037",
+      "bp_file": "governance/breakpoints/0037-e1r-rule-selection-result.json",
+      "bp_file_sha256": "9f3d5df7b642da208af8e84aebaf5dca3806b82b120efee86852d32690bace6e",
+      "bp_root": "beddc3c188197e15ac0e192e683bd60b4e66ddc65467ca5e6b571e53c8372ebe",
+      "root_kind": "FMO_V1_BREAKPOINT_ATOMS",
+      "mmr_leaf": "02aa1e86a5336d928dbef1e8fc82da0697e0c9e92828d729550ba810300e743e",
+      "mmr_size": 37,
+      "mmr_root_after": "557ff91d29ad16724f9456b61945c7341d2686ff55ad3b793d0dc3e1d05a9786",
+      "mmr_peaks_after": [
+        "026514586974a2fb18c9fefe6f92208e2008b44751f5380417c4129b185b831f",
+        "9e4e348e13b5947e3ed65e46d31b6e9f59c55267b5b4f65b0d79f0b7ab9530d2",
+        "02aa1e86a5336d928dbef1e8fc82da0697e0c9e92828d729550ba810300e743e"
+      ]
+    },
+    {
+      "seq": 37,
+      "bp_id": "UFA-JEV-BP-0038",
+      "bp_file": "governance/breakpoints/0038-e1r-rule-composition-prereg.json",
+      "bp_file_sha256": "92abb5d7edd3563483c56c4ccec91a526739906bd69acd6bdee5a823abe1dc99",
+      "bp_root": "358529de4e1566fd80a0d3288510f4a24c1bf9e26ee892db41028cf5ed7387e1",
+      "root_kind": "FMO_V1_BREAKPOINT_ATOMS",
+      "mmr_leaf": "07b864fadb9dd9f1e981e64fbcdfb0113cbcfd26be4f8539a76496fa5cd04d3f",
+      "mmr_size": 38,
+      "mmr_root_after": "18c5d2b8d9d93bb5a836f01c222c9fec71538f5aea6654cc27c3675e2980d927",
+      "mmr_peaks_after": [
+        "026514586974a2fb18c9fefe6f92208e2008b44751f5380417c4129b185b831f",
+        "9e4e348e13b5947e3ed65e46d31b6e9f59c55267b5b4f65b0d79f0b7ab9530d2",
+        "c9d20504a097a728131bf24b7ac05eabc65f726f63000601b6a5e2fb878731e2"
+      ]
+    },
+    {
+      "seq": 38,
+      "bp_id": "UFA-JEV-BP-0039",
+      "bp_file": "governance/breakpoints/0039-e1r-rule-composition-result.json",
+      "bp_file_sha256": "160d054ea8d29f51ff42b5f8aeabe1f2dd94253748402f3995a0d73569a56700",
+      "bp_root": "2fc36edeec9f6556b7cfe1f8935998758f87983eae4a9e846c26c6827aeb3329",
+      "root_kind": "FMO_V1_BREAKPOINT_ATOMS",
+      "mmr_leaf": "183f4f227d8414ec3a15cccafd8ae16983d6a645b6d3a92b3c80d98a7b864667",
+      "mmr_size": 39,
+      "mmr_root_after": "dce6e3751217df82f9786f9d086e1ab6c99e3050b585a7fbc407199f0669f081",
+      "mmr_peaks_after": [
+        "026514586974a2fb18c9fefe6f92208e2008b44751f5380417c4129b185b831f",
+        "9e4e348e13b5947e3ed65e46d31b6e9f59c55267b5b4f65b0d79f0b7ab9530d2",
+        "c9d20504a097a728131bf24b7ac05eabc65f726f63000601b6a5e2fb878731e2",
+        "183f4f227d8414ec3a15cccafd8ae16983d6a645b6d3a92b3c80d98a7b864667"
+      ]
+    },
+    {
+      "seq": 39,
+      "bp_id": "UFA-JEV-BP-0040",
+      "bp_file": "governance/breakpoints/0040-e1r-transform-order-prereg.json",
+      "bp_file_sha256": "17085588cd8e7c4962ce3703a580588223cefcacbbf9aa5b7a74910253cfc430",
+      "bp_root": "037af3d12c77a46ddedf3ceb0f359dbe2650c2fc75df653ba550b2075af97001",
+      "root_kind": "FMO_V1_BREAKPOINT_ATOMS",
+      "mmr_leaf": "749f19311beee28a393278b273bcf2abc0ebfe88c3d478f67ca4a9014f432b53",
+      "mmr_size": 40,
+      "mmr_root_after": "10010f0bf4d4b58224c17406865e72bdb940dc247fd0cca296df3d41d894cb20",
+      "mmr_peaks_after": [
+        "026514586974a2fb18c9fefe6f92208e2008b44751f5380417c4129b185b831f",
+        "2c19c9c86cde650380546093e0e06537bfb81037e47bfd05c7d1b596710c22b8"
+      ]
+    },
+    {
+      "seq": 40,
+      "bp_id": "UFA-JEV-BP-0041",
+      "bp_file": "governance/breakpoints/0041-e1r-transform-order-result.json",
+      "bp_file_sha256": "c1af5651ce96e6d4686dc1c979b36c13271b24bdad2e73158844f7696f80cd67",
+      "bp_root": "f8d0c0b76673bd22c323084e49c6844f8f30b8d25a204c2876d373f4abd5b60f",
+      "root_kind": "FMO_V1_BREAKPOINT_ATOMS",
+      "mmr_leaf": "225dbc1a977d8c4f75091d47445e03ed9a5b54d4040ae304281943e75138f86d",
+      "mmr_size": 41,
+      "mmr_root_after": "f751b4589856670040ea8d82a87ae3ab826949152ea780fae249f7865651b30a",
+      "mmr_peaks_after": [
+        "026514586974a2fb18c9fefe6f92208e2008b44751f5380417c4129b185b831f",
+        "2c19c9c86cde650380546093e0e06537bfb81037e47bfd05c7d1b596710c22b8",
+        "225dbc1a977d8c4f75091d47445e03ed9a5b54d4040ae304281943e75138f86d"
+      ]
+    },
+    {
+      "seq": 41,
+      "bp_id": "UFA-JEV-BP-0042",
+      "bp_file": "governance/breakpoints/0042-e1r-anticube-temporal.json",
+      "bp_file_sha256": "f3be66f808cd6889cd2bc8733ecb6dd205512297242ef18bf8ca904c4a838e5a",
+      "bp_root": "c9247d3d6559ebc9707a5d0b59ea7da419ec4c1f0e533f888f785c1c0e9b70ee",
+      "root_kind": "FMO_V1_BREAKPOINT_ATOMS",
+      "mmr_leaf": "fdb87f57a031629409a6586254eb46b8936858711c68f84ab82321c10557954f",
+      "mmr_size": 42,
+      "mmr_root_after": "b23cd846850060ca817cfb257882c7dcf0f7f8bcd471c36ec233e33e03048c69",
+      "mmr_peaks_after": [
+        "026514586974a2fb18c9fefe6f92208e2008b44751f5380417c4129b185b831f",
+        "2c19c9c86cde650380546093e0e06537bfb81037e47bfd05c7d1b596710c22b8",
+        "134a834834709c5aa7a59a619a637d8ae0cc6518effaf56130a396174e60f597"
+      ]
+    },
+    {
+      "seq": 42,
+      "bp_id": "UFA-JEV-BP-0043",
+      "bp_file": "governance/breakpoints/0043-e1r-deltagstar-state.json",
+      "bp_file_sha256": "22bdfefc579eb9bcd5793848167a079a54ff5073ce8ea0a4dcef6f24af1fb583",
+      "bp_root": "666f56f2ab2cf7ef40cb2a1ed01f42f80ac3f34c013fb75b8bb84147979eeb2e",
+      "root_kind": "FMO_V1_BREAKPOINT_ATOMS",
+      "mmr_leaf": "867cbb576931f9dc9a9af479604d14c27334d5401e2b451cd714869a863c4874",
+      "mmr_size": 43,
+      "mmr_root_after": "d04c1dfea311ffbfd51b628fe63e266ce4ce55e008ee0af3c500cca2044e111a",
+      "mmr_peaks_after": [
+        "026514586974a2fb18c9fefe6f92208e2008b44751f5380417c4129b185b831f",
+        "2c19c9c86cde650380546093e0e06537bfb81037e47bfd05c7d1b596710c22b8",
+        "134a834834709c5aa7a59a619a637d8ae0cc6518effaf56130a396174e60f597",
+        "867cbb576931f9dc9a9af479604d14c27334d5401e2b451cd714869a863c4874"
+      ]
+    },
+    {
+      "seq": 43,
+      "bp_id": "UFA-JEV-BP-0044",
+      "bp_file": "governance/breakpoints/0044-e1r-system1-runtime.json",
+      "bp_file_sha256": "690466d9c203e68d773a971d2ddcda2c8cd041e7a97aab6217def4bc9ffac943",
+      "bp_root": "5ab6030d3a7014d50d401dfa9495df732afc8a467ceff2691463bc8a49a614e2",
+      "root_kind": "FMO_V1_BREAKPOINT_ATOMS",
+      "mmr_leaf": "d915420e63ea6ac1b0526ca37dcbe8c7d43c7668920dd9758e61674bacfe696c",
+      "mmr_size": 44,
+      "mmr_root_after": "76e03ab7629c858d017547e24a8436844a30f2933be592b53cd091ab8e60994f",
+      "mmr_peaks_after": [
+        "026514586974a2fb18c9fefe6f92208e2008b44751f5380417c4129b185b831f",
+        "2c19c9c86cde650380546093e0e06537bfb81037e47bfd05c7d1b596710c22b8",
+        "4e309638f9312ead5a695f1913df60f966a0ea3e6f0e8eeb7ec6e6048beb4c33"
+      ]
+    },
+    {
+      "seq": 44,
+      "bp_id": "UFA-JEV-BP-0045",
+      "bp_file": "governance/breakpoints/0045-e1r-system1-portability.json",
+      "bp_file_sha256": "8f14ceddc463329277264c7921288584c2561859a14cf1778207e7cf4e757b5d",
+      "bp_root": "72932101f181f373f932fce2d8879994d941bda2303be112ad4429e5e7dd48b8",
+      "root_kind": "FMO_V1_BREAKPOINT_ATOMS",
+      "mmr_leaf": "7423713dfc3f8b80274d0f2d0ee2f02c98acd1d9f9790b58133e4e77716d6b7a",
+      "mmr_size": 45,
+      "mmr_root_after": "a0cb90a304335af7845a6003118ffc28627904ddbed8cd7c39443cdf9dfcbbf0",
+      "mmr_peaks_after": [
+        "026514586974a2fb18c9fefe6f92208e2008b44751f5380417c4129b185b831f",
+        "2c19c9c86cde650380546093e0e06537bfb81037e47bfd05c7d1b596710c22b8",
+        "4e309638f9312ead5a695f1913df60f966a0ea3e6f0e8eeb7ec6e6048beb4c33",
+        "7423713dfc3f8b80274d0f2d0ee2f02c98acd1d9f9790b58133e4e77716d6b7a"
+      ]
+    },
+    {
+      "seq": 45,
+      "bp_id": "UFA-JEV-BP-0046",
+      "bp_file": "governance/breakpoints/0046-e1r-vcc-translation-prereg.json",
+      "bp_file_sha256": "20f430d8acdedceff3582c56ce1d902ede686d3ea3d464798cd58a904fbc157e",
+      "bp_root": "7f3a9d0a6b75e14389cc1cc32b083254490faa89d37310e29c536aa8280cf4dc",
+      "root_kind": "FMO_V1_BREAKPOINT_ATOMS",
+      "mmr_leaf": "10d723c245dfdf3981015581c93aeb064a24d70a5fa2feb514be27b5626f19a6",
+      "mmr_size": 46,
+      "mmr_root_after": "974f985663c1c6477002d819eaa6cfa9fa05a10ab936b78b7edb71a01edc7916",
+      "mmr_peaks_after": [
+        "026514586974a2fb18c9fefe6f92208e2008b44751f5380417c4129b185b831f",
+        "2c19c9c86cde650380546093e0e06537bfb81037e47bfd05c7d1b596710c22b8",
+        "4e309638f9312ead5a695f1913df60f966a0ea3e6f0e8eeb7ec6e6048beb4c33",
+        "07981d9fc0ef58117f24f2ac5c3707526de235d908451d417e1df7be1cd750a1"
+      ]
+    },
+    {
+      "seq": 46,
+      "bp_id": "UFA-JEV-BP-0047",
+      "bp_file": "governance/breakpoints/0047-e1r-handoff.json",
+      "bp_file_sha256": "3e96456b2623beb23b851f401245ec376e1b7e626863d73baf236182c3e5c873",
+      "bp_root": "df441d935c58aef31debec7a564ffcc8fde51dd5935f96f4ec033642ee730f7e",
+      "root_kind": "FMO_V1_BREAKPOINT_ATOMS",
+      "mmr_leaf": "c1aa6435de0e219d1d1cffe5521af746a47f134a2e4f9d84903fa121505c196b",
+      "mmr_size": 47,
+      "mmr_root_after": "1c535ea6a15d2da21d563b5aecd38d95d20f674803939f688449d441bfda3d0a",
+      "mmr_peaks_after": [
+        "026514586974a2fb18c9fefe6f92208e2008b44751f5380417c4129b185b831f",
+        "2c19c9c86cde650380546093e0e06537bfb81037e47bfd05c7d1b596710c22b8",
+        "4e309638f9312ead5a695f1913df60f966a0ea3e6f0e8eeb7ec6e6048beb4c33",
+        "07981d9fc0ef58117f24f2ac5c3707526de235d908451d417e1df7be1cd750a1",
+        "c1aa6435de0e219d1d1cffe5521af746a47f134a2e4f9d84903fa121505c196b"
+      ]
     }
   ]
 }
