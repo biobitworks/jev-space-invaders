@@ -1,0 +1,22 @@
+{
+  "candidate_policy": "top 4 from each frozen context shortlist",
+  "classification": "SCREENING_EXPLORATORY",
+  "confirmatory_claim": false,
+  "endpoint": "final normalized Hamming divergence to same-order clean reference",
+  "fresh_replicates": [
+    200,
+    201,
+    202,
+    203,
+    204,
+    205,
+    206,
+    207,
+    208,
+    209
+  ],
+  "ordered_pairs": "all 4x4, including same-rule twice",
+  "schema": "E1R_RULE_COMPOSITION_SCREEN_V1",
+  "source_selection_breakpoint": "UFA-JEV-BP-0037",
+  "steps_per_rule": 4
+}

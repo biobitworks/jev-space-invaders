@@ -1,0 +1,41 @@
+{
+  "breakpoint_id": "UFA-JEV-BP-0038",
+  "parent": "UFA-JEV-BP-0037",
+  "state": "RULE_COMPOSITION_SCREEN_PREREGISTERED",
+  "project": "VITHIA_SPACE",
+  "created_utc": "2026-09-28T07:45:38+00:00",
+  "git_head_at_creation": "d8e0d0447c8fc274077088a54adb9ea4a68cff50",
+  "root_kind": "FMO_V1_BREAKPOINT_ATOMS",
+  "bp_root": "358529de4e1566fd80a0d3288510f4a24c1bf9e26ee892db41028cf5ed7387e1",
+  "group_roots": {
+    "prereg": "3fd01f15408b3a1f2a7f1fc7d1f35de6930769ba03ee5c3caf170764f9de6e1b",
+    "source": "4df22983c3197925a1da362fe3b8042ef974a5bac44d52f670306144fdeb9cdd"
+  },
+  "atoms": [
+    {
+      "path": "docs/prereg/E1R_RULE_COMPOSITION.json",
+      "kind": "PreregistrationFCO",
+      "group": "prereg",
+      "bytes": 524,
+      "sha256": "5bed64c9c3dce4c73c1da854bae49ba75a2669022d954bdd00369658ab4ef9ae",
+      "location": "public",
+      "fmo_leaf": "3fd01f15408b3a1f2a7f1fc7d1f35de6930769ba03ee5c3caf170764f9de6e1b"
+    },
+    {
+      "path": "RULE_CONTEXT_REGISTRY.json",
+      "kind": "RegistryFCO",
+      "group": "source",
+      "bytes": 8470,
+      "sha256": "4d3f5e387338e23cd12a9f281d6160459e8179095ea212000aad69e62021b1fc",
+      "location": "public",
+      "fmo_leaf": "4df22983c3197925a1da362fe3b8042ef974a5bac44d52f670306144fdeb9cdd"
+    }
+  ],
+  "stage": "E1R_RULE_COMPOSITION_PREREG",
+  "top_k": 4,
+  "scientific_parent_commit": "4c1bbb19b89a7ee1e1dee662cfd0f227186ebafd",
+  "scientific_parent_breakpoint": "UFA-JEV-BP-0028",
+  "scientific_parent_mmr_root": "5f742663f7e0c12e100e292cc794eefb0360a068a5c20c2b1be019ace1cb298b",
+  "claim_ceiling": "IDENTITY_AND_INCLUSION_ONLY; hashes do not establish correctness",
+  "signature_state": "NOT_SIGNED"
+}

@@ -575,6 +575,22 @@
         "9e4e348e13b5947e3ed65e46d31b6e9f59c55267b5b4f65b0d79f0b7ab9530d2",
         "02aa1e86a5336d928dbef1e8fc82da0697e0c9e92828d729550ba810300e743e"
       ]
+    },
+    {
+      "seq": 37,
+      "bp_id": "UFA-JEV-BP-0038",
+      "bp_file": "governance/breakpoints/0038-e1r-rule-composition-prereg.json",
+      "bp_file_sha256": "92abb5d7edd3563483c56c4ccec91a526739906bd69acd6bdee5a823abe1dc99",
+      "bp_root": "358529de4e1566fd80a0d3288510f4a24c1bf9e26ee892db41028cf5ed7387e1",
+      "root_kind": "FMO_V1_BREAKPOINT_ATOMS",
+      "mmr_leaf": "07b864fadb9dd9f1e981e64fbcdfb0113cbcfd26be4f8539a76496fa5cd04d3f",
+      "mmr_size": 38,
+      "mmr_root_after": "18c5d2b8d9d93bb5a836f01c222c9fec71538f5aea6654cc27c3675e2980d927",
+      "mmr_peaks_after": [
+        "026514586974a2fb18c9fefe6f92208e2008b44751f5380417c4129b185b831f",
+        "9e4e348e13b5947e3ed65e46d31b6e9f59c55267b5b4f65b0d79f0b7ab9530d2",
+        "c9d20504a097a728131bf24b7ac05eabc65f726f63000601b6a5e2fb878731e2"
+      ]
     }
   ]
 }
