@@ -1,0 +1,15 @@
+{
+  "executed": [
+    "D0_DETERMINISTIC_ORACLE",
+    "D1_VITHIA_DETERMINISTIC_CONTEXT_POLICY"
+  ],
+  "not_tested": [
+    "D2_OPENJEV_LOCAL",
+    "D3_JEV_HOSTED",
+    "D4_LIQUID_LOCAL",
+    "D5_OLLAMA_OLLARMA"
+  ],
+  "reason": "No frozen loaded OpenJEV runtime in this branch; external/local model calls not initiated.",
+  "schema": "E1R_SYSTEM1_PORTABILITY_RESULT_V1",
+  "state": "PARTIAL_DETERMINISTIC_ONLY"
+}

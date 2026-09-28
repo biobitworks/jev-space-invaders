@@ -688,6 +688,23 @@
         "2c19c9c86cde650380546093e0e06537bfb81037e47bfd05c7d1b596710c22b8",
         "4e309638f9312ead5a695f1913df60f966a0ea3e6f0e8eeb7ec6e6048beb4c33"
       ]
+    },
+    {
+      "seq": 44,
+      "bp_id": "UFA-JEV-BP-0045",
+      "bp_file": "governance/breakpoints/0045-e1r-system1-portability.json",
+      "bp_file_sha256": "8f14ceddc463329277264c7921288584c2561859a14cf1778207e7cf4e757b5d",
+      "bp_root": "72932101f181f373f932fce2d8879994d941bda2303be112ad4429e5e7dd48b8",
+      "root_kind": "FMO_V1_BREAKPOINT_ATOMS",
+      "mmr_leaf": "7423713dfc3f8b80274d0f2d0ee2f02c98acd1d9f9790b58133e4e77716d6b7a",
+      "mmr_size": 45,
+      "mmr_root_after": "a0cb90a304335af7845a6003118ffc28627904ddbed8cd7c39443cdf9dfcbbf0",
+      "mmr_peaks_after": [
+        "026514586974a2fb18c9fefe6f92208e2008b44751f5380417c4129b185b831f",
+        "2c19c9c86cde650380546093e0e06537bfb81037e47bfd05c7d1b596710c22b8",
+        "4e309638f9312ead5a695f1913df60f966a0ea3e6f0e8eeb7ec6e6048beb4c33",
+        "7423713dfc3f8b80274d0f2d0ee2f02c98acd1d9f9790b58133e4e77716d6b7a"
+      ]
     }
   ]
 }
