@@ -1,0 +1,18 @@
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Vithia Space Live Demo</title><link rel="stylesheet" href="/styles.css"></head>
+<body>
+<main class="shell">
+  <header class="topbar"><div><p class="kicker">UFA-JEV COMPETITION</p><h1>Vithia Space / Live Control Room</h1></div><div id="runtime" class="status-pill">CONNECTING</div></header>
+  <section class="toolbar">
+    <div class="segmented" role="group" aria-label="Mode"><button data-mode="1P" class="mode active">1 PLAYER</button><button data-mode="2P" class="mode">2 PLAYER</button></div>
+    <button id="play">▶ PLAY</button><button id="pause">Ⅱ PAUSE</button><button id="step">◆ STEP ONCE</button><button id="stop">■ STOP</button><button id="reset">↻ RESET</button>
+    <label class="seed">SEED <input id="seed" type="number" value="3" min="0" step="1"></label>
+  </section>
+  <section class="grid">
+    <div class="visual panel"><div class="panel-head"><span id="mode-title">MODE=1P ALE</span><span id="frame-meta">FRAME 0</span></div><div class="screen"><img id="frame" src="/frame.png" alt="Live Space Invaders frame"></div><div class="metrics"><div><small>SCORE</small><strong id="score">0</strong></div><div><small>LIVES</small><strong id="lives">-</strong></div><div><small>DECISIONS</small><strong id="decisions">0</strong></div><div><small>JOINT STEP</small><strong id="joint">0</strong></div></div></div>
+    <aside class="side panel"><div class="panel-head"><span>CONTROL PLANE</span><span id="state">PAUSED</span></div><div class="fields"><label>1P DECIDER<select id="model-1p"></select></label><label>P0 DECIDER<select id="model-p0"></select></label><label>P1 DECIDER<select id="model-p1"></select></label><label>BACKTRACE <input id="backtrace" type="number" value="3" min="0"></label><label>FORECAST <input id="forecast" type="number" value="3" min="0"></label><label>SPEED <input id="speed" type="number" value="4" min="0.1" step="0.5"></label><label class="toggle"><input id="preprocessor" type="checkbox" checked> VITHIA PREPROCESSOR</label></div><div id="identity" class="identity"></div></aside>
+  </section>
+  <section class="lower"><div class="panel trace"><div class="panel-head"><span>DECISION TRACE</span><span id="backend">-</span></div><div id="trace"></div></div><div class="panel integrations"><div class="panel-head"><span>INTEGRATION STATUS</span><button id="refresh-integrations" class="small">↻</button></div><div id="integration-list"></div></div></section>
+</main><script src="/app.js"></script>
+</body></html>

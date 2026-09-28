@@ -1,0 +1,64 @@
+{
+  "schema": "LIVE_DEMO_ACCEPTANCE_V01",
+  "task": "LIVE_1P_2P_DEMO_INTEGRATION_TEST_COMMIT_SUBMIT_V01",
+  "host": "magicSTUDIObox",
+  "branch": "competition/live-demo-1p2p-v01-20260928",
+  "predecessor_head": "4d658ebd938056f8df9e41320a695e4c56170bf8",
+  "live_url": "http://127.0.0.1:8788",
+  "server_bind": "127.0.0.1",
+  "runtime": {
+    "python": "3.12",
+    "gymnasium": "1.3.0",
+    "ale_py": "0.12.1",
+    "pettingzoo": "1.27.0",
+    "multi_agent_ale_py": "0.1.12",
+    "preprocessor": "perception_v1"
+  },
+  "models": {
+    "ollama_api": "http://127.0.0.1:11434",
+    "1p": "qwen2.5:0.5b",
+    "2p_player0": "qwen2.5:0.5b",
+    "2p_player1": "longhorizon-liquid-230m:latest"
+  },
+  "acceptance": {
+    "live_1p": {
+      "status": "PASS",
+      "environment": "ALE/SpaceInvaders-v5",
+      "controller": "VITHIA-SPACE",
+      "decider": "ollama:qwen2.5:0.5b",
+      "decisions": 14,
+      "step_once_verified": true,
+      "pause_freeze_verified": true,
+      "preprocessor_verified": true,
+      "telemetry_run_id": "6de0853e005a411a97673f2f4cab492a",
+      "telemetry_sha256": "2e2b1413eff3262478dc6ce5ee3ea8a13d718710c92a309c9de0389a8009e133"
+    },
+    "live_2p": {
+      "status": "PASS",
+      "environment": "PettingZoo space_invaders_v2",
+      "action_ontology": ["NOOP", "FIRE", "UP", "RIGHT", "LEFT", "DOWN"],
+      "player0_decider": "ollama:qwen2.5:0.5b",
+      "player1_decider": "ollama:longhorizon-liquid-230m:latest",
+      "joint_transitions": 21,
+      "two_autonomous_decisions_per_transition": true,
+      "step_once_verified": true,
+      "pause_freeze_verified": true,
+      "keyboard_input": false,
+      "telemetry_source_run_id": "0803d038a1984eab91eb81cc28caf516",
+      "telemetry_sha256": "b6431134d748042cc057ea70243b57ed4475b593daac548b77ebdccd0ccaa087"
+    }
+  },
+  "integration_matrix": {
+    "OLLAMA": {"1P": "PASS", "2P": "PASS"},
+    "OLLARMA": {"1P": "PARTIAL", "2P": "PARTIAL", "reason": "SELECTION_STALE; advisory runtime only"},
+    "SYSTEM_ONE": {"1P": "NOT_CONFIGURED", "2P": "NOT_CONFIGURED"},
+    "TENKI": {"1P": "DEFERRED", "2P": "DEFERRED"},
+    "MITOSIS_LABS": {"1P": "DEFERRED", "2P": "DEFERRED"},
+    "OPENJEV": {"1P": "NOT_TESTED", "2P": "NOT_TESTED"},
+    "LIQUID_AI": {"1P": "PASS", "2P": "PASS", "reason": "local Ollama tag; no separate provider claim"},
+    "VITHIA_PREPROCESSOR": {"1P": "PASS", "2P": "PASS"}
+  },
+  "claim_ceiling": "Live local demo acceptance only; optional integration statuses are not promoted beyond executed evidence.",
+  "submission_state": "NOT_EXECUTED",
+  "breakpoint_state": "NOT_COMPUTED"
+}
