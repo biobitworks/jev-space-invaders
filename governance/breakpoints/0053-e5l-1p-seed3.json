@@ -1,0 +1,50 @@
+{
+  "breakpoint_id": "UFA-JEV-BP-0053",
+  "parent": "UFA-JEV-BP-0052",
+  "state": "PARTIAL_PROGRESS_SEED_PAIR_SEALED",
+  "project": "VITHIA_SPACE",
+  "created_utc": "2026-09-28T14:37:55+00:00",
+  "git_head_at_creation": "3d3045d5f9561083c97fafbb5343fe10b70c4780",
+  "root_kind": "FMO_V1_BREAKPOINT_ATOMS",
+  "bp_root": "b879938978c4b24033a1c134f5e22370573aa91903967d8ca56e7038e5725f3b",
+  "group_roots": {
+    "e5l": "22e54419630554fc83a793ec592ab96ddb5dc4663ea811c4351bb71a7ba9fc48"
+  },
+  "atoms": [
+    {
+      "path": "results/vita01/e5l/E5L_1P_SEED3.json",
+      "kind": "E5LFCO",
+      "group": "e5l",
+      "bytes": 2097,
+      "sha256": "d12f6d8d1769299cee5dbbf87a6ace7054551eb2fae46d9c09366b0258827f90",
+      "location": "public",
+      "fmo_leaf": "a5a9f50851e03d0c30d6858609c0b0f29cf9b8260e33c517700ee4e74e2bc152"
+    },
+    {
+      "path": "results/vita01/e5l/1p_LQ_RAW_seed3.jsonl.gz",
+      "kind": "E5LFCO",
+      "group": "e5l",
+      "bytes": 21290,
+      "sha256": "f288c8fb97eaee140be8ecb51e485ced00b6529f1c71d430376e72eae9458291",
+      "location": "public",
+      "fmo_leaf": "4fab80f0d03e8b6e3de789b152bde27f81db836cbd69cbf52650bdaccb3687b1"
+    },
+    {
+      "path": "results/vita01/e5l/1p_LV_VITA01_seed3.jsonl.gz",
+      "kind": "E5LFCO",
+      "group": "e5l",
+      "bytes": 21379,
+      "sha256": "21492a71f1d7548e318b29eff4b0fedac3150d53dc4530280c26c9028fff725b",
+      "location": "public",
+      "fmo_leaf": "e63b1f29f5a7cde15160e649c9c0cea6b24747f8c7f95d4a10f4ac536a3ba3a3"
+    }
+  ],
+  "experiment_id": "E5L_LIQUID_VS_VITA01_1P",
+  "pre_mmr_root": "c175fe7d2d9b17859b7df96173a47393b745527b494ff28a07971a9d02db9860",
+  "stage": "E5L_1P_PROGRESS",
+  "prereg": "UFA-JEV-BP-0050",
+  "seed": 3,
+  "completed_pair": true,
+  "claim_ceiling": "IDENTITY_AND_INCLUSION_ONLY; hashes do not establish correctness",
+  "signature_state": "NOT_SIGNED"
+}
