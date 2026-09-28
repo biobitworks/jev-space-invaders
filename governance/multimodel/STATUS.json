@@ -17,10 +17,10 @@
     ]
   },
   "failure": null,
-  "head_before_commit": "5aa85a843d370204a68a279578f7632e827fc1c7",
-  "latest_breakpoint": "UFA-JEV-COMP-BP-0006",
-  "latest_mmr_root": "ccaf186be4f7b1a2fbd5a951f73b6c51ec775f1f7efb0ac4d7c00aff1cbf44db",
-  "next_action": "create governed Tenki sandbox; consume Mitosis evidence; retrieve receipts; seal/push before sandbox pause/termination",
+  "head_before_commit": "bc2faa30a772f2cfb6bab1d8108259f66ba84d20",
+  "latest_breakpoint": "UFA-JEV-COMP-BP-0007",
+  "latest_mmr_root": "5d3da0259231307f9c1d1e309055c4e93c93e13060e927393b8332e0a807256b",
+  "next_action": "Tenki sandbox queries Mitosis directive, executes governed seed, exports receipt; do not terminate sandbox before receipt commit/push parity",
   "schema": "VITHIA_MULTIMODEL_STATUS_V1",
-  "stage": "TENKI_CODE_REVIEW_AND_SPONSOR_AUTH_VERIFIED"
+  "stage": "MITOSIS_DIRECTIVE_PERSISTED_AND_RETRIEVED"
 }

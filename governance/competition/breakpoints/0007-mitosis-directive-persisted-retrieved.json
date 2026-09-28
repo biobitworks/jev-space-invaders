@@ -1,0 +1,58 @@
+{
+  "atoms": [
+    {
+      "bytes": 1338,
+      "fmo_leaf": "1264b73272b9768921bdfb532c7d9095f75e2c3807fbb0ab7b43cf88d2681b8d",
+      "group": "mitosis_raw",
+      "kind": "MitosisRawReceiptFCO",
+      "location": "public",
+      "path": "evidence/competition/mitosis/MITOSIS_REMEMBER_RAW.json",
+      "sha256": "1c07be10e02504814a737341fd006d291b8e771806051adfcac5a162e6f23f27"
+    },
+    {
+      "bytes": 2623,
+      "fmo_leaf": "f4938593ee547622fa9b348d7e2d3304c25da77d7feff4f97b8ae2d0eeac76b5",
+      "group": "mitosis_raw",
+      "kind": "MitosisRawReceiptFCO",
+      "location": "public",
+      "path": "evidence/competition/mitosis/MITOSIS_ANSWER_RAW.json",
+      "sha256": "9b690bf85c7f8a6515a31f74be54bdc6b8a9eaa5efc1e021582bdf5fdbe281a3"
+    },
+    {
+      "bytes": 1946,
+      "fmo_leaf": "be0ed19b134c568a2765e46fefedcaa91f10df9b7617eb82008e427dbe969204",
+      "group": "mitosis",
+      "kind": "MitosisDirectiveReceiptFCO",
+      "location": "public",
+      "path": "evidence/competition/mitosis/MITOSIS_DIRECTIVE_RECEIPT.json",
+      "sha256": "c9912890cee103c5230450391b3226767d8c3049d80077abb80716e1d0bf35c3"
+    }
+  ],
+  "bp_root": "2de178d3be862c039fe68554281e3ec671fe87a406e9f9eb2b89cc895ec717f4",
+  "branch": "competition/qualified-lineage-v01",
+  "breakpoint_id": "UFA-JEV-COMP-BP-0007",
+  "breakpoint_root": "2de178d3be862c039fe68554281e3ec671fe87a406e9f9eb2b89cc895ec717f4",
+  "claim_ceiling": "IDENTITY_AND_INCLUSION_ONLY; hashes do not establish correctness",
+  "created_utc": "2026-09-28T20:30:26+00:00",
+  "enrichment_choice": "PENDING_USER_CHOICE",
+  "git_head_at_creation": "bc2faa30a772f2cfb6bab1d8108259f66ba84d20",
+  "group_roots": {
+    "mitosis": "be0ed19b134c568a2765e46fefedcaa91f10df9b7617eb82008e427dbe969204",
+    "mitosis_raw": "8a5e89adfc56576df83b93434370ac54e31cc558a490498a7a6e6654d31fcc80"
+  },
+  "historical_mutation_performed": false,
+  "lineage_id": "UFA-JEV-COMP",
+  "mitosis_memory": "EXECUTED_SUPPORTED",
+  "parent_occurrence": {
+    "breakpoint_id": "UFA-JEV-COMP-BP-0006",
+    "commit": "bc2faa30a772f2cfb6bab1d8108259f66ba84d20",
+    "mmr_root_after": "ccaf186be4f7b1a2fbd5a951f73b6c51ec775f1f7efb0ac4d7c00aff1cbf44db"
+  },
+  "parent_root": "ccaf186be4f7b1a2fbd5a951f73b6c51ec775f1f7efb0ac4d7c00aff1cbf44db",
+  "project": "VITHIA_SPACE",
+  "root_kind": "FMO_V1_BREAKPOINT_ATOMS",
+  "schema": "UFA_JEV_QUALIFIED_BREAKPOINT_V1",
+  "signature_state": "NOT_SIGNED",
+  "state": "MITOSIS_DIRECTIVE_PERSISTED_AND_RETRIEVED",
+  "tenki_consumption": "NOT_EXECUTED"
+}

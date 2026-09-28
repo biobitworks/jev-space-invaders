@@ -1,0 +1,50 @@
+{
+  "freshness": null,
+  "notes": null,
+  "query": "VITHIA_SPACE_TENKI_DEMO_V1 selected_seed source_commit teardown_rule",
+  "results": [
+    {
+      "universal_id": "agent:memories:daab87ad35ab106e7f04be25",
+      "score": 0.03278664925589639,
+      "label": "VITHIA_SPACE_TENKI_DEMO_V1 selected_seed=3 execution=QUALIFIED_VERIFY_AND_FIX...",
+      "title": "VITHIA_SPACE_TENKI_DEMO_V1 selected_seed=3 execution=QUALIFIED_VERIFY_AND_FIX...",
+      "source_table": "memories",
+      "integration_id": "agent",
+      "sensitivity": "local-only",
+      "fetched_at": "2026-09-28T20:28:57.555622Z",
+      "age_seconds": 26,
+      "preview": "kind\": \"decision\", \"text\": \"VITHIA_SPACE_TENKI_DEMO_V1 selected_seed=3 execution=QUALIFIED_VERIFY_AND_FIXED_SEED_SCRIPTED_DRY_RUN source_commit=bc2faa30a772f2cfb6bab1d8108259f66ba84d20 teardown_rule=DO_NOT_TERMINATE_UNTIL_GITHUB … ORIGIN_PARITY_PASS\", \"agent\": \"vithia-space\", \"metadata\": null, \"confidence\": 1, \"source_universal_ids\": null",
+      "signals": {
+        "vector_rank": 1,
+        "text_rank": 1,
+        "similarity": 0.8737645299715613
+      }
+    },
+    {
+      "universal_id": "agent:memories:98487eec3fd3ee0bb0964acd",
+      "score": 0.01605654452343117,
+      "label": "UFA JEV Space Invaders public experiment rule: JEV remains the core decision ...",
+      "title": "UFA JEV Space Invaders public experiment rule: JEV remains the core decision ...",
+      "source_table": "memories",
+      "integration_id": "agent",
+      "sensitivity": "local-only",
+      "fetched_at": "2026-09-28T15:48:40.53856Z",
+      "age_seconds": 16843,
+      "preview": "kind\": \"decision\", \"text\": \"UFA JEV Space Invaders public experiment rule: JEV remains the core decision layer; local Ollama is used only as the LLM baseline comparison path.\", \"agent\": \"vithia-space … metadata\": null, \"confidence\": 1, \"source_universal_ids\": null",
+      "signals": {
+        "vector_rank": 2,
+        "similarity": 0.5684468244174656
+      }
+    }
+  ],
+  "signals": {
+    "graph_added": 0,
+    "temporal_intent": "none",
+    "text_candidates": 1,
+    "time_candidates": 0,
+    "vector_candidates": 2
+  },
+  "took_ms": 326,
+  "graph_url": "https://mitosislabs.ai/graph?office=b236ff3a-8250-4ac5-bda2-4fc35c43d35f&cite=agent%3Amemories%3Adaab87ad35ab106e7f04be25%2Cagent%3Amemories%3A98487eec3fd3ee0bb0964acd&q=VITHIA_SPACE_TENKI_DEMO_V1+selected_seed+source_commit+teardown_rule",
+  "graph_url_hint": "IMPORTANT: end your reply to the user with graph_url — it opens the Mitosis graph with these cited sources highlighted. Present it as a clickable link."
+}

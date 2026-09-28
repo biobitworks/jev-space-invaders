@@ -105,6 +105,25 @@
       "parent_root": "30304a0a1f8eeea703bc570ec13c9c6f97891dbb2cf622927b258200389d5cd0",
       "root_kind": "FMO_V1_BREAKPOINT_ATOMS",
       "seq": 5
+    },
+    {
+      "bp_file": "governance/competition/breakpoints/0007-mitosis-directive-persisted-retrieved.json",
+      "bp_file_sha256": "902bb18dec97f9a92aba998fe1a4f263ccb4203adfb1fb96bb9db496fdd6b93b",
+      "bp_id": "UFA-JEV-COMP-BP-0007",
+      "bp_root": "2de178d3be862c039fe68554281e3ec671fe87a406e9f9eb2b89cc895ec717f4",
+      "branch": "competition/qualified-lineage-v01",
+      "lineage_id": "UFA-JEV-COMP",
+      "mmr_leaf": "9579dceef2431a28d50ae976a0327413a59b14c6454e76ebbaa183d48cb7bc85",
+      "mmr_peaks_after": [
+        "e07cb2b1ccdb295b922fc55984551b66300875ebda56f39df95c88a9f9cfeb83",
+        "b76967c3247b2ece4baaa937331e7d51669c3b38177fafe78f6409d96fb90761",
+        "9579dceef2431a28d50ae976a0327413a59b14c6454e76ebbaa183d48cb7bc85"
+      ],
+      "mmr_root_after": "5d3da0259231307f9c1d1e309055c4e93c93e13060e927393b8332e0a807256b",
+      "mmr_size": 7,
+      "parent_root": "ccaf186be4f7b1a2fbd5a951f73b6c51ec775f1f7efb0ac4d7c00aff1cbf44db",
+      "root_kind": "FMO_V1_BREAKPOINT_ATOMS",
+      "seq": 6
     }
   ],
   "lineage_id": "UFA-JEV-COMP",

@@ -1,0 +1,46 @@
+{
+  "claim_ceiling": "Mitosis memory write/read executed; Tenki consumption not yet executed at this breakpoint.",
+  "created_utc": "2026-09-28T20:30:26+00:00",
+  "directive": "VITHIA_SPACE_TENKI_DEMO_V1 selected_seed=3 execution=QUALIFIED_VERIFY_AND_FIXED_SEED_SCRIPTED_DRY_RUN source_commit=bc2faa30a772f2cfb6bab1d8108259f66ba84d20 teardown_rule=DO_NOT_TERMINATE_UNTIL_GITHUB_ORIGIN_PARITY_PASS",
+  "enrichment_choice": {
+    "chosen": null,
+    "note": "No enrichment choice was made; memory is already persisted, embedded and retrievable.",
+    "options": [
+      {
+        "id": "standard",
+        "label": "Standard"
+      },
+      {
+        "id": "describe_goal",
+        "label": "Describe your goal"
+      }
+    ],
+    "question": "What do you want Mitosis to pull out of this data? Describe your goal and I will set that up, or say 'standard' and Mitosis will extract the people, companies, projects, topics, dates, and how they connect.",
+    "state": "PENDING_USER_CHOICE"
+  },
+  "lineage_id": "UFA-JEV-COMP",
+  "load_bearing_plan": "Tenki must query this universal-id-backed directive and use selected_seed=3 for the fixed-seed execution; without Mitosis the demo runner defaults to seed=1.",
+  "next_consumer": "Tenki Sandbox",
+  "office": {
+    "id": "b236ff3a-8250-4ac5-bda2-4fc35c43d35f",
+    "name": "vithia-space-jev-20260928"
+  },
+  "remember": {
+    "agent": "vithia-space",
+    "confidence": 1,
+    "embedded": true,
+    "kind": "decision",
+    "retrievable_at": "2026-09-28T20:29:20Z",
+    "status": "ok",
+    "universal_id": "agent:memories:daab87ad35ab106e7f04be25"
+  },
+  "retrieval": {
+    "query": "VITHIA_SPACE_TENKI_DEMO_V1 selected_seed source_commit teardown_rule",
+    "similarity": 0.8737645299715613,
+    "took_ms": 326,
+    "top_score": 0.03278664925589639,
+    "top_universal_id": "agent:memories:daab87ad35ab106e7f04be25"
+  },
+  "schema": "MITOSIS_DIRECTIVE_RECEIPT_V1",
+  "signature_state": "NOT_SIGNED"
+}
