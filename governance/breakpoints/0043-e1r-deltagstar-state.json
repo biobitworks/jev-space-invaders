@@ -1,0 +1,31 @@
+{
+  "breakpoint_id": "UFA-JEV-BP-0043",
+  "parent": "UFA-JEV-BP-0042",
+  "state": "DELTAGSTAR_NOT_COMPUTED",
+  "project": "VITHIA_SPACE",
+  "created_utc": "2026-09-28T07:46:10+00:00",
+  "git_head_at_creation": "e134d23be22d0cbb3a733d30029caea562247c51",
+  "root_kind": "FMO_V1_BREAKPOINT_ATOMS",
+  "bp_root": "666f56f2ab2cf7ef40cb2a1ed01f42f80ac3f34c013fb75b8bb84147979eeb2e",
+  "group_roots": {
+    "delta_g": "9d48278e7603f56ed9fdb473d76fd99314f25686a642694bbdf4ab687e145103"
+  },
+  "atoms": [
+    {
+      "path": "evidence/e1r/DELTAGSTAR_NOT_COMPUTED_RECEIPT.json",
+      "kind": "ExecutionReceiptFCO",
+      "group": "delta_g",
+      "bytes": 293,
+      "sha256": "6dbbd48307e4bcc4547676a18f28bbe5f704414dd4694d209c2ce6c5e3c1b6df",
+      "location": "public",
+      "fmo_leaf": "9d48278e7603f56ed9fdb473d76fd99314f25686a642694bbdf4ab687e145103"
+    }
+  ],
+  "stage": "E1R_DELTAGSTAR",
+  "delta_g_star": "NOT_COMPUTED",
+  "scientific_parent_commit": "4c1bbb19b89a7ee1e1dee662cfd0f227186ebafd",
+  "scientific_parent_breakpoint": "UFA-JEV-BP-0028",
+  "scientific_parent_mmr_root": "5f742663f7e0c12e100e292cc794eefb0360a068a5c20c2b1be019ace1cb298b",
+  "claim_ceiling": "IDENTITY_AND_INCLUSION_ONLY; hashes do not establish correctness",
+  "signature_state": "NOT_SIGNED"
+}

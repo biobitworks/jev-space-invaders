@@ -1,0 +1,7 @@
+{
+  "public_candidate_present": "src/daisy/deltag_candidate.py",
+  "reason": "No governed private DeltaGStar implementation is present; PUBLIC_CANDIDATE_DELTAGSTAR_V1 is not substituted.",
+  "schema": "E1R_DELTAGSTAR_RECEIPT_V1",
+  "state": "NOT_COMPUTED",
+  "substitution_performed": false
+}

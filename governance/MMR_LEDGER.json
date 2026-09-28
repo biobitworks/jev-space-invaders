@@ -655,6 +655,23 @@
         "2c19c9c86cde650380546093e0e06537bfb81037e47bfd05c7d1b596710c22b8",
         "134a834834709c5aa7a59a619a637d8ae0cc6518effaf56130a396174e60f597"
       ]
+    },
+    {
+      "seq": 42,
+      "bp_id": "UFA-JEV-BP-0043",
+      "bp_file": "governance/breakpoints/0043-e1r-deltagstar-state.json",
+      "bp_file_sha256": "22bdfefc579eb9bcd5793848167a079a54ff5073ce8ea0a4dcef6f24af1fb583",
+      "bp_root": "666f56f2ab2cf7ef40cb2a1ed01f42f80ac3f34c013fb75b8bb84147979eeb2e",
+      "root_kind": "FMO_V1_BREAKPOINT_ATOMS",
+      "mmr_leaf": "867cbb576931f9dc9a9af479604d14c27334d5401e2b451cd714869a863c4874",
+      "mmr_size": 43,
+      "mmr_root_after": "d04c1dfea311ffbfd51b628fe63e266ce4ce55e008ee0af3c500cca2044e111a",
+      "mmr_peaks_after": [
+        "026514586974a2fb18c9fefe6f92208e2008b44751f5380417c4129b185b831f",
+        "2c19c9c86cde650380546093e0e06537bfb81037e47bfd05c7d1b596710c22b8",
+        "134a834834709c5aa7a59a619a637d8ae0cc6518effaf56130a396174e60f597",
+        "867cbb576931f9dc9a9af479604d14c27334d5401e2b451cd714869a863c4874"
+      ]
     }
   ]
 }
