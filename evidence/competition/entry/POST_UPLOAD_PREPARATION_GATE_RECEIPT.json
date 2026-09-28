@@ -1,0 +1,31 @@
+{
+  "actual_demo_video_url": null,
+  "blocked": "HUMAN_ACTION_DEMO_URL_AND_VERIFIED_RESUBMISSION_PATH",
+  "candidate_breakpoint": "UFA-JEV-COMP-BP-0005",
+  "canonical_entry_local_present": false,
+  "claim_ceiling": "Preparation gate only.",
+  "created_utc": "2026-09-28T16:19:38+00:00",
+  "diff_check": "PASS",
+  "legacy_breakpoint_verify": {
+    "expected_known_mutable_path_defect": true,
+    "failure": [
+      "ATOM_CHANGED:results.json"
+    ],
+    "mmr_root": "51744c6a5212e6d11a93fa7fdfec57d1902a2628d57a48d2a54fd0ea7d820266",
+    "mmr_size": 52,
+    "not_upgraded_to_pass": true,
+    "state": "FAIL"
+  },
+  "lineage_id": "UFA-JEV-COMP",
+  "network_request_performed_by_builder": false,
+  "python_compile": "PASS",
+  "qualified_breakpoint_verify": "PASS",
+  "qualified_verify_before_seal": "PASS",
+  "results_validation": "PASS",
+  "results_validation_before_seal": "PASS",
+  "schema": "POST_UPLOAD_PREPARATION_GATE_RECEIPT_V1",
+  "secret_scan": "PASS",
+  "submission_state": "NOT_EXECUTED",
+  "synthetic_prepare_test": "PASS",
+  "unrelated_field_preservation_test": "PASS"
+}

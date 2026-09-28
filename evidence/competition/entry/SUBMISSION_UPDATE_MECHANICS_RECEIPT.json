@@ -1,0 +1,63 @@
+{
+  "claim_ceiling": "READ_ONLY API mechanics and local preparation only; no final resubmission executed.",
+  "collection_observations": {
+    "get": {
+      "http_status": 405
+    },
+    "options": {
+      "access_control_allow_methods": [
+        "POST",
+        "OPTIONS"
+      ],
+      "http_status": 204
+    }
+  },
+  "collection_route": "https://mitosislabs.ai/api/ufa/jev/entries",
+  "created_utc": "2026-09-28T16:19:38+00:00",
+  "entry_route_probe": {
+    "entry_id": "b968c199-5d7e-4228-b8fe-b0003b7ab94f",
+    "get_detail": "The guessed /entries/{entry_id} route is not an API endpoint.",
+    "get_http_status": 404,
+    "options_http_status": 204,
+    "verified_update_method": "NOT_VERIFIED"
+  },
+  "frozen_plan_expectation": {
+    "action": "final resubmission after demo URL",
+    "source": [
+      "docs/VITHIA_SPACE_PLAN_V1.md",
+      "docs/VITHIA_SPACE_PLAN_V2.md"
+    ],
+    "success_gate": "server ok == true and missing_for_judging == []"
+  },
+  "interpretation": "The collection POST surface is verified. Whether a later POST updates the existing entry versus creates another submission is UNKNOWN until organizer/UI/API semantics are verified.",
+  "lineage_id": "UFA-JEV-COMP",
+  "network_probe_class": "READ_ONLY_OPTIONS_AND_GET_ONLY",
+  "payload_schema_source": {
+    "build_demo_video_path": "build.demo_video_url",
+    "snapshot": "evidence/competition/entry/PROJECT_SETTINGS.bp0005.snapshot.json",
+    "sponsor_paths": [
+      "sponsors.mitosis",
+      "sponsors.tenki",
+      "sponsors.how"
+    ]
+  },
+  "prepared_builder": {
+    "bytes": 2778,
+    "network_behavior": "NONE",
+    "path": "scripts/prepare_entry_resubmission_v1.py",
+    "sha256": "93ce389933d6c1f1f76bc6f14d629be2c7091c6eeee0f7aa56834165778ad31c",
+    "state": "IMPLEMENTED_AND_SYNTHETICALLY_TESTED"
+  },
+  "project": "VITHIA_SPACE",
+  "repository_submission_client": {
+    "bytes": 793,
+    "entry_local_present_at_check": false,
+    "method": "POST",
+    "path": "scripts/submit_entry.py",
+    "sha256": "d650e4ab58b232950196c700ef77cb3143c76459a34f54478dad03391281de27",
+    "source_payload": "entry.local.json"
+  },
+  "schema": "UFA_ENTRY_RESUBMISSION_MECHANICS_RECEIPT_V1",
+  "signature_state": "NOT_SIGNED",
+  "submission_mutation_performed": false
+}

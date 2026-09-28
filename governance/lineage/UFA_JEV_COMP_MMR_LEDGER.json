@@ -69,6 +69,24 @@
       "parent_root": "c65ea10f06a8fe67536f764333546c7438a78235c45d8a49c5bfb60576fe5997",
       "root_kind": "FMO_V1_BREAKPOINT_ATOMS",
       "seq": 3
+    },
+    {
+      "bp_file": "governance/competition/breakpoints/0005-post-upload-resubmission-procedure-prepared.json",
+      "bp_file_sha256": "6b72d1306128b345860ff8a7bacb14073b5f99205dc9601003ef3d0abf02317e",
+      "bp_id": "UFA-JEV-COMP-BP-0005",
+      "bp_root": "367a72454e5afccb44cd91aafc8143f81d104120c5a0c92f90ebde5bdad28d79",
+      "branch": "competition/qualified-lineage-v01",
+      "lineage_id": "UFA-JEV-COMP",
+      "mmr_leaf": "9bc9ebad3d1ef692bfee78e495b761e99b2278be6604ea5fde80fab3aeb6b6f2",
+      "mmr_peaks_after": [
+        "e07cb2b1ccdb295b922fc55984551b66300875ebda56f39df95c88a9f9cfeb83",
+        "9bc9ebad3d1ef692bfee78e495b761e99b2278be6604ea5fde80fab3aeb6b6f2"
+      ],
+      "mmr_root_after": "30304a0a1f8eeea703bc570ec13c9c6f97891dbb2cf622927b258200389d5cd0",
+      "mmr_size": 5,
+      "parent_root": "e07cb2b1ccdb295b922fc55984551b66300875ebda56f39df95c88a9f9cfeb83",
+      "root_kind": "FMO_V1_BREAKPOINT_ATOMS",
+      "seq": 4
     }
   ],
   "lineage_id": "UFA-JEV-COMP",
