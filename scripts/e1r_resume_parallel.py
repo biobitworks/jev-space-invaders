@@ -5,6 +5,9 @@ from collections import defaultdict
 from concurrent.futures import ProcessPoolExecutor
 from pathlib import Path
 import numpy as np
+
+ROOT=Path("/Users/byron/projects/active/jev-space-invaders-e1r")
+sys.path.insert(0,str(ROOT))
 import scripts.e1r_daisy_execute as e
 from src.fmo import fmo_root, leaf, mmr_leaf, mmr_root, sha256_file
 
