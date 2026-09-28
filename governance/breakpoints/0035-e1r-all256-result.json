@@ -1,0 +1,83 @@
+{
+  "breakpoint_id": "UFA-JEV-BP-0035",
+  "parent": "UFA-JEV-BP-0034",
+  "state": "ALL_256_SINGLE_RULE_SCREEN_COMPLETE",
+  "project": "VITHIA_SPACE",
+  "created_utc": "2026-09-28T07:45:07+00:00",
+  "git_head_at_creation": "4ce6df9114b26dd240d60f944d9af9e0b919db85",
+  "root_kind": "FMO_V1_BREAKPOINT_ATOMS",
+  "bp_root": "5f9e8c7dbfcfbbc842005f78619d6b092bdd8c870b7586505d79675f7fe67bd7",
+  "group_roots": {
+    "dataset": "d6d1002faca5a790b633a49e6c590893db8df9a81b47a8a77922cb0b6e6baeb2",
+    "result": "c03a3cccebaeee2b393b26e81278401e67eaecb8c41ce0dd89c94d1a5cb8c535"
+  },
+  "atoms": [
+    {
+      "path": "data/e1r/E1R_ALL256_SCREEN_PILOT_V1/MANIFEST.json",
+      "kind": "DatasetManifestFCO",
+      "group": "dataset",
+      "bytes": 2407,
+      "sha256": "2314754b630588e761209a8159f21e5c4a589480b7c1d985fb4c59e7d04fef36",
+      "location": "public",
+      "fmo_leaf": "d6d1002faca5a790b633a49e6c590893db8df9a81b47a8a77922cb0b6e6baeb2"
+    },
+    {
+      "path": "data/e1r/E1R_ALL256_SCREEN_PILOT_V1/SCREEN_SUMMARY.json",
+      "kind": "ResultSummaryFCO",
+      "group": "result",
+      "bytes": 502,
+      "sha256": "9694bba4f0145380048c63aa212500659f8a591db5c6bb33c4176c808dca8b5f",
+      "location": "public",
+      "fmo_leaf": "5a45cb4973ad4a76deb7c8777700c7ce68c1c1f389710e87c882a0b7199e0019"
+    },
+    {
+      "path": "data/e1r/E1R_ALL256_SCREEN_PILOT_V1/PARETO_RULE_SETS.json",
+      "kind": "DerivedEvidenceFCO",
+      "group": "result",
+      "bytes": 8337,
+      "sha256": "10d0aa7618cf8dc367fc6ef3d05634c2ca156ea5c9ddd77b1512dcd87623356f",
+      "location": "public",
+      "fmo_leaf": "4d625f552fe48885fa9fd784339a3571326b65b9e029435a6fe302fc86f3500c"
+    },
+    {
+      "path": "data/e1r/E1R_ALL256_SCREEN_PILOT_V1/rule_context_performance.jsonl",
+      "kind": "DerivedEvidenceFCO",
+      "group": "result",
+      "bytes": 4062979,
+      "sha256": "afaf8d8773bc01f2e783e83058c42ca862f83c4894b887976aeb2fca7b5a077b",
+      "location": "public",
+      "fmo_leaf": "13127b23a520f6c466eee1b7be5806340ac961ee7176e63e9314ece093da9b53"
+    },
+    {
+      "path": "RULE_CONTEXT_REGISTRY.json",
+      "kind": "RegistryFCO",
+      "group": "result",
+      "bytes": 8470,
+      "sha256": "4d3f5e387338e23cd12a9f281d6160459e8179095ea212000aad69e62021b1fc",
+      "location": "public",
+      "fmo_leaf": "4df22983c3197925a1da362fe3b8042ef974a5bac44d52f670306144fdeb9cdd"
+    },
+    {
+      "path": "RESTORATION_RESULT_REGISTRY.json",
+      "kind": "RegistryFCO",
+      "group": "result",
+      "bytes": 818,
+      "sha256": "85bd4cb419710cd20ea668b7d3c5e56cac7a48473bbc84b5d4e4b774598fda22",
+      "location": "public",
+      "fmo_leaf": "2620600e359eb86ff4584fdb7c43c91c7810ebb87cd7c17534bd76b9ef98b4af"
+    }
+  ],
+  "stage": "E1R_ALL256_RESULT",
+  "dataset_id": "E1R_ALL256_SCREEN_PILOT_V1",
+  "dataset_root": "d4516651479ee0da16d7a1c5f1719126b1b2ffc8072cd1ba96eaa9480415a44b",
+  "total_case_rows": 184320,
+  "classification": "SCREENING_EXPLORATORY",
+  "model_calls": 0,
+  "delta_g_star": "NOT_COMPUTED",
+  "execution_amendment": "UFA-JEV-BP-0034",
+  "scientific_parent_commit": "4c1bbb19b89a7ee1e1dee662cfd0f227186ebafd",
+  "scientific_parent_breakpoint": "UFA-JEV-BP-0028",
+  "scientific_parent_mmr_root": "5f742663f7e0c12e100e292cc794eefb0360a068a5c20c2b1be019ace1cb298b",
+  "claim_ceiling": "IDENTITY_AND_INCLUSION_ONLY; hashes do not establish correctness",
+  "signature_state": "NOT_SIGNED"
+}

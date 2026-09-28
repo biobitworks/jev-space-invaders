@@ -1,0 +1,76 @@
+{
+  "claim_ceiling": "screening all-256 restoration/context evidence; no universal-best-rule claim",
+  "code_commit_at_generation": "4ce6df9114b26dd240d60f944d9af9e0b919db85",
+  "config": {
+    "T": 48,
+    "W": 64,
+    "all_rules": true,
+    "conditions": [
+      "N0_NEUTRAL",
+      "P1_HORIZONTAL_STATE_POISON",
+      "P2_VERTICAL_HISTORY_POISON",
+      "S1_SHAM",
+      "A1_CONTEXTUAL_ANTIDOTE"
+    ],
+    "pilot_replicates": 20,
+    "schema": "E1R_SCREEN_CONFIG_V1",
+    "screening": "descriptive/Pareto; no per-rule discovery p-values",
+    "selection": "Pareto then fixed lexicographic shortlist; fresh replicate confirmation",
+    "severities": [
+      0.05,
+      0.1,
+      0.2
+    ],
+    "strata": [
+      "single",
+      "sparse",
+      "balanced",
+      "dense"
+    ],
+    "t_antidote": 24,
+    "t_poison": 16,
+    "vertical_operators": [
+      "missing",
+      "bit_flip"
+    ]
+  },
+  "dataset_id": "E1R_ALL256_SCREEN_PILOT_V1",
+  "files": [
+    {
+      "bytes": 8337,
+      "path": "data/e1r/E1R_ALL256_SCREEN_PILOT_V1/PARETO_RULE_SETS.json",
+      "sha256": "10d0aa7618cf8dc367fc6ef3d05634c2ca156ea5c9ddd77b1512dcd87623356f"
+    },
+    {
+      "bytes": 502,
+      "path": "data/e1r/E1R_ALL256_SCREEN_PILOT_V1/SCREEN_SUMMARY.json",
+      "sha256": "9694bba4f0145380048c63aa212500659f8a591db5c6bb33c4176c808dca8b5f"
+    },
+    {
+      "bytes": 2516553,
+      "path": "data/e1r/E1R_ALL256_SCREEN_PILOT_V1/anticube_temporal_aggregate.jsonl.gz",
+      "sha256": "2e8b1b838d20b66f49d2e40f868fa762bc8cdb8bf227efcf479945cb8d6f8128"
+    },
+    {
+      "bytes": 1618796,
+      "path": "data/e1r/E1R_ALL256_SCREEN_PILOT_V1/horizontal_rows.jsonl.gz",
+      "sha256": "a7e9a2c2821a10e5b80a7d51cfdf5c21549c9ffa4f34443650c119fae9cfa94f"
+    },
+    {
+      "bytes": 4062979,
+      "path": "data/e1r/E1R_ALL256_SCREEN_PILOT_V1/rule_context_performance.jsonl",
+      "sha256": "afaf8d8773bc01f2e783e83058c42ca862f83c4894b887976aeb2fca7b5a077b"
+    },
+    {
+      "bytes": 1814328,
+      "path": "data/e1r/E1R_ALL256_SCREEN_PILOT_V1/vertical_rows.jsonl.gz",
+      "sha256": "c56919ab53df8680aa9d54d29200dfe9e6901e01f5fde18eae320aa2ce55428a"
+    }
+  ],
+  "fmo_root": "d4516651479ee0da16d7a1c5f1719126b1b2ffc8072cd1ba96eaa9480415a44b",
+  "kind": "scientific_successor",
+  "license": "NOT_ESTABLISHED_FOR_E1R_SUCCESSOR",
+  "schema": "E1R_DATASET_MANIFEST_V1",
+  "source": "VITHIA_E1R",
+  "visibility": "public"
+}

@@ -1,0 +1,30 @@
+{
+  "dataset_id": "E1R_ALL256_SCREEN_PILOT_V1",
+  "dataset_root": "d4516651479ee0da16d7a1c5f1719126b1b2ffc8072cd1ba96eaa9480415a44b",
+  "definitions": "schemas/e1r/E1R_RESTORATION_DEFINITIONS_V1.json",
+  "schema": "RESTORATION_RESULT_REGISTRY_V1",
+  "screen_summary": {
+    "classification": "SCREENING_EXPLORATORY",
+    "delta_g_star": "NOT_COMPUTED",
+    "elapsed_seconds": 394.67,
+    "global_shortlist": [
+      113,
+      142,
+      33,
+      244,
+      81,
+      51,
+      204,
+      29
+    ],
+    "horizontal_case_rows": 61440,
+    "model_calls": 0,
+    "neutral_base_contexts": 20480,
+    "parallel_workers": 8,
+    "rules": 256,
+    "schema": "E1R_ALL256_SCREEN_SUMMARY_V1",
+    "total_case_rows": 184320,
+    "vertical_case_rows": 122880,
+    "world_state_vs_observation_history": "separate endpoints"
+  }
+}
