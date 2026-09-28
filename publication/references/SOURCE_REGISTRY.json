@@ -1,0 +1,46 @@
+{
+  "schema": "VITHIA_PUBLICATION_SOURCE_REGISTRY_V1",
+  "sources": [
+    {
+      "id": "bellemare2013ale",
+      "type": "peer_reviewed",
+      "doi": "10.1613/JAIR.3912",
+      "use": "ALE environment background"
+    },
+    {
+      "id": "terry2021pettingzoo",
+      "type": "peer_reviewed",
+      "use": "PettingZoo multi-agent environment background"
+    },
+    {
+      "id": "antunes2021cellpylib",
+      "type": "peer_reviewed_software",
+      "doi": "10.21105/joss.03608",
+      "use": "independent ECA comparison"
+    },
+    {
+      "id": "ignatiev2018pysat",
+      "type": "peer_reviewed_software",
+      "doi": "10.1007/978-3-319-94144-8_26",
+      "use": "SAT oracle implementation background"
+    },
+    {
+      "id": "virtanen2020scipy",
+      "type": "peer_reviewed_software",
+      "doi": "10.1038/s41592-019-0686-2",
+      "use": "statistical implementation"
+    },
+    {
+      "id": "harris2020numpy",
+      "type": "peer_reviewed_software",
+      "doi": "10.1038/s41586-020-2649-2",
+      "use": "array/numerical implementation"
+    },
+    {
+      "id": "laurie2021rfc9162",
+      "type": "technical_standard",
+      "doi": "10.17487/RFC9162",
+      "use": "Merkle transparency context; project MMR remains separately specified"
+    }
+  ]
+}

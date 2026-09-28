@@ -1,0 +1,83 @@
+{
+  "breakpoint_id": "VITA-PUB-BP-0004",
+  "parent": "VITA-PUB-BP-0003",
+  "state": "METHODS_FROZEN",
+  "project": "VITHIA_0_VITA_1_PUBLICATION",
+  "created_utc": "2026-09-28T05:33:18+00:00",
+  "root_kind": "FMO_V1_PUBLICATION_BREAKPOINT_ATOMS",
+  "bp_root": "32d7d617c34864ac89fc8b89b762fe12062ba7d97aece522bcafee1579c2b93a",
+  "group_roots": {
+    "methods": "b928f699a1f79dbb813054ac6131c943ca7dba177bb33f01b6d2a970fbb7331b",
+    "references": "722c289b55be207a00a899eeaf44f2605f46d02920b946d722227c72b653af8d",
+    "source": "a3fc3ce3edac1224d879375beb5b3f07f9ecedfb7f16f2e7578ec0218739338b"
+  },
+  "atoms": [
+    {
+      "path": "publication/manuscript/METHODS.md",
+      "kind": "ManuscriptSectionFCO",
+      "group": "methods",
+      "bytes": 9137,
+      "sha256": "5b3bab65041d08306584f76e32cc315f15e6d7b144bb8eba1b0cb22f9efe2476",
+      "location": "public",
+      "fmo_leaf": "b928f699a1f79dbb813054ac6131c943ca7dba177bb33f01b6d2a970fbb7331b"
+    },
+    {
+      "path": "publication/references/references.bib",
+      "kind": "BibliographyFCO",
+      "group": "references",
+      "bytes": 2233,
+      "sha256": "4f5b2fae0658ca611d77f8399f7530f760c55a97c63c386326b4847dd16f378b",
+      "location": "public",
+      "fmo_leaf": "6ac35bbe84d8058c3ef6b9f3013b6035e347371888b995db4a6015490ecf69ce"
+    },
+    {
+      "path": "publication/references/SOURCE_REGISTRY.json",
+      "kind": "SourceRegistryFCO",
+      "group": "references",
+      "bytes": 1259,
+      "sha256": "9835a08b3ea19202b8a345b7ca821244ac089edcf4c539cdade07d53a91dca51",
+      "location": "public",
+      "fmo_leaf": "c98272fb079658c5d227c5ac20f2351abcd41fc95c095e77c2d2c759103943ff"
+    },
+    {
+      "path": "publication/CLAIM_MATRIX.json",
+      "kind": "PublicationClaimMatrixFCO",
+      "group": "source",
+      "bytes": 11928,
+      "sha256": "0c5c865c1e2a80cae83f6447994ceab6b4d677f13d64e0587691b373e65a95eb",
+      "location": "public",
+      "fmo_leaf": "318d7e8ad0fbd596e90f467c2be88b5773610f08bd8aa5d8d2cf62c0ab3620ef"
+    },
+    {
+      "path": "docs/BREAKPOINT_PROTOCOL.md",
+      "kind": "MethodSourceFCO",
+      "group": "source",
+      "bytes": 2091,
+      "sha256": "853b33c55af576b5c6a984f4589dbeb806b1908d37441f3f0aa41b7b7183b838",
+      "location": "public",
+      "fmo_leaf": "26315efb0c96e4588b2a767b87ffcb6f9aa450eca34830c6f122d1c5302f9dea"
+    },
+    {
+      "path": "vita01/VITA01_CONTINUOUS_EQUIVALENCE_CONTRACT_V1.json",
+      "kind": "MethodSourceFCO",
+      "group": "source",
+      "bytes": 1574,
+      "sha256": "640b96339bc90d7ec39cc5bc0d062fa1327fec2f9ea6a8f85ac15b0542beead0",
+      "location": "public",
+      "fmo_leaf": "54b0261de1e7dd0e19abb0f37421b493a7ed2bcf537aa0b18eb43fc0d5c4c113"
+    },
+    {
+      "path": "vita01/VITA01_TYPE_CONTRACT_V1.json",
+      "kind": "MethodSourceFCO",
+      "group": "source",
+      "bytes": 4311,
+      "sha256": "a2653e3afeec3d2f1cb0a7bdebe080c61118ac44a03cfe64809a8a08e32aca79",
+      "location": "public",
+      "fmo_leaf": "22f99115654acb85a04c69b77960961c2a37c770df272463040feefa333614e0"
+    }
+  ],
+  "stage": "METHODS_FREEZE",
+  "private_deltagstar_disclosed": false,
+  "claim_ceiling": "IDENTITY_AND_INCLUSION_ONLY; publication roots do not establish scientific truth",
+  "signature_state": "NOT_SIGNED"
+}

@@ -44,6 +44,20 @@
         "b772fc84a760b2b586a0382417ffb3d0be4e0e02f9c8315f1c2668a4bbb238a4",
         "832e8e53fb5dfc1e07a30e4ff624000fc8602a58e05b8ccd8a17692d06b23a80"
       ]
+    },
+    {
+      "seq": 3,
+      "bp_id": "VITA-PUB-BP-0004",
+      "bp_file": "governance/publication/breakpoints/0004-methods-freeze.json",
+      "bp_file_sha256": "a7c8371bb1bf3056e53ecc822aff78c09df105daa83b526267331c7eba755b47",
+      "bp_root": "32d7d617c34864ac89fc8b89b762fe12062ba7d97aece522bcafee1579c2b93a",
+      "root_kind": "FMO_V1_PUBLICATION_BREAKPOINT_ATOMS",
+      "mmr_leaf": "ab56a4f9814e56a8d61cf5b6081aa21ad5a41dcadc547b419519f13102c42dc9",
+      "mmr_size": 4,
+      "mmr_root_after": "9a2259c82477edc3c3643691d87dbd0f4461983e9f3d6878584835644e5bda72",
+      "mmr_peaks_after": [
+        "9a2259c82477edc3c3643691d87dbd0f4461983e9f3d6878584835644e5bda72"
+      ]
     }
   ]
 }
