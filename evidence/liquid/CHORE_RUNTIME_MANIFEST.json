@@ -1,0 +1,22 @@
+{
+  "schema": "LIQUID_CHORE_RUNTIME_MANIFEST_V1",
+  "LIQUID_LOADED": "YES",
+  "purpose": "tools/liquid_chore.py tedious-work chores; advisory text only, never chooses JEV/OpenJev moves, not used in results.json runs",
+  "provider": "liquid",
+  "served_model": "hf.co/LiquidAI/LFM2.5-1.2B-Instruct-GGUF:Q4_K_M",
+  "endpoint": "http://127.0.0.1:11434",
+  "engine": "Ollama",
+  "ollama_version": "ollama version is 0.32.15",
+  "host": "magicPRObox",
+  "platform": "macOS-26.6.2-arm64-arm-64bit-Mach-O",
+  "chip": "Apple M1 Pro",
+  "ram_bytes": 17179869184,
+  "setup_smoke": "PASS",
+  "setup_smoke_latency_ms": 233.2,
+  "labels": [
+    "ADVISORY_ONLY",
+    "NOT_USED_FOR_MOVE_SELECTION",
+    "NON_TYPESAFE_JEV",
+    "NON_OPENJEV"
+  ]
+}

@@ -755,6 +755,22 @@
         "026514586974a2fb18c9fefe6f92208e2008b44751f5380417c4129b185b831f",
         "75be8b4a1b7202ab2045b31e332e04471e0fa5d990c8d9c5097b1ed82456cb9d"
       ]
+    },
+    {
+      "seq": 48,
+      "bp_id": "UFA-JEV-BP-0049",
+      "bp_file": "governance/breakpoints/0049-m2-liquid-chore-tool.json",
+      "bp_file_sha256": "df81707a571d9d157e1c61f5cde67461c8b6b875e39288e26a2309f2218b79c3",
+      "bp_root": "184ea742c2bc1c425daaccea13fe88e3eeb03eb557e67b7677f92153f4e887a8",
+      "root_kind": "FMO_V1_BREAKPOINT_ATOMS",
+      "mmr_leaf": "3085220196e80b9261c55295b0357cf5c27b5f2ca571f6411dbe0656adcd9bf8",
+      "mmr_size": 49,
+      "mmr_root_after": "f6c12e862ba2bbf831825a5868b08fa8e68842794c7cb228aeb8add9ae4b9435",
+      "mmr_peaks_after": [
+        "026514586974a2fb18c9fefe6f92208e2008b44751f5380417c4129b185b831f",
+        "75be8b4a1b7202ab2045b31e332e04471e0fa5d990c8d9c5097b1ed82456cb9d",
+        "3085220196e80b9261c55295b0357cf5c27b5f2ca571f6411dbe0656adcd9bf8"
+      ]
     }
   ]
 }

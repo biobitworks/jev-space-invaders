@@ -1,0 +1,50 @@
+{
+  "breakpoint_id": "UFA-JEV-BP-0049",
+  "parent": "UFA-JEV-BP-0048",
+  "state": "LIQUID_CHORE_TOOL_BUILT",
+  "project": "VITHIA_SPACE",
+  "created_utc": "2026-09-28T14:33:11+00:00",
+  "git_head_at_creation": "f457c23e1c57b1fb8bcc8241ea3283f72a7ab36c",
+  "root_kind": "FMO_V1_BREAKPOINT_ATOMS",
+  "bp_root": "184ea742c2bc1c425daaccea13fe88e3eeb03eb557e67b7677f92153f4e887a8",
+  "group_roots": {
+    "m2_liquid_chore": "34012bc22e06c249065aa36957543456703f0ba0a46c29c96d7d25023ed72f7e"
+  },
+  "atoms": [
+    {
+      "path": "tools/liquid_chore.py",
+      "kind": "CHOREFCO",
+      "group": "m2_liquid_chore",
+      "bytes": 7892,
+      "sha256": "edbeadac5dcca4ae9620525e01122886b5af6d73db27aceceeee424cf00a935f",
+      "location": "public",
+      "fmo_leaf": "d8c32cbfe7a25dc2b646f7aa1756e0058f0dcbeab571df91822f61fb2f5eb512"
+    },
+    {
+      "path": "evidence/liquid/CHORE_RUNTIME_MANIFEST.json",
+      "kind": "CHOREFCO",
+      "group": "m2_liquid_chore",
+      "bytes": 732,
+      "sha256": "26dd7b9b60ac725357d78cc581b1ae74da15db9d9055c0f472233b96170dd83a",
+      "location": "public",
+      "fmo_leaf": "39ee2be4e106676eb64623feb2f76701a59c8698466b4fbd05e083dfa9aad0bc"
+    },
+    {
+      "path": "evidence/liquid_chores.jsonl",
+      "kind": "CHOREFCO",
+      "group": "m2_liquid_chore",
+      "bytes": 1056,
+      "sha256": "678083f9eca35729c575a95b39b5766631566eaa5e6df3a199eff4fdeffb4db3",
+      "location": "public",
+      "fmo_leaf": "9237c9f30d737d110d7d1577af4646e33e0e17f643a9d19849d00d60167b4f72"
+    }
+  ],
+  "stage": "M2_LIQUID_CHORES",
+  "purpose": "tools/liquid_chore.py tedious-chore helper (summarize-log, commit-msg, classify-failure); advisory only, never chooses JEV/OpenJev moves",
+  "provider": "liquid",
+  "served_model": "hf.co/LiquidAI/LFM2.5-1.2B-Instruct-GGUF:Q4_K_M",
+  "host": "magicPRObox",
+  "LIQUID_LOADED": "YES",
+  "claim_ceiling": "IDENTITY_AND_INCLUSION_ONLY; hashes do not establish correctness",
+  "signature_state": "NOT_SIGNED"
+}
