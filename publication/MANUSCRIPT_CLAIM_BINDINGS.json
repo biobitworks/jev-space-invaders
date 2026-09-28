@@ -1,0 +1,105 @@
+{
+  "schema": "VITHIA_MANUSCRIPT_CLAIM_BINDINGS_V1",
+  "bindings": [
+    {
+      "line": 11,
+      "claim_id": "ARCH::S0_ROLE",
+      "state": "IMPLEMENTED",
+      "evidence_refs": [
+        "vita01/VITA01_TERMINOLOGY_V2.json",
+        "vita01/S01_PROTOCOL_SPEC_DRAFT.md"
+      ]
+    },
+    {
+      "line": 13,
+      "claim_id": "GOV::MMR24",
+      "state": "OBSERVED",
+      "evidence_refs": [
+        "governance/MMR_LEDGER.json",
+        "governance/breakpoints/0024-cross-host-replication-result.json"
+      ]
+    },
+    {
+      "line": 25,
+      "claim_id": "E0_ADDRESSABILITY::H0a",
+      "state": "SUPPORTED",
+      "evidence_refs": [
+        "evidence/s01/E0_ADDRESSABILITY/EXPERIMENT_RECEIPT.json"
+      ]
+    },
+    {
+      "line": 27,
+      "claim_id": "E1_ECA::H1d",
+      "state": "NOT_SUPPORTED",
+      "evidence_refs": [
+        "evidence/s01/E1_ECA/EXPERIMENT_RECEIPT.json"
+      ]
+    },
+    {
+      "line": 30,
+      "claim_id": "E2_LIFE::H2d",
+      "state": "SUPPORTED",
+      "evidence_refs": [
+        "evidence/s01/E2_LIFE/EXPERIMENT_RECEIPT.json"
+      ]
+    },
+    {
+      "line": 33,
+      "claim_id": "E3_MINESWEEPER::H3a",
+      "state": "SUPPORTED",
+      "evidence_refs": [
+        "evidence/s01/E3_MINESWEEPER/EXPERIMENT_RECEIPT.json"
+      ]
+    },
+    {
+      "line": 35,
+      "claim_id": "E3_MINESWEEPER::H3b",
+      "state": "SUPPORTED",
+      "evidence_refs": [
+        "evidence/s01/E3_MINESWEEPER/EXPERIMENT_RECEIPT.json"
+      ]
+    },
+    {
+      "line": 38,
+      "claim_id": "LIMIT::E4A",
+      "state": "INPUT_FROZEN_NO_DECIDER_CALLS",
+      "evidence_refs": [
+        "governance/breakpoints/0020-e4a-prereg.json"
+      ]
+    },
+    {
+      "line": 41,
+      "claim_id": "STAT::SECONDARY",
+      "state": "OBSERVED",
+      "evidence_refs": [
+        "evidence/statistical_successor/STATISTICAL_ANALYSIS.json",
+        "governance/breakpoints/0022-d0-d9-statistical-analysis-result.json"
+      ]
+    },
+    {
+      "line": 43,
+      "claim_id": "GOV::MMR24",
+      "state": "OBSERVED",
+      "evidence_refs": [
+        "governance/MMR_LEDGER.json",
+        "governance/breakpoints/0024-cross-host-replication-result.json"
+      ]
+    },
+    {
+      "line": 47,
+      "claim_id": "LIMIT::DELTAGSTAR",
+      "state": "NOT_COMPUTED",
+      "evidence_refs": [
+        "vita01/VITA01_CONFIRMATORY_PREREGISTRATION.md"
+      ]
+    },
+    {
+      "line": 49,
+      "claim_id": "LIMIT::CROSSHOST",
+      "state": "DEFERRED_NOT_FAILED",
+      "evidence_refs": [
+        "evidence/cross_host/CROSS_HOST_REPLICATION_RECEIPT.json"
+      ]
+    }
+  ]
+}
