@@ -1,0 +1,65 @@
+{
+  "freshness": null,
+  "notes": null,
+  "query": "VITHIA_SPACE FINAL_1P_ACTUAL_ALE_CAPTURE_V1 e55a47a7f16064477c4f101a38a849391c2fbc9f6557c5244daf0406b36dbd74 canonical_video_sha256",
+  "results": [
+    {
+      "universal_id": "agent:memories:daab87ad35ab106e7f04be25",
+      "score": 0.03249649199728195,
+      "label": "VITHIA_SPACE_TENKI_DEMO_V1 selected_seed=3 execution=QUALIFIED_VERIFY_AND_FIX...",
+      "title": "VITHIA_SPACE_TENKI_DEMO_V1 selected_seed=3 execution=QUALIFIED_VERIFY_AND_FIX...",
+      "source_table": "memories",
+      "integration_id": "agent",
+      "sensitivity": "local-only",
+      "fetched_at": "2026-09-28T20:28:57.555622Z",
+      "age_seconds": 2988,
+      "preview": "kind\": \"decision\", \"text\": \"VITHIA_SPACE_TENKI_DEMO_V1 selected_seed=3 execution=QUALIFIED_VERIFY_AND_FIXED_SEED_SCRIPTED_DRY_RUN source_commit=bc2faa30a772f2cfb6bab1d8108259f66ba84d20 teardown_rule=DO_NOT_TERMINATE_UNTIL_GITHUB … ORIGIN_PARITY_PASS\", \"agent\": \"vithia-space\", \"metadata\": null, \"confidence\": 1, \"source_universal_ids\": null",
+      "signals": {
+        "vector_rank": 1,
+        "text_rank": 2,
+        "similarity": 0.7583626672678009
+      }
+    },
+    {
+      "universal_id": "agent:memories:47b923e2e5bf18083bbc05c3",
+      "score": 0.016393204850226058,
+      "label": "VITHIA_SPACE FINAL_1P_ACTUAL_ALE_CAPTURE_V1 completed by Codex on 2026-09-28:...",
+      "title": "VITHIA_SPACE FINAL_1P_ACTUAL_ALE_CAPTURE_V1 completed by Codex on 2026-09-28:...",
+      "source_table": "memories",
+      "integration_id": "agent",
+      "sensitivity": "local-only",
+      "fetched_at": "2026-09-28T21:17:52.048595Z",
+      "age_seconds": 54,
+      "preview": "kind\": \"task-outcome\", \"text\": \"VITHIA_SPACE FINAL_1P_ACTUAL_ALE_CAPTURE_V1 completed by Codex on 2026-09-28: seed=3, model=scripted-policy, actual_ALE_frames=240, decisions … score=0.0, playthrough_mmr_root=e55a47a7f16064477c4f101a38a849391c2fbc9f6557c5244daf0406b36dbd74, canonical_video_sha256=d9f977296d42e414a4c1e1c9ccd2cc3d69a5f093fef10be4821781265c458a06, frame_signature_state=SIGNED_VERIFIED_FRAME_ED25519_ONLY, 2P=NOT_EXECUTED_ROM_GATE_BLOCKED.\", \"agent\": \"codex-final-execution\", \"metadata\": null",
+      "signals": {
+        "text_rank": 1
+      }
+    },
+    {
+      "universal_id": "agent:memories:98487eec3fd3ee0bb0964acd",
+      "score": 0.016043832093619256,
+      "label": "UFA JEV Space Invaders public experiment rule: JEV remains the core decision ...",
+      "title": "UFA JEV Space Invaders public experiment rule: JEV remains the core decision ...",
+      "source_table": "memories",
+      "integration_id": "agent",
+      "sensitivity": "local-only",
+      "fetched_at": "2026-09-28T15:48:40.53856Z",
+      "age_seconds": 19805,
+      "preview": "kind\": \"decision\", \"text\": \"UFA JEV Space Invaders public experiment rule: JEV remains the core decision layer; local Ollama is used only as the LLM baseline comparison path.\", \"agent\": \"vithia-space",
+      "signals": {
+        "vector_rank": 2,
+        "similarity": 0.5460103750229037
+      }
+    }
+  ],
+  "signals": {
+    "graph_added": 0,
+    "temporal_intent": "none",
+    "text_candidates": 2,
+    "time_candidates": 0,
+    "vector_candidates": 2
+  },
+  "took_ms": 609,
+  "graph_url": "https://mitosislabs.ai/graph?office=b236ff3a-8250-4ac5-bda2-4fc35c43d35f&cite=agent%3Amemories%3Adaab87ad35ab106e7f04be25%2Cagent%3Amemories%3A47b923e2e5bf18083bbc05c3%2Cagent%3Amemories%3A98487eec3fd3ee0bb0964acd&q=VITHIA_SPACE+FINAL_1P_ACTUAL_ALE_CAPTURE_V1+e55a47a7f16064477c4f101a38a849391c2fbc9f6557c5244daf0406b36dbd74+canonical_video_sha256",
+  "graph_url_hint": "IMPORTANT: end your reply to the user with graph_url — it opens the Mitosis graph with these cited sources highlighted. Present it as a clickable link."
+}

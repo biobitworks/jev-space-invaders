@@ -1,0 +1,20 @@
+{
+  "schema": "VIDEO_ENCODING_MANIFEST_V1",
+  "ffmpeg_version": "ffmpeg version 8.1.2 Copyright (c) 2000-2026 the FFmpeg developers",
+  "codec": "h264",
+  "resolution": "160x210",
+  "input_fps": 60,
+  "output_fps": 60,
+  "pixel_format": "yuv420p",
+  "crf": 18,
+  "gop": 15,
+  "exact_command": "ffmpeg -y -framerate 60 -i /Users/byron/projects/active/jev-space-invaders/evidence/competition/final_execution/frames/frame_%04d.png -r 60 -c:v libx264 -pix_fmt yuv420p -crf 18 -g 15 -an /Users/byron/projects/active/jev-space-invaders/evidence/competition/final_execution/frames/canonical.mp4",
+  "frame_count_input": 240,
+  "frame_count_output_reported": "240",
+  "video_file": "evidence/competition/final_execution/frames/canonical.mp4",
+  "video_bytes": 109511,
+  "video_sha256": "d9f977296d42e414a4c1e1c9ccd2cc3d69a5f093fef10be4821781265c458a06",
+  "source_playthrough_mmr_root": "e55a47a7f16064477c4f101a38a849391c2fbc9f6557c5244daf0406b36dbd74",
+  "source_verify_state": "PASS",
+  "label": "FINAL_1P_ACTUAL_ALE_CAPTURE_V1"
+}

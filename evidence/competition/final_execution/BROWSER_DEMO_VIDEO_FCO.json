@@ -1,0 +1,8 @@
+{
+  "BROWSER_VIDEO": "NOT_PRODUCED",
+  "PLAYWRIGHT_STATE": "NOT_AVAILABLE_IN_ACTIVE_PYTHON_ENV",
+  "claim_ceiling": "No browser dashboard video was fabricated. Canonical MP4 is the valid deterministic replay artifact.",
+  "created_utc": "2026-09-28T21:15:21Z",
+  "produced": false,
+  "schema": "BROWSER_DEMO_VIDEO_FCO_V1"
+}

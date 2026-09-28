@@ -1,0 +1,20 @@
+{
+  "blocked": [
+    "NEW_TENKI_EXECUTION_NO_CALLABLE_CONNECTOR",
+    "BROWSER_VIDEO_NOT_PRODUCED_PLAYWRIGHT_UNAVAILABLE",
+    "TENKI_FINAL_BLOCKED_INVALID_OR_REVOKED_API_KEY"
+  ],
+  "branch": "competition/final-integration-v01",
+  "created_utc": "2026-09-28T21:20:05Z",
+  "head_at_handoff": "61cd8adc99f7dbe5ff808ab074318c664b4c7226",
+  "mitosis_final_execution": "EXECUTED_REMEMBER_AND_RETRIEVE",
+  "next_action": "Run final gates, commit/push if accepted, then optionally promote main only after all gates pass.",
+  "not_tested": [
+    "ROM_DEPENDENT_2P_EXECUTION"
+  ],
+  "origin_head_at_handoff": "61cd8adc99f7dbe5ff808ab074318c664b4c7226",
+  "schema": "FINAL_CODEX_HANDOFF_V1",
+  "tenki_final_execution": "BLOCKED_INVALID_OR_REVOKED_API_KEY",
+  "worktree_status_at_handoff": "DIRTY_FINAL_PACKAGE_PENDING_COMMIT",
+  "writer_authority": "CODEX"
+}

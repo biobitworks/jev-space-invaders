@@ -1,0 +1,21 @@
+{
+  "schema": "PLAYTHROUGH_MMR_CONSTRUCTION_RECEIPT_V1",
+  "label": "FINAL_1P_ACTUAL_ALE_CAPTURE_V1",
+  "seed": 3,
+  "frame_count": 240,
+  "capture_mode": "actual-ale",
+  "decision_count": 60,
+  "leaves_file": "evidence/competition/final_execution/frames/FRAME_BREAKPOINT_LEAVES.jsonl",
+  "mmr_size": 240,
+  "mmr_peaks": [
+    "502cf4347cf108de1df21a4f1639cd1a792c29d0d94fecd7afc457e71830a1df",
+    "62783b8a6ceb2863f2e29c57556abbe10a9ae5af1c04d99e19f00deddbc13623",
+    "b50a5aa00038c71823b6feec7a85ade4a34051b58945e0611bf91acf66379f43",
+    "2b00cf242015fcff0cc210a2e0439c574b13362a6f5f490fe924042158f0e7ab"
+  ],
+  "mmr_root": "e55a47a7f16064477c4f101a38a849391c2fbc9f6557c5244daf0406b36dbd74",
+  "public_key_fingerprint": "becbb94df1bdde14440c5dd81c977cb4e66980abbf385f552201a8fee46429ed",
+  "key_id": "frame-custody-ed25519-v1",
+  "final_score": 0.0,
+  "wall_seconds": 0.5975617920048535
+}

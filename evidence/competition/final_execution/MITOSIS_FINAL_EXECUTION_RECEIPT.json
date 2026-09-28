@@ -1,0 +1,20 @@
+{
+  "MITOSIS_USED": true,
+  "agent": "codex-final-execution",
+  "claim_ceiling": "Final run evidence summary was persisted to Mitosis and queried back. Enrichment remains pending user choice; the raw universal-id memory is retrievable and was top result for the exact final-root query.",
+  "created_utc": "2026-09-28T21:20:05Z",
+  "office_id": "b236ff3a-8250-4ac5-bda2-4fc35c43d35f",
+  "raw_answer_file": "evidence/competition/final_execution/MITOSIS_FINAL_EXACT_ANSWER_RAW.json",
+  "raw_remember_file": "evidence/competition/final_execution/MITOSIS_FINAL_REMEMBER_RAW.txt",
+  "remember_embedded": false,
+  "remember_retrievable_at": "2026-09-28T21:18:35Z",
+  "remember_status": "ok",
+  "remember_universal_id": "agent:memories:47b923e2e5bf18083bbc05c3",
+  "retrieval_query": "agent:memories:47b923e2e5bf18083bbc05c3 e55a47a7f16064477c4f101a38a849391c2fbc9f6557c5244daf0406b36dbd74",
+  "retrieval_results": 3,
+  "retrieval_took_ms": 538,
+  "retrieval_top_score": 0.03252188921202311,
+  "retrieval_top_universal_id": "agent:memories:47b923e2e5bf18083bbc05c3",
+  "schema": "MITOSIS_FINAL_EXECUTION_RECEIPT_V1",
+  "state": "EXECUTED_REMEMBER_AND_RETRIEVE"
+}

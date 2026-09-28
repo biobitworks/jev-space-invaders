@@ -1,0 +1,20 @@
+{
+  "fco_schema": "FrameOccurrenceFCO_V1",
+  "frame_index": 56,
+  "decision_index": 14,
+  "action": "RIGHTFIRE",
+  "score": 0.0,
+  "lives": 3,
+  "model_id": "scripted-policy",
+  "environment_id": "ALE/SpaceInvaders-v5",
+  "content_sha256": "0e58e5425d2e7e44b905d0fba7f74596b801c81392f50224f0f93b070f6348e9",
+  "png_artifact_sha256": "7fcd0fe5ebc81b2f2b98d82c2cdb1e87c30911e96e37b61523a4cd6dff46ed0d",
+  "png_artifact_bytes": 978,
+  "occurrence_id": "d00ce3e2237b9da6d1f9d7c0722ebc27ada2237def6749b196eeb3abb5da1967",
+  "frame_root": "f00e7ac0aa07b64ff10aaca9adb21ce2b1817b9dfba76e26af97c64996c880a6",
+  "public_key": "-----BEGIN PUBLIC KEY-----\nMCowBQYDK2VwAyEAIKObEt5u3KNwjko4Lx0CtDCWcNUR25hWmhIJs+fwV8A=\n-----END PUBLIC KEY-----\n",
+  "public_key_fingerprint": "becbb94df1bdde14440c5dd81c977cb4e66980abbf385f552201a8fee46429ed",
+  "key_id": "frame-custody-ed25519-v1",
+  "signature": "5QggSQONJvkd7YuLtmfoi1IgG4LJwDF1Z51OStPIeOJQyNAoad1EqRUkoxgr+AYDqoFHSarwJXRZPBDMdqMGAw==",
+  "signature_state": "SIGNATURE_PRESENT_UNVERIFIED"
+}

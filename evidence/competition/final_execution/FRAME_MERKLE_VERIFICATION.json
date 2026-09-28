@@ -1,0 +1,11 @@
+{
+  "FRAME_VERIFY": "PASS",
+  "created_utc": "2026-09-28T21:15:21Z",
+  "errors": [],
+  "frame_signature_state": "SIGNED_VERIFIED",
+  "frames_checked": 240,
+  "git_commit_signature_state": "NOT_INFERRED",
+  "schema": "FRAME_MERKLE_VERIFICATION_V1",
+  "signature_domain": "FRAME_ED25519_ONLY",
+  "source_receipt": "evidence/competition/final_execution/frames/PLAYTHROUGH_MMR_VERIFICATION_RECEIPT.json"
+}
