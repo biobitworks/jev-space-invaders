@@ -1,0 +1,63 @@
+{
+  "dataset_id": "VITHIA_DAISY_ECA_ACTION_CORPUS_V1",
+  "kind": "training_candidate",
+  "schema": "D2/D3 action rows (1P schema)",
+  "source": "generated (deterministic, model-free)",
+  "license": "CC-BY-4.0",
+  "generation_code": [
+    {
+      "path": "src/daisy/eca_corpus.py",
+      "sha256": "895d1096daf2c733008424356c676db44904a0a69560a2a116fda8c82369f624"
+    },
+    {
+      "path": "src/kernels/eca.py",
+      "sha256": "31d4e8c8b107db08bf47d0cd8c462e589e8c9a0c611cb279b1a83f0ea73d5ed3"
+    },
+    {
+      "path": "scripts/build_daisy_eca.py",
+      "sha256": "682c3cb3f2bb465118ee966840713b05cadbeec47387bef29f54ffd7b3df9c22"
+    }
+  ],
+  "code_commit_at_generation": "dbe76cc4718590e1d7077b04055a4ddf70b660b0",
+  "config": {
+    "W": 16,
+    "ics": {
+      "single": null,
+      "rand1": 11,
+      "rand2": 12,
+      "rand3": 13
+    },
+    "ic_holdout": "rand3",
+    "oracle_horizon": 8,
+    "a4_horizon": 2,
+    "starts": [
+      4,
+      8,
+      12
+    ],
+    "actions": [
+      "LEFT",
+      "STAY",
+      "RIGHT"
+    ]
+  },
+  "seeds": {
+    "ics": {
+      "single": null,
+      "rand1": 11,
+      "rand2": 12,
+      "rand3": 13
+    }
+  },
+  "files": [
+    {
+      "path": "data/daisy/VITHIA_DAISY_ECA_ACTION_CORPUS_V1/rows.jsonl",
+      "bytes": 13909553,
+      "sha256": "989de222cddd3f5a3b075f9709d45149cf07d2041dfb83267ee17527bf6ee020"
+    }
+  ],
+  "fmo_root": "5b21622578dcfb1494a2992ff3409bc44e28d09163514ff2f5aeb7136470a8d7",
+  "visibility": "public",
+  "parent_evidence": [],
+  "claim_ceiling": "training-CANDIDATE corpus; no training contract frozen; not an E0-E4 evaluation dataset"
+}

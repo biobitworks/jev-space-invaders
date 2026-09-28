@@ -1,0 +1,69 @@
+{
+  "dataset_id": "VITHIA_DAISY_ECA_TEMPORAL_ACTION_GRAPH_V1",
+  "kind": "training_candidate",
+  "schema": "every unique live decision node x every outgoing ECA-dodge action across H=8",
+  "source": "VITHIA_DAISY_ECA_ACTION_CORPUS_V1",
+  "license": "CC-BY-4.0",
+  "generation_code": [
+    {
+      "path": "src/daisy/eca_temporal_corpus.py",
+      "sha256": "31214b9b889e83d394f77ac30738466409c05891d3c172593e3392dd134c1a9a"
+    },
+    {
+      "path": "src/daisy/eca_corpus.py",
+      "sha256": "895d1096daf2c733008424356c676db44904a0a69560a2a116fda8c82369f624"
+    },
+    {
+      "path": "src/kernels/eca.py",
+      "sha256": "31d4e8c8b107db08bf47d0cd8c462e589e8c9a0c611cb279b1a83f0ea73d5ed3"
+    },
+    {
+      "path": "scripts/build_daisy_eca_temporal.py",
+      "sha256": "4e4724fdf917a41ca5eb9f2f87cc41e68b4e542f6e2c9c7dc5fe12b91f9e378d"
+    }
+  ],
+  "code_commit_at_generation": "dbe76cc4718590e1d7077b04055a4ddf70b660b0",
+  "config": {
+    "W": 16,
+    "H": 8,
+    "actions": [
+      "LEFT",
+      "STAY",
+      "RIGHT"
+    ],
+    "starts": [
+      4,
+      8,
+      12
+    ],
+    "transposition": "same exact ECA hazard row, ship x and event depth",
+    "representation": "path multiplicity + graph edges reconstruct raw action-string space",
+    "delta_G_star": "NOT_COMPUTED until real decider probabilities exist"
+  },
+  "seeds": {
+    "ics": {
+      "single": null,
+      "rand1": 11,
+      "rand2": 12,
+      "rand3": 13
+    }
+  },
+  "files": [
+    {
+      "path": "data/daisy/VITHIA_DAISY_ECA_TEMPORAL_ACTION_GRAPH_V1/graph_summary.jsonl",
+      "bytes": 944763,
+      "sha256": "4836c9cba66c4344c736f088122a681245a0d197aa8fbfbde863712f398326cf"
+    },
+    {
+      "path": "data/daisy/VITHIA_DAISY_ECA_TEMPORAL_ACTION_GRAPH_V1/rows.jsonl",
+      "bytes": 199279021,
+      "sha256": "321b452804c1e581f229c34182302801ee5257f3fb023cb93ffaf6d772f275c4"
+    }
+  ],
+  "fmo_root": "534148835b8234377799dcbf6216a50ca2fbdf3102d14fcd059828e0a127effc",
+  "visibility": "public",
+  "parent_evidence": [
+    "VITHIA_DAISY_ECA_ACTION_CORPUS_V1"
+  ],
+  "claim_ceiling": "deterministic model-free training candidate; public Anticube labels only; not VITHIA_NATIVE"
+}

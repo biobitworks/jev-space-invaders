@@ -1,0 +1,92 @@
+{
+  "breakpoint_id": "UFA-JEV-BP-0028",
+  "parent": "UFA-JEV-BP-0027",
+  "state": "TRAINING_CANDIDATE_CORPUS_GENERATED",
+  "project": "VITHIA_SPACE",
+  "created_utc": "2026-09-28T06:51:23+00:00",
+  "git_head_at_creation": "dbe76cc4718590e1d7077b04055a4ddf70b660b0",
+  "root_kind": "FMO_V1_BREAKPOINT_ATOMS",
+  "bp_root": "012ccf3c4ebefa1e52b9a80cbcc3b946e1a3c6752d6ff4eabca4b868e45f1b35",
+  "group_roots": {
+    "dataset": "912b104f0212b8657dbe43cb1366e8ee315596078862baf38e777524aa56e088"
+  },
+  "atoms": [
+    {
+      "path": "data/daisy/VITHIA_DAISY_ECA_RULE_CORPUS_V1/MANIFEST.json",
+      "kind": "DatasetManifestFCO",
+      "group": "dataset",
+      "bytes": 1458,
+      "sha256": "60d1e8cd44a28327f435e4fb738eefa5b72d80b99cc3f24db4c1597cfe3e8df5",
+      "location": "public",
+      "fmo_leaf": "9b5a79bcb2e856a603f6af1cb5d2ed02eb8bdbfc77d52ce301dd6a90b339fb55"
+    },
+    {
+      "path": "data/daisy/VITHIA_DAISY_ECA_RULE_CORPUS_V1/rows.jsonl",
+      "kind": "DatasetFileFCO",
+      "group": "dataset",
+      "bytes": 14562040,
+      "sha256": "902cd0048994b2ef369c4a588521d67a3fcfbe955d44373d0bccae15e0eb3b1b",
+      "location": "public",
+      "fmo_leaf": "f3fe4ef40001f80546db119d7f24466d9d26db24e07c3d5bc8ada1a4378d96ed"
+    },
+    {
+      "path": "data/daisy/VITHIA_DAISY_ECA_ACTION_CORPUS_V1/MANIFEST.json",
+      "kind": "DatasetManifestFCO",
+      "group": "dataset",
+      "bytes": 1610,
+      "sha256": "fe4ef24c6f24b9a3e2fecdd31d94165556829183a3b669cc31e9535c9a0ae3e6",
+      "location": "public",
+      "fmo_leaf": "56c8b4d9412ddbf08460d7f0f61b6ca4a337e824d51482287c8f1a3819679536"
+    },
+    {
+      "path": "data/daisy/VITHIA_DAISY_ECA_ACTION_CORPUS_V1/rows.jsonl",
+      "kind": "DatasetFileFCO",
+      "group": "dataset",
+      "bytes": 13909553,
+      "sha256": "989de222cddd3f5a3b075f9709d45149cf07d2041dfb83267ee17527bf6ee020",
+      "location": "public",
+      "fmo_leaf": "c1bab8d5ae5849cf3b1fb5448997aec9a586041dcba14958a87905e53ec58ef0"
+    },
+    {
+      "path": "data/daisy/VITHIA_DAISY_ECA_TEMPORAL_ACTION_GRAPH_V1/MANIFEST.json",
+      "kind": "DatasetManifestFCO",
+      "group": "dataset",
+      "bytes": 2164,
+      "sha256": "e003371f96f4e38eaa8058b1040867b405fed4c92a8ef2171db95272f41511cb",
+      "location": "public",
+      "fmo_leaf": "dc91658fc676cb39815b1af3619fd2b2e79e6fd40f373a0c793df6e33d91fe54"
+    },
+    {
+      "path": "data/daisy/VITHIA_DAISY_ECA_TEMPORAL_ACTION_GRAPH_V1/graph_summary.jsonl",
+      "kind": "DatasetFileFCO",
+      "group": "dataset",
+      "bytes": 944763,
+      "sha256": "4836c9cba66c4344c736f088122a681245a0d197aa8fbfbde863712f398326cf",
+      "location": "public",
+      "fmo_leaf": "b8ac9c08e9afdb490c078ec4552122bfdabcb1073814beb6a6f22bee6a171452"
+    },
+    {
+      "path": "data/daisy/VITHIA_DAISY_ECA_TEMPORAL_ACTION_GRAPH_V1/rows.jsonl",
+      "kind": "DatasetFileFCO",
+      "group": "dataset",
+      "bytes": 199279021,
+      "sha256": "321b452804c1e581f229c34182302801ee5257f3fb023cb93ffaf6d772f275c4",
+      "location": "public",
+      "fmo_leaf": "3d620de2db94d409a9acb6f78b51913f50a46fc67effc8a59c03bea4661363b8"
+    }
+  ],
+  "stage": "DAISY_ECA_CORPUS_RESULT",
+  "datasets": [
+    "VITHIA_DAISY_ECA_RULE_CORPUS_V1",
+    "VITHIA_DAISY_ECA_ACTION_CORPUS_V1",
+    "VITHIA_DAISY_ECA_TEMPORAL_ACTION_GRAPH_V1"
+  ],
+  "regeneration": "BYTE_IDENTICAL_PASS",
+  "model_calls": 0,
+  "delta_g_star": "NOT_COMPUTED",
+  "claim_mutation": false,
+  "pre_mmr_root": "47b9a5e338cc321178bc61a1755bb75ed2234c222131c33e444211887c5c6263",
+  "next_action": "augment matched states with OpenJev behavior after runtime gate",
+  "claim_ceiling": "IDENTITY_AND_INCLUSION_ONLY; hashes do not establish correctness",
+  "signature_state": "NOT_SIGNED"
+}
