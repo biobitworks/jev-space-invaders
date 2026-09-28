@@ -1,0 +1,47 @@
+{
+  "schema": "OPENJEV_UPSTREAM_IDENTITY_V1",
+  "retrieved_from": "https://huggingface.co/api/models/<repo>?blobs=true (2026-09-27)",
+  "affiliation_note": "OpenJev model card: independent, not affiliated with TypeSafe. Runs are NON_TYPESAFE_JEV, NON_COUNTED.",
+  "license": "cc-by-nc-4.0 (weights); helper Apache-2.0 per repo files",
+  "model": {
+    "repo": "openjev/openjev-MLX-4bit",
+    "revision": "c59bf1eed7d8de0eb88105a0d5517c9b4a858e16",
+    "quantization": "MLX 4-bit",
+    "total_bytes": 15153274826,
+    "weights": {
+      "model-00001-of-00003.safetensors": [
+        5328325554,
+        "41ac78b0ff39215bf3b5caabaf3ee44a00f539d848be1b659842ae549b34c201"
+      ],
+      "model-00002-of-00003.safetensors": [
+        5354185158,
+        "60791b9935e89509526d1384b07c95faef63766ad3c4a4cf70424364c8d1a8ef"
+      ],
+      "model-00003-of-00003.safetensors": [
+        4450532795,
+        "d0d069de67993deed480796cac2a61cf4556b4d2ee1aeaaad7490d0c043e577e"
+      ]
+    },
+    "tokenizer.json": [
+      19989325,
+      "06b9509352d2af50381ab2247e083b80d32d5c0aba91c272ca9ff729b6a0e523"
+    ]
+  },
+  "helper": {
+    "repo": "openjev/openjev",
+    "revision": "0b6bb6e571bc7bcd6f1eb68de706f592f29c6483",
+    "files": {
+      "helper/shim.py": "81a22f1b1b8912a465059207ef9f60b7c6c16b4de6372305d867efbe38a1987a",
+      "helper/shim_mlx.py": "fa80dd5b1ae4b3077380669ef9bd22e74e552ac314e50b343c6bfd88658718d4"
+    }
+  },
+  "serve_env": {
+    "READOUT_T": "0.85",
+    "READOUT_NOUL_T": "1.829074",
+    "READOUT_NOUL_BIAS": "0",
+    "READOUT_TARGETED": "1",
+    "READOUT_INSTR_STYLE": "pyrepr",
+    "SHIM_STAGGER": "1"
+  },
+  "serve_env_source": "docstring of helper/shim_mlx.py at the pinned revision"
+}

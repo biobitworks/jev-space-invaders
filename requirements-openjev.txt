@@ -1,0 +1,4 @@
+mlx
+mlx-lm
+transformers
+huggingface_hub
