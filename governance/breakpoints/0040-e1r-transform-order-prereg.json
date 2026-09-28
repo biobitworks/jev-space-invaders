@@ -1,0 +1,31 @@
+{
+  "breakpoint_id": "UFA-JEV-BP-0040",
+  "parent": "UFA-JEV-BP-0039",
+  "state": "TRANSFORM_ORDER_TYPE_PROTOCOL_FROZEN",
+  "project": "VITHIA_SPACE",
+  "created_utc": "2026-09-28T07:45:54+00:00",
+  "git_head_at_creation": "9db99c4b0eecf41d3529c0d0eba2750447b1e527",
+  "root_kind": "FMO_V1_BREAKPOINT_ATOMS",
+  "bp_root": "037af3d12c77a46ddedf3ceb0f359dbe2650c2fc75df653ba550b2075af97001",
+  "group_roots": {
+    "order": "59ae14a1c942e7e869ea35248a0a8fd489b58ab9061a1508287e162e07da4974"
+  },
+  "atoms": [
+    {
+      "path": "TRANSFORM_ORDER_REGISTRY.json",
+      "kind": "TransformOrderRegistryFCO",
+      "group": "order",
+      "bytes": 999,
+      "sha256": "976b2acb82f4a3398750eb6977a2279488dd42b90088b58f12002834876227ea",
+      "location": "public",
+      "fmo_leaf": "59ae14a1c942e7e869ea35248a0a8fd489b58ab9061a1508287e162e07da4974"
+    }
+  ],
+  "stage": "E1R_TRANSFORM_ORDER_PREREG",
+  "delta_g_star": "NOT_COMPUTED",
+  "scientific_parent_commit": "4c1bbb19b89a7ee1e1dee662cfd0f227186ebafd",
+  "scientific_parent_breakpoint": "UFA-JEV-BP-0028",
+  "scientific_parent_mmr_root": "5f742663f7e0c12e100e292cc794eefb0360a068a5c20c2b1be019ace1cb298b",
+  "claim_ceiling": "IDENTITY_AND_INCLUSION_ONLY; hashes do not establish correctness",
+  "signature_state": "NOT_SIGNED"
+}

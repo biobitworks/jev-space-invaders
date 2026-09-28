@@ -608,6 +608,21 @@
         "c9d20504a097a728131bf24b7ac05eabc65f726f63000601b6a5e2fb878731e2",
         "183f4f227d8414ec3a15cccafd8ae16983d6a645b6d3a92b3c80d98a7b864667"
       ]
+    },
+    {
+      "seq": 39,
+      "bp_id": "UFA-JEV-BP-0040",
+      "bp_file": "governance/breakpoints/0040-e1r-transform-order-prereg.json",
+      "bp_file_sha256": "17085588cd8e7c4962ce3703a580588223cefcacbbf9aa5b7a74910253cfc430",
+      "bp_root": "037af3d12c77a46ddedf3ceb0f359dbe2650c2fc75df653ba550b2075af97001",
+      "root_kind": "FMO_V1_BREAKPOINT_ATOMS",
+      "mmr_leaf": "749f19311beee28a393278b273bcf2abc0ebfe88c3d478f67ca4a9014f432b53",
+      "mmr_size": 40,
+      "mmr_root_after": "10010f0bf4d4b58224c17406865e72bdb940dc247fd0cca296df3d41d894cb20",
+      "mmr_peaks_after": [
+        "026514586974a2fb18c9fefe6f92208e2008b44751f5380417c4129b185b831f",
+        "2c19c9c86cde650380546093e0e06537bfb81037e47bfd05c7d1b596710c22b8"
+      ]
     }
   ]
 }
