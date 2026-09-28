@@ -1,0 +1,83 @@
+{
+  "breakpoint_id": "UFA-JEV-BP-0052",
+  "parent": "UFA-JEV-BP-0051",
+  "state": "BASELINE_5_COMPLETE",
+  "project": "VITHIA_SPACE",
+  "created_utc": "2026-09-28T15:22:05+00:00",
+  "git_head_at_creation": "2b6878b942a609ca40a84e1816f186019c636ee3",
+  "root_kind": "FMO_V1_BREAKPOINT_ATOMS",
+  "bp_root": "ae5e93d3eb00d4ce69418bce49234ee487dfb27dd94fa7f536e5e7fed084382d",
+  "group_roots": {
+    "m3_baseline": "6d7b43dcf1ea72b9f891ddf29f83baa8dbded1468170b61eac92af4be8333428"
+  },
+  "atoms": [
+    {
+      "path": "results.json",
+      "kind": "RESULTSFCO",
+      "group": "m3_baseline",
+      "bytes": 14352,
+      "sha256": "54d4db6cccfb12b2472ebc0d673ab92e6fc64f84e77fa576d85058584fa9c563",
+      "location": "public",
+      "fmo_leaf": "7ce50f3cf021d7ef407eab6814e729486eca42d922831a71590deef423b69312"
+    },
+    {
+      "path": "runs/run_0006_seed1_ollama.jsonl.gz",
+      "kind": "TRACEFCO",
+      "group": "m3_baseline",
+      "bytes": 67302,
+      "sha256": "3d587a3f4736e98f2d2bcfe292a05a2248b09ec7932c4e8c819c4bd4dc33a514",
+      "location": "public",
+      "fmo_leaf": "2642de00130d6e2a40f65b01dfc02111e83d9dccd1d2988ffc50e9200c11b8aa"
+    },
+    {
+      "path": "runs/run_0007_seed2_ollama.jsonl.gz",
+      "kind": "TRACEFCO",
+      "group": "m3_baseline",
+      "bytes": 67198,
+      "sha256": "d23473ba3be9334a5afa7dca6bb9d142e0b72642ba0cb8212153bb409b46ff01",
+      "location": "public",
+      "fmo_leaf": "9b85d0d9815e42182b6ca82595725b07ff4a7e7e2953d4045b9312fed2e758f5"
+    },
+    {
+      "path": "runs/run_0008_seed3_ollama.jsonl.gz",
+      "kind": "TRACEFCO",
+      "group": "m3_baseline",
+      "bytes": 67341,
+      "sha256": "1e954c7b9d1d2be84d8369baf1727c2cb5909b4273a22d39d30b0801bf4cef41",
+      "location": "public",
+      "fmo_leaf": "56cde6eea0e616852cd6924ec7e1d183a6e7a836bdef5d3c91ffea737c7e12e4"
+    },
+    {
+      "path": "runs/run_0009_seed4_ollama.jsonl.gz",
+      "kind": "TRACEFCO",
+      "group": "m3_baseline",
+      "bytes": 67377,
+      "sha256": "5cb6626b1ed0381329d9d6139ad83f62d6eae6314dfabed1001201f6b31ba641",
+      "location": "public",
+      "fmo_leaf": "e67160d0b2be00414511643197d21c337881e0468f069b882e7da5915ecc6734"
+    },
+    {
+      "path": "runs/run_0010_seed5_ollama.jsonl.gz",
+      "kind": "TRACEFCO",
+      "group": "m3_baseline",
+      "bytes": 67299,
+      "sha256": "6f1e3bcfa1d65c64b56e6d6ca23279ff0f86a7b1d56fad5f303748dd400eb700",
+      "location": "public",
+      "fmo_leaf": "0c1a9d46947c9b585c685c16157ad66e4a414d4926bbcbaefc44756a83799f96"
+    }
+  ],
+  "stage": "M3_BASELINE_5_COMPLETE",
+  "provider": "ollama",
+  "served_model": "llama3.2:3b",
+  "seeds": [
+    1,
+    2,
+    3,
+    4,
+    5
+  ],
+  "mean_score": 270.0,
+  "note": "Local-Ollama baseline substitute for the System One adapter (openai/anthropic/gemini) path; no hosted provider key available. All 5 seeds produced identical trajectories (score 270, 538 steps): consistent with the model converging to a fixed repeated action, which under ALE sticky-action semantics makes the trajectory seed-independent. Reported as observed, not adjusted.",
+  "claim_ceiling": "IDENTITY_AND_INCLUSION_ONLY; hashes do not establish correctness",
+  "signature_state": "NOT_SIGNED"
+}

@@ -1,0 +1,32 @@
+{
+  "schema": "OPENJEV_STUDIO_ATTEMPT_RECEIPT_V1",
+  "checked_utc": "2026-09-28T15:30:00Z",
+  "host": "magicSTUDIObox.local",
+  "checked_via": "ssh magicstudio (interactive, driven from operator's Terminal panel)",
+  "findings": [
+    {
+      "check": "internal disk (~/)",
+      "result": "460Gi total, 390Gi used, 10Gi avail (98% full)",
+      "relevance": "irrelevant to OpenJev: model weights live on /Volumes/magicBLACKbox, not the internal disk"
+    },
+    {
+      "check": "/Volumes/magicBLACKbox free space",
+      "result": "3.6Ti total, 2.0Ti used, 1.6Ti avail (56%)",
+      "relevance": "ample space; OpenJev weights (openjev-MLX-4bit) already present there from a prior session (2026-09-28T00:15-00:17Z)"
+    },
+    {
+      "check": "shim launch, first attempt",
+      "result": "ModuleNotFoundError: No module named 'openai' in /Volumes/magicBLACKbox/vithia-space-execution/openjev-venv",
+      "fix_applied": "pip install openai in that venv (succeeded: openai-3.19.2)"
+    },
+    {
+      "check": "shim launch, second attempt (after openai install)",
+      "result": "AssertionError: \"the MLX stand-in implements only the TARGETED readout (READOUT_TARGETED=1)\" from shim_mlx.py; process exited, nothing left running",
+      "relevance": "this specific MLX stand-in does not serve full probabilities, only a partial/targeted readout, and refuses to start without an explicit READOUT_TARGETED=1 acknowledgment"
+    }
+  ],
+  "decision": "Did not set READOUT_TARGETED=1 to force past the gate. Per the handoff's own instruction (\"if the pinned helper cannot serve GGUF with probabilities, STOP this lane (NOT_TESTED) - do not improvise a readout\"), stopping here rather than accepting a partial/targeted readout as if it were a full comparator.",
+  "state": "M4B_STOPPED_NOT_TESTED",
+  "note": "Neither disk space nor RAM were the actual blocker once /Volumes/magicBLACKbox and the missing openai package were accounted for. The real stop condition is a deliberate capability gate in the pinned MLX shim itself (targeted-only readout, no probabilities). OpenJev remains provider=\"openjev\", non-counted, never called JEV, regardless.",
+  "claim_ceiling": "NOT_TESTED"
+}
