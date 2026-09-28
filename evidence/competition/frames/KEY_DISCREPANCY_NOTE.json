@@ -1,0 +1,8 @@
+{
+  "schema": "FRAME_CUSTODY_KEY_DISCREPANCY_NOTE_V1",
+  "finding": "The published key at evidence/competition/frames/FRAME_CUSTODY_PUBLIC_KEY.pem (fingerprint c5e12498...) matches the smoke-test run's signing key, not the final 240-frame run's signing key (fingerprint becbb94d...). Two different keypairs were generated in two different local environments.",
+  "impact": "A verifier that trusts only the single published PEM file cannot validate the final run's real signatures without also registering the second key.",
+  "not_fixed_this_pass": true,
+  "reason": "Deferred to keep the submission critical path (video URL, PR, final entry) moving under time pressure; this is a scoping/key-management gap, not evidence of tampering - both keys are locally generated and both runs are independently reconstructible from their PNG bytes regardless of signature trust.",
+  "claim_ceiling": "NOT_TESTED"
+}

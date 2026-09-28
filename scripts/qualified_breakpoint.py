@@ -47,7 +47,14 @@ def latest_number() -> int:
     return max(nums) if nums else 0
 
 
+IDENTITY_FIELDS = frozenset({"lineage_id", "branch", "breakpoint_id", "parent_root",
+                              "bp_root", "breakpoint_root", "root_kind", "atoms", "group_roots"})
+
+
 def create(slug: str, state: str, atoms: list[dict], body: dict) -> dict:
+    clobbering = IDENTITY_FIELDS & set(body)
+    if clobbering:
+        raise ValueError(f"body must not set identity fields: {sorted(clobbering)}")
     ledger = load_ledger()
     number = latest_number() + 1
     bp_id = f"{LINEAGE_ID}-BP-{number:04d}"
