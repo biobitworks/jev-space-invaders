@@ -1,0 +1,18 @@
+{
+  "claim_ceiling": "simulation evaluation distribution only; not biological and not independently calibrated",
+  "mapping": {
+    "NONSELF_SAFE": "(1-m)d(1-u)",
+    "NONSELF_UNSAFE": "(1-m)du",
+    "SELF_SAFE": "(1-m)(1-d)(1-u)",
+    "SELF_UNSAFE": "(1-m)(1-d)u",
+    "UNKNOWN": "m"
+  },
+  "schema": "PUBLIC_SIMULATION_ANTICUBE_E1R_V1",
+  "states": [
+    "SELF_SAFE",
+    "SELF_UNSAFE",
+    "NONSELF_SAFE",
+    "NONSELF_UNSAFE",
+    "UNKNOWN"
+  ]
+}
