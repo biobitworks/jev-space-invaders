@@ -17,7 +17,10 @@
     "scripts/verify_competition_lineage.py",
     "scripts/verify_environment_replay_v1.py",
     "scripts/determine_game_outcome_v1.py",
-    "governance/postsubmission/GAME_OUTCOME_PREDICATE_V1.json"
+    "governance/postsubmission/GAME_OUTCOME_PREDICATE_V1.json",
+    "evidence/competition/post_submission/tenki/TENKI_SUBMITTED_REPLAY_VERIFICATION_CORRECTION_FCO_V2.json",
+    "tools/verify_mitosis_tenki_claims_v2.py",
+    "docs/TENKI_DETERMINISTIC_REPLAY_AND_OUTCOME_V1.md"
   ],
   "invariants": [
     "Credential presence is not provider authentication.",
