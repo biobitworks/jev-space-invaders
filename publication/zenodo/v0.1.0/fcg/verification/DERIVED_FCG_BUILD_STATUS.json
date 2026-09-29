@@ -1,0 +1,20 @@
+{
+  "schema": "VITHIA_DERIVED_FCG_BUILD_STATUS_V1",
+  "state": "PARTIAL_NOT_EXECUTED_DERIVED_BINARIES",
+  "canonical_jsonl_state": "PASS",
+  "canonical_validation_receipt": "fcg/verification/CANONICAL_FCG_VALIDATION_RECEIPT.json",
+  "parquet_generation": "NOT_EXECUTED",
+  "duckdb_generation": "NOT_EXECUTED",
+  "reason": "Current orchestrator execution environment does not have pyarrow/duckdb and cannot install packages because external package resolution is unavailable. No alternate format was silently substituted.",
+  "generator": "fcg/scripts/build_derived_fcg.py",
+  "required_runtime_dependencies": [
+    "pyarrow",
+    "duckdb"
+  ],
+  "expected_outputs": {
+    "parquet_directory": "fcg/parquet/",
+    "duckdb_file": "fcg/database/vithia_publication_fcg_v0.1.0.duckdb",
+    "receipt": "fcg/verification/DERIVED_FCG_BUILD_RECEIPT.json"
+  },
+  "claim_ceiling": "Canonical FCG JSONL exists and validates. Parquet/DuckDB existence or PASS must not be claimed until the generator runs successfully and the receipt is materialized."
+}
