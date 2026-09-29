@@ -1,0 +1,152 @@
+{
+  "schema": "VITHIA_REPLAY_SEED_ADAPTIVE_SUCCESSOR_RECEIPT_V1",
+  "project": "VITHIA_SPACE",
+  "task": "VITHIA_REPLAY_SEED_ADAPTIVE_CONTEXT_JEV_E2E_V01",
+  "branch": "competition/per-seat-decider-preprocessor-v02-20260928",
+  "parent_head": "8c8abb6a18aa2304d0ccbc777a387f2bf5cca84b",
+  "qualified_predecessor": {
+    "breakpoint_id": "UFA-JEV-COMP-BP-0017",
+    "mmr_size": 17,
+    "mmr_root": "2ade9c85f1378207ed1e6f3fc89c0adef7e4987c15c9a12ca2b10123d3a2d119",
+    "mutation_performed": false
+  },
+  "engineering_successor": {
+    "breakpoint_id": "UFA-JEV-COMP-BP-0018-ENGINEERING-SUCCESSOR",
+    "state": "REPLAY_SEED_ADAPTIVE_CONTEXT_OPENJEV_EVIDENCE_RECORDED",
+    "qualified_mmr_admission": "NOT_PERFORMED",
+    "claim_ceiling": "Bounded local OpenJEV engineering evidence only; does not rewrite BP-0017 and does not claim qualified competition admission."
+  },
+  "openjev_long_ab": {
+    "state": "PASS_BOUNDED_3_SEEDS_X_3_STEPS",
+    "same_backend": true,
+    "same_seeds": true,
+    "seeds": [
+      1,
+      2,
+      3
+    ],
+    "steps": 3,
+    "comparison_path": "evidence/competition/replay_seed_adaptive/comparison_22c0471ad648.json",
+    "comparison_sha256": "9a5e86d6af6d3b1c1c416becc1680414b7a483ba8296562dafa4b807886fe2e9",
+    "raw_run_id": "openjev_raw_69fd4f0519e3",
+    "vithia_run_id": "openjev_vithia_l1_f71e267476ef",
+    "raw_decision_p50_ms": 5626.834,
+    "vithia_decision_p50_ms": 4725.3426,
+    "delta_decision_p50_ms": -901.4914,
+    "raw_decision_p95_ms": 6176.3331,
+    "vithia_decision_p95_ms": 7057.1172,
+    "delta_decision_p95_ms": 880.7841,
+    "raw_input_size_mean_bytes": 519.0,
+    "vithia_input_size_mean_bytes": 503.0,
+    "raw_model_inference_p50_ms": 5626.65,
+    "vithia_model_inference_p50_ms": 4725.22,
+    "delta_model_inference_p50_ms": -901.43,
+    "raw_score": 0.0,
+    "vithia_score": 0.0,
+    "delta_score": 0.0,
+    "run_proof_verify": "PASS"
+  },
+  "replay_seed": {
+    "raw": {
+      "path": "evidence/competition/replay_seed_adaptive/run_openjev_raw_69fd4f0519e3/REPLAY_SEED_FCO.json",
+      "sha256": "8d57c5a165ec5dc8dd3aaea73913c2508f18dcda6ffafe8cd75fd081a695db60",
+      "replay_seed_root": "73d1be29fc8165b19309c7f4b48d753aad978d52b3341c569c01bff054b21a22",
+      "mmr_size": 9,
+      "mmr_root": "21de8b00425a916376f02d5ae41e05982955f7d78fe64533927b17a9039b8d32"
+    },
+    "vithia": {
+      "path": "evidence/competition/replay_seed_adaptive/run_openjev_vithia_l1_f71e267476ef/REPLAY_SEED_FCO.json",
+      "sha256": "297200dc266366cf8088ccad21d3a05a6cb22e29f5b51256c53e3c9f62a41186",
+      "replay_seed_root": "85f01e8a1c8b613ac99a3d1b2476c7f3a8dc083540c5ab413893858656030a5b",
+      "mmr_size": 9,
+      "mmr_root": "51938d476cff59fd4d44adb4888ea03d17199e1e8aac052fc84d567cbccf4eb4"
+    },
+    "reconstructive_verification": {
+      "raw_verify_path": "evidence/competition/replay_seed_adaptive/run_openjev_raw_69fd4f0519e3/REPLAY_VERIFY.json",
+      "raw_verify_sha256": "5bbf010a761103c25f63e87a96ebfe80323bef4ca380c271bfab996d39a377a6",
+      "vithia_verify_path": "evidence/competition/replay_seed_adaptive/run_openjev_vithia_l1_f71e267476ef/REPLAY_VERIFY.json",
+      "vithia_verify_sha256": "6be55caf9a15277b796db01466247a9c181fd5949e0219e306f7383b42d41c75",
+      "replay_from_start": "PASS",
+      "step_hash_equality": "PASS",
+      "final_mmr_equality": "PASS",
+      "random_access_replay": "RESTORE_SUPPORTED_STEP_HASH_NOT_CLAIMED"
+    }
+  },
+  "context_sweep": {
+    "state": "PASS_BOUNDED",
+    "path": "evidence/competition/replay_seed_adaptive/context_sweep/context_sweep_69c29262b508.json",
+    "sha256": "177264dbf2f80d01d1ac6ffb7949624c35bed453c925ee9463f58c8550a14bdf",
+    "min_context_level": "L0",
+    "best_p50_level": "L0",
+    "adaptive_context_state": "TESTED_NOT_WINNER",
+    "levels": [
+      {
+        "level": "L0",
+        "decision_p50_ms": 2477.4039,
+        "decision_p95_ms": 5769.079,
+        "input_bytes_mean": 194.0,
+        "mmr_size": 2,
+        "mmr_root": "2e210a2a01d892f23efce31ea60b9c8130e38fe93cacbed69d8e34437980c482"
+      },
+      {
+        "level": "L0_SHIFT",
+        "decision_p50_ms": 4727.0693,
+        "decision_p95_ms": 6609.4335,
+        "input_bytes_mean": 249.0,
+        "mmr_size": 2,
+        "mmr_root": "1a26c51c9f05c9488047891f6c804db034199e63b8a1a4e36263eaa25d356290"
+      },
+      {
+        "level": "L0_DG_AC",
+        "decision_p50_ms": 4880.8938,
+        "decision_p95_ms": 6685.307,
+        "input_bytes_mean": 317.0,
+        "mmr_size": 2,
+        "mmr_root": "b00b0d25abef4409bb640c720ed22fabe46aa75e021f75c91f91c31e125a258f"
+      },
+      {
+        "level": "L1",
+        "decision_p50_ms": 4286.719,
+        "decision_p95_ms": 4313.8306,
+        "input_bytes_mean": 478.0,
+        "mmr_size": 2,
+        "mmr_root": "98deb232479eed68121ac4960ac4470ceb6e42dd0003a93b78e985856a5e1832"
+      },
+      {
+        "level": "L2",
+        "decision_p50_ms": 4312.9658,
+        "decision_p95_ms": 6882.947,
+        "input_bytes_mean": 538.0,
+        "mmr_size": 2,
+        "mmr_root": "2aaf722cbd3ca31d92fd3f2be5a9fc997d1ccfd6a590c65be3dd5081542726c3"
+      },
+      {
+        "level": "ADAPTIVE",
+        "decision_p50_ms": 3449.0335,
+        "decision_p95_ms": 5131.6808,
+        "input_bytes_mean": 373.0,
+        "mmr_size": 2,
+        "mmr_root": "93962a672389f9c0fcc6557fc53f6ef05d405273c5ca85ab8065572665368002"
+      }
+    ]
+  },
+  "real_jev_interface": {
+    "state": "READY_BYO_TYPESAFE_API_KEY",
+    "missing_key_behavior": "BLOCKED_MISSING_TYPESAFE_API_KEY",
+    "substitution_performed": false,
+    "judge_command_documented": true
+  },
+  "optional_services": {
+    "tenki": "DEFERRED_NOT_REQUIRED_FOR_THIS_STAGE",
+    "tenki_clean_room": "NOT_TESTED",
+    "mitosis": "OFF_NOT_REQUIRED_FOR_THIS_STAGE",
+    "gum_doctor": "NOT_EVIDENCED",
+    "kaggle": "NOT_REQUIRED"
+  },
+  "claim_state": {
+    "anticube_temporal": "CANDIDATE_FORMALIZATION_RECORDED",
+    "deltag_temporal": "CANDIDATE_FORMALIZATION_RECORDED",
+    "browser_e2e": "NOT_REQUIRED",
+    "private_codec_disclosure": "NONE"
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": ["schema", "head", "p0_findings", "p1_findings", "p2_findings", "status"],
+  "properties": {
+    "schema": {"const": "CLAUDE_REDTEAM_RESULT_V02"},
+    "head": {"type": "string", "pattern": "^[0-9a-f]{40}$"},
+    "p0_findings": {"type": "integer", "minimum": 0},
+    "p1_findings": {"type": "integer", "minimum": 0},
+    "p2_findings": {"type": "integer", "minimum": 0},
+    "status": {"enum": ["REDTEAM_CLEAR", "REDTEAM_P0_FOUND", "BLOCKED_NOT_EVIDENCED"]},
+    "findings": {"type": "array"}
+  }
+}

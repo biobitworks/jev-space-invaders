@@ -1,0 +1,201 @@
+{
+  "ACTION_ONTOLOGY_VERSION": "ECA_6_CLASS_V1",
+  "ACTION_STREAM_ROOT": "f3a82a04fe2438e1f7ad3496db6071a4e5d19af7a6dc526e6de4f8b26197ccda",
+  "ALE_VERSION": null,
+  "BREAKPOINT_ID": "ENGINEERING-OPENJEV-RAW-openjev_raw_69fd4f0519e3",
+  "CLAIM_CEILING": "Replay seed authenticates and reconstructs this bounded local engineering run only; it is not a qualified competition breakpoint.",
+  "CONTENT_MANIFEST": [
+    {
+      "bytes": 110,
+      "path": "controller/28d6f89b7673444d8d477bfc6627c80a.jsonl",
+      "sha256": "d9014029dadadcaa487a0adc1619dda30f3f8bb5617c0e3dad837aec5bee40fd"
+    },
+    {
+      "bytes": 110,
+      "path": "controller/989cd72ee81142a4a8a3e6b165115e57.jsonl",
+      "sha256": "af1ba85ea7d190e4fdd53ee43f1e68d6bc3535c65da8240f694f07293d49f282"
+    },
+    {
+      "bytes": 110,
+      "path": "controller/b4e88f4387cb40fe8b7ed9a6be5e2c93.jsonl",
+      "sha256": "f110da2473655cdd2ff99b33c6d38aaa6fb3d103e509982fada2e3fe69a659e4"
+    },
+    {
+      "bytes": 110,
+      "path": "controller/c45d6d36533f4aea80970cfb67395dbb.jsonl",
+      "sha256": "43bfda9318faae5841a3c7e1fc1b870293509f6e4194d230734055111cbe9c49"
+    },
+    {
+      "bytes": 27672,
+      "path": "fco.jsonl",
+      "sha256": "9967e9562e614cb6d1ec683447df47d7c623e6d29a643a453aa3ed89c24d30ae"
+    },
+    {
+      "bytes": 1802,
+      "path": "frames/seed_1_step_0.png",
+      "sha256": "65f333f39f79c0f0750a7cf98a79509e71b1905a4893efc7a72c191c61e165b9"
+    },
+    {
+      "bytes": 1839,
+      "path": "frames/seed_1_step_1.png",
+      "sha256": "c0abb9f6c63007595914269da75c872c267b7b60ee903a7062b4c207a85f7753"
+    },
+    {
+      "bytes": 1839,
+      "path": "frames/seed_1_step_2.png",
+      "sha256": "c0abb9f6c63007595914269da75c872c267b7b60ee903a7062b4c207a85f7753"
+    },
+    {
+      "bytes": 1802,
+      "path": "frames/seed_2_step_0.png",
+      "sha256": "65f333f39f79c0f0750a7cf98a79509e71b1905a4893efc7a72c191c61e165b9"
+    },
+    {
+      "bytes": 1839,
+      "path": "frames/seed_2_step_1.png",
+      "sha256": "c0abb9f6c63007595914269da75c872c267b7b60ee903a7062b4c207a85f7753"
+    },
+    {
+      "bytes": 1839,
+      "path": "frames/seed_2_step_2.png",
+      "sha256": "c0abb9f6c63007595914269da75c872c267b7b60ee903a7062b4c207a85f7753"
+    },
+    {
+      "bytes": 1802,
+      "path": "frames/seed_3_step_0.png",
+      "sha256": "65f333f39f79c0f0750a7cf98a79509e71b1905a4893efc7a72c191c61e165b9"
+    },
+    {
+      "bytes": 1839,
+      "path": "frames/seed_3_step_1.png",
+      "sha256": "c0abb9f6c63007595914269da75c872c267b7b60ee903a7062b4c207a85f7753"
+    },
+    {
+      "bytes": 1839,
+      "path": "frames/seed_3_step_2.png",
+      "sha256": "c0abb9f6c63007595914269da75c872c267b7b60ee903a7062b4c207a85f7753"
+    },
+    {
+      "bytes": 3091,
+      "path": "manifest.json",
+      "sha256": "ee14109e6fbfbbc64ba13c52690ba26593a17bd20f81ad33f6d65b496d570904"
+    },
+    {
+      "bytes": 3090,
+      "path": "mmr.jsonl",
+      "sha256": "0859953153ad6ea97066ae6b0377bfe8f5335b12e68a3bed3dd283cda9d4bde7"
+    },
+    {
+      "bytes": 3357,
+      "path": "results.json",
+      "sha256": "02fa3ac21dea66894367411a523bce93e5b5eb0a4075d54155fd877f607189c2"
+    },
+    {
+      "bytes": 14458,
+      "path": "snapshots/seed_1_step_0.ale_state.pkl",
+      "sha256": "5d82b07edf1a44ca0176bf2483925f8416b56aa1620c06641a2e937e3f1d64d1"
+    },
+    {
+      "bytes": 14455,
+      "path": "snapshots/seed_1_step_1.ale_state.pkl",
+      "sha256": "24c3b69cf848d57fa4a376f097aef52e088c27e150c2dc64e8f682c61f98dd4e"
+    },
+    {
+      "bytes": 14455,
+      "path": "snapshots/seed_1_step_2.ale_state.pkl",
+      "sha256": "f0f9d7a62bb2d3455de9ca6d5db200708c347081caeaa9d58e6df9943831a9dd"
+    },
+    {
+      "bytes": 14458,
+      "path": "snapshots/seed_2_step_0.ale_state.pkl",
+      "sha256": "e8d15016b852557b9127f674fdce79ae26bf65c676b41f6a337a5bf3301cceb7"
+    },
+    {
+      "bytes": 14459,
+      "path": "snapshots/seed_2_step_1.ale_state.pkl",
+      "sha256": "cf7e3087d7a523b8e0a8265d02fe55c4e239491a0d7044d33167b4cc0995eb92"
+    },
+    {
+      "bytes": 14459,
+      "path": "snapshots/seed_2_step_2.ale_state.pkl",
+      "sha256": "5e53e4320a0f12539e24b42a8c5d2a6d004b186e576ae63deccdf924fe04fd10"
+    },
+    {
+      "bytes": 14439,
+      "path": "snapshots/seed_3_step_0.ale_state.pkl",
+      "sha256": "8cbcc9ad335d929410e5f537c16cb44b7aba4726cba61447975eabeeda5c5a50"
+    },
+    {
+      "bytes": 14439,
+      "path": "snapshots/seed_3_step_1.ale_state.pkl",
+      "sha256": "86025d1e716101c457ac64d930173d687b611e47d13bf178c16c5beaf01ebecd"
+    },
+    {
+      "bytes": 14440,
+      "path": "snapshots/seed_3_step_2.ale_state.pkl",
+      "sha256": "b435dff0cc5ecbd4fe3dc679e620f402743bb5cb71baa6dc8d524b533f0ea412"
+    },
+    {
+      "bytes": 11502,
+      "path": "telemetry.jsonl",
+      "sha256": "0dca8b827f2d7dd9ac2f0bd5ccc52defd268ed1a7a019bacb59125329a6aff9c"
+    }
+  ],
+  "CONTENT_MANIFEST_ROOT": "da228604d02357e6fd17ab2d2e5bb8133fe6e8b422ec1787efb3ae29fec5fe88",
+  "DECIDER_ID": "SYSTEM_ONE/OPENJEV_LOCAL",
+  "ENVIRONMENT_ID": "ALE/SpaceInvaders-v5",
+  "ENVIRONMENT_VERSION": "src.envcfg.ENV_CONFIG",
+  "FCO_REF": "fco.jsonl",
+  "FCO_STREAM_ROOT": "9967e9562e614cb6d1ec683447df47d7c623e6d29a643a453aa3ed89c24d30ae",
+  "FCO_TYPE": "REPLAY_SEED_FCO",
+  "FIRST_STEP_ROOT": "ebfa013a5e2ffe3ac1195d6147e355a8a2bc4682feb1f011b0dd69ab126e0a89",
+  "FRAME_INDEX_ROOT": "c7f9bec411e12e05c4dafa12d1316c38efc448da5408eb048fb38dcdb0b0fb75",
+  "GYMNASIUM_VERSION": null,
+  "INITIAL_OBSERVATION_FCO": "FCO:ObservationFCO:4bf55da02726b28c",
+  "INITIAL_STATE_BLOB_REF": "snapshots/seed_1_step_0.ale_state.pkl",
+  "INITIAL_STATE_HASH": "5d82b07edf1a44ca0176bf2483925f8416b56aa1620c06641a2e937e3f1d64d1",
+  "LAST_STEP_ROOT": "7b86760a7e4e89a3e98e826ec32540ecf350b0b367343007d125ff1975da028e",
+  "MMR_PEAKS": [
+    "7b86760a7e4e89a3e98e826ec32540ecf350b0b367343007d125ff1975da028e",
+    "b8586264f2dd56991d1ba754fbc25c9f3b477b86f671b7e1139314dc00a114d2"
+  ],
+  "MMR_REF": "mmr.jsonl",
+  "MMR_ROOT": "21de8b00425a916376f02d5ae41e05982955f7d78fe64533927b17a9039b8d32",
+  "MMR_SIZE": 9,
+  "MODEL_HASH": "51fcc8fa97d41900988dcf3bef521ee3888b434bb4479b8b6969ed985639c679",
+  "MODEL_ID": "openjev",
+  "PREPROCESSOR_ID": "NONE",
+  "PREPROCESSOR_VERSION": "RAW_COMPACT_STATE_V1_OR_VITHIA_SPACE_L1_CONTEXT_V1",
+  "PYTHON_VERSION": null,
+  "REPLAY_ID": "REPLAY:openjev_raw_69fd4f0519e3:21de8b00425a9163",
+  "REPLAY_SEED_ROOT": "73d1be29fc8165b19309c7f4b48d753aad978d52b3341c569c01bff054b21a22",
+  "RESULTS_HASH": "02fa3ac21dea66894367411a523bce93e5b5eb0a4075d54155fd877f607189c2",
+  "ROM": {
+    "ROM_BYTES_DISTRIBUTED": false,
+    "ROM_HASH": "7224b17462b992d67f4e06a3c85f269c9822b06df6015bf038b55f384ced0301",
+    "ROM_IDENTIFIER": "ale_py:space_invaders.bin"
+  },
+  "RUNTIME": "MLX",
+  "RUNTIME_VERSION": {
+    "ale_py": "0.12.1",
+    "gymnasium": "1.3.0",
+    "numpy": "2.5.3",
+    "platform": "macOS-27.0-arm64-arm-64bit",
+    "python": "3.12.13"
+  },
+  "RUN_CONFIG_HASH": "3a0a6eeb4b3d4f0139a3233bbf515d66dba82199f1ef008d1169c60364be7a06",
+  "RUN_ID": "openjev_raw_69fd4f0519e3",
+  "RUN_MANIFEST_REF": "manifest.json",
+  "SEEDS": [
+    1,
+    2,
+    3
+  ],
+  "SIGNATURE_STATE": "NOT_SIGNED_RUN_PROOF_ONLY",
+  "SNAPSHOT_INDEX_ROOT": "b71f9f4cbcaa6ead53ddc2e561b4fe71928dd89cfd76a4b87def3e1b2224eac1",
+  "SOURCE_HEAD": "8c8abb6a18aa2304d0ccbc777a387f2bf5cca84b",
+  "SOURCE_TREE_HASH": "9bbe0bafa0136cb0beb89e95660a6c8659043b67",
+  "TELEMETRY_HASH": "0dca8b827f2d7dd9ac2f0bd5ccc52defd268ed1a7a019bacb59125329a6aff9c",
+  "TELEMETRY_REF": "telemetry.jsonl",
+  "schema": "REPLAY_SEED_FCO_V1"
+}

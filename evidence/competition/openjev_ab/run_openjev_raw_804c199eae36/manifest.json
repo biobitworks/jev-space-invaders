@@ -1,0 +1,98 @@
+{
+  "action_distribution": {
+    "FIRE": 0,
+    "LEFT": 0,
+    "LEFTFIRE": 10,
+    "NOOP": 0,
+    "RIGHT": 0,
+    "RIGHTFIRE": 0
+  },
+  "arm": "OPENJEV_RAW",
+  "control_hz": 0.5479,
+  "control_loop_latency": {
+    "max": 1797.4196,
+    "mean": 1771.9996,
+    "p50": 1770.4917,
+    "p95": 1797.4196
+  },
+  "decider": "SYSTEM_ONE/OPENJEV_LOCAL",
+  "decision_latency": {
+    "max": 1796.7179,
+    "mean": 1771.3492,
+    "p50": 1769.8473,
+    "p95": 1796.7179
+  },
+  "environment": "ALE/SpaceInvaders-v5",
+  "errors": [],
+  "fallbacks": 0,
+  "fco_root": "f8ef1e39b031ac9cf1a179d790273cae53152ecb50ba7d61f8d8e2e5e24db484",
+  "final_lives": 3,
+  "final_score": 0.0,
+  "first_step_root": "c72262936b96e2235c96de8e3c6d45e4aff0c928a9732feb44c74c71a466eb0a",
+  "input_bytes": {
+    "max": 57.0,
+    "mean": 55.0,
+    "p50": 53.0,
+    "p95": 57.0
+  },
+  "last_step_root": "4e59ad22a4d8931161f4972c7d531afce28221dcaf72a1652e390ee9057388b8",
+  "mmr_peaks": [
+    "a1c16e261be21ae81e7e40b8ad03c5b56106a836b25b2db7f811570d21347c15",
+    "85e9df80e1faff21dfddebb63b1515f8b2bbd627c8e62871d45bfd44db0db402"
+  ],
+  "mmr_root": "6c300f038b710aa11a75a2eae21d3d5aaa83492b8fb29509051a8da774a2d443",
+  "mmr_size": 10,
+  "model": "openjev",
+  "openjev_inference": {
+    "max": 1796.56,
+    "mean": 1771.184,
+    "p50": 1769.67,
+    "p95": 1796.56
+  },
+  "preprocessor": "NONE",
+  "raw_input_bytes": {
+    "max": 101.0,
+    "mean": 99.0,
+    "p50": 97.0,
+    "p95": 101.0
+  },
+  "run_id": "openjev_raw_804c199eae36",
+  "run_proof": {
+    "MMR_ROOT": "6c300f038b710aa11a75a2eae21d3d5aaa83492b8fb29509051a8da774a2d443",
+    "MMR_SIZE": 10,
+    "RUN_PROOF_VERIFY": "PASS",
+    "checked_steps": 10
+  },
+  "run_root": "feab3013c7ebba4c5535aa4b4e90dbb9272504376958cc230e97256ac15ce6fb",
+  "runtime": {
+    "OPENJEV_LOAD_STATE": "PASS",
+    "OPENJEV_LOCAL_PATH": "/Volumes/magicBLACKbox/openjev/openjev-MLX-4bit",
+    "OPENJEV_MODEL_HASH": "51fcc8fa97d41900988dcf3bef521ee3888b434bb4479b8b6969ed985639c679",
+    "OPENJEV_MODEL_ID": "openjev/openjev-MLX-4bit",
+    "OPENJEV_RUNTIME": "MLX",
+    "OPENJEV_SIZE": 15153274826,
+    "endpoint": "http://127.0.0.1:8768/v1/systemone",
+    "failure": null,
+    "manifest": "/Users/byron/projects/active/vithia-space-per-seat-v02/evidence/openjev/RUNTIME_MANIFEST.json"
+  },
+  "schema": "VITHIA_OPENJEV_AB_ARM_MANIFEST_V1",
+  "score_total": 0.0,
+  "seeds": [
+    1,
+    2,
+    3,
+    4,
+    5
+  ],
+  "source_head": "514b2d73527f76830f99712c24c7a46f3565bce9",
+  "steps_executed": 10,
+  "steps_requested": 2,
+  "telemetry_root": "54a7e85e083024b41bbd692bc89a1f70f6b1d2dfee637c1e245821ad2607a6fe",
+  "termination": "BOUNDED_STEPS_COMPLETE",
+  "vithia_latency": {
+    "max": 0.0,
+    "mean": 0.0,
+    "p50": 0.0,
+    "p95": 0.0
+  }
+}

@@ -1,0 +1,173 @@
+{
+  "ACTION_ONTOLOGY_VERSION": "ECA_6_CLASS_V1",
+  "ACTION_STREAM_ROOT": null,
+  "ALE_VERSION": null,
+  "BREAKPOINT_ID": "ENGINEERING-OPENJEV-VITHIA-L1-REPLAY",
+  "CLAIM_CEILING": "Replay seed authenticates and reconstructs this bounded local engineering run only; it is not a qualified competition breakpoint.",
+  "CONTENT_MANIFEST": [
+    {
+      "bytes": 110,
+      "path": "controller/4a237785949b4783be88c636c83cf698.jsonl",
+      "sha256": "236164256486ce1ca46b0ae91701b5298dd48be02cc54c2f4e1c56d34fadba2e"
+    },
+    {
+      "bytes": 110,
+      "path": "controller/56d7f81d775140ddba87f41bf6ae4da9.jsonl",
+      "sha256": "4d842f69c4cf145f4843848aa9cf4fe339b93ee0407bebfdbd66e3deecd1a267"
+    },
+    {
+      "bytes": 110,
+      "path": "controller/95e51f2847ba4e43857751a8ea564058.jsonl",
+      "sha256": "52da292054dc0303ab6920568dbe9afe071972e1f45fa4e505873f5d4ff80186"
+    },
+    {
+      "bytes": 110,
+      "path": "controller/b7aa2b05c3614e009687e2b3d464de50.jsonl",
+      "sha256": "2a6e3b543d8fe081925d5fff1594008a5eee42cfdd820f4883e8cc9e48ca494b"
+    },
+    {
+      "bytes": 110,
+      "path": "controller/d3320ae23a644a55a8b2b6b852e56bbb.jsonl",
+      "sha256": "0f2877079fcda0c2bec1790d4177a769ec7db001407b7e672f76f3aa908b07c4"
+    },
+    {
+      "bytes": 110,
+      "path": "controller/d43580a60685443d8a3b4a204ff34114.jsonl",
+      "sha256": "28cee45b5ad25bed177408cdf0a6f6a007c522d940a026dc4f248ba9149262b9"
+    },
+    {
+      "bytes": 20480,
+      "path": "fco.jsonl",
+      "sha256": "aabe31077121b4679888a3ae848f9ffaa5d21efa8ff2e9a0953d19bf4a34c380"
+    },
+    {
+      "bytes": 1802,
+      "path": "frames/seed_1_step_0.png",
+      "sha256": "65f333f39f79c0f0750a7cf98a79509e71b1905a4893efc7a72c191c61e165b9"
+    },
+    {
+      "bytes": 1839,
+      "path": "frames/seed_1_step_1.png",
+      "sha256": "c0abb9f6c63007595914269da75c872c267b7b60ee903a7062b4c207a85f7753"
+    },
+    {
+      "bytes": 1802,
+      "path": "frames/seed_2_step_0.png",
+      "sha256": "65f333f39f79c0f0750a7cf98a79509e71b1905a4893efc7a72c191c61e165b9"
+    },
+    {
+      "bytes": 1839,
+      "path": "frames/seed_2_step_1.png",
+      "sha256": "c0abb9f6c63007595914269da75c872c267b7b60ee903a7062b4c207a85f7753"
+    },
+    {
+      "bytes": 1802,
+      "path": "frames/seed_3_step_0.png",
+      "sha256": "65f333f39f79c0f0750a7cf98a79509e71b1905a4893efc7a72c191c61e165b9"
+    },
+    {
+      "bytes": 1839,
+      "path": "frames/seed_3_step_1.png",
+      "sha256": "c0abb9f6c63007595914269da75c872c267b7b60ee903a7062b4c207a85f7753"
+    },
+    {
+      "bytes": 1802,
+      "path": "frames/seed_4_step_0.png",
+      "sha256": "65f333f39f79c0f0750a7cf98a79509e71b1905a4893efc7a72c191c61e165b9"
+    },
+    {
+      "bytes": 1839,
+      "path": "frames/seed_4_step_1.png",
+      "sha256": "c0abb9f6c63007595914269da75c872c267b7b60ee903a7062b4c207a85f7753"
+    },
+    {
+      "bytes": 1802,
+      "path": "frames/seed_5_step_0.png",
+      "sha256": "65f333f39f79c0f0750a7cf98a79509e71b1905a4893efc7a72c191c61e165b9"
+    },
+    {
+      "bytes": 1839,
+      "path": "frames/seed_5_step_1.png",
+      "sha256": "c0abb9f6c63007595914269da75c872c267b7b60ee903a7062b4c207a85f7753"
+    },
+    {
+      "bytes": 2774,
+      "path": "manifest.json",
+      "sha256": "c987e708113a803a7dc9a84bc48b2eb8d1247bf021fdf0da0b759532dea82e55"
+    },
+    {
+      "bytes": 3517,
+      "path": "mmr.jsonl",
+      "sha256": "b564425e21f6acc7ddb19ab3ba0a5a52c49c015cc73ac2fb508d8ceb208bb769"
+    },
+    {
+      "bytes": 3034,
+      "path": "results.json",
+      "sha256": "9b8355f0f75d4dc7d82500c20be10c76919dca3d864f139f19be2b38678f1fbb"
+    },
+    {
+      "bytes": 10236,
+      "path": "telemetry.jsonl",
+      "sha256": "454bcd57d71700c73d516bd6968d2aa52b63e56268643f75320740652f9f2626"
+    }
+  ],
+  "CONTENT_MANIFEST_ROOT": "9a63cb6b93852fcdceaf9febcf29830ad9fee83c10bb527f7d157f5e30ec1faf",
+  "DECIDER_ID": "SYSTEM_ONE/OPENJEV_LOCAL",
+  "ENVIRONMENT_ID": "ALE/SpaceInvaders-v5",
+  "ENVIRONMENT_VERSION": "src.envcfg.ENV_CONFIG",
+  "FCO_REF": "fco.jsonl",
+  "FCO_STREAM_ROOT": "aabe31077121b4679888a3ae848f9ffaa5d21efa8ff2e9a0953d19bf4a34c380",
+  "FCO_TYPE": "REPLAY_SEED_FCO",
+  "FIRST_STEP_ROOT": "92e84c32366cdaceb97a3d63482a755cc9fde3c471b19f5ecb4ab52a894ae9fd",
+  "FRAME_INDEX_ROOT": null,
+  "GYMNASIUM_VERSION": null,
+  "INITIAL_OBSERVATION_FCO": "FCO:ObservationFCO:4bf55da02726b28c",
+  "INITIAL_STATE_BLOB_REF": null,
+  "INITIAL_STATE_HASH": null,
+  "LAST_STEP_ROOT": "6073de2450e6eaa07ab3ae236a4ed78f968ca552217394f685333ab4e8ebcca0",
+  "MMR_PEAKS": [
+    "f79a0ed135a5179e4ed814de5cc7523d17e56f4e0657b4aa72d96c12d16e70c7",
+    "01fdc8350bfe701f818a040b94b3d2188d5008d5ae0994f7bb886142a2c13b22"
+  ],
+  "MMR_REF": "mmr.jsonl",
+  "MMR_ROOT": "13234bf66dc83c9d082c1a09003243164f99f29a4cc141f4d5670f9495a82aa9",
+  "MMR_SIZE": 10,
+  "MODEL_HASH": "51fcc8fa97d41900988dcf3bef521ee3888b434bb4479b8b6969ed985639c679",
+  "MODEL_ID": "openjev",
+  "PREPROCESSOR_ID": "VITHIA_SPACE",
+  "PREPROCESSOR_VERSION": "RAW_COMPACT_STATE_V1_OR_VITHIA_SPACE_L1_CONTEXT_V1",
+  "PYTHON_VERSION": null,
+  "REPLAY_ID": "REPLAY:openjev_vithia_l1_2701834b043f:13234bf66dc83c9d",
+  "REPLAY_SEED_ROOT": "71195454887eb2ec9c28f76faedd5f1e14ad7f11cea92acc521571cd16f68738",
+  "RESULTS_HASH": "9b8355f0f75d4dc7d82500c20be10c76919dca3d864f139f19be2b38678f1fbb",
+  "ROM": {
+    "ROM_BYTES_DISTRIBUTED": false,
+    "ROM_HASH": "7224b17462b992d67f4e06a3c85f269c9822b06df6015bf038b55f384ced0301",
+    "ROM_IDENTIFIER": "ale_py:space_invaders.bin"
+  },
+  "RUNTIME": "MLX",
+  "RUNTIME_VERSION": {
+    "ale_py": "0.12.1",
+    "gymnasium": "1.3.0",
+    "numpy": "2.5.3",
+    "platform": "macOS-27.0-arm64-arm-64bit",
+    "python": "3.12.13"
+  },
+  "RUN_CONFIG_HASH": "9862ceb71b543848ce136c29d755292b9e0bfebe5aa013dd8d2a30f32d4e0f41",
+  "RUN_ID": "openjev_vithia_l1_2701834b043f",
+  "RUN_MANIFEST_REF": "manifest.json",
+  "SEEDS": [
+    1,
+    2,
+    3,
+    4,
+    5
+  ],
+  "SIGNATURE_STATE": "NOT_SIGNED_RUN_PROOF_ONLY",
+  "SNAPSHOT_INDEX_ROOT": null,
+  "SOURCE_HEAD": "514b2d73527f76830f99712c24c7a46f3565bce9",
+  "SOURCE_TREE_HASH": null,
+  "TELEMETRY_HASH": "454bcd57d71700c73d516bd6968d2aa52b63e56268643f75320740652f9f2626",
+  "TELEMETRY_REF": "telemetry.jsonl",
+  "schema": "REPLAY_SEED_FCO_V1"
+}

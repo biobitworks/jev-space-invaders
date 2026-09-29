@@ -2,29 +2,38 @@
 
 Public, reproducible UFA arena branch of the Vithia model family. Competition-facing code and measured results are public; credentials and unrelated proprietary Vithia architecture are not.
 
+## Demo video
+
+**Public demo video:** https://youtu.be/4BuR_NnJAsM
+
+**Submission-record video URL:** https://youtu.be/Yo-WfJVJO-Q — currently recorded as private to unauthenticated viewers in the post-submission verification branch. Use the public demo above unless/until the submission-record video is made Unlisted/Public.
+
 ## Current verified competition state
 
-- Registration: **SUBMITTED** (entry b968c199...); the demo video URL is still **BLOCKED_HUMAN_ACTION**.
-- Track: pilot. Hosted TypeSafe JEV access is **NOT_AVAILABLE_NOT_TESTED**; counted hosted-JEV runs: **0**.
-- Local comparator: provider=ollama, model=llama3.2:3b, five fixed seeds executed; scores: **270, 270, 270, 270, 270**. This is LOCAL_OLLAMA_BASELINE, not the official System-One baseline.
-- Official System-One baseline: **BLOCKED_NO_PROVIDER_CREDENTIAL**.
-- Matched OpenJEV comparator: **BLOCKED_READOUT_CAPABILITY_MISMATCH**. The pinned MLX stand-in requires targeted readout and does not satisfy the existing full-probability comparator contract.
-- Tenki: Code Review approved public PR #1, and a Tenki Sandbox executed one non-counted fixed-seed Space Invaders sponsor run (BP-0007/0008). A later attempt to re-verify Tenki access failed (`BLOCKED_INVALID_OR_REVOKED_API_KEY`). Mitosis Cortex: a universal-ID-backed directive selected seed 3 for that run; the stricter Mitosis load-bearing ablation remains **NOT_EXECUTED**. The prepared submission candidate (`evidence/competition/sponsors/SPONSOR_SUBMISSION_CLAIM_CANDIDATE.json`) keeps **both** Tenki and Mitosis `false` pending a governed, currently-reproducible load-bearing execution receipt - neither sponsor flag is upgraded to `true` in the submission.
-- Qualified competition governance now uses UFA-JEV-COMP-BP-*; the older unqualified breakpoint labels remain immutable historical identifiers within their branch context.
+- Registration: **SUBMITTED** (entry b968c199...). Publicly viewable fallback demo: https://youtu.be/4BuR_NnJAsM. The submission-record URL `Yo-WfJVJO-Q` was observed private to unauthenticated viewers during post-submission verification.
+- Track: **pilot**. Counted hosted TypeSafe JEV runs remain **0**; the repository is now **READY_BYO_TYPESAFE_API_KEY** and fails closed with `BLOCKED_MISSING_TYPESAFE_API_KEY` rather than substituting another backend.
+- Qualified competition evidence remains **UFA-JEV-COMP-BP-0017**. The later replay/context work is recorded separately as **UFA-JEV-COMP-BP-0018-ENGINEERING-SUCCESSOR** and is **not** promoted to qualified MMR admission.
+- Local Ollama comparator: `llama3.2:3b`, five fixed seeds executed; scores: **270, 270, 270, 270, 270**. This is a local comparator, not counted hosted JEV.
+- OpenJEV engineering lane: **PASS_BOUNDED_LOCAL** with `openjev/openjev-MLX-4bit`. In the matched 3-seed × 3-step smoke, Vithia L1 changed decision p50 from **5626.834 ms** to **4725.3426 ms** (Δ **-901.4914 ms**), while p95 changed from **6176.3331 ms** to **7057.1172 ms** (Δ **+880.7841 ms**) and score remained **0 → 0**. This is bounded engineering evidence, not a hosted-JEV performance claim.
+- Context sweep: **PASS_BOUNDED**. `L0` was the minimum/best-p50 context in the recorded sweep; the adaptive Anticube/ΔG* candidate was **TESTED_NOT_WINNER**.
+- Replay proof: `ReplaySeedFCO` **PASS**, replay-from-start **PASS**, step-hash equality **PASS**, final-MMR equality **PASS**. Random-access restore support exists, but arbitrary restored-step hash equality is **not claimed**.
+- System One adapter: installed/ready for comparator use; no new provider-backed official baseline run is claimed here.
+- Tenki and Mitosis are **not required** for the judge-critical path in this successor. Current successor state: Tenki **DEFERRED_NOT_REQUIRED_FOR_THIS_STAGE**; Mitosis **OFF_NOT_REQUIRED_FOR_THIS_STAGE**.
+- Qualified competition governance uses the `UFA-JEV-COMP-BP-*` namespace; historical identifiers and predecessor breakpoints remain immutable.
 
 ## Competition contract
 
 - JEV must make the core decisions.
 - Public repo must run from this README.
-- At least 5 fixed-seed JEV games and 5 comparable LLM baseline games.
-- Append every game to root results.json; commit and push immediately.
+- At least 5 fixed-seed JEV games and 5 comparable LLM baseline games are the target for the official comparison.
+- Append every game to root `results.json`; commit and push immediately.
 - Measurements come from environment/API/runtime, never estimates.
 
 ## Decision lanes and execution state
 
-The intended competition interface asks a decider to choose one of NOOP, FIRE, RIGHT, LEFT, RIGHTFIRE, or LEFTFIRE from compact game state. The current evidence does **not** support a hosted-JEV versus System-One performance comparison: hosted JEV was unavailable and the official System-One provider path was not executed.
+The application-level decision interface asks a decider to choose one of `NOOP`, `FIRE`, `RIGHT`, `LEFT`, `RIGHTFIRE`, or `LEFTFIRE` from compact game state. Real hosted JEV, System-One LLM comparators, and local OpenJEV are kept as distinct backends with explicit attribution and no silent fallback.
 
-The five-seed local Ollama lane is an additional non-JEV comparator. OpenJEV remains a non-counted stand-in; its matched lane was stopped before experimental inference because the pinned MLX shim exposes targeted readout only, which does not satisfy the frozen matched-comparator probability contract.
+The current public evidence supports a bounded local OpenJEV comparison and a judge-ready bring-your-own-TypeSafe-key path. It does **not** yet support a hosted-JEV versus System-One performance claim because no counted hosted-JEV run has been executed with a TypeSafe key.
 
 ## Frozen runtime-source dataset
 
@@ -39,6 +48,25 @@ Python 3.10+. The Space Invaders ROM ships inside the `ale-py` wheel; no separat
     python -m venv .venv && source .venv/bin/activate
     pip install -r requirements.txt
     cp .env.example .env        # keys go here only; never commit .env
+
+## Judge quick path
+
+1. Install the live demo runtime:
+
+       python -m venv .venv && source .venv/bin/activate
+       pip install -r live_demo/requirements.txt
+
+2. Provide your own TypeSafe key in the shell only:
+
+       export TYPESAFE_API_KEY=<judge-key>
+
+3. Run the real JEV path:
+
+       python -m live_demo.run --mode 1p --preprocessor vithia --decider jev --render terminal --headless --run-class COMPETITION_JEV
+
+If `TYPESAFE_API_KEY` is absent the runner exits with
+`JEV_API=BLOCKED_MISSING_TYPESAFE_API_KEY` and does not substitute OpenJEV,
+Ollama, Tenki, Mitosis, or any operator credential.
 
 ## Play and record (results.json is regenerated this way)
 

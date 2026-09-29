@@ -1,0 +1,173 @@
+{
+  "ACTION_ONTOLOGY_VERSION": "ECA_6_CLASS_V1",
+  "ACTION_STREAM_ROOT": null,
+  "ALE_VERSION": null,
+  "BREAKPOINT_ID": "ENGINEERING-OPENJEV-RAW-REPLAY",
+  "CLAIM_CEILING": "Replay seed authenticates and reconstructs this bounded local engineering run only; it is not a qualified competition breakpoint.",
+  "CONTENT_MANIFEST": [
+    {
+      "bytes": 110,
+      "path": "controller/19b0ce48823f4fd1a09a60c637b2a904.jsonl",
+      "sha256": "43acdb39565508d0e44e28ede80b24b36e8d3f05a4b890c1ff803a1815282deb"
+    },
+    {
+      "bytes": 110,
+      "path": "controller/264681e654f2494f804035fdd14b0181.jsonl",
+      "sha256": "2786ce11f16fd1778bacd52c3db84798dac606c47c732aeda03fff73744948fa"
+    },
+    {
+      "bytes": 110,
+      "path": "controller/3dfbd5d4062b47e48c1530f841499587.jsonl",
+      "sha256": "9bcc957afe797fc9d30279dd966682b6060a84ec04373d60ab423702f4f0e068"
+    },
+    {
+      "bytes": 110,
+      "path": "controller/50bbf5850f7a4e4d8d7c512cd20e42e4.jsonl",
+      "sha256": "5c1658ec90600aa6dc02ec0430124adf17592624d0e0e6e85fa9a3179a4e3f20"
+    },
+    {
+      "bytes": 110,
+      "path": "controller/6989373b190741798d04dffa4bddd4e3.jsonl",
+      "sha256": "8ead2dacd18af16edc6cbada0da25932bc7a88deb0c4e3fb4f971942b3b23503"
+    },
+    {
+      "bytes": 110,
+      "path": "controller/d1b266dd370e405780adf1b222e9e099.jsonl",
+      "sha256": "a561ff555efc2ca36e59cc89f9b0014cfb0bb85cd86cdca8af8c2cc62ef59e14"
+    },
+    {
+      "bytes": 21854,
+      "path": "fco.jsonl",
+      "sha256": "77448cf262a0038bb8d317cd6ca049aad8902b49b76e7230616a9ea6f44dabae"
+    },
+    {
+      "bytes": 1802,
+      "path": "frames/seed_1_step_0.png",
+      "sha256": "65f333f39f79c0f0750a7cf98a79509e71b1905a4893efc7a72c191c61e165b9"
+    },
+    {
+      "bytes": 1839,
+      "path": "frames/seed_1_step_1.png",
+      "sha256": "c0abb9f6c63007595914269da75c872c267b7b60ee903a7062b4c207a85f7753"
+    },
+    {
+      "bytes": 1802,
+      "path": "frames/seed_2_step_0.png",
+      "sha256": "65f333f39f79c0f0750a7cf98a79509e71b1905a4893efc7a72c191c61e165b9"
+    },
+    {
+      "bytes": 1839,
+      "path": "frames/seed_2_step_1.png",
+      "sha256": "c0abb9f6c63007595914269da75c872c267b7b60ee903a7062b4c207a85f7753"
+    },
+    {
+      "bytes": 1802,
+      "path": "frames/seed_3_step_0.png",
+      "sha256": "65f333f39f79c0f0750a7cf98a79509e71b1905a4893efc7a72c191c61e165b9"
+    },
+    {
+      "bytes": 1839,
+      "path": "frames/seed_3_step_1.png",
+      "sha256": "c0abb9f6c63007595914269da75c872c267b7b60ee903a7062b4c207a85f7753"
+    },
+    {
+      "bytes": 1802,
+      "path": "frames/seed_4_step_0.png",
+      "sha256": "65f333f39f79c0f0750a7cf98a79509e71b1905a4893efc7a72c191c61e165b9"
+    },
+    {
+      "bytes": 1839,
+      "path": "frames/seed_4_step_1.png",
+      "sha256": "c0abb9f6c63007595914269da75c872c267b7b60ee903a7062b4c207a85f7753"
+    },
+    {
+      "bytes": 1802,
+      "path": "frames/seed_5_step_0.png",
+      "sha256": "65f333f39f79c0f0750a7cf98a79509e71b1905a4893efc7a72c191c61e165b9"
+    },
+    {
+      "bytes": 1839,
+      "path": "frames/seed_5_step_1.png",
+      "sha256": "c0abb9f6c63007595914269da75c872c267b7b60ee903a7062b4c207a85f7753"
+    },
+    {
+      "bytes": 2741,
+      "path": "manifest.json",
+      "sha256": "b529d59cac8469afee06093759d4704730acdd44d88eabfac941581cb8f1b721"
+    },
+    {
+      "bytes": 3457,
+      "path": "mmr.jsonl",
+      "sha256": "1db2fb8cf041528ec645637a5b083c1c888f70c3d2d3b344898893514e83b64f"
+    },
+    {
+      "bytes": 3001,
+      "path": "results.json",
+      "sha256": "05c73b884d7c0342a53165e16c378547c2ac159c300066eafd448ad52d03d88e"
+    },
+    {
+      "bytes": 10087,
+      "path": "telemetry.jsonl",
+      "sha256": "e29244fc41078ead1fa8981f5b8271443ceafdcc150ca74180f72cd86126b5b7"
+    }
+  ],
+  "CONTENT_MANIFEST_ROOT": "7ba01a9ddf2b7f4e897f34cd3eef97a3d92b25b3a8c1771893867c1a5b7531d8",
+  "DECIDER_ID": "SYSTEM_ONE/OPENJEV_LOCAL",
+  "ENVIRONMENT_ID": "ALE/SpaceInvaders-v5",
+  "ENVIRONMENT_VERSION": "src.envcfg.ENV_CONFIG",
+  "FCO_REF": "fco.jsonl",
+  "FCO_STREAM_ROOT": "77448cf262a0038bb8d317cd6ca049aad8902b49b76e7230616a9ea6f44dabae",
+  "FCO_TYPE": "REPLAY_SEED_FCO",
+  "FIRST_STEP_ROOT": "056dfc37b1fc01d060878c24d40fff6afbf101257df9ca8cfb265763b77f8c7f",
+  "FRAME_INDEX_ROOT": null,
+  "GYMNASIUM_VERSION": null,
+  "INITIAL_OBSERVATION_FCO": "FCO:ObservationFCO:4bf55da02726b28c",
+  "INITIAL_STATE_BLOB_REF": null,
+  "INITIAL_STATE_HASH": null,
+  "LAST_STEP_ROOT": "ec4b53418413eb56f33a805a501880ca25a1164cf68415979034c5a8e7632b2f",
+  "MMR_PEAKS": [
+    "e8c180bcd2055b388ff6b43f0f793014ec33529568248a182992c18c39178f22",
+    "4cc202e6b9cef11266952e5920cbf8a6dad96ea93facc3de9e3a8b6df0ee6731"
+  ],
+  "MMR_REF": "mmr.jsonl",
+  "MMR_ROOT": "c40aaa36fae12e8c09033df976d44c7acb1e3e7dd6d3bb3e6ccb7ca08bb9beaa",
+  "MMR_SIZE": 10,
+  "MODEL_HASH": "51fcc8fa97d41900988dcf3bef521ee3888b434bb4479b8b6969ed985639c679",
+  "MODEL_ID": "openjev",
+  "PREPROCESSOR_ID": "NONE",
+  "PREPROCESSOR_VERSION": "RAW_COMPACT_STATE_V1_OR_VITHIA_SPACE_L1_CONTEXT_V1",
+  "PYTHON_VERSION": null,
+  "REPLAY_ID": "REPLAY:openjev_raw_034f76deedf6:c40aaa36fae12e8c",
+  "REPLAY_SEED_ROOT": "4dd6476063ff7f1c044a36c1a706709e6e4f180a450a90dcc48f1aed08fa9b24",
+  "RESULTS_HASH": "05c73b884d7c0342a53165e16c378547c2ac159c300066eafd448ad52d03d88e",
+  "ROM": {
+    "ROM_BYTES_DISTRIBUTED": false,
+    "ROM_HASH": "7224b17462b992d67f4e06a3c85f269c9822b06df6015bf038b55f384ced0301",
+    "ROM_IDENTIFIER": "ale_py:space_invaders.bin"
+  },
+  "RUNTIME": "MLX",
+  "RUNTIME_VERSION": {
+    "ale_py": "0.12.1",
+    "gymnasium": "1.3.0",
+    "numpy": "2.5.3",
+    "platform": "macOS-27.0-arm64-arm-64bit",
+    "python": "3.12.13"
+  },
+  "RUN_CONFIG_HASH": "96dd270c5dcf54f6906845a2d114798d5d5d4788c7363d9068cf67596f337a83",
+  "RUN_ID": "openjev_raw_034f76deedf6",
+  "RUN_MANIFEST_REF": "manifest.json",
+  "SEEDS": [
+    1,
+    2,
+    3,
+    4,
+    5
+  ],
+  "SIGNATURE_STATE": "NOT_SIGNED_RUN_PROOF_ONLY",
+  "SNAPSHOT_INDEX_ROOT": null,
+  "SOURCE_HEAD": "514b2d73527f76830f99712c24c7a46f3565bce9",
+  "SOURCE_TREE_HASH": null,
+  "TELEMETRY_HASH": "e29244fc41078ead1fa8981f5b8271443ceafdcc150ca74180f72cd86126b5b7",
+  "TELEMETRY_REF": "telemetry.jsonl",
+  "schema": "REPLAY_SEED_FCO_V1"
+}

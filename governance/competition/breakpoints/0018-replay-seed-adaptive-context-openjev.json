@@ -1,0 +1,66 @@
+{
+  "schema": "UFA_JEV_ENGINEERING_SUCCESSOR_BREAKPOINT_V1",
+  "lineage_id": "UFA-JEV-COMP",
+  "branch": "competition/per-seat-decider-preprocessor-v02-20260928",
+  "breakpoint_id": "UFA-JEV-COMP-BP-0018-ENGINEERING-SUCCESSOR",
+  "state": "REPLAY_SEED_ADAPTIVE_CONTEXT_OPENJEV_EVIDENCE_RECORDED",
+  "project": "VITHIA_SPACE",
+  "task": "VITHIA_REPLAY_SEED_ADAPTIVE_CONTEXT_JEV_E2E_V01",
+  "parent_head": "8c8abb6a18aa2304d0ccbc777a387f2bf5cca84b",
+  "successor_to": "UFA-JEV-COMP-BP-0017",
+  "qualified_predecessor": {
+    "breakpoint_id": "UFA-JEV-COMP-BP-0017",
+    "mmr_size": 17,
+    "mmr_root": "2ade9c85f1378207ed1e6f3fc89c0adef7e4987c15c9a12ca2b10123d3a2d119",
+    "mutated": false
+  },
+  "qualified_mmr_admission": "NOT_PERFORMED",
+  "mmr_reconciliation_performed": false,
+  "historical_mutation_performed": false,
+  "stage": "REPLAY_SEED_ADAPTIVE_CONTEXT_OPENJEV",
+  "source_head": "8c8abb6a18aa2304d0ccbc777a387f2bf5cca84b",
+  "source_tree_hash": "9bbe0bafa0136cb0beb89e95660a6c8659043b67",
+  "openjev_long_ab": {
+    "state": "PASS_BOUNDED_3_SEEDS_X_3_STEPS",
+    "comparison": "evidence/competition/replay_seed_adaptive/comparison_22c0471ad648.json",
+    "comparison_sha256": "9a5e86d6af6d3b1c1c416becc1680414b7a483ba8296562dafa4b807886fe2e9",
+    "raw_run_id": "openjev_raw_69fd4f0519e3",
+    "vithia_run_id": "openjev_vithia_l1_f71e267476ef",
+    "delta_decision_p50_ms": -901.4914,
+    "delta_decision_p95_ms": 880.7841,
+    "delta_score": 0.0
+  },
+  "replay_seed": {
+    "vithia_replay_seed_root": "85f01e8a1c8b613ac99a3d1b2476c7f3a8dc083540c5ab413893858656030a5b",
+    "vithia_mmr_size": 9,
+    "vithia_mmr_root": "51938d476cff59fd4d44adb4888ea03d17199e1e8aac052fc84d567cbccf4eb4",
+    "action_stream_root": "f3a82a04fe2438e1f7ad3496db6071a4e5d19af7a6dc526e6de4f8b26197ccda",
+    "frame_index_root": "c7f9bec411e12e05c4dafa12d1316c38efc448da5408eb048fb38dcdb0b0fb75",
+    "snapshot_index_root": "b71f9f4cbcaa6ead53ddc2e561b4fe71928dd89cfd76a4b87def3e1b2224eac1",
+    "replay_from_start": "PASS",
+    "step_hash_equality": "PASS",
+    "final_mmr_equality": "PASS",
+    "random_access_replay": "RESTORE_SUPPORTED_STEP_HASH_NOT_CLAIMED"
+  },
+  "context_sweep": {
+    "state": "PASS_BOUNDED",
+    "min_context_level": "L0",
+    "adaptive_context_state": "TESTED_NOT_WINNER",
+    "path": "evidence/competition/replay_seed_adaptive/context_sweep/context_sweep_69c29262b508.json",
+    "sha256": "177264dbf2f80d01d1ac6ffb7949624c35bed453c925ee9463f58c8550a14bdf"
+  },
+  "real_jev_interface": {
+    "state": "READY_BYO_TYPESAFE_API_KEY",
+    "missing_key_behavior": "BLOCKED_MISSING_TYPESAFE_API_KEY",
+    "substitution_performed": false
+  },
+  "integration_matrix": {
+    "OPENJEV": "PASS_BOUNDED_LOCAL",
+    "SYSTEM_ONE": "READY_BYO_TYPESAFE_API_KEY",
+    "TENKI": "DEFERRED_NOT_REQUIRED",
+    "MITOSIS_LABS": "OFF_NOT_REQUIRED",
+    "VITHIA_PREPROCESSOR": "PASS"
+  },
+  "claim_ceiling": "Bounded local engineering successor evidence; not qualified MMR admission, not browser E2E, not real judge API execution without TYPESAFE_API_KEY.",
+  "signature_state": "NOT_SIGNED"
+}
