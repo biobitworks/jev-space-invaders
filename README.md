@@ -4,11 +4,13 @@ Public, reproducible UFA arena branch of the Vithia model family. Competition-fa
 
 ## Demo video
 
-**UFA JEV Bake-Off submission demo:** https://youtu.be/Yo-WfJVJO-Q
+**Public demo video:** https://youtu.be/4BuR_NnJAsM
+
+**Submission-record video URL:** https://youtu.be/Yo-WfJVJO-Q — currently recorded as private to unauthenticated viewers in the post-submission verification branch. Use the public demo above unless/until the submission-record video is made Unlisted/Public.
 
 ## Current verified competition state
 
-- Registration: **SUBMITTED** (entry b968c199...); public demo video: https://youtu.be/Yo-WfJVJO-Q
+- Registration: **SUBMITTED** (entry b968c199...). Publicly viewable fallback demo: https://youtu.be/4BuR_NnJAsM. The submission-record URL `Yo-WfJVJO-Q` was observed private to unauthenticated viewers during post-submission verification.
 - Track: **pilot**. Counted hosted TypeSafe JEV runs remain **0**; the repository is now **READY_BYO_TYPESAFE_API_KEY** and fails closed with `BLOCKED_MISSING_TYPESAFE_API_KEY` rather than substituting another backend.
 - Qualified competition evidence remains **UFA-JEV-COMP-BP-0017**. The later replay/context work is recorded separately as **UFA-JEV-COMP-BP-0018-ENGINEERING-SUCCESSOR** and is **not** promoted to qualified MMR admission.
 - Local Ollama comparator: `llama3.2:3b`, five fixed seeds executed; scores: **270, 270, 270, 270, 270**. This is a local comparator, not counted hosted JEV.
