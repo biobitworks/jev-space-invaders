@@ -21,15 +21,24 @@ LOG="$LOGDIR/doctor3-$(date +%Y%m%d-%H%M%S).log"; : > "$LOG"
 SECRET_VARS=(MI_API_KEY TENKI_API_KEY TYPESAFE_API_KEY ANTHROPIC_API_KEY OPENAI_API_KEY)
 
 # ---------- args ----------
+ORIG_ARGS=("$@")
+PRINTFWD=0
 SEED_FCO=""; SEED_ROOT=""; RESOLVERS=(); SIM=0; NONINT=0; ENV_FILE=""; IDMODE=""; IDPUB=""; DECIDER=""; DECIDERS=""; PROFILE=""
-REMOTE=""; WATCH=""; PARENT_ROOT=""; SESSION_ID=""; REVIEW_PR=""; COMMIT_HOOK_SID=""; PASSTHRU=()
+REMOTE=""; WATCH=""; PARENT_ROOT=""; SESSION_ID=""; REVIEW_PR=""; COMMIT_HOOK_SID=""
 while (($#)); do case "$1" in
   --seed-fco) SEED_FCO="$2"; shift 2;;  --seed-root) SEED_ROOT="$2"; shift 2;;  --resolver-dir) RESOLVERS+=("$2"); shift 2;;
   --simulate) SIM=1; shift;;  --non-interactive) NONINT=1; shift;;  --env-file) ENV_FILE="$2"; shift 2;;
   --identity-mode) IDMODE="$2"; shift 2;;  --identity-pub-file) IDPUB="$2"; shift 2;;  --decider) DECIDER="$2"; shift 2;;  --deciders) DECIDERS="$2"; shift 2;;  --prompt-profile) PROFILE="$2"; shift 2;;
   --remote) REMOTE="$2"; shift 2;;  --watch) WATCH="$2"; shift 2;;  --parent-root) PARENT_ROOT="$2"; shift 2;;
-  --session-id) SESSION_ID="$2"; shift 2;;  --review-pr) REVIEW_PR="$2"; shift 2;;  --_commit-hook) COMMIT_HOOK_SID="$2"; shift 2;;
+  --session-id) SESSION_ID="$2"; shift 2;;  --review-pr) REVIEW_PR="$2"; shift 2;;  --_commit-hook) COMMIT_HOOK_SID="$2"; shift 2;;  --_print-forward-args) PRINTFWD=1; shift;;
   -h|--help) sed -n 2,16p "$SELF"; exit 0;;  *) echo "unknown arg: $1" >&2; exit 2;; esac; done
+
+# Every parsed option except --remote HOST is forwarded (shell-quoted) to the remote invocation.
+forward_args() { local skip=0 a out=""; for a in ${ORIG_ARGS[@]+"${ORIG_ARGS[@]}"}; do
+    if ((skip)); then skip=0; continue; fi
+    case "$a" in --remote) skip=1; continue;; --_print-forward-args) continue;; esac
+    out+=" $(printf '%q' "$a")"; done; printf '%s' "${out# }"; }
+if ((PRINTFWD)); then forward_args; echo; exit 0; fi
 
 # ---------- ui + redacted logging ----------
 have_gum() { command -v gum >/dev/null 2>&1; }
@@ -70,9 +79,9 @@ if [[ -n "$REMOTE" ]]; then
   LSHA="$(shasum -a 256 tools/vithia_doctor3.sh | cut -d' ' -f1)"
   RSHA="$(ssh "$REMOTE" "export PATH=/opt/homebrew/bin:/usr/local/bin:\$PATH; C=\$(find \"\$HOME\" -maxdepth 4 -type d -name 'jev*' -not -path '*/Library/*' | while read d; do git -C \"\$d\" remote get-url origin 2>/dev/null | grep -q '$REPO_SLUG' && { echo \"\$d\"; break; }; done); [ -n \"\$C\" ] || exit 3; git -C \"\$C\" fetch -q origin '$B' && git -C \"\$C\" show 'origin/$B:tools/vithia_doctor3.sh' | shasum -a 256 | cut -d' ' -f1")" || die "no clone of $REPO_SLUG on $REMOTE"
   [[ "$RSHA" == "$LSHA" ]] && ok "doctor3 sha256 matches on $REMOTE (${LSHA:0:12}…)" || die "sha256 mismatch local ${LSHA:0:12} vs remote ${RSHA:0:12}"
-  ARGS=(); for a in "${PASSTHRU[@]:-}"; do ARGS+=("$a"); done
+  [[ -n "$ENV_FILE" ]] && warn "--env-file $ENV_FILE is forwarded as written: it is resolved on $REMOTE, not on this machine"
   gum confirm "Run doctor3 on $REMOTE now? (secrets are entered there, not here)" || exit 0
-  ssh -t "$REMOTE" "export PATH=/opt/homebrew/bin:/usr/local/bin:\$PATH; cd \$(find \"\$HOME\" -maxdepth 4 -type d -name 'jev*' -not -path '*/Library/*' | while read d; do git -C \"\$d\" remote get-url origin 2>/dev/null | grep -q '$REPO_SLUG' && { echo \"\$d\"; break; }; done) && git checkout -q '$B' && git pull -q --ff-only && bash tools/vithia_doctor3.sh ${SEED_FCO:+--seed-fco '$SEED_FCO'} ${SEED_ROOT:+--seed-root '$SEED_ROOT'}"
+  ssh -t "$REMOTE" "export PATH=/opt/homebrew/bin:/usr/local/bin:\$PATH; cd \$(find \"\$HOME\" -maxdepth 4 -type d -name 'jev*' -not -path '*/Library/*' | while read d; do git -C \"\$d\" remote get-url origin 2>/dev/null | grep -q '$REPO_SLUG' && { echo \"\$d\"; break; }; done) && git checkout -q '$B' && git pull -q --ff-only && bash tools/vithia_doctor3.sh $(forward_args)"
   exit $?
 fi
 
@@ -180,7 +189,8 @@ POST=(); if [[ -n "$REVIEW_PR" ]] && ((! SIM)) && ((! NONINT)); then gum confirm
 
 # ---------- 6. run the pipeline ----------
 hdr "5. Vithia → Mitosis → checkpoint → Tenki → writeback → verified context → decider → final root"
-SID="${SESSION_ID:-FCG-$(date -u +%Y%m%dT%H%M%SZ)}"
+SID="${SESSION_ID:-FCG-$(date -u +%Y%m%dT%H%M%SZ)-$(printf '%04x' $RANDOM)}"
+[[ -e "evidence/fcg_sessions/$SID" ]] && die "session directory evidence/fcg_sessions/$SID already exists; sessions are append-only and never reused"
 PROV=(--mitosis real --tenki real); ((SIM)) && PROV=(--mitosis sim --tenki sim)
 HOOK=(); ((SIM)) || HOOK=(--commit-hook "env VITHIA_BRANCH=$BRANCH bash $SELF --_commit-hook $SID")
 export PYTHONUNBUFFERED=1

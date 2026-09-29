@@ -277,12 +277,17 @@ class SimTenki:
         return {"state": "PASS", "basis": "simulated"}
 
     def execute(self, repo_url, commit, session, plan, expected_root):
-        rec = {"environment_replay": self.replay, "first_mismatch_frame": (self.first_mismatch or {}).get("frame"),
-               "first_mismatch_kind": (self.first_mismatch or {}).get("kind"),
-               "replay_from_start": self.replay, "step_hash_equality": self.replay, "final_mmr_equality": "PASS"}
+        cmds, receipts = [], {}
+        for v in plan["verifiers"]:
+            k = v.get("kind")
+            cmds.append({"name": v["name"], "exit_code": 1 if (k == "replay" and self.replay != "PASS") else 0,
+                         "stdout_tail": json.dumps({"recomputed_mmr_root": expected_root}) if k in ("artifact", "replay") else ""})
+            if k == "replay":
+                receipts[v["name"]] = {"environment_replay": self.replay, "first_mismatch_frame": (self.first_mismatch or {}).get("frame"),
+                                       "first_mismatch_kind": (self.first_mismatch or {}).get("kind"), "replay_from_start": self.replay,
+                                       "step_hash_equality": self.replay, "final_mmr_equality": "PASS", "recomputed_mmr_root": expected_root}
         return {"execution_locus": "SIMULATED", "sandbox_create": "PASS", "tenki_session_id": "SIMULATED-SESSION", "source_pin": "PASS",
-                "observed_head": commit, "commands": [{"name": v["name"], "exit_code": 0, "stdout_tail": json.dumps({"recomputed_mmr_root": expected_root})} for v in plan["verifiers"]],
-                "receipts": {"env_replay": rec}, "terminated": "PASS"}
+                "observed_head": commit, "commands": cmds, "receipts": receipts, "terminated": "PASS"}
 
 
 class TenkiReal:
@@ -440,6 +445,8 @@ class Session:
         self.profile = profile
         self.repo_url, self.review_pr, self.post_review = repo_url, review_pr, post_review
         self.sdir = self.root / "evidence/fcg_sessions" / session_id
+        if self.sdir.exists() and any(self.sdir.iterdir()):
+            raise Stop(f"SESSION_DIR_EXISTS=FAIL: {session_id} already holds evidence; session directories are append-only successors and are never reused")
         self.sdir.mkdir(parents=True, exist_ok=True)
         self.lin = Lineage(self.root, self.sdir, f"VITHIA-FCG-{session_id}", seed["parent_fcg_root"])
         self.r: dict = {"schema": "VITHIA_DOCTOR_SESSION_RECEIPT_V1", "session_id": session_id, "seed_root": "sha256:" + seed_root,
@@ -522,17 +529,25 @@ class Session:
         replay_names = [n for n, k in kinds.items() if k == "replay"]
         artifact_names = [n for n, k in kinds.items() if k == "artifact"]
         er = (ts.get("receipts") or {}).get(replay_names[0], {}) if replay_names else {}
-        recomputed = None
+        # The recomputed root is read ONLY from designated artifact verifiers (never from the replay verifier), and every
+        # artifact verifier that prints one must agree; a disagreement leaves it unset and artifact reconstruction cannot pass.
+        roots = []
         for c in ts.get("commands", []):
-            m = re.search(r'"recomputed_mmr_root":\s*"([0-9a-f]{64})"', c.get("stdout_tail", ""))
-            if m:
-                recomputed = m.group(1)
+            if c["name"] in artifact_names:
+                m = re.search(r'"recomputed_mmr_root":\s*"([0-9a-f]{64})"', c.get("stdout_tail", ""))
+                if m:
+                    roots.append(m.group(1))
+        recomputed = roots[0] if roots and len(set(roots)) == 1 else None
         ran = ts.get("sandbox_create") == "PASS"
         exits = {c["name"]: c["exit_code"] for c in ts.get("commands", [])}
         art_ok = (ran and ts.get("source_pin") == "PASS" and bool(artifact_names) and all(exits.get(n) == 0 for n in artifact_names)
                   and recomputed == self.seed["expected_mmr_root"])
         artifact = "PASS" if art_ok else ("FAIL" if ran else "NOT_EXECUTED")
         envr = er.get("environment_replay", "NOT_EXECUTED")
+        if envr == "PASS":   # a receipt's own PASS is accepted only if the replay command really succeeded in a pinned sandbox on the expected root
+            replay_ok = (ran and ts.get("source_pin") == "PASS" and bool(replay_names) and exits.get(replay_names[0]) == 0
+                         and er.get("recomputed_mmr_root") == self.seed["expected_mmr_root"])
+            envr = "PASS" if replay_ok else "FAIL"
         locus = ts.get("execution_locus", "NOT_EXECUTED")
         self.fco["tenki"] = L.write_fco(self.sdir / "TENKI_VERIFICATION_FCO.json", {
             "schema": "TenkiVerificationFCO_V1", "session_id": self.sid, "execution_locus": locus, "pre_tenki_commit": tenki_commit or "NONE",
@@ -608,11 +623,15 @@ class Session:
             if i == 0:
                 d0 = d; self.fco["decision"], self.fco["action"], self.fco["outcome"] = dsha, asha, osha
         d = d0
-        consumed = bool(text) and d["status"] == "PASS" and d["action"] != policy_scripted(counter)
+        env0 = dict(self.env)
+        if self.lanes[0]["model"]:
+            env0["OLLAMA_MODEL"] = self.lanes[0]["model"]
+        cf = run_decider(self.lanes[0]["kind"], counter, env0, self.profile)      # the SAME decider, without the retrieved memory
+        consumed = bool(text) and d["status"] == "PASS" and cf["status"] == "PASS" and d["action"] != cf["action"]
         lb = "PASS_BOUNDED" if consumed else "NOT_ESTABLISHED"
         (self.sdir / "LOAD_BEARING_RECEIPT.json").write_bytes(L.canonical({
             "schema": "E2E_LOAD_BEARING_RECEIPT_V1", "session_id": self.sid, "causal_edge": ["MitosisVerificationAnchorFCO", "VithiaVerifiedContextFCO", "DecisionFCO"],
-            "decision_with_memory": d["action"], "decision_without_memory": policy_scripted(counter), "verdict": lb,
+            "decision_with_memory": d["action"], "decision_without_memory": cf["action"], "counterfactual_decider": self.lanes[0]["kind"], "counterfactual_status": cf["status"], "verdict": lb,
             "scope": "BOUNDED: verification tier admitted by the retrieved memory", "created_utc": L.utc()}))
         lane_atoms = [(self.rel(f"{b}{x['files_suffix']}.json"), k, "fco") for x in lane_recs for b, k in (
             ("DECISION_FCO", "DecisionFCO"), ("ACTION_EXECUTION_FCO", "ActionExecutionFCO"), ("OUTCOME_FCO", "OutcomeFCO"))]

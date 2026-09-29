@@ -254,7 +254,7 @@ def test_prompt_profiles_are_frozen_hashed_and_recorded(world):
     s2 = session(world, lanes=lanes, env={"OLLAMA_BASE_URL": base}, profile="explicit_v1", sid="P2"); run_all(s2); srv.shutdown()
     d1, _ = L.read_fco(s1.sdir / "DECISION_FCO.json"); d2, _ = L.read_fco(s2.sdir / "DECISION_FCO.json")
     assert d1["prompt_profile"] == "neutral_v1" and d1["prompt_sha256"] == F.prompt_sha("neutral_v1") and d2["prompt_sha256"] == F.prompt_sha("explicit_v1")
-    c1 = seen[0]["body"]["messages"][0]["content"]; c2 = seen[1]["body"]["messages"][0]["content"]
+    c1 = seen[0]["body"]["messages"][0]["content"]; c2 = seen[2]["body"]["messages"][0]["content"]   # each session: lane-0 request + its counterfactual
     assert c1.startswith("Choose exactly one action. Reply JSON") and '"actions": ["PUBLISH' in c1          # identical to the first rehearsal's wording
     assert "Rule:" in c2 and "requires" in c2 and "Rule:" not in c1
 
@@ -265,3 +265,79 @@ def test_openjev_refuses_non_loopback_endpoint_and_never_sends_the_token():
         d = F.run_decider("openjev", {"artifact_reconstruction": "NOT_ESTABLISHED", "environment_replay": "NOT_ESTABLISHED"}, {"OPENJEV_BASE_URL": bad, "OPENJEV_TOKEN": "secret-shim-token"})
         assert d["status"] == "BLOCKED" and "non-loopback" in d["note"]
     srv.shutdown(); assert seen == []
+
+
+# ---------------------------------------------------------------- PR #7 review fixes
+def test_existing_session_directory_is_never_reused(world):
+    s = session(world, sid="DUP"); run_all(s)
+    before = {p.name: p.read_bytes() for p in s.sdir.iterdir()}
+    with pytest.raises(F.Stop, match="SESSION_DIR_EXISTS"):
+        session(world, sid="DUP")
+    assert {p.name: p.read_bytes() for p in s.sdir.iterdir()} == before                     # prior evidence untouched
+
+class _Tenki(F.SimTenki):
+    """SimTenki whose per-command stdout / exit codes / receipt can be overridden."""
+    def __init__(self, edit, **kw):
+        super().__init__(**kw); self.edit = edit
+    def execute(self, *a):
+        r = super().execute(*a); self.edit(r); return r
+
+def test_recomputed_root_comes_only_from_artifact_verifiers(world):
+    wrong = json.dumps({"recomputed_mmr_root": "ee" * 32})
+    def replay_prints_other_root(r):                       # replay verifier prints a different root: must not affect artifact reconstruction
+        next(c for c in r["commands"] if c["name"] == "env_replay")["stdout_tail"] = wrong
+    assert run_all(session(world, ten=_Tenki(replay_prints_other_root)))["tenki_artifact_verify"] == "PASS"
+    def artifact_prints_wrong_root(r):                     # artifact verifier exits 0 but its root is wrong: cannot be rescued by the replay verifier
+        next(c for c in r["commands"] if c["name"] == "custody")["stdout_tail"] = wrong
+    assert run_all(session(world, ten=_Tenki(artifact_prints_wrong_root), sid="S2"))["tenki_artifact_verify"] == "FAIL"
+
+def test_disagreeing_artifact_roots_do_not_pass(world):
+    seed = world["seed"]; seed["verifiers"].append({"name": "second", "kind": "artifact", "cmd": "z"})
+    world["seed_file"].write_text(json.dumps(seed)); world["root"] = L.sha(L.canonical(seed))
+    def second_disagrees(r):
+        r["commands"].append({"name": "second", "exit_code": 0, "stdout_tail": json.dumps({"recomputed_mmr_root": "ee" * 32})})
+    assert run_all(session(world, ten=_Tenki(second_disagrees)))["tenki_artifact_verify"] == "FAIL"
+
+def test_replay_pass_requires_successful_command_and_expected_root(world):
+    def receipt_pass_but_command_failed(r):
+        next(c for c in r["commands"] if c["name"] == "env_replay")["exit_code"] = 1
+    assert run_all(session(world, ten=_Tenki(receipt_pass_but_command_failed)))["tenki_environment_replay"] == "FAIL"
+    def receipt_pass_wrong_root(r):
+        r["receipts"]["env_replay"]["recomputed_mmr_root"] = "ee" * 32
+    assert run_all(session(world, ten=_Tenki(receipt_pass_wrong_root), sid="S2"))["tenki_environment_replay"] == "FAIL"
+    def receipt_pass_unpinned(r):
+        r["source_pin"] = "FAIL"
+    assert run_all(session(world, ten=_Tenki(receipt_pass_unpinned), sid="S3"))["tenki_environment_replay"] == "FAIL"
+    assert run_all(session(world, sid="S4"))["tenki_environment_replay"] == "PASS"          # the honest case still passes
+
+def _ctx_stub(sensitive):
+    """Ollama stub: a context-insensitive model always answers ARTIFACT_ONLY; a sensitive one withholds unless the context shows artifact PASS."""
+    def h(path, headers, body):
+        content = body["messages"][0]["content"]
+        act = F.ONTOLOGY[1] if (not sensitive or '"artifact_reconstruction": "PASS"' in content) else F.ONTOLOGY[2]
+        return 200, {"model": body["model"], "message": {"content": json.dumps({"action": act})}}
+    return serve(h)
+
+def test_load_bearing_needs_the_same_decider_to_change_its_own_answer(world):
+    base, srv, _ = _ctx_stub(sensitive=False)
+    r = run_all(session(world, lanes=F.parse_lanes("ollama:m"), env={"OLLAMA_BASE_URL": base}, sid="LB1")); srv.shutdown()
+    assert r["lanes"][0]["action"] == F.ONTOLOGY[1] and r["portable_agent_memory_load_bearing"] == "NOT_ESTABLISHED"   # differs from scripted WITHHOLD, but memory had no effect on THIS model
+    base, srv, _ = _ctx_stub(sensitive=True)
+    r = run_all(session(world, lanes=F.parse_lanes("ollama:m"), env={"OLLAMA_BASE_URL": base}, sid="LB2")); srv.shutdown()
+    assert r["portable_agent_memory_load_bearing"] == "PASS_BOUNDED"
+    lb = json.loads((world["out"] / "evidence/fcg_sessions/LB2/LOAD_BEARING_RECEIPT.json").read_bytes())
+    assert lb["counterfactual_decider"] == "ollama" and lb["decision_without_memory"] == F.ONTOLOGY[2] and lb["decision_with_memory"] == F.ONTOLOGY[1]
+
+def test_load_bearing_not_established_when_counterfactual_lane_is_blocked(world):
+    r = run_all(session(world, lanes=F.parse_lanes("ollama:m"), env={"OLLAMA_BASE_URL": "http://127.0.0.1:9"}, sid="LB3"))
+    assert r["portable_agent_memory_load_bearing"] == "NOT_ESTABLISHED"
+
+def test_remote_mode_forwards_every_parsed_option_shell_quoted():
+    out = subprocess.run(["bash", "tools/vithia_doctor3.sh", "--remote", "studio.local", "--simulate", "--non-interactive", "--seed-fco", "a b.json",
+                          "--resolver-dir", "d", "--identity-mode", "generate", "--session-id", "S9", "--decider", "ollama", "--deciders", "scripted,ollama:m",
+                          "--prompt-profile", "explicit_v1", "--env-file", "/x y/.env", "--_print-forward-args"],
+                         cwd=Path(__file__).resolve().parents[1], capture_output=True, text=True).stdout.strip()
+    for want in ("--simulate", "--non-interactive", "--seed-fco a\\ b.json", "--resolver-dir d", "--identity-mode generate", "--session-id S9", "--deciders scripted\\,ollama:m",
+                 "--prompt-profile explicit_v1", "--env-file /x\\ y/.env"):
+        assert want in out, (want, out)
+    assert "--remote" not in out and "studio.local" not in out
