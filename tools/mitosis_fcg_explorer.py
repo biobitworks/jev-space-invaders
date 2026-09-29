@@ -315,13 +315,25 @@ def topo_order(plan: dict[str, Any]) -> list[dict[str, Any]]:
     return ordered
 
 
+
+def runtime_env(env_file: str) -> dict[str, str]:
+    """Load secrets into memory only, preferring process-local interactive values."""
+    env = L.load_private_env(Path(env_file))
+    for key in ("MI_API_KEY", "MITOSIS_API_KEY"):
+        if os.environ.get(key):
+            env[key] = os.environ[key]
+    if env.get("MITOSIS_API_KEY") and not env.get("MI_API_KEY"):
+        env["MI_API_KEY"] = env["MITOSIS_API_KEY"]
+    L.register_secret_values(env.values())
+    return env
+
 def materialize(args: argparse.Namespace) -> int:
     plan = graph_plan()
     if args.dry_run:
         print(json.dumps(plan, indent=2, sort_keys=True))
         return 0
 
-    env = L.load_private_env(Path(args.env_file))
+    env = runtime_env(args.env_file)
     if not env.get("MI_API_KEY"):
         print("MI_API_KEY=NOT_SET")
         return 2
@@ -437,7 +449,7 @@ def probe(args: argparse.Namespace) -> int:
         print("PROBE_RESOLVE=FAIL")
         return 2
 
-    env = L.load_private_env(Path(args.env_file))
+    env = runtime_env(args.env_file)
     m = L.Mitosis(OFFICE, env)
     auth = m.auth()
     print(f"MITOSIS_AUTH={auth['state']}")
@@ -458,7 +470,7 @@ def probe(args: argparse.Namespace) -> int:
 
 def verify(args: argparse.Namespace) -> int:
     index = load_index()
-    env = L.load_private_env(Path(args.env_file))
+    env = runtime_env(args.env_file)
     m = L.Mitosis(OFFICE, env)
     auth = m.auth()
     print(f"MITOSIS_AUTH={auth['state']}")
