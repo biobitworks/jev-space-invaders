@@ -233,7 +233,7 @@ def main() -> int:
         "provider": run.get("provider"),
         "requested_model": run.get("requested_model"),
         "served_model": run.get("served_model"),
-        "trace_file": str(trace_path),
+        "trace_file": run.get("trace_file"),
         **trace_check,
         **replay_check,
         "final_mmr_equality": trace_check["trace_mmr_equality"],
