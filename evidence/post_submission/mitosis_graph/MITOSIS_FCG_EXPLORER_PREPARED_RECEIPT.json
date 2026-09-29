@@ -1,0 +1,51 @@
+{
+  "schema": "MITOSIS_FCG_EXPLORER_PREPARED_RECEIPT_V1",
+  "source_lineage": "VITHIA-E2E-POSTSUBMISSION",
+  "source_branch": "postsubmission/vithia-mitosis-tenki-e2e-v01",
+  "explorer_branch": "postsubmission/mitosis-fcg-explorer-v01",
+  "explorer_pr": "https://github.com/biobitworks/jev-space-invaders/pull/6",
+  "planned_artifact_nodes": 18,
+  "planned_breakpoint_nodes": 3,
+  "planned_total_nodes": 21,
+  "breakpoints": [
+    {
+      "id": "VITHIA-E2E-POSTSUBMISSION-BP-0001",
+      "mmr_root": "0428bc1bd0f7163a00b1995a5c0fbf69d7c0c2c5d04ffc5eadbb643d3cc94f5c"
+    },
+    {
+      "id": "VITHIA-E2E-POSTSUBMISSION-BP-0002",
+      "mmr_root": "0e39f865451949ecc08e7a90af3154d27a6043401772644f6ea75399f3e16e39"
+    },
+    {
+      "id": "VITHIA-E2E-POSTSUBMISSION-BP-0003",
+      "mmr_root": "d4b705060f0711b80a760300790a9f8bac3604aec28ca166c2195e9e9e5b15dc"
+    }
+  ],
+  "capabilities": {
+    "materialize": "IMPLEMENTED",
+    "probe_by_universal_id": "IMPLEMENTED",
+    "probe_by_fco_sha256": "IMPLEMENTED",
+    "probe_by_fmo_leaf": "IMPLEMENTED",
+    "probe_by_breakpoint_id": "IMPLEMENTED",
+    "probe_by_breakpoint_root": "IMPLEMENTED",
+    "probe_by_mmr_root": "IMPLEMENTED",
+    "exact_get_verification": "IMPLEMENTED",
+    "cited_graph_url_surface": "IMPLEMENTED",
+    "gum_interactive_ui": "IMPLEMENTED",
+    "live_mitosis_materialization": "NOT_EXECUTED",
+    "live_graph_verification": "NOT_EXECUTED"
+  },
+  "secrets": {
+    "interactive_mitosis_key": "PROCESS_LOCAL_ONLY",
+    "npm_bootstrap": "BEFORE_CREDENTIAL_ENTRY_WITH_SECRET_ENV_STRIPPED",
+    "sdk_version": "0.27.2",
+    "graph_text_secret_scan": "REQUIRED"
+  },
+  "typesafe": {
+    "billing": "NOT_CONFIGURED",
+    "playground": "UNAVAILABLE",
+    "hosted_jev": "NOT_EXECUTED",
+    "silent_fallback": "FORBIDDEN"
+  },
+  "claim_ceiling": "Explorer implementation prepared. No live Mitosis graph or cited graph URL is claimed until authenticated materialize + exact-get + probe + verify complete."
+}
