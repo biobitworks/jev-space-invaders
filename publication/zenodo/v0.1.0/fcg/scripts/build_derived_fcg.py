@@ -88,9 +88,15 @@ def main() -> int:
             pp = (PARQUET / f"{table}.parquet").as_posix()
             con.execute(f'CREATE VIEW v_{table} AS SELECT * FROM read_parquet(?)', [pp])
 
+        # Stable public aliases requested by the publication FCG contract.
+        con.execute("CREATE VIEW v_content AS SELECT * FROM v_content_fcos")
+        con.execute("CREATE VIEW v_occurrences AS SELECT * FROM v_occurrence_fcos")
+        con.execute("CREATE VIEW v_artifacts AS SELECT * FROM v_artifact_registry")
+        con.execute("CREATE VIEW v_edges AS SELECT * FROM v_fcg_edges")
+
         con.execute("""CREATE VIEW v_content_reuse AS
             SELECT content_fco_ref, COUNT(*) occurrence_count
-            FROM v_occurrence_fcos GROUP BY content_fco_ref""")
+            FROM v_occurrences GROUP BY content_fco_ref""")
         con.execute("""CREATE VIEW v_occurrence_multiplicity AS
             SELECT * FROM v_content_reuse WHERE occurrence_count > 1""")
         con.execute("""CREATE VIEW v_not_tested AS
