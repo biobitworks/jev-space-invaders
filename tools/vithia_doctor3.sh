@@ -123,8 +123,10 @@ ok "seed verified · source commit ${SEED_COMMIT:0:12}"
 hdr "2. Pinned source (isolated worktree)"
 git cat-file -e "$SEED_COMMIT^{commit}" 2>/dev/null || run "fetch seed commit" git fetch origin "$SEED_COMMIT"
 SRC="${TMPDIR:-/tmp}/vithia-source-${SEED_COMMIT:0:12}"
-if [[ -d "$SRC" ]]; then git -C "$SRC" checkout -q --detach "$SEED_COMMIT" 2>>"$LOG" || die "cannot pin existing source worktree"
-else run "worktree add --detach (exact source commit)" git worktree add -q --detach "$SRC" "$SEED_COMMIT"; fi
+# The pinned source worktree only needs the seed's frozen objects; skip Git LFS smudging so a fresh machine never
+# downloads unrelated large LFS data (e.g. data/daisy) just to verify a seed.
+if [[ -d "$SRC" ]]; then GIT_LFS_SKIP_SMUDGE=1 git -C "$SRC" checkout -q --detach "$SEED_COMMIT" 2>>"$LOG" || die "cannot pin existing source worktree"
+else run "worktree add --detach (exact source commit, LFS smudge skipped)" env GIT_LFS_SKIP_SMUDGE=1 git worktree add -q --detach "$SRC" "$SEED_COMMIT"; fi
 [[ "$(git -C "$SRC" rev-parse HEAD)" == "$SEED_COMMIT" ]] && ok "SOURCE_PIN=PASS" || die "SOURCE_PIN=FAIL"
 
 # ---------- 3. operator / judge identity (public key only reaches artifacts) ----------
