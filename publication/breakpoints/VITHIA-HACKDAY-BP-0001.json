@@ -1,0 +1,104 @@
+{
+  "schema": "VITHIA_MERKLE_BREAKPOINT_V1",
+  "breakpoint_id": "VITHIA-HACKDAY-BP-0001",
+  "project": "AGENTICLS_PUBLICATION",
+  "state": "PRE_EVENT_EXPERIMENT_EXPANSION_FROZEN",
+  "created_utc": "2026-09-29T04:03:00Z",
+  "event_date": "2026-09-29",
+  "parent_publication_state": {
+    "frozen_predecessor_commit": "2ce9cd8a9b2c3bba63515a7e7eb6cb072f3a8a4c",
+    "msm_ais_v02_baseline_commit": "09c4cae4f5f30fd4dd1fd486fd47fda3a4f8c07a",
+    "hackday_prereg_commit": "3ebdc8bbe63146d9986352ceb71c4aba85e68d3c"
+  },
+  "purpose": "Freeze the pre-Hack-Day Vithia/MSM-AIS experiment-expansion state before September 29 execution. This breakpoint is custody/integrity evidence only and does not assert that any Hack Day experiment has executed or passed.",
+  "leaves": [
+    {
+      "index": 0,
+      "payload": {
+        "kind": "git_commit",
+        "label": "publication_v0_1_0_frozen_predecessor",
+        "sha": "2ce9cd8a9b2c3bba63515a7e7eb6cb072f3a8a4c"
+      },
+      "leaf_sha256": "314682b50f575e843774230bfdde5817046f6723f474c34220ab95e51f53ce0c"
+    },
+    {
+      "index": 1,
+      "payload": {
+        "kind": "git_commit",
+        "label": "msm_ais_v02_baseline_successor",
+        "sha": "09c4cae4f5f30fd4dd1fd486fd47fda3a4f8c07a"
+      },
+      "leaf_sha256": "544d617c35fb3ac4dddbf293f2b9935afd0e97188ce201d3b84ee2d0fdf255f9"
+    },
+    {
+      "index": 2,
+      "payload": {
+        "kind": "git_blob",
+        "label": "hackday_intake_v01",
+        "path": "publication/intake/AI_CONFERENCE_HACK_DAY_2026_INTAKE_V01.json",
+        "git_blob_sha1": "8ea243a09c938e20515b1d7d86b9fd1dea9456ee"
+      },
+      "leaf_sha256": "86b2f170907776edd8480bd88337ed0d50f914448d53e143b10b350b422535cf"
+    },
+    {
+      "index": 3,
+      "payload": {
+        "kind": "git_blob",
+        "label": "hackday_experiment_expansion_v01",
+        "path": "publication/prereg/MSM_AIS_HACKDAY_EXPANSION_V01.md",
+        "git_blob_sha1": "a1206731bb493e33a810aede30b9fb560d60e49f"
+      },
+      "leaf_sha256": "db551d707cda9853d767857806366b8ae979e4fcdc77f6422d10d5e1870a3229"
+    },
+    {
+      "index": 4,
+      "payload": {
+        "kind": "upstream_git_commit",
+        "label": "duplocloud_devkit_hackday_source",
+        "repository": "duplocloud/devkit",
+        "sha": "e9f016fd90a67611907fcf673701351669eaa47d"
+      },
+      "leaf_sha256": "32b28ed20d631ca8e7229849f8d4ba57e6d6540886c36fa6923a75fa13cc58ad"
+    }
+  ],
+  "construction": {
+    "canonical_payload_encoding": "UTF-8 JSON with sorted keys and separators=(',', ':')",
+    "leaf_rule": "SHA256(bytes('FCO_LEAF_V1\\0') || canonical_payload_bytes)",
+    "node_rule": "SHA256(bytes('FCO_NODE_V1\\0') || left_digest_bytes || right_digest_bytes)",
+    "odd_node_rule": "duplicate final digest at each odd-width level",
+    "levels": [
+      [
+        "314682b50f575e843774230bfdde5817046f6723f474c34220ab95e51f53ce0c",
+        "544d617c35fb3ac4dddbf293f2b9935afd0e97188ce201d3b84ee2d0fdf255f9",
+        "86b2f170907776edd8480bd88337ed0d50f914448d53e143b10b350b422535cf",
+        "db551d707cda9853d767857806366b8ae979e4fcdc77f6422d10d5e1870a3229",
+        "32b28ed20d631ca8e7229849f8d4ba57e6d6540886c36fa6923a75fa13cc58ad"
+      ],
+      [
+        "258666cd69c4cea8217f2fece28c6462c26ddcb6252ee9250c582a75ec60f14d",
+        "3f466aa6d16cbbb27cf44dc1fa1b980de296fe1264b49c3e2ac929d8d0ba4846",
+        "181153056d843fd9decbf90a179249b5afa11d0d5004e411138d006f1068f6a3"
+      ],
+      [
+        "f8020e4561f62edcfa94ff7fa8c3fd5b17f403ef9dfcdab16ed5e4f1a053083c",
+        "d0dcf824a2f66719dcde37388f0f87dd700a8a61c0675ae3d2b94ddd18b0e8d8"
+      ],
+      [
+        "612e7f08eade71983d5a43a027b26e0cabe93bd5e48fb1f4f7bee8877b0cb0a4"
+      ]
+    ],
+    "merkle_root_sha256": "612e7f08eade71983d5a43a027b26e0cabe93bd5e48fb1f4f7bee8877b0cb0a4"
+  },
+  "experiment_state": {
+    "hackday_expansion_preregistered": true,
+    "hackday_experiments_executed": false,
+    "duplocloud_vithia_integration": "NOT_TESTED",
+    "neo4j_fcg_integration": "NOT_TESTED",
+    "crusoe_nebius_reader_integration": "NOT_TESTED",
+    "anticube_adaptive_effect": "NOT_TESTED",
+    "deltagstar_adaptive_effect": "NOT_TESTED"
+  },
+  "mmr_state": "NOT_CREATED",
+  "signature_state": "NOT_SIGNED",
+  "claim_ceiling": "This breakpoint proves only the declared pre-event inputs and preregistration are committed under the stated Merkle construction. It does not establish truth, causality, execution, experimental success, MMR commitment, or signature verification."
+}
