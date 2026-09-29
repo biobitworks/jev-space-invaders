@@ -1,0 +1,102 @@
+{
+  "schema": "VITHIA_FCG_EDGE_TYPES_V1",
+  "principle": "FCG edges declare relationships and do not establish causality unless separately supported by controlled-intervention evidence.",
+  "edge_types": [
+    {
+      "edge_type": "DERIVED_FROM",
+      "source_type": "any",
+      "target_type": "any",
+      "definition": "Source object was used to derive target/source state as declared by the producing process.",
+      "allowed_interpretation": "Declared derivation lineage.",
+      "forbidden_interpretation": "Causal proof."
+    },
+    {
+      "edge_type": "SUPPORTED_BY",
+      "source_type": "claim",
+      "target_type": "evidence",
+      "definition": "Claim registry/binding declares supporting evidence reference.",
+      "allowed_interpretation": "Evidence is bound to the claim.",
+      "forbidden_interpretation": "Evidence necessarily proves the claim."
+    },
+    {
+      "edge_type": "CHALLENGED_BY",
+      "source_type": "claim_or_context",
+      "target_type": "challenge",
+      "definition": "A challenge object is attached to the source state.",
+      "allowed_interpretation": "Challenge is explicitly represented.",
+      "forbidden_interpretation": "Challenge automatically falsifies source."
+    },
+    {
+      "edge_type": "OBSERVED_IN",
+      "source_type": "result",
+      "target_type": "execution",
+      "definition": "Result was observed in the referenced execution.",
+      "allowed_interpretation": "Occurrence attribution.",
+      "forbidden_interpretation": "General causal law."
+    },
+    {
+      "edge_type": "EXECUTED_UNDER",
+      "source_type": "execution",
+      "target_type": "runtime",
+      "definition": "Execution declares the referenced runtime/configuration.",
+      "allowed_interpretation": "Attribution to tested runtime.",
+      "forbidden_interpretation": "Cross-runtime equivalence."
+    },
+    {
+      "edge_type": "COMPARES_WITH",
+      "source_type": "comparison",
+      "target_type": "any",
+      "definition": "Object participates in a declared comparison.",
+      "allowed_interpretation": "Comparison membership.",
+      "forbidden_interpretation": "Equivalence or superiority."
+    },
+    {
+      "edge_type": "SUCCESSOR_OF",
+      "source_type": "state",
+      "target_type": "state",
+      "definition": "Source state is a successor to target predecessor.",
+      "allowed_interpretation": "Ordered state lineage.",
+      "forbidden_interpretation": "The predecessor was overwritten."
+    },
+    {
+      "edge_type": "USES_CONTEXT",
+      "source_type": "decision_or_execution",
+      "target_type": "context",
+      "definition": "Declared context was materialized for the source.",
+      "allowed_interpretation": "Context-use attribution.",
+      "forbidden_interpretation": "Context caused outcome."
+    },
+    {
+      "edge_type": "REFERENCES",
+      "source_type": "occurrence",
+      "target_type": "content_or_claim",
+      "definition": "Occurrence points to an independently addressable object.",
+      "allowed_interpretation": "Reference identity.",
+      "forbidden_interpretation": "Truth endorsement."
+    },
+    {
+      "edge_type": "IS_OCCURRENCE_OF",
+      "source_type": "occurrence",
+      "target_type": "content",
+      "definition": "Occurrence instantiates the referenced exact content in a distinct context.",
+      "allowed_interpretation": "Content reuse with preserved occurrence identity.",
+      "forbidden_interpretation": "Occurrences are identical contexts."
+    },
+    {
+      "edge_type": "USES_INPUT",
+      "source_type": "experiment",
+      "target_type": "dataset",
+      "definition": "Experiment registry declares input dataset.",
+      "allowed_interpretation": "Input relationship.",
+      "forbidden_interpretation": "Dataset correctness."
+    },
+    {
+      "edge_type": "PRODUCES",
+      "source_type": "experiment",
+      "target_type": "dataset",
+      "definition": "Experiment registry declares output dataset.",
+      "allowed_interpretation": "Output relationship.",
+      "forbidden_interpretation": "Claim promotion."
+    }
+  ]
+}
