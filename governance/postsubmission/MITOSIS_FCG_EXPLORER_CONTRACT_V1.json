@@ -1,0 +1,65 @@
+{
+  "schema": "MITOSIS_FCG_EXPLORER_CONTRACT_V1",
+  "purpose": "Interactive Mitosis projection and probe surface for immutable Vithia FCO/MMR evidence.",
+  "source_lineage": "VITHIA-E2E-POSTSUBMISSION",
+  "source_head": "88e3a58be832eb3f47f1d8a380fd2f4c2de7c4c5",
+  "identity_model": {
+    "mitosis_universal_id": "ADDRESS",
+    "fco_sha256": "IMMUTABLE_EVIDENCE_IDENTITY",
+    "breakpoint_fmo_root": "BREAKPOINT_ATOM_COMMITMENT",
+    "mmr_root": "APPEND_ONLY_LINEAGE_COMMITMENT"
+  },
+  "required_probe_inputs": [
+    "Mitosis universal_id",
+    "FCO/receipt SHA-256",
+    "FMO leaf",
+    "breakpoint ID",
+    "breakpoint root",
+    "MMR root"
+  ],
+  "graph_requirements": [
+    "One public-safe graph node per admitted FCO/receipt.",
+    "One graph node per executed E2E breakpoint.",
+    "Provenance edges use Mitosis source_universal_ids.",
+    "Existing Mitosis memory universal IDs are reused as provenance anchors.",
+    "Every materialized universal ID must pass exact cortex get.",
+    "Final-root query must return a cited graph deep-link.",
+    "Graph projection must not mutate historical FCOs or MMR ledgers."
+  ],
+  "secret_boundary": [
+    "Package installation/resolution happens before credential entry.",
+    "MI_API_KEY is process-local and never passed in argv.",
+    "No API-key value may enter graph text, FCOs, logs, Git, or Notion.",
+    "Mitosis CLI version is exact-pinned to 0.27.2 in the bootstrap."
+  ],
+  "gum_doctor_interface": {
+    "current_surface": "tools/gum_mitosis_fcg_explorer.sh",
+    "menu": [
+      "materialize",
+      "probe",
+      "verify",
+      "exit"
+    ],
+    "future_doctor3_adapter": "Use the same materialize/probe/verify commands after SeedCheckpointFCO recovery."
+  },
+  "optional_deciders": {
+    "typesafe_jev": {
+      "billing": "NOT_CONFIGURED",
+      "playground": "UNAVAILABLE",
+      "execution": "NOT_EXECUTED",
+      "fallback_substitution": "FORBIDDEN"
+    },
+    "current_recorded_decider": "SCRIPTED_POLICY",
+    "comparator": "OLLAMA llama3.2:3b RECORDED_NOT_EXECUTED_IN_FINAL_ACTION"
+  },
+  "live_success_gate": [
+    "MITOSIS_AUTH=PASS",
+    "all graph node writes PASS",
+    "all exact get checks PASS",
+    "final probe exact universal-ID match YES",
+    "cited graph URL present",
+    "graph index written",
+    "MITOSIS_FCG_GRAPH_VERIFY=PASS"
+  ],
+  "current_state": "IMPLEMENTED_NOT_YET_LIVE_MATERIALIZED"
+}
