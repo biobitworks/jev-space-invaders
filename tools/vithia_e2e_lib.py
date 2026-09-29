@@ -169,14 +169,18 @@ def scan_paths(paths) -> dict:
             t = p.read_text(errors="ignore")
         except Exception:
             continue
+        try:
+            shown = str(p.relative_to(ROOT))
+        except ValueError:                       # a file outside the repo must still be scanned and reported, never crash the scanner
+            shown = p.name
         for n, pat in SECRET_PATTERNS:
             if n in {"EMAIL", "PRIVATE_PATH"} and p.suffix == ".py":
                 continue
             if pat.search(t):
-                hits.append({"file": str(p.relative_to(ROOT)) if p.is_absolute() else str(p), "kind": n})
+                hits.append({"file": shown, "kind": n})
         for v in _KNOWN_SECRET_VALUES:
             if v in t:
-                hits.append({"file": str(p), "kind": "KNOWN_SECRET_VALUE"})
+                hits.append({"file": shown, "kind": "KNOWN_SECRET_VALUE"})
     return {"state": "PASS" if not hits else "FAIL", "scanned": len(list(paths)), "hits": hits}
 
 
