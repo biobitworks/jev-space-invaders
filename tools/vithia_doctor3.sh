@@ -145,7 +145,12 @@ grep -q "PRIVATE" "${IDPUB:-/dev/null}" 2>/dev/null && die "that file contains P
 # ---------- 4. credentials (interactive; process-local) ----------
 hdr "4. Credentials"
 if ((SIM)); then ok "simulate mode: no credentials needed"
-elif ((NONINT)); then for n in "${SECRET_VARS[@]}"; do [[ -n "${!n:-}" ]] && ok "$n=SET" || warn "$n=NOT_SET"; done
+elif ((NONINT)); then
+  for n in "${SECRET_VARS[@]}"; do
+    if [[ -n "${!n:-}" ]]; then ok "$n=SET (process environment)"
+    elif [[ -n "$ENV_FILE" && -f "$ENV_FILE" ]] && grep -Eq "^(export )?${n}=.+" "$ENV_FILE"; then ok "$n=SET (private env file; read in-process by the safe parser, value never printed)"
+    else warn "$n=NOT_SET"; fi
+  done
 else
   SEL="$(gum choose --no-limit --header "Providers to enter keys for (x = toggle; none = SKIP all)" "MI_API_KEY  (Mitosis)" "TENKI_API_KEY  (Tenki)" "TYPESAFE_API_KEY  (hosted JEV)" "ANTHROPIC_API_KEY" "OPENAI_API_KEY")" || SEL=""
   while IFS= read -r line; do n="${line%% *}"; [[ -z "$n" ]] && continue
