@@ -10,6 +10,7 @@ The accepted UFA submission remains frozen. A post-submission reproducibility su
 - Judge branch: https://github.com/biobitworks/jev-space-invaders/tree/postsubmission/judge-reproducibility-v02
 - Reproducibility update: https://github.com/biobitworks/jev-space-invaders/blob/postsubmission/judge-reproducibility-v02/docs/JUDGE_REPRODUCIBILITY_UPDATE_V01.md
 - Judge agent prompt: https://github.com/biobitworks/jev-space-invaders/blob/postsubmission/judge-reproducibility-v02/docs/JUDGE_AGENT_PROMPT_V01.md
+- Sponsor/OpenJEV receipt → Merkle/MMR breakpoint map: https://github.com/biobitworks/jev-space-invaders/blob/postsubmission/judge-reproducibility-v02/README.md#sponsor-and-openjev-evidence-map
 
 This update does not replace or rewrite the accepted competition entry or qualified historical evidence.
 
