@@ -305,8 +305,21 @@ def verify_lineage(upto_bp_id: str | None = None) -> list[dict]:
 
 
 # ---------------------------------------------------------------- Mitosis (real round-trips only)
-# Pinned: an unpinned @latest would run moving remote code in a process that holds the API key.
-MI_SDK_SPEC = "@mitosislabs/sdk@0.27.2"
+# The SDK is bootstrapped with credentials stripped from the environment. Once a
+# key is loaded, this library executes only the resolved local binary.
+MI_SDK_VERSION = "0.27.2"
+
+
+def mitosis_binary() -> Path:
+    raw = os.environ.get("VITHIA_MI_BIN")
+    if not raw:
+        raise FileNotFoundError(
+            "VITHIA_MI_BIN_NOT_SET: run tools/bootstrap_mitosis_cli.sh before loading credentials"
+        )
+    p = Path(raw).expanduser().resolve()
+    if not p.exists() or not os.access(p, os.X_OK):
+        raise FileNotFoundError(f"VITHIA_MI_BIN_NOT_EXECUTABLE:{p}")
+    return p
 
 
 class Mitosis:
@@ -319,7 +332,7 @@ class Mitosis:
         self.available = bool(env.get("MI_API_KEY"))
 
     def _mi(self, *args: str, timeout: int = 120):
-        cmd = ["npx", "-y", "-p", MI_SDK_SPEC, "mi", *args]
+        cmd = [str(mitosis_binary()), *args]
         print("$ MITOSIS_CLI", args[0], args[1] if len(args) > 1 else "", "<redacted-auth>", file=sys.stderr)
         p = subprocess.run(cmd, env=self.child_env, capture_output=True, text=True, timeout=timeout)
         try:
