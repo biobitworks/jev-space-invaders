@@ -44,7 +44,44 @@ weights, caches, credentials, or `entry.local.json`.
 - Optional JEV API, Tenki, Mitosis, and Liquid API variables are listed in
   `live_demo/.env.example`. Variable names only are committed.
 
-## Launch
+## Terminal-first runner
+
+The authoritative execution path is the Python CLI. It runs the real
+Gymnasium/ALE 1P environment, can use the PettingZoo 2P environment when ROM
+access is available, prints terminal telemetry, writes a thin FCO/FCG trace,
+and appends a canonical `terminal_runs` row to `results.json`.
+
+```sh
+python -m live_demo.run --mode 1p --seed 3 --steps 3 \
+  --player0-preprocessor vithia \
+  --player0-decider ollama:qwen2.5:0.5b \
+  --headless
+```
+
+Fast deterministic smoke:
+
+```sh
+python -m live_demo.run --mode 1p --seed 3 --steps 1 \
+  --player0-preprocessor none \
+  --player0-decider scripted \
+  --run-class SCRIPTED_CONTROL \
+  --headless
+```
+
+2P, when `ALE_ROM_DIR` points to the legal Space Invaders ROM directory:
+
+```sh
+python -m live_demo.run --mode 2p --seed 3 --steps 1 \
+  --player0-preprocessor vithia --player0-decider scripted \
+  --player1-preprocessor vithia --player1-decider liquid:longhorizon-liquid-230m:latest \
+  --headless
+```
+
+`OPENJEV_LOCAL` is reported as engineering-only unless its guarded runtime is
+resident. `JEV_API_REMOTE` is blocked unless `TYPESAFE_API_KEY` is present.
+Ollama and Liquid local runs are never labeled as official TypeSafe JEV runs.
+
+## Optional browser launch
 
 ```sh
 python -m live_demo.probe_integrations
@@ -53,7 +90,10 @@ python -m live_demo.server --port 8788
 
 Open `http://127.0.0.1:8788`.
 
-The browser is optional. Seat-specific automation uses JSON:
+The browser is optional showmanship/control-room surface. It is not required
+for terminal E2E acceptance.
+
+Seat-specific browser automation uses JSON:
 
 ```sh
 curl -s -X POST http://127.0.0.1:8788/api/seat/PLAYER_0 \

@@ -401,5 +401,422 @@
         "trace_sha256": "6f1e3bcfa1d65c64b56e6d6ca23279ff0f86a7b1d56fad5f303748dd400eb700"
       }
     ]
-  }
+  },
+  "terminal_runs": [
+    {
+      "RUN_CLASS": "BASELINE_LLM",
+      "calls": 1,
+      "decider": {
+        "PLAYER_0": {
+          "decider_backend": "qwen2.5:0.5b",
+          "decider_provider": "OLLAMA",
+          "decision_layer": "DIRECT_TYPED_CHOICE",
+          "exact_model": "qwen2.5:0.5b",
+          "fallback_policy": "NOOP",
+          "forecast_depth": 3,
+          "history_depth": 3,
+          "preprocessor": "VITHIA_SPACE",
+          "seat_id": "PLAYER_0"
+        },
+        "PLAYER_1": null
+      },
+      "discovered_models": [
+        {
+          "CURRENTLY_RESIDENT": true,
+          "ENGINEERING_SUBAGENT_ELIGIBLE": false,
+          "GAME_DECIDER_ELIGIBLE": true,
+          "LOAD_PASS": "PASS",
+          "MODEL_ID": "longhorizon-liquid-230m:latest",
+          "RUNTIME": "ollama",
+          "SIZE": 153406489,
+          "SYSTEM_ONE_COMPATIBLE": "OPENAI_COMPATIBLE_HTTP_PROBED"
+        },
+        {
+          "CURRENTLY_RESIDENT": true,
+          "ENGINEERING_SUBAGENT_ELIGIBLE": false,
+          "GAME_DECIDER_ELIGIBLE": true,
+          "LOAD_PASS": "PASS",
+          "MODEL_ID": "qwen2.5:0.5b",
+          "RUNTIME": "ollama",
+          "SIZE": 397821319,
+          "SYSTEM_ONE_COMPATIBLE": "OPENAI_COMPATIBLE_HTTP_PROBED"
+        }
+      ],
+      "eca_6_class": "PASS",
+      "episodes": 1,
+      "errors": [],
+      "execution_substrate": "LOCAL_PYTHON_TERMINAL",
+      "fallbacks": 0,
+      "fco_temporal_loop": "WRITTEN",
+      "frames": 4,
+      "gum_doctor": "NOT_EVIDENCED",
+      "head": "4f3f3c6f8350ca021974ef061d1f44cc14c5c5a0",
+      "lives": 3,
+      "mitosis": "BLOCKED_NO_ENV_AUTH",
+      "mode": "1P",
+      "ollama_openai_compat": "PASS",
+      "opponent_score": null,
+      "preprocessor": {
+        "PLAYER_0": "VITHIA_SPACE",
+        "PLAYER_1": null
+      },
+      "real_jev_api": "BLOCKED_API_KEY",
+      "results_path": "/Users/byron/projects/active/vithia-space-per-seat-v02/results.json",
+      "run_id": "791b127652c941218a298b1c6c8f423f",
+      "runtime": {
+        "ale_py": "0.12.1",
+        "gymnasium": "1.3.0",
+        "numpy": "2.5.3",
+        "platform": "macOS-27.0-arm64-arm-64bit",
+        "python": "3.12.13"
+      },
+      "schema": "VITHIA_TERMINAL_RUN_RESULT_V1",
+      "score": 0.0,
+      "seed": 3,
+      "steps_executed": 1,
+      "steps_requested": 1,
+      "system_one_adapter": "NOT_INSTALLED_IN_ACTIVE_RUNTIME",
+      "tenki": "BLOCKED_NO_ENV_AUTH",
+      "terminal_acceptance": "PASS",
+      "trace_file": "evidence/competition/terminal_first/traces/791b127652c941218a298b1c6c8f423f.trace.jsonl",
+      "trace_sha256": "5585e728708c7a3b5677c73e1547f04ec92504ffe3471e93434f431cc8a1764b",
+      "wall_clock_s": 1.4166
+    },
+    {
+      "RUN_CLASS": "SCRIPTED_CONTROL",
+      "calls": 0,
+      "decider": {
+        "PLAYER_0": {
+          "decider_backend": "scripted-policy",
+          "decider_provider": "SCRIPTED_BASELINE",
+          "decision_layer": "DIRECT_TYPED_CHOICE",
+          "exact_model": "scripted-policy",
+          "fallback_policy": "NOOP",
+          "forecast_depth": 3,
+          "history_depth": 3,
+          "preprocessor": "NONE",
+          "seat_id": "PLAYER_0"
+        },
+        "PLAYER_1": {
+          "decider_backend": "scripted-policy",
+          "decider_provider": "SCRIPTED_BASELINE",
+          "decision_layer": "DIRECT_TYPED_CHOICE",
+          "exact_model": "scripted-policy",
+          "fallback_policy": "NOOP",
+          "forecast_depth": 3,
+          "history_depth": 3,
+          "preprocessor": "NONE",
+          "seat_id": "PLAYER_1"
+        }
+      },
+      "discovered_models": [
+        {
+          "CURRENTLY_RESIDENT": true,
+          "ENGINEERING_SUBAGENT_ELIGIBLE": false,
+          "GAME_DECIDER_ELIGIBLE": true,
+          "LOAD_PASS": "PASS",
+          "MODEL_ID": "longhorizon-liquid-230m:latest",
+          "RUNTIME": "ollama",
+          "SIZE": 153406489,
+          "SYSTEM_ONE_COMPATIBLE": "OPENAI_COMPATIBLE_HTTP_PROBED"
+        },
+        {
+          "CURRENTLY_RESIDENT": true,
+          "ENGINEERING_SUBAGENT_ELIGIBLE": false,
+          "GAME_DECIDER_ELIGIBLE": true,
+          "LOAD_PASS": "PASS",
+          "MODEL_ID": "qwen2.5:0.5b",
+          "RUNTIME": "ollama",
+          "SIZE": 397821319,
+          "SYSTEM_ONE_COMPATIBLE": "OPENAI_COMPATIBLE_HTTP_PROBED"
+        }
+      ],
+      "eca_6_class": "PASS",
+      "episodes": 1,
+      "errors": [],
+      "execution_substrate": "LOCAL_PYTHON_TERMINAL",
+      "fallbacks": 0,
+      "fco_temporal_loop": "WRITTEN",
+      "frames": null,
+      "gum_doctor": "NOT_EVIDENCED",
+      "head": "4f3f3c6f8350ca021974ef061d1f44cc14c5c5a0",
+      "lives": null,
+      "mitosis": "BLOCKED_NO_ENV_AUTH",
+      "mode": "2P",
+      "ollama_openai_compat": "PASS",
+      "opponent_score": null,
+      "preprocessor": {
+        "PLAYER_0": "NONE",
+        "PLAYER_1": "NONE"
+      },
+      "real_jev_api": "BLOCKED_API_KEY",
+      "results_path": "/Users/byron/projects/active/vithia-space-per-seat-v02/results.json",
+      "run_id": "d247d023059a4c98b055badbb8af553f",
+      "runtime": {
+        "ale_py": "0.12.1",
+        "gymnasium": "1.3.0",
+        "numpy": "2.5.3",
+        "platform": "macOS-27.0-arm64-arm-64bit",
+        "python": "3.12.13"
+      },
+      "schema": "VITHIA_TERMINAL_RUN_RESULT_V1",
+      "score": null,
+      "seed": 3,
+      "steps_executed": 1,
+      "steps_requested": 1,
+      "system_one_adapter": "NOT_INSTALLED_IN_ACTIVE_RUNTIME",
+      "tenki": "BLOCKED_NO_ENV_AUTH",
+      "terminal_acceptance": "PASS",
+      "trace_file": "evidence/competition/terminal_first/traces/d247d023059a4c98b055badbb8af553f.trace.jsonl",
+      "trace_sha256": "b94488d5432e787e0419a072b1c9aa6f8cdb6f7fae0895f934467dcdcdf668c4",
+      "wall_clock_s": 0.8766
+    },
+    {
+      "RUN_CLASS": "BASELINE_LLM",
+      "calls": 1,
+      "decider": {
+        "PLAYER_0": {
+          "decider_backend": "longhorizon-liquid-230m:latest",
+          "decider_provider": "LIQUID_LOCAL",
+          "decision_layer": "DIRECT_TYPED_CHOICE",
+          "exact_model": "longhorizon-liquid-230m:latest",
+          "fallback_policy": "NOOP",
+          "forecast_depth": 3,
+          "history_depth": 3,
+          "preprocessor": "VITHIA_SPACE",
+          "seat_id": "PLAYER_0"
+        },
+        "PLAYER_1": null
+      },
+      "discovered_models": [
+        {
+          "CURRENTLY_RESIDENT": true,
+          "ENGINEERING_SUBAGENT_ELIGIBLE": false,
+          "GAME_DECIDER_ELIGIBLE": true,
+          "LOAD_PASS": "PASS",
+          "MODEL_ID": "longhorizon-liquid-230m:latest",
+          "RUNTIME": "ollama",
+          "SIZE": 153406489,
+          "SYSTEM_ONE_COMPATIBLE": "OPENAI_COMPATIBLE_HTTP_PROBED"
+        },
+        {
+          "CURRENTLY_RESIDENT": true,
+          "ENGINEERING_SUBAGENT_ELIGIBLE": false,
+          "GAME_DECIDER_ELIGIBLE": true,
+          "LOAD_PASS": "PASS",
+          "MODEL_ID": "qwen2.5:0.5b",
+          "RUNTIME": "ollama",
+          "SIZE": 397821319,
+          "SYSTEM_ONE_COMPATIBLE": "OPENAI_COMPATIBLE_HTTP_PROBED"
+        }
+      ],
+      "eca_6_class": "PASS",
+      "episodes": 1,
+      "errors": [],
+      "execution_substrate": "LOCAL_PYTHON_TERMINAL",
+      "fallbacks": 1,
+      "fco_temporal_loop": "WRITTEN",
+      "frames": 4,
+      "gum_doctor": "NOT_EVIDENCED",
+      "head": "4f3f3c6f8350ca021974ef061d1f44cc14c5c5a0",
+      "lives": 3,
+      "mitosis": "BLOCKED_NO_ENV_AUTH",
+      "mode": "1P",
+      "ollama_openai_compat": "PASS",
+      "opponent_score": null,
+      "preprocessor": {
+        "PLAYER_0": "VITHIA_SPACE",
+        "PLAYER_1": null
+      },
+      "real_jev_api": "BLOCKED_API_KEY",
+      "results_path": "/Users/byron/projects/active/vithia-space-per-seat-v02/results.json",
+      "run_id": "aabf267064f2453e88b35cfd9c6ce905",
+      "runtime": {
+        "ale_py": "0.12.1",
+        "gymnasium": "1.3.0",
+        "numpy": "2.5.3",
+        "platform": "macOS-27.0-arm64-arm-64bit",
+        "python": "3.12.13"
+      },
+      "schema": "VITHIA_TERMINAL_RUN_RESULT_V1",
+      "score": 0.0,
+      "seed": 4,
+      "steps_executed": 1,
+      "steps_requested": 1,
+      "system_one_adapter": "NOT_INSTALLED_IN_ACTIVE_RUNTIME",
+      "tenki": "BLOCKED_NO_ENV_AUTH",
+      "terminal_acceptance": "PASS",
+      "trace_file": "evidence/competition/terminal_first/traces/aabf267064f2453e88b35cfd9c6ce905.trace.jsonl",
+      "trace_sha256": "58f04bcd8c0102af2029f2d8be464f907421f033dfd0c21fc98862a1b0831d25",
+      "wall_clock_s": 0.119
+    },
+    {
+      "RUN_CLASS": "BASELINE_LLM",
+      "calls": 1,
+      "decider": {
+        "PLAYER_0": {
+          "decider_backend": "longhorizon-liquid-230m:latest",
+          "decider_provider": "LIQUID_LOCAL",
+          "decision_layer": "DIRECT_TYPED_CHOICE",
+          "exact_model": "longhorizon-liquid-230m:latest",
+          "fallback_policy": "NOOP",
+          "forecast_depth": 3,
+          "history_depth": 3,
+          "preprocessor": "VITHIA_SPACE",
+          "seat_id": "PLAYER_0"
+        },
+        "PLAYER_1": null
+      },
+      "discovered_models": [
+        {
+          "CURRENTLY_RESIDENT": true,
+          "ENGINEERING_SUBAGENT_ELIGIBLE": false,
+          "GAME_DECIDER_ELIGIBLE": true,
+          "LOAD_PASS": "PASS",
+          "MODEL_ID": "longhorizon-liquid-230m:latest",
+          "RUNTIME": "ollama",
+          "SIZE": 153406489,
+          "SYSTEM_ONE_COMPATIBLE": "OPENAI_COMPATIBLE_HTTP_PROBED"
+        },
+        {
+          "CURRENTLY_RESIDENT": true,
+          "ENGINEERING_SUBAGENT_ELIGIBLE": false,
+          "GAME_DECIDER_ELIGIBLE": true,
+          "LOAD_PASS": "PASS",
+          "MODEL_ID": "qwen2.5:0.5b",
+          "RUNTIME": "ollama",
+          "SIZE": 397821319,
+          "SYSTEM_ONE_COMPATIBLE": "OPENAI_COMPATIBLE_HTTP_PROBED"
+        }
+      ],
+      "eca_6_class": "PASS",
+      "episodes": 1,
+      "errors": [],
+      "execution_substrate": "LOCAL_PYTHON_TERMINAL",
+      "fallbacks": 0,
+      "fco_temporal_loop": "WRITTEN",
+      "frames": 4,
+      "gum_doctor": "NOT_EVIDENCED",
+      "head": "4f3f3c6f8350ca021974ef061d1f44cc14c5c5a0",
+      "lives": 3,
+      "mitosis": "BLOCKED_NO_ENV_AUTH",
+      "mode": "1P",
+      "ollama_openai_compat": "PASS",
+      "opponent_score": null,
+      "preprocessor": {
+        "PLAYER_0": "VITHIA_SPACE",
+        "PLAYER_1": null
+      },
+      "real_jev_api": "BLOCKED_API_KEY",
+      "results_path": "/Users/byron/projects/active/vithia-space-per-seat-v02/results.json",
+      "run_id": "eccc5a508b724636be6fd1d9286b2eb5",
+      "runtime": {
+        "ale_py": "0.12.1",
+        "gymnasium": "1.3.0",
+        "numpy": "2.5.3",
+        "platform": "macOS-27.0-arm64-arm-64bit",
+        "python": "3.12.13"
+      },
+      "schema": "VITHIA_TERMINAL_RUN_RESULT_V1",
+      "score": 0.0,
+      "seed": 5,
+      "steps_executed": 1,
+      "steps_requested": 1,
+      "system_one_adapter": "NOT_INSTALLED_IN_ACTIVE_RUNTIME",
+      "tenki": "BLOCKED_NO_ENV_AUTH",
+      "terminal_acceptance": "PASS",
+      "trace_file": "evidence/competition/terminal_first/traces/eccc5a508b724636be6fd1d9286b2eb5.trace.jsonl",
+      "trace_sha256": "128b95ee715808b27ee54623c055de97faf630c065daa16ce7aa47adfa0aff9a",
+      "wall_clock_s": 0.7756
+    },
+    {
+      "schema": "VITHIA_TERMINAL_RUN_RESULT_V1",
+      "run_id": "e62c942cb092489a83d36a43e47a5dff",
+      "RUN_CLASS": "SCRIPTED_CONTROL",
+      "mode": "2P",
+      "head": "4f3f3c6f8350ca021974ef061d1f44cc14c5c5a0",
+      "seed": 6,
+      "episodes": 1,
+      "steps_requested": 1,
+      "steps_executed": 1,
+      "frames": null,
+      "score": null,
+      "opponent_score": null,
+      "lives": null,
+      "calls": 0,
+      "fallbacks": 0,
+      "errors": [],
+      "wall_clock_s": 0.4883,
+      "runtime": {
+        "python": "3.12.13",
+        "platform": "macOS-27.0-arm64-arm-64bit",
+        "ale_py": "0.12.1",
+        "gymnasium": "1.3.0",
+        "numpy": "2.5.3"
+      },
+      "preprocessor": {
+        "PLAYER_0": "NONE",
+        "PLAYER_1": "NONE"
+      },
+      "decider": {
+        "PLAYER_0": {
+          "seat_id": "PLAYER_0",
+          "preprocessor": "NONE",
+          "decision_layer": "DIRECT_TYPED_CHOICE",
+          "decider_provider": "SCRIPTED_BASELINE",
+          "decider_backend": "scripted-policy",
+          "exact_model": "scripted-policy",
+          "fallback_policy": "NOOP",
+          "history_depth": 3,
+          "forecast_depth": 3
+        },
+        "PLAYER_1": {
+          "seat_id": "PLAYER_1",
+          "preprocessor": "NONE",
+          "decision_layer": "DIRECT_TYPED_CHOICE",
+          "decider_provider": "SCRIPTED_BASELINE",
+          "decider_backend": "scripted-policy",
+          "exact_model": "scripted-policy",
+          "fallback_policy": "NOOP",
+          "history_depth": 3,
+          "forecast_depth": 3
+        }
+      },
+      "execution_substrate": "LOCAL_PYTHON_TERMINAL",
+      "system_one_adapter": "NOT_INSTALLED_IN_ACTIVE_RUNTIME",
+      "ollama_openai_compat": "PASS",
+      "discovered_models": [
+        {
+          "MODEL_ID": "longhorizon-liquid-230m:latest",
+          "RUNTIME": "ollama",
+          "SIZE": 153406489,
+          "CURRENTLY_RESIDENT": true,
+          "LOAD_PASS": "PASS",
+          "SYSTEM_ONE_COMPATIBLE": "OPENAI_COMPATIBLE_HTTP_PROBED",
+          "GAME_DECIDER_ELIGIBLE": true,
+          "ENGINEERING_SUBAGENT_ELIGIBLE": false
+        },
+        {
+          "MODEL_ID": "qwen2.5:0.5b",
+          "RUNTIME": "ollama",
+          "SIZE": 397821319,
+          "CURRENTLY_RESIDENT": true,
+          "LOAD_PASS": "PASS",
+          "SYSTEM_ONE_COMPATIBLE": "OPENAI_COMPATIBLE_HTTP_PROBED",
+          "GAME_DECIDER_ELIGIBLE": true,
+          "ENGINEERING_SUBAGENT_ELIGIBLE": false
+        }
+      ],
+      "real_jev_api": "BLOCKED_API_KEY",
+      "mitosis": "BLOCKED_NO_ENV_AUTH",
+      "tenki": "BLOCKED_NO_ENV_AUTH",
+      "gum_doctor": "NOT_EVIDENCED",
+      "fco_temporal_loop": "WRITTEN",
+      "eca_6_class": "PASS",
+      "trace_file": "evidence/competition/terminal_first/traces/e62c942cb092489a83d36a43e47a5dff.trace.jsonl",
+      "trace_sha256": "a5fde70cd0a10bfe66b1356246d8ea7c24cfb20c3c7fd119b07c106baf2f5f2e",
+      "results_path": "/Users/byron/projects/active/vithia-space-per-seat-v02/results.json",
+      "terminal_acceptance": "PASS"
+    }
+  ]
 }

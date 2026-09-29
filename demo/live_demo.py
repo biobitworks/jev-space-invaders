@@ -136,7 +136,7 @@ class JEVApiSystemOne(SystemOneBackend):
 class ProviderRegistry:
     def __init__(self) -> None:
         self.ollama_url = os.environ.get("OLLAMA_BASE_URL", "http://127.0.0.1:11434")
-        self.liquid_url = os.environ.get("LIQUID_LOCAL_URL", "http://127.0.0.1:11437")
+        self.liquid_url = os.environ.get("LIQUID_LOCAL_URL", self.ollama_url)
         self.openjev_url = os.environ.get("OPENJEV_BASE_URL", "http://127.0.0.1:8765")
         self.models = self._ollama_models()
 
