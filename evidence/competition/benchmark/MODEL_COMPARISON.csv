@@ -1,0 +1,6 @@
+model,provider,lane,executed,real_time_factor_mean,decisions_per_second_mean,input_tokens_per_decision,output_tokens_per_decision,cost_per_game_usd,mean_score,fallback_actions,errors
+llama3.2:3b,ollama,LOCAL_OLLAMA_BASELINE,true,0.1062,1.5938,449.52,9.0,0.0,270.0,0,0
+System-One official baseline,"openai|anthropic|gemini",SYSTEM_ONE_OFFICIAL_BASELINE,false,,,,,,,,BLOCKED_NO_PROVIDER_CREDENTIAL
+TypeSafe hosted JEV,typesafe,HOSTED_JEV,false,,,,,,,,NOT_AVAILABLE_NOT_TESTED
+OpenJEV matched comparator,openjev,OPENJEV_MATCHED_COMPARATOR,false,,,,,,,,BLOCKED_READOUT_CAPABILITY_MISMATCH
+scripted-policy (harness sanity check),none,SCRIPTED_SANITY,true,,,0,0,0.0,,0,0

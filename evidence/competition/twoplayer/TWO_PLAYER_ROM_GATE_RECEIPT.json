@@ -1,0 +1,21 @@
+{
+  "schema": "TWO_PLAYER_ROM_GATE_RECEIPT_V1",
+  "lineage_id": "UFA-JEV-COMP",
+  "created_utc": "2026-09-28T21:22:00Z",
+  "ROM_GATE": "BLOCKED",
+  "REASON": "LICENSE_DECISION_NOT_MADE",
+  "ROM_BYTES_PRESENT": "UNKNOWN",
+  "rom_bytes_present_note": "experiments/e5_2p.py's rom_gate() takes an explicit rom_dir argument with no default or environment-variable fallback anywhere in this repo; no path is configured for it to check. Per instruction, no search of unrelated local filesystem locations for ROM files was performed. Status is honestly UNKNOWN, not verified-absent.",
+  "EXECUTION_AUTHORIZED": "NO",
+  "code_reference": "experiments/e5_2p.py:rom_gate() - 'The ROM is never acquired here: a directory holding space_invaders.bin must be supplied explicitly (Byron's licence decision) and its hashes are recorded; without it the lane is ROM_GATE_BLOCKED.'",
+  "prohibited_actions_not_taken": [
+    "did not download a ROM",
+    "did not copy a ROM",
+    "did not search local unrelated locations for ROM files",
+    "did not bypass ALE ROM checks",
+    "did not use an unofficial ROM acquisition helper",
+    "did not change this gate to PASS"
+  ],
+  "claim_ceiling": "This is a governance gate state, not a technical capability claim. PettingZoo/ALE dependencies are separately verified installable (see TWO_PLAYER_DEPENDENCY_MANIFEST.json); that is orthogonal to this licence gate.",
+  "signature_state": "NOT_SIGNED"
+}

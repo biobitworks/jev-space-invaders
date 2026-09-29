@@ -1,0 +1,11 @@
+{
+  "schema": "PLAYTHROUGH_MMR_VERIFICATION_RECEIPT_V1",
+  "frames_checked": 240,
+  "errors": [],
+  "recomputed_mmr_root": "e55a47a7f16064477c4f101a38a849391c2fbc9f6557c5244daf0406b36dbd74",
+  "recorded_mmr_root": "e55a47a7f16064477c4f101a38a849391c2fbc9f6557c5244daf0406b36dbd74",
+  "frame_signature_state": "SIGNED_VERIFIED",
+  "signature_domain": "FRAME_ED25519_ONLY",
+  "git_commit_signature_state": "NOT_INFERRED",
+  "PLAYTHROUGH_VERIFY": "PASS"
+}

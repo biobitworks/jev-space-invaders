@@ -1,0 +1,86 @@
+{
+  "atoms": [
+    {
+      "bytes": 3848,
+      "fmo_leaf": "664f7b1291f0e2f641ecf83e5482f9182e5082aa31098683f7b25c0f8572e54e",
+      "group": "procedure",
+      "kind": "ProcedureFCO",
+      "location": "public",
+      "path": "docs/COMPETITION_POST_UPLOAD_RESUBMISSION_V1.md",
+      "sha256": "3f002ad0580deb7fb7300c4c798ac05c52cdb249a3c11912f21b1ac7edd89743"
+    },
+    {
+      "bytes": 2778,
+      "fmo_leaf": "1005792ad2d7c320e445180807e0d028644297ff4dba45984076663bf3b314c1",
+      "group": "procedure",
+      "kind": "ExecutableProcedureFCO",
+      "location": "public",
+      "path": "scripts/prepare_entry_resubmission_v1.py",
+      "sha256": "93ce389933d6c1f1f76bc6f14d629be2c7091c6eeee0f7aa56834165778ad31c"
+    },
+    {
+      "bytes": 3334,
+      "fmo_leaf": "af1415823c62d7a9ae0ec6b8d87299ffd88be8d2d855aa8a09a4138c470dea24",
+      "group": "input",
+      "kind": "ProjectSettingsSnapshotFCO",
+      "location": "public",
+      "path": "evidence/competition/entry/PROJECT_SETTINGS.bp0005.snapshot.json",
+      "sha256": "3c80b7e92da1bb0232088843705dcdf2743970b83411c5fd874949d60c16d6c7"
+    },
+    {
+      "bytes": 856,
+      "fmo_leaf": "95ca95a815c2224de2c606cc1e12b37e72f8a67a5e46709e25cab9bce184f01a",
+      "group": "input",
+      "kind": "EntryUpdatePredecessorFCO",
+      "location": "public",
+      "path": "evidence/competition/entry/FINAL_ENTRY_UPDATE_V2.json",
+      "sha256": "7d7aa1826157d6af60db32ad45e2157278872061b5f7c498964d8f6555fbbd96"
+    },
+    {
+      "bytes": 2251,
+      "fmo_leaf": "87ca114ebf804309e80267072c926217ddcea93e7f9fe1ec3289da24354ca5d9",
+      "group": "evidence",
+      "kind": "MechanicsReceiptFCO",
+      "location": "public",
+      "path": "evidence/competition/entry/SUBMISSION_UPDATE_MECHANICS_RECEIPT.json",
+      "sha256": "c76d323e305c5e407051bffa6de52888541b85477288df2d80e33653cb5e0cbc"
+    },
+    {
+      "bytes": 1082,
+      "fmo_leaf": "995907d1009a7fcf1b26c29193092c0abc15d689b9a999a09b8ebcd84304d9b5",
+      "group": "evidence",
+      "kind": "GateReceiptFCO",
+      "location": "public",
+      "path": "evidence/competition/entry/POST_UPLOAD_PREPARATION_GATE_RECEIPT.json",
+      "sha256": "e1e25047c2098e10823357e8a6204054a192f47445f1dad9c2c41209beb3e38d"
+    }
+  ],
+  "bp_root": "367a72454e5afccb44cd91aafc8143f81d104120c5a0c92f90ebde5bdad28d79",
+  "branch": "competition/qualified-lineage-v01",
+  "breakpoint_id": "UFA-JEV-COMP-BP-0005",
+  "breakpoint_root": "367a72454e5afccb44cd91aafc8143f81d104120c5a0c92f90ebde5bdad28d79",
+  "claim_ceiling": "IDENTITY_AND_INCLUSION_ONLY; hashes do not establish correctness",
+  "created_utc": "2026-09-28T16:19:38+00:00",
+  "demo_video_url": null,
+  "git_head_at_creation": "2e8b5c060873b75e7632133901bb8723215deb88",
+  "group_roots": {
+    "evidence": "b141f5911b1c183c33408d2a678436a8354d067c4baa0042cdae852e8f655c0f",
+    "input": "4f40a23fd5f54f6dd30f6dbd5e03d4d35b873a42a7e8d71d5ba4876a0a8c4847",
+    "procedure": "462cd54d879240b2a06fe68415bfaeae8e9b5faf9727ac52ec0f8af317d9439a"
+  },
+  "historical_mutation_performed": false,
+  "lineage_id": "UFA-JEV-COMP",
+  "parent_occurrence": {
+    "breakpoint_id": "UFA-JEV-COMP-BP-0004",
+    "commit": "2e8b5c060873b75e7632133901bb8723215deb88",
+    "mmr_root_after": "e07cb2b1ccdb295b922fc55984551b66300875ebda56f39df95c88a9f9cfeb83"
+  },
+  "parent_root": "e07cb2b1ccdb295b922fc55984551b66300875ebda56f39df95c88a9f9cfeb83",
+  "project": "VITHIA_SPACE",
+  "resubmission_identity_semantics": "NOT_VERIFIED",
+  "root_kind": "FMO_V1_BREAKPOINT_ATOMS",
+  "schema": "UFA_JEV_QUALIFIED_BREAKPOINT_V1",
+  "signature_state": "NOT_SIGNED",
+  "state": "POST_UPLOAD_RESUBMISSION_PROCEDURE_PREPARED",
+  "submission_mutation_performed": false
+}

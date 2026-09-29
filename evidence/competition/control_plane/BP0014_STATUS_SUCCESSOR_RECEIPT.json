@@ -1,0 +1,23 @@
+{
+  "schema": "MULTIMODEL_STATUS_SUCCESSOR_RECEIPT_V1",
+  "lineage_id": "UFA-JEV-COMP",
+  "status_file": "governance/multimodel/STATUS.json",
+  "successor_stage": "ACTOR_AND_CONTROL_PLANE_CLOSURE_SUCCESSOR",
+  "successor_to_breakpoint": "UFA-JEV-COMP-BP-0013",
+  "corrected_from": {
+    "branch": "competition/qualified-lineage-v01",
+    "latest_breakpoint": "UFA-JEV-COMP-BP-0008",
+    "latest_mmr_root": "c930d2260ea6a1090f97c79c1b0a96be38996ed7c81b2da08570ed2b37079e31",
+    "stage": "TENKI_SANDBOX_MITOSIS_FED_RUN_EXECUTED"
+  },
+  "corrected_to": {
+    "branch": "competition/final-integration-v01",
+    "parent_head": "37ef623e93dabe74e896de9e8b5e2ce49be183c1",
+    "parent_breakpoint": "UFA-JEV-COMP-BP-0013",
+    "parent_mmr_size": 13,
+    "parent_mmr_root": "250e3b6630ac0955c7e0ad65848d51b0131abbd338512d6693bed87e531dd32a",
+    "successor_breakpoint_target": "UFA-JEV-COMP-BP-0014"
+  },
+  "historical_bp0008_preserved": true,
+  "claim_ceiling": "Receipt records status successor semantics only; final BP-0014 root is reported by the qualified lineage ledger after breakpoint creation."
+}

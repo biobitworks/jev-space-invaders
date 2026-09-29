@@ -1,0 +1,337 @@
+{
+  "branch": "competition/qualified-lineage-v01",
+  "entries": [
+    {
+      "bp_file": "governance/competition/breakpoints/0001-m3-local-ollama-baseline-complete.json",
+      "bp_file_sha256": "539c621a72c9b6d3194986fb94fa73ae0caaedd8a511462c9051a57f5561d8ad",
+      "bp_id": "UFA-JEV-COMP-BP-0001",
+      "bp_root": "ee15e69ba0f7e6daa87f7184869b63353eaa2ae77d0414a62ccf24aeded0e557",
+      "branch": "competition/qualified-lineage-v01",
+      "lineage_id": "UFA-JEV-COMP",
+      "mmr_leaf": "612c570d29b54e5e0a21ecd89663c83b13b43a35f9802ce9ae8429529617ccbd",
+      "mmr_peaks_after": [
+        "612c570d29b54e5e0a21ecd89663c83b13b43a35f9802ce9ae8429529617ccbd"
+      ],
+      "mmr_root_after": "612c570d29b54e5e0a21ecd89663c83b13b43a35f9802ce9ae8429529617ccbd",
+      "mmr_size": 1,
+      "parent_root": "51744c6a5212e6d11a93fa7fdfec57d1902a2628d57a48d2a54fd0ea7d820266",
+      "root_kind": "FMO_V1_BREAKPOINT_ATOMS",
+      "seq": 0
+    },
+    {
+      "bp_file": "governance/competition/breakpoints/0002-jev-access-openjev-capability-state.json",
+      "bp_file_sha256": "16ca56230d3e001e52484353040010b34f5abd9a70ae0e85d1076ac2adf0c9cd",
+      "bp_id": "UFA-JEV-COMP-BP-0002",
+      "bp_root": "d5c57e7aa1515d93f0db92c977688b3524695ce673557ad4e2b634efd4e8aba1",
+      "branch": "competition/qualified-lineage-v01",
+      "lineage_id": "UFA-JEV-COMP",
+      "mmr_leaf": "25984c9011636cadef00bf081ed7156825c12f4babba6d9670abfc3e790e967e",
+      "mmr_peaks_after": [
+        "b2a572b20f42bdb60df5fc31188d1a982fd1340d2d5fc1b974f46ecb18323eec"
+      ],
+      "mmr_root_after": "b2a572b20f42bdb60df5fc31188d1a982fd1340d2d5fc1b974f46ecb18323eec",
+      "mmr_size": 2,
+      "parent_root": "612c570d29b54e5e0a21ecd89663c83b13b43a35f9802ce9ae8429529617ccbd",
+      "root_kind": "FMO_V1_BREAKPOINT_ATOMS",
+      "seq": 1
+    },
+    {
+      "bp_file": "governance/competition/breakpoints/0003-competition-status-sponsor-correction.json",
+      "bp_file_sha256": "8a3f06a970c1d7b74da4b40f5e30777fe4bc643f03949ab5650d8c9947c17568",
+      "bp_id": "UFA-JEV-COMP-BP-0003",
+      "bp_root": "d50c5222a3677d25883f08307625744693499f75154cbf09ea1224bb8a9975dc",
+      "branch": "competition/qualified-lineage-v01",
+      "lineage_id": "UFA-JEV-COMP",
+      "mmr_leaf": "47251e3d67844e1b5401dbab74894cc605fa510272f63c65409f012c6fe92f54",
+      "mmr_peaks_after": [
+        "b2a572b20f42bdb60df5fc31188d1a982fd1340d2d5fc1b974f46ecb18323eec",
+        "47251e3d67844e1b5401dbab74894cc605fa510272f63c65409f012c6fe92f54"
+      ],
+      "mmr_root_after": "c65ea10f06a8fe67536f764333546c7438a78235c45d8a49c5bfb60576fe5997",
+      "mmr_size": 3,
+      "parent_root": "b2a572b20f42bdb60df5fc31188d1a982fd1340d2d5fc1b974f46ecb18323eec",
+      "root_kind": "FMO_V1_BREAKPOINT_ATOMS",
+      "seq": 2
+    },
+    {
+      "bp_file": "governance/competition/breakpoints/0004-demo-package-prepared.json",
+      "bp_file_sha256": "d4298800e607e388f63b4cbfea9af08dfe38b9ee32c8c6baf1de20425ead94cf",
+      "bp_id": "UFA-JEV-COMP-BP-0004",
+      "bp_root": "ddde23d507322b27d1edbcc41a1995ef5437eff3b4e5ed6c3df3f7184057b457",
+      "branch": "competition/qualified-lineage-v01",
+      "lineage_id": "UFA-JEV-COMP",
+      "mmr_leaf": "0e1ed597c8c65c1cb4c886016e1d335f338413897609889db4fdc8450d15572a",
+      "mmr_peaks_after": [
+        "e07cb2b1ccdb295b922fc55984551b66300875ebda56f39df95c88a9f9cfeb83"
+      ],
+      "mmr_root_after": "e07cb2b1ccdb295b922fc55984551b66300875ebda56f39df95c88a9f9cfeb83",
+      "mmr_size": 4,
+      "parent_root": "c65ea10f06a8fe67536f764333546c7438a78235c45d8a49c5bfb60576fe5997",
+      "root_kind": "FMO_V1_BREAKPOINT_ATOMS",
+      "seq": 3
+    },
+    {
+      "bp_file": "governance/competition/breakpoints/0005-post-upload-resubmission-procedure-prepared.json",
+      "bp_file_sha256": "6b72d1306128b345860ff8a7bacb14073b5f99205dc9601003ef3d0abf02317e",
+      "bp_id": "UFA-JEV-COMP-BP-0005",
+      "bp_root": "367a72454e5afccb44cd91aafc8143f81d104120c5a0c92f90ebde5bdad28d79",
+      "branch": "competition/qualified-lineage-v01",
+      "lineage_id": "UFA-JEV-COMP",
+      "mmr_leaf": "9bc9ebad3d1ef692bfee78e495b761e99b2278be6604ea5fde80fab3aeb6b6f2",
+      "mmr_peaks_after": [
+        "e07cb2b1ccdb295b922fc55984551b66300875ebda56f39df95c88a9f9cfeb83",
+        "9bc9ebad3d1ef692bfee78e495b761e99b2278be6604ea5fde80fab3aeb6b6f2"
+      ],
+      "mmr_root_after": "30304a0a1f8eeea703bc570ec13c9c6f97891dbb2cf622927b258200389d5cd0",
+      "mmr_size": 5,
+      "parent_root": "e07cb2b1ccdb295b922fc55984551b66300875ebda56f39df95c88a9f9cfeb83",
+      "root_kind": "FMO_V1_BREAKPOINT_ATOMS",
+      "seq": 4
+    },
+    {
+      "bp_file": "governance/competition/breakpoints/0006-tenki-code-review-sponsor-auth.json",
+      "bp_file_sha256": "db7e633e2773c067f450763106f9086f3106fe20276ce1f3bbe6353b7b6e9e29",
+      "bp_id": "UFA-JEV-COMP-BP-0006",
+      "bp_root": "b31471c72f0a171fe0aac862464d216286c42e0ed7e4cf46d538b7e3ff52d8bf",
+      "branch": "competition/qualified-lineage-v01",
+      "lineage_id": "UFA-JEV-COMP",
+      "mmr_leaf": "666b2c17d87351b98baae1da03e9479437b1ae58015e0cf3e9b378606b1374e9",
+      "mmr_peaks_after": [
+        "e07cb2b1ccdb295b922fc55984551b66300875ebda56f39df95c88a9f9cfeb83",
+        "b76967c3247b2ece4baaa937331e7d51669c3b38177fafe78f6409d96fb90761"
+      ],
+      "mmr_root_after": "ccaf186be4f7b1a2fbd5a951f73b6c51ec775f1f7efb0ac4d7c00aff1cbf44db",
+      "mmr_size": 6,
+      "parent_root": "30304a0a1f8eeea703bc570ec13c9c6f97891dbb2cf622927b258200389d5cd0",
+      "root_kind": "FMO_V1_BREAKPOINT_ATOMS",
+      "seq": 5
+    },
+    {
+      "bp_file": "governance/competition/breakpoints/0007-mitosis-directive-persisted-retrieved.json",
+      "bp_file_sha256": "902bb18dec97f9a92aba998fe1a4f263ccb4203adfb1fb96bb9db496fdd6b93b",
+      "bp_id": "UFA-JEV-COMP-BP-0007",
+      "bp_root": "2de178d3be862c039fe68554281e3ec671fe87a406e9f9eb2b89cc895ec717f4",
+      "branch": "competition/qualified-lineage-v01",
+      "lineage_id": "UFA-JEV-COMP",
+      "mmr_leaf": "9579dceef2431a28d50ae976a0327413a59b14c6454e76ebbaa183d48cb7bc85",
+      "mmr_peaks_after": [
+        "e07cb2b1ccdb295b922fc55984551b66300875ebda56f39df95c88a9f9cfeb83",
+        "b76967c3247b2ece4baaa937331e7d51669c3b38177fafe78f6409d96fb90761",
+        "9579dceef2431a28d50ae976a0327413a59b14c6454e76ebbaa183d48cb7bc85"
+      ],
+      "mmr_root_after": "5d3da0259231307f9c1d1e309055c4e93c93e13060e927393b8332e0a807256b",
+      "mmr_size": 7,
+      "parent_root": "ccaf186be4f7b1a2fbd5a951f73b6c51ec775f1f7efb0ac4d7c00aff1cbf44db",
+      "root_kind": "FMO_V1_BREAKPOINT_ATOMS",
+      "seq": 6
+    },
+    {
+      "bp_file": "governance/competition/breakpoints/0008-tenki-sandbox-mitosis-fed-run.json",
+      "bp_file_sha256": "36956e4ce98a929485b3720e840f1305ce533664e875180df3767934f8d7e333",
+      "bp_id": "UFA-JEV-COMP-BP-0008",
+      "bp_root": "726e1c34caaf3ce29c326907814159bd0f5e1aa72777516f1e7e6bfbd808e4ee",
+      "branch": "competition/qualified-lineage-v01",
+      "lineage_id": "UFA-JEV-COMP",
+      "mmr_leaf": "6c0807709c0f81a400ebf28e0f7512988d23d226df2786d425bf97bf89777ddd",
+      "mmr_peaks_after": [
+        "c930d2260ea6a1090f97c79c1b0a96be38996ed7c81b2da08570ed2b37079e31"
+      ],
+      "mmr_root_after": "c930d2260ea6a1090f97c79c1b0a96be38996ed7c81b2da08570ed2b37079e31",
+      "mmr_size": 8,
+      "parent_root": "5d3da0259231307f9c1d1e309055c4e93c93e13060e927393b8332e0a807256b",
+      "root_kind": "FMO_V1_BREAKPOINT_ATOMS",
+      "seq": 7
+    },
+    {
+      "seq": 8,
+      "bp_id": "UFA-JEV-COMP-BP-0009",
+      "bp_file": "governance/competition/breakpoints/0009-concurrent-writer-collision-receipt.json",
+      "bp_file_sha256": "5bdd058d3052ba78be37c03cac2b3e0b101c524883b7f8881100b10cb0936382",
+      "bp_root": "1190037922f1cbe49bd40cffe74a3d7c0c045fa4c40b9a327eb2e744555af265",
+      "branch": "competition/final-integration-v01",
+      "lineage_id": "UFA-JEV-COMP",
+      "parent_root": "c930d2260ea6a1090f97c79c1b0a96be38996ed7c81b2da08570ed2b37079e31",
+      "root_kind": "FMO_V1_BREAKPOINT_ATOMS",
+      "mmr_leaf": "ff06f76e0b6f3e72cdfaa8e9e02fff6abf5f0a26370b0a9f90ed966d1465499e",
+      "mmr_size": 9,
+      "mmr_root_after": "6b7a677736201583751a64e0775e5fe83aa3307acb64f716e7d3074e149e9bab",
+      "mmr_peaks_after": [
+        "c930d2260ea6a1090f97c79c1b0a96be38996ed7c81b2da08570ed2b37079e31",
+        "ff06f76e0b6f3e72cdfaa8e9e02fff6abf5f0a26370b0a9f90ed966d1465499e"
+      ]
+    },
+    {
+      "seq": 9,
+      "bp_id": "UFA-JEV-COMP-BP-0010",
+      "bp_file": "governance/competition/breakpoints/0010-readiness-benchmark-redteam.json",
+      "bp_file_sha256": "577b2163b58116f04092a900c4298b06d53532bb9223d1bc581293460c7390ff",
+      "bp_root": "00a732c90b772f1d108343ebc1f17b51d04bd365896bcea426a3b1706de93979",
+      "branch": "competition/final-integration-v01",
+      "lineage_id": "UFA-JEV-COMP",
+      "parent_root": "6b7a677736201583751a64e0775e5fe83aa3307acb64f716e7d3074e149e9bab",
+      "root_kind": "FMO_V1_BREAKPOINT_ATOMS",
+      "mmr_leaf": "46db04fd063b2bc402a098e5f087a28276e6629838b18e1114c5fdd72464d49d",
+      "mmr_size": 10,
+      "mmr_root_after": "dd1bee1740ec3de4654504cb662ff433583bb00feac4ed82e1e581b176c2c608",
+      "mmr_peaks_after": [
+        "c930d2260ea6a1090f97c79c1b0a96be38996ed7c81b2da08570ed2b37079e31",
+        "485a5b14565fcfdf70a35dd5bd177aff58ff0a688201e14273ba289527feb88d"
+      ]
+    },
+    {
+      "seq": 10,
+      "bp_id": "UFA-JEV-COMP-BP-0011",
+      "bp_file": "governance/competition/breakpoints/0011-preparation-for-codex-handoff.json",
+      "bp_file_sha256": "26cf1d97d641fdd1714d4677169cbafadf383b173bbd82c062f365b83adb7802",
+      "bp_root": "eb5e1070867cc26f118dad32cf6105fa75831a21e813f9f92c4693fc87e040c5",
+      "branch": "competition/final-integration-v01",
+      "lineage_id": "UFA-JEV-COMP",
+      "parent_root": "dd1bee1740ec3de4654504cb662ff433583bb00feac4ed82e1e581b176c2c608",
+      "root_kind": "FMO_V1_BREAKPOINT_ATOMS",
+      "mmr_leaf": "1df088a616fb9fa24e991770db0002a0654de1429c0814112d6805dcb5b82097",
+      "mmr_size": 11,
+      "mmr_root_after": "a9f91de58e0abfd0c0943a30a5afdeb0fc39200efa1dc6d21c530385288acf4f",
+      "mmr_peaks_after": [
+        "c930d2260ea6a1090f97c79c1b0a96be38996ed7c81b2da08570ed2b37079e31",
+        "485a5b14565fcfdf70a35dd5bd177aff58ff0a688201e14273ba289527feb88d",
+        "1df088a616fb9fa24e991770db0002a0654de1429c0814112d6805dcb5b82097"
+      ]
+    },
+    {
+      "seq": 11,
+      "bp_id": "UFA-JEV-COMP-BP-0012",
+      "bp_file": "governance/competition/breakpoints/0012-final-execution-capture-sponsor-proof-package.json",
+      "bp_file_sha256": "dd1d8e0e4aea0a302996b7dd5a335d52f16ddafc97ed797d3af2f761862d4267",
+      "bp_root": "6c5036fd412c9f4f214cc2d30f06137cbb8b561d87158213464706ba6781947b",
+      "branch": "competition/final-integration-v01",
+      "lineage_id": "UFA-JEV-COMP",
+      "parent_root": "a9f91de58e0abfd0c0943a30a5afdeb0fc39200efa1dc6d21c530385288acf4f",
+      "root_kind": "FMO_V1_BREAKPOINT_ATOMS",
+      "mmr_leaf": "69cf39acfdeca38e1abe9a7cb1d01bcd5364618f6fb2d39e0f2bafc5ca4d51eb",
+      "mmr_size": 12,
+      "mmr_root_after": "2108cc21f037766b1047b0363e20f1bf1de960ef93a8d51ff9ced98768984898",
+      "mmr_peaks_after": [
+        "c930d2260ea6a1090f97c79c1b0a96be38996ed7c81b2da08570ed2b37079e31",
+        "703db14ed49600c550aa1fb4f45ad5a30e6b1ea6221db0148d43d031f2e4b6ce"
+      ]
+    },
+    {
+      "seq": 12,
+      "bp_id": "UFA-JEV-COMP-BP-0013",
+      "bp_file": "governance/competition/breakpoints/0013-private-codec-experiment-public-receipts.json",
+      "bp_file_sha256": "351581fd61a4531f71e6c519494a965e7d9685e49bdc788e391b18692462f48a",
+      "bp_root": "ecae952e4adba895594e716088ae933f11b948d29f680854c31e8d19cf2178d2",
+      "branch": "competition/final-integration-v01",
+      "lineage_id": "UFA-JEV-COMP",
+      "parent_root": "2108cc21f037766b1047b0363e20f1bf1de960ef93a8d51ff9ced98768984898",
+      "root_kind": "FMO_V1_BREAKPOINT_ATOMS",
+      "mmr_leaf": "83fa9e029cbf2722badbe33ccb7fb9a12599d4fd68e427bc8d6c1b36433785a2",
+      "mmr_size": 13,
+      "mmr_root_after": "250e3b6630ac0955c7e0ad65848d51b0131abbd338512d6693bed87e531dd32a",
+      "mmr_peaks_after": [
+        "c930d2260ea6a1090f97c79c1b0a96be38996ed7c81b2da08570ed2b37079e31",
+        "703db14ed49600c550aa1fb4f45ad5a30e6b1ea6221db0148d43d031f2e4b6ce",
+        "83fa9e029cbf2722badbe33ccb7fb9a12599d4fd68e427bc8d6c1b36433785a2"
+      ]
+    },
+    {
+      "seq": 13,
+      "bp_id": "UFA-JEV-COMP-BP-0014",
+      "bp_file": "governance/competition/breakpoints/0014-actor-control-plane-closure-successor.json",
+      "bp_file_sha256": "0d00c03f1e11cb856d9787f76bb4222d3ea95653d914908a2ad203305eb67609",
+      "bp_root": "e1b61ea5e0d824c5e96ce432461c9dda78f1fd10498aa5dabb76b5a88f663e76",
+      "branch": "competition/final-integration-v01",
+      "lineage_id": "UFA-JEV-COMP",
+      "parent_root": "250e3b6630ac0955c7e0ad65848d51b0131abbd338512d6693bed87e531dd32a",
+      "root_kind": "FMO_V1_BREAKPOINT_ATOMS",
+      "mmr_leaf": "0bcbc4b30f6688aa3a1a424f44257dca489f430f04db924a1bb10725cab9e943",
+      "mmr_size": 14,
+      "mmr_root_after": "788f69af75ebf53420e77fc5a90620af6dd012eea2183f89f8dc7647c4073031",
+      "mmr_peaks_after": [
+        "c930d2260ea6a1090f97c79c1b0a96be38996ed7c81b2da08570ed2b37079e31",
+        "703db14ed49600c550aa1fb4f45ad5a30e6b1ea6221db0148d43d031f2e4b6ce",
+        "1e7cae119dc9ca49831b8090e9aa1cf9d65919c2c6fb078b91a3720439aca869"
+      ]
+    },
+    {
+      "seq": 14,
+      "bp_id": "UFA-JEV-COMP-BP-0015",
+      "bp_file": "governance/competition/breakpoints/0015-p0-verifier-execution-infrastructure-hardening.json",
+      "bp_file_sha256": "1a34e6b1366b43cd5ade98ae290a93ff80ea09273a34994ecc2d063de7dd93f3",
+      "bp_root": "8c7cfdb7eb45f533552f08cc5e6dd3b2ee103935b9b6916258769e2d0aae594d",
+      "branch": "competition/final-integration-v01",
+      "lineage_id": "UFA-JEV-COMP",
+      "parent_root": "788f69af75ebf53420e77fc5a90620af6dd012eea2183f89f8dc7647c4073031",
+      "root_kind": "FMO_V1_BREAKPOINT_ATOMS",
+      "mmr_leaf": "f85d49ddfa6053558bbb03c759091d0161caf1af328f9d37aba700118e1f708f",
+      "mmr_size": 15,
+      "mmr_root_after": "ee7ac4dcb0e9dd95131b63bb1e6297ff6d112d386ae78dc6c1274494fc287148",
+      "mmr_peaks_after": [
+        "c930d2260ea6a1090f97c79c1b0a96be38996ed7c81b2da08570ed2b37079e31",
+        "703db14ed49600c550aa1fb4f45ad5a30e6b1ea6221db0148d43d031f2e4b6ce",
+        "1e7cae119dc9ca49831b8090e9aa1cf9d65919c2c6fb078b91a3720439aca869",
+        "f85d49ddfa6053558bbb03c759091d0161caf1af328f9d37aba700118e1f708f"
+      ]
+    },
+    {
+      "seq": 15,
+      "bp_id": "UFA-JEV-COMP-BP-0016",
+      "bp_file": "governance/competition/breakpoints/0016-pr2-review-findings-v2-fixes.json",
+      "bp_file_sha256": "3f70241b7f70b2884e7f575d3a6840b2f7841950190b2af65b96daf55995ed18",
+      "bp_root": "50e26a0eba32b06a6648a6057de215fe117df442ca7109eba513ef2711b11485",
+      "branch": "competition/final-integration-v01",
+      "lineage_id": "UFA-JEV-COMP",
+      "parent_root": "ee7ac4dcb0e9dd95131b63bb1e6297ff6d112d386ae78dc6c1274494fc287148",
+      "root_kind": "FMO_V1_BREAKPOINT_ATOMS",
+      "mmr_leaf": "5c44766a4822f252749f0e43e4ca7b11da17a3197e59c3552beb54afb6ca7328",
+      "mmr_size": 16,
+      "mmr_root_after": "d5a34bcc5da38cb7a758c0af8e8e8708a6d7bfb7af9266b9f7181b54246999c4",
+      "mmr_peaks_after": [
+        "d5a34bcc5da38cb7a758c0af8e8e8708a6d7bfb7af9266b9f7181b54246999c4"
+      ]
+    },
+    {
+      "seq": 16,
+      "bp_id": "UFA-JEV-COMP-BP-0017",
+      "bp_file": "governance/competition/breakpoints/0017-live-1p-2p-demo-integration.json",
+      "bp_file_sha256": "c9cace73e6dd9631e1bce37c5b1625cd3050629284952803487ae81ba8b2d9f9",
+      "bp_root": "d1ca2abcc8265f9459deb6dc17faa58617b3fb859a0a930f5089cfd09ca42557",
+      "branch": "competition/final-integration-v01",
+      "lineage_id": "UFA-JEV-COMP",
+      "parent_root": "d5a34bcc5da38cb7a758c0af8e8e8708a6d7bfb7af9266b9f7181b54246999c4",
+      "root_kind": "FMO_V1_BREAKPOINT_ATOMS",
+      "mmr_leaf": "5b5697bf2e14fbbbc24a7c8064043742bd0f10c44032bd49515664e21b7f3618",
+      "mmr_size": 17,
+      "mmr_root_after": "2ade9c6159e02e0275a4746b400b477546ccde76cd769305afe0351b73b29f91",
+      "mmr_peaks_after": [
+        "d5a34bcc5da38cb7a758c0af8e8e8708a6d7bfb7af9266b9f7181b54246999c4",
+        "5b5697bf2e14fbbbc24a7c8064043742bd0f10c44032bd49515664e21b7f3618"
+      ]
+    }
+  ],
+  "lineage_id": "UFA-JEV-COMP",
+  "predecessor_commitments": {
+    "common_ancestor": {
+      "breakpoint_id": "UFA-JEV-BP-0048",
+      "mmr_root_after": "9f41ea933fc66585efe681c17b23e5c5ceedd78cc77ed2fc77ccacaf7fc45375"
+    },
+    "competition_legacy_terminal_at_fork": {
+      "breakpoint_id": "UFA-JEV-BP-0051",
+      "mmr_root_after": "28aaba4c6686a10fd9ed39202f497e1c3b2e88e7ae77a05e5ca3e891b13dd5b8"
+    },
+    "pre_namespace_legacy_m3": {
+      "breakpoint_id": "UFA-JEV-BP-0052",
+      "commit": "a990a38a1fcc0190221491398630b611552280e4",
+      "mmr_root_after": "51744c6a5212e6d11a93fa7fdfec57d1902a2628d57a48d2a54fd0ea7d820266"
+    },
+    "research_terminal": {
+      "breakpoint_id": "UFA-JEV-BP-0057",
+      "mmr_root_after": "dabf7684b7eba5c3d948277d91f904e95419a6930f30f184e92021c683e3c942"
+    }
+  },
+  "predecessor_roots_are_mmr_leaves": false,
+  "project": "VITHIA_SPACE",
+  "protocol": "docs/BREAKPOINT_PROTOCOL.md hashing primitives + governance/lineage/BREAKPOINT_IDENTITY_POLICY.json occurrence identity",
+  "reconciliation_state": "SEPARATE_PREDECESSOR_COMMITMENTS_NOT_RECONVERGED",
+  "schema": "UFA_JEV_QUALIFIED_MMR_LEDGER_V1"
+}

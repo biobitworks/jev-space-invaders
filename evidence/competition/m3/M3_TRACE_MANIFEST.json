@@ -1,0 +1,54 @@
+{
+  "episode_mmr_verifier_state": "PASS_OBSERVED_BEFORE_SEAL",
+  "legacy_m3_breakpoint": "UFA-JEV-BP-0052",
+  "schema": "M3_TRACE_MANIFEST_V1",
+  "source_branch": "main",
+  "traces": [
+    {
+      "bytes": 67302,
+      "episode_mmr_root": "cfad1da9fbbf264b1914c01e2c9bc479a31a3823f1d60fbd27d1720148627ccc",
+      "episode_mmr_size": 538,
+      "path": "runs/run_0006_seed1_ollama.jsonl.gz",
+      "run": 6,
+      "seed": 1,
+      "sha256": "3d587a3f4736e98f2d2bcfe292a05a2248b09ec7932c4e8c819c4bd4dc33a514"
+    },
+    {
+      "bytes": 67198,
+      "episode_mmr_root": "cfad1da9fbbf264b1914c01e2c9bc479a31a3823f1d60fbd27d1720148627ccc",
+      "episode_mmr_size": 538,
+      "path": "runs/run_0007_seed2_ollama.jsonl.gz",
+      "run": 7,
+      "seed": 2,
+      "sha256": "d23473ba3be9334a5afa7dca6bb9d142e0b72642ba0cb8212153bb409b46ff01"
+    },
+    {
+      "bytes": 67341,
+      "episode_mmr_root": "cfad1da9fbbf264b1914c01e2c9bc479a31a3823f1d60fbd27d1720148627ccc",
+      "episode_mmr_size": 538,
+      "path": "runs/run_0008_seed3_ollama.jsonl.gz",
+      "run": 8,
+      "seed": 3,
+      "sha256": "1e954c7b9d1d2be84d8369baf1727c2cb5909b4273a22d39d30b0801bf4cef41"
+    },
+    {
+      "bytes": 67377,
+      "episode_mmr_root": "cfad1da9fbbf264b1914c01e2c9bc479a31a3823f1d60fbd27d1720148627ccc",
+      "episode_mmr_size": 538,
+      "path": "runs/run_0009_seed4_ollama.jsonl.gz",
+      "run": 9,
+      "seed": 4,
+      "sha256": "5cb6626b1ed0381329d9d6139ad83f62d6eae6314dfabed1001201f6b31ba641"
+    },
+    {
+      "bytes": 67299,
+      "episode_mmr_root": "cfad1da9fbbf264b1914c01e2c9bc479a31a3823f1d60fbd27d1720148627ccc",
+      "episode_mmr_size": 538,
+      "path": "runs/run_0010_seed5_ollama.jsonl.gz",
+      "run": 10,
+      "seed": 5,
+      "sha256": "6f1e3bcfa1d65c64b56e6d6ca23279ff0f86a7b1d56fad5f303748dd400eb700"
+    }
+  ],
+  "verification_utc": "2026-09-28T15:39:03+00:00"
+}

@@ -1,0 +1,32 @@
+{
+  "claim_ceiling": "Format/transform claims are limited to rows in ROUNDTRIP_RESULTS.jsonl and TRANSFORM_RESULTS.jsonl. Public receipts do not disclose private method.",
+  "created_utc": "2026-09-28T21:29:37Z",
+  "exact_formats_supported_for_source_self_verify": [
+    "ffv1",
+    "h264_mp4",
+    "jpeg",
+    "png",
+    "raw_rgb",
+    "tiff",
+    "vp9_webm",
+    "webp_lossless",
+    "webp_lossy"
+  ],
+  "robust_formats_supported_for_source_self_verify": [
+    "ffv1",
+    "h264_mp4",
+    "jpeg",
+    "png",
+    "raw_rgb",
+    "tiff",
+    "vp9_webm",
+    "webp_lossless",
+    "webp_lossy"
+  ],
+  "schema": "CODEC_AGGREGATE_RESULT_V1",
+  "total_roundtrip_rows": 18,
+  "total_transform_rows": 180,
+  "transform_error_rows": 0,
+  "transform_fail_rows": 82,
+  "transform_pass_rows": 98
+}

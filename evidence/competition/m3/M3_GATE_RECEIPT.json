@@ -1,0 +1,67 @@
+{
+  "candidate_breakpoint": "UFA-JEV-COMP-BP-0001",
+  "claim_ceiling": "Gate observations only; does not upgrade scientific claims",
+  "created_utc": "2026-09-28T15:44:10+00:00",
+  "episode_mmr_verification": {
+    "baseline_seeds": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "episode_root": "cfad1da9fbbf264b1914c01e2c9bc479a31a3823f1d60fbd27d1720148627ccc",
+    "state": "PASS"
+  },
+  "legacy_breakpoint_verifier": {
+    "classification": "PRE_EXISTING_MUTABLE_PATH_CONSTRUCTION_DEFECT",
+    "failure": [
+      "ATOM_CHANGED:results.json"
+    ],
+    "mmr_root": "51744c6a5212e6d11a93fa7fdfec57d1902a2628d57a48d2a54fd0ea7d820266",
+    "mmr_size": 52,
+    "not_upgraded_to_pass": true,
+    "state": "FAIL"
+  },
+  "lfs_materialization_check": {
+    "bp0028_expected_sha256": "321b452804c1e581f229c34182302801ee5257f3fb023cb93ffaf6d772f275c4",
+    "historical_mutation": false,
+    "hydrated_bytes": 199279021,
+    "hydrated_sha256": "321b452804c1e581f229c34182302801ee5257f3fb023cb93ffaf6d772f275c4",
+    "initial_local_state": "134-byte LFS pointer in GIT_LFS_SKIP_SMUDGE worktree",
+    "path": "data/daisy/VITHIA_DAISY_ECA_TEMPORAL_ACTION_GRAPH_V1/rows.jsonl",
+    "state": "PASS_AFTER_LFS_MATERIALIZATION"
+  },
+  "lineage_id": "UFA-JEV-COMP",
+  "qualified_breakpoint_verify_pre_gate": "PASS",
+  "results_validation": {
+    "observed": [
+      "RESULTS_SCHEMA_CHECK=PASS",
+      "RUNS=5",
+      "COUNTED_JEV_RUNS=0",
+      "NON_JEV_RUNS=5",
+      "BASELINE_RUNS=5"
+    ],
+    "state": "PASS"
+  },
+  "schema": "M3_COMPETITION_GATE_RECEIPT_V1",
+  "secret_scan": {
+    "patterns": "credential/private-key high-risk patterns",
+    "scope": "new qualified-lineage governance/evidence/verifier files",
+    "state": "PASS"
+  },
+  "signature_state": "NOT_SIGNED",
+  "tests": {
+    "initial_attempt": {
+      "reason": "ModuleNotFoundError: src under ephemeral uvx pytest without PYTHONPATH",
+      "state": "FAILED_TEST_COLLECTION_ENV",
+      "test": "tests/test_fmo.py"
+    },
+    "retry": {
+      "environment_correction": "PYTHONPATH=.",
+      "failed": 0,
+      "passed": 3,
+      "state": "PASS"
+    }
+  }
+}

@@ -1,0 +1,47 @@
+{
+  "schema": "TWO_PLAYER_DEPENDENCY_MANIFEST_V1",
+  "lineage_id": "UFA-JEV-COMP",
+  "created_utc": "2026-09-28T21:20:00Z",
+  "host": "magicSTUDIObox",
+  "venv_path": "/Volumes/magicBLACKbox/vithia-space-execution/pettingzoo-2p-venv",
+  "base_interpreter": "/opt/homebrew/bin/python3.12",
+  "python": "3.12",
+  "pettingzoo": "1.27.0",
+  "gymnasium": "1.3.0",
+  "ale_py": "0.12.1",
+  "numpy": "2.5.3",
+  "full_freeze": [
+    "Farama-Notifications==0.0.6",
+    "ale-py==0.12.1",
+    "cloudpickle==3.1.2",
+    "gymnasium==1.3.0",
+    "multi-agent-ale-py==0.1.12",
+    "numpy==2.5.3",
+    "pettingzoo==1.27.0",
+    "pygame-ce==2.5.8",
+    "typing_extensions==4.16.0"
+  ],
+  "requirements_file": "requirements-2p.txt",
+  "note_versions_pinned_to_match_1p": "gymnasium/ale-py/numpy pinned to the exact versions already used by the 1P lane (src/envcfg.py) for consistency; pettingzoo/its own dependencies resolved by pip against those pins.",
+  "system_python_incompatibility": {
+    "detail": "The system python3 on magicSTUDIObox is 3.9.6, which cannot satisfy gymnasium>=1.2.0's Requires-Python>=3.10. Used the already-installed Homebrew python3.12 instead (python3.14 was also available but 3.12 was chosen for broader wheel availability)."
+  },
+  "import_state": {
+    "pettingzoo": "PASS",
+    "gymnasium": "PASS",
+    "ale_py": "PASS",
+    "numpy": "PASS",
+    "pettingzoo.atari.space_invaders_v2_module": "PASS",
+    "space_invaders_v2.parallel_env_attr_present": true,
+    "space_invaders_v2.raw_env_attr_present": true,
+    "env_instantiation_attempted": false,
+    "note": "Only the module and its parallel_env/raw_env attributes were inspected; no environment was constructed, which would require the ROM."
+  },
+  "PETTINGZOO_INSTALLED": true,
+  "PETTINGZOO_DECLARED_IN_BASE_REQUIREMENTS": false,
+  "PETTINGZOO_RUNTIME": "READY",
+  "TWO_PLAYER_EXECUTION": "BLOCKED_ROM_LICENSE_DECISION",
+  "base_dependency_atoms_mutated": false,
+  "claim_ceiling": "Dependency installability and module import are verified. This does not authorize or imply ROM acquisition, environment construction, or gameplay execution.",
+  "signature_state": "NOT_SIGNED"
+}

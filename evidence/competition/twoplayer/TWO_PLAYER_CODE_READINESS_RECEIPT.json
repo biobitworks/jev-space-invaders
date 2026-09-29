@@ -1,0 +1,30 @@
+{
+  "schema": "TWO_PLAYER_CODE_READINESS_RECEIPT_V1",
+  "lineage_id": "UFA-JEV-COMP",
+  "created_utc": "2026-09-28T21:25:00Z",
+  "file_reviewed": "experiments/e5_2p.py",
+  "classification": {
+    "TWO_PLAYER_IMPLEMENTATION": "REAL_GATED",
+    "TWO_PLAYER_MOCK": "NO",
+    "TWO_PLAYER_EXECUTED": "NO"
+  },
+  "review": {
+    "agent_ids": "PRESENT - env.agents / env.possible_agents (a0, a1 = env.possible_agents), real PettingZoo Parallel API pattern, not hard-coded",
+    "parallel_aec_api": "PARALLEL - env.reset(seed=...) returns (obs, infos) dicts keyed by agent; env.step(acts) takes a dict of actions and returns (obs, rew, terms, truncs, infos) dicts, the real PettingZoo Parallel API shape",
+    "action_spaces": "ONTOLOGY_PZ = (NOOP, FIRE, UP, RIGHT, LEFT, DOWN) - distinct from and explicitly NOT interchangeable with the 1P ALE ontology (module docstring: 'ALE and PettingZoo action bytes do NOT share semantics')",
+    "observation_schema": "Per-seat: seat_state() strips the raw 'ship' field and derives own_ship/opponent_ship by colour-matching pixels in the frame; seat_context() adds anticube/path_distribution features for non-OJ arms",
+    "reward_schema": "vita_outcome, opponent_outcome, relative_payoff = vita_outcome - opponent_outcome, all per-decision",
+    "termination_truncation": "checked per seat each step: 'if not env.agents or all(terms.get(s) or truncs.get(s) for s in terms): break'",
+    "synchronization_barrier": "implicit in the Parallel API itself: env.step(acts) takes both seats' actions simultaneously and returns both seats' results together; no separate barrier code is needed or present",
+    "seed_handling": "env.reset(seed=seed), single fixed seed per match, matching the 1P convention",
+    "trace_schema": "well-defined per-decision row: corpus_id, t, state_id, vita_action, opponent_action, successor_state_id, outcomes, relative_payoff, seats, action_ontology_id, meta",
+    "mmr_schema": "reuses src.fmo.mmr_root (the same primitive as the 1P episode MMR); leaf = SHA256('EPISODE_LEAF_V1', t, content_id(row))",
+    "frame_custody_hooks": "ABSENT - e5_2p.py has no PNG/frame-capture integration; it was written for an earlier research comparison (E5-2P), not for competition video production. Would need new code (not a modification) to add frame-custody hooks."
+  },
+  "state": "CODE_READY",
+  "dependencies_state": "DEPENDENCIES_READY (see TWO_PLAYER_DEPENDENCY_MANIFEST.json)",
+  "rom_gate_state": "ROM_GATE_BLOCKED (see TWO_PLAYER_ROM_GATE_RECEIPT.json)",
+  "execution_state": "EXECUTION_NOT_TESTED",
+  "claim_ceiling": "This is a static code review only. No 2P runtime claim (PASS or otherwise) is made. This is a legitimate, useful, non-terminal state.",
+  "signature_state": "NOT_SIGNED"
+}

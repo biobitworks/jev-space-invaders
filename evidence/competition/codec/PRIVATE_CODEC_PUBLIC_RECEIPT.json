@@ -1,0 +1,11 @@
+{
+  "carrier_details_public_state": "WITHHELD_PRIVATE_RESEARCH_IP",
+  "created_utc": "2026-09-28T21:29:37Z",
+  "implementation_bytes": 7078,
+  "implementation_sha256": "24b0801922ebc53a3435f7816d669e582ebff4e1f8d01b26fecaf95f54f14e46",
+  "key_material_state": "PRIVATE_KEY_MATERIAL_NOT_EXPORTED",
+  "private_storage_root": "/Volumes/magicBLACKbox/vita01-private-codec",
+  "public_key_fingerprint": "682f03d4897d8a53b1696288ac43b9b530893e580612e56d58e585bb6a5b8b6e",
+  "public_safe_claim_state": "SUPPORTED_BY_PUBLIC_RECEIPTS",
+  "schema": "PRIVATE_CODEC_PUBLIC_RECEIPT_V1"
+}

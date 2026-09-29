@@ -1,0 +1,164 @@
+{
+  "schema": "UFA_JEV_QUALIFIED_BREAKPOINT_V1",
+  "lineage_id": "UFA-JEV-COMP",
+  "branch": "competition/final-integration-v01",
+  "breakpoint_id": "UFA-JEV-COMP-BP-0015",
+  "state": "P0_VERIFIER_AND_EXECUTION_INFRASTRUCTURE_HARDENING",
+  "project": "VITHIA_SPACE",
+  "created_utc": "2026-09-28T22:01:26+00:00",
+  "git_head_at_creation": "963dd108386bde7dcc10363cc450cf3b96c9e797",
+  "root_kind": "FMO_V1_BREAKPOINT_ATOMS",
+  "bp_root": "8c7cfdb7eb45f533552f08cc5e6dd3b2ee103935b9b6916258769e2d0aae594d",
+  "breakpoint_root": "8c7cfdb7eb45f533552f08cc5e6dd3b2ee103935b9b6916258769e2d0aae594d",
+  "parent_root": "788f69af75ebf53420e77fc5a90620af6dd012eea2183f89f8dc7647c4073031",
+  "group_roots": {
+    "adversarial_tests": "7f6673b18a6df097859d543481fa814cba16cd485690b48b458447c09127defe",
+    "breakpoint_hardening_code": "ff7bf389d1a1508495e9aeed6b6f27e75d9d2b79dc4cf0f44165d169a338105b",
+    "codec_public_safe_code": "c004049431dae91c08aaec63f44f8aa51f33f3620bee4ed2feea545f0aebcbe9",
+    "dependency_declaration": "a6fbbed7ac805e001c36c8718c96351d0d8b84086a1daa29310d92e7c9b7de07",
+    "ffmpeg_hardening_code": "8dcaefd9b9da0954cf59a30ade21fdf32d7246efa6a928c37a302d8e60fc77bf",
+    "p0_receipts": "0bc81d0739e9078e3d782342fd00eb32808d7f99ab0df51d10619cc5144e8363",
+    "verifier_hardening_code": "7761ecc26f48666df4d3ca8d6ba59124f208a3e68375b930508a357b0b5ce961"
+  },
+  "atoms": [
+    {
+      "path": "scripts/qualified_breakpoint.py",
+      "kind": "CodeFCO",
+      "group": "breakpoint_hardening_code",
+      "bytes": 4285,
+      "sha256": "67acdd11858f89f2b45b368fd7b7681b6271c9278face221765a22ee4bfdf49d",
+      "location": "public",
+      "fmo_leaf": "ff7bf389d1a1508495e9aeed6b6f27e75d9d2b79dc4cf0f44165d169a338105b"
+    },
+    {
+      "path": "scripts/verify_competition_lineage_hardened.py",
+      "kind": "CodeFCO",
+      "group": "verifier_hardening_code",
+      "bytes": 6073,
+      "sha256": "7b882aa94fc895eab12066b032af3973ba3eb61112a0ca295ed2eb75a53a20cd",
+      "location": "public",
+      "fmo_leaf": "0f4e701f7de80b3afd797b5682bed4de9e689a4c7b4662cc7e2bbaabde333779"
+    },
+    {
+      "path": "scripts/verify_final_playthrough_custody_hardened.py",
+      "kind": "CodeFCO",
+      "group": "verifier_hardening_code",
+      "bytes": 4231,
+      "sha256": "274292a6e170a66cd38cfc6c973c8a78047f190a50cb6653990d62701febcf7a",
+      "location": "public",
+      "fmo_leaf": "ee854d88c86c1fa23cfff407a1cd0e6733b7cd67e130efb78312201b86ae80ad"
+    },
+    {
+      "path": "scripts/render_final_playthrough_video_hardened.py",
+      "kind": "CodeFCO",
+      "group": "ffmpeg_hardening_code",
+      "bytes": 3293,
+      "sha256": "600c20f09347b0e125a1e60f364276bd2fe38999bdbbebb0f40b107e407eff92",
+      "location": "public",
+      "fmo_leaf": "de1164bd5c5ff5b42674d3c287bc4b3c93a1dc13fee765d91c1f4f9a9e3dd2fe"
+    },
+    {
+      "path": "scripts/render_playthrough_video_hardened.py",
+      "kind": "CodeFCO",
+      "group": "ffmpeg_hardening_code",
+      "bytes": 3045,
+      "sha256": "89fbc623ad282f29184fe9a24833b7c358ffa476e847c30d9a84aba5245fe237",
+      "location": "public",
+      "fmo_leaf": "b57fb1cb35398001f54a53dc59490ca5d908e6582f5e4c7367015a6b403066cf"
+    },
+    {
+      "path": "src/video_input_manifest.py",
+      "kind": "CodeFCO",
+      "group": "ffmpeg_hardening_code",
+      "bytes": 2994,
+      "sha256": "444892a19947f318b8fabb36757bb3970bc2a98e1d9961b6c17d497f519b4992",
+      "location": "public",
+      "fmo_leaf": "7964290d117aab1849e479618355af4a0a2f6f68a3ce872709bda20b3f11db1f"
+    },
+    {
+      "path": "scripts/verify_codec_public_safe.py",
+      "kind": "CodeFCO",
+      "group": "codec_public_safe_code",
+      "bytes": 1740,
+      "sha256": "ee4a0b2ac51e9c8cdd5e09e27088fe6db47e05c91843c11164931ba765fb5ace",
+      "location": "public",
+      "fmo_leaf": "c004049431dae91c08aaec63f44f8aa51f33f3620bee4ed2feea545f0aebcbe9"
+    },
+    {
+      "path": "requirements-vita01-final.txt",
+      "kind": "DependencyDeclarationFCO",
+      "group": "dependency_declaration",
+      "bytes": 49,
+      "sha256": "bd34605c630121bc6f97c344d6f2de25f4a8e0c03d63d09e4341b7afbd3181c8",
+      "location": "public",
+      "fmo_leaf": "a6fbbed7ac805e001c36c8718c96351d0d8b84086a1daa29310d92e7c9b7de07"
+    },
+    {
+      "path": "tests/test_p0_hardening.py",
+      "kind": "TestFCO",
+      "group": "adversarial_tests",
+      "bytes": 9206,
+      "sha256": "21eee3e7b559680889b426a76dacf70e6892b475e2b4d5f1fb01a7ad368f3e2e",
+      "location": "public",
+      "fmo_leaf": "7f6673b18a6df097859d543481fa814cba16cd485690b48b458447c09127defe"
+    },
+    {
+      "path": "evidence/competition/p0_hardening/P0_ADVERSARIAL_TEST_MATRIX.json",
+      "kind": "AdversarialTestMatrixFCO",
+      "group": "p0_receipts",
+      "bytes": 2598,
+      "sha256": "3f133ac106caeec457152ef23f11f73e35d3405890ece7188e97aca819969fd4",
+      "location": "public",
+      "fmo_leaf": "2b6a8b59fd73a5d6cacdfffe6b01e70415a2e4e44e91edfb4e134e52e2afbd1c"
+    },
+    {
+      "path": "evidence/competition/p0_hardening/P0_PROTECTED_ATOM_AUDIT.json",
+      "kind": "ProtectedAtomAuditFCO",
+      "group": "p0_receipts",
+      "bytes": 1671,
+      "sha256": "62e1ea52ae872e77eadf76ab06369810ae52312c04428c7f8f2d900b2e931b16",
+      "location": "public",
+      "fmo_leaf": "b3f60b475fa5370fafb7b71a2cbd32d3f9a849d7ce36e35ced79fe0f03f512aa"
+    },
+    {
+      "path": "evidence/competition/p0_hardening/P0_LOCAL_MODEL_REVIEW_RECEIPTS.json",
+      "kind": "LocalModelReviewReceiptFCO",
+      "group": "p0_receipts",
+      "bytes": 1920,
+      "sha256": "f55e55c0a2c9b32e9711d42b95f041b92b0f061b2090625b17b8707503901e0a",
+      "location": "public",
+      "fmo_leaf": "737308afaba8bb463664150b3d75d47f5bd23b0e44934c076fbef56b10917944"
+    },
+    {
+      "path": "evidence/competition/p0_hardening/P0_HARDENING_VERIFICATION_RECEIPT.json",
+      "kind": "VerificationReceiptFCO",
+      "group": "p0_receipts",
+      "bytes": 2638,
+      "sha256": "10549907ea488dd0d1e84170e555fe2533673662efec3651d21ba9b3691e770c",
+      "location": "public",
+      "fmo_leaf": "37af1f0d5122c505d160233ae0e4674ad48f5248e02cd4d746bc929650ad162f"
+    }
+  ],
+  "historical_mutation_performed": false,
+  "mmr_reconciliation_performed": false,
+  "successor_to_breakpoint": "UFA-JEV-COMP-BP-0014",
+  "parent_head_verified": "963dd108386bde7dcc10363cc450cf3b96c9e797",
+  "parent_mmr_size_verified": 14,
+  "parent_mmr_root_verified": "788f69af75ebf53420e77fc5a90620af6dd012eea2183f89f8dc7647c4073031",
+  "p0_hardening_state": "PASS",
+  "fingerprint_check_state": "PASS",
+  "ffmpeg_bounding_state": "PASS",
+  "dependency_declaration_state": "PASS",
+  "reserved_field_protection_state": "PASS",
+  "ledger_crosscheck_state": "PASS",
+  "adversarial_test_state": "PASS",
+  "protected_atom_state": "PASS",
+  "system_one_ollama_state": "DEFERRED_NOT_EXECUTED_IN_THIS_STAGE",
+  "two_player_state": "INHERITED_NOT_EXECUTED_OR_LATEST_EXISTING_STATE",
+  "mitosis_state": "INHERITED",
+  "tenki_state": "INHERITED",
+  "claim_upgrade_performed": false,
+  "external_execution_performed": false,
+  "claim_ceiling": "IDENTITY_AND_INCLUSION_ONLY; hashes do not establish correctness",
+  "signature_state": "NOT_SIGNED"
+}

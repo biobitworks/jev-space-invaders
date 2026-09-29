@@ -1,0 +1,16 @@
+{
+  "schema": "PLAYTHROUGH_MMR_CONSTRUCTION_RECEIPT_V1",
+  "label": "SETUP_SMOKE",
+  "seed": 1,
+  "frame_count": 24,
+  "leaves_file": "evidence/competition/frames/smoke/FRAME_BREAKPOINT_LEAVES.jsonl",
+  "mmr_size": 24,
+  "mmr_peaks": [
+    "343edd679e966305f668503edc51dd49f2742929ff689c7ae0aa7febd344b932",
+    "867f7918f92d177d5a1888fb17da577185efa78d81529f44964279e92506b643"
+  ],
+  "mmr_root": "3f882e795ef6f0a46da7fd3024ded2c9be6fbdeaf06d7e5b50c0199398c6c796",
+  "public_key_fingerprint": "c5e12498288492521581ae8c95839c2e6d09469edc5650cc0e9e54dbde03c6c8",
+  "key_id": "frame-custody-ed25519-v1",
+  "final_score": 0.0
+}

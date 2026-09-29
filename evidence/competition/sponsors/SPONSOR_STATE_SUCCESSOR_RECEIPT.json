@@ -1,0 +1,37 @@
+{
+  "claim_ceiling": "Source intake and proposed architecture are not sponsor execution.",
+  "created_utc": "2026-09-28T15:50:30+00:00",
+  "current_supported_claims": {
+    "mitosis_used": false,
+    "tenki_used": false
+  },
+  "execution_contract": "evidence/sponsor_source/SPONSOR_EXECUTION_CONTRACT.json",
+  "execution_contract_state": "PROPOSED_NOT_EXECUTED",
+  "execution_receipt_search": {
+    "files_with_mitosis_or_tenki": [
+      "evidence/entry/ENTRY_RECEIPT_001.json",
+      "evidence/sponsor_source/SPONSOR_EXECUTION_CONTRACT.json",
+      "evidence/sponsor_source/SPONSOR_FMO_RECEIPT.json",
+      "evidence/sponsor_source/SPONSOR_GATES.md",
+      "evidence/sponsor_source/SPONSOR_SOURCE_DATASET.json"
+    ],
+    "load_bearing_execution_receipt_found": false
+  },
+  "final_entry_correction": {
+    "sponsors": {
+      "mitosis": false,
+      "tenki": false
+    },
+    "state": "PREPARED_NOT_SUBMITTED"
+  },
+  "future_upgrade_rule": "A sponsor may be set true only after a load-bearing execution produces an immutable execution receipt.",
+  "historical_entry_claim_ceiling": "server acknowledged entry; sponsor usage described is PROPOSED, not yet IMPLEMENTED",
+  "historical_entry_receipt": "evidence/entry/ENTRY_RECEIPT_001.json",
+  "historical_submitted_flags": {
+    "mitosis": true,
+    "tenki": true
+  },
+  "lineage_id": "UFA-JEV-COMP",
+  "schema": "SPONSOR_STATE_SUCCESSOR_RECEIPT_V1",
+  "signature_state": "NOT_SIGNED"
+}

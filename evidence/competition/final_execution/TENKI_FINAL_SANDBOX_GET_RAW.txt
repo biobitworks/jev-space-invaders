@@ -1,0 +1,5 @@
+Your API key is invalid for https://api.tenki.cloud or has been revoked.
+
+Run `tenki status` to verify API Endpoint. If TENKI_AUTH_TOKEN or TENKI_API_KEY is set, unset it or update it.
+
+Create a new key in the Tenki Cloud dashboard, then run `tenki login --api-key <key>`.

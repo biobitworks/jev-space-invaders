@@ -1,0 +1,46 @@
+{
+  "schema": "FINAL_1P_RUN_PREREG_V1",
+  "lineage_id": "UFA-JEV-COMP",
+  "created_utc": "2026-09-28T21:58:00Z",
+  "writer_authority": "CODEX",
+  "handoff_verify": "PASS",
+  "handoff_structure": "TWO_COMMIT_NON_SELF_REFERENTIAL_DELIVERY",
+  "canonical_branch": "competition/final-integration-v01",
+  "handoff_content_commit": "2ad840bd91641495ddb3ce70bed0610bc624c7de",
+  "handoff_delivery_commit": "61cd8adc99f7dbe5ff808ab074318c664b4c7226",
+  "pre_run_git_head": "61cd8adc99f7dbe5ff808ab074318c664b4c7226",
+  "pre_run_worktree_state": "DIRTY_CODEX_SIGNATURE_SEMANTICS_PATCH_AND_PREREG",
+  "model": "scripted-policy",
+  "provider": "none",
+  "seed": 3,
+  "max_decisions": 60,
+  "max_frames": 240,
+  "environment": {
+    "env_id": "ALE/SpaceInvaders-v5",
+    "obs_type": "rgb",
+    "frameskip": 1,
+    "decision_hold_frames": 4,
+    "repeat_action_probability": 0.25,
+    "full_action_space": false,
+    "max_num_frames_per_episode": 108000
+  },
+  "perception": "canonical RGB8 observation buffer captured as PNG plus raw RGB SHA-256; no browser/TUI/video metadata is model input",
+  "context_mode": "scripted-policy-no-model-context",
+  "action_ontology": ["NOOP", "FIRE", "RIGHT", "LEFT", "RIGHTFIRE", "LEFTFIRE"],
+  "policy": {
+    "period_decisions": 30,
+    "rule": "RIGHTFIRE for decision periods with even floor(decision_index / 30), LEFTFIRE otherwise"
+  },
+  "capture": {
+    "mode": "actual-ale",
+    "canonical_frame_definition": "one RGB8 ALE frameskip=1 observation per captured frame",
+    "occurrence_signature_state_at_creation": "SIGNATURE_PRESENT_UNVERIFIED",
+    "verification_receipt_success_state": "SIGNED_VERIFIED",
+    "signature_domain": "FRAME_ED25519_ONLY",
+    "git_commit_signature_state": "NOT_INFERRED"
+  },
+  "two_player_execution": "NOT_EXECUTED_ROM_GATE_BLOCKED",
+  "rom_gate_policy": "No 2P ROM-dependent environment may execute without explicit ROM_LICENSE_DECISION=APPROVED and ROM_SOURCE_PROVENANCE=VERIFIED.",
+  "demo_mode_expected": "DETERMINISTIC_REPLAY_RENDER",
+  "no_tuning_after_prereg": true
+}

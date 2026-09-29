@@ -1,0 +1,37 @@
+{
+  "created_utc": "2026-09-28T15:50:30+00:00",
+  "demo_video": "BLOCKED_HUMAN_ACTION",
+  "hosted_jev": "NOT_AVAILABLE_NOT_TESTED",
+  "lineage_id": "UFA-JEV-COMP",
+  "local_ollama": {
+    "scores": [
+      270.0,
+      270.0,
+      270.0,
+      270.0,
+      270.0
+    ],
+    "seeds": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "state": "EXECUTED"
+  },
+  "openjev_matched_comparator": "BLOCKED_READOUT_CAPABILITY_MISMATCH",
+  "openjev_targeted_exploratory": "PROPOSED_NOT_PREREGISTERED_NOT_EXECUTED",
+  "performance_claim": "No hosted JEV performance comparison is available.",
+  "results_json": {
+    "hosted_jev_runs": 0,
+    "local_ollama_runs": 5,
+    "scripted_runs": 5
+  },
+  "schema": "COMPETITION_STATUS_V1",
+  "sponsors": {
+    "mitosis": "NOT_EXECUTED",
+    "tenki": "NOT_EXECUTED"
+  },
+  "system_one_official_baseline": "BLOCKED_NO_PROVIDER_CREDENTIAL"
+}

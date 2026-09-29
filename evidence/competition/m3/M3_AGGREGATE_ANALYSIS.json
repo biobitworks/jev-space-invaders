@@ -1,0 +1,91 @@
+{
+  "all_episode_mmr_roots_equal": true,
+  "all_scores_equal": true,
+  "causal_explanation": "NOT_SUPPORTED",
+  "claim_ceiling": "DESCRIPTIVE_ONLY",
+  "descriptive": {
+    "frames": {
+      "max": 2151.0,
+      "mean": 2151.0,
+      "median": 2151.0,
+      "min": 2151.0,
+      "n": 5,
+      "sample_sd": 0.0
+    },
+    "latency_ms_p50": {
+      "max": 578.966,
+      "mean": 562.8914,
+      "median": 562.73,
+      "min": 546.756,
+      "n": 5,
+      "sample_sd": 11.484156251113983
+    },
+    "latency_ms_p95": {
+      "max": 1176.171,
+      "mean": 839.618,
+      "median": 791.329,
+      "min": 682.762,
+      "n": 5,
+      "sample_sd": 193.59849050160494
+    },
+    "latency_ms_total": {
+      "max": 441844.697,
+      "mean": 343886.0264,
+      "median": 310818.209,
+      "min": 295268.887,
+      "n": 5,
+      "sample_sd": 62441.96400819443
+    },
+    "lives_lost": {
+      "max": 3.0,
+      "mean": 3.0,
+      "median": 3.0,
+      "min": 3.0,
+      "n": 5,
+      "sample_sd": 0.0
+    },
+    "model_calls": {
+      "max": 538.0,
+      "mean": 538.0,
+      "median": 538.0,
+      "min": 538.0,
+      "n": 5,
+      "sample_sd": 0.0
+    },
+    "score": {
+      "max": 270.0,
+      "mean": 270.0,
+      "median": 270.0,
+      "min": 270.0,
+      "n": 5,
+      "sample_sd": 0.0
+    },
+    "steps": {
+      "max": 538.0,
+      "mean": 538.0,
+      "median": 538.0,
+      "min": 538.0,
+      "n": 5,
+      "sample_sd": 0.0
+    },
+    "wall_clock_s": {
+      "max": 443.47,
+      "mean": 345.544,
+      "median": 312.56,
+      "min": 296.98,
+      "n": 5,
+      "sample_sd": 62.332908082328395
+    }
+  },
+  "inferential_test": "NOT_COMPUTED",
+  "lane": "LOCAL_OLLAMA_BASELINE",
+  "n": 5,
+  "schema": "M3_AGGREGATE_DESCRIPTIVE_ANALYSIS_V1",
+  "seeds": [
+    1,
+    2,
+    3,
+    4,
+    5
+  ]
+}

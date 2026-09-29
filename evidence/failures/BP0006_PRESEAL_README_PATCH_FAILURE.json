@@ -1,0 +1,16 @@
+{
+  "candidate_receipts_preserved_by_sha256": {
+    "evidence/competition/package/SPONSOR_STATUS_V2.json": "eec30d4946160e5b25714b11f58a7e2e36fe28d9cfa64d099b1f105b11ea20fe",
+    "evidence/competition/sponsors/SPONSOR_AUTH_RECEIPT.json": "4eda5073b8930f10508d32dc9ec879376eb52ee795c20011931c6f6b2e445134",
+    "evidence/competition/sponsors/SPONSOR_SUBMISSION_CLAIM_CANDIDATE.json": "4a9ad18d0018f2bb9a014c8a3dbf8663d186160654118af5810f8e8a76f06494",
+    "evidence/competition/sponsors/TENKI_CODE_REVIEW_RECEIPT.json": "27a6f0d9c3fb60f477309aa9094ae46a9e4b811c76a7232d423e67bfaf586b4d"
+  },
+  "canonical_mutation_performed": false,
+  "cause": "README sponsor line exact-string mismatch: expected backticked false, repository used plain false",
+  "created_utc": "2026-09-28T20:27:58+00:00",
+  "error_type": "AssertionError",
+  "mmr_mutation_performed": false,
+  "schema": "FAILURE_RECEIPT_V1",
+  "stage": "BP0006_PRESEAL_README_PATCH",
+  "state": "FAILED_PRESEAL_NO_BREAKPOINT_ALLOCATED"
+}

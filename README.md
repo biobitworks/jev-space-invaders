@@ -2,13 +2,15 @@
 
 Public, reproducible UFA arena branch of the Vithia model family. Competition-facing code and measured results are public; credentials and unrelated proprietary Vithia architecture are not.
 
-## Current state
+## Current verified competition state
 
-- Registration: SUBMITTED (entry `b968c199…`, receipt in `evidence/entry/`); demo video still required
-- Track: pilot. JEV access: requested. In person Sep 30: yes
-- Sponsor stack (Mitosis Cortex, Tenki sandboxes): PROPOSED, not yet implemented
-- Counted JEV games: see `results.json` (`provider: "typesafe"` runs only)
-- Non-JEV runs (`provider: "none"` scripted, `provider: "openjev"`) are labeled and do not count toward Performance
+- Registration: **SUBMITTED** (entry b968c199...); the demo video URL is still **BLOCKED_HUMAN_ACTION**.
+- Track: pilot. Hosted TypeSafe JEV access is **NOT_AVAILABLE_NOT_TESTED**; counted hosted-JEV runs: **0**.
+- Local comparator: provider=ollama, model=llama3.2:3b, five fixed seeds executed; scores: **270, 270, 270, 270, 270**. This is LOCAL_OLLAMA_BASELINE, not the official System-One baseline.
+- Official System-One baseline: **BLOCKED_NO_PROVIDER_CREDENTIAL**.
+- Matched OpenJEV comparator: **BLOCKED_READOUT_CAPABILITY_MISMATCH**. The pinned MLX stand-in requires targeted readout and does not satisfy the existing full-probability comparator contract.
+- Tenki: Code Review approved public PR #1, and a Tenki Sandbox executed one non-counted fixed-seed Space Invaders sponsor run (BP-0007/0008). A later attempt to re-verify Tenki access failed (`BLOCKED_INVALID_OR_REVOKED_API_KEY`). Mitosis Cortex: a universal-ID-backed directive selected seed 3 for that run; the stricter Mitosis load-bearing ablation remains **NOT_EXECUTED**. The prepared submission candidate (`evidence/competition/sponsors/SPONSOR_SUBMISSION_CLAIM_CANDIDATE.json`) keeps **both** Tenki and Mitosis `false` pending a governed, currently-reproducible load-bearing execution receipt - neither sponsor flag is upgraded to `true` in the submission.
+- Qualified competition governance now uses UFA-JEV-COMP-BP-*; the older unqualified breakpoint labels remain immutable historical identifiers within their branch context.
 
 ## Competition contract
 
@@ -18,11 +20,11 @@ Public, reproducible UFA arena branch of the Vithia model family. Competition-fa
 - Append every game to root results.json; commit and push immediately.
 - Measurements come from environment/API/runtime, never estimates.
 
-## Proposed winning lane
+## Decision lanes and execution state
 
-Pilot: JEV chooses one of NOOP, FIRE, RIGHT, LEFT, RIGHTFIRE, LEFTFIRE from compact game state. The identical decision interface is run through TypeSafe's System One LLM adapter for the baseline.
+The intended competition interface asks a decider to choose one of NOOP, FIRE, RIGHT, LEFT, RIGHTFIRE, or LEFTFIRE from compact game state. The current evidence does **not** support a hosted-JEV versus System-One performance comparison: hosted JEV was unavailable and the official System-One provider path was not executed.
 
-The proposed originality layer is confidence-aware temporal control: state includes current RAM plus deterministic deltas from recent frames; low-confidence behavior is explicit and measured rather than hidden.
+The five-seed local Ollama lane is an additional non-JEV comparator. OpenJEV remains a non-counted stand-in; its matched lane was stopped before experimental inference because the pinned MLX shim exposes targeted readout only, which does not satisfy the frozen matched-comparator probability contract.
 
 ## Frozen runtime-source dataset
 
@@ -59,7 +61,8 @@ Try it without git using `--dry-run --results /tmp/results.json`.
 
     python -m pytest -q
     python scripts/validate_results.py
-    python scripts/verify_breakpoints.py      # recomputes every breakpoint root and the MMR
+    python scripts/verify_breakpoints.py      # legacy chain; currently FAILs on BP-0010 mutable results.json
+    python scripts/verify_competition_lineage.py  # qualified UFA-JEV-COMP chain; must PASS
 
 ## Vithia lineage and secrecy boundary
 
@@ -69,4 +72,4 @@ The TypeSafe license gate in `TYPESAFE_LICENSE_GATE.md` must pass before the fir
 
 ## Governance
 
-governance/breakpoints is append-only project state. Hashes identify bytes; they do not establish correctness. No signature or Merkle/MMR commitment is claimed unless actually executed and verified.
+Historical governance/breakpoints files are append-only. After a verified parallel-branch identifier collision, new competition occurrences use the qualified UFA-JEV-COMP-BP-* namespace and governance/lineage/UFA_JEV_COMP_MMR_LEDGER.json. The competition and research predecessor MMRs remain separate commitments; they have not been concatenated or retroactively reconverged. Hashes identify bytes; they do not establish correctness, causality, or scientific validity.

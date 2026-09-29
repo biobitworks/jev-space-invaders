@@ -1,0 +1,37 @@
+{
+  "claim_ceiling": "Authentication and workspace reachability only; no sponsor runtime execution claim.",
+  "created_utc": "2026-09-28T20:27:16+00:00",
+  "lineage_id": "UFA-JEV-COMP",
+  "mitosis": {
+    "auth_state": "PASS",
+    "credential_present": true,
+    "office_count": 2,
+    "runtime_memory_integration": "NOT_EXECUTED_AT_THIS_RECEIPT",
+    "selected_office": {
+      "id": "b236ff3a-8250-4ac5-bda2-4fc35c43d35f",
+      "name": "vithia-space-jev-20260928"
+    }
+  },
+  "schema": "SPONSOR_AUTH_RECEIPT_V1",
+  "secret_values_recorded": false,
+  "signature_state": "NOT_SIGNED",
+  "successful_retry": "Tenki official TypeScript SDK list() returned successfully with zero active sessions.",
+  "tenki": {
+    "active_session_count": 0,
+    "auth_state": "PASS",
+    "credential_present": true,
+    "sandbox_runtime": "NOT_EXECUTED_AT_THIS_RECEIPT"
+  },
+  "tooling_failures_preserved": [
+    {
+      "detail": "npx package invocation did not expose tenki binary",
+      "stage": "tenki_cli_probe",
+      "state": "FAILED_TOOLING"
+    },
+    {
+      "detail": "tsx CommonJS mode rejected top-level await",
+      "stage": "tenki_sdk_probe_initial",
+      "state": "FAILED_TOOLING"
+    }
+  ]
+}

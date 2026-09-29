@@ -1,0 +1,81 @@
+{
+  "schema": "REALTIME_COST_BENCHMARK_V1",
+  "lineage_id": "UFA-JEV-COMP",
+  "created_utc": "2026-09-28T21:00:00Z",
+  "methodology": {
+    "nominal_game_fps": 60,
+    "frames_per_decision_K": 4,
+    "simulated_game_seconds_formula": "frames / nominal_game_fps",
+    "real_time_factor_formula": "simulated_game_seconds / wall_clock_seconds",
+    "game_fps_effective_formula": "frames / wall_clock_seconds",
+    "note": "FPS is never converted directly to token count; token counts come from the provider's own usage fields (Ollama /api/generate prompt_eval_count/eval_count), already captured per-run in results.json."
+  },
+  "per_run": [
+    {"seed": 1, "score": 270.0, "frames": 2151, "model_calls": 538, "wall_clock_s": 312.56, "decision_latency_ms_p50": 562.73, "decision_latency_ms_p95": 797.194, "input_tokens": 241841, "output_tokens": 4842, "simulated_game_seconds": 35.85, "real_time_factor": 0.1147, "decisions_per_second": 1.7213, "game_fps_effective": 6.8819},
+    {"seed": 2, "score": 270.0, "frames": 2151, "model_calls": 538, "wall_clock_s": 296.98, "decision_latency_ms_p50": 546.756, "decision_latency_ms_p95": 682.762, "input_tokens": 241841, "output_tokens": 4842, "simulated_game_seconds": 35.85, "real_time_factor": 0.1207, "decisions_per_second": 1.8116, "game_fps_effective": 7.2429},
+    {"seed": 3, "score": 270.0, "frames": 2151, "model_calls": 538, "wall_clock_s": 302.92, "decision_latency_ms_p50": 565.094, "decision_latency_ms_p95": 791.329, "input_tokens": 241841, "output_tokens": 4842, "simulated_game_seconds": 35.85, "real_time_factor": 0.1183, "decisions_per_second": 1.776, "game_fps_effective": 7.1009},
+    {"seed": 4, "score": 270.0, "frames": 2151, "model_calls": 538, "wall_clock_s": 443.47, "decision_latency_ms_p50": 578.966, "decision_latency_ms_p95": 1176.171, "input_tokens": 241841, "output_tokens": 4842, "simulated_game_seconds": 35.85, "real_time_factor": 0.0808, "decisions_per_second": 1.2132, "game_fps_effective": 4.8504},
+    {"seed": 5, "score": 270.0, "frames": 2151, "model_calls": 538, "wall_clock_s": 371.79, "decision_latency_ms_p50": 560.911, "decision_latency_ms_p95": 750.634, "input_tokens": 241841, "output_tokens": 4842, "simulated_game_seconds": 35.85, "real_time_factor": 0.0964, "decisions_per_second": 1.4471, "game_fps_effective": 5.7855}
+  ],
+  "aggregate": {
+    "mean_end_to_end_decision_latency_ms_p50": 562.89,
+    "mean_end_to_end_decision_latency_ms_p95": 839.62,
+    "model_inference_latency_p50_p95": "NOT_SEPARATELY_MEASURED (this harness times the full decide() call - HTTP + JSON + inference together; no isolated model-only timer exists)",
+    "mean_real_time_factor": 0.1062,
+    "mean_decisions_per_second": 1.5938,
+    "deadline_miss_rate": "NOT_APPLICABLE (no per-decision deadline is defined for the local-Ollama baseline lane)",
+    "total_input_tokens": 1209205,
+    "total_output_tokens": 24210,
+    "tokens_per_decision_input": 449.52,
+    "tokens_per_decision_output": 9.0,
+    "interpretation": "RTF << 1 across all seeds: this local 3B model on this M1 Pro box runs roughly 8-12x slower than real-time (mean RTF 0.106). Not real-time capable as configured."
+  },
+  "cost": {
+    "local_ollama_baseline": {
+      "provider": "ollama",
+      "cost_per_game": 0.0,
+      "cost_per_simulated_minute": 0.0,
+      "cost_per_real_wall_minute": 0.0,
+      "note": "Local inference has no metered API cost. Real-world electricity/compute cost exists but no pricing model was supplied for it; treated as out of scope, not fabricated as $0-means-free-forever."
+    },
+    "hosted_jev": {
+      "state": "NOT_COMPUTABLE",
+      "reason": "Zero hosted-JEV runs executed (TYPESAFE_API_KEY absent), so there is no real JEV token usage to cost. Projecting a JEV cost using llama3.2:3b's token counts would violate the rule against using one provider's tokenizer for another (different tokenizers, different token/decision ratios) - not computed.",
+      "public_pricing_reference_only": {
+        "input_price_per_mtok_usd": 0.042,
+        "output_price_per_mtok_usd": 0,
+        "source": "Provided by the operator's task instructions; NOT independently re-verified against an official TypeSafe pricing page in this session (no web-fetch/browsing tool was available to this session).",
+        "label": "PROJECTED_COST_USING_PUBLIC_PRICE would require real JEV token counts, which do not exist. This figure is recorded for reference only and is not applied to any cost calculation here."
+      }
+    },
+    "system_one_official_baseline": {
+      "state": "NOT_COMPUTABLE",
+      "reason": "BLOCKED_NO_PROVIDER_CREDENTIAL; never executed, no token usage exists."
+    },
+    "decisions_per_dollar": "NOT_APPLICABLE (local baseline has $0 metered cost, so this metric is undefined/infinite; hosted lanes have no executed cost)",
+    "game_frames_per_dollar": "NOT_APPLICABLE, same reason",
+    "score_per_dollar": "NOT_APPLICABLE, same reason; secondary metric per spec, not computed given no comparable metered lane executed"
+  },
+  "quality": {
+    "1p": {
+      "note": "matched seeds across all 5 local-Ollama baseline runs",
+      "mean_score": 270.0,
+      "score_per_1k_frames": 125.52,
+      "mean_frames": 2151,
+      "mean_decisions": 538,
+      "lives_lost": 3,
+      "fallback_actions": 0,
+      "invalid_actions": 0,
+      "errors": {}
+    },
+    "2p": "NOT_APPLICABLE - TWO_PLAYER_READINESS_RECEIPT.json state is BLOCKED, no 2P execution exists"
+  },
+  "calibration": {
+    "local_ollama_baseline": "NOT_APPLICABLE - src/ollama_baseline_decider.py always returns probabilities=None (no logprob/probability extraction implemented); this is a deterministic discrete-only decider, not a probability-capable lane",
+    "openjev_targeted": "NOT_APPLICABLE - targeted-only readout, not executed, no probabilities",
+    "hosted_jev": "NOT_APPLICABLE - never executed"
+  },
+  "pareto_note": "Only one executed lane (local-Ollama baseline) exists; a genuine Pareto frontier requires 2+ comparable lanes with cost/quality/latency tradeoffs. With a single lane, no frontier can be meaningfully plotted or claimed. See figures/competition/ for the single-lane scatter prepared as a component for when additional lanes become available.",
+  "claim_ceiling": "All real-time/cost figures above are measured from actually-executed local-Ollama runs. No hosted-JEV or official System-One cost or performance figure is claimed.",
+  "signature_state": "NOT_SIGNED"
+}

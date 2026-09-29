@@ -1,0 +1,32 @@
+{
+  "agent": "codex-final-execution",
+  "choice": {
+    "answer_endpoint": "/v1/feeds/enrichment",
+    "answer_method": "chooseEnrichment",
+    "answer_tool": "cortex_choose_enrichment",
+    "choice_required": true,
+    "enrichment_state": "pending_choice",
+    "feed_key": "agent.memories",
+    "message": "Saved and searchable. Mitosis is waiting for the user's choice before extracting anything from this source: ask them the question, present exactly the two options, and record their answer with cortex_choose_enrichment. Do not choose for them.",
+    "options": [
+      {
+        "id": "standard",
+        "label": "Standard"
+      },
+      {
+        "id": "describe_goal",
+        "label": "Describe your goal"
+      }
+    ],
+    "question": "What do you want Mitosis to pull out of this data? Describe your goal and I will set that up, or say 'standard' and Mitosis will extract the people, companies, projects, topics, dates, and how they connect."
+  },
+  "confidence": 1,
+  "derived_from_edges": 0,
+  "embedded": false,
+  "kind": "task-outcome",
+  "linked_sources": 0,
+  "note": "memory persisted on the universal_id spine (raw + embedded + graph) — retrievable via /v1/answer and /recall like any other knowledge",
+  "retrievable_at": "2026-09-28T21:18:35Z",
+  "status": "ok",
+  "universal_id": "agent:memories:47b923e2e5bf18083bbc05c3"
+}

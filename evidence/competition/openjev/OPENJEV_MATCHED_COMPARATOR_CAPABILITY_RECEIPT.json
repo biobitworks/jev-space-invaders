@@ -1,0 +1,47 @@
+{
+  "capability_observed": "TARGETED readout only; first-position candidate-token logprobs; not the preregistered matched full-probability interface",
+  "claim_ceiling": "MATCHED COMPARATOR NOT TESTED; targeted exploratory lane has no results.",
+  "counted_as_jev": false,
+  "created_utc": "2026-09-28T15:46:59+00:00",
+  "decision": "Do not set READOUT_TARGETED=1 under the existing matched-comparator preregistration. Do not improvise a probability readout.",
+  "existing_matched_contract": "expected/full probability interface",
+  "helper": {
+    "assertions_observed": [
+      "READOUT_TARGETED must equal 1; stand-in implements only TARGETED readout",
+      "shim.TARGETED and shim.PERMS == 1"
+    ],
+    "bytes": 4753,
+    "path": "/Volumes/magicBLACKbox/openjev/helper/helper/shim_mlx.py",
+    "sha256": "fa80dd5b1ae4b3077380669ef9bd22e74e552ac314e50b343c6bfd88658718d4"
+  },
+  "historical_mutation_performed": false,
+  "historical_receipts": [
+    "evidence/openjev/STUDIO_DISK_RECEIPT.json",
+    "evidence/openjev/UPSTREAM_IDENTITY.json"
+  ],
+  "legacy_m4b_breakpoint": "UFA-JEV-BP-0051",
+  "lineage_id": "UFA-JEV-COMP",
+  "matched_comparator_state": "BLOCKED_READOUT_CAPABILITY_MISMATCH",
+  "model_directory": {
+    "path": "/Volumes/magicBLACKbox/openjev/openjev-MLX-4bit",
+    "present": true
+  },
+  "not_blocked_by": [
+    "DISK",
+    "WEIGHTS_MISSING"
+  ],
+  "provider": "openjev",
+  "provider_label": "OPENJEV_LOCAL_STANDIN",
+  "python_openai_package": {
+    "error_type": "TimeoutExpired",
+    "state": "UNKNOWN"
+  },
+  "schema": "OPENJEV_MATCHED_COMPARATOR_CAPABILITY_RECEIPT_V1",
+  "shim_process_running_at_receipt": false,
+  "signature_state": "NOT_SIGNED",
+  "successor_interpretation": "BP-0051 bytes remain immutable; this successor corrects the blocker classification only.",
+  "targeted_exploratory_lane": {
+    "id": "OPENJEV_TARGETED_READOUT_EXPLORATORY",
+    "state": "PROPOSED_NOT_PREREGISTERED_NOT_EXECUTED"
+  }
+}

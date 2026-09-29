@@ -1,0 +1,16 @@
+{
+  "construction_receipt": "evidence/competition/final_execution/frames/PLAYTHROUGH_MMR_CONSTRUCTION_RECEIPT.json",
+  "created_utc": "2026-09-28T21:15:21Z",
+  "decision_count": 60,
+  "frame_count": 240,
+  "lineage_id": "UFA-JEV-COMP",
+  "mmr_root": "e55a47a7f16064477c4f101a38a849391c2fbc9f6557c5244daf0406b36dbd74",
+  "mmr_size": 240,
+  "model": "scripted-policy",
+  "ordered_leaves": "evidence/competition/final_execution/frames/FRAME_BREAKPOINT_LEAVES.jsonl",
+  "playthrough_id": "FINAL_1P_ACTUAL_ALE_CAPTURE_V1",
+  "public_key_fingerprint": "becbb94df1bdde14440c5dd81c977cb4e66980abbf385f552201a8fee46429ed",
+  "schema": "PLAYTHROUGH_FCO_V1",
+  "seed": 3,
+  "verification_receipt": "evidence/competition/final_execution/frames/PLAYTHROUGH_MMR_VERIFICATION_RECEIPT.json"
+}

@@ -1,0 +1,15 @@
+{
+  "checklist": "evidence/competition/demo/DEMO_CHECKLIST.md",
+  "claim_ceiling": "Package prepared only; no video exists until a human records/uploads it.",
+  "created_utc": "2026-09-28T15:51:54+00:00",
+  "demo_video_state": "BLOCKED_HUMAN_ACTION",
+  "demo_video_url": null,
+  "entry_update_executed": false,
+  "lineage_id": "UFA-JEV-COMP",
+  "recording_executed": false,
+  "schema": "DEMO_PACKAGE_RECEIPT_V1",
+  "script": "evidence/competition/demo/DEMO_SCRIPT.md",
+  "signature_state": "NOT_SIGNED",
+  "state": "DEMO_PACKAGE_PREPARED_VIDEO_BLOCKED_HUMAN_ACTION",
+  "upload_executed": false
+}

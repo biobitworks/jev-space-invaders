@@ -1,0 +1,55 @@
+{
+  "schema": "CONTROL_PLANE_SUCCESSOR_VERIFICATION_RECEIPT_V1",
+  "lineage_id": "UFA-JEV-COMP",
+  "stage": "ACTOR_AND_CONTROL_PLANE_CLOSURE_SUCCESSOR",
+  "successor_to_breakpoint": "UFA-JEV-COMP-BP-0013",
+  "parent_head": "37ef623e93dabe74e896de9e8b5e2ce49be183c1",
+  "qualified_lineage_before_breakpoint": {
+    "state": "PASS",
+    "mmr_size": 13,
+    "mmr_root": "250e3b6630ac0955c7e0ad65848d51b0131abbd338512d6693bed87e531dd32a"
+  },
+  "bp0012_final_media_receipts": {
+    "state": "PASS",
+    "frames_checked": 240,
+    "playthrough_mmr_root": "e55a47a7f16064477c4f101a38a849391c2fbc9f6557c5244daf0406b36dbd74",
+    "frame_signature_state": "SIGNED_VERIFIED",
+    "signature_domain": "FRAME_ED25519_ONLY",
+    "git_commit_signature_state": "NOT_INFERRED"
+  },
+  "tests": {
+    "command": ".venv/bin/python -m pytest",
+    "state": "PASS",
+    "passed": 51
+  },
+  "secret_scan": {
+    "command": ".venv/bin/python scripts/secret_scan.py",
+    "state": "PASS",
+    "scanned_files": 979
+  },
+  "private_ip_scan": {
+    "scope": [
+      "evidence/competition/control_plane",
+      "governance/multimodel/STATUS.json",
+      "scripts/check_control_plane_fcg_orphans.py"
+    ],
+    "state": "PASS",
+    "matches": 0
+  },
+  "private_carrier_leakage_scan": {
+    "scope": [
+      "evidence/competition/control_plane",
+      "governance/multimodel/STATUS.json",
+      "scripts/check_control_plane_fcg_orphans.py"
+    ],
+    "state": "PASS",
+    "matches": 0
+  },
+  "fcg_orphan_check": {
+    "command": ".venv/bin/python scripts/check_control_plane_fcg_orphans.py",
+    "state": "PASS",
+    "edge_count": 13
+  },
+  "adapter_worktrees": "CANDIDATE_UNADMITTED",
+  "claim_ceiling": "Receipt records verification command outcomes for this bounded successor. It does not admit external adapter worktrees or infer git commit signing from frame Ed25519 verification."
+}

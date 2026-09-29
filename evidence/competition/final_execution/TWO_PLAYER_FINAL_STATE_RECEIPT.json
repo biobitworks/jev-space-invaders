@@ -1,0 +1,22 @@
+{
+  "PETTINGZOO_STATE": {
+    "ale_py": "PASS",
+    "env_instantiation_attempted": false,
+    "gymnasium": "PASS",
+    "note": "Only the module and its parallel_env/raw_env attributes were inspected; no environment was constructed, which would require the ROM.",
+    "numpy": "PASS",
+    "pettingzoo": "PASS",
+    "pettingzoo.atari.space_invaders_v2_module": "PASS",
+    "space_invaders_v2.parallel_env_attr_present": true,
+    "space_invaders_v2.raw_env_attr_present": true
+  },
+  "ROM_GATE_STATE": "BLOCKED",
+  "ROM_LICENSE_DECISION": "NOT_APPROVED",
+  "ROM_SOURCE_PROVENANCE": "NOT_VERIFIED",
+  "TWO_PLAYER_EXECUTION": "NOT_EXECUTED_ROM_GATE_BLOCKED",
+  "TWO_PLAYER_IMPLEMENTATION": "REAL_GATED",
+  "claim_ceiling": "2P dependency/module import is prior verified; no ROM-dependent 2P environment was executed by Codex.",
+  "created_utc": "2026-09-28T21:15:21Z",
+  "lineage_id": "UFA-JEV-COMP",
+  "schema": "TWO_PLAYER_FINAL_STATE_RECEIPT_V1"
+}

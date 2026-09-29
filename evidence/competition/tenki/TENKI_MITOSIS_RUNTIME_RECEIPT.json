@@ -1,0 +1,62 @@
+{
+  "checkout_commit": "37eb15189cb2b526c52d513c0241e3c2455adf4d",
+  "execution": {
+    "counted_as_jev": false,
+    "decider": "scripted",
+    "lane": "TENKI_SPONSOR_RUNTIME_NON_COUNTED",
+    "provider": "none",
+    "run": {
+      "episode_mmr_protocol": "leaf = SHA256('EPISODE_LEAF_V1' 0 t 0 content_id(record without leaf, ms)); MMR per docs/BREAKPOINT_PROTOCOL.md",
+      "episode_mmr_root": "c4086b58a8a2e280a318ee1c44d156d2e19ba3348ccd043374a9c3d5c8ca957c",
+      "episode_mmr_size": 100,
+      "errors_by_status": {},
+      "fallback_actions": 0,
+      "frames": 400,
+      "latency_ms_p50": 0.003,
+      "latency_ms_p95": 0.003,
+      "latency_ms_total": 0.317,
+      "lives_lost": 0,
+      "max_steps_cap": 100,
+      "model_calls": 0,
+      "notes": "Tenki sponsor run; seed selected from Mitosis BP-0007 directive",
+      "provider": "none",
+      "requested_model": "scripted-policy",
+      "retries": 0,
+      "run": 11,
+      "runtime": {
+        "ale_py": "0.12.1",
+        "gymnasium": "1.3.0",
+        "numpy": "2.5.3",
+        "platform": "Linux-6.18.29-x86_64-with-glibc2.39",
+        "python": "3.12.3"
+      },
+      "score": 15.0,
+      "seed": 3,
+      "served_model": "scripted-policy",
+      "state_encoding": "perception_v1",
+      "steps": 100,
+      "terminated": false,
+      "trace_file": "runs/run_0011_seed3_none.jsonl.gz",
+      "trace_sha256": "93ad31b971f525c3164356ce3ab7f4e75a3b3bb8ffdbc295aa821ecefa6170a3",
+      "truncated": true,
+      "wall_clock_s": 0.11
+    },
+    "selected_seed": 3
+  },
+  "mitosis": {
+    "directive": "VITHIA_SPACE_TENKI_DEMO_V1 selected_seed=3 execution=QUALIFIED_VERIFY_AND_FIXED_SEED_SCRIPTED_DRY_RUN source_commit=bc2faa30a772f2cfb6bab1d8108259f66ba84d20 teardown_rule=DO_NOT_TERMINATE_UNTIL_GITHUB_ORIGIN_PARITY_PASS",
+    "selected_seed": 3,
+    "source_breakpoint": "UFA-JEV-COMP-BP-0007",
+    "source_commit": "37eb15189cb2b526c52d513c0241e3c2455adf4d",
+    "universal_id": "agent:memories:daab87ad35ab106e7f04be25"
+  },
+  "qualified_verify_pass": true,
+  "results_validation_pass": true,
+  "schema": "TENKI_MITOSIS_RUNTIME_RECEIPT_V1",
+  "secrets_entered_sandbox": false,
+  "session_id": "01a0e9b9-dbf4-77ff-8d28-2e057cb00cbc",
+  "session_name": "vithia-space-mitosis-demo-bp0008",
+  "snapshot_created": false,
+  "sticky": true,
+  "teardown_gate": "DO_NOT_TERMINATE_UNTIL_RECEIPT_COMMITTED_PUSHED_AND_ORIGIN_PARITY_PASS"
+}

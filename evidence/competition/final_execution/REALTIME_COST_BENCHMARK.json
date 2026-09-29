@@ -1,0 +1,19 @@
+{
+  "cost_state": "NOT_COMPUTED_NO_METERED_PROVIDER",
+  "created_utc": "2026-09-28T21:15:21Z",
+  "deadline_miss_rate": "NOT_APPLICABLE_NO_DEADLINE_DEFINED",
+  "decisions_per_second": 100.40802608663553,
+  "effective_fps": 401.6321043465421,
+  "end_to_end_latency_p50": 0.6636669859290123,
+  "end_to_end_latency_p95": 2.043167012743652,
+  "frame_count": 240,
+  "model_latency_p50": "NOT_APPLICABLE_SCRIPTED_POLICY",
+  "model_latency_p95": "NOT_APPLICABLE_SCRIPTED_POLICY",
+  "prior_ollama_benchmark": "evidence/competition/benchmark/REALTIME_COST_BENCHMARK.json",
+  "real_time_factor": 6.693868405775701,
+  "schema": "FINAL_REALTIME_COST_BENCHMARK_V1",
+  "simulated_seconds": 4.0,
+  "source": "FINAL_1P_ACTUAL_ALE_CAPTURE_V1",
+  "token_state": "NOT_APPLICABLE_SCRIPTED_POLICY",
+  "wall_seconds": 0.5975617920048535
+}

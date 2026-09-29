@@ -1,0 +1,13 @@
+{"subject":"ControlPlaneSuccessorFCO:UFA-JEV-COMP-BP-0014","predicate":"PRODUCED_BY","object":"ActorRunFCO:CODEX_MAGICSTUDIO_BP0012_CONTROL_PLANE_001"}
+{"subject":"ActorRunFCO:CODEX_MAGICSTUDIO_BP0012_CONTROL_PLANE_001","predicate":"EXECUTED_ON","object":"HardwareHostFCO:magicSTUDIObox"}
+{"subject":"ActorRunFCO:CODEX_MAGICSTUDIO_BP0012_CONTROL_PLANE_001","predicate":"USED_SOFTWARE","object":"SoftwareFCO:qualified-breakpoint-tools"}
+{"subject":"ActorRunFCO:CODEX_MAGICSTUDIO_BP0012_CONTROL_PLANE_001","predicate":"USED_MODEL","object":"ModelFCO:Codex"}
+{"subject":"ActorRunFCO:CODEX_MAGICSTUDIO_BP0012_CONTROL_PLANE_001","predicate":"USED_SERVICE","object":"ServiceFCO:Mitosis"}
+{"subject":"ActorRunFCO:CODEX_MAGICSTUDIO_BP0012_CONTROL_PLANE_001","predicate":"USED_SERVICE","object":"ServiceFCO:Tenki"}
+{"subject":"GitCommitFCO:5307a1a304730628c75b81b382e05db5a51c1197","predicate":"COMMITTED_BY","object":"AgentActorFCO:Codex"}
+{"subject":"GitCommitFCO:37ef623e93dabe74e896de9e8b5e2ce49be183c1","predicate":"COMMITTED_BY","object":"AgentActorFCO:Codex"}
+{"subject":"ControlPlaneSuccessorFCO:UFA-JEV-COMP-BP-0014","predicate":"VERIFIED_BY","object":"VerificationFCO:qualified-lineage-before-bp0014"}
+{"subject":"GitCommitFCO:5307a1a304730628c75b81b382e05db5a51c1197","predicate":"VERIFIED_BY","object":"VerificationFCO:bp0012-playthrough-custody"}
+{"subject":"ControlPlaneSuccessorFCO:UFA-JEV-COMP-BP-0014","predicate":"SUPERSEDES","object":"UFA-JEV-COMP-BP-0013"}
+{"subject":"BranchStateFCO:competition/final-integration-v01@37ef623e93dabe74e896de9e8b5e2ce49be183c1","predicate":"VERIFIED_BY","object":"VerificationFCO:qualified-lineage-before-bp0014"}
+{"subject":"HumanDecisionOccurrenceFCO:CONFIRM_BP0013_SUCCESSOR_PARENT_2026-09-28","predicate":"PRODUCED_BY","object":"ActorRunFCO:CODEX_MAGICSTUDIO_BP0012_CONTROL_PLANE_001"}

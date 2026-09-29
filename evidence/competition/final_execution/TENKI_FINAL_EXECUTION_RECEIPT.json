@@ -1,0 +1,12 @@
+{
+  "TENKI_USED": false,
+  "attempted_operation": "tenki sandbox get 01a0e9b9-dbf4-77ff-8d28-2e057cb00cbc",
+  "claim_ceiling": "Prior Tenki sandbox execution exists in earlier receipts. Codex attempted final Tenki access but could not execute or inspect sandbox state because current local credentials are invalid/revoked.",
+  "created_utc": "2026-09-28T21:20:05Z",
+  "error_summary": "Tenki CLI reports the configured API key is invalid or revoked.",
+  "prior_session_id": "01a0e9b9-dbf4-77ff-8d28-2e057cb00cbc",
+  "prior_tenki_receipt": "evidence/competition/tenki/TENKI_MITOSIS_RUNTIME_RECEIPT.json",
+  "raw_attempt_file": "evidence/competition/final_execution/TENKI_FINAL_SANDBOX_GET_RAW.txt",
+  "schema": "TENKI_FINAL_EXECUTION_RECEIPT_V1",
+  "state": "BLOCKED_INVALID_OR_REVOKED_API_KEY"
+}

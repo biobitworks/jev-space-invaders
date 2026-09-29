@@ -1,0 +1,21 @@
+{
+  "schema": "PLAYTHROUGH_TELEMETRY_V1",
+  "label": "FINAL_1P_ACTUAL_ALE_CAPTURE_V1",
+  "seed": 3,
+  "capture_mode": "actual-ale",
+  "frame_count": 240,
+  "decision_count": 60,
+  "nominal_game_fps": 60,
+  "simulated_seconds": 4.0,
+  "wall_seconds": 0.5975617920048535,
+  "effective_fps": 401.6321043465421,
+  "real_time_factor": 6.693868405775701,
+  "decisions_per_second": 100.40802608663553,
+  "decision_latency_ms_p50": 0.0004169996827840805,
+  "decision_latency_ms_p95": 0.0008749775588512421,
+  "end_to_end_latency_ms_p50": 0.6636669859290123,
+  "end_to_end_latency_ms_p95": 2.043167012743652,
+  "deadline_miss_rate": "NOT_APPLICABLE_NO_DEADLINE_DEFINED",
+  "input_tokens": "NOT_APPLICABLE_SCRIPTED_POLICY",
+  "output_tokens": "NOT_APPLICABLE_SCRIPTED_POLICY"
+}

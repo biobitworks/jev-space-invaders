@@ -1,0 +1,21 @@
+{
+  "schema": "VIDEO_ENCODING_MANIFEST_V2",
+  "ffmpeg_version": "ffmpeg version 9.0.1 Copyright (c) 2000-2026 the FFmpeg developers",
+  "codec": "h264",
+  "resolution": "160x210",
+  "input_fps": 15,
+  "output_fps": 15,
+  "pixel_format": "yuv420p",
+  "crf": 18,
+  "gop": 15,
+  "exact_command": "ffmpeg -y -framerate 15 -i /Users/byron/jev-space-invaders/evidence/competition/frames/smoke/frame_%04d.png -frames:v 24 -r 15 -c:v libx264 -pix_fmt yuv420p -crf 18 -g 15 -an /Users/byron/jev-space-invaders/evidence/competition/frames/smoke/canonical.mp4",
+  "frame_count_input": 24,
+  "frame_count_output_reported": "24",
+  "video_file": "evidence/competition/frames/smoke/canonical.mp4",
+  "video_bytes": 15635,
+  "video_sha256": "5327e3757cc245c5a2554e6eef9d3919434cb980c9fcaebcc1da7c7c53039bdd",
+  "source_playthrough_mmr_root": "3f882e795ef6f0a46da7fd3024ded2c9be6fbdeaf06d7e5b50c0199398c6c796",
+  "source_verify_state": "PASS",
+  "reverified_immediately_before_encode": true,
+  "label": "SETUP_SMOKE_NON_SUBMISSION_NON_EXPERIMENTAL"
+}

@@ -1,0 +1,143 @@
+{
+  "schema": "UFA_JEV_QUALIFIED_BREAKPOINT_V1",
+  "lineage_id": "UFA-JEV-COMP",
+  "branch": "competition/final-integration-v01",
+  "breakpoint_id": "UFA-JEV-COMP-BP-0013",
+  "state": "PRIVATE_CODEC_EXPERIMENT_PUBLIC_RECEIPTS_READY",
+  "project": "VITHIA_SPACE",
+  "created_utc": "2026-09-28T21:31:55+00:00",
+  "git_head_at_creation": "5307a1a304730628c75b81b382e05db5a51c1197",
+  "root_kind": "FMO_V1_BREAKPOINT_ATOMS",
+  "bp_root": "ecae952e4adba895594e716088ae933f11b948d29f680854c31e8d19cf2178d2",
+  "breakpoint_root": "ecae952e4adba895594e716088ae933f11b948d29f680854c31e8d19cf2178d2",
+  "parent_root": "2108cc21f037766b1047b0363e20f1bf1de960ef93a8d51ff9ced98768984898",
+  "group_roots": {
+    "actor_run": "67e7e21af3e836f799dc73afb6484925047fbfd86bca16feb370dd43f216a98b",
+    "codec_fcg": "3f2909243ab55b3f8fccb7235947b4c4272ab2a5dedb83f5449a33fac20fa63b",
+    "codec_prereg": "bd7f7849e3fdf549da5d20ba5a4a25ab032d0f98637790e3b30af56530dfe78f",
+    "codec_receipts": "916e2a1af7daad832e9b31386a464ffbfedcee50acad7055dd6e98b677e43967",
+    "codec_results": "b48cb8f22df982d755d00d022895904e64230882ae562e1eb0d67ffb4d1214d1"
+  },
+  "atoms": [
+    {
+      "path": "evidence/competition/codec/CODEC_AGGREGATE_RESULT.json",
+      "kind": "CodecReceiptFCO",
+      "group": "codec_receipts",
+      "bytes": 786,
+      "sha256": "7529c30254908a6b840e569f6f31df580b7fc746eeb7329cdd7045c405a3fde0",
+      "location": "public",
+      "fmo_leaf": "5dba8087e21c096fc207148c0a5997d4749427f52faf44533d4e58196d5a760a"
+    },
+    {
+      "path": "evidence/competition/codec/CODEC_FCG_EDGES.jsonl",
+      "kind": "FCGEdgesFCO",
+      "group": "codec_fcg",
+      "bytes": 1694,
+      "sha256": "eda17218c297b9157efe499ed66c9970f43cdf2713e994a154be69226121d490",
+      "location": "public",
+      "fmo_leaf": "3f2909243ab55b3f8fccb7235947b4c4272ab2a5dedb83f5449a33fac20fa63b"
+    },
+    {
+      "path": "evidence/competition/codec/CODEC_MATRIX.json",
+      "kind": "CodecReceiptFCO",
+      "group": "codec_receipts",
+      "bytes": 2772,
+      "sha256": "4fa0643bb85e2f06d8c4700b292e17f38042060a86d96a2224f95a901355ac8e",
+      "location": "public",
+      "fmo_leaf": "385cebda45b0ba51c4a9cebb1fda631219254b2dc5dea356de3f02e2bbe4a75e"
+    },
+    {
+      "path": "evidence/competition/codec/PRIVATE_CODEC_PUBLIC_RECEIPT.json",
+      "kind": "CodecReceiptFCO",
+      "group": "codec_receipts",
+      "bytes": 575,
+      "sha256": "71baf3cddb31212477813da15dbe669fdace9f1b23b8b61f548b133c00cdf0a6",
+      "location": "public",
+      "fmo_leaf": "3b8138c6eeba8fe0806cdb8e6ef832541cd66d40099caa8ea96a5bcb638230fb"
+    },
+    {
+      "path": "evidence/competition/codec/ROUNDTRIP_RESULTS.jsonl",
+      "kind": "CodecExperimentResultFCO",
+      "group": "codec_results",
+      "bytes": 4001,
+      "sha256": "870920899f95b8fb3dc9bdb1e3f8182627622ae1225a52cb40d11e5955bfb4a9",
+      "location": "public",
+      "fmo_leaf": "9199368b361aa86f2f7060c86108ba4417b80152baa2416a885f1f2d56f43f71"
+    },
+    {
+      "path": "evidence/competition/codec/TEST_VECTOR_MANIFEST.json",
+      "kind": "CodecReceiptFCO",
+      "group": "codec_receipts",
+      "bytes": 1826,
+      "sha256": "b610b154aae29725f0e048e91b9a2b26a03cf5a2cc0bbc9f536372a6370fee61",
+      "location": "public",
+      "fmo_leaf": "24b33c0cc57866fe2fd2d3e7905f7b01a7ca9ad2e8890481a5446306f88501d3"
+    },
+    {
+      "path": "evidence/competition/codec/TRANSFORM_RESULTS.jsonl",
+      "kind": "CodecExperimentResultFCO",
+      "group": "codec_results",
+      "bytes": 41934,
+      "sha256": "81287bee001e179d534cf25ebdea6e49ccc87d0389f2db2ee0a1dd64696f148e",
+      "location": "public",
+      "fmo_leaf": "6d3aca021fa46364b79b53f4ccea53a6b844fc026083603bce4b424511ec8761"
+    },
+    {
+      "path": "evidence/competition/codec/UNIVERSAL_CODEC_PREREG.json",
+      "kind": "PreregistrationFCO",
+      "group": "codec_prereg",
+      "bytes": 1564,
+      "sha256": "c666a4cdf32996e686a699ac3fc7e33627f66abe2841a2746f0758daa95adecf",
+      "location": "public",
+      "fmo_leaf": "bd7f7849e3fdf549da5d20ba5a4a25ab032d0f98637790e3b30af56530dfe78f"
+    },
+    {
+      "path": "evidence/competition/actor_runs/CODEX_MAGICSTUDIO_CODEC_STAGE_001.json",
+      "kind": "ActorRunFCO",
+      "group": "actor_run",
+      "bytes": 1583,
+      "sha256": "13845906747302b22bb9ed5908b0dab10e82db314175ea8a1cd1ebc1f4178444",
+      "location": "public",
+      "fmo_leaf": "67e7e21af3e836f799dc73afb6484925047fbfd86bca16feb370dd43f216a98b"
+    }
+  ],
+  "historical_mutation_performed": false,
+  "mmr_reconciliation_performed": false,
+  "actor_run": "CODEX_MAGICSTUDIO_CODEC_STAGE_001",
+  "private_codec_state": "IMPLEMENTED_PRIVATE_MAGICSTUDIO_STORAGE",
+  "public_receipts_state": "PUBLIC_SAFE_RECEIPTS_READY",
+  "exact_formats_supported_for_source_self_verify": [
+    "ffv1",
+    "h264_mp4",
+    "jpeg",
+    "png",
+    "raw_rgb",
+    "tiff",
+    "vp9_webm",
+    "webp_lossless",
+    "webp_lossy"
+  ],
+  "robust_formats_supported_for_source_self_verify": [
+    "ffv1",
+    "h264_mp4",
+    "jpeg",
+    "png",
+    "raw_rgb",
+    "tiff",
+    "vp9_webm",
+    "webp_lossless",
+    "webp_lossy"
+  ],
+  "transform_rows": 180,
+  "transform_pass_rows": 98,
+  "transform_fail_rows": 82,
+  "not_tested_formats": [
+    "h265",
+    "av1"
+  ],
+  "seedgraph_input_receipts_ready": true,
+  "publication_input_receipts_ready": true,
+  "note": "Codec content commit excludes CODEX_FINAL_HANDOFF.json to avoid hash self-reference; handoff delivery commit records the content commit head.",
+  "claim_ceiling": "IDENTITY_AND_INCLUSION_ONLY; hashes do not establish correctness",
+  "signature_state": "NOT_SIGNED"
+}

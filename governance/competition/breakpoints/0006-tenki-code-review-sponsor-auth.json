@@ -1,0 +1,90 @@
+{
+  "atoms": [
+    {
+      "bytes": 995,
+      "fmo_leaf": "fc4553ddbd7c8cbac293faf27d862c3ddea0df6238dc40a3e66d80579a94184f",
+      "group": "tenki_review",
+      "kind": "SponsorExecutionReceiptFCO",
+      "location": "public",
+      "path": "evidence/competition/sponsors/TENKI_CODE_REVIEW_RECEIPT.json",
+      "sha256": "27a6f0d9c3fb60f477309aa9094ae46a9e4b811c76a7232d423e67bfaf586b4d"
+    },
+    {
+      "bytes": 1196,
+      "fmo_leaf": "93733a12482ee09a3aa529f046c2e47462bfd3abc3ccfaaf0d5217d4a2a62fcf",
+      "group": "auth",
+      "kind": "SponsorAuthReceiptFCO",
+      "location": "public",
+      "path": "evidence/competition/sponsors/SPONSOR_AUTH_RECEIPT.json",
+      "sha256": "4eda5073b8930f10508d32dc9ec879376eb52ee795c20011931c6f6b2e445134"
+    },
+    {
+      "bytes": 1011,
+      "fmo_leaf": "fd232ef750201b443ebbfd6805e77a04736d72ff74bc99ba822f26082f49be9a",
+      "group": "claims",
+      "kind": "ClaimCandidateFCO",
+      "location": "public",
+      "path": "evidence/competition/sponsors/SPONSOR_SUBMISSION_CLAIM_CANDIDATE.json",
+      "sha256": "4a9ad18d0018f2bb9a014c8a3dbf8663d186160654118af5810f8e8a76f06494"
+    },
+    {
+      "bytes": 483,
+      "fmo_leaf": "6666c1a48c9a6b17baeada47dc683b5c7cff203881269c6490ad4e097ec6ac07",
+      "group": "status",
+      "kind": "SponsorStatusFCO",
+      "location": "public",
+      "path": "evidence/competition/package/SPONSOR_STATUS_V2.json",
+      "sha256": "eec30d4946160e5b25714b11f58a7e2e36fe28d9cfa64d099b1f105b11ea20fe"
+    },
+    {
+      "bytes": 5755,
+      "fmo_leaf": "ec466e5b1aff58a0282518a38d1dd96084387953377b5c7bf9d784c19e8ef522",
+      "group": "status",
+      "kind": "ReadmeSnapshotFCO",
+      "location": "public",
+      "path": "evidence/competition/package/README.bp0006.snapshot.md",
+      "sha256": "67a4ae2eb219a256ffdd47c093ecddcd4374df9cafac267008ccfdcefa22da3f"
+    },
+    {
+      "bytes": 989,
+      "fmo_leaf": "d6227bc5d81ea01d51e523a93c6041bc1fc157d988d2d76efef28cdd4c1b5a4b",
+      "group": "failure",
+      "kind": "FailureReceiptFCO",
+      "location": "public",
+      "path": "evidence/failures/BP0006_PRESEAL_README_PATCH_FAILURE.json",
+      "sha256": "8d714385941bd8a47c961a0e6dbc93fb144d4a9d81618f7affa4d20b7627e9fa"
+    }
+  ],
+  "bp_root": "b31471c72f0a171fe0aac862464d216286c42e0ed7e4cf46d538b7e3ff52d8bf",
+  "branch": "competition/qualified-lineage-v01",
+  "breakpoint_id": "UFA-JEV-COMP-BP-0006",
+  "breakpoint_root": "b31471c72f0a171fe0aac862464d216286c42e0ed7e4cf46d538b7e3ff52d8bf",
+  "claim_ceiling": "IDENTITY_AND_INCLUSION_ONLY; hashes do not establish correctness",
+  "created_utc": "2026-09-28T20:27:58+00:00",
+  "git_head_at_creation": "5aa85a843d370204a68a279578f7632e827fc1c7",
+  "group_roots": {
+    "auth": "93733a12482ee09a3aa529f046c2e47462bfd3abc3ccfaaf0d5217d4a2a62fcf",
+    "claims": "fd232ef750201b443ebbfd6805e77a04736d72ff74bc99ba822f26082f49be9a",
+    "failure": "d6227bc5d81ea01d51e523a93c6041bc1fc157d988d2d76efef28cdd4c1b5a4b",
+    "status": "4c89967fc46dc5eaa808c70e74977bdb16da6a5cdc0811c7140c66c5db2c6600",
+    "tenki_review": "fc4553ddbd7c8cbac293faf27d862c3ddea0df6238dc40a3e66d80579a94184f"
+  },
+  "historical_mutation_performed": false,
+  "lineage_id": "UFA-JEV-COMP",
+  "mitosis_auth": "PASS",
+  "mitosis_memory_integration": "NOT_EXECUTED",
+  "parent_occurrence": {
+    "breakpoint_id": "UFA-JEV-COMP-BP-0005",
+    "commit": "5aa85a843d370204a68a279578f7632e827fc1c7",
+    "mmr_root_after": "30304a0a1f8eeea703bc570ec13c9c6f97891dbb2cf622927b258200389d5cd0"
+  },
+  "parent_root": "30304a0a1f8eeea703bc570ec13c9c6f97891dbb2cf622927b258200389d5cd0",
+  "project": "VITHIA_SPACE",
+  "root_kind": "FMO_V1_BREAKPOINT_ATOMS",
+  "schema": "UFA_JEV_QUALIFIED_BREAKPOINT_V1",
+  "signature_state": "NOT_SIGNED",
+  "sponsor_boolean_upgrade": false,
+  "state": "TENKI_CODE_REVIEW_AND_SPONSOR_AUTH_VERIFIED",
+  "tenki_code_review": "EXECUTED_SUPPORTED",
+  "tenki_sandbox": "NOT_EXECUTED"
+}

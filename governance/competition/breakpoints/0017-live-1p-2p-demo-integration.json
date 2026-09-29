@@ -1,0 +1,132 @@
+{
+  "schema": "UFA_JEV_QUALIFIED_BREAKPOINT_V1",
+  "lineage_id": "UFA-JEV-COMP",
+  "branch": "competition/final-integration-v01",
+  "breakpoint_id": "UFA-JEV-COMP-BP-0017",
+  "state": "LIVE_1P_2P_DEMO_INTEGRATION_ACCEPTED",
+  "project": "VITHIA_SPACE",
+  "created_utc": "2026-09-28T23:04:48+00:00",
+  "git_head_at_creation": "fc76ca4291111839c995b45c58d3ee3658c85986",
+  "root_kind": "FMO_V1_BREAKPOINT_ATOMS",
+  "bp_root": "d1ca2abcc8265f9459deb6dc17faa58617b3fb859a0a930f5089cfd09ca42557",
+  "breakpoint_root": "d1ca2abcc8265f9459deb6dc17faa58617b3fb859a0a930f5089cfd09ca42557",
+  "parent_root": "d5a34bcc5da38cb7a758c0af8e8e8708a6d7bfb7af9266b9f7181b54246999c4",
+  "group_roots": {
+    "live_demo_code": "b1e8205da0181a9b991d63b450e8099d6d524bd40793f6650387107cceb84888",
+    "live_demo_receipt": "87b274e8f6f422f05ddbd12697756af25c4e1f0e1c92480a86f7f622281f7e68",
+    "live_demo_tests": "052fa868080a20d7ace748fa1bd24acea4419fa4e50d163e64f3624c839ef216",
+    "live_demo_ui": "7bb098a110a405c72b2e1b6514f1570a1986ae9cf57aae8b86c1cef44414e11b"
+  },
+  "atoms": [
+    {
+      "path": "demo/__init__.py",
+      "kind": "CodeFCO",
+      "group": "live_demo_code",
+      "bytes": 35,
+      "sha256": "a6181cf8bf36fc2d494050842c66f02aee54242567728a593bdc658f0707f909",
+      "location": "public",
+      "fmo_leaf": "780c3c355f3410157c9712db23d006dad2438aa4f62388fd8c064a48569f2315"
+    },
+    {
+      "path": "demo/live_demo.py",
+      "kind": "CodeFCO",
+      "group": "live_demo_code",
+      "bytes": 22010,
+      "sha256": "c99eee40e300385a0970c52e66a714b09855118dcfdd8dd4aed70c3697ed32d4",
+      "location": "public",
+      "fmo_leaf": "12499573b3ad240fcc736947644c37b6eca3aa55ceed2fdf67f79218c225dd4f"
+    },
+    {
+      "path": "demo/static/index.html",
+      "kind": "UIFCO",
+      "group": "live_demo_ui",
+      "bytes": 2600,
+      "sha256": "609a52a01933b99b9aef63151c16fa030301f4608dc61373471e725d590b1255",
+      "location": "public",
+      "fmo_leaf": "14f5a5a3da7f03c90c7c602a64bb2bc9b9d261d5efb44dfbb761e7cacce4b57d"
+    },
+    {
+      "path": "demo/static/app.js",
+      "kind": "UIFCO",
+      "group": "live_demo_ui",
+      "bytes": 3611,
+      "sha256": "2a7c2fbe4be3d032ff2d9d4ac8ae308c9bff59a0438a5de868bc3598b244ed0c",
+      "location": "public",
+      "fmo_leaf": "f0ae76b62a21fedf1ff34bfd686dca5bfdf7e0a38b556822b9616d55000a9f9d"
+    },
+    {
+      "path": "demo/static/styles.css",
+      "kind": "UIFCO",
+      "group": "live_demo_ui",
+      "bytes": 3139,
+      "sha256": "ef12a8c5ed7e340d00b6fb955f1d75bc460a1ee04abeda5b14167d72e95bcd74",
+      "location": "public",
+      "fmo_leaf": "f420c2c7bed03bc95c65e18b4d0307fbea7b65d3f8b81f78be2a7d82e7608cf2"
+    },
+    {
+      "path": "tests/test_live_demo.py",
+      "kind": "TestFCO",
+      "group": "live_demo_tests",
+      "bytes": 4073,
+      "sha256": "033af9453d6691b0d823a1771f32bfc6d527cf7629cce5500f687b621cdbace2",
+      "location": "public",
+      "fmo_leaf": "052fa868080a20d7ace748fa1bd24acea4419fa4e50d163e64f3624c839ef216"
+    },
+    {
+      "path": "evidence/competition/live_demo/LIVE_DEMO_ACCEPTANCE_V01.json",
+      "kind": "AcceptanceReceiptFCO",
+      "group": "live_demo_receipt",
+      "bytes": 2584,
+      "sha256": "3c9ee3ecb01bc6c937653d391abcf2181c9d74aaeb9ecaad373070b60cf2e988",
+      "location": "public",
+      "fmo_leaf": "87b274e8f6f422f05ddbd12697756af25c4e1f0e1c92480a86f7f622281f7e68"
+    }
+  ],
+  "historical_mutation_performed": false,
+  "mmr_reconciliation_performed": false,
+  "stage": "LIVE_1P_2P_DEMO_INTEGRATION",
+  "successor_to": "UFA-JEV-COMP-BP-0016",
+  "predecessor_head": "fc76ca4291111839c995b45c58d3ee3658c85986",
+  "demo_branch": "competition/live-demo-1p2p-v01-20260928",
+  "demo_commit": "ae391d596f447059782c102756b28485046ee548",
+  "demo_remote_verified": true,
+  "live_url": "http://127.0.0.1:8788",
+  "live_1p_acceptance": "PASS",
+  "live_2p_acceptance": "PASS",
+  "one_player_environment": "ALE/SpaceInvaders-v5",
+  "two_player_environment": "PettingZoo space_invaders_v2",
+  "two_player_action_ontology": [
+    "NOOP",
+    "FIRE",
+    "UP",
+    "RIGHT",
+    "LEFT",
+    "DOWN"
+  ],
+  "deciders": {
+    "one_player": "ollama:qwen2.5:0.5b",
+    "player0": "ollama:qwen2.5:0.5b",
+    "player1": "ollama:longhorizon-liquid-230m:latest"
+  },
+  "regression": {
+    "full_pytest": "87_PASS_1_SKIP",
+    "dedicated_2p": "4_PASS",
+    "media_v2": "PASS",
+    "codec_public_safe": "PASS",
+    "secret_scan": "PASS",
+    "fcg_orphan": "PASS"
+  },
+  "integration_matrix": {
+    "OLLAMA": "PASS",
+    "OLLARMA": "PARTIAL",
+    "SYSTEM_ONE": "NOT_CONFIGURED",
+    "TENKI": "DEFERRED",
+    "MITOSIS_LABS": "DEFERRED",
+    "OPENJEV": "NOT_TESTED",
+    "LIQUID_AI": "PASS",
+    "VITHIA_PREPROCESSOR": "PASS"
+  },
+  "submission_state": "NOT_EXECUTED",
+  "claim_ceiling": "IDENTITY_AND_INCLUSION_ONLY; hashes do not establish correctness",
+  "signature_state": "NOT_SIGNED"
+}

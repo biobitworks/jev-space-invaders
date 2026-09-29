@@ -1,0 +1,105 @@
+{
+  "project_id": "UFA_JEV_SPACE_INVADERS_2026",
+  "competition": "UFA JEV Bake-Off: Space Invaders",
+  "deadline": "2026-09-28T23:59:00-07:00",
+  "live_final": "2026-09-30T19:00:00-07:00",
+  "venue": "590 Howard St, San Francisco",
+  "repo_visibility": "public",
+  "track": {
+    "value": null,
+    "state": "UNRESOLVED",
+    "proposed": "pilot"
+  },
+  "pitch": {
+    "value": null,
+    "state": "AWAITING_HUMAN_APPROVAL",
+    "proposed": "JEV flies Space Invaders at frame speed; fixed-seed replays show exactly where typed decisions beat an LLM."
+  },
+  "sponsors": {
+    "mitosis": null,
+    "tenki": null,
+    "how": null,
+    "state": "UNRESOLVED"
+  },
+  "jev_access": {
+    "needs_key": null,
+    "state": "UNRESOLVED"
+  },
+  "in_person": {
+    "value": null,
+    "state": "UNRESOLVED"
+  },
+  "build": {
+    "repo_url": "https://github.com/biobitworks/jev-space-invaders",
+    "demo_video_url": null,
+    "repo_state": "IMPLEMENTED_AND_PUSHED"
+  },
+  "evaluation": {
+    "jev_games_required": 5,
+    "baseline_games_required": 5,
+    "fixed_seeds": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ]
+  },
+  "claim_policy": "MEASURED_ONLY",
+  "mmr_state": "NOT_COMPUTED",
+  "signature_state": "NOT_SIGNED",
+  "lineage": {
+    "family": "VITHIA",
+    "branch_name": "VITHIA_SPACE",
+    "display_name": "Vithia-Space",
+    "role": "UFA JEV Space Invaders competition/evaluation branch",
+    "lineage_state": "IMPLEMENTED_METADATA_ONLY"
+  },
+  "typesafe_license_gate": {
+    "state": "ENFORCED_BEFORE_FIRST_JEV_EXECUTION",
+    "source_mca": "https://typesafe.ai/legal/mca",
+    "source_quickstart": "https://docs.typesafe.ai/introduction/quickstart",
+    "rules": [
+      "NO_JEV_OUTPUT_DISTILLATION_OR_IMITATION_TRAINING",
+      "MINIMIZE_PROPRIETARY_ARCHITECTURE_IN_JEV_INPUT",
+      "NO_NOVEL_PROPRIETARY_FEEDBACK_WITHOUT_EXPLICIT_REVIEW",
+      "NO_ASSUMED_TYPESAFE_BRAND_OR_LOGO_LICENSE",
+      "NO_SENSITIVE_BIOMEDICAL_OR_PATIENT_DATA",
+      "JEV_OUTPUT_IS_EVIDENCE_NOT_EXCLUSIVE_OR_IP_INDEMNIFIED"
+    ]
+  },
+  "secret_handling": {
+    "policy": "PUBLIC_REPRODUCIBILITY_WITH_PRIVATE_SECRETS",
+    "never_commit": [
+      "API keys",
+      "tokens",
+      "entry.local.json",
+      "private prompts",
+      "patent-sensitive notes"
+    ],
+    "jev_input_rule": "SEND_ONLY_MINIMUM_GAME_STATE_REQUIRED_FOR_DECISION"
+  },
+  "runtime_source_dataset": {
+    "dataset_id": "VITHIA_SPACE_RUNTIME_SOURCE_FREEZE_20260927_001",
+    "state": "FROZEN_AND_VERIFIED",
+    "fmo_root": "28c9beac8c617df2c8409b50d45ee6240408455c53db5b845261fb4005171a81",
+    "root_kind": "FRACTAL_MERKLE_OBJECT_V1_SOURCE_FREEZE",
+    "leaf_count": 14,
+    "rom_state": "NOT_PRESENT",
+    "claim_ceiling": "IDENTITY_CUSTODY_AND_RUNTIME_INPUT_FREEZE_ONLY"
+  },
+  "sponsor_source_dataset": {
+    "dataset_id": "VITHIA_SPACE_SPONSOR_SOURCE_FREEZE_20260927_001",
+    "state": "FROZEN_AND_VERIFIED",
+    "fmo_root": "336efec74f0c742db4c6c671e387f35338f4f6ebface923123be6428f9d28a14",
+    "leaf_count": 12,
+    "mitosis_integration": "NOT_EXECUTED",
+    "tenki_integration": "NOT_EXECUTED",
+    "credential_presence_at_check": {
+      "MI_API_KEY": "ABSENT",
+      "TENKI_API_KEY": "ABSENT",
+      "TENKI_AUTH_TOKEN": "ABSENT"
+    },
+    "claim_ceiling": "SOURCE_IDENTITY_AND_DECLARED_SERVICE_CAPABILITIES_ONLY; NO SPONSOR INTEGRATION OR PERFORMANCE CLAIM"
+  }
+}

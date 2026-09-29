@@ -1,0 +1,98 @@
+{
+  "atoms": [
+    {
+      "bytes": 2397,
+      "fmo_leaf": "a02d0aa6d6cfb6e95d953e6d803272a6c00f05b1daed752193b7c8ac04c1bfd1",
+      "group": "tenki",
+      "kind": "RemoteExecutionReceiptFCO",
+      "location": "public",
+      "path": "evidence/competition/tenki/TENKI_MITOSIS_RUNTIME_RECEIPT.json",
+      "sha256": "ca5860db1ba34f2c1acd2e58fa977dd07fd0aed00a7f7e85297fd009875c2f84"
+    },
+    {
+      "bytes": 136,
+      "fmo_leaf": "3c82f0acba701b6f806bcb49a24b9dbded1566dddc3b68f67560e7ed7bd41bef",
+      "group": "tenki",
+      "kind": "SessionReceiptFCO",
+      "location": "public",
+      "path": "evidence/competition/tenki/TENKI_SESSION_CREATE_RECEIPT.json",
+      "sha256": "aead1dfcb1780b59578d939cacfb050e30bf463c8647173f135c98f022c87765"
+    },
+    {
+      "bytes": 2688,
+      "fmo_leaf": "d2fd17e5d05e0b2ad89392c6c80a313a80cddae128c55173ca3f6109ede38233",
+      "group": "tenki",
+      "kind": "ImportReceiptFCO",
+      "location": "public",
+      "path": "evidence/competition/tenki/TENKI_RUNTIME_IMPORT_RECEIPT.json",
+      "sha256": "b2e68ed2e4edebbe7df1de57a5d1efb7d6abbad3f4e32bbbb1df994655bf1da7"
+    },
+    {
+      "bytes": 1054,
+      "fmo_leaf": "723689c7be5d37a25d26a74c5a63158b3886dcb54dc40b2aab9ad38209880a60",
+      "group": "failure",
+      "kind": "FailureReceiptFCO",
+      "location": "public",
+      "path": "evidence/failures/BP0008_TENKI_POST_RUN_IMPORT_PARTIAL.json",
+      "sha256": "c8bac73b08fb6f4682285050f67150336bcbf97514d5527b2e23554369c88e7f"
+    },
+    {
+      "bytes": 742,
+      "fmo_leaf": "4f4958c2069d942e6c740e8828206f6c2f4027034e9d34c33d8bdac18315539f",
+      "group": "status",
+      "kind": "SponsorStatusFCO",
+      "location": "public",
+      "path": "evidence/competition/package/SPONSOR_STATUS_V3.json",
+      "sha256": "d10853052e813d0b840ced67c4c3a097b057e207a2591fe491164c2d9907b8f7"
+    },
+    {
+      "bytes": 1151,
+      "fmo_leaf": "2996df6e14e7f1aed30d55f89cf29864eee39cf0bf9320e8529a8cc3cdbf0f00",
+      "group": "entry",
+      "kind": "EntryUpdateCandidateFCO",
+      "location": "public",
+      "path": "evidence/competition/entry/FINAL_ENTRY_UPDATE_V3.json",
+      "sha256": "1967378432dab9e131ca953c3b96be013c5fbf6372fb84cbb65cd69936eff67b"
+    },
+    {
+      "bytes": 5819,
+      "fmo_leaf": "2bb9303101c720be691469fe0031d663a24273a7707c16225ff6f72a95c02c5b",
+      "group": "status",
+      "kind": "ReadmeSnapshotFCO",
+      "location": "public",
+      "path": "evidence/competition/package/README.bp0008.snapshot.md",
+      "sha256": "dcbc0a0044085c18aa5c714c3b2ef0f666d51ea3ef60150949da832e121579b7"
+    }
+  ],
+  "bp_root": "726e1c34caaf3ce29c326907814159bd0f5e1aa72777516f1e7e6bfbd808e4ee",
+  "branch": "competition/qualified-lineage-v01",
+  "breakpoint_id": "UFA-JEV-COMP-BP-0008",
+  "breakpoint_root": "726e1c34caaf3ce29c326907814159bd0f5e1aa72777516f1e7e6bfbd808e4ee",
+  "claim_ceiling": "IDENTITY_AND_INCLUSION_ONLY; hashes do not establish correctness",
+  "created_utc": "2026-09-28T20:37:43+00:00",
+  "git_head_at_creation": "37eb15189cb2b526c52d513c0241e3c2455adf4d",
+  "group_roots": {
+    "entry": "2996df6e14e7f1aed30d55f89cf29864eee39cf0bf9320e8529a8cc3cdbf0f00",
+    "failure": "723689c7be5d37a25d26a74c5a63158b3886dcb54dc40b2aab9ad38209880a60",
+    "status": "3f857c6773f69721aedbd83d65cbf79cd7c9f1f4a85a3d9db73695bd687c1c16",
+    "tenki": "84522a8de3a4fdc4565a7b1d802a0c23bfddac18896ea11988a4df478cbc0bdb"
+  },
+  "historical_mutation_performed": false,
+  "lineage_id": "UFA-JEV-COMP",
+  "mitosis_consumed_by_tenki": "EXECUTED_SUPPORTED",
+  "mitosis_load_bearing_ablation": "NOT_EXECUTED",
+  "parent_occurrence": {
+    "breakpoint_id": "UFA-JEV-COMP-BP-0007",
+    "commit": "37eb15189cb2b526c52d513c0241e3c2455adf4d",
+    "mmr_root_after": "5d3da0259231307f9c1d1e309055c4e93c93e13060e927393b8332e0a807256b"
+  },
+  "parent_root": "5d3da0259231307f9c1d1e309055c4e93c93e13060e927393b8332e0a807256b",
+  "project": "VITHIA_SPACE",
+  "root_kind": "FMO_V1_BREAKPOINT_ATOMS",
+  "schema": "UFA_JEV_QUALIFIED_BREAKPOINT_V1",
+  "signature_state": "NOT_SIGNED",
+  "state": "TENKI_SANDBOX_MITOSIS_FED_RUN_EXECUTED",
+  "tenki_code_review": "EXECUTED_SUPPORTED",
+  "tenki_sandbox": "EXECUTED_SUPPORTED",
+  "tenki_teardown": "HELD"
+}

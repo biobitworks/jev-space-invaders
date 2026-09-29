@@ -1,0 +1,13 @@
+{
+  "codec": "h264",
+  "created_utc": "2026-09-28T21:15:21Z",
+  "demo_mode": "DETERMINISTIC_REPLAY_RENDER",
+  "derived_from_verified_frames": true,
+  "fps": 60,
+  "resolution": "160x210",
+  "schema": "CANONICAL_VIDEO_FCO_V1",
+  "source_playthrough_mmr_root": "e55a47a7f16064477c4f101a38a849391c2fbc9f6557c5244daf0406b36dbd74",
+  "video_bytes": 109511,
+  "video_file": "evidence/competition/final_execution/frames/canonical.mp4",
+  "video_sha256": "d9f977296d42e414a4c1e1c9ccd2cc3d69a5f093fef10be4821781265c458a06"
+}

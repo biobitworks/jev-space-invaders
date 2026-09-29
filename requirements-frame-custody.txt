@@ -1,0 +1,7 @@
+# Frame-custody pipeline dependencies (src/frame_custody.py, src/frame_custody_final.py,
+# scripts/record_governed_playthrough.py, scripts/verify_playthrough_custody*.py,
+# scripts/render_playthrough_video*.py and their _final counterparts). Not required for
+# the core 1P/JEV/baseline harness - kept separate from requirements.txt, a protected
+# breakpoint atom.
+Pillow==12.3.0
+cryptography==50.0.1

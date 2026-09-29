@@ -1,0 +1,14 @@
+{
+  "fco_schema": "FrameOccurrenceFCO_V1",
+  "frame_index": 13,
+  "content_sha256": "0e58e5425d2e7e44b905d0fba7f74596b801c81392f50224f0f93b070f6348e9",
+  "png_artifact_sha256": "7fcd0fe5ebc81b2f2b98d82c2cdb1e87c30911e96e37b61523a4cd6dff46ed0d",
+  "png_artifact_bytes": 978,
+  "occurrence_id": "94f8cf25928847e1458a39c08548dbbedb3685ecaa495fae0ae719cea07bf91f",
+  "frame_root": "148451b1f932dcc0fa3e1300b49f3c9d203bef9806fe27cc80001014b304f961",
+  "public_key": "-----BEGIN PUBLIC KEY-----\nMCowBQYDK2VwAyEA4HUCjR6BIjxZZaf4vOQRAKEpgasywvnWkUcrjU6BmmM=\n-----END PUBLIC KEY-----\n",
+  "public_key_fingerprint": "c5e12498288492521581ae8c95839c2e6d09469edc5650cc0e9e54dbde03c6c8",
+  "key_id": "frame-custody-ed25519-v1",
+  "signature": "Zbt8mbhWsiDUohD2N4ikhD53bwAJjrCbV+dyr7IEd7VgTEzx5XYwHUzUxxdgGbv+1JlDvFDlTGl0blYPc4jhAQ==",
+  "signature_state": "SIGNED"
+}

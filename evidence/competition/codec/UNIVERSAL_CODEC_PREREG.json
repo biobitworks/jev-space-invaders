@@ -1,0 +1,69 @@
+{
+  "schema": "UNIVERSAL_CODEC_PREREG_V1",
+  "created_utc": "2026-09-28T21:29:00Z",
+  "project": "VITA01_END_TO_END_SOCIO_TECHNICAL_SYSTEM_001",
+  "lineage_id": "UFA-JEV-COMP",
+  "private_implementation_root": "/Volumes/magicBLACKbox/vita01-private-codec",
+  "frozen_before_result_review": true,
+  "modes": [
+    "EXACT_CUSTODY",
+    "ROBUST_ATTRIBUTION"
+  ],
+  "formats": [
+    "raw_rgb",
+    "png",
+    "webp_lossless",
+    "tiff",
+    "jpeg",
+    "webp_lossy",
+    "h264_mp4",
+    "vp9_webm",
+    "ffv1"
+  ],
+  "transforms": {
+    "raw_rgb": [
+      "round_trip",
+      "copy",
+      "lossless_reencode",
+      "lossy_reencode",
+      "resize",
+      "crop",
+      "color_conversion",
+      "screenshot"
+    ],
+    "image": [
+      "round_trip",
+      "copy",
+      "lossless_reencode",
+      "lossy_reencode",
+      "resize",
+      "crop",
+      "color_conversion",
+      "screenshot"
+    ],
+    "video": [
+      "copy",
+      "remux",
+      "lossless_reencode",
+      "lossy_reencode",
+      "resize",
+      "crop",
+      "color_conversion",
+      "frame_extraction",
+      "video_to_frames",
+      "frames_to_video",
+      "frame_drop",
+      "frame_insertion",
+      "frame_reorder",
+      "screenshot"
+    ]
+  },
+  "claim_rules": [
+    "Do not claim transform support beyond observed PASS rows.",
+    "Do not expose private method.",
+    "SIGNED requires independent verification result.",
+    "Hashes identify/custody; they do not establish truth.",
+    "Exact custody and robust attribution are separate claims."
+  ],
+  "signature_state": "NOT_SIGNED"
+}

@@ -1,0 +1,114 @@
+{
+  "schema": "UFA_JEV_QUALIFIED_BREAKPOINT_V1",
+  "lineage_id": "UFA-JEV-COMP",
+  "branch": "competition/final-integration-v01",
+  "breakpoint_id": "UFA-JEV-COMP-BP-0016",
+  "state": "PR2_REVIEW_FINDINGS_ADDRESSED",
+  "project": "VITHIA_SPACE",
+  "created_utc": "2026-09-28T22:05:35+00:00",
+  "git_head_at_creation": "cbb43b61158209d2591605ff28b473cfcca8e239",
+  "root_kind": "FMO_V1_BREAKPOINT_ATOMS",
+  "bp_root": "50e26a0eba32b06a6648a6057de215fe117df442ca7109eba513ef2711b11485",
+  "breakpoint_root": "50e26a0eba32b06a6648a6057de215fe117df442ca7109eba513ef2711b11485",
+  "parent_root": "ee7ac4dcb0e9dd95131b63bb1e6297ff6d112d386ae78dc6c1274494fc287148",
+  "group_roots": {
+    "redteam_fix": "d6fed98f5dd63b11402058038fdfb9bd37986399832d81f5b231067be132a89e"
+  },
+  "atoms": [
+    {
+      "path": "scripts/verify_playthrough_custody_v2.py",
+      "kind": "CodeFCO",
+      "group": "redteam_fix",
+      "bytes": 4554,
+      "sha256": "45a3e9acc7fd769bced6f873625e0bf42037e06f00e4387c29b7879a1190f903",
+      "location": "public",
+      "fmo_leaf": "90baf7c220f401732d7a7cfe956525d557a4e76813dfe2dcc7591a8df3de4024"
+    },
+    {
+      "path": "scripts/verify_final_playthrough_custody_v2.py",
+      "kind": "CodeFCO",
+      "group": "redteam_fix",
+      "bytes": 4223,
+      "sha256": "050cc489d50e4cc2cef30549e6aa712559c75ac953dcd7a82e519c97f8760048",
+      "location": "public",
+      "fmo_leaf": "b64c971351040f0a73e95a0c551b6c26ee6ee5e8d4af9e052e095a6cc392bfb6"
+    },
+    {
+      "path": "scripts/render_playthrough_video_v2.py",
+      "kind": "CodeFCO",
+      "group": "redteam_fix",
+      "bytes": 3537,
+      "sha256": "2cc96d6726cd6a479489c0fd4c02385e7b636f97a547bd36e82a12bbfb9d275f",
+      "location": "public",
+      "fmo_leaf": "c272c887f5e9f492e672bc3542c8c9463e90850d52dfa2aa477dc8e9f509958f"
+    },
+    {
+      "path": "scripts/render_final_playthrough_video_v2.py",
+      "kind": "CodeFCO",
+      "group": "redteam_fix",
+      "bytes": 3759,
+      "sha256": "3275fcad8e04d9da844c2ce8eeb2092539af66bec0338a15f160d0a00e7c7630",
+      "location": "public",
+      "fmo_leaf": "6e502585cf1f37aeb0888fdcad6e145fb2db314ccbe7d1df45049a625b4bf537"
+    },
+    {
+      "path": "scripts/verify_competition_lineage_v2.py",
+      "kind": "CodeFCO",
+      "group": "redteam_fix",
+      "bytes": 3899,
+      "sha256": "1255bd775d1e2a22050751ce6842e49a11d4659d4d33391c1643503e38a514fd",
+      "location": "public",
+      "fmo_leaf": "f35d640ff57bf71f1078f641be11f3fa49ec0dadbf3fcd63066e9f69b919a459"
+    },
+    {
+      "path": "requirements-frame-custody.txt",
+      "kind": "DepFCO",
+      "group": "redteam_fix",
+      "bytes": 400,
+      "sha256": "0ec27d253ddb5ea70faff6e28250f09966e4f0e40294f884fbbe8ac0b91ae550",
+      "location": "public",
+      "fmo_leaf": "43f4b67caa8e366d85941361c44d7a8a4d4c828551aca37e6f39447fd75b935f"
+    },
+    {
+      "path": "evidence/competition/frames/KEY_DISCREPANCY_NOTE.json",
+      "kind": "FindingFCO",
+      "group": "redteam_fix",
+      "bytes": 904,
+      "sha256": "c99679f9ed910338e3deb360e2086fdc8ce8a7178b0345cb3e215696e286fb62",
+      "location": "public",
+      "fmo_leaf": "90ea1cdbb54fea5bb3b5a1281ca2ae2153e18d80f586c7429e42a30da7dc3b60"
+    },
+    {
+      "path": "evidence/competition/final_execution/frames/PLAYTHROUGH_MMR_VERIFICATION_RECEIPT_V2.json",
+      "kind": "PlaythroughFCO",
+      "group": "redteam_fix",
+      "bytes": 357,
+      "sha256": "7ad3b748713236b118f737309c02ee4dce3bf09d0513fa16bed882e9e58858bb",
+      "location": "public",
+      "fmo_leaf": "c3f38e68736dae4d10aee28ef945b601665178279085a97ffb5781dbc7a36361"
+    },
+    {
+      "path": "evidence/competition/frames/smoke/PLAYTHROUGH_MMR_VERIFICATION_RECEIPT_V2.json",
+      "kind": "PlaythroughFCO",
+      "group": "redteam_fix",
+      "bytes": 356,
+      "sha256": "ace6ec43f32ea03790aec23d3269305058dcc479152d4101163a6238725aef3a",
+      "location": "public",
+      "fmo_leaf": "0e81de8be4e62e38036ea125132ed7c5feec573dc215e9895ddafaeda4ef8aea"
+    },
+    {
+      "path": "README.md",
+      "kind": "DocFCO",
+      "group": "redteam_fix",
+      "bytes": 6023,
+      "sha256": "45ffe0c406668330bb611263dda12aa5299cf6695610382151b6a3849a2f14a1",
+      "location": "public",
+      "fmo_leaf": "df4e83413f560c3a5f27e022133aa9bcab44a9f9cbc971969f9e9979f823c046"
+    }
+  ],
+  "historical_mutation_performed": false,
+  "mmr_reconciliation_performed": false,
+  "note": "Fixes real PR review findings from chatgpt-codex-connector[bot] and tenki-reviewer[bot]: missing Pillow/cryptography deps; signature verification did not check public-key fingerprint against recorded values; render scripts used an unbounded ffmpeg glob and did not reverify before encoding; verify_competition_lineage.py only checked field presence not equality against the ledger. qualified_breakpoint.py identity-field guard was fixed independently and concurrently in BP-0015 (p0-verifier-execution-infrastructure-hardening); this breakpoint does not duplicate that atom. Original verify/render scripts are protected atoms of BP-0011/0012 and were not edited in place; v2 files supersede them, writing to distinctly-named receipt files. README Tenki overclaim corrected to match the actual submission candidate. A key-management gap (two playthroughs, two different locally-generated keys, no single published trust anchor) is documented, not silently fixed. Independently reverified: final canonical.mp4 sha256 d9f977296d42e414a4c1e1c9ccd2cc3d69a5f093fef10be4821781265c458a06 matches exactly. Originally allocated as BP-0015 but renumbered to BP-0016 after a concurrent-writer collision on the ledger (see merge commit cbb43b6).",
+  "claim_ceiling": "IDENTITY_AND_INCLUSION_ONLY; hashes do not establish correctness",
+  "signature_state": "NOT_SIGNED"
+}

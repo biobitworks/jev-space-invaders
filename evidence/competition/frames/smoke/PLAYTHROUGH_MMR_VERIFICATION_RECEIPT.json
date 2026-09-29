@@ -1,0 +1,8 @@
+{
+  "schema": "PLAYTHROUGH_MMR_VERIFICATION_RECEIPT_V1",
+  "frames_checked": 24,
+  "errors": [],
+  "recomputed_mmr_root": "3f882e795ef6f0a46da7fd3024ded2c9be6fbdeaf06d7e5b50c0199398c6c796",
+  "recorded_mmr_root": "3f882e795ef6f0a46da7fd3024ded2c9be6fbdeaf06d7e5b50c0199398c6c796",
+  "PLAYTHROUGH_VERIFY": "PASS"
+}
