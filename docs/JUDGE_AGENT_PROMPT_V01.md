@@ -13,7 +13,7 @@ Do not modify or reinterpret historical competition evidence. Everything you pro
 
 Prerequisites (install only what is missing; do not download any model):
 - git, and Python 3.10+ available as `python3`
-- Python package `cryptography`
+- Python packages `cryptography` and `pillow` (neither is in `live_demo/requirements.txt`)
 - Gum (https://github.com/charmbracelet/gum) only if you run the interactive UI in step 8
 - Optional: Ollama with already-installed local models
 
@@ -24,7 +24,7 @@ GIT_LFS_SKIP_SMUDGE=1 git clone --branch postsubmission/judge-reproducibility-v0
 cd jev-space-invaders
 python3 -m venv .venv
 . .venv/bin/activate
-python3 -m pip install -r live_demo/requirements.txt cryptography
+python3 -m pip install -r live_demo/requirements.txt cryptography pillow
 ```
 
 Your task:

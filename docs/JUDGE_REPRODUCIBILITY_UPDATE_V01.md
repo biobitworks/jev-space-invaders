@@ -33,7 +33,7 @@ Hashes and Merkle/MMR commitments establish byte identity, ordered custody, and 
 
 - `git` (Git LFS is **not** required; set `GIT_LFS_SKIP_SMUDGE=1` so a clone never downloads large historical data files)
 - Python 3.10+ available as `python3`
-- Python package `cryptography` (checkpoint signing)
+- Python packages `cryptography` (checkpoint signing) and `pillow` (frame-custody verifier); `live_demo/requirements.txt` does not include them
 - [Gum](https://github.com/charmbracelet/gum) — only for the interactive Doctor3 UI in step A3 (`brew install gum` on macOS; see the Gum page for Linux)
 - Optional: [Ollama](https://ollama.com) with at least one **already-installed** local text model; nothing is downloaded for you
 
@@ -46,7 +46,7 @@ GIT_LFS_SKIP_SMUDGE=1 git clone --branch postsubmission/judge-reproducibility-v0
 cd jev-space-invaders
 python3 -m venv .venv
 . .venv/bin/activate
-python3 -m pip install -r live_demo/requirements.txt cryptography
+python3 -m pip install -r live_demo/requirements.txt cryptography pillow
 ```
 
 ## Path A — no key, no write access
