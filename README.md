@@ -2,6 +2,15 @@
 
 Public, reproducible UFA arena branch of the Vithia model family. Competition-facing code and measured results are public; credentials and unrelated proprietary Vithia architecture are not.
 
+## Judge reproducibility update
+
+The accepted UFA submission remains frozen. For the post-submission reproducibility successor, start here:
+
+- [Judge reproducibility update](docs/JUDGE_REPRODUCIBILITY_UPDATE_V01.md)
+- [Copy/paste judge agent prompt](docs/JUDGE_AGENT_PROMPT_V01.md)
+
+These documents provide a discovery-driven local verification path, preserve unavailable/negative states without claim upgrades, and keep hosted TypeSafe JEV as an optional judge-provided-key path rather than silently substituting another backend.
+
 ## Demo video
 
 **Public demo video:** https://youtu.be/4BuR_NnJAsM
