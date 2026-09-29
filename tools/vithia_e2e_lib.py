@@ -305,8 +305,18 @@ def verify_lineage(upto_bp_id: str | None = None) -> list[dict]:
 
 
 # ---------------------------------------------------------------- Mitosis (real round-trips only)
-# Pinned: an unpinned @latest would run moving remote code in a process that holds the API key.
+# The code that receives the API key is locked: exact version + committed package-lock.json (integrity hashes),
+# installed with `npm ci --ignore-scripts` and run from node_modules/.bin. No live `npx` download at run time.
 MI_SDK_SPEC = "@mitosislabs/sdk@0.27.2"
+MI_CLI_DIR = ROOT / "tools/mitosis_cli"
+
+
+def mitosis_binary() -> Path:
+    binp = MI_CLI_DIR / "node_modules/.bin/mi"
+    if not binp.exists():
+        subprocess.run(["npm", "ci", "--ignore-scripts", "--no-audit", "--no-fund"], cwd=MI_CLI_DIR, check=True,
+                       capture_output=True, text=True)
+    return binp
 
 
 class Mitosis:
@@ -319,7 +329,7 @@ class Mitosis:
         self.available = bool(env.get("MI_API_KEY"))
 
     def _mi(self, *args: str, timeout: int = 120):
-        cmd = ["npx", "-y", "-p", MI_SDK_SPEC, "mi", *args]
+        cmd = [str(mitosis_binary()), *args]
         print("$ MITOSIS_CLI", args[0], args[1] if len(args) > 1 else "", "<redacted-auth>", file=sys.stderr)
         p = subprocess.run(cmd, env=self.child_env, capture_output=True, text=True, timeout=timeout)
         try:

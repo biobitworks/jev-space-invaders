@@ -93,3 +93,12 @@ def test_breakpoint_and_ledger_writes_are_secret_scanned(lineage):
 def test_mitosis_sdk_is_pinned():
     assert L.MI_SDK_SPEC.startswith("@mitosislabs/sdk@") and not L.MI_SDK_SPEC.endswith("@latest")
     import re; assert re.search(r"@\d+\.\d+\.\d+$", L.MI_SDK_SPEC)
+
+
+def test_mitosis_cli_is_lockfile_pinned():
+    import json as _j
+    pkg = _j.loads((L.MI_CLI_DIR / "package.json").read_text())
+    lock = _j.loads((L.MI_CLI_DIR / "package-lock.json").read_text())
+    assert pkg["dependencies"]["@mitosislabs/sdk"] == "0.27.2"            # exact, no range
+    entry = lock["packages"]["node_modules/@mitosislabs/sdk"]
+    assert entry["version"] == "0.27.2" and entry["integrity"].startswith("sha512-")

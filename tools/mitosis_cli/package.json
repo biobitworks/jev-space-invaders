@@ -1,0 +1,6 @@
+{
+  "name": "vithia-mitosis-cli-pin",
+  "private": true,
+  "description": "Exact-version, lockfile-pinned Mitosis CLI used by tools/vithia_e2e_lib.py",
+  "dependencies": { "@mitosislabs/sdk": "0.27.2" }
+}
