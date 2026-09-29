@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 from __future__ import annotations
 
+import hashlib
 import json
 import re
 import sys
@@ -20,13 +21,39 @@ EXPECTED_MMR = "e55a47a7f16064477c4f101a38a849391c2fbc9f6557c5244daf0406b36dbd74
 EXPECTED_SUBMITTED_COMMIT = "4c943a92e84d0fb2cd3d01e4fdf15a10991eda71"
 
 SECRET_PATTERNS = [
-    re.compile(r"\\bmi_[A-Za-z0-9_-]{12,}"),
-    re.compile(r"\\btk_[A-Za-z0-9_-]{12,}"),
-    re.compile(r"Bearer\\s+[A-Za-z0-9._~+/-]{12,}", re.I),
+    re.compile(r"\bmi_[A-Za-z0-9_-]{12,}"),
+    re.compile(r"\btk_[A-Za-z0-9_-]{12,}"),
+    re.compile(r"Bearer\s+[A-Za-z0-9._~+/-]{12,}", re.I),
+    re.compile(r"-----BEGIN (?:[A-Z]+ )?PRIVATE KEY-----"),
 ]
+
+# Guard against the patterns silently becoming no-ops again.
+for _sample in ("m" + "i_abcdefghij12", "t" + "k_abcdefghij12", "Bear" + "er eyJhbGciOiJIUzI1NiJ9abc", "-----BEGIN " + "PRIVATE KEY-----"):
+    assert any(_p.search(_sample) for _p in SECRET_PATTERNS), f"secret pattern self-test failed: {_sample}"
+
+EXTRA_REVIEW_TARGETS = [
+    ROOT / "scripts/verify_final_playthrough_custody_v2.py",
+    ROOT / "scripts/verify_competition_lineage.py",
+]
+CORRECTION_FCO = ROOT / "evidence/post_submission/e2e/TENKI_CLAIM_CORRECTION_FCO.json"
 
 def load(path: Path):
     return json.loads(path.read_text(encoding="utf-8"))
+
+def sha256_file(path: Path) -> str:
+    return hashlib.sha256(path.read_bytes()).hexdigest()
+
+def superseded_by_correction(target: Path) -> bool:
+    """A correction only counts if it cites the exact bytes of the overstated file and does not itself claim PASS."""
+    if not CORRECTION_FCO.exists():
+        return False
+    c = load(CORRECTION_FCO)
+    return (
+        c.get("schema") == "TENKI_CLAIM_CORRECTION_FCO_V1"
+        and c.get("supersedes_sha256") == sha256_file(target)
+        and c.get("corrected_artifact_reconstruction") == "NOT_ESTABLISHED"
+        and c.get("corrected_environment_replay") in ("NOT_ESTABLISHED", "NOT_IMPLEMENTED")
+    )
 
 def main() -> int:
     findings = []
@@ -38,8 +65,12 @@ def main() -> int:
             continue
         docs[name] = load(path)
 
+    for extra in EXTRA_REVIEW_TARGETS:
+        if not extra.exists():
+            blockers.append(f"MISSING_FILE:{extra.relative_to(ROOT)}")
+
     # Secret boundary: scan only public review targets.
-    for name, path in FILES.items():
+    for path in list(FILES.values()) + EXTRA_REVIEW_TARGETS:
         if not path.exists():
             continue
         text = path.read_text(encoding="utf-8", errors="replace")
@@ -94,7 +125,11 @@ def main() -> int:
         "playthrough_verify": tp.get("playthrough_verify"),
     })
     if tenki_artifact_claimed and not tenki_artifact_supported:
-        blockers.append("CLAIM_OVERREACH:TENKI_ARTIFACT_RECONSTRUCTION_PASS_WITHOUT_CLEAN_ROOM_EXECUTION")
+        if superseded_by_correction(FILES["tenki_post"]):
+            findings.append({"check": "TENKI_POST_OVERREACH", "status": "SUPERSEDED_BY_CORRECTION_FCO",
+                             "correction": str(CORRECTION_FCO.relative_to(ROOT))})
+        else:
+            blockers.append("CLAIM_OVERREACH:TENKI_ARTIFACT_RECONSTRUCTION_PASS_WITHOUT_CLEAN_ROOM_EXECUTION")
 
     env_replay_supported = (
         tp.get("environment_replay") == "PASS"
@@ -138,8 +173,10 @@ def main() -> int:
         tenki_artifact_supported
         and current_mitosis.get("MITOSIS_WRITE") == "PASS"
         and current_mitosis.get("MITOSIS_QUERY") == "PASS"
+        and current_mitosis.get("MITOSIS_EXACT_ID_MATCH") == "YES"
+        and sk.get("load_bearing_consumption", {}).get("consumed_in_decision") is True
     )
-    if sk.get("PORTABLE_AGENT_MEMORY_LOAD_BEARING") == "PASS" and not portable_supported:
+    if sk.get("PORTABLE_AGENT_MEMORY_LOAD_BEARING") in ("PASS", "PASS_BOUNDED") and not portable_supported:
         blockers.append("CLAIM_OVERREACH:PORTABLE_AGENT_MEMORY_LOAD_BEARING")
 
     report = {
