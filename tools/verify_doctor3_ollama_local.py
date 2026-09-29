@@ -43,6 +43,16 @@ def sh(*a, env=None, check=False):
     return p
 
 
+def host_name() -> str:
+    """macOS ComputerName when available; otherwise the portable hostname (Linux judges have no scutil)."""
+    import shutil
+    if shutil.which("scutil"):
+        p = subprocess.run(["scutil", "--get", "ComputerName"], capture_output=True, text=True)
+        if p.returncode == 0 and p.stdout.strip():
+            return p.stdout.strip()
+    return socket.gethostname()
+
+
 def http_json(url, body=None, timeout=180):
     req = urllib.request.Request(url, data=json.dumps(body).encode() if body else None, headers={"Content-Type": "application/json"})
     return json.loads(urllib.request.urlopen(req, timeout=timeout).read())
@@ -257,7 +267,7 @@ def main() -> int:
         if a.expected_branch == EXPECTED_BRANCH:
             a.expected_branch = sh("git", "rev-parse", "--abbrev-ref", "HEAD").stdout.strip()
     R: dict = {}
-    host = sh("scutil", "--get", "ComputerName").stdout.strip() or socket.gethostname()
+    host = host_name()
     R["HOST"] = host
     # --- repo
     sh("git", "fetch", "origin")
