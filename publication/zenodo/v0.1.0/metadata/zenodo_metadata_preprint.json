@@ -1,0 +1,71 @@
+{
+  "schema": "VITHIA_ZENODO_METADATA_DRAFT_V1",
+  "state": "DRAFT_BLOCKED_OPERATOR_LICENSE_AND_FINAL_DATE",
+  "record_role": "PREPRINT",
+  "metadata": {
+    "upload_type": "publication",
+    "publication_type": "preprint",
+    "title": "Vithia 0-Vita-1: A Deterministic Context Protocol for Verifiable Scientific State Transitions",
+    "creators": [
+      {
+        "name": "Lee, Byron P.",
+        "affiliation": "Biobitworks",
+        "orcid": "0000-0002-4925-4795"
+      }
+    ],
+    "description": "0-Vita-1 is a Vithia protocol for separating deterministic context compilation from downstream decision-making while preserving typed provenance, immutable predecessor states, explicit uncertainty, and append-only custody. The v0.1.0 evidence package reports simulated experiments E0-E3 and a frozen E4A Space Invaders snapshot input set. The package distinguishes identity from meaning, custody from correctness, prediction from observation, and declared FCG relationships from causality. Negative, null, partial, deferred, and not-computed states are preserved.",
+    "access_right": "open",
+    "keywords": [
+      "Vithia",
+      "0-Vita-1",
+      "Fractal Custody Objects",
+      "Fractal Custody Graphs",
+      "FCO",
+      "FCG",
+      "verifiable AI",
+      "scientific agents",
+      "long-horizon agents",
+      "provenance",
+      "reproducibility",
+      "Merkle tree",
+      "Merkle Mountain Range",
+      "MSM-AIS",
+      "context compilation"
+    ],
+    "related_identifiers": [
+      {
+        "identifier": "10.5281/zenodo.21210575",
+        "relation": "references",
+        "resource_type": "publication-preprint"
+      },
+      {
+        "identifier": "10.5281/zenodo.21382831",
+        "relation": "references",
+        "resource_type": "publication-preprint"
+      },
+      {
+        "identifier": "10.5281/zenodo.21829929",
+        "relation": "references",
+        "resource_type": "publication-preprint"
+      },
+      {
+        "identifier": "https://github.com/biobitworks/jev-space-invaders",
+        "relation": "isSupplementedBy",
+        "resource_type": "software"
+      }
+    ],
+    "references": [
+      "Bellemare et al. The Arcade Learning Environment. JAIR 47 (2013). doi:10.1613/JAIR.3912.",
+      "Antunes. CellPyLib. JOSS 6(67) (2021). doi:10.21105/joss.03608.",
+      "Ignatiev et al. PySAT. SAT 2018. doi:10.1007/978-3-319-94144-8_26."
+    ],
+    "version": "0.1.0",
+    "language": "eng"
+  },
+  "unresolved": {
+    "publication_date": "SET_TO_ACTUAL_ZENODO_PUBLICATION_DATE",
+    "license": "OPERATOR_DECISION_REQUIRED",
+    "community": "CONFIRM biobitworks IF VALID_ZENODO_COMMUNITY",
+    "prereserve_doi": "OPERATOR_DECISION_REQUIRED"
+  }
+}
