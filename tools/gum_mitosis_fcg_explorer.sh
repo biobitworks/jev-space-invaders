@@ -10,6 +10,10 @@ command -v gum >/dev/null 2>&1 || {
   exit 2
 }
 
+# Resolve/install the exact Mitosis CLI before any credential is requested.
+VITHIA_MI_BIN="$(bash "$ROOT/tools/bootstrap_mitosis_cli.sh")"
+export VITHIA_MI_BIN
+
 if [[ -z "${MI_API_KEY:-}" && -z "${MITOSIS_API_KEY:-}" ]]; then
   MI_API_KEY="$(gum input --password --prompt "Mitosis API key: " --placeholder "mi_…")"
   export MI_API_KEY
