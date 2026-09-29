@@ -31,3 +31,9 @@ def test_adapter_wiring_check_passes_on_real_engine():
 
 def test_supported_tier_ordering():
     assert V.TIER["WITHHOLD_ALL_TENKI_CLAIMS"] < V.TIER["PUBLISH_CLAIM_ARTIFACT_VERIFIED_ONLY"] < V.TIER["PUBLISH_CLAIM_REPLAY_COMPLETE"]
+
+
+def test_host_name_falls_back_when_scutil_is_absent(monkeypatch):
+    import shutil, socket
+    monkeypatch.setattr(shutil, "which", lambda name: None)
+    assert V.host_name() == socket.gethostname()

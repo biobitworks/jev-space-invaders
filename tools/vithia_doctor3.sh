@@ -7,6 +7,7 @@
 #   bash tools/vithia_doctor3.sh --seed-fco evidence/fcg_seeds/<seed>.json        # interactive
 #   bash tools/vithia_doctor3.sh --seed-root sha256:<hex> --resolver-dir evidence/fcg_seeds
 #   bash tools/vithia_doctor3.sh --seed-fco S --simulate --non-interactive        # dry run: simulated providers, no git writes
+#   bash tools/vithia_doctor3.sh --seed-fco S --local-only                        # real providers, NO git writes (read-only clones / independent judges)
 #   bash tools/vithia_doctor3.sh --remote <host> [args]                           # run on another Mac over SSH
 #   bash tools/vithia_doctor3.sh --watch DIR --parent-root <hex> --session-id ID  # append successors as files appear
 #
@@ -23,11 +24,11 @@ SECRET_VARS=(MI_API_KEY TENKI_API_KEY TYPESAFE_API_KEY ANTHROPIC_API_KEY OPENAI_
 # ---------- args ----------
 ORIG_ARGS=("$@")
 PRINTFWD=0
-SEED_FCO=""; SEED_ROOT=""; RESOLVERS=(); SIM=0; NONINT=0; ENV_FILE=""; IDMODE=""; IDPUB=""; DECIDER=""; DECIDERS=""; PROFILE=""
+SEED_FCO=""; SEED_ROOT=""; RESOLVERS=(); SIM=0; LOCALONLY=0; NONINT=0; ENV_FILE=""; IDMODE=""; IDPUB=""; DECIDER=""; DECIDERS=""; PROFILE=""
 REMOTE=""; WATCH=""; PARENT_ROOT=""; SESSION_ID=""; REVIEW_PR=""; COMMIT_HOOK_SID=""
 while (($#)); do case "$1" in
   --seed-fco) SEED_FCO="$2"; shift 2;;  --seed-root) SEED_ROOT="$2"; shift 2;;  --resolver-dir) RESOLVERS+=("$2"); shift 2;;
-  --simulate) SIM=1; shift;;  --non-interactive) NONINT=1; shift;;  --env-file) ENV_FILE="$2"; shift 2;;
+  --simulate) SIM=1; shift;;  --local-only) LOCALONLY=1; shift;;  --non-interactive) NONINT=1; shift;;  --env-file) ENV_FILE="$2"; shift 2;;
   --identity-mode) IDMODE="$2"; shift 2;;  --identity-pub-file) IDPUB="$2"; shift 2;;  --decider) DECIDER="$2"; shift 2;;  --deciders) DECIDERS="$2"; shift 2;;  --prompt-profile) PROFILE="$2"; shift 2;;
   --remote) REMOTE="$2"; shift 2;;  --watch) WATCH="$2"; shift 2;;  --parent-root) PARENT_ROOT="$2"; shift 2;;
   --session-id) SESSION_ID="$2"; shift 2;;  --review-pr) REVIEW_PR="$2"; shift 2;;  --_commit-hook) COMMIT_HOOK_SID="$2"; shift 2;;  --_print-forward-args) PRINTFWD=1; shift;;
@@ -192,7 +193,7 @@ hdr "5. Vithia → Mitosis → checkpoint → Tenki → writeback → verified c
 SID="${SESSION_ID:-FCG-$(date -u +%Y%m%dT%H%M%SZ)-$(printf '%04x' $RANDOM)}"
 [[ -e "evidence/fcg_sessions/$SID" ]] && die "session directory evidence/fcg_sessions/$SID already exists; sessions are append-only and never reused"
 PROV=(--mitosis real --tenki real); ((SIM)) && PROV=(--mitosis sim --tenki sim)
-HOOK=(); ((SIM)) || HOOK=(--commit-hook "env VITHIA_BRANCH=$BRANCH bash $SELF --_commit-hook $SID")
+HOOK=(); ((SIM)) || ((LOCALONLY)) || HOOK=(--commit-hook "env VITHIA_BRANCH=$BRANCH bash $SELF --_commit-hook $SID")
 export PYTHONUNBUFFERED=1
 "$PY" tools/vithia_fcg.py run "${SEED_ARGS[@]}" --source-dir "$SRC" --session-id "$SID" --identity-mode "$IDMODE" ${IDPUB:+--identity-pub-file "$IDPUB"} \
   --decider "$DECIDER" ${DECIDERS:+--deciders "$DECIDERS"} ${PROFILE:+--prompt-profile "$PROFILE"} "${PROV[@]}" ${HOOK[@]+"${HOOK[@]}"} ${REVIEW_PR:+--review-pr "$REVIEW_PR"} ${POST[@]+"${POST[@]}"} ${ENV_FILE:+--env-file "$ENV_FILE"} 2> >(while IFS= read -r l; do echo "$(redact "$l")" >>"$LOG"; done) | tee -a "$LOG"
@@ -203,7 +204,8 @@ RC=${PIPESTATUS[0]}
 # ---------- 7. seal: scan, commit, push, remote parity ----------
 hdr "6. Seal"
 run "secret scan (repo)" "$PY" scripts/secret_scan.py
-if ((SIM)); then warn "simulate mode: session left uncommitted in evidence/fcg_sessions/$SID (simulated providers; not evidence of real provider behaviour)"
+if ((LOCALONLY)); then ok "local-only: nothing was committed or pushed (no write access to origin is needed); the session is left untracked in evidence/fcg_sessions/$SID. Tenki execution needs a pushed commit, so it is NOT_EXECUTED in this mode"
+elif ((SIM)); then warn "simulate mode: session left uncommitted in evidence/fcg_sessions/$SID (simulated providers; not evidence of real provider behaviour)"
 else
   git add -- "evidence/fcg_sessions/$SID"; git diff --cached --quiet || run "commit session" git commit -q -m "evidence: seal fcg session $SID"
   run "push origin $BRANCH" git push -q origin "$BRANCH"; verify_remote
@@ -211,7 +213,7 @@ fi
 
 # ---------- 8. summary ----------
 R="evidence/fcg_sessions/$SID/VITHIA_DOCTOR_SESSION_RECEIPT.json"
-"$PY" - "$R" "$(git rev-parse --abbrev-ref HEAD)@$(git rev-parse --short HEAD)" "$(((SIM)) && echo NOT_PUSHED_SIMULATED || echo PASS)" <<'PY' | gum style --border double --padding "1 2" --border-foreground 42
+"$PY" - "$R" "$(git rev-parse --abbrev-ref HEAD)@$(git rev-parse --short HEAD)" "$(((SIM)) && echo NOT_PUSHED_SIMULATED || (((LOCALONLY)) && echo NOT_APPLICABLE_LOCAL_ONLY || echo PASS))" <<'PY' | gum style --border double --padding "1 2" --border-foreground 42
 import json, sys
 r = json.load(open(sys.argv[1])); g = lambda k: r.get(k)
 print("VITHIA FCG SESSION COMPLETE\n")

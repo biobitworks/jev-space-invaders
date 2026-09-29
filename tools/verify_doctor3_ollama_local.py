@@ -29,8 +29,10 @@ SEED_REL = "evidence/fcg_seeds/UFA_JEV_SUBMITTED_PLAYTHROUGH_240_V1.seed.json"
 EXPECTED_SEED_ROOT = "sha256:45d04e0d2da5f0c1255844b011bb2576320e1ff5517f0e38d8e79b8899a88bc8"
 EXPECTED_SOURCE = "4c943a92e84d0fb2cd3d01e4fdf15a10991eda71"
 EXPECTED_BRANCH = "postsubmission/vithia-doctor3-v01"
-CRED_VARS = ["MI_API_KEY", "MITOSIS_API_KEY", "TENKI_API_KEY", "TENKI_AUTH_TOKEN", "TYPESAFE_API_KEY", "ANTHROPIC_API_KEY", "OPENAI_API_KEY"]
+CRED_VARS = ["MI_API_KEY", "MITOSIS_API_KEY", "TENKI_API_KEY", "TENKI_AUTH_TOKEN", "TYPESAFE_API_KEY", "ANTHROPIC_API_KEY", "OPENAI_API_KEY",
+             "AWS_ACCESS_KEY_ID", "AWS_SECRET_ACCESS_KEY", "AWS_SESSION_TOKEN"]
 BASE = "http://127.0.0.1:11434"
+LOCAL_ONLY = False
 TIER = {"WITHHOLD_ALL_TENKI_CLAIMS": 0, "PUBLISH_CLAIM_ARTIFACT_VERIFIED_ONLY": 1, "PUBLISH_CLAIM_REPLAY_COMPLETE": 2}
 
 
@@ -39,6 +41,16 @@ def sh(*a, env=None, check=False):
     if check and p.returncode:
         raise RuntimeError(f"{a[0]} failed: {p.stderr.strip()[:300]}")
     return p
+
+
+def host_name() -> str:
+    """macOS ComputerName when available; otherwise the portable hostname (Linux judges have no scutil)."""
+    import shutil
+    if shutil.which("scutil"):
+        p = subprocess.run(["scutil", "--get", "ComputerName"], capture_output=True, text=True)
+        if p.returncode == 0 and p.stdout.strip():
+            return p.stdout.strip()
+    return socket.gethostname()
 
 
 def http_json(url, body=None, timeout=180):
@@ -61,11 +73,11 @@ def choose_models(tags: list[dict], forced: str | None) -> list[str]:
     return ([first] if first else []) + rest[:1]
 
 
-def direct_smoke(model: str) -> dict:
+def direct_smoke(model: str, base: str = BASE) -> dict:
     prompt = ('Choose exactly one action from ["PUBLISH_CLAIM_REPLAY_COMPLETE","PUBLISH_CLAIM_ARTIFACT_VERIFIED_ONLY","WITHHOLD_ALL_TENKI_CLAIMS"]. '
               'No sponsor verification has been established. Reply with strict JSON only: {"action": "<one of the list>"}')
     try:
-        r = http_json(BASE + "/api/chat", {"model": model, "stream": False, "format": "json", "options": {"temperature": 0},
+        r = http_json(base + "/api/chat", {"model": model, "stream": False, "format": "json", "options": {"temperature": 0},
                                            "messages": [{"role": "user", "content": prompt}]})
         parsed = json.loads(r["message"]["content"])
         ok = isinstance(parsed, dict) and parsed.get("action") in TIER
@@ -88,12 +100,12 @@ def wiring_check(F) -> dict:
     return {"state": "PASS" if ok else "FAIL", "static": static, "behaviour": behaviour}
 
 
-def run_session(model: str | None, sid: str, env_base: dict, lanes: str | None = None, profile: str | None = None) -> dict:
+def run_session(model: str | None, sid: str, env_base: dict, lanes: str | None = None, profile: str | None = None, extra_env: dict | None = None) -> dict:
     env = {k: v for k, v in env_base.items() if k not in CRED_VARS}          # deliberately no credentials
-    env.update(OLLAMA_BASE_URL=BASE)
+    env.update(OLLAMA_BASE_URL=BASE, **(extra_env or {}))
     if model:
         env["OLLAMA_MODEL"] = model
-    cmd = ["bash", "tools/vithia_doctor3.sh", "--seed-fco", SEED_REL, "--non-interactive", "--identity-mode", "generate", "--session-id", sid]
+    cmd = ["bash", "tools/vithia_doctor3.sh", "--seed-fco", SEED_REL, "--non-interactive", "--identity-mode", "generate", "--session-id", sid] + (["--local-only"] if LOCAL_ONLY else [])
     cmd += ["--deciders", lanes] if lanes else ["--decider", "ollama"]
     if profile:
         cmd += ["--prompt-profile", profile]
@@ -154,22 +166,23 @@ def lanes_mode(a, R, F, L, host, tags) -> int:
     by = {m["name"]: m for m in tags}
     pre = {}
     for ln in lanes:
-        if ln["kind"] == "ollama":
+        if ln["kind"] in ("ollama", "ollarma"):
             m = ln["model"]
             if not m:
                 R["BLOCKED"] = "ollama lane without an explicit model (use ollama:<model>)"; print_report(R); return 2
             if m in by and is_cloud(by[m]):
                 R["BLOCKED"] = f"lane model {m} is cloud-tagged; refusing"; print_report(R); return 2
-            pre[ln["name"]] = {"installed": m in by, "smoke": direct_smoke(m)["state"] if m in by else "NOT_INSTALLED"}
+            base_for = getattr(a, "_ollarma_base", None) if ln["kind"] == "ollarma" else BASE
+            pre[ln["name"]] = {"installed": m in by, "smoke": direct_smoke(m, base_for)["state"] if (m in by and base_for) else "NOT_INSTALLED_OR_NO_ENDPOINT"}
         elif ln["kind"] == "openjev":
             pre[ln["name"]] = openjev_precheck()
     R["LANE_PRECHECKS"] = pre
-    if any(x["kind"] == "ollama" for x in lanes):
+    if any(x["kind"] in ("ollama", "ollarma") for x in lanes):
         w = wiring_check(F); R["OLLAMA_ADAPTER_WIRING"] = w["state"]
         if w["state"] != "PASS":
             R["BLOCKED"] = "adapter wiring check failed; Doctor3 not run"; print_report(R); return 2
     sid = f"FCG-LANES-{re.sub(r'[^A-Za-z0-9]', '', host)[:14]}-{time.strftime('%Y%m%dT%H%M%SZ', time.gmtime())}"
-    run = run_session(None, sid, dict(os.environ), lanes=a.lanes, profile=a.prompt_profile)
+    run = run_session(None, sid, dict(os.environ), lanes=a.lanes, profile=a.prompt_profile, extra_env=getattr(a, "_extra_env", {}))
     if run["rc"] != 0:
         R["BLOCKED"] = f"Doctor3 exited {run['rc']}: {run['err'][:200]}"; print_report(R); return 2
     v = verify_session(F, L, sid); r = v["receipt"]
@@ -181,9 +194,11 @@ def lanes_mode(a, R, F, L, host, tags) -> int:
              FINAL_FCG_ROOT=r["final_fcg_mmr_root"], FINAL_MMR_SIZE=v["mmr_size"], PARENT_CHAIN_VERIFY=v["chain"], FINAL_FCG_BP_VERIFY=v["final_bp_verify"],
              CHECKPOINT_SIGNATURE_STATE=r["checkpoint_signature_state"], CHECKPOINT_SIGNATURE_VERIFY=v["sig_verify"],
              SECRET_SCAN=("PASS" if (v["scan"] == "PASS" and sh(sys.executable, "scripts/secret_scan.py").returncode == 0) else "FAIL"))
-    R["LANES"] = [{"lane": x["lane"], "provider": x["provider"], "status": x["status"], "action": x["action"], "supported_by_context": x["supported_by_context"],
-                   "latency_ms": x["latency_ms"], "executed": x["executed"], "note": x["note"], "input_context_root": x["input_context_root"][:16] + "…",
+    R["LANES"] = [{"lane": x["lane"], "provider": x["provider"], "model": x.get("model"), "status": x["status"], "action": x["action"], "supported_by_context": x["supported_by_context"],
+                   "latency_ms": x["latency_ms"], "executed": x["executed"], "action_execution_status": x.get("action_execution_status"), "outcome_status": x.get("outcome_status"),
+                   "note": x["note"], "input_context_root": x["input_context_root"][:16] + "…",
                    "decision_fco_sha256": x["decision_fco_sha256"], "outcome_fco_sha256": x["outcome_fco_sha256"]} for x in r["lanes"]]
+    R["PROMPT_PROFILE_SHA256"] = r["prompt_sha256"]
     R["LANES_CLAIM_GATE_INTEGRITY"] = "PASS" if not any(x["supported_by_context"] == "NO" and x["executed"] for x in r["lanes"]) else "FAIL"
     infra = [R["PARENT_CHAIN_VERIFY"] == "PASS", R["FINAL_FCG_BP_VERIFY"] == "PASS", R["CHECKPOINT_SIGNATURE_VERIFY"] == "PASS", R["SECRET_SCAN"] == "PASS",
              R["PRE_EXEC_VERIFY"] == "PASS", R["PRIVATE_KEY_MODE"] == "600", R["PRIVATE_KEY_COMMITTED"] == "NO", R["PRIVATE_KEY_IN_FCO"] == "NO", R["SOURCE_PIN"] == "PASS",
@@ -192,6 +207,11 @@ def lanes_mode(a, R, F, L, host, tags) -> int:
     R["INVARIANTS_MATCH_PREVIOUS_RUN"] = {"seed_root": R["SEED_ROOT"] == EXPECTED_SEED_ROOT, "source_commit": R["SOURCE_COMMIT"] == EXPECTED_SOURCE, "final_root_may_differ": True}
     R["DOCTOR3_CROSS_MACHINE_PORTABILITY"] = ("PASS_BOUNDED" if (all(infra) and not same_host) else
                                              (f"NOT_ESTABLISHED_SAME_HOST_AS_PREVIOUS_RUN (infrastructure checks: {'PASS' if all(infra) else 'FAIL'})" if same_host else "FAIL"))
+    if getattr(a, "auto_lanes", False):
+        home = str(Path.home()); rp = str(ROOT); repo_disp = "~" + rp[len(home):] if rp.startswith(home) else rp
+        envs = " ".join(f"{k}={v}" for k, v in getattr(a, "_extra_env", {}).items() if k in ("OPENJEV_BASE_URL", "OLLARMA_BASE_URL"))
+        R["HUMAN_REPRODUCTION_COMMAND"] = (f"cd {repo_disp} && git pull --ff-only && {'env ' + envs + ' ' if envs else ''}bash tools/vithia_doctor3.sh --seed-fco {SEED_REL} "
+                                           f"--identity-mode generate --deciders '{a.lanes}' --prompt-profile {a.prompt_profile}") if all(infra) else "NOT_PROVEN (infrastructure checks did not all pass)"
     R["NOTE"] = "Lane decisions are recorded, not ranked; an unsupported lane decision is a model finding, and the claim gate refusing it is the intended behaviour."
     rep = ROOT / "evidence/fcg_sessions" / sid / "PORTABILITY_VERIFICATION_REPORT.json"
     L.scan_text(json.dumps(R), "portability report"); rep.write_text(json.dumps(R, indent=2, sort_keys=True) + "\n")
@@ -207,15 +227,47 @@ def lanes_mode(a, R, F, L, host, tags) -> int:
     return 0 if all(infra) else 1
 
 
+def auto_mode(a, R, F, L, host) -> int:
+    import discover_local_lanes as D
+    d = D.discover_all(start_openjev=a.start_openjev)
+    ol, oa, oj = d["ollama"], d["ollarma"], d["openjev"]
+    R.update(OLLAMA_STATUS=ol["status"], OLLAMA_ENDPOINT=ol["endpoint"], OLLAMA_BINARY=ol["binary"], OLLAMA_VERSION=ol["version"], OLLAMA_MODELS=[m["name"] for m in ol["models"]],
+             OLLARMA_STATUS=oa["status"], OLLARMA_ENDPOINT=oa["endpoint"], OLLARMA_MODELS=[m["name"] for m in oa["models"]],
+             OLLARMA_OLLAMA_COMPATIBLE_API=oa["ollama_compatible_api"], OLLARMA_PROJECT_DIRS=oa["project_dirs"],
+             OPENJEV_STATUS=oj["status"], OPENJEV_ENDPOINT=oj["endpoint"] or "NONE")
+    R["AVAILABLE_LOCAL_MODELS"] = [{"runtime": m["runtime"], "endpoint": m["endpoint"], "model": m["name"], "classification": m["classification"], "size": m["size"], "available": "yes"} for m in d["usable"]]
+    R["EXCLUDED_MODELS"] = [{"model": m["name"], "reason": ("cloud/remote" if not m["local"] else "embedding-only" if m["embedding_only"] else "duplicate")} for m in d["all_models"] if m not in d["usable"]]
+    a.lanes = d["lanes"]
+    a._extra_env = {}
+    if oj["status"].startswith("RUNNING_IDENTIFIED") and oj["endpoint"]:
+        a._extra_env["OPENJEV_BASE_URL"] = oj["endpoint"]
+    if any(m["runtime"] == "ollarma" for m in d["chosen"]):
+        a._extra_env["OLLARMA_BASE_URL"] = oa["endpoint"]; a._ollarma_base = oa["endpoint"]
+    R["LANES_SELECTED"] = a.lanes
+    if not d["chosen"]:
+        R["NOTE_NO_MODELS"] = "no usable local decision-capable model was discovered; only the scripted lane can run (nothing is downloaded to fill the matrix)"
+    tags = [{"name": m["name"], "size": m["size"], **({} if m["local"] else {"remote_host": "x"})} for m in d["all_models"]]
+    return lanes_mode(a, R, F, L, host, tags)
+
+
 def main() -> int:
     ap = argparse.ArgumentParser()
     ap.add_argument("--model"); ap.add_argument("--previous-host", default="magicPRObox"); ap.add_argument("--expected-branch", default=EXPECTED_BRANCH)
+    ap.add_argument("--auto-lanes", action="store_true", help="discover every usable local model/runtime and build the lane list from what exists (no downloads)")
+    ap.add_argument("--start-openjev", action="store_true", help="with --auto-lanes: start the OpenJEV runtime from already-present weights (never downloads)")
     ap.add_argument("--lanes", help="one session, many deciders on one shared verified context, e.g. scripted,ollama:llama3.2:3b,openjev")
     ap.add_argument("--prompt-profile", default="neutral_v1")
     ap.add_argument("--setup-venv", action="store_true"); ap.add_argument("--no-second-model", action="store_true"); ap.add_argument("--no-push", action="store_true")
+    ap.add_argument("--local-only", action="store_true", help="no git writes at all (Doctor3 runs with --local-only; the report is not committed); the expected branch defaults to the current branch")
     a = ap.parse_args()
+    if a.local_only:
+        global LOCAL_ONLY
+        LOCAL_ONLY = True
+        a.no_push = True
+        if a.expected_branch == EXPECTED_BRANCH:
+            a.expected_branch = sh("git", "rev-parse", "--abbrev-ref", "HEAD").stdout.strip()
     R: dict = {}
-    host = sh("scutil", "--get", "ComputerName").stdout.strip() or socket.gethostname()
+    host = host_name()
     R["HOST"] = host
     # --- repo
     sh("git", "fetch", "origin")
@@ -251,6 +303,8 @@ def main() -> int:
             R["BLOCKED"] = "seed source commit differs from the frozen commit"; print_report(R); return 2
     except F.Stop as e:
         R["SEED_FCO_VERIFY"] = "FAIL"; R["BLOCKED"] = str(e); print_report(R); return 2
+    if a.auto_lanes:
+        return auto_mode(a, R, F, L, host)
     # --- ollama
     R["OLLAMA_BINARY"] = sh("bash", "-c", "command -v ollama").stdout.strip() or "NOT_FOUND"
     R["OLLAMA_VERSION"] = (sh("ollama", "--version").stdout or sh("ollama", "--version").stderr).strip().splitlines()[0] if R["OLLAMA_BINARY"] != "NOT_FOUND" else "NOT_FOUND"
@@ -335,11 +389,18 @@ def print_report(R: dict) -> None:
              "PRE_EXEC_MMR_ROOT", "PRE_EXEC_VERIFY", "DECIDER", "DECISION_PROVIDER", "OLLAMA_DECIDER", "DECISION_ACTION", "DECISION_STATUS", "DECISION_CEILING_FROM_CONTEXT",
              "DECISION_SUPPORTED_BY_CONTEXT", "DECISION_FCO", "DECISION_FCO_SHA256", "ACTION_EXECUTION_FCO", "ACTION_EXECUTION_FCO_SHA256", "OUTCOME_FCO", "OUTCOME_FCO_SHA256",
              "FINAL_FCG_BP", "FINAL_FCG_ROOT", "FINAL_MMR_SIZE", "PARENT_CHAIN_VERIFY", "FINAL_FCG_BP_VERIFY", "CHECKPOINT_SIGNATURE_STATE", "CHECKPOINT_SIGNATURE_VERIFY", "SECRET_SCAN",
-             "PROMPT_PROFILE", "LANES_REQUESTED", "LANE_PRECHECKS", "CONTEXT_CEILING", "VERIFIED_CONTEXT_ROOT", "SAME_INPUT_CONTEXT_ROOT_ACROSS_LANES", "LANES", "LANES_CLAIM_GATE_INTEGRITY", "NOTE", "INVARIANTS_MATCH_PREVIOUS_RUN", "SECOND_MODEL_SESSIONS", "DOCTOR3_CROSS_MACHINE_PORTABILITY", "COMMIT", "PUSH", "FINAL_ORIGIN_PARITY", "BLOCKED"]
+             "OLLAMA_STATUS", "OLLAMA_ENDPOINT", "OLLAMA_MODELS", "OLLARMA_STATUS", "OLLARMA_ENDPOINT", "OLLARMA_MODELS", "OLLARMA_OLLAMA_COMPATIBLE_API", "OLLARMA_PROJECT_DIRS", "OPENJEV_STATUS", "OPENJEV_ENDPOINT", "AVAILABLE_LOCAL_MODELS", "EXCLUDED_MODELS", "LANES_SELECTED", "NOTE_NO_MODELS", "PROMPT_PROFILE", "PROMPT_PROFILE_SHA256", "LANES_REQUESTED", "LANE_PRECHECKS", "CONTEXT_CEILING", "VERIFIED_CONTEXT_ROOT", "SAME_INPUT_CONTEXT_ROOT_ACROSS_LANES", "LANES", "LANES_CLAIM_GATE_INTEGRITY", "NOTE", "INVARIANTS_MATCH_PREVIOUS_RUN", "SECOND_MODEL_SESSIONS", "DOCTOR3_CROSS_MACHINE_PORTABILITY", "COMMIT", "PUSH", "FINAL_ORIGIN_PARITY", "BLOCKED"]
     for k in order:
         if k in R:
             v = R[k]
             print(f"{k}={json.dumps(v) if isinstance(v, (dict, list)) else v}")
+            if k == "LANES" and isinstance(v, list):
+                for x in v:
+                    print(f"LANE={x['lane']}\nPROVIDER={x['provider']}\nMODEL={x.get('model')}\nACTION={x['action']}\nSUPPORTED_BY_CONTEXT={x['supported_by_context']}\n"
+                          f"ACTION_EXECUTED={x['executed']}\nACTION_EXECUTION={x.get('action_execution_status')}\nOUTCOME={x.get('outcome_status')}\nLATENCY_MS={x['latency_ms']}\n"
+                          f"DECISION_FCO_SHA256={x['decision_fco_sha256']}\nOUTCOME_FCO_SHA256={x['outcome_fco_sha256']}")
+    if "HUMAN_REPRODUCTION_COMMAND" in R:
+        print(f"HUMAN_REPRODUCTION_COMMAND='{R['HUMAN_REPRODUCTION_COMMAND']}'")
     if "BLOCKED" not in R:
         print("BLOCKED=none")
 
