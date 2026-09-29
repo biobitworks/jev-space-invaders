@@ -40,6 +40,25 @@ Python 3.10+. The Space Invaders ROM ships inside the `ale-py` wheel; no separat
     pip install -r requirements.txt
     cp .env.example .env        # keys go here only; never commit .env
 
+## Judge quick path
+
+1. Install the live demo runtime:
+
+       python -m venv .venv && source .venv/bin/activate
+       pip install -r live_demo/requirements.txt
+
+2. Provide your own TypeSafe key in the shell only:
+
+       export TYPESAFE_API_KEY=<judge-key>
+
+3. Run the real JEV path:
+
+       python -m live_demo.run --mode 1p --preprocessor vithia --decider jev --render terminal --headless --run-class COMPETITION_JEV
+
+If `TYPESAFE_API_KEY` is absent the runner exits with
+`JEV_API=BLOCKED_MISSING_TYPESAFE_API_KEY` and does not substitute OpenJEV,
+Ollama, Tenki, Mitosis, or any operator credential.
+
 ## Play and record (results.json is regenerated this way)
 
 Every game is appended to `results.json`, its per-step trace is written to `runs/`, and both are committed and pushed **before the next game starts**. Run from a clean worktree on the default branch.

@@ -1,0 +1,73 @@
+{
+  "CONTENT_MANIFEST_VERIFY": "PASS",
+  "FINAL_MMR_EQUALITY": "PASS",
+  "RANDOM_ACCESS_DETAIL": "Restored snapshot for seed=1 step=0 without exception.",
+  "RANDOM_ACCESS_REPLAY": "RESTORE_SUPPORTED_STEP_HASH_NOT_CLAIMED",
+  "REPLAY_FROM_START": "PASS",
+  "REPLAY_ID": "REPLAY:openjev_vithia_l1_f71e267476ef:51938d476cff59fd",
+  "RUN_PROOF_VERIFY": {
+    "MMR_ROOT": "51938d476cff59fd4d44adb4888ea03d17199e1e8aac052fc84d567cbccf4eb4",
+    "MMR_SIZE": 9,
+    "RUN_PROOF_VERIFY": "PASS",
+    "checked_steps": 9
+  },
+  "STEP_HASH_EQUALITY": "PASS",
+  "checked_steps": 9,
+  "schema": "REPLAY_VERIFY_V1",
+  "step_checks": [
+    {
+      "frame_hash_equal": true,
+      "reward_equal": true,
+      "seed": 1,
+      "step": 0
+    },
+    {
+      "frame_hash_equal": true,
+      "reward_equal": true,
+      "seed": 1,
+      "step": 1
+    },
+    {
+      "frame_hash_equal": true,
+      "reward_equal": true,
+      "seed": 1,
+      "step": 2
+    },
+    {
+      "frame_hash_equal": true,
+      "reward_equal": true,
+      "seed": 2,
+      "step": 0
+    },
+    {
+      "frame_hash_equal": true,
+      "reward_equal": true,
+      "seed": 2,
+      "step": 1
+    },
+    {
+      "frame_hash_equal": true,
+      "reward_equal": true,
+      "seed": 2,
+      "step": 2
+    },
+    {
+      "frame_hash_equal": true,
+      "reward_equal": true,
+      "seed": 3,
+      "step": 0
+    },
+    {
+      "frame_hash_equal": true,
+      "reward_equal": true,
+      "seed": 3,
+      "step": 1
+    },
+    {
+      "frame_hash_equal": true,
+      "reward_equal": true,
+      "seed": 3,
+      "step": 2
+    }
+  ]
+}

@@ -81,6 +81,24 @@ python -m live_demo.run --mode 2p --seed 3 --steps 1 \
 resident. `JEV_API_REMOTE` is blocked unless `TYPESAFE_API_KEY` is present.
 Ollama and Liquid local runs are never labeled as official TypeSafe JEV runs.
 
+## Replay seed and verification
+
+For an existing run bundle:
+
+```sh
+python -m live_demo.run \
+  --replay-seed-run-dir evidence/competition/openjev_ab/run_openjev_vithia_l1_2701834b043f \
+  --breakpoint-id ENGINEERING-OPENJEV-VITHIA-L1
+
+python -m live_demo.run \
+  --verify-replay-seed evidence/competition/openjev_ab/run_openjev_vithia_l1_2701834b043f/REPLAY_SEED_FCO.json
+```
+
+`REPLAY_SEED_FCO` is reconstructive metadata: it references content-addressed
+manifests, actions, FCO streams, frame indexes, state snapshots, and MMR roots.
+The MMR root authenticates ordered bytes; it is not itself the replay data.
+Random access is reported separately from proof and full replay.
+
 ## Optional browser launch
 
 ```sh

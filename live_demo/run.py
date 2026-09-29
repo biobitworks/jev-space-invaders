@@ -10,6 +10,7 @@ import hashlib
 import importlib.util
 import json
 import os
+import pickle
 import time
 import urllib.request
 import uuid
@@ -31,6 +32,18 @@ def _git_head() -> str | None:
 
         return subprocess.run(
             ["git", "rev-parse", "HEAD"], cwd=ROOT, text=True,
+            capture_output=True, check=True, timeout=5,
+        ).stdout.strip()
+    except Exception:
+        return None
+
+
+def _git_tree_hash() -> str | None:
+    try:
+        import subprocess
+
+        return subprocess.run(
+            ["git", "rev-parse", "HEAD^{tree}"], cwd=ROOT, text=True,
             capture_output=True, check=True, timeout=5,
         ).stdout.strip()
     except Exception:
@@ -214,6 +227,9 @@ def _bundle_paths(output_dir: Path, run_id: str) -> dict[str, Path]:
         "figures": run_dir / "figures",
         "frames": run_dir / "frames",
         "media": run_dir / "media",
+        "snapshots": run_dir / "snapshots",
+        "replay_seed": run_dir / "REPLAY_SEED_FCO.json",
+        "replay_verify": run_dir / "REPLAY_VERIFY.json",
     }
 
 
@@ -333,6 +349,167 @@ def _write_comparison_figures(comparison: dict[str, Any], output_dir: Path) -> l
     return paths
 
 
+def _file_sha(path: Path) -> str:
+    h = hashlib.sha256()
+    with path.open("rb") as fh:
+        for chunk in iter(lambda: fh.read(1 << 20), b""):
+            h.update(chunk)
+    return h.hexdigest()
+
+
+def _rom_identifier() -> dict[str, Any]:
+    try:
+        import ale_py
+
+        rom = Path(ale_py.__file__).resolve().parent / "roms" / "space_invaders.bin"
+        if rom.exists():
+            return {"ROM_IDENTIFIER": "ale_py:space_invaders.bin", "ROM_HASH": _file_sha(rom), "ROM_BYTES_DISTRIBUTED": False}
+    except Exception:
+        pass
+    return {"ROM_IDENTIFIER": "ALE_BUILTIN_OR_UNRESOLVED", "ROM_HASH": None, "ROM_BYTES_DISTRIBUTED": False}
+
+
+def _content_manifest(run_dir: Path) -> list[dict[str, Any]]:
+    rows = []
+    for path in sorted(p for p in run_dir.rglob("*") if p.is_file() and p.name not in {"REPLAY_SEED_FCO.json", "REPLAY_VERIFY.json"}):
+        rows.append({"path": str(path.relative_to(run_dir)), "sha256": _file_sha(path), "bytes": path.stat().st_size})
+    return rows
+
+
+def create_replay_seed(run_dir: Path, breakpoint_id: str | None = None) -> dict[str, Any]:
+    manifest_path = run_dir / "manifest.json"
+    manifest = json.loads(manifest_path.read_text(encoding="utf-8"))
+    telemetry_path = run_dir / "telemetry.jsonl"
+    fco_path = run_dir / "fco.jsonl"
+    mmr_path = run_dir / "mmr.jsonl"
+    telemetry = _read_jsonl(telemetry_path)
+    fco = _read_jsonl(fco_path)
+    content = _content_manifest(run_dir)
+    first_obs = next((row for row in fco if row.get("kind") == "ObservationFCO"), {})
+    first_snapshot = next((row for row in fco if row.get("kind") == "StateSnapshotFCO"), {})
+    replay_id = f"REPLAY:{manifest['run_id']}:{manifest['mmr_root'][:16]}"
+    seed = {
+        "schema": "REPLAY_SEED_FCO_V1",
+        "FCO_TYPE": "REPLAY_SEED_FCO",
+        "REPLAY_ID": replay_id,
+        "BREAKPOINT_ID": breakpoint_id,
+        "RUN_ID": manifest["run_id"],
+        "SOURCE_HEAD": manifest.get("source_head"),
+        "SOURCE_TREE_HASH": manifest.get("source_tree_hash"),
+        "ENVIRONMENT_ID": manifest.get("environment"),
+        "ENVIRONMENT_VERSION": "src.envcfg.ENV_CONFIG",
+        "SEEDS": manifest.get("seeds"),
+        "INITIAL_STATE_HASH": ((first_snapshot.get("payload") or {}).get("state_hash")),
+        "INITIAL_STATE_BLOB_REF": ((first_snapshot.get("payload") or {}).get("state_blob_ref")),
+        "ACTION_ONTOLOGY_VERSION": "ECA_6_CLASS_V1",
+        "PREPROCESSOR_ID": manifest.get("preprocessor"),
+        "PREPROCESSOR_VERSION": "RAW_COMPACT_STATE_V1_OR_VITHIA_SPACE_L1_CONTEXT_V1",
+        "DECIDER_ID": manifest.get("decider"),
+        "MODEL_ID": manifest.get("model"),
+        "MODEL_HASH": (manifest.get("runtime") or {}).get("OPENJEV_MODEL_HASH"),
+        "RUNTIME": (manifest.get("runtime") or {}).get("OPENJEV_RUNTIME"),
+        "RUNTIME_VERSION": runtime_versions(),
+        "RUN_CONFIG_HASH": _sha({"seeds": manifest.get("seeds"), "steps": manifest.get("steps_requested"), "preprocessor": manifest.get("preprocessor"), "decider": manifest.get("decider"), "model": manifest.get("model")}),
+        "FIRST_STEP_ROOT": manifest.get("first_step_root"),
+        "LAST_STEP_ROOT": manifest.get("last_step_root"),
+        "MMR_SIZE": manifest.get("mmr_size"),
+        "MMR_ROOT": manifest.get("mmr_root"),
+        "MMR_PEAKS": manifest.get("mmr_peaks"),
+        "ACTION_STREAM_ROOT": manifest.get("action_stream_root"),
+        "FCO_STREAM_ROOT": manifest.get("fco_root"),
+        "FRAME_INDEX_ROOT": manifest.get("frame_index_root"),
+        "SNAPSHOT_INDEX_ROOT": manifest.get("snapshot_index_root"),
+        "RESULTS_HASH": _file_sha(run_dir / "results.json"),
+        "TELEMETRY_HASH": _file_sha(telemetry_path),
+        "CONTENT_MANIFEST_ROOT": _sha(content),
+        "SIGNATURE_STATE": "NOT_SIGNED_RUN_PROOF_ONLY",
+        "RUN_MANIFEST_REF": "manifest.json",
+        "TELEMETRY_REF": "telemetry.jsonl",
+        "FCO_REF": "fco.jsonl",
+        "MMR_REF": "mmr.jsonl",
+        "CONTENT_MANIFEST": content,
+        "ROM": _rom_identifier(),
+        "PYTHON_VERSION": manifest.get("runtime", {}).get("python"),
+        "ALE_VERSION": manifest.get("runtime", {}).get("ale_py"),
+        "GYMNASIUM_VERSION": manifest.get("runtime", {}).get("gymnasium"),
+        "INITIAL_OBSERVATION_FCO": first_obs.get("id"),
+        "CLAIM_CEILING": "Replay seed authenticates and reconstructs this bounded local engineering run only; it is not a qualified competition breakpoint.",
+    }
+    seed["REPLAY_SEED_ROOT"] = _sha(seed)
+    (run_dir / "REPLAY_SEED_FCO.json").write_text(json.dumps(seed, indent=2, sort_keys=True) + "\n", encoding="utf-8")
+    return seed
+
+
+def verify_replay_seed(replay_seed_path: Path) -> dict[str, Any]:
+    replay_seed = json.loads(replay_seed_path.read_text(encoding="utf-8"))
+    run_dir = replay_seed_path.parent
+    manifest = json.loads((run_dir / replay_seed["RUN_MANIFEST_REF"]).read_text(encoding="utf-8"))
+    telemetry = _read_jsonl(run_dir / replay_seed["TELEMETRY_REF"])
+    fco = _read_jsonl(run_dir / replay_seed["FCO_REF"])
+    mmr = _read_jsonl(run_dir / replay_seed["MMR_REF"])
+    proof = _verify_run_bundle(run_dir / replay_seed["RUN_MANIFEST_REF"])
+    content_ok = all((run_dir / item["path"]).exists() and _file_sha(run_dir / item["path"]) == item["sha256"] for item in replay_seed["CONTENT_MANIFEST"])
+
+    from src.envcfg import make_env
+
+    replay_rows = []
+    replay_ok = True
+    step_hash_ok = True
+    by_seed: dict[int, list[dict[str, Any]]] = {}
+    for row in telemetry:
+        by_seed.setdefault(int(row["seed"]), []).append(row)
+    env = make_env()
+    try:
+        for seed, rows in by_seed.items():
+            obs, _ = env.reset(seed=seed)
+            for row in rows:
+                observed_hash = _frame_hash(obs)
+                if observed_hash != row["frame_hash"]:
+                    replay_ok = False
+                    step_hash_ok = False
+                action_index = ALE_ACTIONS.index(row["action"])
+                obs, reward, term, trunc, info = env.step(action_index)
+                replay_rows.append({"seed": seed, "step": row["step"], "frame_hash_equal": observed_hash == row["frame_hash"], "reward_equal": float(reward) == float(row["reward"])})
+                if term or trunc:
+                    break
+    finally:
+        env.close()
+
+    random_access = "NOT_SUPPORTED"
+    random_access_detail = "ALE cloneSystemState snapshots recorded; equality from arbitrary restored wrapper observation is not claimed by this verifier."
+    try:
+        sample = next((row for row in telemetry if row.get("snapshot_pointer")), None)
+        if sample:
+            env = make_env()
+            try:
+                env.reset(seed=int(sample["seed"]))
+                blob = (run_dir / sample["snapshot_pointer"]).read_bytes()
+                env.unwrapped.ale.restoreSystemState(pickle.loads(blob))
+                random_access = "RESTORE_SUPPORTED_STEP_HASH_NOT_CLAIMED"
+                random_access_detail = f"Restored snapshot for seed={sample['seed']} step={sample['step']} without exception."
+            finally:
+                env.close()
+    except Exception as exc:
+        random_access = "NOT_SUPPORTED"
+        random_access_detail = f"{type(exc).__name__}: {exc}"
+
+    verify = {
+        "schema": "REPLAY_VERIFY_V1",
+        "REPLAY_ID": replay_seed["REPLAY_ID"],
+        "REPLAY_FROM_START": "PASS" if replay_ok else "FAIL",
+        "RANDOM_ACCESS_REPLAY": random_access,
+        "RANDOM_ACCESS_DETAIL": random_access_detail,
+        "STEP_HASH_EQUALITY": "PASS" if step_hash_ok else "FAIL",
+        "FINAL_MMR_EQUALITY": proof.get("RUN_PROOF_VERIFY", "FAIL"),
+        "RUN_PROOF_VERIFY": proof,
+        "CONTENT_MANIFEST_VERIFY": "PASS" if content_ok else "FAIL",
+        "checked_steps": len(replay_rows),
+        "step_checks": replay_rows[:20],
+    }
+    (run_dir / "REPLAY_VERIFY.json").write_text(json.dumps(verify, indent=2, sort_keys=True) + "\n", encoding="utf-8")
+    return verify
+
+
 def _summarize_1p_row(row: dict[str, Any]) -> str:
     return (
         f"PLAYER_0 PREPROCESSOR={row.get('preprocessor_requested')} "
@@ -351,10 +528,11 @@ def _benchmark_arm(
     seeds: list[int],
     steps: int,
     output_dir: Path,
+    context_level: str = "L1",
 ) -> dict[str, Any]:
     run_id = f"{arm.lower()}_{uuid.uuid4().hex[:12]}"
     paths = _bundle_paths(output_dir, run_id)
-    for key in ("run_dir", "figures", "frames", "media"):
+    for key in ("run_dir", "figures", "frames", "media", "snapshots"):
         paths[key].mkdir(parents=True, exist_ok=True)
 
     controller = DemoController(str(paths["run_dir"] / "controller"))
@@ -367,6 +545,7 @@ def _benchmark_arm(
     errors: list[dict[str, Any]] = []
     action_distribution = {action: 0 for action in ("NOOP", "FIRE", "LEFT", "LEFTFIRE", "RIGHT", "RIGHTFIRE")}
     scores: list[float] = []
+    recent_outcomes: list[dict[str, Any]] = []
     try:
         for seed in seeds:
             controller.reset(seed)
@@ -381,6 +560,10 @@ def _benchmark_arm(
                 frame_rel = Path("frames") / f"seed_{seed}_step_{step}.png"
                 frame_path = paths["run_dir"] / frame_rel
                 frame_path.write_bytes(png_bytes(frame))
+                snapshot_rel = Path("snapshots") / f"seed_{seed}_step_{step}.ale_state.pkl"
+                snapshot_blob = pickle.dumps(controller.env.unwrapped.ale.cloneSystemState())
+                snapshot_hash = hashlib.sha256(snapshot_blob).hexdigest()
+                (paths["run_dir"] / snapshot_rel).write_bytes(snapshot_blob)
                 observation_read_ms = (time.perf_counter_ns() - obs_t0) / 1_000_000
 
                 state_t0 = time.perf_counter_ns()
@@ -403,7 +586,7 @@ def _benchmark_arm(
                     }
                 else:
                     vithia_t0 = time.perf_counter_ns()
-                    context = _vithia_l1_context(perception)
+                    context = _vithia_context(perception, recent_outcomes, context_level)
                     prep = {
                         "requested": "VITHIA_SPACE",
                         "actual": context["encoding"],
@@ -446,12 +629,15 @@ def _benchmark_arm(
 
                 fco_t0 = time.perf_counter_ns()
                 observation = {"step_id": step_id, **_fco("ObservationFCO", {"seed": seed, "step": step, "frame_hash": frame_sha, "dimensions": list(frame.shape), "format": "PNG", "content_pointer": str(frame_rel)})}
+                snapshot = {"step_id": step_id, **_fco("StateSnapshotFCO", {"seed": seed, "step": step, "state_hash": snapshot_hash, "state_blob_ref": str(snapshot_rel), "previous_snapshot": None if step == 0 else f"seed_{seed}_step_{step - 1}", "mmr_size_before": len(leaves), "mmr_root_before": _mmr_root(leaves)})}
                 context_fco = {"step_id": step_id, **_fco("ContextFCO", {"preprocessor": preprocessor, "context": context, "input_bytes": context_bytes})}
                 decision_fco = {"step_id": step_id, **_fco("DecisionFCO", {"provider": "OPENJEV_LOCAL", "model": decision.get("exact_model") or "openjev", "typed_answer": action, "confidence": decision.get("confidence"), "trace_id": decision.get("trace_id"), "latency_ms": decision.get("latency_ms"), "requested_action": decision.get("requested_action"), "fallback": decision.get("fallback")})}
                 action_fco = {"step_id": step_id, **_fco("ActionFCO", {"action": action, "move": move, "fire": fire, "roundtrip_ok": roundtrip_ok})}
                 outcome = {"step_id": step_id, **_fco("OutcomeFCO", {"reward": float(reward), "score": controller.score, "lives": int(info2.get("lives", 0)), "terminated": bool(term), "truncated": bool(trunc)})}
                 latency = {"step_id": step_id, **_fco("LatencyAtom", {"observation_read_ms": observation_read_ms, "state_encode_ms": state_encode_ms, "vithia_context_ms": vithia_context_ms, "fcg_lookup_ms": fcg_lookup_ms, "system_one_adapter_ms": system_one_adapter_ms, "model_queue_ms": 0.0, "openjev_inference_ms": openjev_inference_ms, "response_parse_ms": response_parse_ms, "action_validation_ms": action_validation_ms, "env_step_ms": env_step_ms})}
-                step_fcos = [observation, context_fco, decision_fco, action_fco, outcome, latency]
+                anticube = {"step_id": step_id, **_fco("AnticubeAtom", {"state": context.get("anticube_state", "NOT_INCLUDED"), "context_level": context.get("context_level"), "admissibility": context.get("admissibility", "ADMIT")})}
+                deltag = {"step_id": step_id, **_fco("DeltaGAtom", {"state": "CANDIDATE_FORMALIZATION", "context_shift_score": context.get("context_shift_score"), "delta_g_mean": context.get("delta_g_mean"), "delta_g_variance": context.get("delta_g_variance"), "expected_interval": context.get("expected_interval")})}
+                step_fcos = [observation, snapshot, context_fco, decision_fco, action_fco, outcome, latency, anticube, deltag]
                 fcos.extend(step_fcos)
                 step_root = _step_root(step_fcos, step_id)
                 fco_hashing_ms = (time.perf_counter_ns() - fco_t0) / 1_000_000
@@ -471,6 +657,13 @@ def _benchmark_arm(
                     "step": step,
                     "frame_hash": frame_sha,
                     "frame_pointer": str(frame_rel),
+                    "snapshot_hash": snapshot_hash,
+                    "snapshot_pointer": str(snapshot_rel),
+                    "context_level": context.get("context_level"),
+                    "context_shift_score": context.get("context_shift_score"),
+                    "anticube_state": context.get("anticube_state"),
+                    "delta_g_mean": context.get("delta_g_mean"),
+                    "delta_g_variance": context.get("delta_g_variance"),
                     "action": action,
                     "move": move,
                     "fire": fire,
@@ -500,6 +693,8 @@ def _benchmark_arm(
                     "mmr_root": root,
                     "mmr_size": len(leaves),
                 })
+                recent_outcomes.append({"action": action, "reward": float(reward), "score": controller.score, "lives": int(info2.get("lives", 0)), "context_shift_score": context.get("context_shift_score")})
+                recent_outcomes = recent_outcomes[-4:]
                 if term or trunc:
                     break
             scores.append(controller.score)
@@ -521,11 +716,13 @@ def _benchmark_arm(
         "run_id": run_id,
         "arm": arm,
         "source_head": _git_head(),
+        "source_tree_hash": _git_tree_hash(),
         "environment": "ALE/SpaceInvaders-v5",
         "seeds": seeds,
         "steps_requested": steps,
         "steps_executed": len(telemetry),
         "preprocessor": preprocessor,
+        "context_level": context_level if preprocessor == "VITHIA_SPACE" else "RAW",
         "decider": "SYSTEM_ONE/OPENJEV_LOCAL",
         "model": "openjev",
         "runtime": _openjev_status(),
@@ -540,6 +737,9 @@ def _benchmark_arm(
         "termination": "ERROR" if errors else "BOUNDED_STEPS_COMPLETE",
         "telemetry_root": hashlib.sha256(paths["telemetry"].read_bytes()).hexdigest() if paths["telemetry"].exists() else None,
         "fco_root": hashlib.sha256(paths["fco"].read_bytes()).hexdigest() if paths["fco"].exists() else None,
+        "action_stream_root": _sha([{"seed": row["seed"], "step": row["step"], "action": row["action"]} for row in telemetry]),
+        "frame_index_root": _sha([{"seed": row["seed"], "step": row["step"], "frame_hash": row["frame_hash"], "frame_pointer": row["frame_pointer"]} for row in telemetry]),
+        "snapshot_index_root": _sha([{"seed": row["seed"], "step": row["step"], "snapshot_hash": row["snapshot_hash"], "snapshot_pointer": row["snapshot_pointer"]} for row in telemetry]),
         "decision_latency": _stats(latency_values),
         "openjev_inference": _stats(inference_values),
         "vithia_latency": _stats(vithia_values),
@@ -590,6 +790,88 @@ def _vithia_l1_context(state: dict[str, Any]) -> dict[str, Any]:
     }
 
 
+def _context_shift_score(state: dict[str, Any], recent_outcomes: list[dict[str, Any]]) -> dict[str, Any]:
+    bombs = state.get("bombs") or []
+    unknown = state.get("unknown_shots") or []
+    ship = state.get("ship") or {}
+    nearest = max(bombs, key=lambda b: b.get("y_bottom", -1), default=None)
+    bomb_pressure = 0.0
+    if nearest and ship:
+        x_gap = abs(float(nearest.get("x", 80)) - float(ship.get("x", 80)))
+        y_pressure = max(0.0, (float(nearest.get("y_bottom", 0)) - 100.0) / 95.0)
+        bomb_pressure = max(0.0, y_pressure * (1.0 - min(1.0, x_gap / 80.0)))
+    recent_reward = sum(float(r.get("reward", 0.0)) for r in recent_outcomes[-2:])
+    score = round(min(1.0, bomb_pressure + 0.12 * len(unknown) + (0.2 if recent_reward else 0.0)), 4)
+    variance = round(0.05 + 0.1 * len(unknown) + (0.2 if nearest is None and unknown else 0.0), 4)
+    return {
+        "context_shift_score": score,
+        "delta_g_mean": score,
+        "delta_g_variance": variance,
+        "expected_interval": [round(max(0.0, score - variance), 4), round(min(1.0, score + variance), 4)],
+        "anticube_state": "UNKNOWN" if unknown else "ADMIT",
+    }
+
+
+def _vithia_l0_context(state: dict[str, Any], recent_outcomes: list[dict[str, Any]], *, include_shift: bool = False, include_dg_ac: bool = False) -> dict[str, Any]:
+    shift = _context_shift_score(state, recent_outcomes)
+    ctx = {
+        "encoding": "VITHIA_SPACE_L0_CONTEXT_V1",
+        "context_level": "L0_DG_AC" if include_dg_ac else ("L0_SHIFT" if include_shift else "L0_MINIMAL"),
+        "step": state.get("step"),
+        "lives": state.get("lives"),
+        "previous_action": state.get("previous_action"),
+        "ship": state.get("ship"),
+        "nearest_bomb": max(state.get("bombs") or [], key=lambda b: b.get("y_bottom", -1), default=None),
+        "claim": "context_only_no_action_recommendation",
+    }
+    if include_shift or include_dg_ac:
+        ctx.update({k: shift[k] for k in ("context_shift_score", "expected_interval")})
+    if include_dg_ac:
+        ctx.update({k: shift[k] for k in ("delta_g_mean", "delta_g_variance", "anticube_state")})
+    return ctx
+
+
+def _vithia_l2_context(state: dict[str, Any], recent_outcomes: list[dict[str, Any]]) -> dict[str, Any]:
+    ctx = _vithia_l1_context(state)
+    ctx["encoding"] = "VITHIA_SPACE_L2_CONTEXT_V1"
+    ctx["context_level"] = "L2"
+    ctx["recent_outcomes"] = recent_outcomes[-3:]
+    ctx.update(_context_shift_score(state, recent_outcomes))
+    return ctx
+
+
+def _vithia_context(state: dict[str, Any], recent_outcomes: list[dict[str, Any]], level: str) -> dict[str, Any]:
+    key = level.upper()
+    if key == "L0":
+        return _vithia_l0_context(state, recent_outcomes)
+    if key == "L0_SHIFT":
+        return _vithia_l0_context(state, recent_outcomes, include_shift=True)
+    if key == "L0_DG_AC":
+        return _vithia_l0_context(state, recent_outcomes, include_dg_ac=True)
+    if key == "L2":
+        return _vithia_l2_context(state, recent_outcomes)
+    if key == "ADAPTIVE":
+        shift = _context_shift_score(state, recent_outcomes)
+        if shift["anticube_state"] == "UNKNOWN" or shift["delta_g_variance"] >= 0.25:
+            ctx = _vithia_l2_context(state, recent_outcomes)
+            ctx["adaptive_rule"] = "HIGH_VARIANCE_OR_UNKNOWN_TO_L2"
+            return ctx
+        if shift["context_shift_score"] < 0.15:
+            ctx = _vithia_l0_context(state, recent_outcomes, include_dg_ac=True)
+            ctx["context_level"] = "ADAPTIVE_L0_DG_AC"
+            ctx["adaptive_rule"] = "LOW_SHIFT_LOW_VARIANCE_TO_L0"
+            return ctx
+        ctx = _vithia_l1_context(state)
+        ctx.update(shift)
+        ctx["context_level"] = "ADAPTIVE_L1"
+        ctx["adaptive_rule"] = "MODERATE_SHIFT_TO_L1"
+        return ctx
+    ctx = _vithia_l1_context(state)
+    ctx["context_level"] = "L1"
+    ctx.update(_context_shift_score(state, recent_outcomes))
+    return ctx
+
+
 def run_openjev_ab(args: argparse.Namespace) -> dict[str, Any]:
     seeds = [int(s) for s in args.seeds.split(",") if s.strip()]
     output_dir = Path(args.output_dir or DEFAULT_BENCHMARK_DIR).resolve()
@@ -620,7 +902,7 @@ def run_openjev_ab(args: argparse.Namespace) -> dict[str, Any]:
         return receipt
 
     raw = _benchmark_arm(arm="OPENJEV_RAW", preprocessor="NONE", seeds=seeds, steps=args.steps, output_dir=output_dir)
-    vithia = _benchmark_arm(arm=f"OPENJEV_VITHIA_{args.vithia_level}", preprocessor="VITHIA_SPACE", seeds=seeds, steps=args.steps, output_dir=output_dir)
+    vithia = _benchmark_arm(arm=f"OPENJEV_VITHIA_{args.vithia_level}", preprocessor="VITHIA_SPACE", seeds=seeds, steps=args.steps, output_dir=output_dir, context_level=args.vithia_level)
     comparison = {
         "schema": "VITHIA_OPENJEV_AB_COMPARISON_V1",
         "source_head": _git_head(),
@@ -647,6 +929,17 @@ def run_openjev_ab(args: argparse.Namespace) -> dict[str, Any]:
         "DELTA_SCORE": None if raw["score_total"] is None or vithia["score_total"] is None else round(vithia["score_total"] - raw["score_total"], 4),
         "RUN_PROOF_VERIFY": "PASS" if raw["run_proof"]["RUN_PROOF_VERIFY"] == "PASS" and vithia["run_proof"]["RUN_PROOF_VERIFY"] == "PASS" else "FAIL",
     }
+    raw_replay = create_replay_seed(output_dir / f"run_{raw['run_id']}", f"ENGINEERING-OPENJEV-RAW-{raw['run_id']}")
+    vithia_replay = create_replay_seed(output_dir / f"run_{vithia['run_id']}", f"ENGINEERING-OPENJEV-VITHIA-{vithia['run_id']}")
+    raw_replay_verify = verify_replay_seed(output_dir / f"run_{raw['run_id']}" / "REPLAY_SEED_FCO.json")
+    vithia_replay_verify = verify_replay_seed(output_dir / f"run_{vithia['run_id']}" / "REPLAY_SEED_FCO.json")
+    comparison["REPLAY_SEED_FCO"] = {
+        "raw": str((output_dir / f"run_{raw['run_id']}" / "REPLAY_SEED_FCO.json").relative_to(ROOT)),
+        "vithia": str((output_dir / f"run_{vithia['run_id']}" / "REPLAY_SEED_FCO.json").relative_to(ROOT)),
+        "raw_root": raw_replay["REPLAY_SEED_ROOT"],
+        "vithia_root": vithia_replay["REPLAY_SEED_ROOT"],
+    }
+    comparison["REPLAY_VERIFY"] = {"raw": raw_replay_verify, "vithia": vithia_replay_verify}
     output_dir.mkdir(parents=True, exist_ok=True)
     comparison["FIGURES"] = _write_comparison_figures(comparison, output_dir)
     comparison["DERIVED_VIDEO"] = "NOT_CREATED_FROM_STATIC_KEYFRAMES_ONLY"
@@ -657,6 +950,47 @@ def run_openjev_ab(args: argparse.Namespace) -> dict[str, Any]:
     print(f"OPENJEV_AB_COMPARISON={comparison_path}", flush=True)
     print(f"DELTA_DECISION_P50={comparison['DELTA_DECISION_P50']}", flush=True)
     return comparison
+
+
+def run_context_sweep(args: argparse.Namespace) -> dict[str, Any]:
+    seeds = [int(s) for s in args.seeds.split(",") if s.strip()]
+    output_dir = Path(args.output_dir or DEFAULT_BENCHMARK_DIR).resolve() / "context_sweep"
+    openjev = _openjev_status()
+    if openjev.get("OPENJEV_LOAD_STATE") != "PASS":
+        receipt = {"schema": "VITHIA_CONTEXT_SWEEP_BLOCKED_V1", "OPENJEV_LOCAL_LOAD": openjev.get("OPENJEV_LOAD_STATE"), "openjev": openjev}
+        output_dir.mkdir(parents=True, exist_ok=True)
+        (output_dir / "BLOCKED.json").write_text(json.dumps(receipt, indent=2, sort_keys=True) + "\n", encoding="utf-8")
+        print(f"CONTEXT_SWEEP={receipt['OPENJEV_LOCAL_LOAD']}", flush=True)
+        return receipt
+    levels = [s.strip().upper() for s in args.context_levels.split(",") if s.strip()]
+    runs = []
+    for level in levels:
+        runs.append(_benchmark_arm(arm=f"OPENJEV_CONTEXT_{level}", preprocessor="VITHIA_SPACE", seeds=seeds, steps=args.steps, output_dir=output_dir, context_level=level))
+    ranked = sorted(
+        runs,
+        key=lambda row: (
+            float("inf") if row["decision_latency"]["p50"] is None else row["decision_latency"]["p50"],
+            float("inf") if row["input_bytes"]["mean"] is None else row["input_bytes"]["mean"],
+        ),
+    )
+    summary = {
+        "schema": "VITHIA_MINIMUM_CONTEXT_SWEEP_V1",
+        "source_head": _git_head(),
+        "seeds": seeds,
+        "steps": args.steps,
+        "levels": levels,
+        "runs": runs,
+        "MIN_CONTEXT_LEVEL": ranked[0]["context_level"] if ranked else None,
+        "BEST_P50_LEVEL": ranked[0]["context_level"] if ranked else None,
+        "RUN_PROOF_VERIFY": "PASS" if all(r["run_proof"]["RUN_PROOF_VERIFY"] == "PASS" for r in runs) else "FAIL",
+    }
+    output_dir.mkdir(parents=True, exist_ok=True)
+    out = output_dir / f"context_sweep_{uuid.uuid4().hex[:12]}.json"
+    out.write_text(json.dumps(summary, indent=2, sort_keys=True) + "\n", encoding="utf-8")
+    _append_json_result(Path(args.results_path).resolve(), {"schema": "VITHIA_MINIMUM_CONTEXT_SWEEP_RESULT_V1", "summary_path": str(out.relative_to(ROOT)), **summary})
+    print(f"CONTEXT_SWEEP={out}", flush=True)
+    print(f"MIN_CONTEXT_LEVEL={summary['MIN_CONTEXT_LEVEL']}", flush=True)
+    return summary
 
 
 def run(args: argparse.Namespace) -> dict[str, Any]:
@@ -670,6 +1004,21 @@ def run(args: argparse.Namespace) -> dict[str, Any]:
     controller.mode = mode
     controller.seats["PLAYER_0"] = _seat_config("PLAYER_0", args.player0_preprocessor, args.player0_decider, args.player0_model)
     controller.seats["PLAYER_1"] = _seat_config("PLAYER_1", args.player1_preprocessor, args.player1_decider, args.player1_model)
+    if controller.seats["PLAYER_0"].decider_provider == "JEV_API_REMOTE" and not os.environ.get("TYPESAFE_API_KEY"):
+        blocked = {
+            "schema": "JEV_API_BLOCKED_RECEIPT_V1",
+            "JEV_API": "BLOCKED_MISSING_TYPESAFE_API_KEY",
+            "setup": "Set TYPESAFE_API_KEY in the environment and rerun the same command.",
+            "mode": mode,
+            "seed": args.seed,
+            "run_class": "COMPETITION_JEV",
+            "fallback_substitution": "NOT_PERFORMED",
+        }
+        _append_json_result(results_path, blocked)
+        print("JEV_API=BLOCKED_MISSING_TYPESAFE_API_KEY", flush=True)
+        print("SETUP=export TYPESAFE_API_KEY=<judge-key>; rerun the same command", flush=True)
+        controller._close_envs()
+        return blocked
 
     run_id = uuid.uuid4().hex
     head = _git_head()
@@ -818,6 +1167,11 @@ def build_parser() -> argparse.ArgumentParser:
     parser.add_argument("--output-dir")
     parser.add_argument("--run-class", default="BASELINE_LLM")
     parser.add_argument("--benchmark-pair-openjev", action="store_true")
+    parser.add_argument("--context-sweep-openjev", action="store_true")
+    parser.add_argument("--context-levels", default="L0,L0_SHIFT,L0_DG_AC,L1,L2,ADAPTIVE")
+    parser.add_argument("--replay-seed-run-dir", help="Create REPLAY_SEED_FCO.json for an existing run bundle.")
+    parser.add_argument("--verify-replay-seed", help="Verify an existing REPLAY_SEED_FCO.json.")
+    parser.add_argument("--breakpoint-id")
     parser.add_argument("--seeds", default="1,2,3,4,5")
     parser.add_argument("--vithia-level", default="L1")
     parser.add_argument("--player0-preprocessor", "--p0-preprocessor", "--preprocessor", default="VITHIA_SPACE")
@@ -833,7 +1187,19 @@ def main(argv: list[str] | None = None) -> None:
     args = build_parser().parse_args(argv)
     if args.max_steps is not None:
         args.steps = args.max_steps
-    if args.benchmark_pair_openjev:
+    if args.replay_seed_run_dir:
+        seed = create_replay_seed(Path(args.replay_seed_run_dir).resolve(), args.breakpoint_id)
+        print(f"REPLAY_SEED_FCO={Path(args.replay_seed_run_dir).resolve() / 'REPLAY_SEED_FCO.json'}", flush=True)
+        print(f"REPLAY_SEED_ROOT={seed['REPLAY_SEED_ROOT']}", flush=True)
+    elif args.verify_replay_seed:
+        verify = verify_replay_seed(Path(args.verify_replay_seed).resolve())
+        print(f"REPLAY_FROM_START={verify['REPLAY_FROM_START']}", flush=True)
+        print(f"RANDOM_ACCESS_REPLAY={verify['RANDOM_ACCESS_REPLAY']}", flush=True)
+        print(f"STEP_HASH_EQUALITY={verify['STEP_HASH_EQUALITY']}", flush=True)
+        print(f"FINAL_MMR_EQUALITY={verify['FINAL_MMR_EQUALITY']}", flush=True)
+    elif args.context_sweep_openjev:
+        run_context_sweep(args)
+    elif args.benchmark_pair_openjev:
         run_openjev_ab(args)
     else:
         run(args)

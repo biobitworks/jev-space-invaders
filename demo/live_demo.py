@@ -143,7 +143,12 @@ class OpenJEVLocalSystemOne(SystemOneBackend):
 
 
 class JEVApiSystemOne(SystemOneBackend):
-    pass
+    def __init__(self, provider: str, backend: str, actions: tuple[str, ...], url: str, model: str) -> None:
+        token = os.environ.get("TYPESAFE_API_KEY")
+        if not token:
+            raise RuntimeError("JEV_API=BLOCKED_MISSING_TYPESAFE_API_KEY; set TYPESAFE_API_KEY and rerun")
+        super().__init__(provider, backend, actions, url, model)
+        self.headers = {"Authorization": f"Bearer {token}"}
 
 
 class ProviderRegistry:

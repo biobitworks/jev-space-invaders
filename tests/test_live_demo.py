@@ -8,7 +8,7 @@ import time
 import unittest
 from pathlib import Path
 
-from demo.live_demo import DemoController, OpenJEVLocalSystemOne, PZ_ACTIONS, ScriptedDecider, serve
+from demo.live_demo import DemoController, JEVApiSystemOne, OpenJEVLocalSystemOne, PZ_ACTIONS, ScriptedDecider, serve
 
 
 class LiveDemoTests(unittest.TestCase):
@@ -21,6 +21,11 @@ class LiveDemoTests(unittest.TestCase):
                 self.assertIsInstance(backend, OpenJEVLocalSystemOne)
                 self.assertTrue(backend.system_one)
             finally: c._close_envs()
+
+    def test_jev_api_requires_typesafe_key(self):
+        with unittest.mock.patch.dict("os.environ", {}, clear=True):
+            with self.assertRaisesRegex(RuntimeError, "BLOCKED_MISSING_TYPESAFE_API_KEY"):
+                JEVApiSystemOne("JEV_API_REMOTE", "JEV", ("NOOP", "FIRE"), "https://api.typesafe.ai", "jev")
 
     def test_loopback_server_binds_localhost(self):
         with tempfile.TemporaryDirectory() as td:

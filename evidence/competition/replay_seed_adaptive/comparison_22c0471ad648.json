@@ -1,0 +1,394 @@
+{
+  "DELTA_DECISION_P50": -901.4914,
+  "DELTA_DECISION_P95": 880.7841,
+  "DELTA_MODEL_INFERENCE_P50": -901.43,
+  "DELTA_SCORE": 0.0,
+  "DERIVED_VIDEO": "NOT_CREATED_FROM_STATIC_KEYFRAMES_ONLY",
+  "FIGURES": [
+    "evidence/competition/replay_seed_adaptive/figures/figure_a_move_fire_timeline.csv",
+    "evidence/competition/replay_seed_adaptive/figures/figure_b_decision_latency.svg",
+    "evidence/competition/replay_seed_adaptive/figures/figure_c_score_reward.csv",
+    "evidence/competition/replay_seed_adaptive/figures/figure_d_raw_vs_vithia_latency.svg",
+    "evidence/competition/replay_seed_adaptive/figures/figure_e_input_size_vs_inference.csv",
+    "evidence/competition/replay_seed_adaptive/figures/figure_f_action_distribution.csv"
+  ],
+  "PUBLIC_KEY_SEAL": "NOT_SIGNED_RUN_PROOF_ONLY",
+  "RAW_DECISION_P50": 5626.834,
+  "RAW_DECISION_P95": 6176.3331,
+  "RAW_INPUT_SIZE": 519.0,
+  "RAW_MODEL_INFERENCE_P50": 5626.65,
+  "RAW_SCORE": 0.0,
+  "REPLAY_SEED_FCO": {
+    "raw": "evidence/competition/replay_seed_adaptive/run_openjev_raw_69fd4f0519e3/REPLAY_SEED_FCO.json",
+    "raw_root": "73d1be29fc8165b19309c7f4b48d753aad978d52b3341c569c01bff054b21a22",
+    "vithia": "evidence/competition/replay_seed_adaptive/run_openjev_vithia_l1_f71e267476ef/REPLAY_SEED_FCO.json",
+    "vithia_root": "85f01e8a1c8b613ac99a3d1b2476c7f3a8dc083540c5ab413893858656030a5b"
+  },
+  "REPLAY_VERIFY": {
+    "raw": {
+      "CONTENT_MANIFEST_VERIFY": "PASS",
+      "FINAL_MMR_EQUALITY": "PASS",
+      "RANDOM_ACCESS_DETAIL": "Restored snapshot for seed=1 step=0 without exception.",
+      "RANDOM_ACCESS_REPLAY": "RESTORE_SUPPORTED_STEP_HASH_NOT_CLAIMED",
+      "REPLAY_FROM_START": "PASS",
+      "REPLAY_ID": "REPLAY:openjev_raw_69fd4f0519e3:21de8b00425a9163",
+      "RUN_PROOF_VERIFY": {
+        "MMR_ROOT": "21de8b00425a916376f02d5ae41e05982955f7d78fe64533927b17a9039b8d32",
+        "MMR_SIZE": 9,
+        "RUN_PROOF_VERIFY": "PASS",
+        "checked_steps": 9
+      },
+      "STEP_HASH_EQUALITY": "PASS",
+      "checked_steps": 9,
+      "schema": "REPLAY_VERIFY_V1",
+      "step_checks": [
+        {
+          "frame_hash_equal": true,
+          "reward_equal": true,
+          "seed": 1,
+          "step": 0
+        },
+        {
+          "frame_hash_equal": true,
+          "reward_equal": true,
+          "seed": 1,
+          "step": 1
+        },
+        {
+          "frame_hash_equal": true,
+          "reward_equal": true,
+          "seed": 1,
+          "step": 2
+        },
+        {
+          "frame_hash_equal": true,
+          "reward_equal": true,
+          "seed": 2,
+          "step": 0
+        },
+        {
+          "frame_hash_equal": true,
+          "reward_equal": true,
+          "seed": 2,
+          "step": 1
+        },
+        {
+          "frame_hash_equal": true,
+          "reward_equal": true,
+          "seed": 2,
+          "step": 2
+        },
+        {
+          "frame_hash_equal": true,
+          "reward_equal": true,
+          "seed": 3,
+          "step": 0
+        },
+        {
+          "frame_hash_equal": true,
+          "reward_equal": true,
+          "seed": 3,
+          "step": 1
+        },
+        {
+          "frame_hash_equal": true,
+          "reward_equal": true,
+          "seed": 3,
+          "step": 2
+        }
+      ]
+    },
+    "vithia": {
+      "CONTENT_MANIFEST_VERIFY": "PASS",
+      "FINAL_MMR_EQUALITY": "PASS",
+      "RANDOM_ACCESS_DETAIL": "Restored snapshot for seed=1 step=0 without exception.",
+      "RANDOM_ACCESS_REPLAY": "RESTORE_SUPPORTED_STEP_HASH_NOT_CLAIMED",
+      "REPLAY_FROM_START": "PASS",
+      "REPLAY_ID": "REPLAY:openjev_vithia_l1_f71e267476ef:51938d476cff59fd",
+      "RUN_PROOF_VERIFY": {
+        "MMR_ROOT": "51938d476cff59fd4d44adb4888ea03d17199e1e8aac052fc84d567cbccf4eb4",
+        "MMR_SIZE": 9,
+        "RUN_PROOF_VERIFY": "PASS",
+        "checked_steps": 9
+      },
+      "STEP_HASH_EQUALITY": "PASS",
+      "checked_steps": 9,
+      "schema": "REPLAY_VERIFY_V1",
+      "step_checks": [
+        {
+          "frame_hash_equal": true,
+          "reward_equal": true,
+          "seed": 1,
+          "step": 0
+        },
+        {
+          "frame_hash_equal": true,
+          "reward_equal": true,
+          "seed": 1,
+          "step": 1
+        },
+        {
+          "frame_hash_equal": true,
+          "reward_equal": true,
+          "seed": 1,
+          "step": 2
+        },
+        {
+          "frame_hash_equal": true,
+          "reward_equal": true,
+          "seed": 2,
+          "step": 0
+        },
+        {
+          "frame_hash_equal": true,
+          "reward_equal": true,
+          "seed": 2,
+          "step": 1
+        },
+        {
+          "frame_hash_equal": true,
+          "reward_equal": true,
+          "seed": 2,
+          "step": 2
+        },
+        {
+          "frame_hash_equal": true,
+          "reward_equal": true,
+          "seed": 3,
+          "step": 0
+        },
+        {
+          "frame_hash_equal": true,
+          "reward_equal": true,
+          "seed": 3,
+          "step": 1
+        },
+        {
+          "frame_hash_equal": true,
+          "reward_equal": true,
+          "seed": 3,
+          "step": 2
+        }
+      ]
+    }
+  },
+  "RUN_PROOF_VERIFY": "PASS",
+  "VITHIA_DECISION_P50": 4725.3426,
+  "VITHIA_DECISION_P95": 7057.1172,
+  "VITHIA_INPUT_SIZE": 503.0,
+  "VITHIA_LEVEL_TESTED": "L1",
+  "VITHIA_MODEL_INFERENCE_P50": 4725.22,
+  "VITHIA_SCORE": 0.0,
+  "raw": {
+    "action_distribution": {
+      "FIRE": 9,
+      "LEFT": 0,
+      "LEFTFIRE": 0,
+      "NOOP": 0,
+      "RIGHT": 0,
+      "RIGHTFIRE": 0
+    },
+    "action_stream_root": "f3a82a04fe2438e1f7ad3496db6071a4e5d19af7a6dc526e6de4f8b26197ccda",
+    "arm": "OPENJEV_RAW",
+    "context_level": "RAW",
+    "control_hz": 0.1775,
+    "control_loop_latency": {
+      "max": 6178.7202,
+      "mean": 5597.7202,
+      "p50": 5629.4268,
+      "p95": 6178.7202
+    },
+    "decider": "SYSTEM_ONE/OPENJEV_LOCAL",
+    "decision_latency": {
+      "max": 6176.3331,
+      "mean": 5595.5795,
+      "p50": 5626.834,
+      "p95": 6176.3331
+    },
+    "environment": "ALE/SpaceInvaders-v5",
+    "errors": [],
+    "fallbacks": 0,
+    "fco_root": "9967e9562e614cb6d1ec683447df47d7c623e6d29a643a453aa3ed89c24d30ae",
+    "final_lives": 3,
+    "final_score": 0.0,
+    "first_step_root": "ebfa013a5e2ffe3ac1195d6147e355a8a2bc4682feb1f011b0dd69ab126e0a89",
+    "frame_index_root": "c7f9bec411e12e05c4dafa12d1316c38efc448da5408eb048fb38dcdb0b0fb75",
+    "input_bytes": {
+      "max": 532.0,
+      "mean": 519.0,
+      "p50": 531.0,
+      "p95": 532.0
+    },
+    "last_step_root": "7b86760a7e4e89a3e98e826ec32540ecf350b0b367343007d125ff1975da028e",
+    "mmr_peaks": [
+      "7b86760a7e4e89a3e98e826ec32540ecf350b0b367343007d125ff1975da028e",
+      "b8586264f2dd56991d1ba754fbc25c9f3b477b86f671b7e1139314dc00a114d2"
+    ],
+    "mmr_root": "21de8b00425a916376f02d5ae41e05982955f7d78fe64533927b17a9039b8d32",
+    "mmr_size": 9,
+    "model": "openjev",
+    "openjev_inference": {
+      "max": 6175.58,
+      "mean": 5595.3389,
+      "p50": 5626.65,
+      "p95": 6175.58
+    },
+    "preprocessor": "NONE",
+    "raw_input_bytes": {
+      "max": 576.0,
+      "mean": 563.0,
+      "p50": 575.0,
+      "p95": 576.0
+    },
+    "run_id": "openjev_raw_69fd4f0519e3",
+    "run_proof": {
+      "MMR_ROOT": "21de8b00425a916376f02d5ae41e05982955f7d78fe64533927b17a9039b8d32",
+      "MMR_SIZE": 9,
+      "RUN_PROOF_VERIFY": "PASS",
+      "checked_steps": 9
+    },
+    "run_root": "d790c3e960a90d7e7835006388241bd4ad94c30f0b5d06151c01ef4747467dd8",
+    "runtime": {
+      "OPENJEV_LOAD_STATE": "PASS",
+      "OPENJEV_LOCAL_PATH": "/Volumes/magicBLACKbox/openjev/openjev-MLX-4bit",
+      "OPENJEV_MODEL_HASH": "51fcc8fa97d41900988dcf3bef521ee3888b434bb4479b8b6969ed985639c679",
+      "OPENJEV_MODEL_ID": "openjev/openjev-MLX-4bit",
+      "OPENJEV_RUNTIME": "MLX",
+      "OPENJEV_SIZE": 15153274826,
+      "endpoint": "http://127.0.0.1:8768/v1/systemone",
+      "failure": null,
+      "manifest": "/Users/byron/projects/active/vithia-space-per-seat-v02/evidence/openjev/RUNTIME_MANIFEST.json"
+    },
+    "schema": "VITHIA_OPENJEV_AB_ARM_MANIFEST_V1",
+    "score_total": 0.0,
+    "seeds": [
+      1,
+      2,
+      3
+    ],
+    "snapshot_index_root": "b71f9f4cbcaa6ead53ddc2e561b4fe71928dd89cfd76a4b87def3e1b2224eac1",
+    "source_head": "8c8abb6a18aa2304d0ccbc777a387f2bf5cca84b",
+    "source_tree_hash": "9bbe0bafa0136cb0beb89e95660a6c8659043b67",
+    "steps_executed": 9,
+    "steps_requested": 3,
+    "telemetry_root": "0dca8b827f2d7dd9ac2f0bd5ccc52defd268ed1a7a019bacb59125329a6aff9c",
+    "termination": "BOUNDED_STEPS_COMPLETE",
+    "vithia_latency": {
+      "max": 0.0,
+      "mean": 0.0,
+      "p50": 0.0,
+      "p95": 0.0
+    }
+  },
+  "same_backend": true,
+  "same_seeds": true,
+  "schema": "VITHIA_OPENJEV_AB_COMPARISON_V1",
+  "seeds": [
+    1,
+    2,
+    3
+  ],
+  "source_head": "8c8abb6a18aa2304d0ccbc777a387f2bf5cca84b",
+  "steps": 3,
+  "vithia": {
+    "action_distribution": {
+      "FIRE": 9,
+      "LEFT": 0,
+      "LEFTFIRE": 0,
+      "NOOP": 0,
+      "RIGHT": 0,
+      "RIGHTFIRE": 0
+    },
+    "action_stream_root": "f3a82a04fe2438e1f7ad3496db6071a4e5d19af7a6dc526e6de4f8b26197ccda",
+    "arm": "OPENJEV_VITHIA_L1",
+    "context_level": "L1",
+    "control_hz": 0.1876,
+    "control_loop_latency": {
+      "max": 7059.0716,
+      "mean": 5293.3708,
+      "p50": 4727.0579,
+      "p95": 7059.0716
+    },
+    "decider": "SYSTEM_ONE/OPENJEV_LOCAL",
+    "decision_latency": {
+      "max": 7057.1172,
+      "mean": 5291.4274,
+      "p50": 4725.3426,
+      "p95": 7057.1172
+    },
+    "environment": "ALE/SpaceInvaders-v5",
+    "errors": [],
+    "fallbacks": 0,
+    "fco_root": "a3af33dd6d9a09f215df50f3ec8f3dc4d498a0ec315623bccda80e5f7bae07f8",
+    "final_lives": 3,
+    "final_score": 0.0,
+    "first_step_root": "6b48d57ab0cd741a0248241798af7e3a1c12fdba3845fedeb1beeeac119c0c66",
+    "frame_index_root": "c7f9bec411e12e05c4dafa12d1316c38efc448da5408eb048fb38dcdb0b0fb75",
+    "input_bytes": {
+      "max": 516.0,
+      "mean": 503.0,
+      "p50": 515.0,
+      "p95": 516.0
+    },
+    "last_step_root": "774444884f404ad3338afc10ac263ee54831c7d257eec23616ef1af1136f4d50",
+    "mmr_peaks": [
+      "774444884f404ad3338afc10ac263ee54831c7d257eec23616ef1af1136f4d50",
+      "e8d8fd1ba2b040e496928f770f2913806630a44af6051074dcdcf5badb2345e5"
+    ],
+    "mmr_root": "51938d476cff59fd4d44adb4888ea03d17199e1e8aac052fc84d567cbccf4eb4",
+    "mmr_size": 9,
+    "model": "openjev",
+    "openjev_inference": {
+      "max": 7056.89,
+      "mean": 5291.2556,
+      "p50": 4725.22,
+      "p95": 7056.89
+    },
+    "preprocessor": "VITHIA_SPACE",
+    "raw_input_bytes": {
+      "max": 576.0,
+      "mean": 563.0,
+      "p50": 575.0,
+      "p95": 576.0
+    },
+    "run_id": "openjev_vithia_l1_f71e267476ef",
+    "run_proof": {
+      "MMR_ROOT": "51938d476cff59fd4d44adb4888ea03d17199e1e8aac052fc84d567cbccf4eb4",
+      "MMR_SIZE": 9,
+      "RUN_PROOF_VERIFY": "PASS",
+      "checked_steps": 9
+    },
+    "run_root": "b17cb1d24eeda6db26ac7a2857dd20790869cac80ad0490d9981761eefcfc90c",
+    "runtime": {
+      "OPENJEV_LOAD_STATE": "PASS",
+      "OPENJEV_LOCAL_PATH": "/Volumes/magicBLACKbox/openjev/openjev-MLX-4bit",
+      "OPENJEV_MODEL_HASH": "51fcc8fa97d41900988dcf3bef521ee3888b434bb4479b8b6969ed985639c679",
+      "OPENJEV_MODEL_ID": "openjev/openjev-MLX-4bit",
+      "OPENJEV_RUNTIME": "MLX",
+      "OPENJEV_SIZE": 15153274826,
+      "endpoint": "http://127.0.0.1:8768/v1/systemone",
+      "failure": null,
+      "manifest": "/Users/byron/projects/active/vithia-space-per-seat-v02/evidence/openjev/RUNTIME_MANIFEST.json"
+    },
+    "schema": "VITHIA_OPENJEV_AB_ARM_MANIFEST_V1",
+    "score_total": 0.0,
+    "seeds": [
+      1,
+      2,
+      3
+    ],
+    "snapshot_index_root": "b71f9f4cbcaa6ead53ddc2e561b4fe71928dd89cfd76a4b87def3e1b2224eac1",
+    "source_head": "8c8abb6a18aa2304d0ccbc777a387f2bf5cca84b",
+    "source_tree_hash": "9bbe0bafa0136cb0beb89e95660a6c8659043b67",
+    "steps_executed": 9,
+    "steps_requested": 3,
+    "telemetry_root": "99211919601ee576783db1e1155e80ff2dbb9612ed61ee9eea9cf45854aece73",
+    "termination": "BOUNDED_STEPS_COMPLETE",
+    "vithia_latency": {
+      "max": 0.0218,
+      "mean": 0.0136,
+      "p50": 0.0121,
+      "p95": 0.0218
+    }
+  }
+}
