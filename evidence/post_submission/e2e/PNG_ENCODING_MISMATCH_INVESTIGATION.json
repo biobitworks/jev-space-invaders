@@ -1,0 +1,43 @@
+{
+  "PIL": "12.0.0",
+  "decoded_committed_png_pixels_equal_generated_frames": 240,
+  "decompressed_idat_stream_equal_frames": 240,
+  "does_not_change": "ENVIRONMENT_REPLAY verdict of the strict contract stays FAIL",
+  "finding": "ENCODER_DRIFT_ONLY",
+  "frame0_png_chunks": {
+    "committed": [
+      [
+        "IHDR",
+        13
+      ],
+      [
+        "IDAT",
+        874
+      ],
+      [
+        "IEND",
+        0
+      ]
+    ],
+    "regenerated": [
+      [
+        "IHDR",
+        13
+      ],
+      [
+        "IDAT",
+        927
+      ],
+      [
+        "IEND",
+        0
+      ]
+    ]
+  },
+  "frames": 240,
+  "png_bytes_equal_frames": 0,
+  "proposal_not_applied": "A v2 step-hash contract defined over raw RGB (not PNG bytes) would be encoder-independent; it must be adopted prospectively, not retroactively.",
+  "raw_rgb_hash_equal_frames": 240,
+  "schema": "PNG_ENCODING_MISMATCH_INVESTIGATION_V1",
+  "zlib_runtime": "1.3.1"
+}
