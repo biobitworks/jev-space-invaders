@@ -35,6 +35,38 @@ L.SCHEMAS["WatchOccurrenceFCO_V1"] = {"schema", "session_id", "atom_fco_sha256",
 
 ONTOLOGY = ["PUBLISH_CLAIM_REPLAY_COMPLETE", "PUBLISH_CLAIM_ARTIFACT_VERIFIED_ONLY", "WITHHOLD_ALL_TENKI_CLAIMS"]
 SIG_DOMAIN = b"VITHIA_FCG_CHECKPOINT_ROOT_V1\0"
+TIER = {ONTOLOGY[2]: 0, ONTOLOGY[1]: 1, ONTOLOGY[0]: 2}
+# Frozen prompt profiles: identical text for EVERY lane (Ollama/JEV/OpenJEV). Hashed and recorded in each DecisionFCO.
+# neutral_v1 reproduces the wording used in the first rehearsal (no tier rules stated); explicit_v1 states the rule.
+PROMPT_PROFILES = {
+    "neutral_v1": {"instructions": "Choose exactly one action.", "criteria": {a: a for a in ONTOLOGY}},
+    "explicit_v1": {"instructions": ("Choose exactly one action. Rule: choose an action only if verification_status shows the evidence it claims as PASS; "
+                                     "if artifact_reconstruction is not PASS choose WITHHOLD_ALL_TENKI_CLAIMS; claim replay only if environment_replay is PASS."),
+                    "criteria": {ONTOLOGY[0]: "Claim that environment replay reproduced the submitted playthrough (requires environment_replay=PASS).",
+                                 ONTOLOGY[1]: "Claim only artifact verification (requires artifact_reconstruction=PASS); no replay claim.",
+                                 ONTOLOGY[2]: "Publish no Tenki verification claim."}},
+}
+
+
+def prompt_sha(profile: str) -> str:
+    return L.sha(L.canonical(PROMPT_PROFILES[profile]))
+
+
+def parse_lanes(spec: str) -> list[dict]:
+    """'scripted,ollama:llama3.2:3b,ollama:hf.co/x:Q4,openjev' -> lanes; every lane sees the same verified context."""
+    lanes, seen = [], set()
+    for tok in [t.strip() for t in spec.split(",") if t.strip()]:
+        kind, _, model = tok.partition(":")
+        if kind not in ("scripted", "ollama", "openjev", "jev", "skip"):
+            raise Stop(f"LANES=FAIL: unknown decider {kind!r}")
+        name = re.sub(r"[^A-Za-z0-9_.-]", "_", tok)[:60]
+        if name in seen:
+            raise Stop(f"LANES=FAIL: duplicate lane {tok!r}")
+        seen.add(name)
+        lanes.append({"kind": kind, "model": model or None, "name": name})
+    if not lanes:
+        raise Stop("LANES=FAIL: no lanes given")
+    return lanes
 
 
 class Stop(Exception):
@@ -320,37 +352,54 @@ def policy_scripted(v: dict) -> str:
     return ONTOLOGY[1] if v["artifact_reconstruction"] == "PASS" else ONTOLOGY[2]
 
 
-def run_decider(kind: str, status: dict, env: dict) -> dict:
-    """No silent fallback: an unavailable requested decider is BLOCKED, not replaced."""
+def openjev_token(env: dict) -> str:
+    tf = Path.home() / ".openjev" / "token"
+    return env.get("OPENJEV_TOKEN") or (tf.read_text().strip() if tf.exists() else "")
+
+
+def run_decider(kind: str, status: dict, env: dict, profile: str = "neutral_v1") -> dict:
+    """No silent fallback: an unavailable requested decider is BLOCKED, not replaced. Same frozen prompt for every lane."""
     t0 = time.perf_counter()
+    prof = PROMPT_PROFILES[profile]
+    meta = {"prompt_profile": profile, "prompt_sha256": prompt_sha(profile)}
     if kind == "skip":
-        return {"status": "NOT_EXECUTED", "action": None, "provider": "none", "latency": 0.0}
+        return {"status": "NOT_EXECUTED", "action": None, "provider": "none", "latency": 0.0, **meta}
     if kind == "scripted":
         a = policy_scripted(status)
-        return {"status": "PASS", "action": a, "provider": "none", "latency": round((time.perf_counter() - t0) * 1000, 4)}
-    prompt = json.dumps({"actions": ONTOLOGY, "verification_status": status})
+        return {"status": "PASS", "action": a, "provider": "none", "latency": round((time.perf_counter() - t0) * 1000, 4), **meta}
     try:
         if kind == "ollama":
+            model = env.get("OLLAMA_MODEL", "llama3.2:3b")
+            actions = ONTOLOGY if all(k == v for k, v in prof["criteria"].items()) else prof["criteria"]
+            content = prof["instructions"] + " Reply JSON {\"action\": <one of the list>}.\n" + json.dumps({"actions": actions, "verification_status": status})
             req = urllib.request.Request(env.get("OLLAMA_BASE_URL", "http://127.0.0.1:11434") + "/api/chat", headers={"Content-Type": "application/json"},
-                                         data=json.dumps({"model": env.get("OLLAMA_MODEL", "llama3.2:3b"), "stream": False, "format": "json", "options": {"temperature": 0},
-                                                          "messages": [{"role": "user", "content": "Choose exactly one action. Reply JSON {\"action\": <one of the list>}.\n" + prompt}]}).encode())
+                                         data=json.dumps({"model": model, "stream": False, "format": "json", "options": {"temperature": 0},
+                                                          "messages": [{"role": "user", "content": content}]}).encode())
             cand = json.loads(json.loads(urllib.request.urlopen(req, timeout=180).read())["message"]["content"]).get("action")
-            prov = "ollama:" + env.get("OLLAMA_MODEL", "llama3.2:3b")
+            prov = "ollama:" + model
         elif kind in ("jev", "openjev"):
-            base, headers = ("https://api.typesafe.ai", {"Authorization": "Bearer " + env.get("TYPESAFE_API_KEY", "")}) if kind == "jev" else (env.get("OPENJEV_BASE_URL", "http://127.0.0.1:8765"), {})
-            if kind == "jev" and not env.get("TYPESAFE_API_KEY"):
-                return {"status": "BLOCKED", "action": None, "provider": "typesafe-jev", "latency": 0.0, "note": "TYPESAFE_API_KEY NOT_SET"}
+            if kind == "jev":
+                if not env.get("TYPESAFE_API_KEY"):
+                    return {"status": "BLOCKED", "action": None, "provider": "typesafe-jev", "latency": 0.0, "note": "TYPESAFE_API_KEY NOT_SET", **meta}
+                base, headers = "https://api.typesafe.ai", {"Authorization": "Bearer " + env["TYPESAFE_API_KEY"]}
+            else:
+                base, headers = env.get("OPENJEV_BASE_URL", "http://127.0.0.1:8765"), {}
+                tok = openjev_token(env)                       # local shim bearer token (~/.openjev/token); never logged or stored
+                if tok:
+                    headers["Authorization"] = "Bearer " + tok
             body = {"state": {"verification_status": status}, "model": "jev-latest" if kind == "jev" else "openjev",
-                    "questions": {"action": {"type": "choice", "instructions": "Pick the highest claim tier the verification status supports.", "criteria": {a: a for a in ONTOLOGY}}}}
-            req = urllib.request.Request(base + "/v1/systemone", data=json.dumps(body).encode(), headers={"Content-Type": "application/json", **headers})
-            cand = json.loads(urllib.request.urlopen(req, timeout=120).read())["answers"]["action"]["choice"]
-            prov = "typesafe-jev" if kind == "jev" else "openjev-local"
+                    "questions": {"action": {"type": "choice", "instructions": prof["instructions"], "criteria": prof["criteria"]}}}
+            req = urllib.request.Request(base + "/v1/systemone", data=json.dumps(body).encode(), headers={"Content-Type": "application/json", **headers}, method="POST")
+            resp = json.loads(urllib.request.urlopen(req, timeout=180).read())
+            cand = resp["answers"]["action"]["choice"]
+            prov = ("typesafe-jev:" if kind == "jev" else "openjev-local:") + str(resp.get("model"))
         else:
-            return {"status": "BLOCKED", "action": None, "provider": kind, "latency": 0.0, "note": "unknown decider"}
+            return {"status": "BLOCKED", "action": None, "provider": kind, "latency": 0.0, "note": "unknown decider", **meta}
     except Exception as e:  # noqa: BLE001
-        return {"status": "BLOCKED", "action": None, "provider": kind, "latency": 0.0, "note": f"{type(e).__name__}"}
+        code = getattr(e, "code", "")
+        return {"status": "BLOCKED", "action": None, "provider": kind, "latency": 0.0, "note": f"{type(e).__name__}{':' + str(code) if code else ''}", **meta}
     lat = round((time.perf_counter() - t0) * 1000, 1)
-    return {"status": "PASS" if cand in ONTOLOGY else "FAIL", "action": cand if cand in ONTOLOGY else None, "provider": prov, "latency": lat}
+    return {"status": "PASS" if cand in ONTOLOGY else "FAIL", "action": cand if cand in ONTOLOGY else None, "provider": prov, "latency": lat, **meta}
 
 
 # ---------------------------------------------------------------- claim guard
@@ -380,9 +429,12 @@ def guard_receipt(r: dict) -> None:
 # ---------------------------------------------------------------- session
 class Session:
     def __init__(self, root: Path, source_dir: Path, seed: dict, seed_root: str, session_id: str, mitosis, tenki, identity: dict,
-                 decider: str = "scripted", env: dict | None = None, repo_url: str = "", review_pr: str | None = None, post_review: bool = False):
+                 decider: str = "scripted", env: dict | None = None, repo_url: str = "", review_pr: str | None = None, post_review: bool = False,
+                 lanes: list | None = None, profile: str = "neutral_v1"):
         self.root, self.source_dir, self.seed, self.seed_root, self.sid = Path(root), Path(source_dir), seed, seed_root, session_id
         self.m, self.t, self.ident, self.decider, self.env = mitosis, tenki, identity, decider, env or {}
+        self.lanes = lanes or [{"kind": decider, "model": None, "name": decider}]
+        self.profile = profile
         self.repo_url, self.review_pr, self.post_review = repo_url, review_pr, post_review
         self.sdir = self.root / "evidence/fcg_sessions" / session_id
         self.sdir.mkdir(parents=True, exist_ok=True)
@@ -524,29 +576,45 @@ class Session:
             "g_star": "NOT_COMPUTED", "delta_g_star": "NOT_COMPUTED", "status_read_from": status["source"],
             "counterfactual_without_retrieved_memory": {"verification_status": counter}, "created_utc": L.utc()})
         self.r.update(verified_context_root=vroot)
-        d = run_decider(self.decider, status, self.env)
-        self.fco["decision"] = L.write_fco(self.sdir / "DECISION_FCO.json", {
-            "schema": "DecisionFCO_V1", "session_id": self.sid, "decider_type": self.decider.upper(), "provider": d["provider"], "input_context_root": vroot,
-            "action_ontology": ONTOLOGY, "selected_action": d["action"] or "NONE", "decision_latency_ms": d["latency"], "status": d["status"],
-            "output_sha256": L.sha((d["action"] or "NONE").encode()), "note": d.get("note", ""), "created_utc": L.utc()})
-        overreach = bool(d["action"]) and ((d["action"] == ONTOLOGY[0] and envr != "PASS") or (d["action"] != ONTOLOGY[2] and artifact != "PASS"))
-        exe = d["status"] == "PASS" and not overreach
-        self.fco["action"] = L.write_fco(self.sdir / "ACTION_EXECUTION_FCO.json", {
-            "schema": "ActionExecutionFCO_V1", "session_id": self.sid, "decision_fco_sha256": self.fco["decision"], "action": d["action"] or "NONE",
-            "executed": exe, "status": "PASS" if exe else ("NOT_EXECUTED" if d["status"] != "PASS" else "BLOCKED"), "created_utc": L.utc()})
-        self.fco["outcome"] = L.write_fco(self.sdir / "OUTCOME_FCO.json", {
-            "schema": "OutcomeFCO_V1", "session_id": self.sid, "action_execution_fco_sha256": self.fco["action"],
-            "outcome": "CLAIM_OVERREACH_REFUSED" if overreach else ("CLAIM_WITHIN_VERIFIED_CEILING" if exe else "NO_ACTION"),
-            "status": "PASS" if exe else ("BLOCKED" if overreach else "NOT_EXECUTED"), "created_utc": L.utc()})
+        ceiling = policy_scripted(status)
+        lane_recs = []
+        for i, ln in enumerate(self.lanes):
+            env_l = dict(self.env)
+            if ln["model"]:
+                env_l["OLLAMA_MODEL"] = ln["model"]
+            d = run_decider(ln["kind"], status, env_l, self.profile)     # every lane gets the SAME verified context and frozen prompt
+            sfx = "" if i == 0 else "__" + ln["name"]
+            overreach = bool(d["action"]) and ((d["action"] == ONTOLOGY[0] and envr != "PASS") or (d["action"] != ONTOLOGY[2] and artifact != "PASS"))
+            supported = "NOT_APPLICABLE" if not d["action"] else ("NO" if overreach else "YES")
+            dsha = L.write_fco(self.sdir / f"DECISION_FCO{sfx}.json", {
+                "schema": "DecisionFCO_V1", "session_id": self.sid, "decider_type": ln["kind"].upper(), "provider": d["provider"], "input_context_root": vroot,
+                "action_ontology": ONTOLOGY, "selected_action": d["action"] or "NONE", "decision_latency_ms": d["latency"], "status": d["status"],
+                "output_sha256": L.sha((d["action"] or "NONE").encode()), "note": d.get("note", ""), "lane": ln["name"], "prompt_profile": d["prompt_profile"],
+                "prompt_sha256": d["prompt_sha256"], "context_ceiling": ceiling, "supported_by_context": supported, "created_utc": L.utc()})
+            exe = d["status"] == "PASS" and not overreach
+            asha = L.write_fco(self.sdir / f"ACTION_EXECUTION_FCO{sfx}.json", {
+                "schema": "ActionExecutionFCO_V1", "session_id": self.sid, "decision_fco_sha256": dsha, "action": d["action"] or "NONE", "lane": ln["name"],
+                "executed": exe, "status": "PASS" if exe else ("NOT_EXECUTED" if d["status"] != "PASS" else "BLOCKED"), "created_utc": L.utc()})
+            osha = L.write_fco(self.sdir / f"OUTCOME_FCO{sfx}.json", {
+                "schema": "OutcomeFCO_V1", "session_id": self.sid, "action_execution_fco_sha256": asha, "lane": ln["name"],
+                "outcome": "CLAIM_OVERREACH_REFUSED" if overreach else ("CLAIM_WITHIN_VERIFIED_CEILING" if exe else "NO_ACTION"),
+                "status": "PASS" if exe else ("BLOCKED" if overreach else "NOT_EXECUTED"), "created_utc": L.utc()})
+            lane_recs.append({"lane": ln["name"], "kind": ln["kind"], "provider": d["provider"], "status": d["status"], "action": d["action"], "supported_by_context": supported,
+                              "latency_ms": d["latency"], "executed": exe, "note": d.get("note", ""), "input_context_root": vroot,
+                              "decision_fco_sha256": dsha, "action_execution_fco_sha256": asha, "outcome_fco_sha256": osha, "files_suffix": sfx})
+            if i == 0:
+                d0 = d; self.fco["decision"], self.fco["action"], self.fco["outcome"] = dsha, asha, osha
+        d = d0
         consumed = bool(text) and d["status"] == "PASS" and d["action"] != policy_scripted(counter)
         lb = "PASS_BOUNDED" if consumed else "NOT_ESTABLISHED"
         (self.sdir / "LOAD_BEARING_RECEIPT.json").write_bytes(L.canonical({
             "schema": "E2E_LOAD_BEARING_RECEIPT_V1", "session_id": self.sid, "causal_edge": ["MitosisVerificationAnchorFCO", "VithiaVerifiedContextFCO", "DecisionFCO"],
             "decision_with_memory": d["action"], "decision_without_memory": policy_scripted(counter), "verdict": lb,
             "scope": "BOUNDED: verification tier admitted by the retrieved memory", "created_utc": L.utc()}))
-        e3 = self.lin.append("FINAL_FCG_BREAKPOINT.json", [(self.rel(n), k, "fco") for n, k in (
-            ("VITHIA_VERIFIED_CONTEXT_FCO.json", "VithiaVerifiedContextFCO"), ("DECISION_FCO.json", "DecisionFCO"),
-            ("ACTION_EXECUTION_FCO.json", "ActionExecutionFCO"), ("OUTCOME_FCO.json", "OutcomeFCO"))] + [(self.rel("LOAD_BEARING_RECEIPT.json"), "LoadBearingReceipt", "receipt")])
+        lane_atoms = [(self.rel(f"{b}{x['files_suffix']}.json"), k, "fco") for x in lane_recs for b, k in (
+            ("DECISION_FCO", "DecisionFCO"), ("ACTION_EXECUTION_FCO", "ActionExecutionFCO"), ("OUTCOME_FCO", "OutcomeFCO"))]
+        e3 = self.lin.append("FINAL_FCG_BREAKPOINT.json", [(self.rel("VITHIA_VERIFIED_CONTEXT_FCO.json"), "VithiaVerifiedContextFCO", "fco")] + lane_atoms
+                             + [(self.rel("LOAD_BEARING_RECEIPT.json"), "LoadBearingReceipt", "receipt")])
         rows = self.lin.verify(self.seed["parent_fcg_root"])
         if any(x["verify_state"] != "PASS" for x in rows):
             raise Stop("FINAL_FCG_BP_VERIFY=FAIL")
@@ -570,7 +638,10 @@ class Session:
                 fuid = rt["write"]["universal_id"]
                 ref["mitosis_universal_id_address"] = fuid
             L.write_fco(self.sdir / "FINAL_CHECKPOINT_REFERENCE_FCO.json", ref)
-        self.r.update(decider=self.decider.upper() if d["status"] == "PASS" else f"{self.decider.upper()}:{d['status']}", decision_root=self.fco["decision"], action_root=self.fco["action"],
+        dk = self.lanes[0]["kind"].upper()
+        self.r.update(lanes=[{k: v for k, v in x.items() if k != "files_suffix"} for x in lane_recs], prompt_profile=self.profile, prompt_sha256=prompt_sha(self.profile),
+                      input_context_root_shared=("YES" if len({x["input_context_root"] for x in lane_recs}) == 1 else "NO"), context_ceiling=ceiling,
+                      decider=dk if d["status"] == "PASS" else f"{dk}:{d['status']}", decision_root=self.fco["decision"], action_root=self.fco["action"],
                       outcome_root=self.fco["outcome"], final_fcg_breakpoint=e3["bp_id"], final_fcg_mmr_root=final_root, final_fcg_mmr_size=e3["mmr_size"],
                       checkpoint_signature_state=sigstate, final_mitosis_universal_id=fuid, portable_agent_memory_load_bearing=lb,
                       load_bearing_consumption=({"consumed_in_decision": True} if consumed else None), parent_chain_verify="PASS",
@@ -673,6 +744,8 @@ def main() -> int:
         p.add_argument("--identity-pub-file"); p.add_argument("--env-file")
         p.add_argument("--mitosis", default="real", choices=["real", "sim", "off"]); p.add_argument("--tenki", default="real", choices=["real", "sim", "off"])
         p.add_argument("--decider", default="scripted", choices=["scripted", "ollama", "openjev", "jev", "skip"])
+        p.add_argument("--deciders", help="comma-separated lanes, e.g. scripted,ollama:llama3.2:3b,openjev (all share one verified context)")
+        p.add_argument("--prompt-profile", default="neutral_v1", choices=sorted(PROMPT_PROFILES))
         p.add_argument("--tenki-commit"); p.add_argument("--commit-hook", help="command that commits+pushes the session dir and prints the pushed commit sha"); p.add_argument("--review-pr"); p.add_argument("--post-review-comment", action="store_true")
     w = sub.add_parser("watch")
     w.add_argument("--session-id", required=True); w.add_argument("--watch-dir", required=True); w.add_argument("--parent-root", required=True)
@@ -696,7 +769,9 @@ def main() -> int:
         ten = SimTenki() if a.tenki == "sim" else (TenkiReal(env.get("TENKI_API_KEY", "")) if a.tenki == "real" else None)
         pub = Path(a.identity_pub_file).read_text() if a.identity_pub_file else None
         ident = make_identity(a.identity_mode, a.session_id, pub)
-        S = Session(L.ROOT, Path(a.source_dir), seed, sroot, a.session_id, mit, ten, ident, a.decider, env, seed["resolvers"].get("repository", ""), a.review_pr, a.post_review_comment)
+        lanes = parse_lanes(a.deciders) if a.deciders else None
+        S = Session(L.ROOT, Path(a.source_dir), seed, sroot, a.session_id, mit, ten, ident, (lanes[0]["kind"] if lanes else a.decider), env, seed["resolvers"].get("repository", ""),
+                    a.review_pr, a.post_review_comment, lanes=lanes, profile=a.prompt_profile)
         st = S.phase1()
         for k, v in st.items():
             print(f"{k.upper()}={v}")

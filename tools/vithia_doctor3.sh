@@ -21,12 +21,12 @@ LOG="$LOGDIR/doctor3-$(date +%Y%m%d-%H%M%S).log"; : > "$LOG"
 SECRET_VARS=(MI_API_KEY TENKI_API_KEY TYPESAFE_API_KEY ANTHROPIC_API_KEY OPENAI_API_KEY)
 
 # ---------- args ----------
-SEED_FCO=""; SEED_ROOT=""; RESOLVERS=(); SIM=0; NONINT=0; ENV_FILE=""; IDMODE=""; IDPUB=""; DECIDER=""
+SEED_FCO=""; SEED_ROOT=""; RESOLVERS=(); SIM=0; NONINT=0; ENV_FILE=""; IDMODE=""; IDPUB=""; DECIDER=""; DECIDERS=""; PROFILE=""
 REMOTE=""; WATCH=""; PARENT_ROOT=""; SESSION_ID=""; REVIEW_PR=""; COMMIT_HOOK_SID=""; PASSTHRU=()
 while (($#)); do case "$1" in
   --seed-fco) SEED_FCO="$2"; shift 2;;  --seed-root) SEED_ROOT="$2"; shift 2;;  --resolver-dir) RESOLVERS+=("$2"); shift 2;;
   --simulate) SIM=1; shift;;  --non-interactive) NONINT=1; shift;;  --env-file) ENV_FILE="$2"; shift 2;;
-  --identity-mode) IDMODE="$2"; shift 2;;  --identity-pub-file) IDPUB="$2"; shift 2;;  --decider) DECIDER="$2"; shift 2;;
+  --identity-mode) IDMODE="$2"; shift 2;;  --identity-pub-file) IDPUB="$2"; shift 2;;  --decider) DECIDER="$2"; shift 2;;  --deciders) DECIDERS="$2"; shift 2;;  --prompt-profile) PROFILE="$2"; shift 2;;
   --remote) REMOTE="$2"; shift 2;;  --watch) WATCH="$2"; shift 2;;  --parent-root) PARENT_ROOT="$2"; shift 2;;
   --session-id) SESSION_ID="$2"; shift 2;;  --review-pr) REVIEW_PR="$2"; shift 2;;  --_commit-hook) COMMIT_HOOK_SID="$2"; shift 2;;
   -h|--help) sed -n 2,16p "$SELF"; exit 0;;  *) echo "unknown arg: $1" >&2; exit 2;; esac; done
@@ -173,6 +173,7 @@ PY
 fi
 
 # ---------- 5. decider + Tenki review preferences ----------
+if [[ -n "$DECIDERS" && -z "$DECIDER" ]]; then DECIDER=scripted; fi
 if [[ -z "$DECIDER" ]]; then DECIDER="$(ask_choose "Decider (same Vithia verified-context interface for all; no silent fallback)" scripted "local Ollama" OpenJEV "hosted JEV" "skip decision")"
   case "$DECIDER" in "local Ollama") DECIDER=ollama;; OpenJEV) DECIDER=openjev;; "hosted JEV") DECIDER=jev;; "skip decision") DECIDER=skip;; esac; fi
 POST=(); if [[ -n "$REVIEW_PR" ]] && ((! SIM)) && ((! NONINT)); then gum confirm "Post an @tenki-reviewer request on PR #$REVIEW_PR? (visible to others; uses review credit)" && POST=(--post-review-comment); fi
@@ -184,7 +185,7 @@ PROV=(--mitosis real --tenki real); ((SIM)) && PROV=(--mitosis sim --tenki sim)
 HOOK=(); ((SIM)) || HOOK=(--commit-hook "env VITHIA_BRANCH=$BRANCH bash $SELF --_commit-hook $SID")
 export PYTHONUNBUFFERED=1
 "$PY" tools/vithia_fcg.py run "${SEED_ARGS[@]}" --source-dir "$SRC" --session-id "$SID" --identity-mode "$IDMODE" ${IDPUB:+--identity-pub-file "$IDPUB"} \
-  --decider "$DECIDER" "${PROV[@]}" ${HOOK[@]+"${HOOK[@]}"} ${REVIEW_PR:+--review-pr "$REVIEW_PR"} ${POST[@]+"${POST[@]}"} ${ENV_FILE:+--env-file "$ENV_FILE"} 2> >(while IFS= read -r l; do echo "$(redact "$l")" >>"$LOG"; done) | tee -a "$LOG"
+  --decider "$DECIDER" ${DECIDERS:+--deciders "$DECIDERS"} ${PROFILE:+--prompt-profile "$PROFILE"} "${PROV[@]}" ${HOOK[@]+"${HOOK[@]}"} ${REVIEW_PR:+--review-pr "$REVIEW_PR"} ${POST[@]+"${POST[@]}"} ${ENV_FILE:+--env-file "$ENV_FILE"} 2> >(while IFS= read -r l; do echo "$(redact "$l")" >>"$LOG"; done) | tee -a "$LOG"
 RC=${PIPESTATUS[0]}
 [[ -n "$PUBTMP" ]] && rm -f "$PUBTMP"
 ((RC == 0)) || die "pipeline stopped (exit $RC): see $LOG — nothing after the failing integrity check was executed"

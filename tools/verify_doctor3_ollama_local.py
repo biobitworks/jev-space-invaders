@@ -88,11 +88,16 @@ def wiring_check(F) -> dict:
     return {"state": "PASS" if ok else "FAIL", "static": static, "behaviour": behaviour}
 
 
-def run_session(model: str, sid: str, env_base: dict) -> dict:
+def run_session(model: str | None, sid: str, env_base: dict, lanes: str | None = None, profile: str | None = None) -> dict:
     env = {k: v for k, v in env_base.items() if k not in CRED_VARS}          # deliberately no credentials
-    env.update(OLLAMA_BASE_URL=BASE, OLLAMA_MODEL=model)
-    p = subprocess.run(["bash", "tools/vithia_doctor3.sh", "--seed-fco", SEED_REL, "--non-interactive", "--identity-mode", "generate",
-                        "--decider", "ollama", "--session-id", sid], cwd=ROOT, env=env, capture_output=True, text=True)
+    env.update(OLLAMA_BASE_URL=BASE)
+    if model:
+        env["OLLAMA_MODEL"] = model
+    cmd = ["bash", "tools/vithia_doctor3.sh", "--seed-fco", SEED_REL, "--non-interactive", "--identity-mode", "generate", "--session-id", sid]
+    cmd += ["--deciders", lanes] if lanes else ["--decider", "ollama"]
+    if profile:
+        cmd += ["--prompt-profile", profile]
+    p = subprocess.run(cmd, cwd=ROOT, env=env, capture_output=True, text=True)
     return {"rc": p.returncode, "out": p.stdout, "err": p.stderr[-600:]}
 
 
@@ -127,9 +132,85 @@ def verify_session(F, L, sid: str) -> dict:
             "scan": L.scan_paths(list(sd.glob("*.json")))["state"], "mmr_size": r["final_fcg_mmr_size"]}
 
 
+def openjev_precheck() -> dict:
+    import vithia_fcg as F
+    base = os.environ.get("OPENJEV_BASE_URL")
+    open_ports = []
+    if not base:
+        for port in range(8765, 8776):
+            with socket.socket() as sk:
+                sk.settimeout(0.3)
+                if sk.connect_ex(("127.0.0.1", port)) == 0:
+                    open_ports.append(port)
+    return {"OPENJEV_BASE_URL_env": base or "UNSET(default http://127.0.0.1:8765)", "loopback_ports_listening_8765_8775": open_ports,
+            "bearer_token_present": bool(F.openjev_token(dict(os.environ))),
+            "hint": "the local shim picks the first free port from 8765; export OPENJEV_BASE_URL if it is not 8765"}
+
+
+def lanes_mode(a, R, F, L, host, tags) -> int:
+    lanes = F.parse_lanes(a.lanes)
+    R["LANES_REQUESTED"] = [x["name"] for x in lanes]; R["PROMPT_PROFILE"] = a.prompt_profile
+    by = {m["name"]: m for m in tags}
+    pre = {}
+    for ln in lanes:
+        if ln["kind"] == "ollama":
+            m = ln["model"]
+            if not m:
+                R["BLOCKED"] = "ollama lane without an explicit model (use ollama:<model>)"; print_report(R); return 2
+            if m in by and is_cloud(by[m]):
+                R["BLOCKED"] = f"lane model {m} is cloud-tagged; refusing"; print_report(R); return 2
+            pre[ln["name"]] = {"installed": m in by, "smoke": direct_smoke(m)["state"] if m in by else "NOT_INSTALLED"}
+        elif ln["kind"] == "openjev":
+            pre[ln["name"]] = openjev_precheck()
+    R["LANE_PRECHECKS"] = pre
+    if any(x["kind"] == "ollama" for x in lanes):
+        w = wiring_check(F); R["OLLAMA_ADAPTER_WIRING"] = w["state"]
+        if w["state"] != "PASS":
+            R["BLOCKED"] = "adapter wiring check failed; Doctor3 not run"; print_report(R); return 2
+    sid = f"FCG-LANES-{re.sub(r'[^A-Za-z0-9]', '', host)[:14]}-{time.strftime('%Y%m%dT%H%M%SZ', time.gmtime())}"
+    run = run_session(None, sid, dict(os.environ), lanes=a.lanes, profile=a.prompt_profile)
+    if run["rc"] != 0:
+        R["BLOCKED"] = f"Doctor3 exited {run['rc']}: {run['err'][:200]}"; print_report(R); return 2
+    v = verify_session(F, L, sid); r = v["receipt"]
+    R.update(SEED_RESOLUTION=kv(run["out"], "SEED_RESOLUTION"), SOURCE_PIN=r["source_pin"], VITHIA_PREPROCESSING=r["vithia_preprocessing"], PRE_EXEC_BP=r["pre_exec_breakpoint"],
+             PRE_EXEC_MMR_ROOT=r["pre_exec_mmr_root"], PRE_EXEC_VERIFY=r["pre_exec_verify"], OPERATOR_IDENTITY_MODE=r["operator_identity_mode"],
+             PUBLIC_KEY_FINGERPRINT=r["operator_public_key_fingerprint"], PRIVATE_KEY_MODE=v["key_mode"], PRIVATE_KEY_COMMITTED=v["key_committed"], PRIVATE_KEY_IN_FCO=v["key_in_fco"],
+             MITOSIS_AUTH=r["mitosis_auth"], TENKI_AUTH=r["tenki_auth"], HOSTED_JEV="NOT_EXECUTED", VERIFIED_CONTEXT_ROOT=r["verified_context_root"],
+             CONTEXT_CEILING=r["context_ceiling"], SAME_INPUT_CONTEXT_ROOT_ACROSS_LANES=r["input_context_root_shared"], FINAL_FCG_BP=r["final_fcg_breakpoint"],
+             FINAL_FCG_ROOT=r["final_fcg_mmr_root"], FINAL_MMR_SIZE=v["mmr_size"], PARENT_CHAIN_VERIFY=v["chain"], FINAL_FCG_BP_VERIFY=v["final_bp_verify"],
+             CHECKPOINT_SIGNATURE_STATE=r["checkpoint_signature_state"], CHECKPOINT_SIGNATURE_VERIFY=v["sig_verify"],
+             SECRET_SCAN=("PASS" if (v["scan"] == "PASS" and sh(sys.executable, "scripts/secret_scan.py").returncode == 0) else "FAIL"))
+    R["LANES"] = [{"lane": x["lane"], "provider": x["provider"], "status": x["status"], "action": x["action"], "supported_by_context": x["supported_by_context"],
+                   "latency_ms": x["latency_ms"], "executed": x["executed"], "note": x["note"], "input_context_root": x["input_context_root"][:16] + "…",
+                   "decision_fco_sha256": x["decision_fco_sha256"], "outcome_fco_sha256": x["outcome_fco_sha256"]} for x in r["lanes"]]
+    R["LANES_CLAIM_GATE_INTEGRITY"] = "PASS" if not any(x["supported_by_context"] == "NO" and x["executed"] for x in r["lanes"]) else "FAIL"
+    infra = [R["PARENT_CHAIN_VERIFY"] == "PASS", R["FINAL_FCG_BP_VERIFY"] == "PASS", R["CHECKPOINT_SIGNATURE_VERIFY"] == "PASS", R["SECRET_SCAN"] == "PASS",
+             R["PRE_EXEC_VERIFY"] == "PASS", R["PRIVATE_KEY_MODE"] == "600", R["PRIVATE_KEY_COMMITTED"] == "NO", R["PRIVATE_KEY_IN_FCO"] == "NO", R["SOURCE_PIN"] == "PASS",
+             R["SEED_ROOT_MATCH"] == "PASS", R["SAME_INPUT_CONTEXT_ROOT_ACROSS_LANES"] == "YES", R["LANES_CLAIM_GATE_INTEGRITY"] == "PASS"]
+    same_host = a.previous_host.lower() in host.lower() or a.previous_host.lower() in socket.gethostname().lower()
+    R["INVARIANTS_MATCH_PREVIOUS_RUN"] = {"seed_root": R["SEED_ROOT"] == EXPECTED_SEED_ROOT, "source_commit": R["SOURCE_COMMIT"] == EXPECTED_SOURCE, "final_root_may_differ": True}
+    R["DOCTOR3_CROSS_MACHINE_PORTABILITY"] = ("PASS_BOUNDED" if (all(infra) and not same_host) else
+                                             (f"NOT_ESTABLISHED_SAME_HOST_AS_PREVIOUS_RUN (infrastructure checks: {'PASS' if all(infra) else 'FAIL'})" if same_host else "FAIL"))
+    R["NOTE"] = "Lane decisions are recorded, not ranked; an unsupported lane decision is a model finding, and the claim gate refusing it is the intended behaviour."
+    rep = ROOT / "evidence/fcg_sessions" / sid / "PORTABILITY_VERIFICATION_REPORT.json"
+    L.scan_text(json.dumps(R), "portability report"); rep.write_text(json.dumps(R, indent=2, sort_keys=True) + "\n")
+    R["COMMIT"] = R["PUSH"] = "NOT_ATTEMPTED"
+    if not a.no_push:
+        sh("git", "add", "--", str(rep.relative_to(ROOT)))
+        c = sh("git", "commit", "-q", "-m", f"evidence: doctor3 lane comparison report ({sid})")
+        R["COMMIT"] = sh("git", "rev-parse", "HEAD").stdout.strip() if c.returncode == 0 else f"FAILED:{c.stderr.strip()[:100]}"
+        pu = sh("git", "push", "-q", "origin", a.expected_branch); sh("git", "fetch", "origin")
+        R["PUSH"] = "PASS" if pu.returncode == 0 else f"FAILED:{pu.stderr.strip()[:100]}"
+        R["FINAL_ORIGIN_PARITY"] = "PASS" if sh("git", "rev-parse", "HEAD").stdout == sh("git", "rev-parse", f"origin/{a.expected_branch}").stdout else "FAIL"
+    print_report(R)
+    return 0 if all(infra) else 1
+
+
 def main() -> int:
     ap = argparse.ArgumentParser()
     ap.add_argument("--model"); ap.add_argument("--previous-host", default="magicPRObox"); ap.add_argument("--expected-branch", default=EXPECTED_BRANCH)
+    ap.add_argument("--lanes", help="one session, many deciders on one shared verified context, e.g. scripted,ollama:llama3.2:3b,openjev")
+    ap.add_argument("--prompt-profile", default="neutral_v1")
     ap.add_argument("--setup-venv", action="store_true"); ap.add_argument("--no-second-model", action="store_true"); ap.add_argument("--no-push", action="store_true")
     a = ap.parse_args()
     R: dict = {}
@@ -177,6 +258,8 @@ def main() -> int:
     except Exception as e:  # noqa: BLE001
         R["OLLAMA_SERVER"] = f"DOWN:{type(e).__name__}"; R["BLOCKED"] = "local Ollama server not reachable"; print_report(R); return 2
     R["OLLAMA_MODELS_AVAILABLE"] = [m["name"] for m in tags]
+    if a.lanes:
+        return lanes_mode(a, R, F, L, host, tags)
     models = choose_models(tags, a.model)
     if not models:
         R["BLOCKED"] = "no suitable already-installed non-cloud model"; print_report(R); return 2
@@ -251,7 +334,7 @@ def print_report(R: dict) -> None:
              "PRE_EXEC_MMR_ROOT", "PRE_EXEC_VERIFY", "DECIDER", "DECISION_PROVIDER", "OLLAMA_DECIDER", "DECISION_ACTION", "DECISION_STATUS", "DECISION_CEILING_FROM_CONTEXT",
              "DECISION_SUPPORTED_BY_CONTEXT", "DECISION_FCO", "DECISION_FCO_SHA256", "ACTION_EXECUTION_FCO", "ACTION_EXECUTION_FCO_SHA256", "OUTCOME_FCO", "OUTCOME_FCO_SHA256",
              "FINAL_FCG_BP", "FINAL_FCG_ROOT", "FINAL_MMR_SIZE", "PARENT_CHAIN_VERIFY", "FINAL_FCG_BP_VERIFY", "CHECKPOINT_SIGNATURE_STATE", "CHECKPOINT_SIGNATURE_VERIFY", "SECRET_SCAN",
-             "INVARIANTS_MATCH_PREVIOUS_RUN", "SECOND_MODEL_SESSIONS", "DOCTOR3_CROSS_MACHINE_PORTABILITY", "COMMIT", "PUSH", "FINAL_ORIGIN_PARITY", "BLOCKED"]
+             "PROMPT_PROFILE", "LANES_REQUESTED", "LANE_PRECHECKS", "CONTEXT_CEILING", "VERIFIED_CONTEXT_ROOT", "SAME_INPUT_CONTEXT_ROOT_ACROSS_LANES", "LANES", "LANES_CLAIM_GATE_INTEGRITY", "NOTE", "INVARIANTS_MATCH_PREVIOUS_RUN", "SECOND_MODEL_SESSIONS", "DOCTOR3_CROSS_MACHINE_PORTABILITY", "COMMIT", "PUSH", "FINAL_ORIGIN_PARITY", "BLOCKED"]
     for k in order:
         if k in R:
             v = R[k]

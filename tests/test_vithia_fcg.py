@@ -30,10 +30,10 @@ def world(tmp_path):
     return dict(src=src, seed=seed, seed_file=sf, out=out, root=L.sha(L.canonical(seed)), tmp=tmp_path)
 
 
-def session(w, mit=None, ten=None, mode="generate", decider="scripted", sid="S1"):
+def session(w, mit=None, ten=None, mode="generate", decider="scripted", sid="S1", lanes=None, env=None, profile="neutral_v1"):
     seed, root = F.load_seed(w["seed_file"], "sha256:" + w["root"])
     ident = F.make_identity(mode, sid, key_dir=w["tmp"] / "keys")
-    return F.Session(w["out"], w["src"], seed, root, sid, mit or F.SimMitosis(), (F.SimTenki() if ten is None else (None if ten is False else ten)), ident, decider, {}, "https://example.com/r.git")
+    return F.Session(w["out"], w["src"], seed, root, sid, mit or F.SimMitosis(), (F.SimTenki() if ten is None else (None if ten is False else ten)), ident, decider, env or {}, "https://example.com/r.git", lanes=lanes, profile=profile)
 
 
 def run_all(s):
@@ -174,3 +174,86 @@ def test_watch_appends_successors_without_mutating(world):
     assert len(res) == 2 and res[0]["mmr_root"] != res[1]["mmr_root"]
     lin = F.Lineage(world["out"], world["out"] / "evidence/fcg_sessions/W1/watch", "VITHIA-FCG-WATCH-W1", "ab" * 32)
     assert [r["verify_state"] for r in lin.verify("ab" * 32)] == ["PASS", "PASS"]
+
+
+# ---------------------------------------------------------------- lanes / prompt profiles / OpenJEV contract
+import http.server, socketserver
+
+
+def serve(handler):
+    """Tiny local HTTP stub; handler(path, headers, body_dict) -> (status, json_obj)."""
+    seen = []
+    class H(http.server.BaseHTTPRequestHandler):
+        def do_POST(self):
+            body = json.loads(self.rfile.read(int(self.headers["Content-Length"])))
+            seen.append({"path": self.path, "auth": self.headers.get("Authorization"), "body": body})
+            code, obj = handler(self.path, self.headers, body)
+            raw = json.dumps(obj).encode(); self.send_response(code); self.send_header("Content-Type", "application/json")
+            self.send_header("Content-Length", str(len(raw))); self.end_headers(); self.wfile.write(raw)
+        def log_message(self, *a): pass
+    srv = socketserver.TCPServer(("127.0.0.1", 0), H); threading.Thread(target=srv.serve_forever, daemon=True).start()
+    return f"http://127.0.0.1:{srv.server_address[1]}", srv, seen
+
+
+def ollama_stub(by_model):
+    return serve(lambda p, h, b: (200, {"model": b["model"], "message": {"content": json.dumps({"action": by_model[b["model"]]})}}))
+
+
+def test_parse_lanes_handles_colons_and_rejects_bad_specs():
+    ls = F.parse_lanes("scripted,ollama:hf.co/Liquid/LFM:Q4_K_M,ollama:qwen3:1.7b,openjev")
+    assert [x["kind"] for x in ls] == ["scripted", "ollama", "ollama", "openjev"] and ls[1]["model"] == "hf.co/Liquid/LFM:Q4_K_M" and ls[2]["model"] == "qwen3:1.7b"
+    assert all("/" not in x["name"] and ":" not in x["name"] for x in ls)
+    with pytest.raises(F.Stop, match="duplicate"): F.parse_lanes("scripted,scripted")
+    with pytest.raises(F.Stop, match="unknown decider"): F.parse_lanes("gpt")
+
+def test_lanes_share_one_context_root_and_overreach_is_blocked_per_lane(world):
+    base, srv, seen = ollama_stub({"overclaimer": F.ONTOLOGY[0], "careful": F.ONTOLOGY[2]})
+    lanes = F.parse_lanes("scripted,ollama:overclaimer,ollama:careful,skip")
+    s = session(world, ten=F.SimTenki(replay="FAIL", first_mismatch={"frame": 0, "kind": "PNG_BYTES"}), lanes=lanes, env={"OLLAMA_BASE_URL": base}); r = run_all(s); srv.shutdown()
+    L_ = {x["lane"]: x for x in r["lanes"]}
+    assert r["input_context_root_shared"] == "YES" and len({x["input_context_root"] for x in r["lanes"]}) == 1
+    assert r["context_ceiling"] == F.ONTOLOGY[1]                                       # artifact PASS, replay FAIL
+    assert L_["scripted"]["action"] == F.ONTOLOGY[1] and L_["scripted"]["supported_by_context"] == "YES" and L_["scripted"]["executed"]
+    assert L_["ollama_overclaimer"]["supported_by_context"] == "NO" and not L_["ollama_overclaimer"]["executed"]
+    assert L_["ollama_careful"]["supported_by_context"] == "YES" and L_["skip"]["supported_by_context"] == "NOT_APPLICABLE"
+    oc, _ = L.read_fco(s.sdir / "OUTCOME_FCO__ollama_overclaimer.json"); assert oc["status"] == "BLOCKED" and oc["outcome"] == "CLAIM_OVERREACH_REFUSED"
+    ledger = json.loads((s.sdir / "FCG_MMR_LEDGER.json").read_bytes()); fin = json.loads((ROOT_ := world["out"] / ledger["entries"][-1]["bp_file"]).read_bytes())
+    paths = {a["path"].rsplit("/", 1)[1] for a in fin["atoms"]}
+    assert {"DECISION_FCO.json", "DECISION_FCO__ollama_overclaimer.json", "OUTCOME_FCO__ollama_careful.json", "ACTION_EXECUTION_FCO__skip.json"} <= paths
+    assert all(x["verify_state"] == "PASS" for x in s.lin.verify(s.seed["parent_fcg_root"]))
+    assert {q["body"]["model"] for q in seen} == {"overclaimer", "careful"}
+
+def test_unavailable_lane_is_blocked_and_never_replaced_by_another(world):
+    lanes = F.parse_lanes("ollama:whatever,scripted")
+    r = run_all(session(world, lanes=lanes, env={"OLLAMA_BASE_URL": "http://127.0.0.1:9"}))
+    L_ = {x["lane"]: x for x in r["lanes"]}
+    assert L_["ollama_whatever"]["status"] == "BLOCKED" and L_["ollama_whatever"]["action"] is None and L_["ollama_whatever"]["provider"] == "ollama"
+    assert L_["scripted"]["status"] == "PASS"                                          # other lanes unaffected
+
+def test_openjev_adapter_uses_bearer_token_and_choice_question_shape():
+    tok = "local-shim-" + "t0k3n"
+    base, srv, seen = serve(lambda p, h, b: (200, {"model": "openjev-MLX-4bit", "answers": {"action": {"choice": F.ONTOLOGY[2], "confidence": 0.7}}}))
+    d = F.run_decider("openjev", {"artifact_reconstruction": "NOT_ESTABLISHED", "environment_replay": "NOT_ESTABLISHED"}, {"OPENJEV_BASE_URL": base, "OPENJEV_TOKEN": tok}); srv.shutdown()
+    q = seen[0]
+    assert d["status"] == "PASS" and d["action"] == F.ONTOLOGY[2] and d["provider"] == "openjev-local:openjev-MLX-4bit"
+    assert q["path"] == "/v1/systemone" and q["auth"] == "Bearer " + tok
+    qq = q["body"]["questions"]["action"]
+    assert qq["type"] == "choice" and set(qq["criteria"]) == set(F.ONTOLOGY) and q["body"]["state"]["verification_status"]
+    assert tok not in json.dumps(d)                                                   # token never appears in the result
+
+def test_openjev_401_is_blocked_with_the_http_code_not_a_fallback():
+    base, srv, _ = serve(lambda p, h, b: (401, {"error": "unauthorized"}))
+    d = F.run_decider("openjev", {"artifact_reconstruction": "NOT_ESTABLISHED", "environment_replay": "NOT_ESTABLISHED"}, {"OPENJEV_BASE_URL": base, "OPENJEV_TOKEN": "x"}); srv.shutdown()
+    assert d["status"] == "BLOCKED" and d["action"] is None and "HTTPError:401" in d["note"]
+
+def test_prompt_profiles_are_frozen_hashed_and_recorded(world):
+    assert F.prompt_sha("neutral_v1") != F.prompt_sha("explicit_v1")
+    base, srv, seen = ollama_stub({"m": F.ONTOLOGY[2]})
+    lanes = F.parse_lanes("ollama:m")
+    s1 = session(world, lanes=lanes, env={"OLLAMA_BASE_URL": base}, profile="neutral_v1", sid="P1"); run_all(s1)
+    s2 = session(world, lanes=lanes, env={"OLLAMA_BASE_URL": base}, profile="explicit_v1", sid="P2"); run_all(s2); srv.shutdown()
+    d1, _ = L.read_fco(s1.sdir / "DECISION_FCO.json"); d2, _ = L.read_fco(s2.sdir / "DECISION_FCO.json")
+    assert d1["prompt_profile"] == "neutral_v1" and d1["prompt_sha256"] == F.prompt_sha("neutral_v1") and d2["prompt_sha256"] == F.prompt_sha("explicit_v1")
+    c1 = seen[0]["body"]["messages"][0]["content"]; c2 = seen[1]["body"]["messages"][0]["content"]
+    assert c1.startswith("Choose exactly one action. Reply JSON") and '"actions": ["PUBLISH' in c1          # identical to the first rehearsal's wording
+    assert "Rule:" in c2 and "requires" in c2 and "Rule:" not in c1
