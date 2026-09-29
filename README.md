@@ -2,6 +2,17 @@
 
 Public, reproducible UFA arena branch of the Vithia model family. Competition-facing code and measured results are public; credentials and unrelated proprietary Vithia architecture are not.
 
+## Post-submission judge reproducibility update
+
+The accepted UFA submission remains frozen. A post-submission reproducibility successor for independent judge review is available at:
+
+- PR #9: https://github.com/biobitworks/jev-space-invaders/pull/9
+- Judge branch: https://github.com/biobitworks/jev-space-invaders/tree/postsubmission/judge-reproducibility-v02
+- Reproducibility update: https://github.com/biobitworks/jev-space-invaders/blob/postsubmission/judge-reproducibility-v02/docs/JUDGE_REPRODUCIBILITY_UPDATE_V01.md
+- Judge agent prompt: https://github.com/biobitworks/jev-space-invaders/blob/postsubmission/judge-reproducibility-v02/docs/JUDGE_AGENT_PROMPT_V01.md
+
+This update does not replace or rewrite the accepted competition entry or qualified historical evidence.
+
 ## Demo video
 
 **Public demo video:** https://youtu.be/4BuR_NnJAsM

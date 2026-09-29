@@ -1,0 +1,17 @@
+{
+  "schema": "JUDGE_PACKAGE_PUBLIC_POINTER_RECEIPT_V01",
+  "created_utc": "2026-09-29T06:21:06Z",
+  "accepted_entry_id": "b968c199-5d7e-4228-b8fe-b0003b7ab94f",
+  "accepted_submission_mutated": false,
+  "organizer_resubmission_performed": false,
+  "judge_branch": "postsubmission/judge-reproducibility-v02",
+  "judge_head": "c51bf75752e9e216ce20d6fe78adca9224c8c08d",
+  "pr_number": 9,
+  "pr_url": "https://github.com/biobitworks/jev-space-invaders/pull/9",
+  "main_head_before": "5811b8d012e313d2c774a96512fe702267c1c282",
+  "main_head_after": "COMMIT_CONTAINING_THIS_RECEIPT",
+  "public_repository": "https://github.com/biobitworks/jev-space-invaders",
+  "reproducibility_doc_url": "https://github.com/biobitworks/jev-space-invaders/blob/postsubmission/judge-reproducibility-v02/docs/JUDGE_REPRODUCIBILITY_UPDATE_V01.md",
+  "judge_prompt_url": "https://github.com/biobitworks/jev-space-invaders/blob/postsubmission/judge-reproducibility-v02/docs/JUDGE_AGENT_PROMPT_V01.md",
+  "scope": "POST_SUBMISSION_DISCOVERY_POINTER_ONLY"
+}
