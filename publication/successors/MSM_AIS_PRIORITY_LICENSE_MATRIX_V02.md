@@ -237,10 +237,10 @@ The baseline should cite both exact commits:
 
 ```
 FORMAL_BASELINE_COMMIT=
-<commit containing MSM_AIS_ANTICUBE_GSTAR_BASELINE_V02.md>
+b44ce3a0966b2e51d5496a4f101b9aeb8abfb4d7
 
 PREREGISTRATION_COMMIT=
-<commit containing MSM_AIS_V02_PREREGISTRATION.md>
+3f36e7a59a9091793d14934cf98625c0e0c3cdc1
 ```
 
 These are content/custody timestamps for this project state.
