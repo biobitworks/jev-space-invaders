@@ -23,7 +23,7 @@ import vithia_e2e_lib as L  # noqa: E402
 
 E2E = ROOT / "evidence/post_submission/e2e"
 GRAPH_DIR = ROOT / "evidence/post_submission/mitosis_graph"
-GRAPH_INDEX = GRAPH_DIR / "MITOSIS_FCG_GRAPH_INDEX.json"
+GRAPH_INDEX = GRAPH_DIR / "MITOSIS_FCG_GRAPH_INDEX.json"\nGRAPH_RECEIPT = GRAPH_DIR / "MITOSIS_FCG_GRAPH_EXECUTION_RECEIPT.json"
 FINAL_RECEIPT = E2E / "VITHIA_MITOSIS_TENKI_E2E_FINAL_RECEIPT.json"
 LEDGER = E2E / "E2E_MMR_LEDGER.json"
 OFFICE = "b236ff3a-8250-4ac5-bda2-4fc35c43d35f"
@@ -421,8 +421,32 @@ def materialize(args: argparse.Namespace) -> int:
         ),
     }
     idx_sha = canonical_write(GRAPH_INDEX, index)
+    receipt = {
+        "schema": "MITOSIS_FCG_GRAPH_EXECUTION_RECEIPT_V1",
+        "session_id": plan["session_id"],
+        "office_id": OFFICE,
+        "agent": AGENT,
+        "graph_index_sha256": idx_sha,
+        "nodes_planned": len(plan["nodes"]),
+        "nodes_written": len(records),
+        "all_exact_get": "PASS" if all(r["exact_get"] == "PASS" for r in records) else "FAIL",
+        "final_fcg_mmr_root": plan["final_fcg_mmr_root"],
+        "final_checkpoint_universal_id": final_uid,
+        "final_probe_exact_id_match": "YES" if exact_match else "NO",
+        "cited_graph_url": probe.get("cited_graph_url"),
+        "typesafe_billing": "NOT_CONFIGURED",
+        "typesafe_playground": "UNAVAILABLE",
+        "hosted_jev": "NOT_EXECUTED",
+        "claim_ceiling": (
+            "Mitosis interactive projection and exact retrieval of immutable FCO/MMR evidence. "
+            "This receipt does not upgrade Tenki environment replay, hosted JEV, or scientific claims."
+        ),
+    }
+    receipt_sha = canonical_write(GRAPH_RECEIPT, receipt)
     print(f"MITOSIS_FCG_GRAPH_INDEX={GRAPH_INDEX.relative_to(ROOT)}")
     print(f"MITOSIS_FCG_GRAPH_INDEX_SHA256={idx_sha}")
+    print(f"MITOSIS_FCG_GRAPH_RECEIPT={GRAPH_RECEIPT.relative_to(ROOT)}")
+    print(f"MITOSIS_FCG_GRAPH_RECEIPT_SHA256={receipt_sha}")
     print(f"MITOSIS_FINAL_CHECKPOINT_UID={final_uid}")
     print(f"MITOSIS_GRAPH_PROBE_EXACT_ID_MATCH={'YES' if exact_match else 'NO'}")
     print(f"MITOSIS_CITED_GRAPH_URL={probe.get('cited_graph_url')}")
