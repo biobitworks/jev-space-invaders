@@ -1,0 +1,38 @@
+{
+  "schema": "MITOSIS_TENKI_E2E_REVIEW_CONTRACT_V2",
+  "purpose": "Post-submission deterministic review/execution contract for Mitosis persistence, Tenki clean-room verification, replay integrity, and objective game outcomes.",
+  "predecessor_review_pr": "https://github.com/biobitworks/jev-space-invaders/pull/3",
+  "immutable_submission": {
+    "entry_id": "b968c199-5d7e-4228-b8fe-b0003b7ab94f",
+    "submitted_source_commit": "4c943a92e84d0fb2cd3d01e4fdf15a10991eda71",
+    "playthrough_mmr_root": "e55a47a7f16064477c4f101a38a849391c2fbc9f6557c5244daf0406b36dbd74"
+  },
+  "review_targets": [
+    "evidence/competition/final_execution/MITOSIS_FINAL_EXECUTION_RECEIPT.json",
+    "evidence/competition/final_execution/TENKI_FINAL_EXECUTION_RECEIPT.json",
+    "evidence/competition/post_submission/mitosis/MITOSIS_POST_SUBMISSION_VERIFICATION_FCO.json",
+    "evidence/competition/post_submission/tenki/TENKI_SUBMITTED_REPLAY_VERIFICATION_FCO.json",
+    "evidence/competition/final_execution/frames/PLAYTHROUGH_MMR_VERIFICATION_RECEIPT_V2.json",
+    "scripts/verify_final_playthrough_custody_v2.py",
+    "scripts/verify_competition_lineage.py",
+    "scripts/verify_environment_replay_v1.py",
+    "scripts/determine_game_outcome_v1.py",
+    "governance/postsubmission/GAME_OUTCOME_PREDICATE_V1.json",
+    "evidence/competition/post_submission/tenki/TENKI_SUBMITTED_REPLAY_VERIFICATION_CORRECTION_FCO_V2.json",
+    "tools/verify_mitosis_tenki_claims_v2.py",
+    "docs/TENKI_DETERMINISTIC_REPLAY_AND_OUTCOME_V1.md"
+  ],
+  "invariants": [
+    "Credential presence is not provider authentication.",
+    "Secret scanning must detect synthetic mi_, tk_, Bearer, AWS access-key, and private-key fixtures.",
+    "Mitosis persistence PASS requires write, query-back, exact universal-ID equality, and get-by-ID confirmation.",
+    "Tenki code review and Tenki execution verification are independent evidence classes.",
+    "Tenki artifact reconstruction PASS requires fresh sandbox creation, exact source pin, and playthrough verification inside that sandbox.",
+    "Tenki environment replay PASS additionally requires replay-from-start, step-hash equality, and final-MMR equality from actual environment re-execution.",
+    "Portable/load-bearing memory PASS requires Tenki verification writeback to Mitosis, exact-ID retrieval, Vithia consumption of that exact memory, and a DecisionFCO causally referencing the resulting verified context.",
+    "One-player score comparisons are evaluation winners, not literal game wins.",
+    "Two-player match winner is determined only from verified final environment scores under a frozen predicate; ties remain ties.",
+    "Positive score, termination, or semantic description alone cannot establish a literal game win.",
+    "Historical atoms, receipts, traces, and roots are append-only and are never rewritten to make replay pass."
+  ]
+}

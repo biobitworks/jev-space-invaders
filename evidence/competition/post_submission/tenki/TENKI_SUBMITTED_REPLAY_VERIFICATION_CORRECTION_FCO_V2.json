@@ -1,0 +1,15 @@
+{
+  "schema": "TENKI_SUBMITTED_REPLAY_VERIFICATION_CORRECTION_FCO_V2",
+  "correction_of": "evidence/competition/post_submission/tenki/TENKI_SUBMITTED_REPLAY_VERIFICATION_FCO.json",
+  "reason": "The predecessor recorded artifact_reconstruction=PASS while tenki_sandbox_create=NOT_ATTEMPTED, tenki_source_pin=NOT_TESTED, and playthrough_verify=NOT_EXECUTED. Tenki code review identified claim-integrity and secret-gate defects in the surrounding validator. Historical bytes remain unchanged; this successor narrows the claim.",
+  "submitted_source_commit": "4c943a92e84d0fb2cd3d01e4fdf15a10991eda71",
+  "expected_playthrough_mmr_root": "e55a47a7f16064477c4f101a38a849391c2fbc9f6557c5244daf0406b36dbd74",
+  "predecessor_tenki_auth": "PASS",
+  "tenki_code_review": "CHANGES_REQUIRED",
+  "tenki_clean_room_artifact_reconstruction": "NOT_ESTABLISHED",
+  "tenki_environment_replay": "NOT_ESTABLISHED",
+  "local_playthrough_custody_mmr": "PASS_SEPARATE_EXISTING_RECEIPT",
+  "portable_agent_memory_load_bearing": "NOT_ESTABLISHED",
+  "mutation_of_predecessor": false,
+  "claim_ceiling": "TENKI_CODE_REVIEW_DEMONSTRATED_CLEAN_ROOM_EXECUTION_NOT_ESTABLISHED"
+}

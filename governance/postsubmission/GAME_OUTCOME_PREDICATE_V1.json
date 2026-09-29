@@ -1,0 +1,47 @@
+{
+  "schema": "GAME_OUTCOME_PREDICATE_V1",
+  "version": 1,
+  "immutable": true,
+  "rules": {
+    "one_player_evaluation": {
+      "outcome_class": "ONE_PLAYER_EVALUATION_WINNER",
+      "prerequisites": [
+        "both run traces pass byte/hash/MMR verification",
+        "same environment ID",
+        "same seed",
+        "same declared evaluation budget/protocol"
+      ],
+      "predicate": "higher final cumulative environment score wins; equal score is TIE",
+      "literal_game_win_claim": false,
+      "note": "A one-player evaluation winner is a comparative benchmark result, not proof that Space Invaders was literally won."
+    },
+    "two_player_match": {
+      "outcome_class": "TWO_PLAYER_MATCH_WINNER",
+      "prerequisites": [
+        "2P trace bytes match recorded SHA-256",
+        "every recorded episode leaf recomputes",
+        "episode MMR recomputes to recorded root"
+      ],
+      "predicate": "higher final cumulative environment score wins; equal score is TIE",
+      "winner_mapping": {
+        "positive_relative_payoff": "first_0",
+        "negative_relative_payoff": "second_0",
+        "zero_relative_payoff": "TIE"
+      },
+      "literal_game_win_claim": "MATCH_WINNER_ONLY",
+      "note": "This establishes the winner of the frozen 2P match predicate, not a broader semantic claim about beating the entire game."
+    },
+    "literal_game_completion": {
+      "outcome_class": "LITERAL_GAME_COMPLETION",
+      "status": "NOT_DEFINED",
+      "requirement": "A separate explicit environment-derived completion/wave-clear predicate must be preregistered before execution.",
+      "forbidden_proxies": [
+        "positive score",
+        "terminated=true",
+        "lives_lost",
+        "model narrative",
+        "video interpretation"
+      ]
+    }
+  }
+}
