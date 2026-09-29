@@ -142,9 +142,10 @@ def openjev_precheck() -> dict:
                 sk.settimeout(0.3)
                 if sk.connect_ex(("127.0.0.1", port)) == 0:
                     open_ports.append(port)
-    return {"OPENJEV_BASE_URL_env": base or "UNSET(default http://127.0.0.1:8765)", "loopback_ports_listening_8765_8775": open_ports,
+    return {"OPENJEV_BASE_URL_env": base or "UNSET(default http://127.0.0.1:8765)", "loopback_ports_listening_8765_8775_UNVERIFIED_IDENTITY": open_ports,
             "bearer_token_present": bool(F.openjev_token(dict(os.environ))),
-            "hint": "the local shim picks the first free port from 8765; export OPENJEV_BASE_URL if it is not 8765"}
+            "hint": ("a listening port does NOT prove it is OpenJEV (another local service can hold it). The authoritative endpoint is the one recorded by "
+                     "`python scripts/openjev_runtime.py status` (needs the OpenJEV runtime started with `serve`); export OPENJEV_BASE_URL to it explicitly")}
 
 
 def lanes_mode(a, R, F, L, host, tags) -> int:

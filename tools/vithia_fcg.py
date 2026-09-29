@@ -384,6 +384,9 @@ def run_decider(kind: str, status: dict, env: dict, profile: str = "neutral_v1")
                 base, headers = "https://api.typesafe.ai", {"Authorization": "Bearer " + env["TYPESAFE_API_KEY"]}
             else:
                 base, headers = env.get("OPENJEV_BASE_URL", "http://127.0.0.1:8765"), {}
+                from urllib.parse import urlparse
+                if urlparse(base).hostname not in ("127.0.0.1", "localhost", "::1"):
+                    return {"status": "BLOCKED", "action": None, "provider": "openjev", "latency": 0.0, "note": "non-loopback endpoint refused (the shim bearer token stays local)", **meta}
                 tok = openjev_token(env)                       # local shim bearer token (~/.openjev/token); never logged or stored
                 if tok:
                     headers["Authorization"] = "Bearer " + tok

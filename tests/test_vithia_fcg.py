@@ -257,3 +257,11 @@ def test_prompt_profiles_are_frozen_hashed_and_recorded(world):
     c1 = seen[0]["body"]["messages"][0]["content"]; c2 = seen[1]["body"]["messages"][0]["content"]
     assert c1.startswith("Choose exactly one action. Reply JSON") and '"actions": ["PUBLISH' in c1          # identical to the first rehearsal's wording
     assert "Rule:" in c2 and "requires" in c2 and "Rule:" not in c1
+
+
+def test_openjev_refuses_non_loopback_endpoint_and_never_sends_the_token():
+    base, srv, seen = serve(lambda p, h, b: (200, {"answers": {"action": {"choice": F.ONTOLOGY[2]}}}))
+    for bad in ("http://example.com:8765", "https://10.0.0.5:8771", "http://127.0.0.1.evil.example:8765"):
+        d = F.run_decider("openjev", {"artifact_reconstruction": "NOT_ESTABLISHED", "environment_replay": "NOT_ESTABLISHED"}, {"OPENJEV_BASE_URL": bad, "OPENJEV_TOKEN": "secret-shim-token"})
+        assert d["status"] == "BLOCKED" and "non-loopback" in d["note"]
+    srv.shutdown(); assert seen == []
