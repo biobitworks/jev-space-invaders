@@ -1,0 +1,63 @@
+{
+  "schema": "VITHIA_HACKDAY_INTAKE_V1",
+  "project": "AGENTICLS_PUBLICATION",
+  "event": {
+    "name": "AI Conference Hack Day 2026",
+    "date": "2026-09-29",
+    "event_url": "https://luma.com/ai-conference-hack-day-2026?tk=b2cWA1",
+    "event_details_url": "https://aiconference.com/#hackday",
+    "slack": {
+      "workspace": "hackday-brv1895.slack.com",
+      "channels": {
+        "all_hackday": "C0C2WQN7P42",
+        "get_support": "C0C2UVAJ5FG",
+        "social": "C0C2YRD3TK3",
+        "showcase": "C0C5SHZJRNC"
+      }
+    }
+  },
+  "upstream": {
+    "repository": "duplocloud/devkit",
+    "commit": "e9f016fd90a67611907fcf673701351669eaa47d",
+    "hackday_readme_git_blob_sha1": "cd73e81cff0b7f11eec00e820506bfb259d297c1",
+    "install_guide_git_blob_sha1": "e7b27e52ec0bb39a1a8add55559aefb70e70d3ff",
+    "sponsor_integrations_git_blob_sha1": "a37a93caec3015d9544fa4fa2a3e7696b5620c31",
+    "license_git_blob_sha1": "57bc88a15a0ee8266c259b2667e64608d3f7e292",
+    "terms_git_blob_sha1": "c07733997137e4ddda93197e7390a32c6a3c602e"
+  },
+  "observed_requirements": {
+    "platform": "DuploCloud DevKit local platform",
+    "hack_window_hours": 6,
+    "judging": [
+      "best agent overall: live end-to-end execution",
+      "meaningful sponsor integrations"
+    ],
+    "documented_build_path": [
+      "Provider",
+      "Credential",
+      "Scope",
+      "MCP Server optional",
+      "Skill",
+      "Persona",
+      "Workspace",
+      "Ticket"
+    ],
+    "documented_sponsor_paths": [
+      "Neo4j MCP",
+      "Crusoe via OpenRouter",
+      "Nebius via OpenRouter",
+      "Vultr API"
+    ]
+  },
+  "claim_boundary": {
+    "duplocloud_work_executed": false,
+    "sponsor_integrations_executed": false,
+    "event_submission_complete": false,
+    "purpose": "Freeze pre-event source state and requirements before Vithia experiment expansion."
+  },
+  "provenance": {
+    "event_slack_source": "user-supplied organizer message in ChatGPT on 2026-09-28",
+    "upstream_source": "GitHub repository content inspected at the exact commit above",
+    "unknown_provenance": "UNKNOWN where not explicitly bound"
+  }
+}
