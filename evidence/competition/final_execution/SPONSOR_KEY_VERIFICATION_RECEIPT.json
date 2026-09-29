@@ -1,0 +1,36 @@
+{
+  "timestamp": "2026-09-29T02:02:14.051440",
+  "git_head": "5b862746ca66ab6c5b230fe33d3a0a494841662b",
+  "git_origin_head": "4927c6bcd39c82af7a301ab2ec1a5a4cac2c7f3b",
+  "credentials_loaded": true,
+  "providers": {
+    "mitosis": {
+      "MI_API_KEY": "SET",
+      "MITOSIS_API_KEY": "NOT_SET",
+      "MITOSIS_AUTH": "BLOCKED",
+      "MITOSIS_WRITE": "NOT_EXECUTED",
+      "MITOSIS_QUERY": "NOT_EXECUTED",
+      "MITOSIS_UNIVERSAL_ID": "NOT_AVAILABLE"
+    },
+    "tenki": {
+      "TENKI_API_KEY": "SET",
+      "TENKI_AUTH_TOKEN": "NOT_SET",
+      "TENKI_AUTH": "BLOCKED",
+      "TENKI_SANDBOX_CREATE": "NOT_EXECUTED",
+      "TENKI_REPLAY_VERIFY": "NOT_EXECUTED",
+      "TENKI_SESSION_ID": "NOT_AVAILABLE",
+      "TENKI_RECEIPT_HASH": "NOT_AVAILABLE"
+    },
+    "typesafe": {
+      "TYPESAFE_API_KEY": "NOT_SET",
+      "REAL_JEV_AUTH": "BLOCKED",
+      "REAL_JEV_SMOKE": "NOT_EXECUTED",
+      "REAL_JEV_PROVIDER": "NOT_AVAILABLE"
+    },
+    "anthropic": {
+      "ANTHROPIC_API_KEY": "NOT_SET",
+      "CLAUDE_CLOUD_AUTH": "BLOCKED"
+    }
+  },
+  "PORTABLE_AGENT_MEMORY_LOAD_BEARING": "NOT_ESTABLISHED"
+}
