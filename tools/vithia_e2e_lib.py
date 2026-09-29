@@ -347,6 +347,47 @@ class Mitosis:
         uid = out.get("universal_id")
         return {"state": "PASS" if (rc == 0 and out.get("status") == "ok" and uid) else "FAIL",
                 "universal_id": uid, "embedded": out.get("embedded")}
+    def remember_linked(self, text: str, *, sources: list[str] | None = None,
+                        kind: str = "observation", confidence: float = 1.0,
+                        agent: str = "vithia-fcg-explorer-v01") -> dict:
+        """Write one public-safe graph node with explicit provenance edges.
+
+        The API key remains in the child environment only. Source values must be
+        Mitosis universal IDs; they are graph addresses, never Merkle/MMR roots.
+        """
+        scan_text(text, "mitosis linked fact")
+        args = ["cortex", "remember", text, "--office", self.office,
+                "--agent", agent, "--kind", kind, "--confidence", str(confidence)]
+        for uid in sources or []:
+            if not isinstance(uid, str) or ":" not in uid:
+                return {"state": "FAIL", "reason": "INVALID_SOURCE_UNIVERSAL_ID", "source": uid}
+            args.extend(["--source", uid])
+        rc, out = self._mi(*args)
+        uid = out.get("universal_id") if isinstance(out, dict) else None
+        ok = rc == 0 and isinstance(out, dict) and out.get("status") == "ok" and bool(uid)
+        return {
+            "state": "PASS" if ok else "FAIL",
+            "universal_id": uid,
+            "embedded": out.get("embedded") if isinstance(out, dict) else None,
+            "linked_sources": out.get("linked_sources") if isinstance(out, dict) else None,
+            "derived_from_edges": out.get("derived_from_edges") if isinstance(out, dict) else None,
+        }
+
+    def ask_json(self, question: str, *, limit: int = 10) -> dict:
+        """Query Cortex and preserve the graph deep-link returned by Mitosis."""
+        rc, out = self._mi("cortex", "ask", question, "--office", self.office,
+                           "--json", "--limit", str(limit))
+        if rc != 0 or not isinstance(out, dict):
+            return {"state": "FAIL", "results": []}
+        results = out.get("results", [])
+        return {
+            "state": "PASS",
+            "results": results if isinstance(results, list) else [],
+            "graph_url": out.get("cited_graph_url") or out.get("graph_url"),
+            "cited_graph_url": out.get("cited_graph_url") or out.get("graph_url"),
+            "memory": out.get("memory"),
+            "freshness": out.get("freshness"),
+        }
 
     def exact_query(self, question: str, uid: str, tries: int = 6) -> dict:
         """PASS only if the returned evidence list contains the EXACT universal_id (not nearest-neighbour)."""
