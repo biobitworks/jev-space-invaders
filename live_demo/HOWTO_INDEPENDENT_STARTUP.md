@@ -1,4 +1,4 @@
-> **Note:** the canonical, current guide for the live demo runner is [`HOWTO.md`](HOWTO.md). This file is the earlier independent-startup / judge-path guide (script-based runs such as `scripts/run_games.py`), preserved as written. Its Tenki/Mitosis lines describe the state at submission time.
+> **Note:** for post-submission judge verification use [`docs/JUDGE_REPRODUCIBILITY_UPDATE_V01.md`](../docs/JUDGE_REPRODUCIBILITY_UPDATE_V01.md); the canonical live-runner guide is [`HOWTO.md`](HOWTO.md). This is the earlier independent-startup guide (script-based runs such as `scripts/run_games.py`). Its OpenJEV, branch and Python instructions were corrected for judge use (no guessed ports, no non-existent modules, `python3`); its Tenki/Mitosis lines still describe the state at submission time. Game commands below append to `results.json` and push to git unless you add `--dry-run --results /tmp/results.json`; a read-only judge should always add them.
 
 # Independent Startup: UFA JEV Bake-Off 2026
 
@@ -18,14 +18,14 @@ This guide explains how to run the Space Invaders competition from a fresh clone
 # Clone
 git clone https://github.com/biobitworks/jev-space-invaders.git
 cd jev-space-invaders
-git checkout competition/final-integration-v01
+git checkout postsubmission/judge-reproducibility-v02
 
 # Python environment
-python -m venv .venv
+python3 -m venv .venv
 source .venv/bin/activate
 
 # Install dependencies
-pip install -r requirements.txt
+python3 -m pip install -r requirements.txt
 
 # Copy .env template (store any API keys here, NEVER in git)
 cp .env.example .env
@@ -41,96 +41,57 @@ cp .env.example .env
 Deterministic policy; always returns LEFT/RIGHT alternating every 30 steps. Smoke test only.
 
 ```bash
-python scripts/run_games.py --decider scripted --seeds 1 2 3 --dry-run --results /tmp/test_results.json
+python3 scripts/run_games.py --decider scripted --seeds 1 2 3 --dry-run --results /tmp/test_results.json
 ```
 
 **Expected**: 3 games run, each appends to `/tmp/test_results.json`. Scores vary based on RNG. Latency ~0.002 ms (local deterministic policy).
 
 ### 2. Ollama Local Baseline
-Requires: `ollama run llama3.2:3b` running on http://localhost:11434
+Requires a local Ollama daemon (http://127.0.0.1:11434) with an **already-installed** model — pick one from `ollama list`; do not download one just to match this guide
 
 ```bash
 # Terminal 1: Start Ollama service
 ollama serve
 
 # Terminal 2: Run games
-python scripts/run_games.py --decider llm --provider ollama --model llama3.2:3b --seeds 1 2 3 --dry-run --results /tmp/test_results.json
+python3 scripts/run_games.py --decider llm --provider ollama --model <a model shown by: ollama list> --seeds 1 2 3 --dry-run --results /tmp/test_results.json
 ```
 
 **Expected**: Each game ~100–200 steps (game ends when ship dies or reward plateau). Latency: 200–500 ms per decision (network + inference). Scores typically 200–500 points.
 
 ### 3. OpenJEV Local (System-One Compatible)
-Requires: OpenJEV running on http://127.0.0.1:3000
+Requires the repository's own local OpenJEV runtime to be running. **Never guess its port**: the endpoint is the one the helper recorded.
 
 ```bash
-# Terminal 1: Start OpenJEV (see OpenJEV_LOCAL_SETUP below)
-cd ~/path/to/openjev && python -m openjev.server
-
-# Terminal 2: Run games
-python scripts/run_games.py --decider openjev --base-url http://127.0.0.1:3000 --seeds 1 2 3
+python3 scripts/openjev_runtime.py status      # FileNotFoundError for runtime_state.json => never started => OPENJEV=NOT_RUNNING
+python3 scripts/openjev_runtime.py serve       # only if you already hold the weights; it never downloads
+python3 scripts/run_games.py --decider openjev --base-url <endpoint recorded by status/serve> --seeds 1 2 3 --dry-run --results /tmp/results.json
 ```
 
-**Expected**: 5 fixed-seed games. Results appended to `results.json` and pushed to git (requires clean worktree, `origin` configured, push permission).
+**Expected**: fixed-seed games, and no results appended to the repository when `--dry-run` is used.
 
 ## OpenJEV Local Setup
 
-OpenJEV is a local System-One-compatible implementation. It allows running the same decision interface as the hosted TypeSafe JEV API without a remote provider.
+OpenJEV here is the repository's local System-One-compatible runtime (`scripts/openjev_runtime.py`). It lets you run the same decision interface as the hosted TypeSafe JEV API without a remote provider. It is **not** hosted JEV and must never be reported as such.
 
-### Prerequisites for OpenJEV
-- Python 3.10+
-- ~500 MB for model cache
-- MLX framework (Apple Silicon optimized) or fallback to CPU
-
-### Install and Run
-
-```bash
-# 1. Clone OpenJEV (assuming you have it)
-cd ~/path/to/openjev
-
-# 2. Install
-pip install -e .
-
-# 3. Start server
-python -m openjev.server --port 3000
-
-# Server logs:
-# INFO: Uvicorn running on http://127.0.0.1:3000
-```
-
-### Verify OpenJEV is Responding
-
-```bash
-curl -X POST http://127.0.0.1:3000/v1/systemone \
-  -H "Content-Type: application/json" \
-  -d '{
-    "state": {"ship": {"x": 128}, "bombs": [], "shots": [], "step": 0},
-    "model": "openjev",
-    "questions": {
-      "move": {
-        "type": "choice",
-        "instructions": "Pick a move.",
-        "criteria": {"NOOP": "Stay"}
-      }
-    }
-  }'
-
-# Expected response:
-# {"answers": {"move": {"choice": "NOOP", "confidence": 0.95, "probabilities": {...}}}, "model": "openjev"}
-```
+- `python3 scripts/openjev_runtime.py status` reports the recorded process and port (the runtime picks the first free loopback port from 8765 and records it).
+- `python3 scripts/openjev_runtime.py serve` starts it from weights you already have and verifies their hashes first; it does not download. The separate `download` subcommand is a large, explicit download and is not needed for any judge path.
+- The runtime's bearer token lives in `~/.openjev/token`, outside git; never commit it.
+- Do not infer that a listening port is OpenJEV; use the recorded endpoint.
 
 ## Running Full Competition Suite
 
 **Warning**: Git push is live. Ensure:
-- Working on `competition/final-integration-v01` branch
+- Working on a branch you have permission to push to (judges: skip this section and use `--dry-run`)
 - Worktree is clean
 - Origin is configured with push permission
 
 ```bash
 # Run 5 games each for all available deciders
-python scripts/run_games.py --decider scripted --seeds 1 2 3 4 5
+python3 scripts/run_games.py --decider scripted --seeds 1 2 3 4 5
 
 # Then run one more decider (e.g., Ollama baseline)
-python scripts/run_games.py --decider llm --provider ollama --model llama3.2:3b --seeds 1 2 3 4 5 --note "Local Ollama baseline, seed 1-5"
+python3 scripts/run_games.py --decider llm --provider ollama --model <a model shown by: ollama list> --seeds 1 2 3 4 5 --note "Local Ollama baseline, seed 1-5"
 
 # Results are pushed to git automatically after each game
 ```
@@ -140,7 +101,7 @@ python scripts/run_games.py --decider llm --provider ollama --model llama3.2:3b 
 ### TypeSafe JEV (Hosted)
 ```bash
 export TYPESAFE_API_KEY="sk-..."
-python scripts/run_games.py --decider jev --seeds 1 2 3 4 5
+python3 scripts/run_games.py --decider jev --seeds 1 2 3 4 5
 ```
 
 **Note**: As of 2026-09-28, hosted JEV was NOT_AVAILABLE. This may be enabled later.
@@ -148,13 +109,13 @@ python scripts/run_games.py --decider jev --seeds 1 2 3 4 5
 ### Claude (Anthropic)
 ```bash
 export ANTHROPIC_API_KEY="sk-ant-..."
-python scripts/run_games.py --decider llm --provider anthropic --model claude-haiku-4-5 --seeds 1 2 3 4 5
+python3 scripts/run_games.py --decider llm --provider anthropic --model claude-haiku-4-5 --seeds 1 2 3 4 5
 ```
 
 ### OpenAI (GPT)
 ```bash
 export OPENAI_API_KEY="sk-..."
-python scripts/run_games.py --decider llm --provider openai --model gpt-4-mini --seeds 1 2 3 4 5
+python3 scripts/run_games.py --decider llm --provider openai --model gpt-4-mini --seeds 1 2 3 4 5
 ```
 
 ## Architecture: Per-Seat Deciders (2P)
@@ -209,23 +170,19 @@ See `README.md` for details.
 
 ### ModuleNotFoundError: ale_py
 ```bash
-pip install ale-py gymnasium
+python3 -m pip install ale-py gymnasium
 ```
 
 ### Cannot connect to OpenJEV
 ```bash
-# Check if server is running
-curl http://127.0.0.1:3000/v1/systemone
-
-# If "Connection refused":
-# 1. Verify OpenJEV is installed: pip list | grep openjev
-# 2. Start it: python -m openjev.server --port 3000
-# 3. Check logs for errors
+python3 scripts/openjev_runtime.py status    # authoritative: recorded pid/port, alive true/false
+# FileNotFoundError for runtime_state.json => the runtime was never started => OPENJEV=NOT_RUNNING (report it; do not guess a port)
 ```
+If the runtime is not running and you hold its weights, `python3 scripts/openjev_runtime.py serve` starts it and records the endpoint that `status` then reports.
 
 ### Git push fails during game
 Ensure:
-1. You're on `competition/final-integration-v01`
+1. You're on a branch you have permission to push to (judges should use `--dry-run` instead)
 2. Worktree is clean before running (no uncommitted changes)
 3. Origin has push permission (not a fork with restricted access)
 4. Not behind main (rebase if needed)
@@ -252,25 +209,25 @@ Each record includes:
 - **Trace file**: pointer to compressed per-step log
 - **MMR proof**: Merkle proof of game execution chain
 
-Run `python scripts/validate_results.py` to verify structural integrity.
+Run `python3 scripts/validate_results.py` to verify structural integrity.
 
 ## Verification
 
 ### Quick Check
 ```bash
-python -m pytest -q
+python3 -m pytest -q
 ```
 
 ### Competition Lineage
 ```bash
-python scripts/verify_competition_lineage.py
+python3 scripts/verify_competition_lineage.py
 ```
 
 Verifies the qualified `UFA-JEV-COMP-BP-*` governance chain is intact.
 
 ### Breakpoint Verification (Legacy)
 ```bash
-python scripts/verify_breakpoints.py
+python3 scripts/verify_breakpoints.py
 ```
 
 Historical chain; currently FAILs on mutable results.json (known issue).

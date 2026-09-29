@@ -8,14 +8,11 @@ changes invalidate the current generation and late results are discarded.
 
 ## Clean clone
 
-Derive the repository address from the checkout:
-
 ```sh
-git remote get-url origin
-git clone <the-value-returned-above>
-cd <repo-directory>
+GIT_LFS_SKIP_SMUDGE=1 git clone https://github.com/biobitworks/jev-space-invaders.git
+cd jev-space-invaders
 git fetch --all
-git checkout competition/final-integration-v01
+git checkout postsubmission/judge-reproducibility-v02   # judge/successor branch (PR #9); the frozen submission lives at commit 4c943a92e84d0fb2cd3d01e4fdf15a10991eda71
 ```
 
 ## Python and dependencies
@@ -25,7 +22,7 @@ Use Python 3.12 or newer with a virtual environment:
 ```sh
 python3 -m venv .venv
 . .venv/bin/activate
-python -m pip install -r live_demo/requirements.txt
+python3 -m pip install -r live_demo/requirements.txt
 ```
 
 The canonical repository also contains its existing project requirements.
@@ -52,16 +49,18 @@ access is available, prints terminal telemetry, writes a thin FCO/FCG trace,
 and appends a canonical `terminal_runs` row to `results.json`.
 
 ```sh
-python -m live_demo.run --mode 1p --seed 3 --steps 3 \
+python3 -m live_demo.run --mode 1p --seed 3 --steps 3 \
   --player0-preprocessor vithia \
   --player0-decider ollama:qwen2.5:0.5b \
   --headless
 ```
 
+`qwen2.5:0.5b` is only an example: use a model reported by `python3 -m live_demo.probe_integrations` / `ollama list` on your machine. The runner can fall back to `NOOP` when a model request fails and still print `terminal_acceptance=PASS`; check `fallback_actions` in the result row (must be 0). For post-submission verification with no silent fallback, see [`docs/JUDGE_REPRODUCIBILITY_UPDATE_V01.md`](../docs/JUDGE_REPRODUCIBILITY_UPDATE_V01.md).
+
 Fast deterministic smoke:
 
 ```sh
-python -m live_demo.run --mode 1p --seed 3 --steps 1 \
+python3 -m live_demo.run --mode 1p --seed 3 --steps 1 \
   --player0-preprocessor none \
   --player0-decider scripted \
   --run-class SCRIPTED_CONTROL \
@@ -71,7 +70,7 @@ python -m live_demo.run --mode 1p --seed 3 --steps 1 \
 2P, when `ALE_ROM_DIR` points to the legal Space Invaders ROM directory:
 
 ```sh
-python -m live_demo.run --mode 2p --seed 3 --steps 1 \
+python3 -m live_demo.run --mode 2p --seed 3 --steps 1 \
   --player0-preprocessor vithia --player0-decider scripted \
   --player1-preprocessor vithia --player1-decider liquid:longhorizon-liquid-230m:latest \
   --headless
@@ -86,11 +85,11 @@ Ollama and Liquid local runs are never labeled as official TypeSafe JEV runs.
 For an existing run bundle:
 
 ```sh
-python -m live_demo.run \
+python3 -m live_demo.run \
   --replay-seed-run-dir evidence/competition/openjev_ab/run_openjev_vithia_l1_2701834b043f \
   --breakpoint-id ENGINEERING-OPENJEV-VITHIA-L1
 
-python -m live_demo.run \
+python3 -m live_demo.run \
   --verify-replay-seed evidence/competition/openjev_ab/run_openjev_vithia_l1_2701834b043f/REPLAY_SEED_FCO.json
 ```
 
@@ -102,8 +101,8 @@ Random access is reported separately from proof and full replay.
 ## Optional browser launch
 
 ```sh
-python -m live_demo.probe_integrations
-python -m live_demo.server --port 8788
+python3 -m live_demo.probe_integrations
+python3 -m live_demo.server --port 8788
 ```
 
 Open `http://127.0.0.1:8788`.
