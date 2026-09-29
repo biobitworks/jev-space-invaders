@@ -32,6 +32,7 @@ EXPECTED_BRANCH = "postsubmission/vithia-doctor3-v01"
 CRED_VARS = ["MI_API_KEY", "MITOSIS_API_KEY", "TENKI_API_KEY", "TENKI_AUTH_TOKEN", "TYPESAFE_API_KEY", "ANTHROPIC_API_KEY", "OPENAI_API_KEY",
              "AWS_ACCESS_KEY_ID", "AWS_SECRET_ACCESS_KEY", "AWS_SESSION_TOKEN"]
 BASE = "http://127.0.0.1:11434"
+LOCAL_ONLY = False
 TIER = {"WITHHOLD_ALL_TENKI_CLAIMS": 0, "PUBLISH_CLAIM_ARTIFACT_VERIFIED_ONLY": 1, "PUBLISH_CLAIM_REPLAY_COMPLETE": 2}
 
 
@@ -94,7 +95,7 @@ def run_session(model: str | None, sid: str, env_base: dict, lanes: str | None =
     env.update(OLLAMA_BASE_URL=BASE, **(extra_env or {}))
     if model:
         env["OLLAMA_MODEL"] = model
-    cmd = ["bash", "tools/vithia_doctor3.sh", "--seed-fco", SEED_REL, "--non-interactive", "--identity-mode", "generate", "--session-id", sid]
+    cmd = ["bash", "tools/vithia_doctor3.sh", "--seed-fco", SEED_REL, "--non-interactive", "--identity-mode", "generate", "--session-id", sid] + (["--local-only"] if LOCAL_ONLY else [])
     cmd += ["--deciders", lanes] if lanes else ["--decider", "ollama"]
     if profile:
         cmd += ["--prompt-profile", profile]
@@ -247,7 +248,14 @@ def main() -> int:
     ap.add_argument("--lanes", help="one session, many deciders on one shared verified context, e.g. scripted,ollama:llama3.2:3b,openjev")
     ap.add_argument("--prompt-profile", default="neutral_v1")
     ap.add_argument("--setup-venv", action="store_true"); ap.add_argument("--no-second-model", action="store_true"); ap.add_argument("--no-push", action="store_true")
+    ap.add_argument("--local-only", action="store_true", help="no git writes at all (Doctor3 runs with --local-only; the report is not committed); the expected branch defaults to the current branch")
     a = ap.parse_args()
+    if a.local_only:
+        global LOCAL_ONLY
+        LOCAL_ONLY = True
+        a.no_push = True
+        if a.expected_branch == EXPECTED_BRANCH:
+            a.expected_branch = sh("git", "rev-parse", "--abbrev-ref", "HEAD").stdout.strip()
     R: dict = {}
     host = sh("scutil", "--get", "ComputerName").stdout.strip() or socket.gethostname()
     R["HOST"] = host

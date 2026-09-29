@@ -341,3 +341,14 @@ def test_remote_mode_forwards_every_parsed_option_shell_quoted():
                  "--prompt-profile explicit_v1", "--env-file /x\\ y/.env"):
         assert want in out, (want, out)
     assert "--remote" not in out and "studio.local" not in out
+
+
+def test_local_only_flag_is_forwarded_and_documented():
+    root = Path(__file__).resolve().parents[1]
+    out = subprocess.run(["bash", "tools/vithia_doctor3.sh", "--remote", "h", "--local-only", "--seed-fco", "s.json", "--_print-forward-args"], cwd=root, capture_output=True, text=True).stdout
+    assert "--local-only" in out and "--remote" not in out
+    sh_src = (root / "tools/vithia_doctor3.sh").read_text()
+    assert "((SIM)) || ((LOCALONLY)) || HOOK=(" in sh_src            # local-only installs no commit/push hook
+    assert "local-only: nothing was committed or pushed" in sh_src
+    help_out = subprocess.run([sys.executable, "tools/verify_doctor3_ollama_local.py", "--help"], cwd=root, capture_output=True, text=True).stdout
+    assert "--local-only" in help_out
