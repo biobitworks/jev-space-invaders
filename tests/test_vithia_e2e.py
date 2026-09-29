@@ -81,3 +81,15 @@ def test_ledger_root_forgery_detected(lineage):
 def test_mitosis_blocked_without_key():
     m = L.Mitosis("office", {})
     assert m.auth()["state"] == "BLOCKED"
+
+
+def test_breakpoint_and_ledger_writes_are_secret_scanned(lineage):
+    name = "t" + "k_abcdefghij12.txt"          # token-shaped filename lands in the breakpoint JSON
+    (lineage / name).write_text("x")
+    with pytest.raises(ValueError, match="SECRET_SCAN=FAIL"):
+        L.create_breakpoint("bp_secret.json", [(name, "K", "g")])
+    assert not (lineage / "e2e/bp_secret.json").exists() and not L.LEDGER.exists()
+
+def test_mitosis_sdk_is_pinned():
+    assert L.MI_SDK_SPEC.startswith("@mitosislabs/sdk@") and not L.MI_SDK_SPEC.endswith("@latest")
+    import re; assert re.search(r"@\d+\.\d+\.\d+$", L.MI_SDK_SPEC)

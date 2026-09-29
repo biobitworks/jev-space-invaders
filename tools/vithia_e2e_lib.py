@@ -245,6 +245,7 @@ def create_breakpoint(slug_file: str, atoms_spec: list[tuple[str, str, str]]) ->
            "parent_root": parent, "root_kind": "FMO_V1_BREAKPOINT_ATOMS", "atoms": atoms,
            "group_roots": groups, "bp_root": broot, "created_utc": utc()}
     path = E2E_DIR / slug_file
+    scan_text(canonical(doc).decode(), where=f"breakpoint {slug_file}")
     path.write_bytes(canonical(doc))
     fsha, _ = sha256_file(path)
     lf = mmr_leaf(seq, bp_id, broot, fsha)
@@ -254,6 +255,7 @@ def create_breakpoint(slug_file: str, atoms_spec: list[tuple[str, str, str]]) ->
              "bp_root": broot, "parent_root": parent, "mmr_leaf": lf.hex(), "mmr_size": len(leaves),
              "mmr_root_after": root, "mmr_peaks_after": peaks}
     ledger["entries"].append(entry)
+    scan_text(canonical(ledger).decode(), where="ledger")
     LEDGER.write_bytes(canonical(ledger))
     return entry
 
@@ -303,6 +305,10 @@ def verify_lineage(upto_bp_id: str | None = None) -> list[dict]:
 
 
 # ---------------------------------------------------------------- Mitosis (real round-trips only)
+# Pinned: an unpinned @latest would run moving remote code in a process that holds the API key.
+MI_SDK_SPEC = "@mitosislabs/sdk@0.27.2"
+
+
 class Mitosis:
     """Drives the official `mi` CLI. The key travels only via the child's environment; argv/logs never
     carry it. PASS states are derived exclusively from real responses."""
@@ -313,7 +319,7 @@ class Mitosis:
         self.available = bool(env.get("MI_API_KEY"))
 
     def _mi(self, *args: str, timeout: int = 120):
-        cmd = ["npx", "-y", "-p", "@mitosislabs/sdk@latest", "mi", *args]
+        cmd = ["npx", "-y", "-p", MI_SDK_SPEC, "mi", *args]
         print("$ MITOSIS_CLI", args[0], args[1] if len(args) > 1 else "", "<redacted-auth>", file=sys.stderr)
         p = subprocess.run(cmd, env=self.child_env, capture_output=True, text=True, timeout=timeout)
         try:
