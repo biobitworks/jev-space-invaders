@@ -57,7 +57,7 @@ def parse_lanes(spec: str) -> list[dict]:
     lanes, seen = [], set()
     for tok in [t.strip() for t in spec.split(",") if t.strip()]:
         kind, _, model = tok.partition(":")
-        if kind not in ("scripted", "ollama", "openjev", "jev", "skip"):
+        if kind not in ("scripted", "ollama", "ollarma", "openjev", "jev", "skip"):
             raise Stop(f"LANES=FAIL: unknown decider {kind!r}")
         name = re.sub(r"[^A-Za-z0-9_.-]", "_", tok)[:60]
         if name in seen:
@@ -373,15 +373,21 @@ def run_decider(kind: str, status: dict, env: dict, profile: str = "neutral_v1")
         a = policy_scripted(status)
         return {"status": "PASS", "action": a, "provider": "none", "latency": round((time.perf_counter() - t0) * 1000, 4), **meta}
     try:
-        if kind == "ollama":
+        if kind in ("ollama", "ollarma"):
+            from urllib.parse import urlparse
+            base_url = env.get("OLLAMA_BASE_URL", "http://127.0.0.1:11434") if kind == "ollama" else env.get("OLLARMA_BASE_URL", "")
+            if not base_url:
+                return {"status": "BLOCKED", "action": None, "provider": kind, "latency": 0.0, "note": "OLLARMA_BASE_URL NOT_SET (no port is guessed)", **meta}
+            if urlparse(base_url).hostname not in ("127.0.0.1", "localhost", "::1"):
+                return {"status": "BLOCKED", "action": None, "provider": kind, "latency": 0.0, "note": "non-loopback endpoint refused", **meta}
             model = env.get("OLLAMA_MODEL", "llama3.2:3b")
             actions = ONTOLOGY if all(k == v for k, v in prof["criteria"].items()) else prof["criteria"]
             content = prof["instructions"] + " Reply JSON {\"action\": <one of the list>}.\n" + json.dumps({"actions": actions, "verification_status": status})
-            req = urllib.request.Request(env.get("OLLAMA_BASE_URL", "http://127.0.0.1:11434") + "/api/chat", headers={"Content-Type": "application/json"},
+            req = urllib.request.Request(base_url + "/api/chat", headers={"Content-Type": "application/json"},
                                          data=json.dumps({"model": model, "stream": False, "format": "json", "options": {"temperature": 0},
                                                           "messages": [{"role": "user", "content": content}]}).encode())
             cand = json.loads(json.loads(urllib.request.urlopen(req, timeout=180).read())["message"]["content"]).get("action")
-            prov = "ollama:" + model
+            prov = f"{kind}:{model}"
         elif kind in ("jev", "openjev"):
             if kind == "jev":
                 if not env.get("TYPESAFE_API_KEY"):
@@ -608,16 +614,19 @@ class Session:
                 "schema": "DecisionFCO_V1", "session_id": self.sid, "decider_type": ln["kind"].upper(), "provider": d["provider"], "input_context_root": vroot,
                 "action_ontology": ONTOLOGY, "selected_action": d["action"] or "NONE", "decision_latency_ms": d["latency"], "status": d["status"],
                 "output_sha256": L.sha((d["action"] or "NONE").encode()), "note": d.get("note", ""), "lane": ln["name"], "prompt_profile": d["prompt_profile"],
-                "prompt_sha256": d["prompt_sha256"], "context_ceiling": ceiling, "supported_by_context": supported, "created_utc": L.utc()})
+                "prompt_sha256": d["prompt_sha256"], "prompt_profile_sha256": d["prompt_sha256"], "context_ceiling": ceiling, "supported_by_context": supported, "created_utc": L.utc()})
             exe = d["status"] == "PASS" and not overreach
+            a_status = "PASS" if exe else ("NOT_EXECUTED" if d["status"] != "PASS" else "BLOCKED")
+            o_status = "PASS" if exe else ("BLOCKED" if overreach else "NOT_EXECUTED")
             asha = L.write_fco(self.sdir / f"ACTION_EXECUTION_FCO{sfx}.json", {
                 "schema": "ActionExecutionFCO_V1", "session_id": self.sid, "decision_fco_sha256": dsha, "action": d["action"] or "NONE", "lane": ln["name"],
-                "executed": exe, "status": "PASS" if exe else ("NOT_EXECUTED" if d["status"] != "PASS" else "BLOCKED"), "created_utc": L.utc()})
+                "executed": exe, "status": a_status, "created_utc": L.utc()})
             osha = L.write_fco(self.sdir / f"OUTCOME_FCO{sfx}.json", {
                 "schema": "OutcomeFCO_V1", "session_id": self.sid, "action_execution_fco_sha256": asha, "lane": ln["name"],
                 "outcome": "CLAIM_OVERREACH_REFUSED" if overreach else ("CLAIM_WITHIN_VERIFIED_CEILING" if exe else "NO_ACTION"),
-                "status": "PASS" if exe else ("BLOCKED" if overreach else "NOT_EXECUTED"), "created_utc": L.utc()})
-            lane_recs.append({"lane": ln["name"], "kind": ln["kind"], "provider": d["provider"], "status": d["status"], "action": d["action"], "supported_by_context": supported,
+                "status": o_status, "created_utc": L.utc()})
+            lane_recs.append({"lane": ln["name"], "kind": ln["kind"], "model": ln["model"], "action_execution_status": a_status, "outcome_status": o_status,
+                              "provider": d["provider"], "status": d["status"], "action": d["action"], "supported_by_context": supported,
                               "latency_ms": d["latency"], "executed": exe, "note": d.get("note", ""), "input_context_root": vroot,
                               "decision_fco_sha256": dsha, "action_execution_fco_sha256": asha, "outcome_fco_sha256": osha, "files_suffix": sfx})
             if i == 0:
