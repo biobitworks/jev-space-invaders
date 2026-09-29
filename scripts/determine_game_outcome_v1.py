@@ -46,6 +46,12 @@ def recompute_episode(rows: list[dict]) -> tuple[str, list[dict]]:
     return root, errors
 
 
+def winner_from_scores(left: float, right: float) -> str:
+    if left == right:
+        return "TIE"
+    return "LEFT" if left > right else "RIGHT"
+
+
 def all_runs(results: dict) -> list[dict]:
     return list(results.get("runs", [])) + list(results.get("baseline", {}).get("runs", []))
 
@@ -95,12 +101,16 @@ def compare_1p(args) -> dict:
         blockers.append("RIGHT_TRACE_NOT_VERIFIED")
     if left.get("seed") != right.get("seed"):
         blockers.append("SEED_MISMATCH")
+    if left.get("max_steps_cap") != right.get("max_steps_cap"):
+        blockers.append("EVALUATION_BUDGET_MISMATCH")
+    for runtime_key in ("ale_py", "gymnasium", "numpy"):
+        if left.get("runtime", {}).get(runtime_key) != right.get("runtime", {}).get(runtime_key):
+            blockers.append(f"RUNTIME_MISMATCH:{runtime_key}")
 
     if blockers:
         winner = "NOT_ESTABLISHED"
     else:
-        ls, rs = float(left["score"]), float(right["score"])
-        winner = "TIE" if ls == rs else ("LEFT" if ls > rs else "RIGHT")
+        winner = winner_from_scores(float(left["score"]), float(right["score"]))
 
     return {
         "schema": "DETERMINISTIC_GAME_OUTCOME_V1",
@@ -165,15 +175,17 @@ def compare_2p(args) -> dict:
     if blockers:
         winner_seat = "NOT_ESTABLISHED"
         winner_arm = None
-    elif relative > 0:
-        winner_seat = "first_0"
-        winner_arm = run.get("seats", {}).get("first_0")
-    elif relative < 0:
-        winner_seat = "second_0"
-        winner_arm = run.get("seats", {}).get("second_0")
     else:
-        winner_seat = "TIE"
-        winner_arm = "TIE"
+        side = winner_from_scores(first, second)
+        if side == "LEFT":
+            winner_seat = "first_0"
+            winner_arm = run.get("seats", {}).get("first_0")
+        elif side == "RIGHT":
+            winner_seat = "second_0"
+            winner_arm = run.get("seats", {}).get("second_0")
+        else:
+            winner_seat = "TIE"
+            winner_arm = "TIE"
 
     return {
         "schema": "DETERMINISTIC_GAME_OUTCOME_V1",
