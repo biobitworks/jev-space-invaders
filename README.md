@@ -4,11 +4,11 @@ Public, reproducible UFA arena branch of the Vithia model family. Competition-fa
 
 ## Demo video
 
-**UFA JEV Bake-Off submission demo:** https://youtu.be/4BuR_NnJAsM
+**UFA JEV Bake-Off submission demo:** https://youtu.be/Yo-WfJVJO-Q
 
 ## Current verified competition state
 
-- Registration: **SUBMITTED** (entry b968c199...); public demo video: https://youtu.be/4BuR_NnJAsM
+- Registration: **SUBMITTED** (entry b968c199...); public demo video: https://youtu.be/Yo-WfJVJO-Q
 - Track: pilot. Hosted TypeSafe JEV access is **NOT_AVAILABLE_NOT_TESTED**; counted hosted-JEV runs: **0**.
 - Local comparator: provider=ollama, model=llama3.2:3b, five fixed seeds executed; scores: **270, 270, 270, 270, 270**. This is LOCAL_OLLAMA_BASELINE, not the official System-One baseline.
 - Official System-One baseline: **BLOCKED_NO_PROVIDER_CREDENTIAL**.
