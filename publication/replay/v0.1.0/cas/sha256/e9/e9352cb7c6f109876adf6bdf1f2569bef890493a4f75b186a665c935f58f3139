@@ -1,0 +1,63 @@
+{
+  "schema": "VITHIA_ZENODO_METADATA_DRAFT_V1",
+  "state": "DRAFT_BLOCKED_OPERATOR_LICENSE_AND_FINAL_DATE",
+  "record_role": "PUBLICATION_FCG_DATASET",
+  "metadata": {
+    "upload_type": "dataset",
+    "title": "Vithia 0-Vita-1 Publication FCG: Governed Evidence, Claims, Experiments, Breakpoints, and Query Database",
+    "creators": [
+      {
+        "name": "Lee, Byron P.",
+        "affiliation": "Biobitworks",
+        "orcid": "0000-0002-4925-4795"
+      }
+    ],
+    "description": "Machine-readable publication Fractal Custody Graph for Vithia 0-Vita-1 v0.1.0. Canonical JSONL preserves independently addressable source, content, occurrence, context, transition, claim, experiment, dataset, breakpoint, MMR, and artifact objects plus typed FCG relationships and manuscript claim/evidence paths. Parquet and DuckDB are defined as derived analytical/query projections and do not replace canonical JSONL identity. Hashes represent identity/deduplication; FCG edges represent declared relationships; Merkle/MMR records represent integrity/order/custody and do not establish scientific truth or causality. UNKNOWN, NOT_TESTED, NOT_COMPUTED, negative, null, partial, and deferred states are preserved explicitly.",
+    "access_right": "open",
+    "keywords": [
+      "Vithia",
+      "0-Vita-1",
+      "FCO",
+      "FCG",
+      "research data",
+      "provenance",
+      "reproducibility",
+      "content addressing",
+      "Merkle tree",
+      "Merkle Mountain Range",
+      "claim evidence graph",
+      "scientific agents"
+    ],
+    "related_identifiers": [
+      {
+        "identifier": "10.5281/zenodo.21210575",
+        "relation": "references",
+        "resource_type": "publication-preprint"
+      },
+      {
+        "identifier": "10.5281/zenodo.21382831",
+        "relation": "references",
+        "resource_type": "publication-preprint"
+      },
+      {
+        "identifier": "10.5281/zenodo.21829929",
+        "relation": "references",
+        "resource_type": "publication-preprint"
+      },
+      {
+        "identifier": "https://github.com/biobitworks/jev-space-invaders",
+        "relation": "isSourceOf",
+        "resource_type": "software"
+      }
+    ],
+    "version": "0.1.0",
+    "language": "eng"
+  },
+  "unresolved": {
+    "publication_date": "SET_TO_ACTUAL_ZENODO_PUBLICATION_DATE",
+    "license": "OPERATOR_DECISION_REQUIRED",
+    "community": "CONFIRM biobitworks IF VALID_ZENODO_COMMUNITY",
+    "prereserve_doi": "OPERATOR_DECISION_REQUIRED",
+    "companion_preprint_doi": "ADD_AFTER_DOI_RESERVATION_AS_isSupplementTo"
+  }
+}

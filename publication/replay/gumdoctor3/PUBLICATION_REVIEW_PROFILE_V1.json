@@ -1,0 +1,27 @@
+{
+  "LOGICAL_REVIEW_PROFILE_ID": "PUBLICATION_REVIEW_PROFILE_V1",
+  "allowed_publication_artifacts": [
+    "publication/replay/v0.1.0/receipts/PUBLICATION_REPLAY_RECEIPT.json",
+    "publication/zenodo/v0.1.0/fcg/verification/CANONICAL_FCG_VALIDATION_RECEIPT.json",
+    "publication/zenodo/v0.1.0/ZENODO_RIGHTS_MATRIX.json"
+  ],
+  "claim_boundaries": [
+    "ProofPass(r) does not imply Reconstructable(r)",
+    "Merkle inclusion is custody/integrity, not truth",
+    "LLM review is optional noncanonical derived evidence"
+  ],
+  "context_selection_rule": "receipt_and_claim_ceiling_only",
+  "failure_schema": {
+    "detail": "string",
+    "failure_class": "CONFIGURATION|MODEL|AUTH|PROVIDER|SCHEMA"
+  },
+  "maximum_supplied_context": "64KiB",
+  "question": "Review the deterministic publication replay receipt for declared failures, blocked states, and overclaims. Do not infer scientific truth from custody proofs.",
+  "response_schema": {
+    "findings": [
+      "string"
+    ],
+    "overall": "PASS|FAIL|BLOCKED|NEEDS_HUMAN"
+  },
+  "schema": "PUBLICATION_REVIEW_PROFILE_V1"
+}

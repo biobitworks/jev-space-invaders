@@ -1,0 +1,395 @@
+{
+  "outputs": [
+    {
+      "comparison_mode": "BYTE_EXACT",
+      "expected_bytes_if_frozen": 1792,
+      "expected_sha256_if_frozen": "de90cf2a409407082dc77bdbc57ea77c6d54e5f185ea749ba09f25f399d23bc0",
+      "path": "publication/zenodo/v0.1.0/README.md"
+    },
+    {
+      "comparison_mode": "BYTE_EXACT",
+      "expected_bytes_if_frozen": 3225,
+      "expected_sha256_if_frozen": "033bfbe77970671d252d9a3146c3c158f81268289134e01ac9201eb653defaaf",
+      "path": "publication/zenodo/v0.1.0/SHA256SUMS.txt"
+    },
+    {
+      "comparison_mode": "BYTE_EXACT",
+      "expected_bytes_if_frozen": 1191,
+      "expected_sha256_if_frozen": "4346bc57c573e6465937f8aad981856148b6994332fa06c6634a4da5cf4b8d0c",
+      "path": "publication/zenodo/v0.1.0/UPLOAD_PLAN.md"
+    },
+    {
+      "comparison_mode": "BYTE_EXACT",
+      "expected_bytes_if_frozen": 22518,
+      "expected_sha256_if_frozen": "0a0567ad7a877bf1180ef7f9b4978d65a4643ed39499eb1029a6bd99e160c2a2",
+      "path": "publication/zenodo/v0.1.0/ZENODO_FILE_MANIFEST.json"
+    },
+    {
+      "comparison_mode": "BYTE_EXACT",
+      "expected_bytes_if_frozen": 981,
+      "expected_sha256_if_frozen": "4a39b6c80bb34e90fc4fc509d478b20d2e7b148d3f60c3427d5ccdce8cd1e051",
+      "path": "publication/zenodo/v0.1.0/ZENODO_OPERATOR_CHECKLIST.md"
+    },
+    {
+      "comparison_mode": "BYTE_EXACT",
+      "expected_bytes_if_frozen": 3432,
+      "expected_sha256_if_frozen": "a16ee57e033264501bdc5d4d0222ef7fb2d8b66ca174b4e7e96c775db2076065",
+      "path": "publication/zenodo/v0.1.0/ZENODO_PACKAGE_BUILD_STATUS.json"
+    },
+    {
+      "comparison_mode": "BYTE_EXACT",
+      "expected_bytes_if_frozen": 1773,
+      "expected_sha256_if_frozen": "f698d849f64c0321894b091a05c5efe71ea2b8e365e64f4b72500a6dc8c845fc",
+      "path": "publication/zenodo/v0.1.0/ZENODO_RIGHTS_MATRIX.json"
+    },
+    {
+      "comparison_mode": "BYTE_EXACT",
+      "expected_bytes_if_frozen": 7265,
+      "expected_sha256_if_frozen": "de71e0cb8b001b9ecddedc5e292a78c71c5ba876b2958a87960a3a12ba21f35a",
+      "path": "publication/zenodo/v0.1.0/fcg/canonical/PUBLICATION_CLAIM_PATHS.jsonl"
+    },
+    {
+      "comparison_mode": "BYTE_EXACT",
+      "expected_bytes_if_frozen": 13976,
+      "expected_sha256_if_frozen": "dfdf241671e75c8c5c4893843f8c31c27eeee3dda409bb3c31d6354e18995993",
+      "path": "publication/zenodo/v0.1.0/fcg/canonical/artifact_registry.jsonl"
+    },
+    {
+      "comparison_mode": "BYTE_EXACT",
+      "expected_bytes_if_frozen": 15462,
+      "expected_sha256_if_frozen": "355c0011441c64924ec84ac0f3a9ec71271a9bcc6ad7b08297640b75c2e84239",
+      "path": "publication/zenodo/v0.1.0/fcg/canonical/breakpoints.jsonl"
+    },
+    {
+      "comparison_mode": "BYTE_EXACT",
+      "expected_bytes_if_frozen": 2458,
+      "expected_sha256_if_frozen": "79fd086e69c656f37806544a975a1c1a4e67f6f0473eb9f42b541cefa9ee0e33",
+      "path": "publication/zenodo/v0.1.0/fcg/canonical/citations.jsonl"
+    },
+    {
+      "comparison_mode": "BYTE_EXACT",
+      "expected_bytes_if_frozen": 18435,
+      "expected_sha256_if_frozen": "255e2d9e704cbecfd388ae2c94a81e2fa2ca40e2ce4a99a76b63c03a7d273ee1",
+      "path": "publication/zenodo/v0.1.0/fcg/canonical/claims.jsonl"
+    },
+    {
+      "comparison_mode": "BYTE_EXACT",
+      "expected_bytes_if_frozen": 9732,
+      "expected_sha256_if_frozen": "63c2a10e9e92772723122ff0f6877a8a628ed8c95645dd7f0a363b163232d043",
+      "path": "publication/zenodo/v0.1.0/fcg/canonical/content_fcos.jsonl"
+    },
+    {
+      "comparison_mode": "BYTE_EXACT",
+      "expected_bytes_if_frozen": 712,
+      "expected_sha256_if_frozen": "263e793bc710e627a38ec4e727f47f1537abedcf9d207c3bb2ce9d6c6f1be12c",
+      "path": "publication/zenodo/v0.1.0/fcg/canonical/context_fcos.jsonl"
+    },
+    {
+      "comparison_mode": "BYTE_EXACT",
+      "expected_bytes_if_frozen": 6822,
+      "expected_sha256_if_frozen": "0968c52bf01e3b2b4928d2cff106eb82ec2a967f5e01b27bc99561ebfceb7926",
+      "path": "publication/zenodo/v0.1.0/fcg/canonical/datasets.jsonl"
+    },
+    {
+      "comparison_mode": "BYTE_EXACT",
+      "expected_bytes_if_frozen": 5004,
+      "expected_sha256_if_frozen": "13484f13457b779341c891b4735fb532707ea78d983e03af88486d414e176b10",
+      "path": "publication/zenodo/v0.1.0/fcg/canonical/evidence_bindings.jsonl"
+    },
+    {
+      "comparison_mode": "BYTE_EXACT",
+      "expected_bytes_if_frozen": 2674,
+      "expected_sha256_if_frozen": "3ec7b0b0dd4aa755993a7dbfc232f54f2e6c7bdddbda8a846dde0c784de62b99",
+      "path": "publication/zenodo/v0.1.0/fcg/canonical/experiments.jsonl"
+    },
+    {
+      "comparison_mode": "BYTE_EXACT",
+      "expected_bytes_if_frozen": 13674,
+      "expected_sha256_if_frozen": "425cdb99014260fa054d23d8b88a80238f73c43b4d4ee2e7e4a9a9bb1336ca23",
+      "path": "publication/zenodo/v0.1.0/fcg/canonical/fcg_edges.jsonl"
+    },
+    {
+      "comparison_mode": "BYTE_EXACT",
+      "expected_bytes_if_frozen": 27416,
+      "expected_sha256_if_frozen": "3c09cde7062082f7d35b53dc5ed5606f029e7743fcdb077b66f9f7121131dde3",
+      "path": "publication/zenodo/v0.1.0/fcg/canonical/mmr_events.jsonl"
+    },
+    {
+      "comparison_mode": "BYTE_EXACT",
+      "expected_bytes_if_frozen": 7796,
+      "expected_sha256_if_frozen": "636bd25c7fc3deb0d347dfda5e6b3de3d3d5c8e48b92a89ec743719bc18b1a79",
+      "path": "publication/zenodo/v0.1.0/fcg/canonical/occurrence_fcos.jsonl"
+    },
+    {
+      "comparison_mode": "BYTE_EXACT",
+      "expected_bytes_if_frozen": 9178,
+      "expected_sha256_if_frozen": "66249f8b46f1dbdea4f5524daefe56ecb7eb5b89b5c4883208ba35bf1be4076d",
+      "path": "publication/zenodo/v0.1.0/fcg/canonical/results.jsonl"
+    },
+    {
+      "comparison_mode": "BYTE_EXACT",
+      "expected_bytes_if_frozen": 2913,
+      "expected_sha256_if_frozen": "29184f7676b3b411b53fb575280bf3af3e3c2030f431c83d264fd6b769459246",
+      "path": "publication/zenodo/v0.1.0/fcg/canonical/sources.jsonl"
+    },
+    {
+      "comparison_mode": "BYTE_EXACT",
+      "expected_bytes_if_frozen": 737,
+      "expected_sha256_if_frozen": "1d5629d47eb6ee45cc2ebff80697493f872b8ecfc9059143e65156dc81359ac4",
+      "path": "publication/zenodo/v0.1.0/fcg/canonical/transition_fcos.jsonl"
+    },
+    {
+      "comparison_mode": "NEW_SUCCESSOR_OUTPUT",
+      "expected_bytes_if_frozen": 274432,
+      "expected_sha256_if_frozen": "e785eda999175947cb8bd096dd1cc6692f314d9b981f2572bb1a41b3e679eed7",
+      "path": "publication/zenodo/v0.1.0/fcg/database/vithia_publication_fcg_v0.1.0.duckdb"
+    },
+    {
+      "comparison_mode": "NEW_SUCCESSOR_OUTPUT",
+      "expected_bytes_if_frozen": 7029,
+      "expected_sha256_if_frozen": "fb5d4010329eea20c713a2ce3d032f7f03c6363d9a36df6ad027998eff4c7e76",
+      "path": "publication/zenodo/v0.1.0/fcg/parquet/artifact_registry.parquet"
+    },
+    {
+      "comparison_mode": "NEW_SUCCESSOR_OUTPUT",
+      "expected_bytes_if_frozen": 9752,
+      "expected_sha256_if_frozen": "a05967a5feda5ab74654f7f995bc75360e3dc4d56b2b7243fb43c5d31d0126ee",
+      "path": "publication/zenodo/v0.1.0/fcg/parquet/breakpoints.parquet"
+    },
+    {
+      "comparison_mode": "NEW_SUCCESSOR_OUTPUT",
+      "expected_bytes_if_frozen": 3939,
+      "expected_sha256_if_frozen": "09d8103032396cff31657196627d7bb55310d8deb06bbe080c893200e52e5669",
+      "path": "publication/zenodo/v0.1.0/fcg/parquet/citations.parquet"
+    },
+    {
+      "comparison_mode": "NEW_SUCCESSOR_OUTPUT",
+      "expected_bytes_if_frozen": 4707,
+      "expected_sha256_if_frozen": "1257e4369fd2b207751dec69231151bc1d7f921f0b36efe8f0ef5014ec42eb7e",
+      "path": "publication/zenodo/v0.1.0/fcg/parquet/claim_evidence.parquet"
+    },
+    {
+      "comparison_mode": "NEW_SUCCESSOR_OUTPUT",
+      "expected_bytes_if_frozen": 9473,
+      "expected_sha256_if_frozen": "9fda738775e15bfe825b592ca276ce336e290724926f16f3be8c1024914adf8f",
+      "path": "publication/zenodo/v0.1.0/fcg/parquet/claims.parquet"
+    },
+    {
+      "comparison_mode": "NEW_SUCCESSOR_OUTPUT",
+      "expected_bytes_if_frozen": 5429,
+      "expected_sha256_if_frozen": "85a7a7098838483e718200fd6f39a6d245721ca730fa8c71580b236271dd9950",
+      "path": "publication/zenodo/v0.1.0/fcg/parquet/content_fcos.parquet"
+    },
+    {
+      "comparison_mode": "NEW_SUCCESSOR_OUTPUT",
+      "expected_bytes_if_frozen": 5185,
+      "expected_sha256_if_frozen": "faaf0a6f6967a606367824419c10daaeb2c0045f9476a1cf26b17351e046a05a",
+      "path": "publication/zenodo/v0.1.0/fcg/parquet/contexts.parquet"
+    },
+    {
+      "comparison_mode": "NEW_SUCCESSOR_OUTPUT",
+      "expected_bytes_if_frozen": 8163,
+      "expected_sha256_if_frozen": "ea8e9db466fe25a265ffb16d1d942f80bcfc399f7895c6e42e9e85fbd1c564d6",
+      "path": "publication/zenodo/v0.1.0/fcg/parquet/datasets.parquet"
+    },
+    {
+      "comparison_mode": "NEW_SUCCESSOR_OUTPUT",
+      "expected_bytes_if_frozen": 6342,
+      "expected_sha256_if_frozen": "bed73de1e62c93de320347ce6ef0b6c794cf3c6297772aeed332fc1193faf297",
+      "path": "publication/zenodo/v0.1.0/fcg/parquet/experiments.parquet"
+    },
+    {
+      "comparison_mode": "NEW_SUCCESSOR_OUTPUT",
+      "expected_bytes_if_frozen": 4967,
+      "expected_sha256_if_frozen": "a1bdefa031e7fc3f4df48f666202b05fb49bdfdc4288737d9222afbee6075169",
+      "path": "publication/zenodo/v0.1.0/fcg/parquet/fcg_edges.parquet"
+    },
+    {
+      "comparison_mode": "NEW_SUCCESSOR_OUTPUT",
+      "expected_bytes_if_frozen": 10105,
+      "expected_sha256_if_frozen": "6cd13b09b72d08a1d15429e21e1af26805366201e8529d8bd249a783b7884737",
+      "path": "publication/zenodo/v0.1.0/fcg/parquet/mmr_events.parquet"
+    },
+    {
+      "comparison_mode": "NEW_SUCCESSOR_OUTPUT",
+      "expected_bytes_if_frozen": 7026,
+      "expected_sha256_if_frozen": "7040a7bfac3d23d084c62453739e70242b44fb2d0665042049f067e87f32772c",
+      "path": "publication/zenodo/v0.1.0/fcg/parquet/occurrence_fcos.parquet"
+    },
+    {
+      "comparison_mode": "NEW_SUCCESSOR_OUTPUT",
+      "expected_bytes_if_frozen": 4938,
+      "expected_sha256_if_frozen": "63983938d93f224eec2216ad59397a3a38e85209b0ce5f31284225a53827f24a",
+      "path": "publication/zenodo/v0.1.0/fcg/parquet/results.parquet"
+    },
+    {
+      "comparison_mode": "NEW_SUCCESSOR_OUTPUT",
+      "expected_bytes_if_frozen": 4315,
+      "expected_sha256_if_frozen": "3662f1110134babea8f4c6020ed679492e1a8442ad6d7102b5b38043fe5293e1",
+      "path": "publication/zenodo/v0.1.0/fcg/parquet/sources.parquet"
+    },
+    {
+      "comparison_mode": "NEW_SUCCESSOR_OUTPUT",
+      "expected_bytes_if_frozen": 5187,
+      "expected_sha256_if_frozen": "5f5fe236abfde89afa22c11c09e7cadaf788d4f0ae9e7ca23e61950950051183",
+      "path": "publication/zenodo/v0.1.0/fcg/parquet/transitions.parquet"
+    },
+    {
+      "comparison_mode": "BYTE_EXACT",
+      "expected_bytes_if_frozen": 2366,
+      "expected_sha256_if_frozen": "6f9b9380aac7b2c2fcbb0076dde04f4f9c296d97b0368f366b5e6119c2674248",
+      "path": "publication/zenodo/v0.1.0/fcg/schemas/FCG_DATA_DICTIONARY.md"
+    },
+    {
+      "comparison_mode": "BYTE_EXACT",
+      "expected_bytes_if_frozen": 4054,
+      "expected_sha256_if_frozen": "6255c217f394db0450db246416022eedec159480e5d7b4d7fead886342f107d3",
+      "path": "publication/zenodo/v0.1.0/fcg/schemas/FCG_EDGE_TYPES.json"
+    },
+    {
+      "comparison_mode": "BYTE_EXACT",
+      "expected_bytes_if_frozen": 1145,
+      "expected_sha256_if_frozen": "f51f298793b109b97e1f8a2ff493e8a84218ca95b13fd450810235287655709b",
+      "path": "publication/zenodo/v0.1.0/fcg/schemas/FCG_QUERY_EXAMPLES.sql"
+    },
+    {
+      "comparison_mode": "BYTE_EXACT",
+      "expected_bytes_if_frozen": 1739,
+      "expected_sha256_if_frozen": "89a01d73ea6ca0f198d24fe67386dbf76a5823ce1d02d112eb48175131a509c4",
+      "path": "publication/zenodo/v0.1.0/fcg/schemas/FCG_SCHEMA.json"
+    },
+    {
+      "comparison_mode": "BYTE_EXACT",
+      "expected_bytes_if_frozen": 6032,
+      "expected_sha256_if_frozen": "15e4e214889c41fb6f61aa7af24bb6539745095eacc7113e3ac0fb1a9578e5fb",
+      "path": "publication/zenodo/v0.1.0/fcg/scripts/build_derived_fcg.py"
+    },
+    {
+      "comparison_mode": "BYTE_EXACT",
+      "expected_bytes_if_frozen": 1713,
+      "expected_sha256_if_frozen": "0933d0f9fbd2a96597d88ac5ade354e1ac674f4a79c339f254651fe4df7c631a",
+      "path": "publication/zenodo/v0.1.0/fcg/scripts/validate_canonical_fcg.py"
+    },
+    {
+      "comparison_mode": "BYTE_EXACT",
+      "expected_bytes_if_frozen": 4604,
+      "expected_sha256_if_frozen": "5b3a23040c17af04570494df3f6bba7385bd0a2094a3d468dd83823011c4c4cc",
+      "path": "publication/zenodo/v0.1.0/fcg/verification/CANONICAL_FCG_VALIDATION_RECEIPT.json"
+    },
+    {
+      "comparison_mode": "NEW_SUCCESSOR_OUTPUT",
+      "expected_bytes_if_frozen": 6267,
+      "expected_sha256_if_frozen": "c3c37b0bdf45e8a35dc50e397b6eff4760f8236bb613d0277a3fbef9a046bbbe",
+      "path": "publication/zenodo/v0.1.0/fcg/verification/DERIVED_FCG_BUILD_RECEIPT.json"
+    },
+    {
+      "comparison_mode": "BYTE_EXACT",
+      "expected_bytes_if_frozen": 1040,
+      "expected_sha256_if_frozen": "aaa0aabf7ddae8ab6fb22a7ec28081fd05251e3fce99b4c1b62ed4102f49f546",
+      "path": "publication/zenodo/v0.1.0/fcg/verification/DERIVED_FCG_BUILD_STATUS.json"
+    },
+    {
+      "comparison_mode": "BYTE_EXACT",
+      "expected_bytes_if_frozen": 3400,
+      "expected_sha256_if_frozen": "6211e02a79e5eb7b17487504a5e1e1904ffb8c67e07ebd47cfc5bfa2b6482bb0",
+      "path": "publication/zenodo/v0.1.0/metadata/OPENREVIEW_ACCEPTED_PUBLICATION_INTAKE_V01.json"
+    },
+    {
+      "comparison_mode": "BYTE_EXACT",
+      "expected_bytes_if_frozen": 1923,
+      "expected_sha256_if_frozen": "35fadbdc1cec3ccb31e3830e18315ec4a3350333259c9a14bbdd1f5b5d375c9a",
+      "path": "publication/zenodo/v0.1.0/metadata/RELATED_IDENTIFIERS_AUDIT.json"
+    },
+    {
+      "comparison_mode": "BYTE_EXACT",
+      "expected_bytes_if_frozen": 2555,
+      "expected_sha256_if_frozen": "e9352cb7c6f109876adf6bdf1f2569bef890493a4f75b186a665c935f58f3139",
+      "path": "publication/zenodo/v0.1.0/metadata/zenodo_metadata_fcg_dataset.json"
+    },
+    {
+      "comparison_mode": "BYTE_EXACT",
+      "expected_bytes_if_frozen": 2692,
+      "expected_sha256_if_frozen": "64bb1f7642bd5dc916d8ac705287542fb219fdd35c12004bfe4b7d5281d8b85d",
+      "path": "publication/zenodo/v0.1.0/metadata/zenodo_metadata_preprint.json"
+    },
+    {
+      "comparison_mode": "BYTE_EXACT",
+      "expected_bytes_if_frozen": 404,
+      "expected_sha256_if_frozen": "5761b3d1e1c46a7cfc92920ac9eef0e72da0af9c0a048439700b1e3e0189f99a",
+      "path": "publication/zenodo/v0.1.0/preprint/CITATION.cff"
+    },
+    {
+      "comparison_mode": "BYTE_EXACT",
+      "expected_bytes_if_frozen": 11928,
+      "expected_sha256_if_frozen": "0c5c865c1e2a80cae83f6447994ceab6b4d677f13d64e0587691b373e65a95eb",
+      "path": "publication/zenodo/v0.1.0/preprint/CLAIM_LEDGER.json"
+    },
+    {
+      "comparison_mode": "BYTE_EXACT",
+      "expected_bytes_if_frozen": 1134,
+      "expected_sha256_if_frozen": "0bf79cb29a9042b010e1b242d6ab53ed25d7900e6894266f3d69b343296ce1a1",
+      "path": "publication/zenodo/v0.1.0/preprint/EVIDENCE_LOCK.json"
+    },
+    {
+      "comparison_mode": "BYTE_EXACT",
+      "expected_bytes_if_frozen": 1270,
+      "expected_sha256_if_frozen": "de403ba487db6b2cf997f592705a51d8d8c1ed02cca280e802565694a56b0f3c",
+      "path": "publication/zenodo/v0.1.0/preprint/REPRODUCIBILITY.md"
+    },
+    {
+      "comparison_mode": "BYTE_EXACT",
+      "expected_bytes_if_frozen": 2197,
+      "expected_sha256_if_frozen": "a02cf8aad170d1c8cd4fcbb4bb8a61bf41309cf5db8d53c81a132ee729ee4d14",
+      "path": "publication/zenodo/v0.1.0/preprint/SHA256SUMS_frozen_release.txt"
+    },
+    {
+      "comparison_mode": "BYTE_EXACT",
+      "expected_bytes_if_frozen": 138558,
+      "expected_sha256_if_frozen": "03571aa6ba35a0d92007360a8378cdbeaa596a1010c5a57b02d0f2e2ddf9e4d6",
+      "path": "publication/zenodo/v0.1.0/preprint/main.pdf"
+    },
+    {
+      "comparison_mode": "BYTE_EXACT",
+      "expected_bytes_if_frozen": 391152,
+      "expected_sha256_if_frozen": "6e6ab0c21f31223fe64da096cd5d86cca692cc578c4f0954f845040e77f6a9ca",
+      "path": "publication/zenodo/v0.1.0/preprint/source.tar.gz"
+    },
+    {
+      "comparison_mode": "BYTE_EXACT",
+      "expected_bytes_if_frozen": 36387,
+      "expected_sha256_if_frozen": "21827b48b8fd393ec9f1f378edca745cb86e22cde7af1e519e1e75c3b021b69d",
+      "path": "publication/zenodo/v0.1.0/preprint/supplement.pdf"
+    },
+    {
+      "comparison_mode": "BYTE_EXACT",
+      "expected_bytes_if_frozen": 2030,
+      "expected_sha256_if_frozen": "2ffed848b84f7f14c9a4f0f9084efff63c06fab71e9bff8a417d70a715a420a1",
+      "path": "publication/zenodo/v0.1.0/scripts/zenodo_common.py"
+    },
+    {
+      "comparison_mode": "BYTE_EXACT",
+      "expected_bytes_if_frozen": 1777,
+      "expected_sha256_if_frozen": "57c611ee25628b7fef9fb8b076e3f0bcdfc5fa7957f2a6c938f9628a96c9c4ae",
+      "path": "publication/zenodo/v0.1.0/scripts/zenodo_create_drafts.py"
+    },
+    {
+      "comparison_mode": "BYTE_EXACT",
+      "expected_bytes_if_frozen": 1192,
+      "expected_sha256_if_frozen": "47505655ad95dec017df79a83f8d3d6b90a04d51bd8a4d248b71a9d1567452a8",
+      "path": "publication/zenodo/v0.1.0/scripts/zenodo_publish.py"
+    },
+    {
+      "comparison_mode": "BYTE_EXACT",
+      "expected_bytes_if_frozen": 1925,
+      "expected_sha256_if_frozen": "8d2bc65ab60d422ecff8d37cfe6ad87020be38251f0a6ca807cb8aedf719ef20",
+      "path": "publication/zenodo/v0.1.0/scripts/zenodo_upload_files.py"
+    },
+    {
+      "comparison_mode": "BYTE_EXACT",
+      "expected_bytes_if_frozen": 1157,
+      "expected_sha256_if_frozen": "77ac7791b3c206f9fff01438788199caa86a4ae4bf29236f6a80417bc8c25b38",
+      "path": "publication/zenodo/v0.1.0/scripts/zenodo_validate_drafts.py"
+    }
+  ],
+  "schema": "EXPECTED_OUTPUTS_V1"
+}

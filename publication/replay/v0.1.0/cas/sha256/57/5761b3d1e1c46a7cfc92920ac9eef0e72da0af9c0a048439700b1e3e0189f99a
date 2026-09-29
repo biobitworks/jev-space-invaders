@@ -1,0 +1,9 @@
+cff-version: 1.2.0
+message: "If you use this release candidate, cite the public versioned record once a DOI is issued."
+title: "Vithia 0-Vita-1: A Deterministic Context Protocol for Verifiable Scientific State Transitions"
+version: "0.1.0-rc"
+authors:
+  - family-names: "Lee"
+    given-names: "Byron P."
+    affiliation: "Biobitworks"
+repository-code: "https://github.com/biobitworks/jev-space-invaders"

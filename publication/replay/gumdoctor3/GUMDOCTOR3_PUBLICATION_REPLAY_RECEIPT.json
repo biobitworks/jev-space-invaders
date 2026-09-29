@@ -1,0 +1,17 @@
+{
+  "adapter_config_state": "NON_LOAD_BEARING_DETERMINISTIC_REPLAY_ONLY",
+  "created_utc": "2026-09-29T07:19:09Z",
+  "deterministic_receipt_ref": "publication/replay/gumdoctor3/deterministic/PUBLICATION_REPLAY_RECEIPT.json",
+  "deterministic_result": "PASS",
+  "gumdoctor3_commit": "a441eecf239e2124bc8e024fa4f67ed1396540cd",
+  "model_census_state": "RECORDED",
+  "optional_review_lanes": [],
+  "overall": "PASS",
+  "publication_replay_tool_bound": true,
+  "review_failures": [],
+  "root_used": "2c3eab3b820b32f77da7a15aa530fd43ce5ee368bbcb4c4be16080f4b174b54a",
+  "schema": "GUMDOCTOR3_PUBLICATION_REPLAY_RECEIPT_V1",
+  "secret_scan": "PASS",
+  "stderr_tail": "",
+  "stdout_tail": "REBUILD_FROM_ROOT=PASS\nREPLAY_RECEIPT=/Users/byron/projects/worktrees/vithia-zenodo-root-replay-gumdoctor3-v01-20260929/publication/replay/gumdoctor3/deterministic/PUBLICATION_REPLAY_RECEIPT.json\n"
+}

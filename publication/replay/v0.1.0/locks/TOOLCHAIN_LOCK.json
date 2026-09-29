@@ -1,0 +1,10 @@
+{
+  "archive_tool": "python/shutil plus existing frozen archives",
+  "duckdb": "1.5.6",
+  "git": "git version 2.54.0",
+  "latex_engine": "NOT_EXECUTED_IN_CURRENT_REPLAY",
+  "pyarrow": "25.0.1",
+  "python": "3.14.7",
+  "schema": "TOOLCHAIN_LOCK_V1",
+  "tectonic": "NOT_USED_IN_CURRENT_REPLAY"
+}

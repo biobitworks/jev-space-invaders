@@ -1,0 +1,27 @@
+{
+  "build_plan_ref": "plans/PUBLICATION_BUILD_PLAN.json",
+  "canonicalization_version": "JSON_SORT_KEYS_COMPACT_UTF8_V1",
+  "cas_policy_ref": "locks/CAS_POLICY.json",
+  "claim_ceiling": "Merkle root addresses this seed and ordered objects. ProofPass(r) does not imply Reconstructable(r).",
+  "created_utc": "2026-09-29T07:13:56Z",
+  "dependency_lock_ref": "locks/DEPENDENCY_LOCK.json",
+  "expected_outputs_ref": "expected/EXPECTED_OUTPUTS.json",
+  "frozen_publication_predecessor": "2ce9cd8a9b2c3bba63515a7e7eb6cb072f3a8a4c",
+  "historical_gap_refs": [
+    "publication/audits/BP0015_EPHEMERAL_PYC_CUSTODY_GAP.json",
+    "publication/release/v0.1.0/BP0015_EPHEMERAL_PYC_CUSTODY_GAP.json"
+  ],
+  "merkle_construction_version": "VITHIA_PUBLICATION_REPLAY_MERKLE_V1",
+  "network_policy": "OFFLINE_STRICT",
+  "ordered_leaves_ref": "leaves/REPLAY_LEAVES.jsonl",
+  "project": "VITHIA_SPACE",
+  "publication": "Vithia 0-Vita-1",
+  "publication_version": "0.1.0",
+  "rights_state": "LICENSE_NOT_ESTABLISHED_FOR_THIS_RELEASE",
+  "runtime_lock_ref": "locks/RUNTIME_LOCK.json",
+  "schema": "PUBLICATION_REPLAY_SEED_FCO_V1",
+  "source_commit": "a441eecf239e2124bc8e024fa4f67ed1396540cd",
+  "source_lock_ref": "locks/SOURCE_LOCK.json",
+  "source_repository": "biobitworks/jev-space-invaders",
+  "toolchain_lock_ref": "locks/TOOLCHAIN_LOCK.json"
+}

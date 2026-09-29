@@ -1,0 +1,78 @@
+{
+  "schema": "VITHIA_ZENODO_PACKAGE_BUILD_STATUS_V1",
+  "project": "AGENTICLS_PUBLICATION",
+  "version": "0.1.0",
+  "source_branch": "publication/zenodo-fcg-v01-20260929",
+  "parent_branch": "publication/msm-ais-anticube-deltagstar-baseline-v02-20260929",
+  "frozen_predecessor_commit": "2ce9cd8a9b2c3bba63515a7e7eb6cb072f3a8a4c",
+  "package_successor_base_commit": "93f194592bb87a4213923cbfcac762b43844f2f0",
+  "state": "DRAFT_PACKAGE_PARTIAL_BLOCKED_RIGHTS_AND_DERIVED_FORMATS",
+  "canonical_fcg": {
+    "state": "PASS",
+    "validation_receipt": "fcg/verification/CANONICAL_FCG_VALIDATION_RECEIPT.json",
+    "counts": {
+      "content_fcos": 25,
+      "occurrence_fcos": 12,
+      "fcg_edges": 36,
+      "claims": 25,
+      "experiments": 4,
+      "breakpoints": 20,
+      "claim_paths": 12
+    }
+  },
+  "derived_fcg": {
+    "parquet": "NOT_EXECUTED",
+    "duckdb": "NOT_EXECUTED",
+    "reason": "Required pyarrow/duckdb runtime dependencies were not available in the current orchestrator execution environment.",
+    "generator": "fcg/scripts/build_derived_fcg.py"
+  },
+  "zenodo": {
+    "api_write_access_in_chat": "UNAVAILABLE_NO_CONNECTED_ZENODO_CONNECTOR",
+    "preprint_metadata": "DRAFT_BLOCKED_LICENSE_AND_FINAL_DATE",
+    "dataset_metadata": "DRAFT_BLOCKED_LICENSE_AND_FINAL_DATE",
+    "preprint_draft_created": false,
+    "dataset_draft_created": false,
+    "files_uploaded": false,
+    "published": false,
+    "preprint_doi": null,
+    "dataset_doi": null
+  },
+  "rights": {
+    "current_release_state": "LICENSE_NOT_ESTABLISHED_FOR_THIS_RELEASE",
+    "preprint_license": "OPERATOR_DECISION_REQUIRED",
+    "fcg_dataset_license": "OPERATOR_DECISION_REQUIRED",
+    "software_license": "OPERATOR_DECISION_REQUIRED_CANDIDATE_APACHE_2_0",
+    "rights_audit": "BLOCKED"
+  },
+  "recovered_release_gate": {
+    "publication_mmr_chain_state": "PASS",
+    "publication_atom_replay_state": "PARTIAL",
+    "historical_gap": "VITA-PUB-BP-0015 ephemeral .pyc atom unavailable",
+    "publish_authorized": false,
+    "signature_state": "NOT_SIGNED"
+  },
+  "packaging": {
+    "staged_file_manifest": "ZENODO_FILE_MANIFEST.json",
+    "staged_checksums": "SHA256SUMS.txt",
+    "staged_file_count": 33,
+    "preprint_record_file_count": 8,
+    "dataset_record_file_count": 25,
+    "derived_binary_outputs_missing": [
+      "fcg/parquet/*.parquet",
+      "fcg/database/vithia_publication_fcg_v0.1.0.duckdb",
+      "fcg/verification/DERIVED_FCG_BUILD_RECEIPT.json"
+    ]
+  },
+  "publication_breakpoint": {
+    "final_breakpoint_created": false,
+    "reason": "Final package bytes are not frozen because rights decisions and derived Parquet/DuckDB outputs remain unresolved."
+  },
+  "publication_mmr": {
+    "appended": false,
+    "size": null,
+    "root": null,
+    "verified": false
+  },
+  "claim_ceiling": "Canonical JSONL FCG construction and cross-reference validation are PASS. Do not claim Parquet/DuckDB generation, rights clearance, Zenodo draft creation/upload/publication, final publication breakpoint, MMR append, DOI registration, or signing until corresponding receipts exist.",
+  "next_action": "Approve licenses; run fcg/scripts/build_derived_fcg.py in a runtime with pyarrow+duckdb; update both Zenodo metadata files with license and actual publication date; optionally reserve both DOIs; regenerate affected hashes/manifests; then create and independently verify the final publication breakpoint before upload/publish."
+}

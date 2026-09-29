@@ -1,0 +1,53 @@
+{
+  "adapters": [
+    {
+      "adapter_id": "ollama_longhorizon-liquid-230m_latest",
+      "auth_mode": "NONE",
+      "availability": "AVAILABLE",
+      "endpoint": "http://127.0.0.1:11434/api/generate",
+      "endpoint_kind": "HTTP_LOCAL",
+      "model": "longhorizon-liquid-230m:latest",
+      "model_revision_if_known": "fea00095c20503088501efd0f3d83c682c89aee5dcb8dbf1a1394503ac9d9e48",
+      "provider": "ollama",
+      "request_schema": "OLLAMA_GENERATE_JSON",
+      "response_schema": "OLLAMA_GENERATE_RESPONSE",
+      "test_state": "CENSUS_ONLY_NOT_CALLED"
+    },
+    {
+      "adapter_id": "ollama_qwen2.5_0.5b",
+      "auth_mode": "NONE",
+      "availability": "AVAILABLE",
+      "endpoint": "http://127.0.0.1:11434/api/generate",
+      "endpoint_kind": "HTTP_LOCAL",
+      "model": "qwen2.5:0.5b",
+      "model_revision_if_known": "a8b0c51577010a279d933d14c2a8ab4b268079d44c5c8830c0a93900f1827c67",
+      "provider": "ollama",
+      "request_schema": "OLLAMA_GENERATE_JSON",
+      "response_schema": "OLLAMA_GENERATE_RESPONSE",
+      "test_state": "CENSUS_ONLY_NOT_CALLED"
+    },
+    {
+      "adapter_id": "openjev_local",
+      "auth_mode": "BEARER_REQUIRED",
+      "availability": "REACHABLE_AUTH_REQUIRED",
+      "endpoint": "http://127.0.0.1:8768/health or /v1/systemone",
+      "endpoint_kind": "HTTP_LOCAL",
+      "error_classification": "AUTH_FAILURE",
+      "model": "openjev/openjev-MLX-4bit",
+      "model_revision_if_known": "UNKNOWN_NOT_QUERIED_WITH_AUTH",
+      "provider": "OpenJEV",
+      "request_schema": "SYSTEM_ONE_QUESTION_CONTEXT_JSON_EXPECTED_UNVERIFIED",
+      "response_schema": "SYSTEM_ONE_CHOICE_RESPONSE_EXPECTED_UNVERIFIED",
+      "secret_value_recorded": false,
+      "test_state": "AUTH_FAILURE"
+    }
+  ],
+  "claim_ceiling": "Model review lanes are optional noncanonical derived evidence; deterministic publication rebuild does not require an LLM response.",
+  "created_utc": "2026-09-29T07:16:45Z",
+  "model_dependency_for_rebuild": "NONE",
+  "ollarma_config_sources": [
+    "/Users/byron/.ollarma/agents/*/meta.json",
+    "/Users/byron/.ollarma/federation/members.json"
+  ],
+  "schema": "GUMDOCTOR3_MODEL_CENSUS_V1"
+}

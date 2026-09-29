@@ -1,0 +1,44 @@
+{
+  "schema": "VITHIA_ZENODO_RIGHTS_MATRIX_V1",
+  "state": "BLOCKED_OPERATOR_LICENSE_DECISIONS",
+  "current_release_rights_state": "LICENSE_NOT_ESTABLISHED_FOR_THIS_RELEASE",
+  "precedent_note": "A prior Zenodo record (10.5281/zenodo.21382831) states CC BY 4.0 for manuscript/figures/documentation and Apache-2.0 for schemas/code-like materials; that prior record does not automatically license this v0.1.0 release.",
+  "records": {
+    "preprint": {
+      "scope": "main.pdf, supplement.pdf, original figures/documentation selected for the preprint record",
+      "candidate_license": "CC BY-NC-ND 4.0",
+      "zenodo_license_id_candidate": "cc-by-nc-nd-4.0",
+      "applied": false,
+      "operator_approval_required": true
+    },
+    "fcg_dataset": {
+      "scope": "canonical JSONL and derived machine-readable FCG package",
+      "candidate_license": "OPERATOR_DECISION_REQUIRED",
+      "zenodo_license_id_candidate": null,
+      "applied": false,
+      "operator_approval_required": true
+    },
+    "software": {
+      "scope": "verification/build/upload scripts authored for this release",
+      "candidate_license": "Apache-2.0",
+      "zenodo_license_id_candidate": "Apache-2.0",
+      "applied": false,
+      "operator_approval_required": true
+    },
+    "third_party": {
+      "scope": "third-party citations, dependencies, names, trademarks, linked resources",
+      "license": "SOURCE_SPECIFIC",
+      "redistribution_policy": "EXCLUDE bytes unless rights are independently established"
+    },
+    "rom": {
+      "scope": "Atari ROM bytes",
+      "license": "NOT_ESTABLISHED_FOR_REDISTRIBUTION",
+      "redistribution_policy": "EXCLUDE"
+    }
+  },
+  "forbidden_until_resolved": [
+    "ZENODO_PUBLISHED",
+    "PUBLISH_AUTHORIZED",
+    "RIGHTS_AUDIT=PASS"
+  ]
+}

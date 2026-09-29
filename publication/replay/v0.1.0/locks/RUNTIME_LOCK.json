@@ -1,0 +1,11 @@
+{
+  "architecture": "arm64",
+  "locale": "C.UTF-8",
+  "os": "macOS-27.0-arm64-arm-64bit-Mach-O",
+  "pdf_metadata_policy": "PDF byte equality only against frozen outputs; no claim of fresh deterministic TeX rebuild",
+  "python": "3.14.7",
+  "schema": "RUNTIME_LOCK_V1",
+  "shell": "/bin/zsh",
+  "source_date_epoch_policy": "NOT_ENFORCED_FOR_HISTORICAL_PDF_BYTES",
+  "timezone_policy": "UTC timestamps in receipts; source build may contain historical metadata"
+}

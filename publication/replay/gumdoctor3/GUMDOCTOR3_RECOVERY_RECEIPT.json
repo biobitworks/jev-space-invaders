@@ -1,0 +1,25 @@
+{
+  "created_utc": "2026-09-29T07:16:45Z",
+  "gumdoctor3_branch": null,
+  "gumdoctor3_head": null,
+  "gumdoctor3_path": null,
+  "gumdoctor3_repo": null,
+  "model_dependency_for_rebuild": "NONE",
+  "recovered_state": "NOT_RECOVERED",
+  "related_prior_tools": [
+    {
+      "classification": "RELATED_PRIOR_GUM_DOCTOR_V2_NOT_PUBLICATION_GUMDOCTOR3",
+      "head": "884503530da06b2780070b4e38ad939a8c6dbee0",
+      "path": "/Users/byron/projects/active/hydradg/scripts/gum_doctor_v2.py",
+      "repo": "/Users/byron/projects/active/hydradg"
+    }
+  ],
+  "schema": "GUMDOCTOR3_RECOVERY_RECEIPT_V1",
+  "search_roots": [
+    "/Users/byron/projects",
+    "/Users/byron/projects/active",
+    "/Users/byron/projects/worktrees",
+    "/Users/byron"
+  ],
+  "successor_implementation": "publication/replay/gumdoctor3/gumdoctor3_publication_replay.py"
+}

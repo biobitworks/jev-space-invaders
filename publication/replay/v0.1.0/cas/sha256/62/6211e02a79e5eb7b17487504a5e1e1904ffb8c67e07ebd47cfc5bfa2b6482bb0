@@ -1,0 +1,85 @@
+{
+  "schema": "VITHIA_EXTERNAL_ACCEPTED_PUBLICATION_INTAKE_V1",
+  "source_kind": "USER_SUPPLIED_OPENREVIEW_RECORD",
+  "retrieved_or_reported_date": "2026-09-28",
+  "title": "Verify-or-Abstain Evidence Pipelines: When Cryptographic Custody Is Necessary but Not Sufficient",
+  "authors": [
+    {
+      "name": "Byron Lee",
+      "openreview_profile": "~Byron_Lee1"
+    },
+    {
+      "name": "Yassine Chouikh",
+      "openreview_profile": "~Yassine_Chouikh1"
+    },
+    {
+      "name": "Elvis Han",
+      "openreview_profile": "~Elvis_Han1"
+    },
+    {
+      "name": "Shannon Li",
+      "openreview_profile": "~Shannon_Li1"
+    }
+  ],
+  "venue": "NewInML workshop @ NeurIPS 2026",
+  "decision": "Accept (Poster)",
+  "submission_number": 187,
+  "openreview_forum_id": "whqRdK3X2W",
+  "openreview_forum_url": "https://openreview.net/forum?id=whqRdK3X2W",
+  "openreview_pdf_url": "https://openreview.net/pdf?id=whqRdK3X2W",
+  "published_date": "2026-09-28",
+  "last_modified_date": "2026-09-28",
+  "decision_reported_date": "2026-09-27",
+  "license": "CC BY 4.0",
+  "keywords": [
+    "selective prediction",
+    "abstention",
+    "provenance",
+    "evidence pipelines",
+    "reproducibility",
+    "content-addressed storage",
+    "terminal states",
+    "identity guards",
+    "accounting invariants",
+    "negative results",
+    "biomedical evidence",
+    "audit"
+  ],
+  "tldr": "Cryptographic custody is necessary but not sufficient: in an audited evidence pipeline, a hash-valid aggregate reported zero abstentions while its rows held three.",
+  "abstract_claim_boundaries": {
+    "reported_findings": [
+      "historical aggregate reported zero abstentions while row-level data contained three",
+      "successor implementation with derived aggregates restores invariant consistency",
+      "deterministic identity contract passes synthetic fixtures but one observed-source pair admits downstream passage when a guard is bypassed",
+      "historical G1/G2 corpora were not recovered from admitted provenance while contemporary successor evaluations used admitted subsets",
+      "morphology null benchmark independently reproduced and retained as negative evidence"
+    ],
+    "explicit_nonclaims": [
+      "therapeutic efficacy",
+      "clinical utility",
+      "biological rescue",
+      "population-level biomedical error rates",
+      "treatment recommendations",
+      "real-world evidence"
+    ]
+  },
+  "relation_to_vithia": {
+    "state": "CANDIDATE_RELATED_WORK_SUCCESSOR",
+    "rationale": "The accepted paper directly supports the methodological distinction that cryptographic custody/integrity is necessary but not sufficient for semantic/accounting validity. It should not be retroactively inserted into frozen v0.1.0 evidence unless a manuscript successor explicitly cites it.",
+    "candidate_fcg_edges": [
+      {
+        "edge_type": "REFERENCES",
+        "from": "future_vithia_publication_successor",
+        "to": "openreview:whqRdK3X2W"
+      },
+      {
+        "edge_type": "INFORMS",
+        "from": "openreview:whqRdK3X2W",
+        "to": "future_vithia_verify_or_abstain_methodology"
+      }
+    ],
+    "forbidden_inference": "Acceptance of this paper does not validate Vithia 0-Vita-1 experiments or resolve Vithia release rights."
+  },
+  "provenance_state": "USER_SUPPLIED_RECORD_EXCERPT",
+  "verification_state": "NOT_INDEPENDENTLY_VERIFIED_BY_OPENREVIEW_API_IN_THIS_TURN"
+}

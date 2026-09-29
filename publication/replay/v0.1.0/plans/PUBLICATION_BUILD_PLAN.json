@@ -1,0 +1,313 @@
+{
+  "model_dependency": "NONE",
+  "schema": "PUBLICATION_BUILD_PLAN_V1",
+  "steps": [
+    {
+      "command": [
+        "internal",
+        "validate_seed"
+      ],
+      "failure_policy": "FAIL_STOP",
+      "input_refs": [
+        "seed/PUBLICATION_REPLAY_SEED_FCO.json"
+      ],
+      "output_refs": [],
+      "step_id": "R00_VALIDATE_SEED",
+      "working_directory": "."
+    },
+    {
+      "command": [
+        "internal",
+        "resolve_objects"
+      ],
+      "failure_policy": "FAIL_STOP",
+      "input_refs": [
+        "leaves/REPLAY_LEAVES.jsonl"
+      ],
+      "output_refs": [
+        "clean_workspace"
+      ],
+      "step_id": "R01_RESOLVE_OBJECTS",
+      "working_directory": "."
+    },
+    {
+      "command": [
+        "internal",
+        "verify_hashes"
+      ],
+      "failure_policy": "FAIL_STOP",
+      "input_refs": [
+        "leaves/REPLAY_LEAVES.jsonl"
+      ],
+      "output_refs": [],
+      "step_id": "R02_VERIFY_INPUT_HASHES",
+      "working_directory": "."
+    },
+    {
+      "command": [
+        "internal",
+        "materialize_workspace"
+      ],
+      "failure_policy": "FAIL_STOP",
+      "input_refs": [
+        "cas"
+      ],
+      "output_refs": [
+        "clean_workspace"
+      ],
+      "step_id": "R03_MATERIALIZE_CLEAN_WORKSPACE",
+      "working_directory": "."
+    },
+    {
+      "command": [
+        "python",
+        "publication/zenodo/v0.1.0/fcg/scripts/validate_canonical_fcg.py"
+      ],
+      "failure_policy": "FAIL_STOP",
+      "input_refs": [
+        "publication/zenodo/v0.1.0/fcg/canonical"
+      ],
+      "output_refs": [
+        "stdout"
+      ],
+      "step_id": "R04_VALIDATE_CANONICAL_FCG",
+      "working_directory": "clean_workspace"
+    },
+    {
+      "command": [
+        "python",
+        "publication/zenodo/v0.1.0/fcg/scripts/build_derived_fcg.py"
+      ],
+      "failure_policy": "FAIL_STOP",
+      "input_refs": [
+        "publication/zenodo/v0.1.0/fcg/canonical"
+      ],
+      "output_refs": [
+        "publication/zenodo/v0.1.0/fcg/parquet"
+      ],
+      "step_id": "R05_BUILD_PARQUET",
+      "working_directory": "clean_workspace"
+    },
+    {
+      "command": [
+        "internal",
+        "verify_duckdb_query"
+      ],
+      "failure_policy": "FAIL_STOP",
+      "input_refs": [
+        "publication/zenodo/v0.1.0/fcg/database/vithia_publication_fcg_v0.1.0.duckdb"
+      ],
+      "output_refs": [
+        "query_result"
+      ],
+      "step_id": "R06_BUILD_DUCKDB",
+      "working_directory": "clean_workspace"
+    },
+    {
+      "command": [
+        "internal",
+        "verify_frozen_outputs_only"
+      ],
+      "failure_policy": "RECORD_NOT_REBUILT",
+      "input_refs": [
+        "publication/zenodo/v0.1.0/preprint/main.pdf"
+      ],
+      "output_refs": [],
+      "step_id": "R07_GENERATE_FIGURES",
+      "working_directory": "clean_workspace"
+    },
+    {
+      "command": [
+        "internal",
+        "verify_frozen_outputs_only"
+      ],
+      "failure_policy": "RECORD_NOT_REBUILT",
+      "input_refs": [
+        "publication/zenodo/v0.1.0/preprint/supplement.pdf"
+      ],
+      "output_refs": [],
+      "step_id": "R08_GENERATE_TABLES",
+      "working_directory": "clean_workspace"
+    },
+    {
+      "command": [
+        "internal",
+        "compare_frozen_main_pdf"
+      ],
+      "failure_policy": "RECORD_NOT_REBUILT",
+      "input_refs": [
+        "publication/zenodo/v0.1.0/preprint/main.pdf"
+      ],
+      "output_refs": [
+        "hash_comparison"
+      ],
+      "step_id": "R09_BUILD_MAIN_PDF",
+      "working_directory": "clean_workspace"
+    },
+    {
+      "command": [
+        "internal",
+        "compare_frozen_supplement_pdf"
+      ],
+      "failure_policy": "RECORD_NOT_REBUILT",
+      "input_refs": [
+        "publication/zenodo/v0.1.0/preprint/supplement.pdf"
+      ],
+      "output_refs": [
+        "hash_comparison"
+      ],
+      "step_id": "R10_BUILD_SUPPLEMENT_PDF",
+      "working_directory": "clean_workspace"
+    },
+    {
+      "command": [
+        "internal",
+        "compare_frozen_source_archive"
+      ],
+      "failure_policy": "RECORD_NOT_REBUILT",
+      "input_refs": [
+        "publication/zenodo/v0.1.0/preprint/source.tar.gz"
+      ],
+      "output_refs": [
+        "hash_comparison"
+      ],
+      "step_id": "R11_BUILD_SOURCE_ARCHIVE",
+      "working_directory": "clean_workspace"
+    },
+    {
+      "command": [
+        "internal",
+        "compare_metadata_json"
+      ],
+      "failure_policy": "FAIL_STOP",
+      "input_refs": [
+        "publication/zenodo/v0.1.0/metadata"
+      ],
+      "output_refs": [
+        "hash_comparison"
+      ],
+      "step_id": "R12_BUILD_ZENODO_METADATA",
+      "working_directory": "clean_workspace"
+    },
+    {
+      "command": [
+        "internal",
+        "compare_file_manifest"
+      ],
+      "failure_policy": "FAIL_STOP",
+      "input_refs": [
+        "publication/zenodo/v0.1.0/ZENODO_FILE_MANIFEST.json"
+      ],
+      "output_refs": [
+        "hash_comparison"
+      ],
+      "step_id": "R13_BUILD_FILE_MANIFEST",
+      "working_directory": "clean_workspace"
+    },
+    {
+      "command": [
+        "internal",
+        "compare_sha256sums"
+      ],
+      "failure_policy": "FAIL_STOP",
+      "input_refs": [
+        "publication/zenodo/v0.1.0/SHA256SUMS.txt"
+      ],
+      "output_refs": [
+        "hash_comparison"
+      ],
+      "step_id": "R14_BUILD_SHA256SUMS",
+      "working_directory": "clean_workspace"
+    },
+    {
+      "command": [
+        "internal",
+        "compare_expected_outputs"
+      ],
+      "failure_policy": "FAIL_STOP",
+      "input_refs": [
+        "expected/EXPECTED_OUTPUTS.json"
+      ],
+      "output_refs": [
+        "PUBLICATION_REPLAY_RECEIPT"
+      ],
+      "step_id": "R15_COMPARE_EXPECTED_OUTPUTS",
+      "working_directory": "clean_workspace"
+    },
+    {
+      "command": [
+        "internal",
+        "scan_materialized_text"
+      ],
+      "failure_policy": "FAIL_STOP",
+      "input_refs": [
+        "clean_workspace"
+      ],
+      "output_refs": [
+        "secret_scan_state"
+      ],
+      "step_id": "R16_RUN_SECRET_SCAN",
+      "working_directory": "clean_workspace"
+    },
+    {
+      "command": [
+        "internal",
+        "claim_audit_from_canonical_receipt"
+      ],
+      "failure_policy": "FAIL_STOP",
+      "input_refs": [
+        "CANONICAL_FCG_VALIDATION_RECEIPT.json"
+      ],
+      "output_refs": [
+        "claim_audit_state"
+      ],
+      "step_id": "R17_RUN_CLAIM_AUDIT",
+      "working_directory": "clean_workspace"
+    },
+    {
+      "command": [
+        "internal",
+        "citation_presence_check"
+      ],
+      "failure_policy": "FAIL_STOP",
+      "input_refs": [
+        "fcg/canonical/citations.jsonl"
+      ],
+      "output_refs": [
+        "citation_audit_state"
+      ],
+      "step_id": "R18_RUN_CITATION_AUDIT",
+      "working_directory": "clean_workspace"
+    },
+    {
+      "command": [
+        "internal",
+        "rights_state_check"
+      ],
+      "failure_policy": "RECORD_BLOCKED",
+      "input_refs": [
+        "ZENODO_RIGHTS_MATRIX.json"
+      ],
+      "output_refs": [
+        "rights_audit_state"
+      ],
+      "step_id": "R19_RUN_RIGHTS_AUDIT",
+      "working_directory": "clean_workspace"
+    },
+    {
+      "command": [
+        "internal",
+        "emit_receipt"
+      ],
+      "failure_policy": "FAIL_STOP",
+      "input_refs": [
+        "all"
+      ],
+      "output_refs": [
+        "receipts/PUBLICATION_REPLAY_RECEIPT.json"
+      ],
+      "step_id": "R20_EMIT_REPLAY_RECEIPT",
+      "working_directory": "."
+    }
+  ]
+}

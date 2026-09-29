@@ -1,0 +1,33 @@
+{
+  "schema": "VITHIA_ZENODO_RELATED_IDENTIFIER_AUDIT_V1",
+  "retrieval_date": "2026-09-29",
+  "state": "PASS_BOUNDED",
+  "current_record": "Vithia 0-Vita-1 v0.1.0",
+  "decisions": [
+    {
+      "identifier": "10.5281/zenodo.21210575",
+      "recovered_title": "Fractal Custody Objects: route-comparable chain-of-custody for deterministic computational biology and AI-agent provenance",
+      "recovered_resource_type": "Preprint",
+      "recovered_version": "v1",
+      "relation_for_vithia_v0_1_0": "references",
+      "rationale": "Prior FCO provenance publication. Current Vithia release is not being asserted as another version of this exact record lineage."
+    },
+    {
+      "identifier": "10.5281/zenodo.21382831",
+      "recovered_title": "Fractal Custody Objects and Graphs for Efficient, Verifiable AI Training and Computational Biology: A Registered Research Protocol and Contemporaneous Record of a Lambda Research-Credit Application",
+      "recovered_resource_type": "Preprint",
+      "recovered_version": "0.1.0",
+      "relation_for_vithia_v0_1_0": "references",
+      "rationale": "Prior FCO/FCG research protocol relevant to the architecture, but not the same publication version lineage."
+    },
+    {
+      "identifier": "10.5281/zenodo.21829929",
+      "recovered_title": "Fractal Custody Objects — v4/v5 publication-version package with Vithia companion evidence",
+      "recovered_resource_type": "Preprint",
+      "relation_for_vithia_v0_1_0": "references",
+      "rationale": "Prior FCO publication package with Vithia companion evidence; current Vithia 0-Vita-1 record is kept independently versioned unless a stronger lineage relation is explicitly governed."
+    }
+  ],
+  "forbidden_relation_without_new_evidence": "isNewVersionOf",
+  "note": "After the new preprint and dataset DOIs are reserved, cross-link them as preprint isSupplementedBy dataset and dataset isSupplementTo preprint."
+}

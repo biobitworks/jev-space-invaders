@@ -1,0 +1,335 @@
+{
+  "commit": "a441eecf239e2124bc8e024fa4f67ed1396540cd",
+  "files": [
+    {
+      "bytes": 1792,
+      "path": "publication/zenodo/v0.1.0/README.md",
+      "sha256": "de90cf2a409407082dc77bdbc57ea77c6d54e5f185ea749ba09f25f399d23bc0"
+    },
+    {
+      "bytes": 3225,
+      "path": "publication/zenodo/v0.1.0/SHA256SUMS.txt",
+      "sha256": "033bfbe77970671d252d9a3146c3c158f81268289134e01ac9201eb653defaaf"
+    },
+    {
+      "bytes": 1191,
+      "path": "publication/zenodo/v0.1.0/UPLOAD_PLAN.md",
+      "sha256": "4346bc57c573e6465937f8aad981856148b6994332fa06c6634a4da5cf4b8d0c"
+    },
+    {
+      "bytes": 22518,
+      "path": "publication/zenodo/v0.1.0/ZENODO_FILE_MANIFEST.json",
+      "sha256": "0a0567ad7a877bf1180ef7f9b4978d65a4643ed39499eb1029a6bd99e160c2a2"
+    },
+    {
+      "bytes": 981,
+      "path": "publication/zenodo/v0.1.0/ZENODO_OPERATOR_CHECKLIST.md",
+      "sha256": "4a39b6c80bb34e90fc4fc509d478b20d2e7b148d3f60c3427d5ccdce8cd1e051"
+    },
+    {
+      "bytes": 3432,
+      "path": "publication/zenodo/v0.1.0/ZENODO_PACKAGE_BUILD_STATUS.json",
+      "sha256": "a16ee57e033264501bdc5d4d0222ef7fb2d8b66ca174b4e7e96c775db2076065"
+    },
+    {
+      "bytes": 1773,
+      "path": "publication/zenodo/v0.1.0/ZENODO_RIGHTS_MATRIX.json",
+      "sha256": "f698d849f64c0321894b091a05c5efe71ea2b8e365e64f4b72500a6dc8c845fc"
+    },
+    {
+      "bytes": 7265,
+      "path": "publication/zenodo/v0.1.0/fcg/canonical/PUBLICATION_CLAIM_PATHS.jsonl",
+      "sha256": "de71e0cb8b001b9ecddedc5e292a78c71c5ba876b2958a87960a3a12ba21f35a"
+    },
+    {
+      "bytes": 13976,
+      "path": "publication/zenodo/v0.1.0/fcg/canonical/artifact_registry.jsonl",
+      "sha256": "dfdf241671e75c8c5c4893843f8c31c27eeee3dda409bb3c31d6354e18995993"
+    },
+    {
+      "bytes": 15462,
+      "path": "publication/zenodo/v0.1.0/fcg/canonical/breakpoints.jsonl",
+      "sha256": "355c0011441c64924ec84ac0f3a9ec71271a9bcc6ad7b08297640b75c2e84239"
+    },
+    {
+      "bytes": 2458,
+      "path": "publication/zenodo/v0.1.0/fcg/canonical/citations.jsonl",
+      "sha256": "79fd086e69c656f37806544a975a1c1a4e67f6f0473eb9f42b541cefa9ee0e33"
+    },
+    {
+      "bytes": 18435,
+      "path": "publication/zenodo/v0.1.0/fcg/canonical/claims.jsonl",
+      "sha256": "255e2d9e704cbecfd388ae2c94a81e2fa2ca40e2ce4a99a76b63c03a7d273ee1"
+    },
+    {
+      "bytes": 9732,
+      "path": "publication/zenodo/v0.1.0/fcg/canonical/content_fcos.jsonl",
+      "sha256": "63c2a10e9e92772723122ff0f6877a8a628ed8c95645dd7f0a363b163232d043"
+    },
+    {
+      "bytes": 712,
+      "path": "publication/zenodo/v0.1.0/fcg/canonical/context_fcos.jsonl",
+      "sha256": "263e793bc710e627a38ec4e727f47f1537abedcf9d207c3bb2ce9d6c6f1be12c"
+    },
+    {
+      "bytes": 6822,
+      "path": "publication/zenodo/v0.1.0/fcg/canonical/datasets.jsonl",
+      "sha256": "0968c52bf01e3b2b4928d2cff106eb82ec2a967f5e01b27bc99561ebfceb7926"
+    },
+    {
+      "bytes": 5004,
+      "path": "publication/zenodo/v0.1.0/fcg/canonical/evidence_bindings.jsonl",
+      "sha256": "13484f13457b779341c891b4735fb532707ea78d983e03af88486d414e176b10"
+    },
+    {
+      "bytes": 2674,
+      "path": "publication/zenodo/v0.1.0/fcg/canonical/experiments.jsonl",
+      "sha256": "3ec7b0b0dd4aa755993a7dbfc232f54f2e6c7bdddbda8a846dde0c784de62b99"
+    },
+    {
+      "bytes": 13674,
+      "path": "publication/zenodo/v0.1.0/fcg/canonical/fcg_edges.jsonl",
+      "sha256": "425cdb99014260fa054d23d8b88a80238f73c43b4d4ee2e7e4a9a9bb1336ca23"
+    },
+    {
+      "bytes": 27416,
+      "path": "publication/zenodo/v0.1.0/fcg/canonical/mmr_events.jsonl",
+      "sha256": "3c09cde7062082f7d35b53dc5ed5606f029e7743fcdb077b66f9f7121131dde3"
+    },
+    {
+      "bytes": 7796,
+      "path": "publication/zenodo/v0.1.0/fcg/canonical/occurrence_fcos.jsonl",
+      "sha256": "636bd25c7fc3deb0d347dfda5e6b3de3d3d5c8e48b92a89ec743719bc18b1a79"
+    },
+    {
+      "bytes": 9178,
+      "path": "publication/zenodo/v0.1.0/fcg/canonical/results.jsonl",
+      "sha256": "66249f8b46f1dbdea4f5524daefe56ecb7eb5b89b5c4883208ba35bf1be4076d"
+    },
+    {
+      "bytes": 2913,
+      "path": "publication/zenodo/v0.1.0/fcg/canonical/sources.jsonl",
+      "sha256": "29184f7676b3b411b53fb575280bf3af3e3c2030f431c83d264fd6b769459246"
+    },
+    {
+      "bytes": 737,
+      "path": "publication/zenodo/v0.1.0/fcg/canonical/transition_fcos.jsonl",
+      "sha256": "1d5629d47eb6ee45cc2ebff80697493f872b8ecfc9059143e65156dc81359ac4"
+    },
+    {
+      "bytes": 274432,
+      "path": "publication/zenodo/v0.1.0/fcg/database/vithia_publication_fcg_v0.1.0.duckdb",
+      "sha256": "e785eda999175947cb8bd096dd1cc6692f314d9b981f2572bb1a41b3e679eed7"
+    },
+    {
+      "bytes": 7029,
+      "path": "publication/zenodo/v0.1.0/fcg/parquet/artifact_registry.parquet",
+      "sha256": "fb5d4010329eea20c713a2ce3d032f7f03c6363d9a36df6ad027998eff4c7e76"
+    },
+    {
+      "bytes": 9752,
+      "path": "publication/zenodo/v0.1.0/fcg/parquet/breakpoints.parquet",
+      "sha256": "a05967a5feda5ab74654f7f995bc75360e3dc4d56b2b7243fb43c5d31d0126ee"
+    },
+    {
+      "bytes": 3939,
+      "path": "publication/zenodo/v0.1.0/fcg/parquet/citations.parquet",
+      "sha256": "09d8103032396cff31657196627d7bb55310d8deb06bbe080c893200e52e5669"
+    },
+    {
+      "bytes": 4707,
+      "path": "publication/zenodo/v0.1.0/fcg/parquet/claim_evidence.parquet",
+      "sha256": "1257e4369fd2b207751dec69231151bc1d7f921f0b36efe8f0ef5014ec42eb7e"
+    },
+    {
+      "bytes": 9473,
+      "path": "publication/zenodo/v0.1.0/fcg/parquet/claims.parquet",
+      "sha256": "9fda738775e15bfe825b592ca276ce336e290724926f16f3be8c1024914adf8f"
+    },
+    {
+      "bytes": 5429,
+      "path": "publication/zenodo/v0.1.0/fcg/parquet/content_fcos.parquet",
+      "sha256": "85a7a7098838483e718200fd6f39a6d245721ca730fa8c71580b236271dd9950"
+    },
+    {
+      "bytes": 5185,
+      "path": "publication/zenodo/v0.1.0/fcg/parquet/contexts.parquet",
+      "sha256": "faaf0a6f6967a606367824419c10daaeb2c0045f9476a1cf26b17351e046a05a"
+    },
+    {
+      "bytes": 8163,
+      "path": "publication/zenodo/v0.1.0/fcg/parquet/datasets.parquet",
+      "sha256": "ea8e9db466fe25a265ffb16d1d942f80bcfc399f7895c6e42e9e85fbd1c564d6"
+    },
+    {
+      "bytes": 6342,
+      "path": "publication/zenodo/v0.1.0/fcg/parquet/experiments.parquet",
+      "sha256": "bed73de1e62c93de320347ce6ef0b6c794cf3c6297772aeed332fc1193faf297"
+    },
+    {
+      "bytes": 4967,
+      "path": "publication/zenodo/v0.1.0/fcg/parquet/fcg_edges.parquet",
+      "sha256": "a1bdefa031e7fc3f4df48f666202b05fb49bdfdc4288737d9222afbee6075169"
+    },
+    {
+      "bytes": 10105,
+      "path": "publication/zenodo/v0.1.0/fcg/parquet/mmr_events.parquet",
+      "sha256": "6cd13b09b72d08a1d15429e21e1af26805366201e8529d8bd249a783b7884737"
+    },
+    {
+      "bytes": 7026,
+      "path": "publication/zenodo/v0.1.0/fcg/parquet/occurrence_fcos.parquet",
+      "sha256": "7040a7bfac3d23d084c62453739e70242b44fb2d0665042049f067e87f32772c"
+    },
+    {
+      "bytes": 4938,
+      "path": "publication/zenodo/v0.1.0/fcg/parquet/results.parquet",
+      "sha256": "63983938d93f224eec2216ad59397a3a38e85209b0ce5f31284225a53827f24a"
+    },
+    {
+      "bytes": 4315,
+      "path": "publication/zenodo/v0.1.0/fcg/parquet/sources.parquet",
+      "sha256": "3662f1110134babea8f4c6020ed679492e1a8442ad6d7102b5b38043fe5293e1"
+    },
+    {
+      "bytes": 5187,
+      "path": "publication/zenodo/v0.1.0/fcg/parquet/transitions.parquet",
+      "sha256": "5f5fe236abfde89afa22c11c09e7cadaf788d4f0ae9e7ca23e61950950051183"
+    },
+    {
+      "bytes": 2366,
+      "path": "publication/zenodo/v0.1.0/fcg/schemas/FCG_DATA_DICTIONARY.md",
+      "sha256": "6f9b9380aac7b2c2fcbb0076dde04f4f9c296d97b0368f366b5e6119c2674248"
+    },
+    {
+      "bytes": 4054,
+      "path": "publication/zenodo/v0.1.0/fcg/schemas/FCG_EDGE_TYPES.json",
+      "sha256": "6255c217f394db0450db246416022eedec159480e5d7b4d7fead886342f107d3"
+    },
+    {
+      "bytes": 1145,
+      "path": "publication/zenodo/v0.1.0/fcg/schemas/FCG_QUERY_EXAMPLES.sql",
+      "sha256": "f51f298793b109b97e1f8a2ff493e8a84218ca95b13fd450810235287655709b"
+    },
+    {
+      "bytes": 1739,
+      "path": "publication/zenodo/v0.1.0/fcg/schemas/FCG_SCHEMA.json",
+      "sha256": "89a01d73ea6ca0f198d24fe67386dbf76a5823ce1d02d112eb48175131a509c4"
+    },
+    {
+      "bytes": 6032,
+      "path": "publication/zenodo/v0.1.0/fcg/scripts/build_derived_fcg.py",
+      "sha256": "15e4e214889c41fb6f61aa7af24bb6539745095eacc7113e3ac0fb1a9578e5fb"
+    },
+    {
+      "bytes": 1713,
+      "path": "publication/zenodo/v0.1.0/fcg/scripts/validate_canonical_fcg.py",
+      "sha256": "0933d0f9fbd2a96597d88ac5ade354e1ac674f4a79c339f254651fe4df7c631a"
+    },
+    {
+      "bytes": 4604,
+      "path": "publication/zenodo/v0.1.0/fcg/verification/CANONICAL_FCG_VALIDATION_RECEIPT.json",
+      "sha256": "5b3a23040c17af04570494df3f6bba7385bd0a2094a3d468dd83823011c4c4cc"
+    },
+    {
+      "bytes": 6267,
+      "path": "publication/zenodo/v0.1.0/fcg/verification/DERIVED_FCG_BUILD_RECEIPT.json",
+      "sha256": "c3c37b0bdf45e8a35dc50e397b6eff4760f8236bb613d0277a3fbef9a046bbbe"
+    },
+    {
+      "bytes": 1040,
+      "path": "publication/zenodo/v0.1.0/fcg/verification/DERIVED_FCG_BUILD_STATUS.json",
+      "sha256": "aaa0aabf7ddae8ab6fb22a7ec28081fd05251e3fce99b4c1b62ed4102f49f546"
+    },
+    {
+      "bytes": 3400,
+      "path": "publication/zenodo/v0.1.0/metadata/OPENREVIEW_ACCEPTED_PUBLICATION_INTAKE_V01.json",
+      "sha256": "6211e02a79e5eb7b17487504a5e1e1904ffb8c67e07ebd47cfc5bfa2b6482bb0"
+    },
+    {
+      "bytes": 1923,
+      "path": "publication/zenodo/v0.1.0/metadata/RELATED_IDENTIFIERS_AUDIT.json",
+      "sha256": "35fadbdc1cec3ccb31e3830e18315ec4a3350333259c9a14bbdd1f5b5d375c9a"
+    },
+    {
+      "bytes": 2555,
+      "path": "publication/zenodo/v0.1.0/metadata/zenodo_metadata_fcg_dataset.json",
+      "sha256": "e9352cb7c6f109876adf6bdf1f2569bef890493a4f75b186a665c935f58f3139"
+    },
+    {
+      "bytes": 2692,
+      "path": "publication/zenodo/v0.1.0/metadata/zenodo_metadata_preprint.json",
+      "sha256": "64bb1f7642bd5dc916d8ac705287542fb219fdd35c12004bfe4b7d5281d8b85d"
+    },
+    {
+      "bytes": 404,
+      "path": "publication/zenodo/v0.1.0/preprint/CITATION.cff",
+      "sha256": "5761b3d1e1c46a7cfc92920ac9eef0e72da0af9c0a048439700b1e3e0189f99a"
+    },
+    {
+      "bytes": 11928,
+      "path": "publication/zenodo/v0.1.0/preprint/CLAIM_LEDGER.json",
+      "sha256": "0c5c865c1e2a80cae83f6447994ceab6b4d677f13d64e0587691b373e65a95eb"
+    },
+    {
+      "bytes": 1134,
+      "path": "publication/zenodo/v0.1.0/preprint/EVIDENCE_LOCK.json",
+      "sha256": "0bf79cb29a9042b010e1b242d6ab53ed25d7900e6894266f3d69b343296ce1a1"
+    },
+    {
+      "bytes": 1270,
+      "path": "publication/zenodo/v0.1.0/preprint/REPRODUCIBILITY.md",
+      "sha256": "de403ba487db6b2cf997f592705a51d8d8c1ed02cca280e802565694a56b0f3c"
+    },
+    {
+      "bytes": 2197,
+      "path": "publication/zenodo/v0.1.0/preprint/SHA256SUMS_frozen_release.txt",
+      "sha256": "a02cf8aad170d1c8cd4fcbb4bb8a61bf41309cf5db8d53c81a132ee729ee4d14"
+    },
+    {
+      "bytes": 138558,
+      "path": "publication/zenodo/v0.1.0/preprint/main.pdf",
+      "sha256": "03571aa6ba35a0d92007360a8378cdbeaa596a1010c5a57b02d0f2e2ddf9e4d6"
+    },
+    {
+      "bytes": 391152,
+      "path": "publication/zenodo/v0.1.0/preprint/source.tar.gz",
+      "sha256": "6e6ab0c21f31223fe64da096cd5d86cca692cc578c4f0954f845040e77f6a9ca"
+    },
+    {
+      "bytes": 36387,
+      "path": "publication/zenodo/v0.1.0/preprint/supplement.pdf",
+      "sha256": "21827b48b8fd393ec9f1f378edca745cb86e22cde7af1e519e1e75c3b021b69d"
+    },
+    {
+      "bytes": 2030,
+      "path": "publication/zenodo/v0.1.0/scripts/zenodo_common.py",
+      "sha256": "2ffed848b84f7f14c9a4f0f9084efff63c06fab71e9bff8a417d70a715a420a1"
+    },
+    {
+      "bytes": 1777,
+      "path": "publication/zenodo/v0.1.0/scripts/zenodo_create_drafts.py",
+      "sha256": "57c611ee25628b7fef9fb8b076e3f0bcdfc5fa7957f2a6c938f9628a96c9c4ae"
+    },
+    {
+      "bytes": 1192,
+      "path": "publication/zenodo/v0.1.0/scripts/zenodo_publish.py",
+      "sha256": "47505655ad95dec017df79a83f8d3d6b90a04d51bd8a4d248b71a9d1567452a8"
+    },
+    {
+      "bytes": 1925,
+      "path": "publication/zenodo/v0.1.0/scripts/zenodo_upload_files.py",
+      "sha256": "8d2bc65ab60d422ecff8d37cfe6ad87020be38251f0a6ca807cb8aedf719ef20"
+    },
+    {
+      "bytes": 1157,
+      "path": "publication/zenodo/v0.1.0/scripts/zenodo_validate_drafts.py",
+      "sha256": "77ac7791b3c206f9fff01438788199caa86a4ae4bf29236f6a80417bc8c25b38"
+    }
+  ],
+  "frozen_publication_predecessor": "2ce9cd8a9b2c3bba63515a7e7eb6cb072f3a8a4c",
+  "repository": "biobitworks/jev-space-invaders",
+  "schema": "SOURCE_LOCK_V1",
+  "tree": "dc38ab1f6846478c526f43f6ba457b6fbab9232d",
+  "zenodo_package_root": "publication/zenodo/v0.1.0"
+}

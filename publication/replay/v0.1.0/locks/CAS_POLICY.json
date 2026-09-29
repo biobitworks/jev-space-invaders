@@ -1,0 +1,9 @@
+{
+  "hash_mismatch_result": "MERKLE_OR_OBJECT_VERIFY_FAIL",
+  "missing_object_result": "BLOCKED_MISSING_OBJECT",
+  "network_policy": "OFFLINE_STRICT",
+  "resolver_order": [
+    "LOCAL_CAS"
+  ],
+  "schema": "CAS_POLICY_V1"
+}

@@ -1,0 +1,11 @@
+{
+  "cas_object_count": 65,
+  "created_utc": "2026-09-29T07:13:56Z",
+  "leaf_count": 65,
+  "merkle_construction_version": "VITHIA_PUBLICATION_REPLAY_MERKLE_V1",
+  "ordered_leaves_ref": "leaves/REPLAY_LEAVES.jsonl",
+  "ordered_leaves_sha256": "d07d0861739d82e4cda497147c8c5a3f29b9134e101a255c11f07f39b4a4d299",
+  "publication_replay_seed_sha256": "59e8cb192e2c0deaa457bf02389d70591a10e53b8ef1db477a863f7fcf8f6039",
+  "root": "2c3eab3b820b32f77da7a15aa530fd43ce5ee368bbcb4c4be16080f4b174b54a",
+  "schema": "PUBLICATION_REPLAY_ROOT_REGISTRY_V1"
+}

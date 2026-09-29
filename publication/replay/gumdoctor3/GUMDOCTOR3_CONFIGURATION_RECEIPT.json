@@ -1,0 +1,18 @@
+{
+  "adapter_config_state": "CENSUS_RECORDED_OPTIONAL_REVIEW_NOT_RUN",
+  "branch": "publication/zenodo-root-replay-gumdoctor3-v01-20260929",
+  "created_utc": "2026-09-29T07:16:45Z",
+  "load_bearing_for_reconstruction": false,
+  "model_dependency": "NONE",
+  "publication_replay_command": [
+    "python",
+    "publication/replay/v0.1.0/scripts/rebuild_publication_from_root.py",
+    "--root",
+    "$(cat publication/replay/v0.1.0/PUBLICATION_REPLAY_ROOT.txt)",
+    "--offline-strict"
+  ],
+  "publication_replay_tool": "publication/replay/v0.1.0/scripts/rebuild_publication_from_root.py",
+  "repository_head": "a441eecf239e2124bc8e024fa4f67ed1396540cd",
+  "schema": "GUMDOCTOR3_CONFIGURATION_RECEIPT_V1",
+  "secret_values_recorded": false
+}
