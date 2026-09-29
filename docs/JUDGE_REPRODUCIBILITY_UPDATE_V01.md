@@ -97,7 +97,7 @@ export TYPESAFE_API_KEY=<your own key>
 python3 -m live_demo.run --mode 1p --preprocessor vithia --decider jev --render terminal --headless --run-class COMPETITION_JEV --results-path /tmp/judge_jev_results.json
 ```
 
-Without `TYPESAFE_API_KEY` the runner prints `JEV_API=BLOCKED_MISSING_TYPESAFE_API_KEY` and does not substitute OpenJEV, Ollama, Tenki, Mitosis or any other backend.
+Without `TYPESAFE_API_KEY` the runner prints `JEV_API=BLOCKED_MISSING_TYPESAFE_API_KEY`, records a blocked row (no score, no decider) in the results file, and does not substitute OpenJEV, Ollama, Tenki, Mitosis or any other backend. The process still exits with status 0 while blocked, so the printed `JEV_API=` line and the recorded row are the authoritative signal, not the exit code.
 
 ## OpenJEV
 

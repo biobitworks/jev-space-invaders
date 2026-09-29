@@ -4,6 +4,8 @@ Public, reproducible UFA arena branch of the Vithia model family. Competition-fa
 
 ## Judge reproducibility update
 
+Vithia-Space is a state preprocessor and claim gate for the Space Invaders arena: it turns game/evidence state into a compact, hash-committed context and decides which claims that evidence supports, while interchangeable deciders (hosted JEV, local OpenJEV, an Ollama model, a scripted policy) pick the action.
+
 The accepted UFA submission (entry `b968c199-5d7e-4228-b8fe-b0003b7ab94f`, source commit `4c943a92e84d0fb2cd3d01e4fdf15a10991eda71`) is frozen. Everything on the `postsubmission/*` branches is **post-submission** successor evidence, not pre-deadline evidence. Start here (branch `postsubmission/judge-reproducibility-v02`, pull request #9):
 
 - [Judge reproducibility update](docs/JUDGE_REPRODUCIBILITY_UPDATE_V01.md): orientation, prerequisites, exact PASS/FAIL/BLOCKED states, what is not claimed
