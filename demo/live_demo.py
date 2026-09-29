@@ -78,8 +78,9 @@ class ProviderRecord:
     def public(self) -> dict[str, Any]: return asdict(self)
 
 
-def post_json(url: str, body: dict[str, Any], timeout: float = 20.0) -> dict[str, Any]:
-    req = urllib.request.Request(url, data=json.dumps(body).encode(), headers={"Content-Type": "application/json"}, method="POST")
+def post_json(url: str, body: dict[str, Any], timeout: float = 20.0, headers: dict[str, str] | None = None) -> dict[str, Any]:
+    request_headers = {"Content-Type": "application/json", **(headers or {})}
+    req = urllib.request.Request(url, data=json.dumps(body).encode(), headers=request_headers, method="POST")
     with urllib.request.urlopen(req, timeout=timeout) as response: return json.loads(response.read())
 
 
@@ -95,19 +96,19 @@ class ScriptedDecider(Decider):
 
 
 class HTTPChoiceDecider(Decider):
-    def __init__(self, provider: str, backend: str, actions: tuple[str, ...], url: str, model: str, system_one: bool = False) -> None:
-        super().__init__(provider, backend, actions); self.url, self.model, self.system_one = url.rstrip("/"), model, system_one
+    def __init__(self, provider: str, backend: str, actions: tuple[str, ...], url: str, model: str, system_one: bool = False, headers: dict[str, str] | None = None) -> None:
+        super().__init__(provider, backend, actions); self.url, self.model, self.system_one, self.headers = url.rstrip("/"), model, system_one, headers or {}
 
     def decide(self, state: dict[str, Any], mode: str, previous: str) -> dict[str, Any]:
         started = time.perf_counter(); question = {"mode": mode, "instructions": "Choose one legal action. Return only the JSON object.", "legal_actions": list(self.actions)}
         try:
             if self.system_one:
                 body = {"state": state, "model": self.model, "questions": {"move": {"type": "choice", "instructions": question["instructions"], "criteria": {a: a for a in self.actions}}}}
-                payload = post_json(self.url + "/v1/systemone", body)
+                payload = post_json(self.url + "/v1/systemone", body, headers=self.headers)
                 requested = (((payload.get("answers") or {}).get("move") or {}).get("choice"))
             else:
                 body = {"model": self.model, "prompt": "QUESTION=" + json.dumps(question, sort_keys=True) + "\nSTATE=" + json.dumps(state, sort_keys=True), "stream": False, "format": {"type": "object", "properties": {"action": {"type": "string", "enum": list(self.actions)}}, "required": ["action"], "additionalProperties": False}, "options": {"temperature": 0, "seed": 0, "num_predict": 32}}
-                payload = post_json(self.url + "/api/generate", body)
+                payload = post_json(self.url + "/api/generate", body, headers=self.headers)
                 try:
                     answer = json.loads(payload.get("response") or "{}")
                     requested = answer.get("action") or answer.get("choice")
@@ -126,7 +127,19 @@ class SystemOneBackend(HTTPChoiceDecider):
 
 
 class OpenJEVLocalSystemOne(SystemOneBackend):
-    pass
+    def __init__(self, provider: str, backend: str, actions: tuple[str, ...], url: str, model: str) -> None:
+        token = os.environ.get("OPENJEV_TOKEN")
+        if not token:
+            for base in (os.environ.get("OPENJEV_HOME"), str(Path.home() / ".openjev"), "/Volumes/magicBLACKbox/openjev"):
+                if not base:
+                    continue
+                token_path = Path(base) / "token"
+                if token_path.exists():
+                    token = token_path.read_text(encoding="utf-8").strip()
+                    break
+        headers = {"Authorization": f"Bearer {token}"} if token else {}
+        super().__init__(provider, backend, actions, url, model)
+        self.headers = headers
 
 
 class JEVApiSystemOne(SystemOneBackend):

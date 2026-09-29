@@ -4,8 +4,19 @@ import json
 import tempfile
 import unittest
 from pathlib import Path
+from unittest.mock import patch
 
-from live_demo.run import ROOT, _classify_decider, _preprocessor, build_parser, run
+import live_demo.run as runmod
+from live_demo.run import (
+    ROOT,
+    _classify_decider,
+    _mmr_root,
+    _preprocessor,
+    _sha,
+    build_parser,
+    run,
+    run_openjev_ab,
+)
 
 
 class LiveDemoRunTests(unittest.TestCase):
@@ -48,6 +59,25 @@ class LiveDemoRunTests(unittest.TestCase):
             self.assertTrue(trace_rows[0]["environment_action_executed"])
             self.assertIn(trace_rows[0]["executed_action"], {"NOOP", "FIRE", "LEFT", "LEFTFIRE", "RIGHT", "RIGHTFIRE"})
             self.assertIn("fco_trace", trace_rows[0])
+
+    def test_mmr_root_changes_with_order(self):
+        leaves = [_sha({"leaf": i}) for i in range(3)]
+        self.assertEqual(_mmr_root(leaves), _mmr_root(list(leaves)))
+        self.assertNotEqual(_mmr_root(leaves), _mmr_root(list(reversed(leaves))))
+
+    def test_openjev_ab_blocked_receipt_when_not_loaded(self):
+        with tempfile.TemporaryDirectory() as td:
+            args = build_parser().parse_args([
+                "--benchmark-pair-openjev",
+                "--seeds", "1",
+                "--max-steps", "1",
+                "--output-dir", td,
+                "--results-path", str(Path(td) / "results.json"),
+            ])
+            with patch.object(runmod, "_openjev_status", return_value={"OPENJEV_LOAD_STATE": "BLOCKED_NOT_LOADED"}):
+                receipt = run_openjev_ab(args)
+            self.assertEqual(receipt["RAW_OPENJEV_1P"], "BLOCKED_OPENJEV_NOT_LOADED")
+            self.assertTrue(any(Path(td).glob("run_*/manifest.json")))
 
 
 if __name__ == "__main__":
