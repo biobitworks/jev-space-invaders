@@ -1,0 +1,92 @@
+{
+  "schema": "biobitworks.executor_context.v1",
+  "updated_date": "2026-09-30",
+  "foundation": {
+    "primitive": "AtomOfKnowledge",
+    "distinctions": [
+      "AtomOfKnowledge != FCO",
+      "AtomOfKnowledge != FCG",
+      "AtomOfKnowledge != Merkle breakpoint"
+    ],
+    "invariant": "For context-only transitions, AoKID_t == AoKID_0 may hold while BP_t != BP_0.",
+    "anticube": {
+      "selfness": [
+        "SELF",
+        "NONSELF",
+        "UNKNOWN"
+      ],
+      "safety": [
+        "SAFE",
+        "NONSAFE",
+        "UNKNOWN"
+      ],
+      "question": "boolean, separate from quadrant"
+    },
+    "gstar": {
+      "G*": "dimensionless contextual potential G*(A,C_t)",
+      "delta_G_star": "incremental G*(A,C_t)-G*(A,C_{t-1})",
+      "Delta_G_star": "home displacement G*(A,C_t)-G*(A,C_home)",
+      "physical_gibbs": false
+    }
+  },
+  "governance": {
+    "canonical_state": "governed artifacts/receipts, not chat memory",
+    "chain": "source/evidence -> AtomOfKnowledge -> FCO -> typed FCG relationship -> derived evidence -> claim -> artifact",
+    "hashes": "identity/dedup only",
+    "fcg_edges": "declared relationships, not causality",
+    "merkle": "integrity/custody, not truth",
+    "preserve_predecessors": true,
+    "status_states": [
+      "FAILED",
+      "NULL",
+      "NEGATIVE",
+      "BLOCKED",
+      "DEFERRED",
+      "SKIPPED",
+      "NOT_TESTED",
+      "NOT_COMPUTED",
+      "NOT_RECOVERED",
+      "NOT_COMPARABLE",
+      "PARTIAL",
+      "UNKNOWN"
+    ],
+    "signed_rule": "Never claim SIGNED without verified signing.",
+    "mmr_rule": "Never claim MMR_COMMITTED without ordered leaves, construction, size, peaks/root, and verification receipt."
+  },
+  "project": "Vithia-Space / 0-Vita-1 JEV lane",
+  "repo": "biobitworks/jev-space-invaders",
+  "executor_role": "PRIMARY_0VITA1_EXECUTION",
+  "branch_context": "control/0vita1-executor-context-v01-20260930",
+  "base_ref": "vithia-space",
+  "mmr": {
+    "authoritative_namespace": "0VITA1_TRAINING_MMR_V1",
+    "do_not_merge": [
+      "VITHIA_MMR_LEDGER_V1",
+      "DAISY_0_VITA_1_TRAINING_MMR",
+      "CLAUDE_COMPARATOR_MMR"
+    ]
+  },
+  "predecessor": {
+    "vithia_space_breakpoint": "UFA-JEV-BP-0057",
+    "vithia_space_mmr_size": 57,
+    "vithia_space_mmr_root": "dabf7684b7eba5c3d948277d91f904e95419a6930f30f184e92021c683e3c942"
+  },
+  "reported_private_successor": {
+    "state": "PRIVATE_REPORTED_UNTIL_EXACT_RECEIPTS_ADMITTED",
+    "private_head": "c67a731a50cc86ef4800c3a8744a6238d09971bb",
+    "breakpoint": "0VITA1-TRAIN-BP-0002",
+    "breakpoint_root": "cd044097b39ddaa8dae7930bf3ab12359c0d6eddab53166df080b1b225b6d068",
+    "mmr_size": 29,
+    "mmr_root": "8054aaa53ada18749ca3bf8ad0d859463a175cf547d58e39eba2d214fee667f3"
+  },
+  "next_critical_path": [
+    "Recover and independently verify private BP-0002/MMR-29 bytes.",
+    "Ensure governed remote custody without rewriting Vithia-Space history.",
+    "Audit the 768-row corpus for target leakage, DeltaG* leakage, split overlap, identity-token leakage, control matching, class balance, and intervention coverage.",
+    "Create typed status breakpoints for every unfinished scientific state.",
+    "Freeze AoK/SOURCE_REF/HOME_REF/OCCURRENCE_REF, Anticube V2, and prospective G*/delta/DeltaG* before E6/E10/E11.",
+    "Preregister E0-E11; execute E0-E8 before expensive graded training.",
+    "Only after gates pass, freeze D0-D6 / M0-M3 graded comparison."
+  ],
+  "publication_handoff": "Return exact repo/branch/commit, breakpoints, roots, MMR state, scientific result, Anticube and G*/delta/DeltaG* state, failures/nulls, claim ceiling, and independent verifier receipt."
+}
