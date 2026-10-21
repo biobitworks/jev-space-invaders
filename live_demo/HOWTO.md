@@ -152,3 +152,5 @@ context-only when their current runtime contract is unavailable.
 - Ollama down: the seat records a fail-closed fallback and the integration is
   not marked live.
 - Port conflict: start with another `--port` and use that URL.
+
+See also: [HOWTO_INDEPENDENT_STARTUP.md](HOWTO_INDEPENDENT_STARTUP.md) (script-based independent startup and judge path).

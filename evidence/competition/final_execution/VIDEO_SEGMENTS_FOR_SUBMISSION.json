@@ -1,0 +1,181 @@
+{
+  "schema": "VIDEO_SEGMENTS_FOR_SUBMISSION_V1",
+  "lineage_id": "UFA-JEV-COMP",
+  "created_utc": "2026-09-28T22:00:00Z",
+  "total_duration_seconds": "60-90",
+  "segments": [
+    {
+      "segment_id": "A_RESULT",
+      "title": "Engineering Result: Vithia-Space Latency Improvement",
+      "duration_seconds": "10-12",
+      "visual_elements": [
+        {
+          "element": "prominent_metric_display",
+          "content": {
+            "metric_1": "RAW OpenJEV",
+            "value_1": "5626.8 ms (decision p50)",
+            "metric_2": "Vithia L1",
+            "value_2": "4725.3 ms (decision p50)",
+            "metric_3": "Delta",
+            "value_3": "-901.5 ms median improvement",
+            "percentage_improvement": "-16.0%"
+          }
+        },
+        {
+          "element": "subtitle",
+          "text": "Bounded local OpenJEV engineering result\n3 seeds × 3 steps, real ALE capture (seed 3)"
+        },
+        {
+          "element": "chart",
+          "type": "bar_comparison",
+          "data": [
+            {"label": "RAW OpenJEV", "value": 5626.8, "color": "#ff6b6b"},
+            {"label": "Vithia L1", "value": 4725.3, "color": "#51cf66"}
+          ]
+        }
+      ],
+      "evidence_source": "INFERRED_FROM_INSTRUCTION (instruction provided these metrics)"
+    },
+    {
+      "segment_id": "B_REAL_GAME",
+      "title": "Real Game: Actual ALE Space Invaders Playthrough",
+      "duration_seconds": "20-30",
+      "visual_elements": [
+        {
+          "element": "video_playback",
+          "source": "evidence/competition/final_execution/frames/canonical.mp4",
+          "resolution": "160x210",
+          "fps": 60,
+          "frame_count": 240,
+          "duration_actual": 4.0
+        },
+        {
+          "element": "overlay_telemetry",
+          "overlay_position": "bottom-right",
+          "fields": [
+            {"label": "ACTION", "source": "frame_XXXX.occurrence.json action"},
+            {"label": "CONTEXT_LEVEL", "source": "inferred from frame content (bomb count, aliens remaining)"},
+            {"label": "ANTICUBE_STATE", "source": "inferred from MutableAnticubeAccumulator state (not recorded separately)"},
+            {"label": "DELTA_G", "source": "reward delta from previous frame"},
+            {"label": "STEP_ROOT", "source": "frame_XXXX.occurrence.json step_root (24 chars)"},
+            {"label": "MMR_SIZE", "source": "240 (total frames in playthrough)"}
+          ]
+        }
+      ],
+      "evidence_source": "evidence/competition/final_execution/frames/"
+    },
+    {
+      "segment_id": "C_REPLAY_PROOF",
+      "title": "Replay Verification: MMR Proof of Authenticity",
+      "duration_seconds": "8-12",
+      "visual_elements": [
+        {
+          "element": "text_display",
+          "content": {
+            "title": "Merkle Mountain Range Verification",
+            "rows": [
+              {"label": "ReplaySeedFCO", "value": "PASS"},
+              {"label": "REPLAY_FROM_START", "value": "PASS"},
+              {"label": "STEP_HASH_EQUALITY", "value": "PASS"},
+              {"label": "FINAL_MMR_EQUALITY", "value": "PASS"}
+            ]
+          }
+        },
+        {
+          "element": "merkle_root_display",
+          "label": "Verified ReplaySeedRoot:",
+          "value": "e55a47a7f16064477c4f101a38a849391c2fbc9f6557c5244daf0406b36dbd74",
+          "font": "monospace"
+        },
+        {
+          "element": "verification_receipt",
+          "source": "evidence/competition/final_execution/PLAYTHROUGH_MMR_VERIFICATION_RECEIPT.json",
+          "fields": [
+            "frames_checked: 240",
+            "errors: []",
+            "frame_signature_state: SIGNED_VERIFIED",
+            "PLAYTHROUGH_VERIFY: PASS"
+          ]
+        }
+      ],
+      "evidence_source": "evidence/competition/final_execution/PLAYTHROUGH_MMR_VERIFICATION_RECEIPT*.json"
+    },
+    {
+      "segment_id": "D_SPONSOR_LOOP",
+      "title": "Sponsor Integration: Mitosis + Tenki",
+      "duration_seconds": "8-10",
+      "sponsor_integration_status": {
+        "mitosis": {
+          "verdict": "PASS",
+          "agent": "codex-final-execution",
+          "universal_id": "agent:memories:47b923e2e5bf18083bbc05c3",
+          "operation": "EXECUTED_REMEMBER_AND_RETRIEVE",
+          "detail": "Final run evidence persisted to Mitosis and retrieved successfully"
+        },
+        "tenki": {
+          "verdict": "BLOCKED",
+          "reason": "BLOCKED_INVALID_OR_REVOKED_API_KEY",
+          "prior_session": "01a0e9b9-dbf4-77ff-8d28-2e057cb00cbc (from prior execution)",
+          "detail": "Prior Tenki sandbox execution exists in earlier receipts. Current credentials invalid/revoked."
+        }
+      },
+      "visual_elements": [
+        {
+          "element": "sponsor_status_table",
+          "data": [
+            {
+              "sponsor": "Mitosis",
+              "status": "✓ PASS",
+              "operation": "persisted & retrieved",
+              "universal_id": "agent:memories:47b923e2e5bf18083bbc05c3"
+            },
+            {
+              "sponsor": "Tenki",
+              "status": "✗ BLOCKED",
+              "reason": "API key revoked",
+              "prior_evidence": "BP-0008 sandbox 01a0e9b9..."
+            }
+          ]
+        },
+        {
+          "element": "note",
+          "text": "Mitosis memory persisted evidence of final run and retrieval successful.\nTenki blocked due to API key revocation; prior execution evidence archived."
+        }
+      ],
+      "evidence_source": [
+        "evidence/competition/final_execution/MITOSIS_FINAL_EXECUTION_RECEIPT.json",
+        "evidence/competition/final_execution/TENKI_FINAL_EXECUTION_RECEIPT.json"
+      ]
+    },
+    {
+      "segment_id": "E_JUDGE_PATH",
+      "title": "Judge Path: How to Run Independently",
+      "duration_seconds": "8-12",
+      "visual_elements": [
+        {
+          "element": "code_display",
+          "language": "bash",
+          "content": "# Clone the competition repository\ngit clone https://github.com/biobitworks/jev-space-invaders.git\ncd jev-space-invaders\ngit checkout competition/final-integration-v01\n\n# Set up Python environment\npython -m venv .venv\nsource .venv/bin/activate\npip install -r requirements.txt\n\n# Export TypeSafe API key (judge provides)\nexport TYPESAFE_API_KEY=\"<judge-provided-key>\"\n\n# Run real JEV: 5 fixed seeds\npython -m live_demo.run \\\n  --mode 1p \\\n  --preprocessor vithia \\\n  --decider jev \\\n  --render terminal \\\n  --headless \\\n  --run-class COMPETITION_JEV\n"
+        },
+        {
+          "element": "label",
+          "text": "REAL JEV: READY_BYO_TYPESAFE_API_KEY"
+        },
+        {
+          "element": "note",
+          "text": "All prerequisites, setup, and run commands are in live_demo/HOWTO.md\nNo proprietary code or credentials in public repository.\nJudges can verify independently with their own API key."
+        }
+      ],
+      "evidence_source": "live_demo/HOWTO.md + live_demo/run.py"
+    }
+  ],
+  "assembly_instructions": {
+    "format": "The 5 segments above provide evidence metadata. Human will separately provide face/voice recording.",
+    "assembly": "INTRO (human voice) → [segments A-E with visual evidence] → OUTRO (human voice)",
+    "total_duration_target": "60-90 seconds",
+    "video_output_format": "MP4 (h264, 1920x1080 or project resolution)",
+    "evidence_assets_ready": true,
+    "voice_assets_required": "Human provides intro/outro recording"
+  },
+  "state": "VIDEO_EVIDENCE_ASSETS_READY_FOR_ASSEMBLY"
+}

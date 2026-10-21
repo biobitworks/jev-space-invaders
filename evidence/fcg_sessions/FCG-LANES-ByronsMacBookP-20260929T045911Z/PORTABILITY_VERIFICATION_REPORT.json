@@ -1,0 +1,160 @@
+{
+  "BRANCH": "postsubmission/vithia-doctor3-v01",
+  "CHECKPOINT_SIGNATURE_STATE": "PASS",
+  "CHECKPOINT_SIGNATURE_VERIFY": "PASS",
+  "CONTEXT_CEILING": "WITHHOLD_ALL_TENKI_CLAIMS",
+  "DOCTOR3_CROSS_MACHINE_PORTABILITY": "NOT_ESTABLISHED_SAME_HOST_AS_PREVIOUS_RUN (infrastructure checks: PASS)",
+  "FINAL_FCG_BP": "VITHIA-FCG-FCG-LANES-ByronsMacBookP-20260929T045911Z-BP-0003",
+  "FINAL_FCG_BP_VERIFY": "PASS",
+  "FINAL_FCG_ROOT": "0d16ddbf75667928f3695a07027ec5f1c1d72dea8e69cbd19493243bfce93a69",
+  "FINAL_MMR_SIZE": 3,
+  "HEAD": "d8b9c3f1e893b082be7554dffae60266507e482a",
+  "HOST": "Byron\u2019s MacBook Pro",
+  "HOSTED_JEV": "NOT_EXECUTED",
+  "INVARIANTS_MATCH_PREVIOUS_RUN": {
+    "final_root_may_differ": true,
+    "seed_root": true,
+    "source_commit": true
+  },
+  "LANES": [
+    {
+      "action": "WITHHOLD_ALL_TENKI_CLAIMS",
+      "decision_fco_sha256": "a46b76c95a8e9ce27ea2894e454b170b8a261ff1c2dd07c545a6282f61ae766d",
+      "executed": true,
+      "input_context_root": "92bb22f993f55170\u2026",
+      "lane": "scripted",
+      "latency_ms": 0.048,
+      "note": "",
+      "outcome_fco_sha256": "2a0760d13bce386a874c15141a071d6e0a83eb505c072d98cc8019971ef23ea9",
+      "provider": "none",
+      "status": "PASS",
+      "supported_by_context": "YES"
+    },
+    {
+      "action": "PUBLISH_CLAIM_REPLAY_COMPLETE",
+      "decision_fco_sha256": "0412dc9fd32a19085f183f9de45f1d2924569cc41868adac42735585c9faa9c9",
+      "executed": false,
+      "input_context_root": "92bb22f993f55170\u2026",
+      "lane": "ollama_llama3.2_3b",
+      "latency_ms": 7831.6,
+      "note": "",
+      "outcome_fco_sha256": "59365bb5327aa15e55c89f34a053e2210b76ae5229b662f73288b99b5afc0241",
+      "provider": "ollama:llama3.2:3b",
+      "status": "PASS",
+      "supported_by_context": "NO"
+    },
+    {
+      "action": "PUBLISH_CLAIM_REPLAY_COMPLETE",
+      "decision_fco_sha256": "d73946e170e0eb969cfbe753f7a60bcfab956b9dec26702ff55c271dd4f071fc",
+      "executed": false,
+      "input_context_root": "92bb22f993f55170\u2026",
+      "lane": "ollama_hf.co_LiquidAI_LFM2.5-1.2B-Instruct-GGUF_Q4_K_M",
+      "latency_ms": 94745.7,
+      "note": "",
+      "outcome_fco_sha256": "caedc0592e22b1ddbebfdbc62a631e524164da8f0faa341510e2cba694cd2162",
+      "provider": "ollama:hf.co/LiquidAI/LFM2.5-1.2B-Instruct-GGUF:Q4_K_M",
+      "status": "PASS",
+      "supported_by_context": "NO"
+    },
+    {
+      "action": "WITHHOLD_ALL_TENKI_CLAIMS",
+      "decision_fco_sha256": "3a46e0ba2cf6613a6335e219c0d9a4be1b9e96e83171212802821363fa00bf9b",
+      "executed": true,
+      "input_context_root": "92bb22f993f55170\u2026",
+      "lane": "ollama_qwen3_1.7b",
+      "latency_ms": 94226.2,
+      "note": "",
+      "outcome_fco_sha256": "7057f4041fc3a143f957f48133de8e87daf11b7db548c32b4442f1b1dac8f7d9",
+      "provider": "ollama:qwen3:1.7b",
+      "status": "PASS",
+      "supported_by_context": "YES"
+    },
+    {
+      "action": null,
+      "decision_fco_sha256": "b5fe5b5a920e70fc120fd41e3a32a3fe66d21f80e86497453a70c76f93de93e6",
+      "executed": false,
+      "input_context_root": "92bb22f993f55170\u2026",
+      "lane": "openjev",
+      "latency_ms": 0.0,
+      "note": "URLError",
+      "outcome_fco_sha256": "c1e3dc7cc3c1ff9e151fc20ea927b59f0b154a7b77c3a5b552bac9e6429550f1",
+      "provider": "openjev",
+      "status": "BLOCKED",
+      "supported_by_context": "NOT_APPLICABLE"
+    }
+  ],
+  "LANES_CLAIM_GATE_INTEGRITY": "PASS",
+  "LANES_REQUESTED": [
+    "scripted",
+    "ollama_llama3.2_3b",
+    "ollama_hf.co_LiquidAI_LFM2.5-1.2B-Instruct-GGUF_Q4_K_M",
+    "ollama_qwen3_1.7b",
+    "openjev"
+  ],
+  "LANE_PRECHECKS": {
+    "ollama_hf.co_LiquidAI_LFM2.5-1.2B-Instruct-GGUF_Q4_K_M": {
+      "installed": true,
+      "smoke": "PASS"
+    },
+    "ollama_llama3.2_3b": {
+      "installed": true,
+      "smoke": "PASS"
+    },
+    "ollama_qwen3_1.7b": {
+      "installed": true,
+      "smoke": "PASS"
+    },
+    "openjev": {
+      "OPENJEV_BASE_URL_env": "UNSET(default http://127.0.0.1:8765)",
+      "bearer_token_present": true,
+      "hint": "the local shim picks the first free port from 8765; export OPENJEV_BASE_URL if it is not 8765",
+      "loopback_ports_listening_8765_8775": [
+        8771
+      ]
+    }
+  },
+  "MITOSIS_AUTH": "BLOCKED",
+  "NOTE": "Lane decisions are recorded, not ranked; an unsupported lane decision is a model finding, and the claim gate refusing it is the intended behaviour.",
+  "OLLAMA_ADAPTER_WIRING": "PASS",
+  "OLLAMA_BINARY": "/opt/homebrew/bin/ollama",
+  "OLLAMA_MODELS_AVAILABLE": [
+    "hf.co/LiquidAI/LFM2.5-1.2B-Instruct-GGUF:Q4_K_M",
+    "qwen3:1.7b",
+    "deepseek-r1:14b",
+    "qwen2.5-coder:7b",
+    "phi4-reasoning:14b",
+    "qwen2.5:7b",
+    "llama3.2:3b",
+    "granite4.1:3b",
+    "llama3.2:1b",
+    "qwen2.5:0.5b",
+    "qwen2.5:1.5b",
+    "nomic-embed-text:latest"
+  ],
+  "OLLAMA_SERVER": "UP_LOOPBACK_11434",
+  "OLLAMA_VERSION": "ollama version is 0.32.15",
+  "OPERATOR_IDENTITY_MODE": "GENERATED_LOCAL_ED25519",
+  "ORIGIN_HEAD": "d8b9c3f1e893b082be7554dffae60266507e482a",
+  "ORIGIN_PARITY": "PASS",
+  "PARENT_CHAIN_VERIFY": "PASS",
+  "PRE_EXEC_BP": "VITHIA-FCG-FCG-LANES-ByronsMacBookP-20260929T045911Z-BP-0001",
+  "PRE_EXEC_MMR_ROOT": "897b1da19b573b760a757121c6215e8491d155775cb038425ce130c119fe4523",
+  "PRE_EXEC_VERIFY": "PASS",
+  "PRIVATE_KEY_COMMITTED": "NO",
+  "PRIVATE_KEY_IN_FCO": "NO",
+  "PRIVATE_KEY_MODE": "600",
+  "PROMPT_PROFILE": "neutral_v1",
+  "PUBLIC_KEY_FINGERPRINT": "5eacb05c0a0260bc16fa0d9693e5720cb98f36e8253c0c0eabf034a1162cafd9",
+  "SAME_INPUT_CONTEXT_ROOT_ACROSS_LANES": "YES",
+  "SECRET_SCAN": "PASS",
+  "SEED_FCO_VERIFY": "PASS",
+  "SEED_RESOLUTION": "PASS",
+  "SEED_ROOT": "sha256:45d04e0d2da5f0c1255844b011bb2576320e1ff5517f0e38d8e79b8899a88bc8",
+  "SEED_ROOT_MATCH": "PASS",
+  "SOURCE_COMMIT": "4c943a92e84d0fb2cd3d01e4fdf15a10991eda71",
+  "SOURCE_PIN": "PASS",
+  "TENKI_AUTH": "BLOCKED",
+  "VERIFIED_CONTEXT_ROOT": "92bb22f993f55170867c4a9219f0ff07d7850e7c3e9d6d7bcc27e1504cb2babe",
+  "VITHIA_PREPROCESSING": "PASS",
+  "WORKTREE": "CLEAN"
+}

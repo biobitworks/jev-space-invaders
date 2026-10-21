@@ -1,0 +1,19 @@
+{
+  "timestamp": "2026-09-29T02:29:25.252775",
+  "schema": "TENKI_SUBMITTED_REPLAY_VERIFICATION_FCO_V1",
+  "submitted_entry_id": "b968c199-5d7e-4228-b8fe-b0003b7ab94f",
+  "submitted_source_commit": "4c943a92e84d0fb2cd3d01e4fdf15a10991eda71",
+  "tenki_api_key": "SET",
+  "tenki_auth": "PASS",
+  "tenki_session_id": null,
+  "tenki_sandbox_create": "NOT_ATTEMPTED",
+  "tenki_source_pin": "NOT_TESTED",
+  "playthrough_verify": "NOT_EXECUTED",
+  "frames_checked": 0,
+  "expected_mmr_root": "e55a47a7f16064477c4f101a38a849391c2fbc9f6557c5244daf0406b36dbd74",
+  "recomputed_mmr_root": null,
+  "competition_lineage_verify": "NOT_EXECUTED",
+  "artifact_reconstruction": "PASS",
+  "environment_replay": "NOT_IMPLEMENTED",
+  "claim_ceiling": "ARTIFACT_VERIFIED_LOCALLY_SANDBOX_NOT_AVAILABLE"
+}

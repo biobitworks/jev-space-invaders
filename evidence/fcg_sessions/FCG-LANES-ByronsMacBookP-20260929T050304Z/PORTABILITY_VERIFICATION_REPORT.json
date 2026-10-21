@@ -1,0 +1,103 @@
+{
+  "BRANCH": "postsubmission/vithia-doctor3-v01",
+  "CHECKPOINT_SIGNATURE_STATE": "PASS",
+  "CHECKPOINT_SIGNATURE_VERIFY": "PASS",
+  "CONTEXT_CEILING": "WITHHOLD_ALL_TENKI_CLAIMS",
+  "DOCTOR3_CROSS_MACHINE_PORTABILITY": "NOT_ESTABLISHED_SAME_HOST_AS_PREVIOUS_RUN (infrastructure checks: PASS)",
+  "FINAL_FCG_BP": "VITHIA-FCG-FCG-LANES-ByronsMacBookP-20260929T050304Z-BP-0003",
+  "FINAL_FCG_BP_VERIFY": "PASS",
+  "FINAL_FCG_ROOT": "65f294a475a94ca01aff45973c36e353c75d593f6fdbc8eb5e41dd5ade3a5a36",
+  "FINAL_MMR_SIZE": 3,
+  "HEAD": "4e96bee1e1c5d8daccd44f52ca821e5cf9e5399a",
+  "HOST": "Byron\u2019s MacBook Pro",
+  "HOSTED_JEV": "NOT_EXECUTED",
+  "INVARIANTS_MATCH_PREVIOUS_RUN": {
+    "final_root_may_differ": true,
+    "seed_root": true,
+    "source_commit": true
+  },
+  "LANES": [
+    {
+      "action": "WITHHOLD_ALL_TENKI_CLAIMS",
+      "decision_fco_sha256": "fafeb3d46ce7af7042ba18f46ed7aeb0bcd2588fcc1816d04cb73cc30ab62039",
+      "executed": true,
+      "input_context_root": "b6fc60e5e392b03a\u2026",
+      "lane": "scripted",
+      "latency_ms": 0.0171,
+      "note": "",
+      "outcome_fco_sha256": "b29a7764151897f96cf9fb8ca881dacc62f3a72014e134c9fda0b466589e7c34",
+      "provider": "none",
+      "status": "PASS",
+      "supported_by_context": "YES"
+    },
+    {
+      "action": null,
+      "decision_fco_sha256": "0647017fabfc46c6dde8db59bb866350c8347ba3adf2769119a4b4f78ddd2815",
+      "executed": false,
+      "input_context_root": "b6fc60e5e392b03a\u2026",
+      "lane": "openjev",
+      "latency_ms": 0.0,
+      "note": "RemoteDisconnected",
+      "outcome_fco_sha256": "12f27f01096420236c73d6f32806333aca437affe7dab4624743158a84dfd809",
+      "provider": "openjev",
+      "status": "BLOCKED",
+      "supported_by_context": "NOT_APPLICABLE"
+    }
+  ],
+  "LANES_CLAIM_GATE_INTEGRITY": "PASS",
+  "LANES_REQUESTED": [
+    "scripted",
+    "openjev"
+  ],
+  "LANE_PRECHECKS": {
+    "openjev": {
+      "OPENJEV_BASE_URL_env": "http://127.0.0.1:8771",
+      "bearer_token_present": true,
+      "hint": "the local shim picks the first free port from 8765; export OPENJEV_BASE_URL if it is not 8765",
+      "loopback_ports_listening_8765_8775": []
+    }
+  },
+  "MITOSIS_AUTH": "BLOCKED",
+  "NOTE": "Lane decisions are recorded, not ranked; an unsupported lane decision is a model finding, and the claim gate refusing it is the intended behaviour.",
+  "OLLAMA_BINARY": "/opt/homebrew/bin/ollama",
+  "OLLAMA_MODELS_AVAILABLE": [
+    "hf.co/LiquidAI/LFM2.5-1.2B-Instruct-GGUF:Q4_K_M",
+    "qwen3:1.7b",
+    "deepseek-r1:14b",
+    "qwen2.5-coder:7b",
+    "phi4-reasoning:14b",
+    "qwen2.5:7b",
+    "llama3.2:3b",
+    "granite4.1:3b",
+    "llama3.2:1b",
+    "qwen2.5:0.5b",
+    "qwen2.5:1.5b",
+    "nomic-embed-text:latest"
+  ],
+  "OLLAMA_SERVER": "UP_LOOPBACK_11434",
+  "OLLAMA_VERSION": "ollama version is 0.32.15",
+  "OPERATOR_IDENTITY_MODE": "GENERATED_LOCAL_ED25519",
+  "ORIGIN_HEAD": "4e96bee1e1c5d8daccd44f52ca821e5cf9e5399a",
+  "ORIGIN_PARITY": "PASS",
+  "PARENT_CHAIN_VERIFY": "PASS",
+  "PRE_EXEC_BP": "VITHIA-FCG-FCG-LANES-ByronsMacBookP-20260929T050304Z-BP-0001",
+  "PRE_EXEC_MMR_ROOT": "abe035d081ecc23af1a28275bc7030d67c69e74572235008c8937df01b9615a6",
+  "PRE_EXEC_VERIFY": "PASS",
+  "PRIVATE_KEY_COMMITTED": "NO",
+  "PRIVATE_KEY_IN_FCO": "NO",
+  "PRIVATE_KEY_MODE": "600",
+  "PROMPT_PROFILE": "neutral_v1",
+  "PUBLIC_KEY_FINGERPRINT": "716da1eb1af9c9853f053cb929794e06f59dd43d05373d675420fb7c88dc26af",
+  "SAME_INPUT_CONTEXT_ROOT_ACROSS_LANES": "YES",
+  "SECRET_SCAN": "PASS",
+  "SEED_FCO_VERIFY": "PASS",
+  "SEED_RESOLUTION": "PASS",
+  "SEED_ROOT": "sha256:45d04e0d2da5f0c1255844b011bb2576320e1ff5517f0e38d8e79b8899a88bc8",
+  "SEED_ROOT_MATCH": "PASS",
+  "SOURCE_COMMIT": "4c943a92e84d0fb2cd3d01e4fdf15a10991eda71",
+  "SOURCE_PIN": "PASS",
+  "TENKI_AUTH": "BLOCKED",
+  "VERIFIED_CONTEXT_ROOT": "b6fc60e5e392b03ac033b8feb28d24e41db5048198f20b736cb44af610c2d714",
+  "VITHIA_PREPROCESSING": "PASS",
+  "WORKTREE": "CLEAN"
+}

@@ -1,0 +1,32 @@
+{
+  "schema": "MITOSIS_TENKI_E2E_REVIEW_CONTRACT_V1",
+  "purpose": "Independent post-submission review of Mitosis persistence/retrieval, Tenki clean-room verification semantics, replay integrity, secret boundaries, and claim ceilings.",
+  "immutable_submission": {
+    "entry_id": "b968c199-5d7e-4228-b8fe-b0003b7ab94f",
+    "submitted_source_commit": "4c943a92e84d0fb2cd3d01e4fdf15a10991eda71",
+    "playthrough_mmr_root": "e55a47a7f16064477c4f101a38a849391c2fbc9f6557c5244daf0406b36dbd74"
+  },
+  "review_targets": [
+    "evidence/competition/final_execution/MITOSIS_FINAL_EXECUTION_RECEIPT.json",
+    "evidence/competition/final_execution/TENKI_FINAL_EXECUTION_RECEIPT.json",
+    "evidence/competition/final_execution/SPONSOR_KEY_VERIFICATION_RECEIPT.json",
+    "evidence/competition/post_submission/tenki/TENKI_SUBMITTED_REPLAY_VERIFICATION_FCO.json",
+    "evidence/competition/final_execution/frames/PLAYTHROUGH_MMR_VERIFICATION_RECEIPT_V2.json",
+    "scripts/verify_final_playthrough_custody_v2.py",
+    "scripts/verify_competition_lineage.py"
+  ],
+  "invariants": [
+    "Key presence is not authentication.",
+    "Mitosis persistence PASS requires a successful write plus exact-ID retrieval/query-back.",
+    "Tenki clean-room artifact reconstruction PASS requires sandbox creation PASS, submitted source pin PASS, and playthrough verification PASS inside that sandbox.",
+    "Tenki environment replay PASS additionally requires replay-from-start, step-hash equality, and final-MMR equality from actual environment re-execution.",
+    "PORTABLE_AGENT_MEMORY_LOAD_BEARING cannot be PASS unless Tenki verification succeeds, is written to Mitosis, retrieved again, and later consumed in an agent decision.",
+    "Local artifact verification must not be relabeled as Tenki verification.",
+    "The accepted UFA submission and qualified competition lineage are immutable."
+  ],
+  "expected_current_findings": [
+    "Historical Mitosis remember/retrieve receipt is bounded PASS if exact universal_id matches.",
+    "Latest final-execution Tenki receipt is BLOCKED_INVALID_OR_REVOKED_API_KEY.",
+    "Post-submission Tenki FCO currently overstates artifact_reconstruction=PASS while sandbox/source-pin/playthrough verification are not executed."
+  ]
+}
